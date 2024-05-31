@@ -1,0 +1,1310 @@
+<!-- This page developed SEBPO citrusAd team. Developed by Imran Ahmed. date 01/10/2024 -->
+<style>
+  /* Common styling */
+  .citrusOkocat__Wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+    font-family: "PetcoCircularTT-Regular", arial !important;
+    font-size: 16px;
+    background: #fff;
+    overflow: hidden;
+  }
+
+  .citrusOkocat__Wrapper a {
+    text-decoration: none;
+  }
+
+  .citrusOkocat__desktop_hide {
+    display: none;
+  }
+
+  .citrusOkocat__mobile_hide {
+    display: block;
+  }
+
+  /* Overflow Scrollbar */
+  .citrusX-wrapper::-webkit-scrollbar,
+  .citrusOkocat__CategoryContainer::-webkit-scrollbar,
+  .citrusOkocat__category::-webkit-scrollbar,
+  .citrusOkocat__findCatRecipesContainer::-webkit-scrollbar,
+  .citrusOkocat__productContainer::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* POV or Banner styling */
+  .citrus-diamonpet-cta-box {
+    color: white;
+    text-transform: uppercase;
+    background-color: #001952;
+    border: none;
+    border-radius: 0.313rem;
+    font-weight: bold;
+    width: 13.188rem;
+    height: 3.5rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-family: "PetcoCircularTT-Bold", arial !important;
+    font-weight: 700;
+    font-size: 16px;
+  }
+
+  /* Carousels - POV */
+  .citrus_Okocat_carousel {
+    width: 100%;
+    position: relative;
+    display: none;
+    justify-content: flex-start;
+  }
+
+  .citrus_Okocat_carousel .citrus_Okocat_carousel-inner .citrus_Okocat_carousel-item {
+    justify-content: flex-start;
+    flex: 1;
+  }
+
+  .citrus_Okocat_carousel .citrus_Okocat_carousel-inner .citrus_Okocat_carousel-item .pov-text {
+    max-width: 50%;
+  }
+
+  .citrus_Okocat_carousel .citrus_Okocat_carousel-inner .citrus_Okocat_carousel-item .pov-text {
+    color: #000;
+    padding-left: 6%;
+  }
+
+  .citrus_Okocat_carousel .citrus_Okocat_carousel-inner .citrus_Okocat_carousel-item .pov-text__wrapper {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .citrus_Okocat_carousel .citrus_Okocat_carousel-inner .citrus_Okocat_carousel-item .pov-text__wrapper .pov-logo {
+    max-width: 200px;
+  }
+
+  .pov2 .pov-logo {
+    padding-top: 15px;
+  }
+
+  .citrus_Okocat_carousel .citrus_Okocat_carousel-inner .citrus_Okocat_carousel-item .pov-text__wrapper .pov-text__title {
+    width: 100%;
+    padding: 15px 0;
+    font-size: 2.25rem;
+    line-height: normal;
+    font-weight: 700;
+    font-family: "PetcoCircularTT-Bold", arial !important;
+    color: black;
+    margin: 0;
+  }
+
+  .citrus_Okocat_carousel .citrus_Okocat_carousel-inner .citrus_Okocat_carousel-item .pov-text__wrapper .pov-text__subhead {
+    padding-bottom: 20px;
+    line-height: normal;
+    width: 100%;
+    font-family: "PetcoCircularTT-Regular", arial !important;
+    color: black;
+    margin: 0;
+  }
+
+  .citrus_Okocat_carousel .citrus_Okocat_carousel-inner .citrus_Okocat_carousel-item .pov-text__wrapper .pov-cta {
+    justify-content: flex-start;
+    margin-top: 15px;
+  }
+
+  .citrus-Okocatpet-section-title {
+    padding: 40px 15px;
+    font-family: "PetcoCircularTT Bold" !important;
+  }
+
+  .citrus-Okocatpet-section-title h2 {
+    font-size: 1.5rem;
+    color: #00205b;
+    text-align: center;
+    font-weight: 700;
+    line-height: initial;
+    font-family: "PetcoCircularTT-Bold", arial !important;
+  }
+
+  /* -----------------------------
+------------------------------
+*/
+
+  .citrus_Okocat_carousel-inner {
+    display: flex;
+    transition: all ease 0.5s;
+  }
+
+  .citrus_Okocat_carousel-inner .pov1 {
+    background-image: url("https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrusOkocat_Desktop-POV1");
+  }
+
+  .citrus_Okocat_carousel-inner .pov3 {
+    background-image: url("https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrusOkocat_Desktop-POV2");
+  }
+
+  .citrus_Okocat_carousel-inner .pov2 {
+    background-image: url("https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrusOkocat_Desktop-POV3");
+  }
+
+  .citrus_Okocat_carousel-item {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #e9faff;
+  }
+
+  .citrus_Okocat_carousel-indicators {
+    position: absolute;
+    bottom: 0;
+    left: calc(100% / 2 - 52px);
+    text-align: center;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 5px 5px 0 0;
+    padding: 10px 10px 5px;
+  }
+
+  .citrus_Okocat_carousel-indicators span {
+    display: inline-block;
+    border: 2px solid #09205c;
+    padding: 7px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin: 0 5px;
+  }
+
+  .citrus_Okocat_carousel-indicators span.active {
+    background-color: #09205c;
+  }
+
+  .d-hide {
+    display: none;
+  }
+
+  .Okocatpet-flex.pov-cta a {
+    font-family: "PetcoCircularTT-Bold", arial !important;
+    color: #fff;
+    border-radius: 8px;
+    text-decoration: none;
+  }
+
+  /* ----------------------------------------- */
+
+  .citrusOkocat__footerCTA button {
+    border: 0;
+    background: #001952;
+    color: #fff;
+    font-family: "PetcoCircularTT-Bold", arial !important;
+    font-weight: bold;
+    font-size: 16px;
+    width: 211px;
+    height: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 7px;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+
+  /* POV responsive */
+
+  @media only screen and (min-width: 1920px) {
+    .citrus_Okocat_carousel .citrus_Okocat_carousel-inner .citrus_Okocat_carousel-item .pov-text {
+      padding-left: 6%;
+    }
+
+    .citrus_Okocat_carousel .citrus_Okocat_carousel-inner .citrus_Okocat_carousel-item .pov-text__wrapper .pov-logo {
+      max-width: 300px;
+    }
+
+    #citrusOkoCat_logo3 {
+      padding-top: 15px;
+    }
+
+    .citrus_Okocat_carousel .citrus_Okocat_carousel-inner .citrus_Okocat_carousel-item .pov-text__wrapper .pov-text__title {
+      /* font-size: 2.9rem; */
+      padding: 1rem 0;
+      margin: 0;
+    }
+
+    .citrus_Okocat_carousel .citrus_Okocat_carousel-inner .citrus_Okocat_carousel-item .pov-text__wrapper .pov-text__subhead {
+      font-size: 1.125rem;
+      padding-bottom: 0;
+    }
+  }
+
+  @media only screen and (min-width: 1440px) and (max-width: 1919px) {
+
+    .citrus_Okocat_carousel .citrus_Okocat_carousel-inner .citrus_Okocat_carousel-item .pov-text__wrapper .pov-text__title {
+      font-size: 2rem;
+    }
+
+    .citrus_Okocat_carousel .citrus_Okocat_carousel-inner .citrus_Okocat_carousel-item .pov-text__wrapper .pov-text__subhead {
+      font-size: 16px;
+    }
+  }
+
+  @media only screen and (min-width: 1024px) and (max-width: 1279px) {
+    .citrus_Okocat_carousel .citrus_Okocat_carousel-inner .citrus_Okocat_carousel-item .pov-text__wrapper .pov-text__title {
+      font-size: 1.5rem;
+    }
+
+    .citrus_Okocat_carousel .citrus_Okocat_carousel-inner .citrus_Okocat_carousel-item .pov-text__wrapper .pov-text__subhead {
+      font-size: 14px;
+    }
+
+    .citrus_Okocat_carousel .citrus_Okocat_carousel-inner .citrus_Okocat_carousel-item .pov-text__wrapper .pov-text__subhead {
+      max-width: 400px;
+    }
+  }
+
+  @media screen and (max-width: 1290px) {
+    .pov-text {
+      max-width: 38% !important;
+    }
+  }
+
+  @media screen and (max-width: 1200px) {
+    .citrus_Okocat_carousel-item {
+      background-position: right;
+      margin-right: -3%;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .citrus_Okocat_carousel-item {
+      margin-right: -2%;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .citrus_Okocat_carousel-item {
+      margin-right: 0;
+    }
+
+    .pov2 .pov-logo {
+      padding-top: 0;
+    }
+  }
+
+  @media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .citrus_Okocat_carousel .citrus_Okocat_carousel-inner .citrus_Okocat_carousel-item .pov-text {
+      padding-left: 2%;
+    }
+
+    .citrus_Okocat_carousel .citrus_Okocat_carousel-inner .citrus_Okocat_carousel-item .pov-text__wrapper .pov-text__title {
+      font-size: 1.25rem;
+      padding: 10px 0;
+    }
+
+    .citrus_Okocat_carousel .citrus_Okocat_carousel-inner .citrus_Okocat_carousel-item .pov-text__wrapper .pov-text__subhead {
+      font-size: 14px;
+      padding-bottom: 0;
+    }
+
+    .pov2 p.citrusOkocat__disclaimer {
+      margin: 5px 0;
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+
+    .Okocatpet-flex.pov-cta a {
+      color: #fff;
+      border: 0;
+      text-decoration: none;
+      height: 100%;
+      width: max-content;
+      background: unset;
+      color: #001952;
+      text-transform: capitalize;
+      text-decoration: underline;
+    }
+
+    /* POV styling */
+    .citrusOkocat__footerCTA button {
+      color: #001952;
+      background: none;
+      width: fit-content;
+      height: fit-content;
+      text-transform: capitalize;
+      text-decoration: underline;
+      padding-bottom: 40px;
+    }
+  }
+
+  @media only screen and (max-width: 767px) {
+    .d-hide {
+      display: block;
+    }
+
+    /* POV */
+    .citrus_Okocat_carousel-inner .pov1,
+    .citrus_Okocat_carousel-inner .pov2,
+    .citrus_Okocat_carousel-inner .pov3 {
+      background-image: unset;
+    }
+
+    .citrus_Okocat_carousel .citrus_Okocat_carousel-inner .citrus_Okocat_carousel-item .pov-text__wrapper .pov-logo {
+      max-width: 100%;
+      text-align: center;
+    }
+
+    .citrus_Okocat_carousel .citrus_Okocat_carousel-inner .citrus_Okocat_carousel-item {
+      align-items: flex-start;
+      flex-wrap: wrap;
+      justify-content: center;
+      flex: 1;
+    }
+
+    .citrus_Okocat_carousel .citrus_Okocat_carousel-inner .citrus_Okocat_carousel-item .pov-text {
+      max-width: 100%;
+      order: 2;
+      padding: 30px 15px;
+    }
+
+    .citrus_Okocat_carousel .citrus_Okocat_carousel-inner .citrus_Okocat_carousel-item .pov-text__wrapper .pov-text__title {
+      text-align: center;
+      padding: 20px 0;
+      font-size: 1.75rem;
+    }
+
+    .citrus_Okocat_carousel .citrus_Okocat_carousel-inner .citrus_Okocat_carousel-item .pov-text__wrapper .pov-text__subhead {
+      text-align: center;
+      font-size: 16px;
+      line-height: 22px;
+      padding-bottom: 0;
+    }
+
+    .citrus_Okocat_carousel .citrus_Okocat_carousel-inner .citrus_Okocat_carousel-item .pov-text__wrapper .pov-cta {
+      flex-wrap: wrap;
+      text-align: center;
+    }
+
+    .citrus_Okocat_carousel .citrus_Okocat_carousel-inner .citrus_Okocat_carousel-item .pov-text__wrapper .pov-cta .citrus-diamonpet-cta-box {
+      width: 100%;
+      text-transform: capitalize;
+      text-decoration: underline;
+    }
+
+    .citrus_Okocat_carousel .citrus_Okocat_carousel-inner .citrus_Okocat_carousel-item .pov-text__wrapper .pov-cta a:nth-child(1) {
+      margin-right: 0;
+      background: none;
+      color: #001952;
+    }
+
+    .citrus_Okocat_carousel .citrus_Okocat_carousel-inner .citrus_Okocat_carousel-item .Okocatpet-flex {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .citrus_Okocat_carousel .citrus_Okocat_carousel-inner {
+      background: #e9faff;
+    }
+
+    .pov-img img {
+      width: 100%;
+      text-align: center;
+      object-fit: contain;
+    }
+
+    p.citrusOkocat__disclaimer {
+      margin: 10px 0 20px 0;
+      font-size: 12px;
+      line-height: 14px;
+      text-align: center;
+    }
+  }
+
+  /* category icon style */
+  .citrusOkocat__CategoryContainer {
+    margin-top: 50px;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  h2.citrusOkocat__sectionTitle {
+    margin: 0;
+    padding: 0;
+    font-family: "PetcoCircularTT-Bold", arial !important;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    color: #000;
+  }
+
+  .citrusOkocat__category {
+    width: 100%;
+    max-width: 100%;
+    margin: auto;
+    margin-top: 40px;
+    overflow-x: auto;
+  }
+
+  .citrusOkocat__categoryRow {
+    /* width: 1075px; */
+    width: 56.875rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .citrusOkocat__categoryCard {
+    width: 328px;
+    max-width: 100%;
+    margin: auto;
+    text-align: center;
+  }
+
+  .citrusOkocat__categoryCard h3 {
+    margin: 10px auto;
+    font-family: "petcoCircularTT-Bold", arial !important;
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+  }
+
+  .citrusOkocat__categoryCard p {
+    margin: 0 auto 10px;
+    padding: 0 5px;
+    font-family: "PetcoCircularTT-Regular", arial !important;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 20px;
+    color: #000;
+  }
+
+  /* ---------------------
+
+-----------------------*/
+  /* product catalog styles */
+  .citrusOkocat__findCatRecipesContainer {
+    margin-top: 40px;
+  }
+
+  .citrusOkocat__productContainer {
+    width: 910px;
+    max-width: 95%;
+    margin: 40px auto;
+    overflow: auto;
+  }
+
+  .citrusOkocat__productRow {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    column-gap: 6.25rem;
+    row-gap: 3.25rem;
+  }
+
+  .citrusOkocat__productCard {
+    text-align: center;
+  }
+
+
+
+  .citrusOkocat__cardBody {
+    padding-top: 20px;
+    width: 189px;
+    margin: auto;
+  }
+
+  .citrusOkocat__cardTitle {
+    font-family: "PetcoCircularTT-Bold", arial !important;
+    font-size: 18px;
+    font-weight: bold;
+    color: #212529;
+    height: 40px;
+    margin-bottom: 15px;
+  }
+
+  .citrusOkocat__cardBody p {
+    margin-top: 0;
+    margin-bottom: 25px;
+    height: 50px;
+    font-family: "PetcoCircularTT-Regular", arial !important;
+    font-size: 16px;
+    line-height: 18px;
+    color: #220c0b;
+    font-weight: normal;
+  }
+
+  .citrusOkocat__cardCTA .citrusOkocat__cardBTN {
+    align-items: center;
+    appearance: none;
+    background-color: #fff;
+    box-shadow: none;
+    box-sizing: border-box;
+    color: #001952;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: "PetcoCircularTT-Bold", arial !important;
+    font-size: 16px;
+    height: 2.5em;
+    justify-content: center;
+    line-height: 22px;
+    padding: calc(0.5em - 1px) 1em;
+    position: relative;
+    text-align: center;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: top;
+    white-space: nowrap;
+    text-decoration: underline;
+    text-transform: capitalize;
+    border: none;
+  }
+
+  .citrusOkocat__cardCTA .citrusOkocat__cardBTN:active {
+    outline: 0;
+  }
+
+  .citrusOkocat__cardCTA .citrusOkocat__cardBTN:focus {
+    outline: 0;
+  }
+
+  .citrusOkocat__cardCTA .citrusOkocat__cardBTN:hover {
+    outline: 0;
+  }
+
+  .citrusOkocat__cardCTA .citrusOkocat__cardBTN:focus-visible {
+    outline: 0;
+  }
+
+  /* ----------------------------------
+
+-------------------------------------*/
+
+  /* footer style */
+  .citrusOkocat__footer {
+    margin-top: 90px;
+    margin-bottom: 40px;
+    width: 100%;
+    max-width: 100%;
+    background: #6edcfa20;
+  }
+
+  .citrusOkocat__footerRow {
+    width: 1150px;
+    max-width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    position: relative;
+  }
+
+  .citrusOkocat__iframe {
+    position: relative;
+    top: -30px;
+  }
+
+  .citrusOkocat__iframe iframe {
+    width: 100%;
+    max-width: 100%;
+    margin: auto;
+    height: 317px;
+    border-radius: 6px;
+  }
+
+  .citrusOkocat__footerText {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .citrusOkocat__footerText p {
+    width: 395px;
+    max-width: 80%;
+    margin: 10px 0 20px;
+    font-family: "PetcoCircularTT-Regular", arial !important;
+    font-size: 16px;
+    line-height: 22px;
+    color: #000;
+    text-align: center;
+  }
+
+  .citrusOkocat__footerCTA {
+    display: flex;
+    justify-content: center;
+  }
+
+  p.citrusOkocat__disclaimer {
+    margin: 20px 0;
+    font-family: "petcoCircularTT-Regular", arial !important;
+    font-size: 12px;
+    color: #000;
+    max-width: 350px;
+  }
+
+  /********************* 
+Responsive styles 
+*************************/
+  @media screen and (max-width: 915px) {
+
+    /* product group section */
+    .citrusOkocat__productRow {
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      gap: 3rem;
+    }
+  }
+
+  @media all and (min-width: 769px) and (max-width: 1250px) {
+    .citrusOkocat__footerRow {
+      width: 95%;
+    }
+  }
+
+  @media all and (max-width: 768px) {
+    .citrusOkocat__desktop_hide {
+      display: block;
+    }
+
+    .citrusOkocat__mobile_hide {
+      display: none;
+    }
+
+    /* POV styling */
+    .citrusOkocat__footerCTA button {
+      color: #001952;
+      background: none;
+      width: fit-content;
+      height: fit-content;
+      text-transform: capitalize;
+      text-decoration: underline;
+      padding-bottom: 40px;
+    }
+
+    h2.citrusOkocat__sectionTitle {
+      width: 95%;
+      margin: auto;
+    }
+
+    /* category style */
+    .citrusOkocat__categoryRow {
+      width: 768px;
+    }
+
+    .citrusOkocat__categoryCard {
+      width: 220px;
+    }
+
+    /* footer style */
+    .citrusOkocat__footer {
+      margin-top: 0;
+    }
+
+    .citrusOkocat__footerRow {
+      display: flex;
+      flex-direction: column;
+      grid-gap: unset;
+    }
+
+    .citrusOkocat__footerCol.order1 {
+      order: 2;
+    }
+
+    .citrusOkocat__footerCol.order2 {
+      order: 1;
+    }
+
+    .citrusOkocat__iframe {
+      top: 3px;
+    }
+
+    .citrusOkocat__footerText {
+      padding-top: 40px;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+
+    .citrusOkocat__footerRow {
+      grid-gap: 0;
+    }
+  }
+
+  @media all and (max-width: 476px) {
+    .pov-text {
+      max-width: 100% !important;
+    }
+
+    .citrusOkocat__cardBody {
+      width: 195px;
+    }
+
+    .citrusOkocat__categoryRow {
+      width: 705px;
+    }
+  }
+
+  @media screen and (max-width: 375px) {
+    .citrusOkocat__categoryRow {
+      width: 685px;
+    }
+  }
+
+  @media screen and (max-width: 320px) {
+    .citrus_Okocat_carousel .citrus_Okocat_carousel-inner .citrus_Okocat_carousel-item .pov-text__wrapper .pov-text__title {
+      font-size: 21px;
+    }
+  }
+
+  /** youtube video **/
+
+  @media only screen and (max-width: 1024px) {
+    .citrusOkocat__iframe iframe {
+      height: 268px;
+    }
+
+    .citrusOkocat__footerText h2.citrusOkocat__sectionTitle {
+      max-width: 400px;
+    }
+
+    .citrus_Okocat_carousel .citrus_Okocat_carousel-inner .citrus_Okocat_carousel-item .pov-text__wrapper .pov-text__subhead {
+      max-width: 300px;
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    .citrusOkocat__iframe iframe {
+      height: 432px;
+    }
+  }
+
+  @media only screen and (max-width: 425px) {
+    .citrusOkocat__iframe iframe {
+      height: 238px;
+    }
+  }
+
+  @media only screen and (max-width: 375px) {
+    .citrusOkocat__iframe iframe {
+      height: 210px;
+    }
+  }
+
+  @media screen and (max-width: 320px) {
+    .citrusOkocat__iframe iframe {
+      height: 180px;
+    }
+  }
+</style>
+<!-- Okocat landing page wrapper start -->
+<main class="citrusOkocat__Wrapper">
+  <!-- POV section start -->
+  <section class="citrus_Okocat_carousel">
+    <div class="citrus_Okocat_carousel-inner">
+      <!-- POV 01 -->
+      <div class="Okocatpet-flex citrus_Okocat_carousel-item pov1">
+        <div class="pov-img" title="A woman reading a book on her bed with her cat.">
+          <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrusOkocat_Mobile-POV1" class="d-hide"
+            alt="A woman reading a book on her bed with her cat." />
+        </div>
+        <div class="pov-text">
+          <div class="pov-text__wrapper Okocatpet-flex">
+            <div class="pov-logo">
+              <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/okocat-logo" alt="Okocat logo" />
+            </div>
+            <h1 class="pov-text__title">
+              NEXT GENERATION <br class="d-hide"> <span style="white-space: nowrap;">PLANT-BASED</span>&nbsp;LITTER
+            </h1>
+            <p class="pov-text__subhead">
+              Biodegradable and planet-friendly with <br class="d-hide">superior&nbsp;performance.
+            </p>
+            <div class="Okocatpet-flex pov-cta">
+              <a href="https://www.petco.com/shop/en/petcostore/brand/okocat"
+                manual_cm_sp="sponsoredbrandpage:okocat:herobanner:1:nextgenerationplantbasedlitter:shopnow"
+                onclick="clickTrackLink(this);" class="citrus-diamonpet-cta-box">Shop Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- POV 02 -->
+      <div class="Okocatpet-flex citrus_Okocat_carousel-item pov3">
+        <div class="pov-img" title="A bag of Okocat Low-Tracking litter being poured into a bowl.">
+          <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrusOkocat_Mobile-POV2" class="d-hide"
+            alt="A bag of Okocat Low-Tracking litter being poured into a bowl." />
+        </div>
+        <div class="pov-text">
+          <div class="Okocatpet-flex pov-text__wrapper">
+            <div class="pov-logo" id="citrusOkoCat_logo3">
+              <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/okocat-logo" alt="Okocat logo" />
+            </div>
+            <h1 class="pov-text__title">WOOD WORKS <br class="d-hide">NATURALLY</h1>
+            <p class="pov-text__subhead">
+              Liquid is absorbed on contact, stopping <br class="d-hide">the creation of ammonia and odor.
+            </p>
+            <div class="Okocatpet-flex pov-cta">
+              <a href="https://www.petco.com/shop/en/petcostore/brand/okocat"
+                manual_cm_sp="sponsoredbrandpage:okocat:herobanner:2:woodworksnaturally:shopnow"
+                onclick="clickTrackLink(this);" class="citrus-diamonpet-cta-box">Shop Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- POV 03 -->
+      <div class="Okocatpet-flex citrus_Okocat_carousel-item pov2">
+        <div class="pov-img" title="A cat next to a bag of Okocat Featherweight litter.">
+          <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrusOkocat_Mobile-POV3" class="d-hide"
+            alt="A cat next to a bag of Okocat Featherweight litter." />
+        </div>
+        <div class="pov-text">
+          <div class="Okocatpet-flex pov-text__wrapper">
+            <div class="pov-logo">
+              <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/okocat-logo" alt="Okocat logo" />
+            </div>
+            <h1 class="pov-text__title">LITTER THAT <br class="d-hide">LASTS LONGER</h1>
+            <p class="pov-text__subhead">
+              With regular scooping, your base <br class="d-hide">litter can last up to 7&nbsp;weeks.*
+            </p>
+            <div class="Okocatpet-flex pov-cta">
+              <a href="https://www.petco.com/shop/en/petcostore/brand/okocat"
+                manual_cm_sp="sponsoredbrandpage:okocat:herobanner:3:litterthatlastslonger:shopnow"
+                onclick="clickTrackLink(this);" class="citrus-diamonpet-cta-box">Shop Now</a>
+            </div>
+            <p class="citrusOkocat__disclaimer">
+              *Depending on number of cats using the litter box, how often they use it and type of scoop used.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="citrus_Okocat_carousel-controls">
+      <span class="prev"></span>
+      <span class="next"></span>
+    </div>
+    <div class="citrus_Okocat_carousel-indicators"></div>
+  </section>
+  <!-- End POV section -->
+
+  <!-- icon category section start -->
+  <section class="citrusOkocat__CategoryContainer">
+    <h2 class="citrusOkocat__sectionTitle">
+      Cleaner and healthier for your cat, family and home
+    </h2>
+    <!-- category box -->
+    <div class="citrusOkocat__category">
+      <div class="citrusOkocat__categoryRow">
+        <!-- 1st -->
+        <div class="citrusOkocat__categoryCol">
+          <a href="https://www.petco.com/shop/en/petcostore/brand/okocat"
+            manual_cm_sp="sponsoredbrandpage:okocat:healthiercatsection:2:healthiercatsection:sectionlink"
+            onclick="clickTrackLink(this);">
+            <div class="citrusOkocat__categoryCard">
+              <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/okocat-category-icon1"
+                alt="Stops odor before it starts" />
+              <div class="citrusOkocat__cardBody"></div>
+            </div>
+          </a>
+        </div>
+        <!-- 2nd -->
+        <div class="citrusOkocat__categoryCol">
+          <a href="https://www.petco.com/shop/en/petcostore/brand/okocat"
+            manual_cm_sp="sponsoredbrandpage:okocat:healthiercatsection:2:healthiercatsection:sectionlink"
+            onclick="clickTrackLink(this);">
+            <div class="citrusOkocat__categoryCard">
+              <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/okocat-category-icon2"
+                alt="Clumps solid for easy scooping" />
+              <div class="citrusOkocat__cardBody"></div>
+            </div>
+          </a>
+        </div>
+        <!-- 3rd -->
+        <div class="citrusOkocat__categoryCol">
+          <a href="https://www.petco.com/shop/en/petcostore/brand/okocat"
+            manual_cm_sp="sponsoredbrandpage:okocat:healthiercatsection:2:healthiercatsection:sectionlink"
+            onclick="clickTrackLink(this);">
+            <div class="citrusOkocat__categoryCard">
+              <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/okocat-category-icon3"
+                alt="99 percent dust free for a healthy home" />
+              <div class="citrusOkocat__cardBody"></div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End category icon section -->
+
+  <!-- Find the right litter for your cat start -->
+  <section class="citrusOkocat__findCatRecipesContainer">
+    <h2 class="citrusOkocat__sectionTitle">
+      Find the right litter <br class="d-hide">for your cat
+    </h2>
+    <!-- product catalog -->
+    <div class="citrusOkocat__productContainer">
+      <div class="citrusOkocat__productRow">
+        <!-- product 1 -->
+        <div class="citrusOkocat__productCol">
+          <a href="https://www.petco.com/shop/en/petcostore/product/okocat-featherweight-clumping-wood-cat-litter"
+            manual_cm_sp="sponsoredbrandpage:okocat:findtherightlitterforyourcat:1:featherweight:shopnow"
+            onclick="clickTrackLink(this);">
+            <div class="citrusOkocat__productCard">
+              <div class="citrusOkocat__cardImg">
+                <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/okocat_featherweight-refresh"
+                  alt="A pack shot of Okocat Featherweight litter." />
+              </div>
+              <div class="citrusOkocat__cardBody">
+                <h3 class="citrusOkocat__cardTitle">Featherweight</h3>
+                <p>
+                  The lightest of lightweight litters with soft texture similar to clay.
+                </p>
+              </div>
+              <div class="citrusOkocat__cardCTA">
+                <button class="citrusOkocat__cardBTN" role="button">Shop Now</button>
+              </div>
+            </div>
+          </a>
+        </div>
+        <!-- product 2 -->
+        <div class="citrusOkocat__productCol">
+          <a href="https://www.petco.com/shop/en/petcostore/product/okocat-original-premium-natural-clumping-wood-cat-litter"
+            manual_cm_sp="sponsoredbrandpage:okocat:findtherightlitterforyourcat:2:orginial:shopnow"
+            onclick="clickTrackLink(this);">
+            <div class="citrusOkocat__productCard">
+              <div class="citrusOkocat__cardImg">
+                <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/okocat_original-refresh"
+                  alt="A pack shot of Okocat Original litter" />
+              </div>
+              <div class="citrusOkocat__cardBody">
+                <h3 class="citrusOkocat__cardTitle">Original</h3>
+                <p>
+                  Premium litter with a pleasant, playful texture that’s
+                  easy on the paws.
+                </p>
+              </div>
+              <div class="citrusOkocat__cardCTA">
+                <button class="citrusOkocat__cardBTN" role="button">Shop Now</button>
+              </div>
+            </div>
+          </a>
+        </div>
+        <!-- product 3 -->
+        <div class="citrusOkocat__productCol">
+          <a href="https://www.petco.com/shop/en/petcostore/product/okocat-low-tracking-clumping-mini-pellets-wood-cat-litter-5206702-1"
+            manual_cm_sp="sponsoredbrandpage:okocat:findtherightlitterforyourcat:3:lowtracking:shopnow"
+            onclick="clickTrackLink(this);">
+            <div class="citrusOkocat__productCard">
+              <div class="citrusOkocat__cardImg">
+                <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/okocat_low-tracking-refresh"
+                  alt="A pack shot of Okocat Low Tracking litter." />
+              </div>
+              <div class="citrusOkocat__cardBody">
+                <h3 class="citrusOkocat__cardTitle">Low Tracking</h3>
+                <p>
+                  Made from soft mini-pellets and a great choice for
+                  long-haired cats.
+                </p>
+              </div>
+              <div class="citrusOkocat__cardCTA">
+                <button class="citrusOkocat__cardBTN" role="button">Shop Now</button>
+              </div>
+            </div>
+          </a>
+        </div>
+        <!-- product 4 -->
+        <div class="citrusOkocat__productCol">
+          <a href="https://www.petco.com/shop/en/petcostore/product/okocat-super-soft-clumping-wood-for-delicate-paws-cat-litter"
+            manual_cm_sp="sponsoredbrandpage:okocat:findtherightlitterforyourcat:4:supersoft:shopnow"
+            onclick="clickTrackLink(this);">
+            <div class="citrusOkocat__productCard">
+              <div class="citrusOkocat__cardImg">
+                <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/okocat_super-soft-refresh"
+                  alt="A pack shot of Okocat Super Soft litter" />
+              </div>
+              <div class="citrusOkocat__cardBody">
+                <h3 class="citrusOkocat__cardTitle">Super Soft</h3>
+                <p>Perfect for cats with sensitive paws or even kittens.</p>
+              </div>
+              <div class="citrusOkocat__cardCTA">
+                <button class="citrusOkocat__cardBTN" role="button">Shop Now</button>
+              </div>
+            </div>
+          </a>
+        </div>
+        <!-- product 5 -->
+        <div class="citrusOkocat__productCol">
+          <a href="https://www.petco.com/shop/en/petcostore/product/okocat-dust-free-non-clumping-paper-pellet-cat-litter"
+            manual_cm_sp="sponsoredbrandpage:okocat:findtherightlitterforyourcat:5:dustfreenonclumpingpaper:shopnow"
+            onclick="clickTrackLink(this);">
+            <div class="citrusOkocat__productCard">
+              <div class="citrusOkocat__cardImg">
+                <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/okocat_dust-free-refresh"
+                  alt="A pack shot of Okocat Dust Free, Non-Clumping Paper litter" />
+              </div>
+              <div class="citrusOkocat__cardBody">
+                <h3 class="citrusOkocat__cardTitle">
+                  Dust Free, <span style="white-space: nowrap;">Non-Clumping</span> Paper
+                </h3>
+                <p>
+                  Ideal for cats with respiratory ailments or homes with
+                  allergies.
+                </p>
+              </div>
+              <div class="citrusOkocat__cardCTA">
+                <button class="citrusOkocat__cardBTN" role="button">Shop Now</button>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- shop all cta -->
+    <div class="citrusOkocat__footerCTA">
+      <a href="https://www.petco.com/shop/en/petcostore/brand/okocat"
+        manual_cm_sp="sponsoredbrandpage:okocat:findtherightlitterforyourcat:6:shopall:shopall"
+        onclick="clickTrackLink(this);">
+        <button>Shop All</button>
+      </a>
+    </div>
+  </section>
+  <!-- END Find the right litter for your cat  -->
+
+  <!-- Footer section start -->
+  <section class="citrusOkocat__footer">
+    <div class="citrusOkocat__footerRow">
+      <div class="citrusOkocat__footerCol order1">
+        <div class="citrusOkocat__iframe">
+          <iframe src="https://www.youtube.com/embed/zmaM9LmRlnQ" title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="citrusOkocat__footerCol order2">
+        <div class="citrusOkocat__footerText">
+          <h2 class="citrusOkocat__sectionTitle">
+            Leave old school clay <br class="d-hide">and chemicals in the dust
+          </h2>
+          <p>
+            Made entirely of sustainably sourced wood or paper fiber free of
+            fragrance, chemicals&nbsp;and&nbsp;dyes.
+          </p>
+          <div class="citrusOkocat__footerCTA">
+            <a href="https://www.petco.com/shop/en/petcostore/brand/okocat"
+              manual_cm_sp="sponsoredbrandpage:okocat:leaveoldschoolclayandchemicalsinthedust:1:shopnow:shopnow"
+              onclick="clickTrackLink(this);">
+              <button>Shop Now</button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Footer section -->
+</main>
+<!-- End Okocat landing page wrapper -->
+
+<!-- custom js code for POV section -->
+<script>
+  let citrus_Okocat_carousel = document.querySelector(
+    ".citrus_Okocat_carousel"
+  );
+
+  let citrus_Okocat_carouselInner = document.querySelector(
+    ".citrus_Okocat_carousel-inner"
+  );
+
+  let prev = document.querySelector(
+    ".citrus_Okocat_carousel-controls .prev"
+  );
+
+  let next = document.querySelector(
+    ".citrus_Okocat_carousel-controls .next"
+  );
+
+  let slides = document.querySelectorAll(
+    ".citrus_Okocat_carousel-inner .citrus_Okocat_carousel-item"
+  );
+
+  let totalSlides = slides.length;
+
+  let step = 100 / totalSlides;
+
+  let activeSlide = 0;
+
+  let activeIndicator = 0;
+
+  let direction = -1;
+
+  let jump = 1;
+
+  let interval = 5000;
+
+  let time;
+
+  //Init citrus_Okocat_carousel
+  citrus_Okocat_carouselInner.style.minWidth = totalSlides * 100 + "%";
+  loadIndicators();
+  loop(true);
+
+  //citrus_Okocat_carousel events
+
+  next.addEventListener("click", () => {
+    slideToNext();
+  });
+
+  prev.addEventListener("click", () => {
+    slideToPrev();
+  });
+
+  citrus_Okocat_carouselInner.addEventListener("transitionend", () => {
+    if (direction === -1) {
+      if (jump > 1) {
+        for (let i = 0; i < jump; i++) {
+          activeSlide++;
+          citrus_Okocat_carouselInner.append(
+            citrus_Okocat_carouselInner.firstElementChild
+          );
+        }
+      } else {
+        activeSlide++;
+        citrus_Okocat_carouselInner.append(
+          citrus_Okocat_carouselInner.firstElementChild
+        );
+      }
+    } else if (direction === 1) {
+      if (jump > 1) {
+        for (let i = 0; i < jump; i++) {
+          activeSlide--;
+          citrus_Okocat_carouselInner.prepend(
+            citrus_Okocat_carouselInner.lastElementChild
+          );
+        }
+      } else {
+        activeSlide--;
+        citrus_Okocat_carouselInner.prepend(
+          citrus_Okocat_carouselInner.lastElementChild
+        );
+      }
+    }
+
+    citrus_Okocat_carouselInner.style.transition = "none";
+    citrus_Okocat_carouselInner.style.transform = "translateX(0%)";
+    setTimeout(() => {
+      jump = 1;
+      citrus_Okocat_carouselInner.style.transition = "all ease .5s";
+    });
+    updateIndicators();
+  });
+
+  document
+    .querySelectorAll(".citrus_Okocat_carousel-indicators span")
+    .forEach((item) => {
+      item.addEventListener("click", (e) => {
+        let slideTo = parseInt(e.target.dataset.slideTo);
+        let indicators = document.querySelectorAll(
+          ".citrus_Okocat_carousel-indicators span"
+        );
+
+        indicators.forEach((item, index) => {
+          if (item.classList.contains("active")) {
+            activeIndicator = index;
+          }
+        });
+        if (slideTo - activeIndicator > 1) {
+          jump = slideTo - activeIndicator;
+          step = jump * step;
+          slideToNext();
+        } else if (slideTo - activeIndicator === 1) {
+          slideToNext();
+        } else if (slideTo - activeIndicator < 0) {
+          if (Math.abs(slideTo - activeIndicator) > 1) {
+            jump = Math.abs(slideTo - activeIndicator);
+            step = jump * step;
+            slideToPrev();
+          }
+          slideToPrev();
+        }
+        step = 100 / totalSlides;
+      });
+    });
+
+  citrus_Okocat_carousel.addEventListener("mouseover", () => {
+    loop(false);
+  });
+
+  citrus_Okocat_carousel.addEventListener("mouseout", () => {
+    loop(true);
+  });
+
+  //citrus_Okocat_carousel functions
+
+  function loadIndicators() {
+    slides.forEach((slide, index) => {
+      if (index === 0) {
+        document.querySelector(
+          ".citrus_Okocat_carousel-indicators"
+        ).innerHTML += `<span data-slide-to="${index}" class="active"></span>`;
+      } else {
+        document.querySelector(
+          ".citrus_Okocat_carousel-indicators"
+        ).innerHTML += `<span data-slide-to="${index}"></span>`;
+      }
+    });
+  }
+
+  function updateIndicators() {
+    if (activeSlide > totalSlides - 1) {
+      activeSlide = 0;
+    } else if (activeSlide < 0) {
+      activeSlide = totalSlides - 1;
+    }
+    document
+      .querySelector(".citrus_Okocat_carousel-indicators span.active")
+      .classList.remove("active");
+    document
+      .querySelectorAll(".citrus_Okocat_carousel-indicators span")
+    [activeSlide].classList.add("active");
+  }
+
+  function slideToNext() {
+    if (direction === 1) {
+      direction = -1;
+      citrus_Okocat_carouselInner.prepend(
+        citrus_Okocat_carouselInner.lastElementChild
+      );
+    }
+
+    citrus_Okocat_carousel.style.justifyContent = "flex-start";
+    citrus_Okocat_carouselInner.style.transform = `translateX(-${step}%)`;
+  }
+
+  function slideToPrev() {
+    if (direction === -1) {
+      direction = 1;
+      citrus_Okocat_carouselInner.append(
+        citrus_Okocat_carouselInner.firstElementChild
+      );
+    }
+    citrus_Okocat_carousel.style.justifyContent = "flex-end";
+    citrus_Okocat_carouselInner.style.transform = `translateX(${step}%)`;
+    loop(false);
+  }
+
+  function loop(status) {
+    if (status === true) {
+      time = setInterval(() => {
+        slideToNext();
+      }, interval);
+    } else {
+      clearInterval(time);
+    }
+  }
+  // pov loader add. before full load js pov none.
+  document.addEventListener("DOMContentLoaded", function () {
+    citrus_Okocat_carousel.style.display = "flex";
+  });
+</script>

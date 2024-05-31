@@ -1,0 +1,31 @@
+/* Importing Petco Circular Font from Petco Website */
+@font-face {
+  font-family: "PetcoCircular-Regular";
+  src: url("font/PetcoCircular-Regular.woff2")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "PetcoCircular-Bold";
+  src: url("font/PetcoCircular-Bold.woff2")
+    format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "PetcoCircular-Black";
+  src: url("font/PetcoCircular-Black.otf")
+    format("otf");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "PetcoCircular-Medium";
+  src: url("font/PetcoCircular-Medium.otf")
+    format("otf");
+  font-weight: 700;
+  font-style: normal;
+}

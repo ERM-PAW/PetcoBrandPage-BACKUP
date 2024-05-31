@@ -1,0 +1,1007 @@
+body {
+  margin: 0;
+}
+
+/* Splide CSS Start*/
+.splide__container {
+  box-sizing: border-box;
+  position: relative;
+}
+
+.splide__list {
+  backface-visibility: hidden;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.splide.is-initialized:not(.is-active) .splide__list {
+  display: block;
+}
+
+.splide__pagination {
+  -ms-flex-align: center;
+  align-items: center;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: 0;
+  pointer-events: none;
+}
+
+.splide__pagination li {
+  display: inline-block;
+  line-height: 1;
+  list-style-type: none;
+  margin: 0;
+  pointer-events: auto;
+}
+
+.splide:not(.is-overflow) .splide__pagination {
+  display: none;
+}
+
+.splide__progress__bar {
+  width: 0;
+}
+
+.splide {
+  position: relative;
+  visibility: hidden;
+}
+
+.splide.is-initialized,
+.splide.is-rendered {
+  visibility: visible;
+}
+
+.splide__slide {
+  backface-visibility: hidden;
+  box-sizing: border-box;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  list-style-type: none !important;
+  margin: 0;
+  position: relative;
+}
+
+.splide__slide img {
+  vertical-align: bottom;
+}
+
+.splide__spinner {
+  animation: splide-loading 1s linear infinite;
+  border: 2px solid #999;
+  border-left-color: transparent;
+  border-radius: 50%;
+  bottom: 0;
+  contain: strict;
+  display: inline-block;
+  height: 20px;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 20px;
+}
+
+.splide__sr {
+  clip: rect(0 0 0 0);
+  border: 0;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.splide__toggle.is-active .splide__toggle__play,
+.splide__toggle__pause {
+  display: none;
+}
+
+.splide__toggle.is-active .splide__toggle__pause {
+  display: inline;
+}
+
+.splide__track {
+  overflow: hidden;
+  position: relative;
+  z-index: 0;
+}
+
+@keyframes splide-loading {
+  0% {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+.splide__track--draggable {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.splide__track--fade > .splide__list > .splide__slide {
+  margin: 0 !important;
+  opacity: 0;
+  z-index: 0;
+}
+
+.splide__track--fade > .splide__list > .splide__slide.is-active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.splide--rtl {
+  direction: rtl;
+}
+
+.splide__track--ttb > .splide__list {
+  display: block;
+}
+
+.splide__arrow {
+  -ms-flex-align: center;
+  align-items: center;
+  background: #ccc;
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  display: -ms-flexbox;
+  display: flex;
+  height: 2em;
+  -ms-flex-pack: center;
+  justify-content: center;
+  opacity: 0.7;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2em;
+  z-index: 1;
+}
+
+.splide__arrow svg {
+  fill: #000;
+  height: 1.2em;
+  width: 1.2em;
+}
+
+.splide__arrow:hover:not(:disabled) {
+  opacity: 0.9;
+}
+
+.splide__arrow:disabled {
+  opacity: 0.3;
+}
+
+.splide__arrow:focus-visible {
+  outline: 3px solid #0bf;
+  outline-offset: 3px;
+}
+
+.splide__arrow--prev {
+  left: 0;
+}
+
+.splide__arrow--prev svg {
+  transform: scaleX(-1);
+}
+
+.splide__arrow--next {
+  right: 0em;
+}
+
+.splide.is-focus-in .splide__arrow:focus {
+  outline: 3px solid #0bf;
+  outline-offset: 3px;
+}
+
+.splide__pagination {
+  bottom: 0.5em;
+  left: 0;
+  padding: 0 1em;
+  position: absolute;
+  right: 0;
+  z-index: 1;
+}
+
+.splide__pagination__page {
+  background: #ccc;
+  border: 0;
+  border-radius: 50%;
+  display: inline-block;
+  height: 8px;
+  margin: 3px;
+  opacity: 0.7;
+  padding: 0;
+  position: relative;
+  transition: transform 0.2s linear;
+  width: 8px;
+}
+
+.splide__pagination__page.is-active {
+  background: #fff;
+  transform: scale(1.4);
+  z-index: 1;
+}
+
+.splide__pagination__page:hover {
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+.splide__pagination__page:focus-visible {
+  outline: 3px solid #0bf;
+  outline-offset: 3px;
+}
+
+.splide.is-focus-in .splide__pagination__page:focus {
+  outline: 3px solid #0bf;
+  outline-offset: 3px;
+}
+
+.splide__progress__bar {
+  background: #ccc;
+  height: 3px;
+}
+
+.splide__slide {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.splide__slide:focus {
+  outline: 0;
+}
+
+@supports (outline-offset: -3px) {
+  .splide__slide:focus-visible {
+    outline: 3px solid #0bf;
+    outline-offset: -3px;
+  }
+}
+
+@media screen and (-ms-high-contrast: none) {
+  .splide__slide:focus-visible {
+    border: 3px solid #0bf;
+  }
+}
+
+@supports (outline-offset: -3px) {
+  .splide.is-focus-in .splide__slide:focus {
+    outline: 3px solid #0bf;
+    outline-offset: -3px;
+  }
+}
+
+@media screen and (-ms-high-contrast: none) {
+  .splide.is-focus-in .splide__slide:focus {
+    border: 3px solid #0bf;
+  }
+
+  .splide.is-focus-in .splide__track > .splide__list > .splide__slide:focus {
+    border-color: #0bf;
+  }
+}
+
+.splide__toggle {
+  cursor: pointer;
+}
+
+.splide__toggle:focus-visible {
+  outline: 3px solid #0bf;
+  outline-offset: 3px;
+}
+
+.splide.is-focus-in .splide__toggle:focus {
+  outline: 3px solid #0bf;
+  outline-offset: 3px;
+}
+
+.splide__track--nav > .splide__list > .splide__slide {
+  border: 3px solid transparent;
+  cursor: pointer;
+}
+
+.splide__track--nav > .splide__list > .splide__slide.is-active {
+  border: 3px solid #000;
+}
+
+.splide__arrows--rtl .splide__arrow--prev {
+  left: auto;
+  right: 1em;
+}
+
+.splide__arrows--rtl .splide__arrow--prev svg {
+  transform: scaleX(1);
+}
+
+.splide__arrows--rtl .splide__arrow--next {
+  left: 1em;
+  right: auto;
+}
+
+.splide__arrows--rtl .splide__arrow--next svg {
+  transform: scaleX(-1);
+}
+
+.splide__arrows--ttb .splide__arrow {
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.splide__arrows--ttb .splide__arrow--prev {
+  top: 1em;
+}
+
+.splide__arrows--ttb .splide__arrow--prev svg {
+  transform: rotate(-90deg);
+}
+
+.splide__arrows--ttb .splide__arrow--next {
+  bottom: 1em;
+  top: auto;
+}
+
+.splide__arrows--ttb .splide__arrow--next svg {
+  transform: rotate(90deg);
+}
+
+.splide__pagination--ttb {
+  bottom: 0;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  left: auto;
+  padding: 1em 0;
+  right: 0.5em;
+  top: 0;
+}
+
+/* End Splide CSS */
+
+/* Custom CSS Start*/
+
+/* Common CSS */
+.citrusFancy__feast h1,
+.citrusFancy__feast h2,
+.citrusFancy__feast h3,
+.citrusFancy__feast h4,
+.citrusFancy__feast h5,
+.citrusFancy__feast h6 {
+  margin: 0;
+  padding: 0;
+}
+
+.citrusFancy__feast p {
+  margin: 0;
+  padding: 0;
+}
+
+.citrusFancy__feast__wrapper a {
+  text-decoration: none;
+}
+
+.citrusFancy__feast__wrapper a:hover {
+  text-decoration: none;
+}
+
+.citrusFancy__feast__sectionTitle {
+  margin: 0;
+  font-family: PetcoCircular-Bold, arial !important;
+  font-weight: 900;
+  font-size: 25px;
+  line-height: 29px;
+  text-align: center;
+  color: #000;
+  padding-bottom: 28px;
+  font-weight: 900;
+}
+h2.citrusFancy__feast__sectionTitle sup {
+  font-family: inherit;
+  font-size: 11px;
+  line-height: 0;
+  position: relative;
+  top: -0.5em;
+  left: 1px;
+  vertical-align: baseline;
+}
+h2.citrusFancy__feast__sectionTitle span.nobr {
+  white-space: nowrap;
+}
+.citrusFancy__feast__sectionCTAgap {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.sectionCommonCTA {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.citrusFancy__feast__commonCTA {
+  color: #fff;
+  text-transform: uppercase;
+  background-color: #001952;
+  border: none;
+  border-radius: 5px;
+  font-weight: 700;
+  width: 287px;
+  height: 55px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-family: PetcoCircular-Bold, arial !important;
+  font-weight: 900;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .citrusFancy__feast__commonCTA {
+    width: 225px;
+    height: 50px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .citrusFancy__feast__sectionTitle {
+    font-size: 20px;
+    line-height: 24px;
+    width: 242px;
+    margin: auto;
+  }
+}
+
+/* End Common CSS */
+
+/* overflow scroll bar hide */
+.citrusFancy__feast__productContainer::-webkit-scrollbar,
+.citrusFancy__feast__row::-webkit-scrollbar {
+  display: none;
+}
+
+.citrusFancy__feast__wrapper {
+  width: 100%;
+  max-width: 1440px;
+  margin: auto;
+}
+
+.citrusFancy__feast__desktop-version {
+  display: block;
+}
+
+.citrusFancy__feast__mobile-version {
+  display: none;
+}
+
+/* hero banner */
+.citrusFancy__feast__heroContainer {
+  position: relative;
+}
+
+.citrusFancy__feast__heroImage-box img {
+  width: 100%;
+  max-width: 1440px;
+}
+
+.citrusFancy__feast__heroImage-copy {
+  position: absolute;
+  width: 90%;
+  height: 100%;
+  top: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: auto 5%;
+}
+
+.hero-left {
+  position: absolute;
+  left: 7%;
+}
+
+.citrusFancy__feast__logo img {
+  width: 17.5%;
+  max-width: 100%;
+  position: absolute;
+  top: 10%;
+  right: 19%;
+}
+
+.citrusFancy__feast__heroCopy h1 {
+  margin: 0;
+  font-family: "PetcoCircular-Bold", arial !important;
+  font-size: 62px;
+  line-height: 67px;
+  color: #f6d330;
+}
+
+.citrusFancy__feast__heroCopy p {
+  margin: 0;
+  font-family: "PetcoCircular-Medium", arial !important;
+  font-size: 28px;
+  line-height: 34px;
+  font-weight: 500;
+  color: #fff;
+  padding: 15px 0 25px 0;
+}
+
+.hero-rightCTA a {
+  display: block;
+  width: 171px;
+  background: #fff;
+  font-family: "PetcoCircular-Bold", arial !important;
+  font-size: 16px;
+  line-height: 52px;
+  font-weight: 900;
+  text-align: center;
+  color: #00205b;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+/* product section three across */
+.citrusFancy__feast__product {
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.citrusFancy__feast__productContainer {
+  width: 1145px;
+  max-width: 100%;
+  margin: auto;
+  overflow-x: auto;
+}
+
+.citrusFancy__feast__productContainer a {
+  text-decoration: none;
+}
+
+.citrusFancy__feast__row {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 25px;
+}
+
+.citrusFancy__feast__card {
+  width: 361px;
+  max-width: 100%;
+  height: 408px;
+  border: 2px solid #00205b;
+  border-radius: 8px;
+}
+
+.citrusFancy__feast__card-img {
+  background: #fff;
+  height: 230px;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  border-radius: 8px;
+}
+
+.citrusFancy__feast__card-img img {
+  width: 100%;
+  object-fit: contain;
+}
+
+.citrusFancy__feast__card-body {
+  margin: 32px 23px 20px;
+}
+
+.citrusFancy__feast__card-body h3 {
+  font-size: 16px;
+  line-height: 20px;
+  font-family: "PetcoCircular-Bold", arial !important;
+  font-weight: 700;
+  color: #000;
+}
+
+.citrusFancy__feast__card-body p {
+  margin-top: 20px;
+  font-size: 16px;
+  line-height: 20px;
+  font-family: "PetcoCircular-Regular", arial !important;
+  font-weight: 400;
+  color: #000;
+}
+
+.citrusFancy__feast__disclaimer {
+  font-size: 12px;
+  line-height: 16px;
+  font-family: "PetcoCircular-Regular", arial !important;
+  font-weight: 400;
+  color: #000;
+  text-align: center;
+  margin: 0;
+}
+
+.citrusFancy__feast__disclaimer span {
+  font-family: "PetcoCircular-Bold", arial !important;
+  font-weight: 900;
+}
+
+/* product scroller */
+.citrusFancy__feast__productScroller {
+  overflow: hidden;
+  max-width: 1440px;
+  margin: auto;
+  margin-bottom: 30px;
+}
+
+.citrusFancy__feast-section__tab-content {
+  max-width: 1250px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.splide__arrow {
+  -ms-flex-align: center;
+  -webkit-box-align: center;
+  align-items: center;
+  background: #ffffff;
+  border: 1px solid #122359;
+  border-radius: 50%;
+  cursor: pointer;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  height: 2.2em;
+  -ms-flex-pack: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  opacity: 1;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 2.2em;
+  z-index: 1;
+}
+
+.splide__arrow:disabled {
+  opacity: 0;
+}
+
+.citrusFancy__feast-tab-card > a {
+  text-decoration: none;
+  color: #000;
+}
+
+.citrusFancy__feast-tab-cardImg {
+  margin: auto;
+}
+
+.citrusFancy__feast-tab-cardImg img {
+  max-width: 100%;
+  max-height: 175px;
+}
+
+.citrusFancy__feast-tab-cardBody p {
+  font-family: PetcoCircular-Regular, arial !important;
+  color: #333;
+  font-size: 13px;
+  line-height: normal;
+  text-align: left;
+  margin: 20px 0 10px;
+  text-decoration: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  /* line-clamp: 2; */
+  -webkit-box-orient: vertical;
+  max-height: 4em;
+  font-weight: 400;
+}
+
+.citrusFancy__feast__productCTA {
+  border: 0;
+  padding-left: 0;
+  background: 0 0;
+  text-decoration: underline;
+  font-family: PetcoCircular-Bold, arial !important;
+  color: #001952;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.citrusFancy__feast__sectionCTA {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.citrusFancy__feast__sectionCTA a {
+  min-width: 169px;
+  line-height: 50px;
+  background: #001952;
+  font-family: "PetcoCircular-Bold", arial !important;
+  font-size: 16px;
+  font-weight: 900;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  border: 1px solid #001952;
+  border-radius: 7px;
+}
+
+@media (max-width: 1400px) {
+  .hero-left {
+    left: 5%;
+  }
+}
+
+@media (max-width: 1301px) {
+  .citrusFancy__feast__heroCopy h1 {
+    font-size: 52px;
+    line-height: 56px;
+  }
+
+  .citrusFancy__feast__heroCopy p {
+    font-size: 22px;
+    line-height: 26px;
+  }
+
+  .citrusFancy__feast-section__tab-content {
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .citrusFancy__feast__heroCopy h1 {
+    font-size: 44px;
+    line-height: 46px;
+  }
+
+  .citrusFancy__feast__heroCopy p {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .citrusFancy__feast__row {
+    padding: 0 20px;
+  }
+}
+
+@media screen and (max-width: 921px) {
+  .citrusFancy__feast__heroCopy h1 {
+    font-size: 38px;
+    line-height: 42px;
+  }
+
+  .citrusFancy__feast__heroCopy p {
+    font-size: 16px;
+    line-height: 20px;
+    padding: 10px 0 20px 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero-left {
+    left: 3%;
+  }
+
+  .splide__arrow {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .citrusFancy__feast__desktop-version {
+    display: none;
+  }
+
+  .citrusFancy__feast__mobile-version {
+    display: block;
+  }
+
+  /* hero banner */
+  .hero-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: unset;
+  }
+
+  .citrusFancy__feast__heroImage-copy {
+    height: 60%;
+    justify-content: center;
+  }
+
+  .citrusFancy__feast__heroCopy {
+    text-align: center;
+  }
+
+  .citrusFancy__feast__heroCopy h1 {
+    font-size: 32px;
+    line-height: 37px;
+  }
+
+  .citrusFancy__feast__heroCopy p {
+    font-size: 20px;
+    line-height: 23px;
+    padding: 15px 0 10px 0;
+  }
+
+  .hero-rightCTA {
+    margin-bottom: 10px;
+  }
+
+  .hero-rightCTA a {
+    display: block;
+    width: max-content;
+    background: none;
+    line-height: 20px;
+    text-align: left;
+    color: #fff;
+    border: none;
+    text-decoration: underline;
+    text-transform: capitalize;
+  }
+
+  /* Educational Mode */
+  .citrusFancy__product-card03 {
+    padding-right: 15px;
+  }
+  .citrusFancy__feast__card {
+    width: 267px;
+    height: 320px;
+  }
+
+  .citrusFancy__feast__card-img {
+    height: unset;
+  }
+
+  .citrusFancy__feast__card-body p {
+    margin-top: 10px;
+    width: 231px;
+  }
+
+  /* End Educational Mode */
+
+  /* product */
+  .citrusFancy__feast__productScroller .citrusFancy__feast__sectionTitle {
+    padding: 0 15px;
+  }
+
+  .citrusFancy__feast__row:first-child {
+    width: 95%;
+    margin: auto;
+  }
+
+  .citrusFancy__feast__card-body {
+    margin: 20px 0 17px 20px;
+    /* margin-top: 20px;
+    margin-left: 17px;
+    margin-bottom: 20px; */
+  }
+
+  .citrusFancy__feast__commonCTA {
+    width: max-content;
+    height: max-content;
+    background: none;
+    color: #001952;
+    line-height: 20px;
+    text-transform: capitalize;
+    text-decoration: underline;
+    text-align: center;
+    border: none;
+  }
+
+  #citrusFancy__feast__products {
+    margin-left: 0;
+  }
+}
+
+@media screen and (min-width: 701px) and (max-width: 767px) {
+  .citrusFancy__feast__heroCopy h1 {
+    font-size: 56px;
+    line-height: 60px;
+  }
+
+  .citrusFancy__feast__heroCopy p {
+    font-size: 20px;
+    line-height: 23px;
+    padding: 25px 0 40px 0;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 700px) {
+  .citrusFancy__feast__heroCopy h1 {
+    font-size: 56px;
+    line-height: 60px;
+  }
+
+  .citrusFancy__feast__heroCopy p {
+    font-size: 22px;
+    line-height: 26px;
+    padding: 20px 0 20px 0;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .citrusFancy__feast__heroCopy p {
+    font-size: 20px;
+    line-height: 23px;
+    padding: 15px 0 15px 0;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .citrusFancy__feast__heroCopy p {
+    padding: 12px 0 15px 0;
+  }
+
+  /* Educational Mode */
+  .citrusFancy__feast__row:first-child {
+    width: 87.5%;
+  }
+
+  .citrusFancy__feast__card-body h3 {
+    margin-top: 23px;
+    margin-bottom: 12px;
+  }
+
+  .citrusFancy__feast__card-body p {
+    margin: unset;
+    width: 224px;
+  }
+
+  #citrusFancy__feast__products {
+    margin-left: 10px;
+  }
+}
+
+@media screen and (max-width: 345px) {
+  .citrusFancy__feast__heroCopy h1 {
+    font-size: 24px;
+    line-height: 27px;
+  }
+
+  .citrusFancy__feast__heroCopy p {
+    font-size: 16px;
+    line-height: 20px;
+    padding: 12px 0 7px 0;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .citrusFancy__feast__heroCopy h1 {
+    font-size: 22px;
+    line-height: 24px;
+  }
+
+  .citrusFancy__feast__heroCopy p {
+    font-size: 16px;
+    line-height: 20px;
+    padding: 12px 0 10px 0;
+  }
+}
+
+/* End Custom CSS */

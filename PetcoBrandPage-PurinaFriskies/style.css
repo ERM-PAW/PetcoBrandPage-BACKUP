@@ -1,0 +1,853 @@
+/* Importing Petco Circular Font from Petco Website */
+@font-face {
+  font-family: "PetcoCircular-Regular";
+  src: url("https://www.petco.com/assets/fonts/PetcoCircular-Regular.woff2")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "PetcoCircular-Bold";
+  src: url("https://www.petco.com/assets/fonts/PetcoCircular-Bold.woff2")
+    format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "PetcoCircular-Black";
+  src: url("https://www.petco.com/assets/fonts/PetcoCircular-Black.otf")
+    format("otf");
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Start Custom CSS */
+/* Universal styles */
+body {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.citrusFriskies__wrapper {
+  width: 100%;
+  max-width: 1440px;
+  margin: auto;
+}
+
+.citrusFriskies__wrapper h1,
+.citrusFriskies__wrapper h2,
+.citrusFriskies__wrapper h3,
+.citrusFriskies__wrapper h4,
+.citrusFriskies__wrapper h5,
+.citrusFriskies__wrapper h6 {
+  margin: 0;
+  padding: 0;
+  line-height: initial;
+}
+
+.citrusFriskies__wrapper p {
+  margin: 0;
+  padding: 0;
+  line-height: initial;
+}
+
+.citrusFriskies__wrapper a {
+  text-decoration: none;
+}
+
+.citrusFriskies__wrapper a:hover {
+  text-decoration: none;
+}
+
+.citrusFriskies__sectionTitle {
+  margin: 0;
+  font-family: "PetcoCircular-Bold", arial !important;
+  font-weight: 700;
+  font-size: 20px;
+  text-align: center;
+  color: #000000;
+  padding-bottom: 60px !important;
+  padding-left: 30px !important;
+  padding-right: 30px !important;
+}
+
+.citrusFriskies__wrapper img {
+  width: 100%;
+}
+
+.citrusFriskies__sectionGap {
+  padding-bottom: 40px;
+}
+
+.citrusFriskies__sectionCTAgap {
+  padding-top: 35px;
+  padding-bottom: 50px;
+  text-align: center;
+}
+
+.bestSellerCTA {
+  display: flex;
+  justify-content: center;
+}
+
+.citrusFriskies__sectionSubhead {
+  text-align: center;
+  font-size: 16px;
+  font-family: "petcocircular-regular", arial !important;
+  color: black;
+  padding-bottom: 10px !important;
+}
+
+.citrusFriskies__commonCTA {
+  color: #fff;
+  text-transform: uppercase;
+  background-color: #001952;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  width: 212px;
+  height: 55px;
+  line-height: 55px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-family: "PetcoCircular-Black", arial !important;
+  font-weight: 700;
+  margin: 0 auto;
+}
+.citrusFriskies__commonCTA:hover {
+  color: #fff;
+}
+
+@media screen and (max-width: 767px) {
+  .citrusFriskies__sectionTitle {
+    font-size: 20px;
+    max-width: 350px;
+    margin: 0 auto !important;
+    padding-bottom: 30px !important;
+  }
+
+  .citrusFriskies__product {
+    margin-top: 30px !important;
+  }
+
+  .citrusFriskies__wrapper a:hover {
+    text-decoration: underline;
+  }
+  .citrusFriskies__main-tab-content {
+    padding: 0 15px !important;
+  }
+  .citrusFriskies__heroImage-copy {
+    width: 100% !important;
+    margin: 0 auto !important;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .citrusFriskies__sectionTitle {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+
+.citrusFriskies__desktop_block {
+  display: block;
+}
+
+.citrusFriskies__mobile_block {
+  display: none;
+}
+
+/* Overflow Scrollbar */
+.citrusFriskies-wrapper::-webkit-scrollbar,
+.citrusFriskies__product::-webkit-scrollbar,
+.citrusFriskies__productContainer::-webkit-scrollbar,
+.citrusFriskies__productCarousel-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.citrusFriskies__productCarousel-wrapper,
+.citrusFriskies__product,
+.citrusFriskies__productContainer {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+/* End Universal CSS */
+
+/* Custom CSS */
+/* Hero Banner */
+.citrusFriskies__desktop-version {
+  display: block;
+}
+
+.citrusFriskies__mobile-version {
+  display: none;
+}
+
+/* hero banner */
+.citrusFriskies__heroContainer {
+  position: relative;
+}
+
+.citrusFriskies__heroImage-box img {
+  width: 100%;
+  max-width: 1440px;
+}
+
+.citrusFriskies__heroImage-copy {
+  position: absolute;
+  width: 94%;
+  height: 100%;
+  top: 0;
+  display: flex;
+  margin: auto 5%;
+}
+
+.citrusFriskies__hero-copy-center {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.citrusFriskies__logo img {
+  width: 100%;
+  max-width: 132px;
+}
+
+.citrusFriskies__heroCopy h1 {
+  font-family: "PetcoCircular-Bold", arial !important;
+  font-size: 45px;
+  line-height: 45px;
+  font-weight: 700;
+  color: #fff;
+  padding-bottom: 60px;
+}
+
+.citrusFriskies__heroCopy p {
+  margin-bottom: 15px;
+  font-size: 28px;
+  line-height: 34px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.citrusFriskies__hero-rightCTA a {
+  display: block;
+  width: 170px;
+  background: #fff;
+  font-family: "PetcoCircular-Black", arial !important;
+  font-size: 16px;
+  line-height: 52px;
+  font-weight: 700;
+  text-align: center;
+  color: #00205b;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  text-transform: uppercase;
+}
+
+.citrusFriskies__petcoBadge {
+  width: 6% !important;
+  position: absolute;
+  right: 9%;
+  top: 20%;
+}
+
+@media screen and (max-width: 1400px) {
+  .citrusFriskies__hero-copy-center {
+    gap: 25px;
+  }
+
+  .citrusFriskies__heroCopy h1 {
+    font-size: 40px;
+    line-height: 40px;
+  }
+
+  .citrusFriskies__logo img {
+    max-width: 120px;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .citrusFriskies__hero-copy-center {
+    gap: 25px;
+  }
+
+  .citrusFriskies__heroCopy h1 {
+    padding-bottom: 50px;
+    font-size: 32px;
+    line-height: 32px;
+  }
+}
+
+@media screen and (min-width: 1100px) and (max-width: 1300px) {
+  .groupProductCTA {
+    gap: 5px !important;
+    padding: 0 5px !important;
+  }
+}
+
+@media all and (min-width: 922px) and (max-width: 1100px) {
+  .citrusFriskies__heroImage-copy {
+    top: -3%;
+  }
+
+  .citrusFriskies__heroCopy h1 {
+    font-size: 28px;
+    line-height: 28px;
+    padding-bottom: 30px;
+  }
+
+  .citrusFriskies__heroCopy p {
+    margin-bottom: 10px;
+    font-size: 24px;
+    line-height: 24px;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .citrusFriskies__hero-copy-center {
+    column-gap: 15px;
+  }
+}
+
+@media all and (min-width: 769px) and (max-width: 921px) {
+  .citrusFriskies__heroImage-copy {
+    top: 0;
+    align-items: flex-start;
+  }
+
+  .citrusFriskies__logo img {
+    max-width: 105px;
+  }
+
+  .citrusFriskies__heroCopy h1 {
+    font-size: 24px;
+    line-height: 24px;
+    padding-bottom: 30px;
+  }
+
+  .citrusFriskies__heroCopy p {
+    margin-bottom: 10px;
+    font-size: 18px;
+    line-height: 18px;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .citrusFriskies__desktop-version {
+    display: none;
+  }
+
+  .citrusFriskies__mobile-version {
+    display: block;
+  }
+
+  /* hero banner */
+  .citrusFriskies__heroImage-copy {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 50%;
+  }
+
+  .citrusFriskies__heroCopy h1 {
+    font-size: 30px;
+    line-height: 34px;
+    text-align: center;
+    padding-bottom: 50px;
+  }
+
+  .citrusFriskies__heroCopy p {
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  .citrusFriskies__hero-rightCTA {
+    display: flex;
+    justify-content: center;
+  }
+
+  .citrusFriskies__hero-rightCTA a {
+    display: block;
+    width: max-content;
+    background: none;
+    line-height: 20px;
+    text-align: left;
+    color: #fff;
+    border: none;
+    text-decoration: underline;
+    text-transform: none;
+  }
+
+  .citrusFriskies__petcoBadge {
+    width: 15% !important;
+    position: absolute;
+    right: 10%;
+    bottom: 20%;
+    top: unset;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .citrusFriskies__heroCopy h1 {
+    padding-bottom: 30px;
+  }
+}
+
+@media all and (min-width: 476px) and (max-width: 768px) {
+  .citrusFriskies__heroCopy h1 {
+    font-size: 36px;
+    line-height: 40px;
+    text-align: center;
+  }
+
+  .citrusFriskies__heroCopy p {
+    margin-bottom: 10px;
+    font-size: 28px;
+    line-height: 34px;
+  }
+
+  .citrusFriskies__hero-rightCTA {
+    display: flex;
+    justify-content: center;
+  }
+  .groupProductCTA {
+    gap: 5px !important;
+    padding: 0 5px !important;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .citrusFriskies__heroCopy h1 {
+    padding-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .citrusFriskies__hero-copy-center {
+    gap: 0;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .citrusFriskies__petcoBadge {
+    right: 10%;
+    bottom: 22%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .citrusFriskies__petcoBadge {
+    width: 15% !important;
+    right: 10%;
+    bottom: 22%;
+  }
+}
+
+/* product section three across */
+.citrusFriskies__product {
+  margin-top: 60px;
+}
+
+.citrusFriskies__tab-container h2 {
+  padding: 10px 15px 30px !important;
+}
+
+.citrusFriskies__productContainer {
+  width: 1145px;
+  max-width: 100%;
+  margin: auto;
+  overflow-x: auto;
+}
+
+.citrusFriskies__productContainer a {
+  text-decoration: none;
+}
+
+.citrusFriskies__row {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 25px;
+}
+
+.citrusFriskies__card {
+  width: 361px;
+  max-width: 100%;
+  height: 488px;
+  border: 2px solid #00205b;
+  border-radius: 8px;
+}
+
+.citrusFriskies__card-img {
+  background: #fff;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  border-radius: 8px;
+}
+
+.citrusFriskies__card-img img {
+  width: 100%;
+  object-fit: contain;
+}
+
+.citrusFriskies__card-body {
+  margin: 32px 23px 20px;
+}
+
+.citrusFriskies__card-body h3 {
+  font-size: 16px;
+  line-height: 20px;
+  font-family: "PetcoCircular-Bold", arial !important;
+  font-weight: 700;
+  color: #000;
+}
+
+.citrusFriskies__card-body p {
+  margin-top: 20px;
+  font-size: 16px;
+  line-height: 20px;
+  font-family: "petcocircular-regular", arial !important;
+  font-weight: 400;
+  color: #000;
+}
+
+@media screen and (min-width: 1101px) and (max-width: 1150px) {
+  .citrusFriskies__productContainer {
+    max-width: 98%;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .citrusFriskies__row {
+    padding: 0 30px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1100px) {
+  .citrusFriskies__product-card03 {
+    padding-right: 15px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  /* Educational Mode */
+  .citrusFriskies__product-card03 {
+    padding-right: 15px;
+  }
+
+  .citrusFriskies__card {
+    width: 271px;
+    height: 324px;
+  }
+
+  .citrusFriskies__card-body {
+    margin: 20px 0 0 20px;
+  }
+
+  .citrusFriskies__card-img {
+    height: 178px;
+    overflow: hidden;
+  }
+
+  .citrusFriskies__card-body p {
+    margin-top: 10px;
+    width: 231px;
+  }
+
+  /* End Educational Mode */
+  .citrusFriskies__commonCTA {
+    width: max-content;
+    height: max-content;
+    background: none;
+    color: #001952;
+    line-height: 20px;
+    text-transform: capitalize;
+    text-decoration: underline;
+    text-align: center;
+    border: none;
+  }
+  .citrusFriskies__commonCTA:hover {
+    color: #001952;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .citrusFriskies__heroCopy h1 {
+    font-size: 24px;
+    line-height: 26px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  /* Educational Mode */
+  .citrusFriskies__row:first-child {
+    width: 87.5%;
+  }
+
+  .citrusFriskies__card-body h3 {
+    margin-top: 23px;
+    margin-bottom: 12px;
+  }
+
+  .citrusFriskies__card-body p {
+    margin: unset;
+    width: 224px;
+  }
+}
+
+/* End Three Across Custom CSS */
+
+/* Default CSS */
+/* Product Carousel section Section Combined CSS */
+/* tab button style */
+.citrusFriskies__productCarousel-wrapper {
+  width: 100%;
+  max-width: 1273px;
+  margin: auto;
+  overflow-x: auto;
+}
+
+.citrusFriskies__main-tab-content {
+  padding: 0 30px;
+}
+
+.citrusFriskiesTabId {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.citrusFriskies__tab-area {
+  overflow: hidden;
+}
+
+.citrusFriskies__tab-container {
+  max-width: 1253px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.splide__pagination {
+  display: none;
+}
+
+.citrusFriskies-tab-card {
+  padding: 30px 0 0;
+}
+
+.citrusFriskies__Product {
+  display: none;
+}
+
+.citrusFriskies__Product img {
+  object-fit: contain;
+}
+
+.citrusFriskies-tab-cardImg img {
+  max-width: 100%;
+  max-width: 190px;
+}
+
+.citrusFriskies-tab-card > a {
+  text-decoration: none;
+  color: #000;
+}
+
+.citrusFriskies-tab-card p {
+  font-family: "petcocircular-regular", arial !important;
+  color: #333333;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: left;
+  margin: 20px 0 14px;
+  text-decoration: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  max-height: 4em;
+  /*standard size is 4em*/
+  font-weight: 500;
+}
+
+.citrusFriskies__productCTA {
+  border: 0;
+  padding-left: 0;
+  background: none;
+  text-decoration: underline;
+  font-family: "PetcoCircular-Black", arial !important;
+  color: #001952;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.citrusFriskies__Products {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.citrusFriskies-tab-cardImg {
+  padding: 0 10px;
+  margin: auto;
+}
+
+.citrusTabShow {
+  display: block;
+}
+
+.citrusFriskies__groupProductShot {
+  border: 1px solid #001952;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+.citrusFriskies__groupProductShot__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin: auto;
+}
+
+.citrusFriskies__groupProductShotImage img {
+  max-height: 144px;
+  padding: 20px 0;
+}
+
+.groupProductCTA {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  gap: 10px;
+  margin: auto;
+  padding: 0 10px;
+}
+
+.citrusFriskies__groupCtaDimention {
+  display: flex;
+  flex-direction: column;
+  font-weight: 900;
+}
+
+.citrusFriskies__groupCtaDimention p {
+  line-height: 18px;
+  font-family: "PetcoCircular-Black", arial !important;
+  color: #001952;
+  margin-top: 0;
+  font-weight: 700;
+}
+
+.citrusFriskies__groupCtaArrow p {
+  font-size: 34px;
+  margin-top: 0;
+}
+
+.citrusFriskies__tab_item {
+  text-transform: uppercase;
+  padding: 12px 20px;
+  margin: 0px 10px;
+  font-size: 14px;
+  text-decoration: none;
+  background-color: transparent;
+  border: none;
+  border-bottom: 10px solid transparent;
+  cursor: pointer;
+  color: #9b9b9b;
+  font-family: "PetcoCircular-Bold", arial !important;
+  font-weight: 700;
+  line-height: 1.3;
+  text-align: center;
+}
+
+.citrusFriskies__tab_item.citrusFriskies__active_tab {
+  color: #001952;
+  border-bottom: 10px solid #001952;
+  border-radius: 0;
+}
+
+.citrusFriskiesTabId {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #001952;
+}
+
+/* hide arrow */
+.citrusFriskies_hide_arrow .splide__arrows {
+  display: none;
+}
+
+@media all and (max-width: 1301px) {
+}
+
+@media screen and (max-width: 768px) {
+  .citrusFriskies-section__tab-content {
+    padding-left: 30px;
+  }
+
+  .citrusFriskiesTabId {
+    width: 100%;
+    margin: 0 auto 20px;
+  }
+
+  .citrusFriskies__tab-container {
+    width: 100%;
+  }
+
+  .splide__arrow {
+    display: none;
+  }
+}
+
+@media all and (max-width: 575px) {
+  .citrusFriskies__tab_item {
+    margin: 0;
+    width: calc(100% / 2 - 30px);
+    padding: 7px 20px 12px;
+  }
+
+  .citrusFriskies__sectionCTAgap {
+    padding: 35px 0;
+  }
+
+  .citrusFriskies__Product {
+    max-width: 195px;
+  }
+}
+
+/* custom css */
+.splide__arrow:disabled {
+  opacity: 0;
+}

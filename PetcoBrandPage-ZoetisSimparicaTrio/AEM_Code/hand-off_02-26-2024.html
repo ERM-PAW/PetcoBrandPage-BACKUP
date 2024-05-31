@@ -1,0 +1,1601 @@
+<!-- This brand page prepared by CitrusAd SEBPO team. AEM_Code handoff prepare date is 02/02/2024 -->
+<style>
+  /* Common styling */
+  .citrusTrio__Wrapper {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    font-family: "PetcoCircularTT-Regular", arial !important;
+    font-size: 16px;
+    background: #fff;
+  }
+
+  .citrusTrio__Wrapper h1,
+  h2,
+  h3 {
+    font-family: "PetcoCircular-Bold", arial !important;
+    margin: 0;
+  }
+
+  .citrusTrio__no-pading {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .citrusTrio__Wrapper p {
+    font-family: "PetcoCircular-Regular", arial !important;
+    margin: 0;
+  }
+
+  .citrusTrio__Wrapper a {
+    text-decoration: none;
+  }
+
+  .citrusTrio__Wrapper img {
+    width: 100%;
+  }
+
+  .citrusTrio__desktop_hide {
+    display: none !important;
+  }
+
+  .citrusTrio__mobile_hide {
+    display: block;
+  }
+
+  /* Overflow Scrollbar */
+  .citrusX-wrapper::-webkit-scrollbar,
+  .citrusTrio__CategoryContainer::-webkit-scrollbar,
+  .citrusTrio__category::-webkit-scrollbar,
+  .citrusTrio__findCatRecipesContainer::-webkit-scrollbar,
+  .citrusTrio__productContainer::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide Scrollbar */
+  .citrusX-wrapper::-webkit-scrollbar,
+  .citrusTrio__article--container::-webkit-scrollbar,
+  .citrusTrio__comparison--container::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide Scrollbar for IE, Edge and Firefox */
+  .citrusX-wrapper,
+  .citrusTrio__article--container,
+  .citrusTrio__comparison--container {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  /* CTA Box with background color */
+  .citrusStylesSE-cta__box--color {
+    width: 212px;
+    /* padding: 17px 0; */
+    height: 56px;
+    border-radius: 5px;
+    background: #001952;
+    margin: 0 auto;
+  }
+
+  .citrusStylesSE-cta__box--color a {
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: "PetcoCircular-Bold", arial !important;
+    font-weight: 700;
+    width: 100%;
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .citrusTrio__sectionTitle {
+    margin: 20px 15px;
+    font-size: 20px;
+    color: #000;
+    text-align: center;
+    font-weight: 700;
+    line-height: initial;
+    font-family: "PetcoCircular-Bold", arial !important;
+  }
+
+  /* CTA Box with background color */
+  .citrusTrio-cta__box--color {
+    display: flex;
+  }
+
+  .citrusTrio-cta__box--color a {
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: "PetcoCircular-Bold", arial !important;
+    font-weight: 700;
+    line-height: normal;
+    width: 211px;
+    height: 56px;
+    border-radius: 5px;
+    background: #001952;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .citrusTrio-cta__box--color a:hover {
+    color: #fff;
+  }
+
+  /* Hero POV */
+  .citrusTrio__container {
+    max-width: 1440px;
+    width: 100%;
+  }
+
+  .citrusTrio__carousel {
+    overflow-x: hidden;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    width: 100%;
+    display: none;
+  }
+
+  .citrusTrio__carousel__inner {
+    display: flex;
+    transition: all ease 0.5s;
+  }
+
+  .citrusTrio__carousel--inner-item {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgba(90, 199, 210, 0.1);
+  }
+
+  .citrusTrio__carousel--logo {
+    max-width: 254px;
+    margin: 0 auto;
+    padding: 4%;
+  }
+
+  .citrusTrio__carousel--text h2 {
+    font-size: 25px;
+    font-weight: 900;
+    color: #a50f4cf4;
+    padding: 0 0 20px;
+    line-height: 25px;
+    font-family: "PetcoCircular-Black", arial !important;
+    max-width: 462px;
+  }
+
+  .citrusTrio__carousel2 .citrusTrio__carousel--text h2 {
+    text-align: center;
+    margin: 0 auto;
+    padding: 0 0 15px;
+  }
+
+  .citrusTrio__carousel2 .citrusTrio__carousel--text h2,
+  p {
+    text-align: center;
+  }
+
+  .citrusTrio__carousel2 .citrusTrio__carousel--text .citrusTrio-cta__box--color {
+    margin: 0 auto;
+  }
+
+  .citrusTrio__carousel2 .citrusTrio-cta__box--color a {
+    margin: 0 auto;
+  }
+
+  .citrusTrio__carousel2 .citrusTrio__carousel--disclaimer {
+    padding: 10px 0 0 !important;
+    margin: 0 auto !important;
+    text-align: center;
+  }
+
+  .citrusTrio__carousel--text p {
+    padding: 0 0 20px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 16px;
+    color: #000;
+    text-align: left;
+  }
+
+  .citrusTrio__carousel--disclaimer {
+    color: #000;
+    font-size: 12px !important;
+    font-weight: 400;
+    line-height: 12px !important;
+    padding: 15px 0 0 !important;
+    max-width: 300px;
+  }
+
+  .citrusTrio__carousel--shots {
+    max-width: 492px;
+    margin: 0;
+    display: flex;
+    align-items: flex-end;
+    height: 100%;
+  }
+
+  .citrusTrio__carousel--shots img {
+    display: flex;
+  }
+
+  .citrusTrio__carousel-indicators {
+    position: absolute;
+    bottom: 0;
+    left: calc(100% / 2 - 52px);
+    text-align: center;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 5px 5px 0 0;
+    padding: 6px 7px 2px;
+  }
+
+  .citrusTrio__carousel-indicators span {
+    display: inline-block;
+    border: 2px solid #09205c;
+    padding: 5.5px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin: 0 5px;
+  }
+
+  .citrusTrio__carousel-indicators span.active {
+    background-color: #09205c;
+  }
+
+  /* article 4up style */
+  .citrusTrio__article--container {
+    max-width: 1120px;
+    margin: auto;
+    overflow-x: auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 28px;
+  }
+
+  .citrusTrio__sectionTitle--wrap {
+    text-align: center;
+    padding: 40px 10px;
+  }
+
+  .citrusTrio__sectionTitle--wrap h2 {
+    margin: 0;
+    font-size: 20px;
+    margin: 0 auto;
+  }
+
+  .citrusTrio__sectionTitle--wrap p {
+    padding: 10px 0 0;
+    margin: 0;
+    text-align: center;
+  }
+
+  .citrusTrio__article-4up--single-item {
+    max-width: 259px;
+    min-width: 259px;
+    margin: 0 auto;
+  }
+
+  .citrusTrio__article-4up--single-item img {
+    display: flex;
+    margin: 0 auto;
+  }
+
+  .citrusTrio__article-4up--text-wrap {
+    background: #64c9d11a;
+    text-align: center;
+    padding: 40px 10px;
+    min-height: 135px;
+    margin-top: -1px;
+  }
+
+  .citrusTrio__article-4up--modified .citrusTrio__article-4up--text-wrap {
+    padding: 40px 0px;
+  }
+
+  .citrusTrio__article-4up--modified .citrusTrio__article-4up--text-wrap p {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .citrusTrio__article-4up--single-item h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #000;
+    margin: 0;
+  }
+
+  .citrusTrio__article-4up--single-item p {
+    font-size: 16px;
+    font-weight: normal;
+    line-height: normal;
+    color: #000;
+    padding: 28px 0 0;
+    margin: 0;
+    text-align: center;
+  }
+
+  .citrusTrio__sectionCTA--shop-all {
+    text-align: center;
+  }
+
+  .citrusTrio__sectionCTA--shop-all p {
+    font-size: 12px;
+    font-weight: normal;
+    line-height: normal;
+    color: #000;
+    margin: 15px 0 0;
+    text-align: center;
+  }
+
+  .citrusTrio__sectionCTA--shop-all .citrusTrio__disclaimer {
+    text-align: center;
+    font-size: 12px !important;
+  }
+
+  /* Content 6up */
+  .citrusTrio__article-6up .citrusTrio__article--container {
+    max-width: 1440px;
+    padding: 0 15px;
+    overflow-x: auto;
+  }
+
+  .citrusTrio__article-6up .citrusTrio__article-4up--text-wrap {
+    background: transparent;
+    min-height: unset;
+    padding: 30px 15px;
+    margin-top: 0;
+  }
+
+  .citrusTrio__article-6up .citrusTrio__article--container {
+    align-items: flex-end;
+  }
+
+  .citrusTrio__article-6up .citrusTrio__article-4up--single-item img {
+    max-width: 177px;
+  }
+
+  .citrusTrio__article-6up .citrusTrio__article-4up--single-item {
+    max-width: 177px;
+    min-width: 177px;
+  }
+
+  /* Comparison section */
+  .citrusTrio__comparison--container {
+    width: 1440px;
+    max-width: 100%;
+    margin: auto;
+    overflow: auto;
+  }
+
+  .citrusTrio__comparison-chart {
+    width: 1440px;
+  }
+
+  .citrusTrio__comparison-chart .citrusTrio__comparison-row {
+    position: relative;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+  }
+
+  .citrusTrio__comparison-chart .citrusTrio__comparison-row .citrusTrio__Comparison--col-2 {
+    width: 263px;
+  }
+
+  .citrusTrio__comparison-chart .citrusTrio__comparison-row.thead .citrusTrio__Comparison--col-2 img {
+    max-width: 210px;
+  }
+
+  .citrusTrio__comparison-row .citrusTrio__Comparison--col-2 {
+    border-right: 5px solid rgba(100, 201, 209, 0.3);
+    border-left: 5px solid rgba(100, 201, 209, 0.3);
+  }
+
+  .citrusTrio__comparison-row.thead .citrusTrio__Comparison--col-2 {
+    border-top: 5px solid rgba(100, 201, 209, 0.3);
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+  }
+
+  .citrusTrio__comparison-row .citrusTrio__Comparison--col-2.bottom-radius-border {
+    border-bottom: 5px solid rgba(100, 201, 209, 0.3);
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+
+  .citrusTrio__comparison-chart .thead img {
+    padding: 3em 0;
+    max-width: 133px;
+    margin: 0 auto;
+  }
+
+  .title h2 {
+    font-size: 18px;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 73px;
+    font-weight: 700;
+  }
+
+  .bottom-border {
+    border-bottom: 1px solid #aeaeae;
+  }
+
+  .citrusTrio__check-mark,
+  .citrusTrio__radio {
+    height: 73px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .citrusTrio__check-mark img {
+    width: 17.17px;
+    height: 20px;
+    object-fit: contain;
+    margin: auto;
+  }
+
+  .citrusTrio__radio img {
+    width: 14.31px;
+    height: 15px;
+    object-fit: contain;
+    margin: auto;
+  }
+
+  .bg-gray-100 {
+    background: #d9d9d9;
+  }
+
+  .bg-gray {
+    background: rgba(217, 217, 217, 0.3);
+  }
+
+  .chart-cta {
+    margin-top: 11px;
+    margin-bottom: 20px;
+    width: 203px;
+    height: 63px;
+    padding: 0;
+    line-height: 63px;
+    border-radius: 5px;
+    background: #001952;
+  }
+
+  .chart-disclaimer {
+    width: 400px;
+    position: absolute;
+    left: 33%;
+    top: 27px;
+  }
+
+  .chart-disclaimer .citrusTrio__disclaimer {
+    margin: 0 0 0 10px;
+    text-align: left;
+    font-size: 12px !important;
+  }
+
+  /* footer style */
+  .citrusTrio__footer {
+    margin-top: 90px;
+    margin-bottom: 0px;
+    width: 100%;
+    max-width: 100%;
+    background: rgba(100, 201, 209, 0.25);
+  }
+
+  .citrusTrio__footerRow {
+    width: 1150px;
+    max-width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    position: relative;
+  }
+
+  .citrusTrio__bannerImg {
+    position: relative;
+    top: -40px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .citrusTrio__bannerImg img {
+    width: 100%;
+    max-width: 470px;
+    margin: auto;
+    height: 300px;
+  }
+
+  .citrusTrio__footerText {
+    padding: 0 10px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .citrusTrio__footerText p {
+    width: 100%;
+    max-width: 613px;
+    margin: 0 15px 24px;
+    font-family: "PetcoCircular-Regular", arial !important;
+    font-size: 16px;
+    line-height: 22px;
+    color: #000;
+    text-align: center;
+  }
+
+  .citrusTrio__footerCTA {
+    display: flex;
+    justify-content: center;
+  }
+
+  .citrusTrio__footerCTA a {
+    display: block;
+    width: 212px;
+    height: 52px;
+    background: #001952;
+    border: none;
+    border-radius: 5px;
+    font-family: "PetcoCircular-Bold", arial !important;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    line-height: 52px;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  p.citrusTrio__disclaimer {
+    margin: 25px 67px;
+    font-family: "PetcoCircular-Regular", arial !important;
+    font-weight: 400;
+    font-size: 16px;
+    color: #000;
+    text-align: left;
+  }
+
+  p.citrusTrio__disclaimer b {
+    font-family: "PetcoCircular-Bold", arial !important;
+    font-weight: 700;
+  }
+
+  /* media query */
+  @media screen and (min-width: 1201px) {
+
+    /* Hero Carousel */
+    .citrusTrio__carousel3 .citrusTrio__carousel--logo {
+      padding: 2% 2% 2% 3%;
+    }
+
+    .citrusTrio__carousel3 .citrusTrio__carousel--text h2 {
+      min-width: 694px;
+    }
+
+    .citrusTrio__carousel3 .citrusTrio__carousel--shots img {
+      width: 120%;
+      margin: 0 0 0 -50px;
+    }
+  }
+
+  @media screen and (min-width: 1024px) and (max-width: 1200px) {
+    .citrusTrio__carousel--text h2 {
+      padding: 0 0 10px !important;
+      font-size: 19px;
+      line-height: 20px;
+    }
+
+    .citrusTrio__carousel--text p {
+      padding: 0 0 10px;
+      line-height: 16px;
+    }
+
+    .citrusTrio__carousel--disclaimer {
+      padding: 5px 0 0 !important;
+    }
+
+    .citrusTrio__carousel--text {
+      min-width: 250px;
+    }
+
+    .citrusTrio__carousel2 .citrusTrio__carousel--text .citrusTrio-cta__box--color {
+      margin: 0 !important;
+    }
+
+    .citrusTrio__article-4up--single-item {
+      min-width: 311px;
+    }
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+
+    /* Hero Carousel */
+    .citrusTrio__carousel--logo {
+      padding: 20px;
+    }
+
+    .citrusTrio__carousel--text {
+      min-width: 250px;
+      margin: -10px 0 0;
+    }
+
+    .citrusTrio__carousel--text h2 {
+      font-size: 18px;
+      line-height: 18px;
+      padding: 0 0 10px;
+    }
+
+    .citrusTrio__carousel2 .citrusTrio__carousel--text h2,
+    p {
+      text-align: center;
+      padding: 0 0 10px;
+    }
+
+    .citrusTrio__carousel2 .citrusTrio__carousel--text .citrusTrio__carousel--disclaimer {
+      margin: 0 !important;
+      text-align: center;
+    }
+
+    .citrusTrio__carousel--text p {
+      padding: 0 0 10px;
+    }
+
+    .citrusTrio__carousel--disclaimer {
+      padding: 5px 0 0 !important;
+    }
+  }
+
+  @media screen and (max-width: 1023px) {
+
+    /* Box cta reverse to underline */
+    .citrusTrio-cta__box--color {
+      justify-content: flex-start;
+    }
+
+    .citrusTrio-cta__box--color a {
+      color: #001952;
+      text-align: left;
+      text-decoration: underline;
+      text-transform: CAPITALIZE;
+      width: auto;
+      height: auto;
+      background: transparent;
+    }
+
+    .citrusTrio-cta__box--color a:hover {
+      color: #001952;
+    }
+
+    .citrusTrio__carousel2 .citrusTrio-cta__box--color {
+      justify-content: center;
+    }
+
+    /* Content 4up & Content 6up CTA */
+    .citrusTrio__article-4up--single-item {
+      min-width: 311px;
+    }
+
+    .citrusStylesSE-cta__box--color {
+      padding: 0;
+      background: transparent;
+      margin: 25px auto;
+    }
+
+    .citrusStylesSE-cta__box--color a {
+      color: #001952;
+      text-decoration: underline;
+      text-transform: capitalize;
+      font-weight: 700;
+    }
+
+    .citrusTrio__footerCTA a {
+      background: unset;
+      color: #001952;
+      font-weight: 900;
+      text-decoration: underline;
+      text-transform: capitalize;
+      height: unset;
+      line-height: normal;
+      margin-bottom: 20px;
+    }
+
+    .citrusTrio__carousel--shots img {
+      width: 120%;
+      margin: -8% 0 0 0;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+
+    /* Common class */
+    .citrusTrio__desktop_hide {
+      display: block !important;
+    }
+
+    .citrusTrio__mobile_hide {
+      display: none !important;
+    }
+
+    /* Hero Carousel */
+    .citrusTrio__carousel--inner-item {
+      flex-wrap: wrap;
+      gap: 0;
+      align-items: flex-end;
+    }
+
+    .citrusTrio__carousel--logo {
+      max-width: 132px;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .citrusTrio__carousel--text {
+      padding: 0 20px;
+      min-width: 100%;
+    }
+
+    .citrusTrio__carousel--text h2 {
+      max-width: 100%;
+      font-size: 23px;
+      max-width: 300px;
+      margin: 0 !important;
+    }
+
+    .citrusTrio__carousel2 .citrusTrio__carousel--text h2,
+    p {
+      text-align: left;
+    }
+
+    .citrusTrio__carousel--text p {
+      max-width: 250px;
+    }
+
+    .citrusTrio__carousel2 .citrusTrio__carousel--text .citrusTrio__carousel--disclaimer {
+      margin: 0 !important;
+      text-align: left;
+    }
+
+    .citrusTrio__carousel3 .citrusTrio__carousel--text .citrusTrio__carousel--disclaimer {
+      padding: 15px 0 !important;
+    }
+
+    .citrusTrio__carousel--shots {
+      height: auto;
+      max-width: 100%;
+    }
+
+    .citrusTrio__carousel2 .citrusTrio__carousel--text .citrusTrio-cta__box--color {
+      margin: 0;
+      width: max-content;
+    }
+
+    .citrusTrio__carousel--shots img {
+      width: 100%;
+      margin: 0;
+    }
+
+    /* Size sections */
+    .citrusTrio__article-4up--single-item {
+      min-width: 311px;
+    }
+
+    .citrusTrio__article-4up--single-item h3 {
+      font-size: 16px;
+    }
+
+    /* Content 6up */
+    .citrusTrio__article-6up .citrusTrio__article-4up--single-item {
+      min-width: 205px;
+    }
+
+    /* Content 4up */
+    .citrusTrio__sectionCTA--shop-all {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .citrusTrio__sectionCTA--shop-all p {
+      order: 2;
+      margin: 0 !important;
+      padding: 0 15px;
+    }
+
+    /* comparison */
+    .citrusTrio__comparison-chart {
+      width: 1000px;
+    }
+
+    .citrusTrio__comparison-chart .citrusTrio__comparison-row .citrusTrio__Comparison--col-2 {
+      width: 182px;
+    }
+
+    .citrusTrio__comparison-chart .citrusTrio__comparison-row.thead .citrusTrio__Comparison--col-2 img {
+      max-width: 140px;
+    }
+
+    .citrusTrio__comparison-chart .thead img {
+      padding: 1em 0;
+      max-width: 98px;
+      text-align: center;
+    }
+
+    .citrusTrio__comparison-row.title h2 {
+      font-size: 16px;
+    }
+
+    .title h2 {
+      font-size: 12px;
+      height: 49px;
+    }
+
+    .citrusTrio__check-mark,
+    .citrusTrio__radio {
+      height: 49px;
+    }
+
+    .chart-cta {
+      width: max-content;
+    }
+
+    /* footer style */
+    .citrusTrio__footerRow {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    .order1 {
+      order: 2;
+    }
+
+    .order2 {
+      order: 1;
+    }
+
+    .citrusTrio__bannerImg {
+      top: 0px;
+    }
+
+    .citrusTrio__bannerImg img {
+      max-width: 345px;
+      height: unset;
+      margin: 0 0 -28%;
+    }
+
+    .citrusTrio__disclaimer--modified {
+      padding: 90px 0 0;
+    }
+
+    .citrusTrio__footerText {
+      margin-top: 20px;
+    }
+
+    p.citrusTrio__disclaimer {
+      margin: 25px 33px;
+      text-align: center;
+    }
+  }
+
+  @media screen and (min-width: 601px) and (max-width: 767px) {
+    .citrusTrio__footer {
+      padding-bottom: 100px;
+    }
+  }
+
+  @media screen and (min-width: 526px) and (max-width: 600px) {
+    .citrusTrio__footer {
+      padding-bottom: 70px;
+    }
+  }
+
+  @media screen and (min-width: 477px) and (max-width: 525px) {
+    .citrusTrio__footer {
+      padding-bottom: 50px;
+    }
+  }
+
+  @media screen and (min-width: 376px) and (max-width: 476px) {
+    .citrusTrio__disclaimer--modified {
+      padding: 120px 0 0;
+    }
+  }
+</style>
+<!-- Trio landing page wrapper start -->
+<main class="citrusTrio__Wrapper">
+  <!-- Hero POV Carousel -->
+  <section class="citrusTrio__carousel citrusTrio__container">
+    <div class="citrusTrio__carousel__inner">
+      <!-- POV 01 -->
+      <div class="citrusTrio__carousel--inner-item citrusTrio__carousel1">
+        <div class="citrusTrio__carousel--logo">
+          <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrusTrio__logo"
+            alt="Simparica Trio logo">
+        </div>
+        <div class="citrusTrio__carousel--text">
+          <h2>DESIGNED FOR DEFENSE</h2>
+          <p>A single monthly chew does the job of two or three parasiticides.</p>
+          <div class="citrusTrio-cta__box--color">
+            <a href="https://www.petco.com/shop/en/petcostore/brand/simparica-trio"
+              manual_cm_sp="sponsoredbrandpage:simparicatrio:heropov:1:designedfordefense:shopnow"
+              onclick="clickTrackLink(this);">Shop Now</a>
+          </div>
+          <p class="citrusTrio__carousel--disclaimer">Valid prescription required.</p>
+        </div>
+        <div class="citrusTrio__carousel--shots">
+          <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrusTrio__carousel1--shots"
+            alt="R X badge. Woman feeding dog Simparica Trio." class="citrusTrio__mobile_hide">
+          <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrusTrio__carousel1--shots-mob"
+            alt="R X badge. Woman feeding dog Simparica Trio." class="citrusTrio__desktop_hide">
+        </div>
+      </div>
+      <!-- POV 02 -->
+      <div class="citrusTrio__carousel--inner-item citrusTrio__carousel2">
+        <div class="citrusTrio__carousel--logo">
+          <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrusTrio__logo"
+            alt="Simparica Trio logo">
+        </div>
+        <div class="citrusTrio__carousel--text">
+          <h2>HIGHLY EFFECTIVE PROTECTION AGAINST HEARTWORM DISEASE</h2>
+          <div class="citrusTrio-cta__box--color">
+            <a href="https://www.petco.com/shop/en/petcostore/brand/simparica-trio"
+              manual_cm_sp="sponsoredbrandpage:simparicatrio:heropov:2:highlyeffectiveprotectionagainstheartwormdisease:shopnow"
+              onclick="clickTrackLink(this);">Shop Now</a>
+          </div>
+          <p class="citrusTrio__carousel--disclaimer">*Studies to support FDA approval showed that one dose provided
+            100% protection.</p>
+        </div>
+        <div class="citrusTrio__carousel--shots">
+          <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrusTrio__carousel2--shots"
+            alt="R X badge. Packs of Simparica Trio." class="citrusTrio__mobile_hide">
+          <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrusTrio__carousel2--shots-mob"
+            alt="R X badge. Packs of Simparica Trio." class="citrusTrio__desktop_hide">
+        </div>
+      </div>
+      <!-- POV 03 -->
+      <div class="citrusTrio__carousel--inner-item citrusTrio__carousel3">
+        <div class="citrusTrio__carousel--logo">
+          <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrusTrio__logo"
+            alt="Simparica Trio logo">
+        </div>
+        <div class="citrusTrio__carousel--text">
+          <h2>FDA-APPROVED TO PREVENT LYME INFECTIONS**</h2>
+          <div class="citrusTrio-cta__box--color">
+            <a href="https://www.petco.com/shop/en/petcostore/brand/simparica-trio"
+              manual_cm_sp="sponsoredbrandpage:simparicatrio:heropov:3:fdaapprovedtopreventlymeinfections:shopnow"
+              onclick="clickTrackLink(this);">Shop Now</a>
+          </div>
+          <p class="citrusTrio__carousel--disclaimer">**As a direct result of killing deer ticks.</p>
+        </div>
+        <div class="citrusTrio__carousel--shots">
+          <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrusTrio__carousel3--shots"
+            alt="R X badge. Dog running through hoop." class="citrusTrio__mobile_hide">
+          <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrusTrio__carousel3--shots-mob"
+            alt="R X badge. Dog running through hoop." class="citrusTrio__desktop_hide">
+        </div>
+      </div>
+    </div>
+    <div class="citrusTrio__carousel-controls">
+      <span class="prev"></span> <span class="next"></span>
+    </div>
+    <div class="citrusTrio__carousel-indicators"></div>
+  </section>
+
+  <!-- Article 4up -->
+  <section class="citrusTrio__article-4up">
+    <div class="citrusTrio__sectionTitle--wrap">
+      <h2>How Simparica Trio protects your dog</h2>
+      <p>One prescription chew with three proven ingredients for triple protection.</p>
+    </div>
+    <div class="citrusTrio__article--container">
+      <!-- Item 01 -->
+      <div class="citrusTrio__article-4up--single-item">
+        <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrusTrio__article-4up--1" alt="tick">
+        <div class="citrusTrio__article-4up--text-wrap">
+          <h3>Ticks</h3>
+          <p>FDA-approved to <br>kill five types of ticks* <br>and blocks infections that <br>may cause Lyme
+            disease.**</p>
+        </div>
+      </div>
+      <!-- Item 02 -->
+      <div class="citrusTrio__article-4up--single-item">
+        <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrusTrio__article-4up--2"
+          alt="heart with close up of worm">
+        <div class="citrusTrio__article-4up--text-wrap">
+          <h3>Heartworm disease</h3>
+          <p>In studies supporting FDA approval, one dose was 100% effective in preventing heartworm disease.</p>
+        </div>
+      </div>
+      <!-- Item 03 -->
+      <div class="citrusTrio__article-4up--single-item">
+        <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrusTrio__article-4up--3" alt="flea">
+        <div class="citrusTrio__article-4up--text-wrap">
+          <h3>Fleas</h3>
+          <p>Starts killing fleas <br>within four hours, before <br>they can even lay eggs.</p>
+        </div>
+      </div>
+      <!-- Item 04 -->
+      <div class="citrusTrio__article-4up--single-item citrusTrio__article-4up--modified">
+        <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrusTrio__article-4up--4"
+          alt="worms under magnifying glass">
+        <div class="citrusTrio__article-4up--text-wrap">
+          <h3>Roundworms and hookworms</h3>
+          <p>Treats and controls roundworms and hookworms*** to protect your dog from intestinal parasites.</p>
+        </div>
+      </div>
+    </div>
+    <!-- Shop All CTA -->
+    <div class="citrusTrio__sectionCTA--shop-all">
+      <p class="citrusTrio__disclaimer">
+        *Gulf Coast tick, American dog tick, deer tick, lone star tick and brown dog tick.
+        <br>**As a direct result of killing deer ticks.
+        <br>***For the treatment of roundworm (immature adult and adult Toxocara canis and adult Toxascaris leonina);
+        (L4, immature adult, and adult Ancylostoma caninum and adult Uncinaria stenocephala) infections.
+      </p>
+      <div class="citrusStylesSE-cta__box--color">
+        <a href="https://www.petco.com/shop/en/petcostore/brand/simparica-trio"
+          manual_cm_sp="sponsoredbrandpage:simparicatrio:article4up:1:howsimparicatrioprotectsyourdog:shopnow"
+          onclick="clickTrackLink(this);">Shop Now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Content 6up -->
+  <section class="citrusTrio__article-4up citrusTrio__article-6up">
+    <div class="citrusTrio__sectionTitle--wrap">
+      <h2>Protection for all sizes</h2>
+      <p>Safe and effective for dogs and puppies 8 weeks and older, weighing at least 2.8 lbs.</p>
+    </div>
+    <div class="citrusTrio__article--container">
+      <!-- Item 01 -->
+      <a href="https://www.petco.com/shop/en/petcostore/product/simparica-trio-28-55-lbs-dogs"
+        class="citrusTrio__article-4up--single-item"
+        manual_cm_sp="sponsoredbrandpage:simparicatrio:content6up:1:simparicatriochewabletabletdog:2855lbs"
+        onclick="clickTrackLink(this);">
+        <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrusTrio__article-6up--1"
+          alt="dog with Simparica Trio chewable tablet">
+        <div class="citrusTrio__article-4up--text-wrap">
+          <h3>2.8–5.5 lbs.</h3>
+        </div>
+      </a>
+      <!-- Item 02 -->
+      <a href="https://www.petco.com/shop/en/petcostore/product/simparica-trio-56-11-lbs-dogs"
+        class="citrusTrio__article-4up--single-item"
+        manual_cm_sp="sponsoredbrandpage:simparicatrio:content6up:2:simparicatriochewabletabletdog:56110lbs"
+        onclick="clickTrackLink(this);">
+        <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrusTrio__article-6up--2"
+          alt="dog with Simparica Trio chewable tablet">
+        <div class="citrusTrio__article-4up--text-wrap">
+          <h3>5.6–11.0 lbs.</h3>
+        </div>
+      </a>
+      <!-- Item 03 -->
+      <a href="https://www.petco.com/shop/en/petcostore/product/simparica-trio-111-22-lbs-dogs"
+        class="citrusTrio__article-4up--single-item"
+        manual_cm_sp="sponsoredbrandpage:simparicatrio:content6up:3:simparicatriochewabletabletdog:111220lbs"
+        onclick="clickTrackLink(this);">
+        <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrusTrio__article-6up--3"
+          alt="dog with Simparica Trio chewable tablet">
+        <div class="citrusTrio__article-4up--text-wrap">
+          <h3>11.1–22.0 lbs.</h3>
+        </div>
+      </a>
+      <!-- Item 04 -->
+      <a href="https://www.petco.com/shop/en/petcostore/product/simparica-trio-221-44-lbs-dogs"
+        class="citrusTrio__article-4up--single-item"
+        manual_cm_sp="sponsoredbrandpage:simparicatrio:content6up:4:simparicatriochewabletabletdog:221440lbs"
+        onclick="clickTrackLink(this);">
+        <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrusTrio__article-6up--4"
+          alt="dog with Simparica Trio chewable tablet">
+        <div class="citrusTrio__article-4up--text-wrap">
+          <h3>22.1–44.0 lbs.</h3>
+        </div>
+      </a>
+      <!-- Item 05 -->
+      <a href="https://www.petco.com/shop/en/petcostore/product/simparica-trio-441-88-lbs-dogs"
+        class="citrusTrio__article-4up--single-item"
+        manual_cm_sp="sponsoredbrandpage:simparicatrio:content6up:5:simparicatriochewabletabletdog:441800lbs"
+        onclick="clickTrackLink(this);">
+        <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrusTrio__article-6up--5"
+          alt="dog with Simparica Trio chewable tablet">
+        <div class="citrusTrio__article-4up--text-wrap">
+          <h3>44.1–80.0 lbs.</h3>
+        </div>
+      </a>
+      <!-- Item 06 -->
+      <a href="https://www.petco.com/shop/en/petcostore/product/simparica-trio-881-132-lbs-dogs"
+        class="citrusTrio__article-4up--single-item"
+        manual_cm_sp="sponsoredbrandpage:simparicatrio:content6up:6:simparicatriochewabletabletdog:8811320lbs"
+        onclick="clickTrackLink(this);">
+        <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrusTrio__article-6up--6"
+          alt="dog with Simparica Trio chewable tablet">
+        <div class="citrusTrio__article-4up--text-wrap">
+          <h3>88.1–132.0 lbs.</h3>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <section class="citrusTrio__comparison citrusTrio__container">
+    <div class="citrusTrio__sectionTitle--wrap">
+      <h2>The Simparica Trio difference</h2>
+    </div>
+    <div class="citrusTrio__comparison--container">
+      <div class="citrusTrio__comparison-chart">
+        <!-- row 01 -->
+        <div class="citrusTrio__comparison-row thead">
+          <div class="citrusTrio__Comparison--col-1">
+            <!-- stay blank -->
+          </div>
+          <div class="citrusTrio__Comparison--col-2">
+            <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrusTrio__comparision--shots1" alt="">
+          </div>
+          <div class="citrusTrio__Comparison--col-3">
+            <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrusTrio__comparision--shots2" alt="">
+          </div>
+          <div class="citrusTrio__Comparison--col-4">
+            <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrusTrio__comparision--shots3" alt="">
+          </div>
+          <div class="citrusTrio__Comparison--col-5">
+            <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrusTrio__comparision--shots4" alt="">
+          </div>
+          <div class="citrusTrio__Comparison--col-6">
+            <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrusTrio__comparision--shots5" alt="">
+          </div>
+          <div class="citrusTrio__Comparison--col-7">
+            <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrusTrio__comparision--shots6" alt="">
+          </div>
+        </div>
+        <!-- row 02 -->
+        <div class="citrusTrio__comparison-row title bottom-border">
+          <div class="citrusTrio__Comparison--col-1">
+            <h2>Benefit*</h2>
+          </div>
+          <div class="citrusTrio__Comparison--col-2">
+            <h2>Simparica Trio </h2>
+          </div>
+          <div class="citrusTrio__Comparison--col-3">
+            <h2>Nexgard Plus </h2>
+          </div>
+          <div class="citrusTrio__Comparison--col-4">
+            <h2>Heartgard Plus </h2>
+          </div>
+          <div class="citrusTrio__Comparison--col-5">
+            <h2>Bravecto</h2>
+          </div>
+          <div class="citrusTrio__Comparison--col-6">
+            <h2>Credelio</h2>
+          </div>
+          <div class="citrusTrio__Comparison--col-7">
+            <h2>Interceptor Plus </h2>
+          </div>
+        </div>
+        <!-- row 03 -->
+        <div class="citrusTrio__comparison-row bottom-border">
+          <div class="citrusTrio__Comparison--col-1 title bg-gray-100">
+            <h2>Prevents Lyme <br>Infections**</h2>
+          </div>
+          <div class="citrusTrio__Comparison--col-2">
+            <div class="citrusTrio__check-mark"><img
+                src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrusTrio__check-mark" alt=""></div>
+          </div>
+          <div class="citrusTrio__Comparison--col-3 bg-gray">
+            <div class="citrusTrio__radio"><img
+                src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrusTrio__radio" alt=""></div>
+          </div>
+          <div class="citrusTrio__Comparison--col-4">
+            <div class="citrusTrio__radio"><img
+                src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrusTrio__radio" alt=""></div>
+          </div>
+          <div class="citrusTrio__Comparison--col-5 bg-gray">
+            <div class="citrusTrio__radio"><img
+                src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrusTrio__radio" alt=""></div>
+          </div>
+          <div class="citrusTrio__Comparison--col-6">
+            <div class="citrusTrio__radio"><img
+                src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrusTrio__radio" alt=""></div>
+          </div>
+          <div class="citrusTrio__Comparison--col-7 bg-gray">
+            <div class="citrusTrio__radio"><img
+                src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrusTrio__radio" alt=""></div>
+          </div>
+        </div>
+        <!-- row 04 -->
+        <div class="citrusTrio__comparison-row bottom-border">
+          <div class="citrusTrio__Comparison--col-1 title bg-gray-100">
+            <h2>Prevents Heartworm <br>Disease</h2>
+          </div>
+          <div class="citrusTrio__Comparison--col-2">
+            <div class="citrusTrio__check-mark"><img
+                src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrusTrio__check-mark" alt=""></div>
+          </div>
+          <div class="citrusTrio__Comparison--col-3 bg-gray">
+            <div class="citrusTrio__check-mark"><img
+                src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrusTrio__check-mark" alt=""></div>
+          </div>
+          <div class="citrusTrio__Comparison--col-4">
+            <div class="citrusTrio__check-mark"><img
+                src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrusTrio__check-mark" alt=""></div>
+          </div>
+          <div class="citrusTrio__Comparison--col-5 bg-gray">
+            <div class="citrusTrio__radio"><img
+                src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrusTrio__radio" alt=""></div>
+          </div>
+          <div class="citrusTrio__Comparison--col-6">
+            <div class="citrusTrio__radio"><img
+                src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrusTrio__radio" alt=""></div>
+          </div>
+          <div class="citrusTrio__Comparison--col-7 bg-gray">
+            <div class="citrusTrio__check-mark"><img
+                src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrusTrio__check-mark" alt=""></div>
+          </div>
+        </div>
+        <!-- row 05 -->
+        <div class="citrusTrio__comparison-row bottom-border">
+          <div class="citrusTrio__Comparison--col-1 title bg-gray-100">
+            <h2>Kills 5 Types <br>of Ticks</h2>
+          </div>
+          <div class="citrusTrio__Comparison--col-2">
+            <div class="citrusTrio__check-mark"><img
+                src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrusTrio__check-mark" alt=""></div>
+          </div>
+          <div class="citrusTrio__Comparison--col-3 title bg-gray">
+            <h2>4 Types</h2>
+          </div>
+          <div class="citrusTrio__Comparison--col-4">
+            <div class="citrusTrio__radio"><img
+                src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrusTrio__radio" alt=""></div>
+          </div>
+          <div class="citrusTrio__Comparison--col-5 bg-gray">
+            <div class="citrusTrio__check-mark"><img
+                src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrusTrio__check-mark" alt=""></div>
+          </div>
+          <div class="citrusTrio__Comparison--col-6 title">
+            <h2>4 Types</h2>
+          </div>
+          <div class="citrusTrio__Comparison--col-7 bg-gray">
+            <div class="citrusTrio__radio"><img
+                src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrusTrio__radio" alt=""></div>
+          </div>
+        </div>
+        <!-- row 06 -->
+        <div class="citrusTrio__comparison-row bottom-border">
+          <div class="citrusTrio__Comparison--col-1 title bg-gray-100">
+            <h2>Kills Fleas</h2>
+          </div>
+          <div class="citrusTrio__Comparison--col-2">
+            <div class="citrusTrio__check-mark"><img
+                src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrusTrio__check-mark" alt=""></div>
+          </div>
+          <div class="citrusTrio__Comparison--col-3 bg-gray">
+            <div class="citrusTrio__check-mark"><img
+                src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrusTrio__check-mark" alt=""></div>
+          </div>
+          <div class="citrusTrio__Comparison--col-4">
+            <div class="citrusTrio__radio"><img
+                src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrusTrio__radio" alt=""></div>
+          </div>
+          <div class="citrusTrio__Comparison--col-5 bg-gray">
+            <div class="citrusTrio__check-mark"><img
+                src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrusTrio__check-mark" alt=""></div>
+          </div>
+          <div class="citrusTrio__Comparison--col-6 title">
+            <div class="citrusTrio__check-mark"><img
+                src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrusTrio__check-mark" alt=""></div>
+          </div>
+          <div class="citrusTrio__Comparison--col-7 bg-gray">
+            <div class="citrusTrio__radio"><img
+                src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrusTrio__radio" alt=""></div>
+          </div>
+        </div>
+        <!-- row 07 -->
+        <div class="citrusTrio__comparison-row bottom-border">
+          <div class="citrusTrio__Comparison--col-1 title bg-gray-100">
+            <h2>Treats Roundworms <br>and Hookworms</h2>
+          </div>
+          <div class="citrusTrio__Comparison--col-2">
+            <div class="citrusTrio__check-mark"><img
+                src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrusTrio__check-mark" alt=""></div>
+          </div>
+          <div class="citrusTrio__Comparison--col-3 bg-gray">
+            <div class="citrusTrio__check-mark"><img
+                src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrusTrio__check-mark" alt=""></div>
+          </div>
+          <div class="citrusTrio__Comparison--col-4">
+            <div class="citrusTrio__check-mark"><img
+                src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrusTrio__check-mark" alt=""></div>
+          </div>
+          <div class="citrusTrio__Comparison--col-5 bg-gray">
+            <div class="citrusTrio__radio"><img
+                src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrusTrio__radio" alt=""></div>
+          </div>
+          <div class="citrusTrio__Comparison--col-6 title">
+            <div class="citrusTrio__radio"><img
+                src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrusTrio__radio" alt=""></div>
+          </div>
+          <div class="citrusTrio__Comparison--col-7 bg-gray">
+            <div class="citrusTrio__check-mark"><img
+                src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrusTrio__check-mark" alt=""></div>
+          </div>
+        </div>
+        <!-- row 08 -->
+        <div class="citrusTrio__comparison-row bottom-border">
+          <div class="citrusTrio__Comparison--col-1 title bg-gray-100">
+            <h2>Approved for Dogs <br>8 Weeks and Older</h2>
+          </div>
+          <div class="citrusTrio__Comparison--col-2">
+            <div class="citrusTrio__check-mark"><img
+                src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrusTrio__check-mark" alt=""></div>
+          </div>
+          <div class="citrusTrio__Comparison--col-3 bg-gray">
+            <div class="citrusTrio__check-mark"><img
+                src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrusTrio__check-mark" alt=""></div>
+          </div>
+          <div class="citrusTrio__Comparison--col-4">
+            <div class="citrusTrio__check-mark"><img
+                src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrusTrio__check-mark" alt=""></div>
+          </div>
+          <div class="citrusTrio__Comparison--col-5 bg-gray">
+            <div class="citrusTrio__radio"><img
+                src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrusTrio__radio" alt=""></div>
+          </div>
+          <div class="citrusTrio__Comparison--col-6 title">
+            <div class="citrusTrio__check-mark"><img
+                src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrusTrio__check-mark" alt=""></div>
+          </div>
+          <div class="citrusTrio__Comparison--col-7 bg-gray">
+            <div class="citrusTrio__check-mark"><img
+                src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrusTrio__check-mark" alt=""></div>
+          </div>
+        </div>
+        <!-- row 09 -->
+        <div class="citrusTrio__comparison-row">
+          <div class="citrusTrio__Comparison--col-1">
+            <!-- this should be stay blank -->
+          </div>
+          <div class="citrusTrio__Comparison--col-2 bottom-radius-border">
+            <div class="citrusStylesSE-cta__box--color chart-cta">
+              <a href="https://www.petco.com/shop/en/petcostore/brand/simparica-trio"
+                manual_cm_sp="sponsoredbrandpage:simparicatrio:comparisonchart:1:thesimparicatriodifference:shopnow"
+                onclick="clickTrackLink(this);">Shop Now</a>
+            </div>
+          </div>
+          <div class="citrusTrio__Comparison--col-3 chart-disclaimer">
+            <p class="citrusTrio__disclaimer">
+              *Source: brand websites 10/6/2023.
+              <br>
+              **As a direct result of killing deer ticks.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- footer section -->
+  <section class="citrusTrio__footer">
+    <div class="citrusTrio__footerRow">
+      <div class="citrusTrio__footerCol order1">
+        <div class="citrusTrio__bannerImg">
+          <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrusTrio__comparision--shots1"
+            alt="Simparica Trio. Golden retriever sitting with mouth open.">
+        </div>
+      </div>
+      <div class="citrusTrio__footerCol order2">
+        <div class="citrusTrio__footerText">
+          <h2 class="citrusTrio__sectionTitle">
+            The first FDA-approved product of&nbsp;its&nbsp;kind 
+          </h2>
+          <p>
+            Simparica Trio is a tasty pork liver-flavored monthly chewable that’s convenient to administer and offers
+            combined protection.
+          </p>
+          <div class="citrusTrio__footerCTA">
+            <a href="https://www.petco.com/shop/en/petcostore/brand/simparica-trio"
+              manual_cm_sp="sponsoredbrandpage:brandname:footeroption1:1:headlinemessage:shopnow"
+              onclick="clickTrackLink(this);">
+              Shop Now
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <p class="citrusTrio__disclaimer citrusTrio__disclaimer--modified">
+    <b>IMPORTANT SAFETY INFORMATION:</b> Use with caution in dogs with a history of seizures. Simparica Trio contains
+    sarolaner, a member of the isoxazoline class, which has been associated with neurologic adverse reactions
+    including tremors, ataxia and seizures in dogs with or without a history of neurologic disorders. The safe use of
+    Simparica Trio has not been evaluated in breeding, pregnant or lactating dogs. The most frequently reported
+    adverse reactions in clinical trials were vomiting and diarrhea.<br> See full Prescribing Information at
+    <b>simparicatrioPI.com.</b>
+  </p>
+  <!-- footer section -->
+</main>
+<!-- End Trio landing page wrapper -->
+
+<!-- custom js code for POV section -->
+<script>
+  let CitrusStylesSEcarousel = document.querySelector(".citrusTrio__carousel");
+  let CitrusStylesSEcarouselInner = document.querySelector(".citrusTrio__carousel__inner ");
+  let prev = document.querySelector(".citrusTrio__carousel-controls .prev");
+  let next = document.querySelector(".citrusTrio__carousel-controls .next");
+  let slides = document.querySelectorAll(".citrusTrio__carousel__inner .citrusTrio__carousel--inner-item ");
+  let totalSlides = slides.length;
+  let step = 100 / totalSlides;
+  let activeSlide = 0;
+  let activeIndicator = 0;
+  let direction = -1;
+  let jump = 1;
+  let interval = 5000;
+  let time;
+  //Init CitrusStylesSEcarousel
+  CitrusStylesSEcarouselInner.style.minWidth = totalSlides * 100 + "%";
+  loadIndicators();
+  loop(true);
+  //CitrusStylesSEcarousel events
+  next.addEventListener("click", () => {
+    slideToNext();
+  });
+  prev.addEventListener("click", () => {
+    slideToPrev();
+  });
+  CitrusStylesSEcarouselInner.addEventListener("transitionend", () => {
+    if (direction === -1) {
+      if (jump > 1) {
+        for (let i = 0; i < jump; i++) {
+          activeSlide++;
+          CitrusStylesSEcarouselInner.append(CitrusStylesSEcarouselInner.firstElementChild);
+        }
+      } else {
+        activeSlide++;
+        CitrusStylesSEcarouselInner.append(CitrusStylesSEcarouselInner.firstElementChild);
+      }
+    } else if (direction === 1) {
+      if (jump > 1) {
+        for (let i = 0; i < jump; i++) {
+          activeSlide--;
+          CitrusStylesSEcarouselInner.prepend(CitrusStylesSEcarouselInner.lastElementChild);
+        }
+      } else {
+        activeSlide--;
+        CitrusStylesSEcarouselInner.prepend(CitrusStylesSEcarouselInner.lastElementChild);
+      }
+    }
+    CitrusStylesSEcarouselInner.style.transition = "none";
+    CitrusStylesSEcarouselInner.style.transform = "translateX(0%)";
+    setTimeout(() => {
+      jump = 1;
+      CitrusStylesSEcarouselInner.style.transition = "all ease .5s";
+    });
+    updateIndicators();
+  });
+  document.querySelectorAll(".citrusTrio__carousel-indicators span").forEach((item) => {
+    item.addEventListener("click", (e) => {
+      let slideTo = parseInt(e.target.dataset.slideTo);
+      let indicators = document.querySelectorAll(".citrusTrio__carousel-indicators span");
+      indicators.forEach((item, index) => {
+        if (item.classList.contains("active")) {
+          activeIndicator = index;
+        }
+      });
+      if (slideTo - activeIndicator > 1) {
+        jump = slideTo - activeIndicator;
+        step = jump * step;
+        slideToNext();
+      } else if (slideTo - activeIndicator === 1) {
+        slideToNext();
+      } else if (slideTo - activeIndicator < 0) {
+        if (Math.abs(slideTo - activeIndicator) > 1) {
+          jump = Math.abs(slideTo - activeIndicator);
+          step = jump * step;
+          slideToPrev();
+        }
+        slideToPrev();
+      }
+      step = 100 / totalSlides;
+      document.querySelector(".citrusTrio__carousel-indicators span.active").classList.remove("active");
+      e.target.classList.add("active");
+    });
+  });
+  CitrusStylesSEcarousel.addEventListener("mouseover", () => {
+    loop(false);
+  });
+  CitrusStylesSEcarousel.addEventListener("mouseout", () => {
+    loop(true);
+  });
+  //CitrusStylesSEcarousel functions
+  function loadIndicators() {
+    slides.forEach((slide, index) => {
+      if (index === 0) {
+        document.querySelector(".citrusTrio__carousel-indicators").innerHTML += `<span data-slide-to="${index}" class="active"></span>`;
+      } else {
+        document.querySelector(".citrusTrio__carousel-indicators").innerHTML += `<span data-slide-to="${index}"></span>`;
+      }
+    });
+  }
+
+  function updateIndicators() {
+    if (activeSlide > totalSlides - 1) {
+      activeSlide = 0;
+    } else if (activeSlide < 0) {
+      activeSlide = totalSlides - 1;
+    }
+    document.querySelector(".citrusTrio__carousel-indicators span.active").classList.remove("active");
+    document.querySelectorAll(".citrusTrio__carousel-indicators span")[activeSlide].classList.add("active");
+  }
+
+  function slideToNext() {
+    if (direction === 1) {
+      direction = -1;
+      CitrusStylesSEcarouselInner.prepend(CitrusStylesSEcarouselInner.lastElementChild);
+    }
+    CitrusStylesSEcarousel.style.justifyContent = "flex-start";
+    CitrusStylesSEcarouselInner.style.transform = `translateX(-${step}%)`;
+    let indicatorListElm = document.querySelectorAll(".citrusTrio__carousel-indicators span");
+    let activeIndicator = document.querySelector(".citrusTrio__carousel-indicators span.active");
+    activeIndicator.classList.remove("active");
+    let slideNo = activeIndicator.getAttribute("data-slide-to");
+    let nextSlideNo = parseInt(slideNo) + 1;
+    if (nextSlideNo == indicatorListElm.length) {
+      nextSlideNo = 0;
+    }
+    indicatorListElm[nextSlideNo].classList.add("active");
+  }
+
+  function slideToPrev() {
+    if (direction === -1) {
+      direction = 1;
+      CitrusStylesSEcarouselInner.append(CitrusStylesSEcarouselInner.firstElementChild);
+    }
+    CitrusStylesSEcarousel.style.justifyContent = "flex-end";
+    CitrusStylesSEcarouselInner.style.transform = `translateX(${step}%)`;
+    loop(false);
+    let indicatorListElm = document.querySelectorAll(".citrusTrio__carousel-indicators span");
+    let activeIndicator = document.querySelector(".citrusTrio__carousel-indicators span.active");
+    activeIndicator.classList.remove("active");
+    let slideNo = activeIndicator.getAttribute("data-slide-to");
+    let nextSlideNo = parseInt(slideNo) - 1;
+    if (nextSlideNo == indicatorListElm.length) {
+      nextSlideNo = 0;
+    } else if (nextSlideNo < 0) {
+      nextSlideNo = 0;
+    }
+    indicatorListElm[nextSlideNo].classList.add("active");
+  }
+
+  function loop(status) {
+    if (status === true) {
+      time = setInterval(() => {
+        slideToNext();
+      }, interval);
+    } else {
+      clearInterval(time);
+    }
+  }
+  // pov loader add. before full load js pov none.
+  document.addEventListener("DOMContentLoaded", function () {
+    CitrusStylesSEcarousel.style.display = "flex";
+  });
+</script>

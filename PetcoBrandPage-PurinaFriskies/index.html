@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Friskies | Petco</title>
+    <link rel="stylesheet" href="splide.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="font.css">
+</head>
+
+<body>
+
+    <!-- Landing Page Wrapper -->
+    <main class="citrusFriskies__wrapper">
+        <!-- Hero banner start -->
+        <section class="citrusFriskies__heroBanner">
+            <div class="citrusFriskies__heroContainer">
+                <!-- full width image -->
+                <div class="citrusFriskies__heroImage-box">
+                    <img class="citrusFriskies__desktop-version" src="images/citrusFriskies_hero-desktop.png"
+                        alt="New at Petco. A cat looking up. Three pack shots of Friskies products.">
+                    <img class="citrusFriskies__mobile-version" src="images/citrusFriskies_hero-mobile.png"
+                        alt="New at Petco. Three pack shots of Friskies products.">
+
+                </div>
+                <!-- hero copy container -->
+                <div class="citrusFriskies__heroImage-copy">
+                    <div class="citrusFriskies__hero-copy-center">
+                        <div class="citrusFriskies__logo">
+                            <img class="citrusFriskies__desktop-version" src="images/citrusFriskies_logo.png"
+                                alt="Purina. Friskies.">
+                        </div>
+                        <div class="citrusFriskies__heroCopy">
+                            <h1>FEED YOUR CAT’S <br>PLAYFULNESS AND <br>CURIOSITY</h1>
+                            <div class="citrusFriskies__hero-rightCTA">
+                                <a href="https://www.petco.com/shop/en/petcostore/brand/friskies"
+                                    manual_cm_sp="sponsoredbrandpage:friskies:heropov:1:feedyourcatsplayfulnessandcuriosity:shopnow">Shop
+                                    Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <img class="citrusFriskies__petcoBadge" src="images/citrusFriskies_newAtPetco-badge.png"
+                    alt="NEW at petco">
+            </div>
+        </section>
+        <!-- End hero banner -->
+
+        <!-- three across card start -->
+        <section class="citrusFriskies__product">
+            <h2 class="citrusFriskies__sectionTitle">Send their tastebuds on an amazing&nbsp;journey with&nbsp;Friskies
+            </h2>
+            <div class="citrusFriskies__productContainer">
+                <div class="citrusFriskies__row">
+                    <!-- product 01 -->
+                    <div class="citrusFriskies__col">
+                        <div class="citrusFriskies__card">
+                            <div class="citrusFriskies__card-img">
+                                <img src="images/citrusFriskies_3-across-1.png"
+                                    alt="A bowl of Friskies wet cat food. A white cat licking their whiskers while looking up at a spoon full of Friskies wet cat food.">
+                            </div>
+                            <div class="citrusFriskies__card-body">
+                                <h3>Feeding cats since 1956</h3>
+                                <p>Friskies is dedicated to helping keep cats nourished and happy with exciting textures
+                                    and flavors.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- product 02 -->
+                    <div class="citrusFriskies__col">
+                        <div class="citrusFriskies__card">
+                            <div class="citrusFriskies__card-img">
+                                <img src="images/citrusFriskies_3-across-2.png"
+                                    alt="An orange cat licking their whiskers while looking up at three different pack shots of Friskies products.">
+                            </div>
+                            <div class="citrusFriskies__card-body">
+                                <h3>So many ways to Friskies</h3>
+                                <p>From yummy wet and dry food to tasty treats, Friskies has fun-filled flavor for every
+                                    cat.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- product 03 -->
+                    <div class="citrusFriskies__col citrusFriskies__product-card03">
+                        <div class="citrusFriskies__card">
+                            <div class="citrusFriskies__card-img">
+                                <img src="images/citrusFriskies_3-across-3.png"
+                                    alt="A grey cat licking their whiskers while looking up at a piece of salmon and chicken.">
+                            </div>
+                            <div class="citrusFriskies__card-body">
+                                <h3>Flavors cats crave</h3>
+                                <p>Give your cat a catch-of-the-day or raised-on-the-farm mealtime experience they’ll
+                                    savor.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="citrusFriskies__sectionCTAgap sectionCommonCTA">
+                <a class="citrusFriskies__commonCTA" href="https://www.petco.com/shop/en/petcostore/brand/friskies"
+                    manual_cm_sp="sponsoredbrandpage:friskies:content3up:1:sendtheirtastebudsonanamazingjourneywithfriskies:shopfriskies"
+                    onclick="clickTrackLink(this)">
+                    Shop Friskies
+                </a>
+            </div>
+        </section>
+        <!-- End three across card -->
+
+        <!-- Product Carousel Tab section -->
+        <section class="citrusFriskies__tab-area citrusFriskies__sectionGap">
+            <div class="citrusFriskies__tab-container">
+                <h2 class="citrusFriskies__sectionTitle">
+                    Discover a world of tasty adventures&nbsp;
+                </h2>
+                <!-- product tab main content -->
+                <div class="citrusFriskies__main-tab-content">
+                    <!-- tab button -->
+                    <div class="citrusFriskies__productCarousel-wrapper">
+                        <div id="citrusFriskiesTabId" class="citrusFriskiesTabId">
+                            <button class="citrusFriskies__tab_item citrusFriskies__active_tab"
+                                onclick="filterProducts('Friskies-CatFood-product')">
+                                CAT FOOD
+                            </button>
+
+                            <button class="citrusFriskies__tab_item"
+                                onclick="filterProducts('Friskies-CatTreats-product')">
+                                CAT TREATS
+                            </button>
+
+                        </div>
+                    </div>
+                    <!-- End tab button -->
+
+                    <!-- product content -->
+                    <div class="citrusFriskies-section__tab-content">
+                        <!-- Cat Food Product Row 01 -->
+                        <div id="Friskies-CatFood-product" class="splide citrusFriskies__Products">
+                            <div class="splide__track">
+                                <div class="splide__list">
+                                    <!-- tab item 01-->
+                                    <div class="citrusFriskies__Product Friskies-CatFood-product splide__slide">
+                                        <div class="citrusFriskies-tab-card">
+                                            <a href="https://www.petco.com/shop/en/petcostore/product/purina-friskies-salmon-dinner-wet-cat-food-pate-55-oz-3882416"
+                                                manual_cm_sp="sponsoredbrandpage:friskies:catfood:1:friskiessalmondinnerwetcatfoodpate55oz:shopnow"
+                                                onclick="clickTrackLink(this);">
+                                                <div class="citrusFriskies-tab-cardImg">
+                                                    <img src="images/citrusFriskies_catFood-1.png" alt="" />
+                                                </div>
+                                                <div class="citrusFriskies-tab-cardBody">
+                                                    <p>
+                                                        Friskies Salmon Dinner Wet Cat Food Pate, 5.5 oz.
+                                                    </p>
+                                                    <button class="citrusFriskies__productCTA">
+                                                        Shop Now
+                                                    </button>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!-- tab item -->
+
+                                    <!-- tab item 02-->
+                                    <div class="citrusFriskies__Product Friskies-CatFood-product splide__slide">
+                                        <div class="citrusFriskies-tab-card">
+                                            <a href="https://www.petco.com/shop/en/petcostore/product/friskies-shreds-beef-turkey-whitefish-and-chicken-and-salmon-wet-cat-food-variety-pack-55-oz-count-of-40-3881481"
+                                                manual_cm_sp="sponsoredbrandpage:friskies:catfood:2:friskiesshredsbeefturkeywhitefishandchicken&salmonwetcatfoodvarietypack55ozcountof40:shopnow"
+                                                onclick="clickTrackLink(this);">
+                                                <div class="citrusFriskies-tab-cardImg">
+                                                    <img src="images/citrusFriskies_catFood-2.png" alt="" />
+                                                </div>
+                                                <div class="citrusFriskies-tab-cardBody">
+                                                    <p>
+                                                        Friskies Shreds Beef, Turkey, Whitefish, and Chicken & Salmon
+                                                        Wet Cat Food Variety Pack, 5.5 oz., Count of 40
+                                                    </p>
+                                                    <button class="citrusFriskies__productCTA">
+                                                        Shop Now
+                                                    </button>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!-- tab item -->
+
+                                    <!-- tab item 03-->
+                                    <div class="citrusFriskies__Product Friskies-CatFood-product splide__slide">
+                                        <div class="citrusFriskies-tab-card">
+                                            <a href="https://www.petco.com/shop/en/petcostore/product/friskies-mixed-grill-pate-favorites-wet-canned-cat-food-55-oz-3882379"
+                                                manual_cm_sp="sponsoredbrandpage:friskies:catfood:3:friskiesmixedgrillpatefavoriteswetcannedcatfood55oz:shopnow"
+                                                onclick="clickTrackLink(this);">
+                                                <div class="citrusFriskies-tab-cardImg">
+                                                    <img src="images/citrusFriskies_catFood-3.png" alt="" />
+                                                </div>
+                                                <div class="citrusFriskies-tab-cardBody">
+                                                    <p>
+                                                        Friskies Mixed Grill Pate Favorites Wet Canned Cat Food, 5.5 oz.
+                                                    </p>
+                                                    <button class="citrusFriskies__productCTA">
+                                                        Shop Now
+                                                    </button>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!-- tab item -->
+
+                                    <!-- tab item 04-->
+                                    <div class="citrusFriskies__Product Friskies-CatFood-product splide__slide">
+                                        <div class="citrusFriskies-tab-card">
+                                            <a href="https://www.petco.com/shop/en/petcostore/product/friskies-prime-filets-with-chicken-in-gravy-wet-cat-food-55-oz-3882310"
+                                                manual_cm_sp="sponsoredbrandpage:friskies:catfood:4:friskiesprimefiletswithchickeningravywetcatfood55oz:shopnow"
+                                                onclick="clickTrackLink(this);">
+                                                <div class="citrusFriskies-tab-cardImg">
+                                                    <img src="images/citrusFriskies_catFood-4.png" alt="" />
+                                                </div>
+                                                <div class="citrusFriskies-tab-cardBody">
+                                                    <p>
+                                                        Friskies Prime Filets With Chicken in Gravy Wet Cat Food, 5.5
+                                                        oz.
+                                                    </p>
+                                                    <button class="citrusFriskies__productCTA">
+                                                        Shop Now
+                                                    </button>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!-- tab item -->
+
+                                    <!-- tab item 05-->
+                                    <div class="citrusFriskies__Product Friskies-CatFood-product splide__slide">
+                                        <div class="citrusFriskies-tab-card">
+                                            <a href="https://www.petco.com/shop/en/petcostore/product/friskies-prime-filets-turkey-dinner-in-gravy-wet-cat-food-55-oz-3882336"
+                                                manual_cm_sp="sponsoredbrandpage:friskies:catfood:5:friskiesprimefiletsturkeydinneringravywetcatfood55oz:shopnow"
+                                                onclick="clickTrackLink(this);">
+                                                <div class="citrusFriskies-tab-cardImg">
+                                                    <img src="images/citrusFriskies_catFood-5.png" alt="" />
+                                                </div>
+                                                <div class="citrusFriskies-tab-cardBody">
+                                                    <p>
+                                                        Friskies Prime Filets Turkey Dinner in Gravy Wet Cat Food, 5.5
+                                                        oz.
+                                                    </p>
+                                                    <button class="citrusFriskies__productCTA">
+                                                        Shop Now
+                                                    </button>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!-- tab item -->
+
+                                    <!-- tab item 06-->
+                                    <div class="citrusFriskies__Product Friskies-CatFood-product splide__slide">
+                                        <div class="citrusFriskies-tab-card">
+                                            <a href="https://www.petco.com/shop/en/petcostore/product/friskies-shreds-with-chicken-in-gravy-wet-cat-food-55-oz-3881456"
+                                                manual_cm_sp="sponsoredbrandpage:friskies:catfood:6:friskiesshredswithchickeningravywetcatfood55oz:shopnow"
+                                                onclick="clickTrackLink(this);">
+                                                <div class="citrusFriskies-tab-cardImg">
+                                                    <img src="images/citrusFriskies_catFood-6.png" alt="" />
+                                                </div>
+                                                <div class="citrusFriskies-tab-cardBody">
+                                                    <p>
+                                                        Friskies Shreds with Chicken in Gravy Wet Cat Food, 5.5 oz.
+                                                    </p>
+                                                    <button class="citrusFriskies__productCTA">
+                                                        Shop Now
+                                                    </button>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!-- tab item -->
+
+                                    <!-- tab item 07-->
+                                    <div class="citrusFriskies__Product Friskies-CatFood-product splide__slide">
+                                        <div class="citrusFriskies-tab-card">
+                                            <a href="https://www.petco.com/shop/en/petcostore/product/friskies-shreds-turkey-and-cheese-dinner-gravy-wet-cat-food-55-oz-3881464"
+                                                manual_cm_sp="sponsoredbrandpage:friskies:catfood:7:friskiesshredsturkeyandcheesedinnergravywetcatfood55oz:shopnow"
+                                                onclick="clickTrackLink(this);">
+                                                <div class="citrusFriskies-tab-cardImg">
+                                                    <img src="images/citrusFriskies_catFood-7.png" alt="" />
+                                                </div>
+                                                <div class="citrusFriskies-tab-cardBody">
+                                                    <p>
+                                                        Friskies Shreds Turkey and Cheese Dinner Gravy Wet Cat Food, 5.5
+                                                        oz.
+                                                    </p>
+                                                    <button class="citrusFriskies__productCTA">
+                                                        Shop Now
+                                                    </button>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!-- tab item -->
+
+                                    <!-- tab item 08-->
+                                    <div class="citrusFriskies__Product Friskies-CatFood-product splide__slide">
+                                        <div class="citrusFriskies-tab-card">
+                                            <a href="https://www.petco.com/shop/en/petcostore/product/friskies-extra-gravy-chunky-wet-cat-food-variety-pack-55-oz-count-of-24-can-3881552"
+                                                manual_cm_sp="sponsoredbrandpage:friskies:catfood:8:friskiesextragravychunkywetcatfoodvarietypack55ozcountof24:shopnow"
+                                                onclick="clickTrackLink(this);">
+                                                <div class="citrusFriskies-tab-cardImg">
+                                                    <img src="images/citrusFriskies_catFood-8.png" alt="" />
+                                                </div>
+                                                <div class="citrusFriskies-tab-cardBody">
+                                                    <p>
+                                                        Friskies Extra Gravy Chunky Wet Cat Food Variety Pack, 5.5 oz.,
+                                                        Count of 24
+                                                    </p>
+                                                    <button class="citrusFriskies__productCTA">
+                                                        Shop Now
+                                                    </button>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!-- tab item -->
+
+                                    <!-- tab item 09-->
+                                    <div class="citrusFriskies__Product Friskies-CatFood-product splide__slide">
+                                        <div class="citrusFriskies-tab-card">
+                                            <a href="https://www.petco.com/shop/en/petcostore/product/friskies-surfin-and-turfin-favorites-dry-cat-food-315-lbs-3880744"
+                                                manual_cm_sp="sponsoredbrandpage:friskies:catfood:9:friskiessurfin&turfinfavoritesdrycatfood315lbs:shopnow"
+                                                onclick="clickTrackLink(this);">
+                                                <div class="citrusFriskies-tab-cardImg">
+                                                    <img src="images/citrusFriskies_catFood-9.png" alt="" />
+                                                </div>
+                                                <div class="citrusFriskies-tab-cardBody">
+                                                    <p>
+                                                        Friskies Surfin' & Turfin' Favorites Dry Cat Food, 3.15 lbs.
+                                                    </p>
+                                                    <button class="citrusFriskies__productCTA">
+                                                        Shop Now
+                                                    </button>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!-- tab item -->
+
+                                    <!-- tab item 10-->
+                                    <div class="citrusFriskies__Product Friskies-CatFood-product splide__slide">
+                                        <div class="citrusFriskies-tab-card">
+                                            <a href="https://www.petco.com/shop/en/petcostore/product/friskies-lil-gravies-roasted-chicken-flavor-complement-cat-food-155-oz-3881413"
+                                                manual_cm_sp="sponsoredbrandpage:friskies:catfood:10:friskieslilgraviesroastedchickenflavorcomplementcatfood155oz:shopnow"
+                                                onclick="clickTrackLink(this);">
+                                                <div class="citrusFriskies-tab-cardImg">
+                                                    <img src="images/citrusFriskies_catFood-10.png" alt="" />
+                                                </div>
+                                                <div class="citrusFriskies-tab-cardBody">
+                                                    <p>
+                                                        Friskies Lil' Gravies Roasted Chicken Flavor Complement Cat
+                                                        Food, 1.55 oz.
+                                                    </p>
+                                                    <button class="citrusFriskies__productCTA">
+                                                        Shop Now
+                                                    </button>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!-- tab item -->
+
+                                    <!-- tab item 11-->
+                                    <div class="citrusFriskies__Product Friskies-CatFood-product splide__slide">
+                                        <div class="citrusFriskies-tab-card">
+                                            <a href="https://www.petco.com/shop/en/petcostore/product/friskies-seafood-sensations-dry-cat-food-315-lbs-3880728"
+                                                manual_cm_sp="sponsoredbrandpage:friskies:catfood:11:friskiesseafoodsensationsdrycatfood315lbs:shopnow"
+                                                onclick="clickTrackLink(this);">
+                                                <div class="citrusFriskies-tab-cardImg">
+                                                    <img src="images/citrusFriskies_catFood-11.png" alt="" />
+                                                </div>
+                                                <div class="citrusFriskies-tab-cardBody">
+                                                    <p>
+                                                        Friskies Seafood Sensations Dry Cat Food, 3.15 lbs.
+                                                    </p>
+                                                    <button class="citrusFriskies__productCTA">
+                                                        Shop Now
+                                                    </button>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!-- tab item -->
+
+                                    <!-- tab item Group Product Shots -->
+                                    <div
+                                        class="citrusFriskies__Product Friskies-CatFood-product splide__slide citrusFriskies__groupProductShot citrus-friskies__group--wrap">
+                                        <div class="citrusFriskies-tab-card citrusFriskies__groupProductShot__item">
+                                            <a href="https://www.petco.com/shop/en/petcostore/brand/friskies/cat/cat-food"
+                                                manual_cm_sp="sponsoredbrandpage:friskies:productscroller:12:discoveraworldoftastyadventures:shopallcatfood"
+                                                onclick="clickTrackLink(this);">
+                                                <div
+                                                    class="citrusFriskies-tab-cardImg citrusFriskies__groupProductShotImage">
+                                                    <img src="images/citrusFriskies_shopAll-catFood.png" alt="" />
+                                                </div>
+                                                <div class="citrusFriskies-tab-cardBody">
+                                                    <button class="citrusFriskies__productCTA groupProductCTA">
+                                                        <div class="citrusFriskies__groupCtaDimention">
+                                                            <p>SHOP ALL<br>
+                                                                CAT FOOD</p>
+                                                        </div>
+                                                        <div class="citrusFriskies__groupCtaArrow">
+                                                            <p>&#8594;</p>
+                                                        </div>
+                                                    </button>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!-- tab item Group Product Shots -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Cat Food Product Row 01 -->
+
+
+                        <!-- Cat Treats Raw product row 02 -->
+                        <div id="Friskies-CatTreats-product" class="splide citrusFriskies__Products">
+                            <div class="splide__track">
+                                <div class="splide__list">
+                                    <!-- tab item 01-->
+                                    <div class="citrusFriskies__Product Friskies-CatTreats-product splide__slide">
+                                        <div class="citrusFriskies-tab-card">
+                                            <a href="https://www.petco.com/shop/en/petcostore/product/friskies-facilities-party-mix-beachside-crunch-cat-treats-20-oz-3880111"
+                                                manual_cm_sp="sponsoredbrandpage:friskies:cattreats:1:friskiespartymixbeachsidecrunchcattreats20oz:shopnow"
+                                                onclick="clickTrackLink(this);">
+                                                <div class="citrusFriskies-tab-cardImg">
+                                                    <img src="images/citrusFriskies_catTreats-1.png" alt="" />
+                                                </div>
+                                                <div class="citrusFriskies-tab-cardBody">
+                                                    <p>
+                                                        Friskies Party Mix Beachside Crunch Cat Treats, 20 oz.
+                                                    </p>
+                                                    <button class="citrusFriskies__productCTA">
+                                                        Shop Now
+                                                    </button>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!-- tab item -->
+
+                                    <!-- tab item 02-->
+                                    <div class="citrusFriskies__Product Friskies-CatTreats-product splide__slide">
+                                        <div class="citrusFriskies-tab-card">
+                                            <a href="https://www.petco.com/shop/en/petcostore/product/friskies-facilities-party-mix-original-crunch-cat-treats-20-oz-3880031"
+                                                manual_cm_sp="sponsoredbrandpage:friskies:cattreats:2:friskiespartymixoriginalcrunchcattreats20oz:shopnow"
+                                                onclick="clickTrackLink(this);">
+                                                <div class="citrusFriskies-tab-cardImg">
+                                                    <img src="images/citrusFriskies_catTreats-2.png" alt="" />
+                                                </div>
+                                                <div class="citrusFriskies-tab-cardBody">
+                                                    <p>
+                                                        Friskies Party Mix Original Crunch Cat Treats, 20 oz.
+                                                    </p>
+                                                    <button class="citrusFriskies__productCTA">
+                                                        Shop Now
+                                                    </button>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!-- tab item -->
+
+                                    <!-- tab item 03-->
+                                    <div class="citrusFriskies__Product Friskies-CatTreats-product splide__slide">
+                                        <div class="citrusFriskies-tab-card">
+                                            <a href="https://www.petco.com/shop/en/petcostore/product/friskies-facilities-party-mix-beachside-crunch-cat-treats-6-oz-3880040"
+                                                manual_cm_sp="sponsoredbrandpage:friskies:cattreats:3:friskiespartymixbeachsidecrunchcattreats6oz:shopnow"
+                                                onclick="clickTrackLink(this);">
+                                                <div class="citrusFriskies-tab-cardImg">
+                                                    <img src="images/citrusFriskies_catTreats-3.png" alt="" />
+                                                </div>
+                                                <div class="citrusFriskies-tab-cardBody">
+                                                    <p>
+                                                        Friskies Party Mix Beachside Crunch Cat Treats, 6 oz.
+                                                    </p>
+                                                    <button class="citrusFriskies__productCTA">
+                                                        Shop Now
+                                                    </button>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!-- tab item -->
+
+                                    <!-- tab item 04-->
+                                    <div class="citrusFriskies__Product Friskies-CatTreats-product splide__slide">
+                                        <div class="citrusFriskies-tab-card">
+                                            <a href="https://www.petco.com/shop/en/petcostore/product/friskies-facilities-party-mix-beachside-crunch-cat-treats-21-oz-3880058"
+                                                manual_cm_sp="sponsoredbrandpage:friskies:cattreats:4:friskiespartymixbeachsidecrunchcattreats21oz:shopnow"
+                                                onclick="clickTrackLink(this);">
+                                                <div class="citrusFriskies-tab-cardImg">
+                                                    <img src="images/citrusFriskies_catTreats-4.png" alt="" />
+                                                </div>
+                                                <div class="citrusFriskies-tab-cardBody">
+                                                    <p>
+                                                        Friskies Party Mix Beachside Crunch Cat Treats, 2.1 oz.
+                                                    </p>
+                                                    <button class="citrusFriskies__productCTA">
+                                                        Shop Now
+                                                    </button>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!-- tab item -->
+
+                                    <!-- tab item 05-->
+                                    <div class="citrusFriskies__Product Friskies-CatTreats-product splide__slide">
+                                        <div class="citrusFriskies-tab-card">
+                                            <a href="https://www.petco.com/shop/en/petcostore/product/friskies-facilities-party-mix-crunch-morning-munch-cat-treats-21-oz-3880066"
+                                                manual_cm_sp="sponsoredbrandpage:friskies:cattreats:5:friskiespartymixcrunchmorningmunchcattreats21oz:shopnow"
+                                                onclick="clickTrackLink(this);">
+                                                <div class="citrusFriskies-tab-cardImg">
+                                                    <img src="images/citrusFriskies_catTreats-5.png" alt="" />
+                                                </div>
+                                                <div class="citrusFriskies-tab-cardBody">
+                                                    <p>
+                                                        Friskies Party Mix Crunch Morning Munch Cat Treats, 2.1 oz.
+                                                    </p>
+                                                    <button class="citrusFriskies__productCTA">
+                                                        Shop Now
+                                                    </button>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!-- tab item -->
+
+                                    <!-- tab item 06-->
+                                    <div class="citrusFriskies__Product Friskies-CatTreats-product splide__slide">
+                                        <div class="citrusFriskies-tab-card">
+                                            <a href="https://www.petco.com/shop/en/petcostore/product/friskies-facilities-party-mix-crunch-gravylicious-chicken-and-gravy-flavors-cat-treats-6-oz-3880074"
+                                                manual_cm_sp="sponsoredbrandpage:friskies:cattreats:6:friskiespartymixcrunchgravyliciouschicken&gravyflavorscattreats6oz:shopnow"
+                                                onclick="clickTrackLink(this);">
+                                                <div class="citrusFriskies-tab-cardImg">
+                                                    <img src="images/citrusFriskies_catTreats-6.png" alt="" />
+                                                </div>
+                                                <div class="citrusFriskies-tab-cardBody">
+                                                    <p>
+                                                        Friskies Party Mix Crunch Gravylicious Chicken & Gravy Flavors
+                                                        Cat Treats, 6 oz.
+                                                    </p>
+                                                    <button class="citrusFriskies__productCTA">
+                                                        Shop Now
+                                                    </button>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!-- tab item -->
+
+                                    <!-- tab item 07-->
+                                    <div class="citrusFriskies__Product Friskies-CatTreats-product splide__slide">
+                                        <div class="citrusFriskies-tab-card">
+                                            <a href="https://www.petco.com/shop/en/petcostore/product/friskies-facilities-party-mix-california-crunch-with-chicken-cat-treats-6-oz-3880082"
+                                                manual_cm_sp="sponsoredbrandpage:friskies:cattreats:7:friskiespartymixcaliforniacrunchwithchickencattreats6oz:shopnow"
+                                                onclick="clickTrackLink(this);">
+                                                <div class="citrusFriskies-tab-cardImg">
+                                                    <img src="images/citrusFriskies_catTreats-7.png" alt="" />
+                                                </div>
+                                                <div class="citrusFriskies-tab-cardBody">
+                                                    <p>
+                                                        Friskies Party Mix California Crunch With Chicken Cat Treats, 6
+                                                        oz.
+                                                    </p>
+                                                    <button class="citrusFriskies__productCTA">
+                                                        Shop Now
+                                                    </button>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!-- tab item -->
+
+                                    <!-- tab item 08-->
+                                    <div class="citrusFriskies__Product Friskies-CatTreats-product splide__slide">
+                                        <div class="citrusFriskies-tab-card">
+                                            <a href="https://www.petco.com/shop/en/petcostore/product/friskies-facilities-party-mix-original-crunch-cat-treats-21-oz-3880091"
+                                                manual_cm_sp="sponsoredbrandpage:friskies:cattreats:8:friskiespartymixoriginalcrunchcattreats21oz:shopnow"
+                                                onclick="clickTrackLink(this);">
+                                                <div class="citrusFriskies-tab-cardImg">
+                                                    <img src="images/citrusFriskies_catTreats-8.png" alt="" />
+                                                </div>
+                                                <div class="citrusFriskies-tab-cardBody">
+                                                    <p>
+                                                        Friskies Party Mix Original Crunch Cat Treats, 2.1 oz.
+                                                    </p>
+                                                    <button class="citrusFriskies__productCTA">
+                                                        Shop Now
+                                                    </button>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!-- tab item -->
+
+                                    <!-- tab item 09-->
+                                    <div class="citrusFriskies__Product Friskies-CatTreats-product splide__slide">
+                                        <div class="citrusFriskies-tab-card">
+                                            <a href="https://www.petco.com/shop/en/petcostore/product/friskies-facilities-party-mix-crunch-wild-west-cat-treats-21-oz-3880103"
+                                                manual_cm_sp="sponsoredbrandpage:friskies:cattreats:9:friskiespartymixcrunchwildwestcattreats21oz:shopnow"
+                                                onclick="clickTrackLink(this);">
+                                                <div class="citrusFriskies-tab-cardImg">
+                                                    <img src="images/citrusFriskies_catTreats-9.png" alt="" />
+                                                </div>
+                                                <div class="citrusFriskies-tab-cardBody">
+                                                    <p>
+                                                        Friskies Party Mix Crunch Wild West Cat Treats, 2.1 oz.
+                                                    </p>
+                                                    <button class="citrusFriskies__productCTA">
+                                                        Shop Now
+                                                    </button>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!-- tab item -->
+
+                                    <!-- tab item 10-->
+                                    <div class="citrusFriskies__Product Friskies-CatTreats-product splide__slide">
+                                        <div class="citrusFriskies-tab-card">
+                                            <a href="https://www.petco.com/shop/en/petcostore/product/friskies-facilities-party-mix-lobster-and-mac-n-cheese-flavors-cat-treats-6-oz-3880120"
+                                                manual_cm_sp="sponsoredbrandpage:friskies:cattreats:10:friskiespartymixlobster&macncheeseflavorscattreats6oz:shopnow"
+                                                onclick="clickTrackLink(this);">
+                                                <div class="citrusFriskies-tab-cardImg">
+                                                    <img src="images/citrusFriskies_catTreats-10.png" alt="" />
+                                                </div>
+                                                <div class="citrusFriskies-tab-cardBody">
+                                                    <p>
+                                                        Friskies Party Mix Lobster & Mac 'N' Cheese Flavors Cat Treats,
+                                                        6 oz.
+                                                    </p>
+                                                    <button class="citrusFriskies__productCTA">
+                                                        Shop Now
+                                                    </button>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!-- tab item -->
+
+                                    <!-- tab item Group Product Shots -->
+                                    <div
+                                        class="citrusFriskies__Product Friskies-CatTreats-product splide__slide citrusFriskies__groupProductShot citrus-friskies__group--wrap">
+                                        <div class="citrusFriskies-tab-card citrusFriskies__groupProductShot__item">
+                                            <a href="https://www.petco.com/shop/en/petcostore/brand/friskies/cat/cat-treats"
+                                                manual_cm_sp="sponsoredbrandpage:friskies:productscroller:11:discoveraworldoftastyadventures:shopallcattreats"
+                                                onclick="clickTrackLink(this);">
+                                                <div
+                                                    class="citrusFriskies-tab-cardImg citrusFriskies__groupProductShotImage">
+                                                    <img src="images/citrusFriskies_shopAll-catTreats.png" alt="" />
+                                                </div>
+                                                <div class="citrusFriskies-tab-cardBody">
+                                                    <button class="citrusFriskies__productCTA groupProductCTA">
+                                                        <div class="citrusFriskies__groupCtaDimention">
+                                                            <p>SHOP ALL<br>
+                                                                CAT TREATS</p>
+                                                        </div>
+                                                        <div class="citrusFriskies__groupCtaArrow">
+                                                            <p>&#8594;</p>
+                                                        </div>
+                                                    </button>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!-- tab item Group Product Shots -->
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Cat Treats Raw product row 02 -->
+
+                    </div>
+                    <!-- End Product content -->
+                </div>
+                <!-- product tab main content -->
+            </div>
+        </section>
+        <!-- End Product Carousel Tab section -->
+    </main>
+    <!-- End Landing Page -->
+
+    <!-- JS Dependency Start-->
+    <script src="splide.js"></script>
+
+    <!-- Product_carousel_tab_item.js -->
+    <script src="Product_Carousel.js"></script>
+
+    <!-- End JS Dependency -->
+</body>
+
+</html>
