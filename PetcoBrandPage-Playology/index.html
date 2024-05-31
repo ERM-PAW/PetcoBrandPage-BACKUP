@@ -1,0 +1,1196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Playology Brand Page</title>
+</head>
+<body>
+<style>
+	h1, h2, h3, h4, h5, h6, a, button {
+		font-family: "PetcoCircularTT-Bold", arial !important;
+	}
+	p {
+		font-family: "PetcoCircularTT-Regular", arial !important;
+	}
+
+	*{ margin : 0; padding : 0; }
+
+	.playology-section img{ width : 100%; }
+
+	.cta-box{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-wrap: nowrap;
+		text-decoration: none;
+	}
+
+	.cta-box a{
+		color : #fff;
+		background-color : #00205b;
+		height: 54px;
+		font-family: "PetcoCircularTT-Bold", arial !important;
+		font-size: 16px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-wrap: nowrap;
+		text-decoration: none;
+		padding: 0 30px;
+		border-radius: 5px;
+		width: 200px;
+	}
+
+	.padding-40{
+		padding : 40px 0;
+	}
+
+	.cta-underline a{
+		color: #001952;
+		font-family: "PetcoCircularTT-Bold", arial !important;
+		font-weight: 600;
+		font-size: 16px;
+		border-bottom: 1px solid;
+		text-decoration: none;
+	}
+
+	.cta-underline a:hover{
+		color : #000;
+	}
+
+	/* Playology brand page */
+	.playology-section{
+		display: block;
+	}
+
+	.playology-section .container{
+		max-width: 1440px;
+		margin: 0 auto;
+	}
+
+	.playology-section .container-fluid{
+		width: 100%;
+	}
+
+	.custom-flex{
+		display: flex;
+		flex-wrap: nowrap;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.section-title{
+		color : #022169;
+		font-family: "PetcoCircularTT-Bold", arial !important;
+		font-size: 25px;
+		padding : 45px 15px;
+		text-align: center;
+		font-weight: 600;
+                line-height: 1
+	}
+
+	.playology-section__slider{
+		background: #000;
+	}
+
+	.playology-section__slider--wrapper{
+		padding: 0 5%;
+	}
+
+	.playology-section__slider--content .col{
+		width: 50%;
+	}
+
+	.playology-section__slider--content .col .slider-text{
+		padding : 0 0 0 40px;
+		max-width: 250px;
+		text-align: left;
+	}
+
+	.playology-section__slider--content .col .slider-text__eyebrow{
+		max-width: 210px;
+	}
+
+	.playology-section__slider--content .col .slider-text__headline{
+		color : #fff;
+		font-family: "PetcoCircularTT-Bold", arial !important;
+		font-size: 35px;
+		font-weight: 600;
+		padding : 50px 0 20px;
+                line-height: 1;
+	}
+
+	.playology-section__slider--content .col .slider-text__subhead{
+		color : #fcec00;
+		font-family: "PetcoCircularTT-Regular", arial !important;
+		font-size: 16px;
+		font-weight: 500;
+		line-height: 25px;
+	}
+
+	.playology-section__slider--content .col:first-child{
+		background-image: url("https://assets.petco.com/petco/image/upload/f_auto,q_auto/POV_1-left-tech-Graphic");
+		background-size: contain;
+		background-repeat: no-repeat;
+		margin: 0 0 -5px;
+		padding-left: 11%;
+	}
+
+	.playology-section__slider--content .col:last-child{
+		background-image: url("https://assets.petco.com/petco/image/upload/f_auto,q_auto/POV_1-right-tech-Graphic");
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: right;
+		padding-right: 11%;
+	}
+
+
+	/* Sliders options */
+	.slider{
+		overflow: hidden;
+		display: flex;
+		align-items: center;
+		width: 100%;
+		position: relative;
+	}
+	
+	.slides{
+		width : 200%;
+		display: flex;
+	}
+
+	.slides input{
+		display: none;
+	}
+
+	.slide{
+		min-width : 100%;
+		transition: 2s;
+	}
+
+	/* Manual navigation */
+	.navigation-manual{
+		position: absolute;
+		width: 100%;
+		display: none;
+		justify-content: center;
+		bottom: 0;
+		padding: 10px 0 10px 25px;
+		width: 70px;
+		left: 45%;
+	}
+
+	.manual-btn{
+		border : 2px solid #09205c;
+		padding : 5px;
+		border-radius: 10px;
+		cursor: pointer;
+		transition: 1s;
+
+	}
+
+	.manual-btn:not(:last-child){
+		margin-right: 10px;
+	}
+
+	.manual-btn:hover{
+		background : #09205c;
+	}
+
+	#radio1:checked ~ .first{
+		margin-left : 0;
+	}
+	#radio2:checked ~ .first{
+		margin-left : -100%;
+	}
+
+	.navigation-auto{
+		position: absolute;
+		display: flex;
+		width: 100%;
+		justify-content: center;
+		bottom: 0;
+		background: rgba(255, 255, 255, 0.8);
+		padding: 10px 0 10px 25px;
+		width: 70px;
+		left: 45%;
+		border-radius: 5px 5px 0 0;
+	}
+
+	.navigation-auto img{
+		width: 16px;
+		position: absolute;
+		margin: 0 0 0 -75px;
+		bottom: 9px;
+	}
+
+	.navigation-auto div{
+		border : 2px solid #09205c;
+		padding: 5px;
+		border-radius: 10px;
+		transition: 1s;
+	}
+
+	.navigation-auto div:not(:last-child){
+		margin-right: 10px;
+	}
+
+	#radio1:checked ~ .navigation-auto .auto-btn1{
+		background: #09205c;
+	}
+	#radio2:checked ~ .navigation-auto .auto-btn2{
+		background: #09205c;
+	}
+
+	/* Popular Toys */
+	.playology-section__popular-toys--content{
+		align-items: flex-start;
+	}
+
+	.playology-section__popular-toys--content .col .single-item{
+		text-align: center;
+		padding: 16px;
+	}
+
+	.playology-section__popular-toys--content .col .single-item__headline a{
+		padding: 40px 0;
+		color: #001952;
+		font-family: "PetcoCircularTT-Bold", arial !important;
+		font-weight: 600;
+		font-size: 21px;
+		text-decoration: none;
+		display: block;
+		min-height: 50px;
+		cursor: pointer;
+	}
+
+	/* Two columns - Carousel & Feature image */
+	.playology-section__two-columns--content .col{
+		position: relative;
+		width: 50%;
+	}
+
+	.playology-section__two-columns--content{
+		justify-content: space-around;
+		position: relative;
+	}
+
+	.playology-section__two-columns--content .wrapper-container{
+		width: 98%;
+    	overflow: hidden;
+	}
+
+	.playology-section__two-columns--content #twoColumnMobile{
+		overflow-y: auto;
+	}
+
+	.playology-section__two-columns--content #seniorDog .item-wrapper{
+		width: 300%;
+	}
+
+	.playology-section__two-columns--content .col .item-wrapper{
+		display: flex;
+		align-items: center;
+		justify-content: left;
+		padding : 40px 15px;
+		width : 450%;
+	}
+
+	.playology-section__two-columns--content .col .item-wrapper__right-arrow{
+		width : 60px;
+		position: absolute;
+    	right: 10px;
+		cursor: pointer;
+		bottom: 40%;
+	}
+
+	.playology-section__two-columns--content .col .item-wrapper__left-arrow{
+		width : 60px;
+		position: absolute;
+    	left: 10px;
+		cursor: pointer;
+		bottom: 40%;
+		z-index: 1;
+	}
+
+	.playology-section__two-columns--content .col .item-wrapper .single-item{
+		width: 50%;
+		padding: 0 15px;
+	}
+
+	.carousel1, .carousel2, .carousel3{
+		position: relative;
+	}
+
+	.playology-section__two-columns--content .col .item-wrapper .single-item__img{
+		max-width: 210px;
+		padding-bottom: 10px;
+		height: 220px;
+	}
+
+	.playology-section__two-columns--content .col .img-caption{
+		color: #fff;
+		font-family: "PetcoCircularTT-Bold", arial !important;
+		font-weight: 600;
+		font-size: 18px;
+		position: absolute;
+		bottom: 5px;
+		text-align: center;
+		background: rgba(0, 0, 0, 0.65);
+		padding: 10px 15px;
+		width: 100%;
+	}
+
+	.playology-section__two-columns--content .col .item-wrapper .single-item:last-child .single-item__img{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.playology-section__two-columns--content .col .item-wrapper .single-item__headline{
+		border-top: 1px solid #333;
+		padding: 5px 0 30px;
+	}
+
+	.playology-section__two-columns--content .col .item-wrapper .single-item__headline a{
+		font-family: "PetcoCircularTT-Regular", arial !important;
+		font-size: 13px;
+		font-weight: 500;
+		text-decoration: none;
+		color : #000;
+	}
+
+
+	.playology-section__two-columns--content .col .disclaimer,
+	.playology-section__two-columns--wrapper .disclaimer{
+		font-family: "PetcoCircularTT-Regular", arial !important;
+		font-size: 11px;
+		font-weight: 500;
+		padding: 5% 20px;
+	}
+
+	.playology-section__two-columns--content .col .feature-headline,
+	.playology-section__two-columns--content .col .feature-subhead{
+		color : #022169;
+		font-family: "PetcoCircularTT-Bold", arial;
+		font-weight: 600;
+		font-size: 25px;
+		text-align: center;
+		max-width: 320px;
+		margin: 0 auto;
+                line-height: 1;
+	}
+
+	.playology-section__two-columns--content .col .feature-subhead{
+		font-family: "PetcoCircularTT-Regular", arial !important;
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 22px;
+		padding : 20px;
+	}
+
+	/* Embeded Section*/
+	.playology-section__embeded{
+		background : #fcfbfc;
+		padding-bottom: 40px;
+		margin: 0 auto 50px !important;
+	}
+
+	.playology-section__embeded--content{
+		align-items: flex-start;
+		justify-content: space-around;
+	}
+
+	.playology-section__embeded{
+		position: relative;
+	}
+
+	.playology-section__embeded .left-arrow, .playology-section__embeded .right-arrow{
+		width : 20px;
+		position: absolute;
+		top: 60%;
+		cursor : pointer
+	}
+
+	.playology-section__embeded .left-arrow{
+		opacity : 0.7;
+	}
+
+	.playology-section__embeded .right-arrow{
+		right: 0;
+	}
+
+	.playology-section__embeded--content .col .single-item{
+		text-align: center;
+		padding: 16px;
+		max-width: 280px;
+		margin: 0 auto;
+	}
+
+	.playology-section__embeded--content .col .single-item__img{
+		max-width: 140px;
+		margin: 0 auto;
+	}
+
+	.playology-section__embeded--content .col .single-item__headline{
+		padding: 40px 0 30px;
+		color: #000;
+		font-family: "PetcoCircularTT-Bold", arial !important;
+		font-weight: 600;
+		font-size: 25px;
+		min-height: 60px;	
+                line-height: 1;
+	}
+
+	.playology-section__embeded--content .col .single-item__subhead{
+		color: #000;
+		font-family: "PetcoCircularTT-Regular", arial !important;
+		font-weight: 500;
+		font-size: 16px;	
+	}
+
+	/* Bottom Hero Section*/
+	.playology-section__bottom-hero{
+		background-image: url("https://assets.petco.com/petco/image/upload/f_auto,q_auto/bottom_mod");
+		background-size: cover;
+		background-repeat: no-repeat;
+		height: 740px;
+		background-position: center;
+	}
+
+	.playology-section__bottom-hero--content{
+		justify-content: flex-end;
+	}
+
+	.playology-section__bottom-hero--content .col{
+		width: 60%;
+	}
+
+	.playology-section__bottom-hero--content .col .single-item{
+		text-align: center;
+		padding : 50px 30px 30px;
+		max-width: 480px;
+		margin: 0 auto;
+		text-align: center;
+	}
+
+	.playology-section__bottom-hero--content .col .single-item .single-item__logo{
+		max-width: 300px;
+		margin: 0 auto;
+	}
+
+	.playology-section__bottom-hero--content .col .single-item .single-item__headline{
+		color: #fcec00;
+		font-family: "PetcoCircularTT-Bold", arial !important;
+		font-weight: 600;
+		font-size: 35px;	
+                line-height: 1;
+	}
+
+
+	.m-hide {
+		display: block;
+	}
+	.d-hide{
+		display: none;
+	}
+
+	@media only screen and (min-width:1600px){
+
+		/* Slider section */
+		/* .playology-section__slider--content .col .slider-text{
+			max-width: 460px;
+		}
+
+		.playology-section__slider--content .col:first-child{
+			padding-left: 13%;
+		}
+
+		.playology-section__slider--content .col:last-child{
+			padding: 5% 0;
+		}
+
+		.playology-section__slider--content .col .slider-text__eyebrow{
+			max-width: 250px;
+		}
+
+		.playology-section__slider--content .col .slider-text__headline{
+			font-size: 48px;
+		}
+
+		.playology-section__slider--content .col .slider-text__subhead{
+			font-size: 20px;
+		} */
+
+	}
+
+	@media screen and (min-width: 1024px) and (max-width: 1279px) {
+
+		/* Slider section */
+		.playology-section__slider--content .col .slider-text{
+			max-width: 350px;
+		}
+
+		.playology-section__slider--content .col .slider-text__headline{
+			padding : 40px 0 15px;
+		}
+
+		.playology-section__slider--content .col:last-child{
+			padding-right: 8%;
+		}
+
+	}
+
+	@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+		/* Slider section */
+		.playology-section__slider--wrapper {
+			padding: 0 3% 0 5%;
+		}
+		.playology-section__slider--content .col .slider-text{
+			max-width: 350px;
+			padding : 0 0 0 30px;
+		}
+
+		.playology-section__slider--content .col .slider-text__eyebrow {
+			max-width: 170px;
+		}
+
+		.playology-section__slider--content .col .slider-text__headline{
+			padding : 40px 0 15px;
+			font-size: 30px;
+		}
+
+		.playology-section__slider--content .col .slider-text__subhead{
+			font-size: 14px;
+			line-height: 20px;
+		}
+
+		.playology-section__slider--content .col:last-child{
+			padding-right: 0%;
+		}
+
+	}
+
+	@media screen and (max-width: 767px) {
+
+		.m-hide {
+		display: none;
+		}
+
+		.d-hide{
+			display: block;
+		}
+
+		.custom-flex{
+			flex-wrap: wrap;
+		}
+
+
+		/* Slider section */
+		.playology-section__slider--wrapper {
+			padding: 0;
+		}
+
+		.playology-section__slider--content .col {
+			width : 100%;
+			
+		}
+
+		.playology-section__slider--content .col .slider-text{
+			max-width: 260px;
+			padding : 0;
+			text-align: center;
+			margin: 0 auto;
+		}
+
+		.playology-section__slider--content .col .slider-text__eyebrow {
+			max-width: 150px;
+			margin: 0 auto;
+		}
+
+		.playology-section__slider--content .col .slider-text__headline{
+			padding : 15px 0;
+			font-size: 35px;
+		}
+
+		.playology-section__slider--content .col .slider-text__subhead{
+			font-size: 16px;
+			line-height: 25px;
+		}
+
+		.playology-section__slider--content .col:first-child{
+			padding-left: 0%;
+		}
+
+		.playology-section__slider--content .col:last-child{
+			padding: 20px 0 40px;
+			background-image: unset;
+		}
+
+		.navigation-manual{
+			left : 40%;
+		}
+
+		.navigation-auto{
+			left : 40%;
+		}
+
+		/* Popular Toys */
+		.playology-section__popular-toys--wrapper{
+			overflow-y: auto;
+		}
+
+		.playology-section__popular-toys--content{
+			flex-wrap: nowrap;
+			width: 200%;
+		}
+
+		.playology-section__popular-toys--content .col{
+			width: 46%;
+		}
+
+		/* Two columns - Carousel & Feature image */
+		.playology-section__two-columns--content{
+			flex-wrap: nowrap;
+		}
+
+		.playology-section__two-columns--content .col:first-child{
+			order: 2;
+		}
+
+		.row-bottom .col:first-child{
+			order : unset;
+		}
+
+		.playology-section__two-columns--content #seniorDog .item-wrapper{
+			width : 600%;
+		}
+
+
+		.row-bottom .col .item-wrapper{
+			padding: 0 15px;
+		}
+
+		.playology-section__two-columns--content .col .img-caption{
+			color: #fff;
+			font-family: "PetcoCircularTT-Bold", arial !important;
+			font-weight: 600;
+			font-size: 14px;
+			position: absolute;
+			bottom: 5px;
+			background: rgba(0, 0, 0, 0.65);
+			padding: 10px 0;
+			margin-left: 15px;
+			
+		}
+
+		.row-bottom  .col .img-caption{
+			padding: 5px 0;
+		}
+
+		.row-bottom .col:last-child {
+			overflow-y: auto;
+		}
+
+		.playology-section__two-columns--content .col .img-caption span{
+			display: block;
+			text-align: center;
+			max-width: 145px;
+		}
+
+		.playology-section__two-columns--content .col:first-child{
+			overflow-y: auto;
+		}
+
+		.playology-section__two-columns--content .wrapper-container{
+			overflow-y: auto;
+		}
+
+		.playology-section__two-columns--content .col .item-wrapper {
+			width: 900%;
+			display: flex;
+			align-items: center;
+			padding: 40px 30px;
+		}
+
+		.playology-section__two-columns--content .col .item-wrapper__left-arrow{
+			width : 40px;
+			left : 40px;
+		}
+
+		.playology-section__two-columns--content .col .item-wrapper__right-arrow{
+			width : 40px;
+			right : 5px;
+		}
+
+		.playology-section__two-columns--content .col .feature-img{
+			padding-left: 15px;
+		}
+
+		.playology-section__two-columns--content .col .item-wrapper .single-item__img {
+			max-width: 90%;
+			
+		}
+
+		.playology-section__two-columns--content .col .item-wrapper .single-item{
+			width: 120%;
+		}
+
+		.playology-section__two-columns--content .col .item-wrapper .single-item__headline {
+			padding: 5px 0 15px;
+			max-width: 98%;
+		}
+
+		/* Embeded Section*/
+		.playology-section__embeded--wrapper{
+			overflow-y: auto;
+		}
+
+		.playology-section__embeded--content{
+			width: 300%;
+			flex-wrap: nowrap;
+		}
+
+		.playology-section__embeded--content .col{
+			width : 100%;
+		}
+
+		.playology-section__embeded--content .col .single-item{
+			background: #fff;
+			max-width: 80%;
+    		margin: 60px auto 20px;
+		}
+
+		.playology-section__embeded--content .col .single-item__img{
+			margin-top: -76px;
+		}
+
+
+		/* Bottom Hero Section*/
+		.playology-section__bottom-hero{
+			background : #000;
+			height: auto;
+			padding: 150px 0 0;
+		}
+
+		.playology-section__bottom-hero--content{
+			background-image: url("https://assets.petco.com/petco/image/upload/f_auto,q_auto/mobile-bot");
+			background-size: contain;
+			background-position: left;
+			background-repeat: no-repeat;
+		}
+
+		.playology-section__bottom-hero--content .col{
+			width: 100%;
+		}
+
+		.playology-section__bottom-hero--content .col .single-item{
+			padding: 50px 15px 30px;
+		}
+
+		.playology-section__bottom-hero--content .col .single-item .single-item__logo {
+			margin: -150px auto 0;
+			padding-bottom: 150px;
+		}
+
+		.playology-section__bottom-hero--content .col .single-item .single-item__headline {
+			font-size: 25px;
+			padding: 235px 0 0;
+		}
+
+
+
+	}
+	@media screen and (max-width: 480px) {
+
+
+
+	}
+
+	@media screen and (min-width:480px) and (max-width: 767px) {
+
+	}
+
+	@media screen and (max-width: 320px) {
+		.playology-section__bottom-hero--content .col .single-item .single-item__headline {
+			padding: 180px 0 0;
+			font-size: 21px;
+		}
+	}
+
+	
+
+	
+
+
+</style>
+
+	<!-- *** Playology brand page ***  -->
+	<div class="playology-section">
+		<!-- Slider section -->
+		<div class="playology-section__slider container-fluid slider">
+			<div class="playology-section__slider--wrapper slides">
+				<div class="slider">
+					<div class="slides">
+
+						<!-- Radio buttons -->
+						<input type="radio" name="radio-btn" id="radio1">
+						<input type="radio" name="radio-btn" id="radio2">
+
+						<div class="playology-section__slider--content custom-flex slide first">
+							<div class="col">
+								<img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/POV_1_dog_image" alt="Playology logo. Abstract outlines of chromosomes. Husky plays with blue Playology stick outside in the grass." />
+							</div>
+							<div class="col">
+								<div class="slider-text">
+									<div class="slider-text__eyebrow"><img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/Playology White Logo" alt="Playology logo" /></div>
+									<div class="slider-text__headline">TOYS THAT MAKE SCENTS TO DOGS<sup>&reg;</sup></div>
+									<div class="slider-text__subhead">A dog’s nose is 10,000x more powerful than a human nose. Playology<sup>&reg;</sup> toys are designed with what dogs crave most—scent!</div>
+								</div>
+							</div>
+							
+						</div>
+						<div class="playology-section__slider--content custom-flex slide">
+							<div class="col">
+								<img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/POV_2_dog_image" alt="Playology logo. Abstract outlines of chromosomes. Fluffy dog on its back, playing with a blue Playology bone in the grass." />
+							</div>
+							<div class="col">
+								<div class="slider-text">
+									<div class="slider-text__eyebrow"><img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/Playology White Logo" alt="Playology logo" /></div>
+									<div class="slider-text__headline">THE SCIENCE OF SCENT UNLEASHED<sup>&trade;</sup></div>
+									<div class="slider-text__subhead">Through Encapsiscent<sup>&reg;</sup> Technology, Playology safely embeds the all-natural scents dogs love right into the material of every toy.</div>
+								</div>
+							</div>
+							
+						</div>
+						<!-- Auto navigation -->
+						<div class="navigation-auto">
+							<img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/nav-icon" />
+							<div class="auto-btn1"></div>
+							<div class="auto-btn2"></div>
+						</div>  
+						<div class="navigation-manual">
+							<label for="radio1" class="manual-btn"></label>
+							<label for="radio2" class="manual-btn"></label>
+						</div>
+					</div>
+					<!-- Manual navigation -->
+					<div class="navigation-manual" style="display: none;">
+						<label for="radio1" class="manual-btn"></label>
+						<label for="radio2" class="manual-btn"></label>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<!-- Popular Toys -->
+		<div class="playology-section__popular-toys container">
+			<div class="section-title">Popular Playology toys</div>
+			<div class="playology-section__popular-toys--wrapper">
+				<div class="playology-section__popular-toys--content custom-flex">
+					<div class="col">
+						<div class="single-item">
+							<div class="single-item__img"><a href="https://www.petco.com/shop/SearchDisplay?categoryId=&storeId=10151&catalogId=10051&langId=-1&sType=SimpleSearch&resultCatEntryType=2&showResultsPage=true&searchSource=Q&pageView=&beginIndex=0&pageSize=48&fromPageValue=search&searchKeyword=&searchTerm=playology%20squeaky%20ball" manual_cm_sp="sponsoredbrandpage:playology:featuredproducts:1:squeakychewball:image" onclick="clickTrackLink(this);"><img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/Playology-Chew-Ball" alt="" /></a></div>
+							<div class="single-item__headline"><a href="https://www.petco.com/shop/SearchDisplay?categoryId=&storeId=10151&catalogId=10051&langId=-1&sType=SimpleSearch&resultCatEntryType=2&showResultsPage=true&searchSource=Q&pageView=&beginIndex=0&pageSize=48&fromPageValue=search&searchKeyword=&searchTerm=playology%20squeaky%20ball" manual_cm_sp="sponsoredbrandpage:playology:featuredproducts:1:squeakychewball:headline" onclick="clickTrackLink(this);">Squeaky Chew Ball</a></div>
+							<div class="single-item__cta cta-underline"><a href="https://www.petco.com/shop/SearchDisplay?categoryId=&storeId=10151&catalogId=10051&langId=-1&sType=SimpleSearch&resultCatEntryType=2&showResultsPage=true&searchSource=Q&pageView=&beginIndex=0&pageSize=48&fromPageValue=search&searchKeyword=&searchTerm=playology%20squeaky%20ball" manual_cm_sp="sponsoredbrandpage:playology:featuredproducts:1:squeakychewball:shopnow" onclick="clickTrackLink(this);">Shop Now</a></div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="single-item">
+							<div class="single-item__img"><a href="https://www.petco.com/shop/SearchDisplay?categoryId=&storeId=10151&catalogId=10051&langId=-1&sType=SimpleSearch&resultCatEntryType=2&showResultsPage=true&searchSource=Q&pageView=&beginIndex=0&pageSize=48&fromPageValue=search&searchKeyword=&searchTerm=playology%20dual%20layer%20bone" manual_cm_sp="sponsoredbrandpage:playology:featuredproducts:2:duallayerbone:image" onclick="clickTrackLink(this);"><img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/Playology-Dual-Layer-Bone" alt="" /></a></div>
+							<div class="single-item__headline"><a href="https://www.petco.com/shop/SearchDisplay?categoryId=&storeId=10151&catalogId=10051&langId=-1&sType=SimpleSearch&resultCatEntryType=2&showResultsPage=true&searchSource=Q&pageView=&beginIndex=0&pageSize=48&fromPageValue=search&searchKeyword=&searchTerm=playology%20dual%20layer%20bone" manual_cm_sp="sponsoredbrandpage:playology:featuredproducts:2:duallayerbone:headline" onclick="clickTrackLink(this);">Dual Layer Bone</a></div>
+							<div class="single-item__cta cta-underline"><a href="https://www.petco.com/shop/SearchDisplay?categoryId=&storeId=10151&catalogId=10051&langId=-1&sType=SimpleSearch&resultCatEntryType=2&showResultsPage=true&searchSource=Q&pageView=&beginIndex=0&pageSize=48&fromPageValue=search&searchKeyword=&searchTerm=playology%20dual%20layer%20bone" manual_cm_sp="sponsoredbrandpage:playology:featuredproducts:2:duallayerbone:shopnow" onclick="clickTrackLink(this);">Shop Now</a></div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="single-item">
+							<div class="single-item__img"><a href="https://www.petco.com/shop/SearchDisplay?categoryId=&storeId=10151&catalogId=10051&langId=-1&sType=SimpleSearch&resultCatEntryType=2&showResultsPage=true&searchSource=Q&pageView=&beginIndex=0&pageSize=48&fromPageValue=search&searchKeyword=&searchTerm=playology%20Squeaky%20Chew%20Stick" manual_cm_sp="sponsoredbrandpage:playology:featuredproducts:3:squeakychewstick:image" onclick="clickTrackLink(this);"><img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/Playology Squeaky Stick" alt="" /></a></div>
+							<div class="single-item__headline"><a href="https://www.petco.com/shop/SearchDisplay?categoryId=&storeId=10151&catalogId=10051&langId=-1&sType=SimpleSearch&resultCatEntryType=2&showResultsPage=true&searchSource=Q&pageView=&beginIndex=0&pageSize=48&fromPageValue=search&searchKeyword=&searchTerm=playology%20Squeaky%20Chew%20Stick" manual_cm_sp="sponsoredbrandpage:playology:featuredproducts:3:squeakychewstick:headline" onclick="clickTrackLink(this);">Squeaky Chew Stick</a></div>
+							<div class="single-item__cta cta-underline"><a href="https://www.petco.com/shop/SearchDisplay?categoryId=&storeId=10151&catalogId=10051&langId=-1&sType=SimpleSearch&resultCatEntryType=2&showResultsPage=true&searchSource=Q&pageView=&beginIndex=0&pageSize=48&fromPageValue=search&searchKeyword=&searchTerm=playology%20Squeaky%20Chew%20Stick" manual_cm_sp="sponsoredbrandpage:playology:featuredproducts:3:squeakychewstick:shopnow" onclick="clickTrackLink(this);">Shop Now</a></div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="single-item">
+							<div class="single-item__img"><a href="https://www.petco.com/shop/SearchDisplay?categoryId=&storeId=10151&catalogId=10051&langId=-1&sType=SimpleSearch&resultCatEntryType=2&showResultsPage=true&searchSource=Q&pageView=&beginIndex=0&pageSize=48&fromPageValue=search&searchKeyword=&searchTerm=playology%20Dual%20Layer%20Ring" manual_cm_sp="sponsoredbrandpage:playology:featuredproducts:2:duallayerrign:image" onclick="clickTrackLink(this);"><img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/Playology-Dual-Layer-Ring" alt="" /></a></div>
+							<div class="single-item__headline"><a href="https://www.petco.com/shop/SearchDisplay?categoryId=&storeId=10151&catalogId=10051&langId=-1&sType=SimpleSearch&resultCatEntryType=2&showResultsPage=true&searchSource=Q&pageView=&beginIndex=0&pageSize=48&fromPageValue=search&searchKeyword=&searchTerm=playology%20Dual%20Layer%20Ring" manual_cm_sp="sponsoredbrandpage:playology:featuredproducts:2:duallayerrign:headline" onclick="clickTrackLink(this);">Dual Layer Ring</a></div>
+							<div class="single-item__cta cta-underline"><a href="https://www.petco.com/shop/SearchDisplay?categoryId=&storeId=10151&catalogId=10051&langId=-1&sType=SimpleSearch&resultCatEntryType=2&showResultsPage=true&searchSource=Q&pageView=&beginIndex=0&pageSize=48&fromPageValue=search&searchKeyword=&searchTerm=playology%20Dual%20Layer%20Ring" manual_cm_sp="sponsoredbrandpage:playology:featuredproducts:2:duallayerrign:shopnow" onclick="clickTrackLink(this);">Shop Now</a></div>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+
+		<!-- Two columns - Carousel & Feature image -->
+
+		<!-- Two columns desktop -->
+		<div class="playology-section__two-columns container">
+			<div class="section-title">Toys that keep your dog engaged 7x longer than unscented toys*</div>
+			<div class="playology-section__two-columns--wrapper">
+				<div class="playology-section__two-columns--content custom-flex">
+					<div class="col">
+						<div class="feature-headline m-hide">Chew, sniff, repeat</div>
+						<div class="feature-subhead m-hide">All-natural scents like peanut butter, chicken and beef are released as your dog chews.</div>
+						
+						<div class="wrapper-container">
+							<div class="item-wrapper__left-arrow" id="leftArrow1"><img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/leftarrow" /></div>
+							<div class="item-wrapper">
+								<div class="single-item carousel1">
+									<div class="single-item__img"><a href="https://www.petco.com/shop/en/petcostore/product/playology-dual-layer-bone-dog-toy-beef-scent" manual_cm_sp="sponsoredbrandpage:playology:contentmod:1:duallayerbonedogtoychickenscent:image" onclick="clickTrackLink(this);"><img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/1-playology" alt="" /></a></div>
+									<div class="single-item__headline"><a href="https://www.petco.com/shop/en/petcostore/product/playology-dual-layer-bone-dog-toy-beef-scent" manual_cm_sp="sponsoredbrandpage:playology:contentmod:1:duallayerbonedogtoychickenscent:headline" onclick="clickTrackLink(this);">Playology Dual Layer Bone Dog Toy Beef Scent</a></div>
+									<div class="single-item__cta cta-underline"><a href="https://www.petco.com/shop/en/petcostore/product/playology-dual-layer-bone-dog-toy-beef-scent" manual_cm_sp="sponsoredbrandpage:playology:contentmod:1:duallayerbonedogtoychickenscent:shopnow" onclick="clickTrackLink(this);">Shop Now</a></div>
+								</div>
+								<div class="single-item carousel1">
+									<div class="single-item__img"><a href="https://www.petco.com/shop/en/petcostore/product/playology-rubber-chew-ball-beef" manual_cm_sp="sponsoredbrandpage:playology:contentmod:1:dritechropedogtoychickenscent:image" onclick="clickTrackLink(this);"><img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/2-playology" alt="" /></a></div>
+									<div class="single-item__headline"><a href="https://www.petco.com/shop/en/petcostore/product/playology-rubber-chew-ball-beef" manual_cm_sp="sponsoredbrandpage:playology:contentmod:1:dritechropedogtoychickenscent:headline" onclick="clickTrackLink(this);">Playology Squeaky Chew Ball Dog Toy Beef Scent</a></div>
+									<div class="single-item__cta cta-underline"><a href="https://www.petco.com/shop/en/petcostore/product/playology-rubber-chew-ball-beef" manual_cm_sp="sponsoredbrandpage:playology:contentmod:1:dritechropedogtoychickenscent:shopnow" onclick="clickTrackLink(this);">Shop Now</a></div>
+								</div>
+								<div class="single-item carousel1">
+									<div class="single-item__img"><a href="https://www.petco.com/shop/en/petcostore/product/playology-dual-layer-bone-dog-toy-peanut-butter-scent" manual_cm_sp="sponsoredbrandpage:playology:contentmod:1:squeakychewballdogtoychickenscent:image" onclick="clickTrackLink(this);"><img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/3-playology" alt="" /></a></div>
+									<div class="single-item__headline"><a href="https://www.petco.com/shop/en/petcostore/product/playology-dual-layer-bone-dog-toy-peanut-butter-scent" manual_cm_sp="sponsoredbrandpage:playology:contentmod:1:squeakychewballdogtoychickenscent:headline" onclick="clickTrackLink(this);">Playology Dual Layer Bone Dog Toy Peanut Butter Scent</a></div>
+									<div class="single-item__cta cta-underline"><a href="https://www.petco.com/shop/en/petcostore/product/playology-dual-layer-bone-dog-toy-peanut-butter-scent" manual_cm_sp="sponsoredbrandpage:playology:contentmod:1:squeakychewballdogtoychickenscent:shopnow" onclick="clickTrackLink(this);">Shop Now</a></div>
+								</div>
+								<div class="single-item carousel1">
+									<div class="single-item__img"><a href="https://www.petco.com/shop/en/petcostore/product/playology-dri-tech-rope-dog-toy-beef-scent" manual_cm_sp="sponsoredbrandpage:playology:contentmod:1:dualayerringdogtoychickenscent:image" onclick="clickTrackLink(this);"><img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/4-playology" alt="" /></a></div>
+									<div class="single-item__headline"><a href="https://www.petco.com/shop/en/petcostore/product/playology-dri-tech-rope-dog-toy-beef-scent" manual_cm_sp="sponsoredbrandpage:playology:contentmod:1:dualayerringdogtoychickenscent:headline" onclick="clickTrackLink(this);">Playology Dri-Tech Rope Dog Toy Beef Scent</a></div>
+									<div class="single-item__cta cta-underline"><a href="https://www.petco.com/shop/en/petcostore/product/playology-dri-tech-rope-dog-toy-beef-scent" manual_cm_sp="sponsoredbrandpage:playology:contentmod:1:dualayerringdogtoychickenscent:shopnow" onclick="clickTrackLink(this);">Shop Now</a></div>
+								</div>
+								<div class="single-item carousel1">
+									<div class="single-item__img"><a href="https://www.petco.com/shop/en/petcostore/product/playology-dual-layer-ring-dog-toy-chicken-scent" manual_cm_sp="sponsoredbrandpage:playology:contentmod:1:duallayerbonedogtoybeefscent:image" onclick="clickTrackLink(this);"><img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/5-playology" alt="" /></a></div>
+									<div class="single-item__headline"><a href="https://www.petco.com/shop/en/petcostore/product/playology-dual-layer-ring-dog-toy-chicken-scent" manual_cm_sp="sponsoredbrandpage:playology:contentmod:1:duallayerbonedogtoybeefscent:headline" onclick="clickTrackLink(this);">Playology Dual Layer Ring Dog Toy Chicken Scent</a></div>
+									<div class="single-item__cta cta-underline"><a href="https://www.petco.com/shop/en/petcostore/product/playology-dual-layer-ring-dog-toy-chicken-scent" manual_cm_sp="sponsoredbrandpage:playology:contentmod:1:duallayerbonedogtoybeefscent:shopnow" onclick="clickTrackLink(this);">Shop Now</a></div>
+								</div>
+								<div class="single-item carousel1">
+									<div class="single-item__img"><a href="https://www.petco.com/shop/en/petcostore/product/playology-rubber-chew-ball-chicken" manual_cm_sp="sponsoredbrandpage:playology:contentmod:1:dritechropedogtoybeefscent:image" onclick="clickTrackLink(this);"><img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/6" alt="" /></a></div>
+									<div class="single-item__headline"><a href="https://www.petco.com/shop/en/petcostore/product/playology-rubber-chew-ball-chicken" manual_cm_sp="sponsoredbrandpage:playology:contentmod:1:dritechropedogtoybeefscent:headline" onclick="clickTrackLink(this);">Playology Squeaky Chew Ball Dog Toy Chicken Scent</a></div>
+									<div class="single-item__cta cta-underline"><a href="https://www.petco.com/shop/en/petcostore/product/playology-rubber-chew-ball-chicken" manual_cm_sp="sponsoredbrandpage:playology:contentmod:1:dritechropedogtoybeefscent:shopnow" onclick="clickTrackLink(this);">Shop Now</a></div>
+								</div>
+								<div class="single-item carousel1">
+									<div class="single-item__img"><a href="https://www.petco.com/shop/en/petcostore/product/playology-dual-layer-bone-dog-toy-chicken-scent" manual_cm_sp="sponsoredbrandpage:playology:contentmod:1:squeakychewballdogtoybeefscent:image" onclick="clickTrackLink(this);"><img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/7" alt="" /></a></div>
+									<div class="single-item__headline"><a href="https://www.petco.com/shop/en/petcostore/product/playology-dual-layer-bone-dog-toy-chicken-scent" manual_cm_sp="sponsoredbrandpage:playology:contentmod:1:squeakychewballdogtoybeefscent:headline" onclick="clickTrackLink(this);">Playology Dual Layer Bone Dog Toy Chicken Scent</a></div>
+									<div class="single-item__cta cta-underline"><a href="https://www.petco.com/shop/en/petcostore/product/playology-dual-layer-bone-dog-toy-chicken-scent" manual_cm_sp="sponsoredbrandpage:playology:contentmod:1:squeakychewballdogtoybeefscent:shopnow" onclick="clickTrackLink(this);">Shop Now</a></div>
+								</div>
+								<div class="single-item carousel1">
+									<div class="single-item__img"><a href="https://www.petco.com/shop/en/petcostore/product/playology-dri-tech-rope-dog-toy-chicken-scent" manual_cm_sp="sponsoredbrandpage:playology:contentmod:1:duallayerringdogtoybeefscent:image" onclick="clickTrackLink(this);"><img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/8" alt="" /></a></div>
+									<div class="single-item__headline"><a href="https://www.petco.com/shop/en/petcostore/product/playology-dri-tech-rope-dog-toy-chicken-scent" manual_cm_sp="sponsoredbrandpage:playology:contentmod:1:duallayerringdogtoybeefscent:headline" onclick="clickTrackLink(this);">Playology Dri-Tech Rope Dog Toy Chicken Scent</a></div>
+									<div class="single-item__cta cta-underline"><a href="https://www.petco.com/shop/en/petcostore/product/playology-dri-tech-rope-dog-toy-chicken-scent" manual_cm_sp="sponsoredbrandpage:playology:contentmod:1:duallayerringdogtoybeefscent:shopnow" onclick="clickTrackLink(this);">Shop Now</a></div>
+								</div>
+								<div class="single-item carousel1">
+									<div class="single-item__img"><a href="https://www.petco.com/shop/en/petcostore/product/playology-dual-layer-ring-dog-toy-beef-scent" manual_cm_sp="sponsoredbrandpage:playology:contentmod:1:squeakychewpeanutbutterballdogtoy:image" onclick="clickTrackLink(this);"><img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/9" alt="" /></a></div>
+									<div class="single-item__headline"><a href="https://www.petco.com/shop/en/petcostore/product/playology-dual-layer-ring-dog-toy-beef-scent" manual_cm_sp="sponsoredbrandpage:playology:contentmod:1:squeakychewpeanutbutterballdogtoy:headline" onclick="clickTrackLink(this);">Playology Dual Layer Ring Dog Toy Beef Scent</a></div>
+									<div class="single-item__cta cta-underline"><a href="https://www.petco.com/shop/en/petcostore/product/playology-dual-layer-ring-dog-toy-beef-scent" manual_cm_sp="sponsoredbrandpage:playology:contentmod:1:squeakychewpeanutbutterballdogtoy:shopnow" onclick="clickTrackLink(this);">Shop Now</a></div>
+								</div>
+							</div>
+							<div class="item-wrapper__right-arrow" id="rightArrow1"><img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/rightarrow" /></div>
+						</div>
+						
+						<div class="disclaimer m-hide">*Based on a study of average engagement conducted at the Purdue University School of Veterinary Medicine.</div>
+					</div>
+
+					<div class="col">
+						<img class="feature-img" src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/Playology_PeanutButter_DualLayerRing" alt="Chew, sniff, repeat. Medium-sized dog walks with a blue Playology chew ring in its mouth." />
+						<div class="img-caption d-hide"><span>Chew, sniff, repeat</span></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="playology-section__two-columns container">
+			<div class="playology-section__two-columns--wrapper">
+				<div class="playology-section__two-columns--content custom-flex row-bottom">
+					<div class="col">
+						<img class="feature-img" src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/Playology_Beef_SqueakyChewStick" alt="Toys designed for senior dogs. Older dog plays with Playology bone" />
+						<div class="img-caption d-hide"><span>Toys designed for senior dogs</span></div>
+					</div>
+					<div class="col">
+						<div class="feature-headline m-hide">Toys scientifically designed for senior dogs</div>
+						<div class="feature-subhead m-hide">Playology Silver toys combine scents with softer materials for more comfortable play as they (and their teeth) age.</div>
+						<div class="wrapper-container" id="seniorDog">
+							<div class="item-wrapper__left-arrow" id="leftArrow2"><img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/leftarrow" /></div>
+							<div class="item-wrapper">
+								<div class="single-item carousel2">
+									<div class="single-item__img"><a href="https://www.petco.com/shop/en/petcostore/product/playology-pork-sausage-scent-dental-chew-stick-dog-toy" manual_cm_sp="sponsoredbrandpage:playology:contentmod:1:dritechpeanutbutterropedogtoy:image" onclick="clickTrackLink(this);"><img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/10" alt="" /></a></div>
+									<div class="single-item__headline"><a href="https://www.petco.com/shop/en/petcostore/product/playology-pork-sausage-scent-dental-chew-stick-dog-toy" manual_cm_sp="sponsoredbrandpage:playology:contentmod:1:dritechpeanutbutterropedogtoy:headline" onclick="clickTrackLink(this);">Playology Dental Chew Stick Dog Toy Pork Sausage Scent</a></div>
+									<div class="single-item__cta cta-underline"><a href="https://www.petco.com/shop/en/petcostore/product/playology-pork-sausage-scent-dental-chew-stick-dog-toy" manual_cm_sp="sponsoredbrandpage:playology:contentmod:1:dritechpeanutbutterropedogtoy:shopnow" onclick="clickTrackLink(this);">Shop Now</a></div>
+								</div>
+								<div class="single-item carousel2">
+									<div class="single-item__img"><a href="https://www.petco.com/shop/en/petcostore/product/playology-dri-tech-pork-sausage-scent-dental-rope-dog-toy" manual_cm_sp="sponsoredbrandpage:playology:contentmod:1:duallayerbonedogtoypeanutbutterscent:image" onclick="clickTrackLink(this);"><img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/11" alt="" /></a></div>
+									<div class="single-item__headline"><a href="https://www.petco.com/shop/en/petcostore/product/playology-dri-tech-pork-sausage-scent-dental-rope-dog-toy" manual_cm_sp="sponsoredbrandpage:playology:contentmod:1:duallayerbonedogtoypeanutbutterscent:headline" onclick="clickTrackLink(this);">Playology Dri-Tech Dental Rope Dog Toy Pork Sausage Scent</a></div>
+									<div class="single-item__cta cta-underline"><a href="https://www.petco.com/shop/en/petcostore/product/playology-dri-tech-pork-sausage-scent-dental-rope-dog-toy" manual_cm_sp="sponsoredbrandpage:playology:contentmod:1:duallayerbonedogtoypeanutbutterscent:shopnow" onclick="clickTrackLink(this);">Shop Now</a></div>
+								</div>
+								<div class="single-item carousel2">
+									<div class="single-item__img"><a href="https://www.petco.com/shop/en/petcostore/product/playology-dri-tech-peanut-butter-rope-dog-toy" manual_cm_sp="sponsoredbrandpage:playology:contentmod:1:duallayerringpeanutbutterdogtoy:image" onclick="clickTrackLink(this);"><img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/12" alt="" /></a></div>
+									<div class="single-item__headline"><a href="https://www.petco.com/shop/en/petcostore/product/playology-dri-tech-peanut-butter-rope-dog-toy" manual_cm_sp="sponsoredbrandpage:playology:contentmod:1:duallayerringpeanutbutterdogtoy:headline" onclick="clickTrackLink(this);">Playology Dri-Tech Dental Rope Dog Toy Peanut Butter Scent</a></div>
+									<div class="single-item__cta cta-underline"><a href="https://www.petco.com/shop/en/petcostore/product/playology-dri-tech-peanut-butter-rope-dog-toy" manual_cm_sp="sponsoredbrandpage:playology:contentmod:1:duallayerringpeanutbutterdogtoy:shopnow" onclick="clickTrackLink(this);">Shop Now</a></div>
+								</div>
+								<div class="single-item carousel2">
+									<div class="single-item__img"><a href="https://www.petco.com/shop/en/petcostore/product/playology-pork-sausage-scent-dental-chew-stick-dog-toy" manual_cm_sp="sponsoredbrandpage:playology:contentmod:1:pebblechewpeanutbutterdogtoy:image" onclick="clickTrackLink(this);"><img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/13" alt="" /></a></div>
+									<div class="single-item__headline"><a href="https://www.petco.com/shop/en/petcostore/product/playology-pork-sausage-scent-dental-chew-stick-dog-toy" manual_cm_sp="sponsoredbrandpage:playology:contentmod:1:pebblechewpeanutbutterdogtoy:headline" onclick="clickTrackLink(this);">Playology Dental Chew Dog Toy Pork Sausage Scent</a></div>
+									<div class="single-item__cta cta-underline"><a href="https://www.petco.com/shop/en/petcostore/product/playology-pork-sausage-scent-dental-chew-stick-dog-toy" manual_cm_sp="sponsoredbrandpage:playology:contentmod:1:pebblechewpeanutbutterdogtoy:shopnow" onclick="clickTrackLink(this);">Shop Now</a></div>
+								</div>
+								<div class="single-item carousel2">
+									<div class="single-item__img"><a href="https://www.petco.com/shop/en/petcostore/product/playology-peanut-butter-scent-dental-chew-stick-dog-toy" manual_cm_sp="sponsoredbrandpage:playology:contentmod:1:squeakybaconscentchewballdogtoy:image" onclick="clickTrackLink(this);"><img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/14" alt="" /></a></div>
+									<div class="single-item__headline"><a href="https://www.petco.com/shop/en/petcostore/product/playology-peanut-butter-scent-dental-chew-stick-dog-toy" manual_cm_sp="sponsoredbrandpage:playology:contentmod:1:squeakybaconscentchewballdogtoy:headline" onclick="clickTrackLink(this);">Playology Dental Chew Stick Dog Toy Peanut Butter Scent</a></div>
+									<div class="single-item__cta cta-underline"><a href="https://www.petco.com/shop/en/petcostore/product/playology-peanut-butter-scent-dental-chew-stick-dog-toy" manual_cm_sp="sponsoredbrandpage:playology:contentmod:1:squeakybaconscentchewballdogtoy:shopnow" onclick="clickTrackLink(this);">Shop Now</a></div>
+								</div>
+								<div class="single-item carousel2">
+									<div class="single-item__img"><a href="https://www.petco.com/shop/en/petcostore/product/playology-peanut-butter-scent-dental-chew-dog-toy" manual_cm_sp="sponsoredbrandpage:playology:contentmod:1:baconscentdritechropedogtoy:image" onclick="clickTrackLink(this);"><img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/15" alt="" /></a></div>
+									<div class="single-item__headline"><a href="https://www.petco.com/shop/en/petcostore/product/playology-peanut-butter-scent-dental-chew-dog-toy" manual_cm_sp="sponsoredbrandpage:playology:contentmod:1:baconscentdritechropedogtoy:headline" onclick="clickTrackLink(this);">Playology Dental Chew Dog Toy Peanut Butter Scent</a></div>
+									<div class="single-item__cta cta-underline"><a href="https://www.petco.com/shop/en/petcostore/product/playology-peanut-butter-scent-dental-chew-dog-toy" manual_cm_sp="sponsoredbrandpage:playology:contentmod:1:baconscentdritechropedogtoy:shopnow" onclick="clickTrackLink(this);">Shop Now</a></div>
+								</div>
+							</div>
+						</div>
+						<div class="item-wrapper__right-arrow" id="rightArrow2"><img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/rightarrow" /></div>
+					</div>
+				</div>
+				<div class="disclaimer d-hide">*Based on a study of average engagement conducted at the Purdue University School of Veterinary Medicine</div>
+			</div>
+		</div>
+
+
+		<!-- Embeded Section -->
+		<div class="playology-section__embeded container">
+			<div class="section-title">Embedded with all-natural scent for a smarter way to play</div>
+			<div class="left-arrow d-hide" id="leftArrow3"><img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/leftarrow-mobile" /></div>
+			<div class="playology-section__embeded--wrapper">
+				<div class="playology-section__embeded--content custom-flex">
+					<div class="col carousel3">
+						<div class="single-item">
+							<div class="single-item__img"><a href="/shop/en/petcostore" manual_cm_sp="" onclick="clickTrackLink(this);"><img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/Safety Icon" alt="Shield with heart icon" /></a></div>
+							<div class="single-item__headline">CHILD SAFETY TESTED</div>
+							<div class="single-item__subhead">All Playology toys are tested to meet U.S. government safety standards for lead, phthalates, BPA and other toxins deemed hazardous.</div>
+						</div>
+					</div>
+					<div class="col carousel3">
+						<div class="single-item">
+							<div class="single-item__img"><img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/Clean Icon" alt="Water drop icon" /></div>
+							<div class="single-item__headline">EASY TO CLEAN</div>
+							<div class="single-item__subhead">Plus, thanks to Encapsiscent Technology, you won’t wash away the all-natural scent your dog loves.</div>
+						</div>
+					</div>
+					<div class="col carousel3">
+						<div class="single-item">
+							<div class="single-item__img"><img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/Play Icon" alt="Pawprint icon" /></div>
+							<div class="single-item__headline">DURABILITY</div>
+							<div class="single-item__subhead">All Playology toys are made of high-quality materials and designed to appeal to different types of chewers.</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="right-arrow d-hide" id="rightArrow3"><img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/rightarrow-mobile" /></div>
+		</div>
+
+		<!-- Bottom Hero Section -->
+		<div class="playology-section__bottom-hero container-fluid" title="Playology logo and digital outline of dog with red nose, indicating scent.">
+			<div class="playology-section__bottom-hero--wrapper container">
+				<div class="playology-section__bottom-hero--content custom-flex" title="Playology logo and digital outline of dog with red nose, indicating scent.">
+					<div class="col">
+						<div class="single-item">
+							<div class="single-item__logo"><img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/playology-logo" alt="" /></div>
+							<div class="single-item__headline">Safe, scented, treat-free toys for a smarter way to play.</div>
+						</div>
+					</div>					
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<!-- Slider scripts -->
+
+	<script type="text/javascript">
+		let counter = 1;
+		setInterval(function(){
+			document.getElementById('radio' + counter).checked = true;
+			counter++;
+			if(counter > 2){
+				counter = 1;
+			}
+		}, 8000);
+
+
+		// Carousel 1
+		let carousel1 = document.getElementsByClassName('carousel1');
+		let x = 0;
+		document.getElementById('leftArrow1').onclick = () => {
+			x++;
+			for (let i of carousel1) {
+				i.style.left = '-' + (x * (100/9)) + "%";
+			}
+			reset();
+		}
+
+		document.getElementById('rightArrow1').onclick = () => {
+			x--;
+			for (let i of carousel1) {
+				i.style.left = (x * (100/9)) + "%";
+			}
+			reset();
+		}
+
+		function reset() {
+			if (x > 4 || x < - 3) {
+				x = 0;
+			}
+		}
+
+		// Carousel 2
+		let carousel2 = document.getElementsByClassName('carousel2');
+		let y = 0;
+		document.getElementById('leftArrow2').onclick = () => {
+			y++;
+			for (let i of carousel2) {
+				i.style.left = '-' + (y * (100/6)) + "%";
+			}
+			reset();
+		}
+
+		document.getElementById('rightArrow2').onclick = () => {
+			y--;
+			for (let i of carousel2) {
+				i.style.left = (y * (100/6)) + "%";
+			}
+			reset();
+		}
+
+		function reset() {
+			if (y > 4 || y < -3) {
+				y = 0;
+			}
+		}
+
+
+		// Carousel 3
+		let carousel3 = document.getElementsByClassName('carousel3');
+		let z = 0;
+		document.getElementById('leftArrow3').onclick = () => {
+			z++;
+			for (let i of carousel3) {
+				i.style.left = '-' + (z * (100/3)) + "%";
+			}
+			reset();
+		}
+
+		document.getElementById('rightArrow3').onclick = () => {
+			z--;
+			for (let i of carousel3) {
+				i.style.left = (z * (100/3)) + "%";
+			}
+			reset();
+		}
+
+		function reset() {
+			if (z > 2 || z < - 1 ) {
+				z = 0;
+			}
+		}
+
+
+	</script>
+
+</body>
+</html>
