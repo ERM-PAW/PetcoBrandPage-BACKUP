@@ -1,0 +1,259 @@
+
+/* Medium devices */
+@media only screen and (min-width: 1024px) and (max-width: 1279px) {
+
+    /* POV */
+    .citrus_hound_gatos_carousel-item__col .item-logo-wrapper img {
+        max-width: 160px;
+    }
+
+    .citrus_hound_gatos_carousel-item__col .item-logo-wrapper img:nth-child(2) {
+        max-width: 70px;
+    }
+
+    .citrus_hound_gatos_carousel-item__col .item-text-wrapper h1 {
+        font-size: 28px;
+    }
+
+    /* Product Carousel */
+    .citrus-hound_gatos__carousel--item__wrapper .item-wrapper--img{
+        max-width: 160px;
+    }
+
+    .citrus-hound_gatos__tab iframe {
+        min-height: 285px;
+        width: 100%;
+    }
+    
+}
+
+/* Tab devices */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+
+    /* POV */
+    .citrus_hound_gatos_carousel-item{
+        padding: 0 15px;
+    }
+
+    .citrus_hound_gatos_carousel-item__col .item-logo-wrapper img {
+        max-width: 100px;
+    }
+
+    .citrus_hound_gatos_carousel-item__col .item-logo-wrapper img:nth-child(2) {
+        max-width: 44px;
+    }
+
+    .citrus_hound_gatos_carousel-item__col .item-text-wrapper h1 {
+        font-size: 20px;
+    }
+
+    .citrus_hound_gatos_carousel-item__col .item-text-wrapper {
+        padding: 15px 0;
+    }
+
+    .citrus_hound_gatos_carousel-item__col .item-text-wrapper p {
+        font-size: 12px;
+        padding: 10px 0;
+    }
+
+    .citrus_hound_gatos_carousel-inner .pov1 .cta-box a {
+        margin: 0 10px;
+    }
+
+    /* Product Carousel */
+    .citrus-hound_gatos__carousel--item__wrapper {
+        padding: 15px;
+    }
+
+    .citrus-hound_gatos__carousel--item__wrapper .item-wrapper--img{
+        max-width: 110px;
+    }
+
+    .citrus-hound_gatos__carousel--item__wrapper p {
+        font-size: 16px;
+    }
+
+
+    .citrus-hound_gatos__carousel--item__wrapper{
+        min-height: 280px;
+    }
+
+    .citrus-hound_gatos__tab iframe {
+        min-height: 180px;
+    }
+
+    /* Bottom Hero */
+    .hound_gatos .bottom-hero__content--text{
+        padding: 10px;
+    }
+    
+    .hound_gatos .bottom-hero__content--text h3{
+        font-size: 20px;
+    }
+    
+    .hound_gatos .bottom-hero__content--text p{
+        font-size: 14px;
+        padding: 10px 0;
+    }
+
+    
+}
+
+
+
+/* Mobile devices */
+@media only screen and (max-width: 767px){
+
+    /* Show hide class */
+    .m-hide{
+        display: none;
+    }
+
+    .d-hide{
+        display: block;
+    }
+
+    /* CTA Styles */
+    .hound_gatos .cta-box {
+        width: 100%;
+    }
+
+    .hound_gatos .cta-box a{
+        text-transform: capitalize;
+        text-decoration: underline;
+        color: #001952 !important;
+        background: none !important;
+        border: none !important;
+    }
+
+    .hound_gatos .cta-box a:hover{
+        color: #001952;
+        border: none;
+    }
+
+    /* POV section */
+    .citrus_hound_gatos_carousel-item .custom-container {
+        flex-wrap: wrap;
+    }
+
+    .citrus_hound_gatos_carousel-item__col .d-hide{
+        padding: 0 20px;
+    }
+
+    .citrus_hound_gatos_carousel-item__col:nth-child(1),
+    .citrus_hound_gatos_carousel-item__col:nth-child(3) {
+        width: 100%;
+        padding: 0;
+    }
+
+    .citrus_hound_gatos_carousel-item__col:nth-child(2) {
+        width: 100%;
+        padding: 0;
+    }
+
+    .citrus_hound_gatos_carousel-inner .pov1 .citrus_hound_gatos_carousel-item__col:nth-child(2){
+        background-image: url("img/citrus-hound-gatos-pov1-bg-mob.jpg");
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .citrus_hound_gatos_carousel-inner .pov2 .citrus_hound_gatos_carousel-item__col:nth-child(2){
+        background-image: url("img/citrus-hound-gatos-pov2-bg-mob.jpg");
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .citrus_hound_gatos_carousel-inner .pov1 .cta-box a {
+        width: auto;
+        margin: 0 10px;
+        color: #fff !important;
+    }
+
+    .citrus_hound_gatos_carousel-item__col .item-logo-wrapper img {
+        max-width: 120px;
+    }
+
+    .citrus_hound_gatos_carousel-item__col .item-logo-wrapper img:nth-child(2) {
+        max-width: 60px;
+    }
+
+    .citrus_hound_gatos_carousel-item__col .item-logo-wrapper img {
+        max-width: 160px;
+    }
+
+    .citrus_hound_gatos_carousel-item__col .item-text-wrapper {
+        padding: 0 20px 20px;
+    }
+
+    .citrus_hound_gatos_carousel-item__col .item-text-wrapper h1{
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .citrus_hound_gatos_carousel-item__col .item-text-wrapper p {
+        max-width: 280px;
+        min-height: 38px;
+        margin: 0 auto;
+    }
+
+    /* Product Carousel */
+    .hound_gatos .citrus-hound_gatos__tab--wrapper {
+        flex-wrap: wrap;
+    }
+
+    .citrus-hound_gatos__video-content .citrus-hound_gatos__video-content--frame{
+        order: 2;
+    }
+
+    .citrus-hound_gatos__tab--wrapper:last-child .citrus-hound_gatos__tab-content{
+        order: 2;
+    }
+
+    .citrus-hound_gatos__tab--tab-col{
+        width: 100%;
+        padding: 0;
+    }
+
+    .citrus-hound_gatos__tab-content .splide__arrow--prev {
+        left: 0rem;
+    }
+
+    .citrus-hound_gatos__tab-content .splide__arrow--next {
+        right: 0rem;
+    }
+
+    .citrus-hound_gatos__carousel--item__wrapper{
+        min-height: 360px;
+    }
+
+    .citrus-hound_gatos__tab iframe {
+        min-height: 240px;
+    }
+
+
+    /* Bottom Hero */
+    .hound_gatos .bottom-hero__content{
+        flex-wrap: wrap;
+    }
+
+    .hound_gatos .bottom-hero__content--col{
+        width: 100%;
+    }
+
+    .hound_gatos .bottom-hero__content--col:first-child{
+        order: 2;
+    }
+
+
+
+}
+
+
+@media only screen and (min-width: 320px) and (max-width: 374px){
+
+    /* POV section */
+    .citrus_hound_gatos_carousel-item__col .item-text-wrapper h1{
+        font-size: 30px;
+    }
+}

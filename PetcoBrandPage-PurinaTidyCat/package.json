@@ -1,0 +1,22 @@
+{
+  "name": "Petco-Purina",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build" : "sass base.scss base.css",
+    "watch": "sass --watch base.scss base.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CitrusAd-SEBPO/Petco-Purina.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CitrusAd-SEBPO/Petco-Purina/issues"
+  },
+  "homepage": "https://github.com/CitrusAd-SEBPO/Petco-Purina#readme"
+}

@@ -1,0 +1,2909 @@
+<style>
+    /*
+     * Legal Disclaimer
+     *
+     * These web fonts are licensed exclusively for use on the following:
+     * All domains belonging to Petco
+     *
+     * It is strictly forbidden to download or use these fonts on any other website domain or media.
+     *
+     * While the @font-face statements below may be modified by the client, this
+     * disclaimer may not be removed.
+     *
+     * Lineto.com, 2020
+     */
+
+
+
+    .citrus_purebits_all-overflow a {
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: none;
+    }
+
+    .citrus_purebits_all-overflow {
+        overflow: hidden !important;
+    }
+
+    .citrus_purebitS_containers .cta-box {
+        width: 210px;
+        margin: 0 auto;
+        padding: 30px 0;
+    }
+
+    .citrus_purebitS_containers .cta-box a {
+        border-radius: 5px;
+        color: #fff;
+        background: #001952;
+        padding: 15px;
+        display: block;
+        text-align: center;
+        font-family: "PetcoCircularTT-Bold", arial !important;
+        font-size: 16px;
+        text-transform: uppercase;
+        border: 1px solid #001952;
+    }
+
+    .citrus_purebitS_containers .cta-box a:hover {
+        background: #fff;
+        color: #001952;
+        border: 1px solid #001952;
+        transition: 0.5s ease-in-out;
+    }
+
+    @font-face {
+        font-family: PetcoCircularTT-Regular;
+        src: url(assets/fonts/PetcoCircularTT-Regular.woff2) format("woff2"), url(assets/fonts/PetcoCircularTT-Regular.woff) format("woff");
+    }
+
+    @font-face {
+        font-family: PetcoCircularTT-Bold;
+        src: url(assets/fonts/PetcoCircularTT-Bold.woff2) format("woff2"), url(assets/fonts/PetcoCircularTT-Bold.woff) format("woff");
+    }
+
+    p {
+        color: #000000;
+        font-size: 16px;
+        font-family: "PetcoCircularTT-Regular", arial !important;
+        font-weight: 400;
+        line-height: 1.3;
+    }
+
+    /**************************************/
+    /************ Header  Area*************/
+    /************************************/
+
+    /** Sliders options **/
+
+    .citrus_purebits__slider {
+        overflow: hidden;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        width: 100%;
+        position: relative;
+    }
+
+    .citrus_purebits__slides {
+        width: 300%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+
+
+    .citrus_pureBites_carousel {
+        overflow-x: hidden;
+        position: relative;
+        display: none;
+    }
+
+    .citrus_pureBites_carousel-inner {
+        display: flex;
+        transition: all ease .5s;
+    }
+
+    .citrus_pureBites_carousel-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        background-position: center;
+        /* min-height: 30vh; */
+    }
+
+
+    .citrus_pureBites_carousel-item1 {
+        background-image: url("https://assets.petco.com/petco/image/upload/f_auto,q_auto/purebites_banner1");
+    }
+
+    .citrus_pureBites_carousel-item2 {
+        background-image: url("https://assets.petco.com/petco/image/upload/f_auto,q_auto/purebites_banner2");
+    }
+
+    .citrus_pureBites_carousel-item3 {
+        background-image: url("https://assets.petco.com/petco/image/upload/f_auto,q_auto/purebites_banner3");
+    }
+
+    .citrus_pureBites_carousel-item .citrus_purebits_slider-content {
+        text-align: center;
+        padding: 15px 15px 30px;
+        max-width: 36%;
+        margin: 0 auto;
+    }
+
+    .citrus_pureBites_carousel-item .citrus_purebits_slider-content img {
+        max-width: 35%;
+        padding: 0 0 10px;
+    }
+
+    .citrus_pureBites_carousel-item .citrus_purebits_slider-content h1 {
+        padding: 15px;
+        margin: 0;
+    }
+
+    .citrus_pureBites_carousel-item .citrus_purebits_slider-content p {
+        padding: 0 15px 25px;
+    }
+
+    .citrus_pureBites_carousel-item .citrus_purebits_slider-content .citrus_purebits_common-slider-btn {
+        margin: 0 0 30px;
+    }
+
+    .citrus_pureBites_carousel-controls .prev {
+        display: inline-block;
+        height: 32px;
+        width: 32px;
+        position: absolute;
+        left: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+        background-position: center;
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        opacity: .5;
+    }
+
+    .citrus_pureBites_carousel-controls .next {
+        display: inline-block;
+        height: 32px;
+        width: 32px;
+        position: absolute;
+        right: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+        background-position: center;
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        opacity: .5;
+    }
+
+    .prev:hover,
+    .next:hover {
+        opacity: 1;
+    }
+
+    .citrus_pureBites_carousel-indicators {
+        position: absolute;
+        bottom: 0;
+        left: calc(100%/2 - 52px);
+        text-align: center;
+        background: rgba(255, 255, 255, 0.8);
+        border-radius: 5px 5px 0 0;
+        padding: 10px 10px 5px;
+    }
+
+    .citrus_pureBites_carousel-indicators span {
+        display: inline-block;
+        border: 2px solid #09205c;
+        padding: 7px;
+        border-radius: 20px;
+        cursor: pointer;
+        margin: 0 5px;
+    }
+
+    .citrus_pureBites_carousel-indicators span.active {
+        background-color: #09205c;
+    }
+
+    /****slider styles****/
+
+    .citrus_purebits_banner-area {
+        overflow: hidden;
+    }
+
+    .citrus_purebits_slider-banner-img {
+        position: relative;
+    }
+
+    .citrus_purebits_slider-banner-img>img {
+        width: 100%;
+        height: auto;
+    }
+
+    .citrus_purebits_banner-slider-img {
+        padding-bottom: 21px;
+        padding-top: 28px;
+    }
+
+    .citrus_purebits_banner-slider-img>img {
+        max-width: 137px;
+        width: 100%;
+        height: auto;
+    }
+
+    .slide-content-3 {
+        width: 90%;
+    }
+
+    .slider-logo-3 {
+        width: 88%;
+    }
+
+    .citrus_purebits_slider-content>h1 {
+        font-family: "PetcoCircularTT-Bold", arial !important;
+        font-weight: bold;
+        font-size: 31px;
+        color: #fff;
+        display: block;
+        padding-bottom: 13px;
+    }
+
+    .citrus_purebits_slider-content>p {
+        font-family: "PetcoCircularTT-Regular", arial !important;
+        color: #fff;
+        font-size: 18px;
+        font-weight: 400;
+        padding-bottom: 20px;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .citrus_purebits_slider-main-flex {
+        max-width: 550px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        position: absolute;
+        top: 15px;
+        left: 52.5%;
+        -webkit-transform: translateX(-52.5%);
+        -ms-transform: translateX(-52.5%);
+        transform: translateX(-52.5%);
+    }
+
+    .citrus_purebits_common-slider-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .citrus_purebits_common-slider-btn>a {
+        background: #e4e4e4;
+        display: inline-block;
+        margin: 0px 20px;
+        font-family: "PetcoCircularTT-Bold", arial !important;
+        padding: 18px 46px;
+        border-radius: 5px;
+        color: #001952;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 16px;
+    }
+
+    .citrus_purebits_common-slider-btn>a:hover {
+        background: #001952;
+        color: #fff;
+    }
+
+    /**************************************/
+    /************ PureBites benefits  Area*************/
+    /************************************/
+    .citrus_purebits_benefitus_area {
+        overflow: hidden;
+        padding-top: 36px;
+        padding-bottom: 41px;
+    }
+
+    .citrus_purebitS_containers {
+        max-width: 1105px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .citrus_purebits_single_b_main {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+
+    .citrus_purebits_single_banifit {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 30%;
+        flex: 0 0 30%;
+        text-align: center;
+    }
+
+    .citrus_purebits_single_banifit>img {
+        max-width: 155px;
+        width: 100%;
+        height: auto;
+    }
+
+    .citrus_purebits_cmon-heading>h2 {
+        color: #000000;
+        font-family: "PetcoCircularTT-Bold", arial !important;
+        display: block;
+        text-align: center;
+        font-size: 25px;
+        padding-bottom: 33px;
+    }
+
+    .citrus_purebits_single_banifit h3 {
+        color: #000000;
+        font-size: 18px;
+        font-family: "PetcoCircularTT-Regular", arial !important;
+        font-weight: 600;
+        display: block;
+        padding: 17px 0px;
+    }
+
+    .citrus_purebits_single_banifit p {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    /**************************************/
+    /************ Shopper navigation  Area*************/
+    /************************************/
+    .citrus_purebits_shopper_nav_area {
+        padding-top: 42px;
+        padding-bottom: 65px;
+        overflow: hidden;
+    }
+
+    .citrus_purebits_shopper_container {
+        max-width: 1255px;
+        width: 100%;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+
+    .citrus_purebites_parent_button {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        gap: 60px;
+    }
+
+    .citrus_purebites_paren_list {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -ms-flex-line-pack: center;
+        align-content: center;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    .citrus_purebites_paren_list img {
+        max-width: 433px;
+        width: 100%;
+        height: auto;
+    }
+
+    .citrus_purebites_paren_list img {
+        max-width: 433px;
+        width: 100%;
+        height: auto;
+        border: 5px solid transparent;
+    }
+
+    .citrus_purebites_paren_list>span {
+        color: #000;
+        font-family: "PetcoCircularTT-Bold", arial !important;
+        font-size: 20px;
+        font-weight: bold;
+        display: block;
+        padding-top: 10px;
+    }
+
+    .MiCS_cat_best_tab_item_active_citrus_purebites {
+        background: transparent;
+        color: #000 !important;
+    }
+
+    .MiCS_cat_best_tab_item_active_citrus_purebites img {
+        border: 5px solid #d23139;
+    }
+
+    .filterBestDogDiv_citrus_purebites {
+        display: none;
+    }
+
+    .filterBestCatDiv_citrus_purebites {
+        float: left;
+        display: none;
+    }
+
+    .filterDogFoodDiv_citrus {
+        float: left;
+        display: none;
+    }
+
+    .filterCatFoodDiv_citrus21_purebites {
+        float: left;
+        display: none;
+    }
+
+    /*cat food tabs*/
+    .citrusPurebite21_show {
+        display: block;
+    }
+
+    .MiCS_tab_item_active_citrus_purebites .citrus_catagory-line-main h4 {
+        color: #001952;
+        border-bottom: 8px solid #001952;
+
+    }
+
+    .MiCS_cat_food_tab_citrus21_active_citrus21_purebites .citrus_catagory-line-main h4 {
+        color: #001952;
+        border-bottom: 8px solid #001952;
+
+    }
+
+    .citrus_purebits_dog_main_flex {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        margin-top: 40px;
+        border-bottom: 1px solid #021b4e;
+        margin-bottom: 25px;
+    }
+
+    .citrus_purebites_tab {
+        padding-top: 12px;
+    }
+
+    .citrus_catagory-line-main>h4 {
+        color: #9b9b9b;
+        font-size: 14px;
+        font-family: "PetcoCircularTT-Bold", arial !important;
+        display: block;
+        padding: 20px 0px;
+        text-transform: uppercase;
+        margin: 0px 50px;
+        border-bottom: 8px solid transparent;
+        cursor: pointer;
+    }
+
+    .citrus_purebits_dog_inner__content-item {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: flex-start;
+    }
+
+    .citrus_purebitsinner-item {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 230px;
+        flex: 0 0 230px;
+        margin: 15px;
+    }
+
+    .citrus_purebitsinner-tab-img>a>img {
+        width: 100%;
+        min-height: 100px;
+    }
+
+    .citrus_purebits__contents {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+
+    .citrus_purebitsinner-item>a {
+        color: #220c0b;
+        font-size: 15px;
+        font-family: "PetcoCircularTT-Regular", arial !important;
+        font-weight: 400;
+        display: block;
+        padding-top: 20px;
+        margin-top: 18px;
+        min-height: 76px;
+        width: 100%;
+        line-height: 1.3;
+    }
+
+    .citrus_purebitsinner-item .shop-btn>a {
+        color: #001952;
+        font-size: 16px;
+        font-family: "PetcoCircularTT-Bold", arial !important;
+        text-decoration: underline;
+        font-weight: bold;
+    }
+
+    /**************************************/
+    /************ good stuff Area*************/
+    /************************************/
+    .citrus_purebits_good-stuff-area {
+        padding: 60px 0px;
+        overflow: hidden;
+    }
+
+    .citrus_purebits_good_container {
+        max-width: 1100px;
+        width: 100%;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+
+    .citrus_purebits_good-video-flex {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        overflow: hidden;
+    }
+
+    .citrus_purebits_good-single {
+        background: #f5f5f5;
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 49%;
+        flex: 0 0 49%;
+    }
+
+    .citrus_purebits_good-single>iframe {
+        width: 100%;
+    }
+
+    .citrus_purebits_good-stuff-area .citrus_purebits_cmon-heading>h2 {
+        padding-bottom: 51px;
+    }
+
+    .citrus_purebits_good_v_content {
+        padding: 40px 0px;
+        text-align: center;
+    }
+
+    .citrus_purebits_good_v_content span {
+        display: block;
+        padding-bottom: 21px;
+        color: #000000;
+        font-family: "PetcoCircularTT-Bold", arial !important;
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    /**************************************/
+    /************ Page Bookend Area*************/
+    /************************************/
+    .citrus_purebits_page-booked-area {
+        overflow: hidden;
+        position: relative;
+        z-index: 1;
+        padding-top: 60px;
+        margin-bottom: 5px;
+        padding-bottom: 20px;
+    }
+
+    .citrus_purebits_page-booked_container {
+        max-width: 900px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .citrus_purebits_page-booked-area::after {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 210px;
+        background: #343a40;
+        left: 0;
+        bottom: 0;
+        z-index: -1;
+    }
+
+    .citrus_purebits_page-booked-flex {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+    }
+
+    .citrus_purebits_page-booked_content_img>img {
+        width: 100%;
+        height: auto;
+    }
+
+    .citrus_purebites-footer-logo img {
+        max-width: 342px;
+        width: 100%;
+        height: auto;
+    }
+
+    .citrus_purebits_page-booked-single {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 45%;
+        flex: 0 0 45%;
+    }
+
+    .citrus_purebites-footer-logo {
+        margin-bottom: 18px;
+        margin-left: -18px;
+    }
+
+    .citrus_purebits_page-booked_content span {
+        color: #ffffff;
+        font-size: 25px;
+        font-weight: bold;
+        font-family: "PetcoCircularTT-Bold", arial !important;
+        display: block;
+        padding-bottom: 10px;
+    }
+
+    .citrus_purebits_page-booked_content p {
+        color: #fff;
+        display: block;
+        padding-bottom: 14px;
+    }
+
+    .citrus_purebits_page-booked_content .citrus_purebits_common-slider-btn {
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: start;
+    }
+
+    .citrus_purebits_page-booked_content .citrus_purebits_common-slider-btn a {
+        margin-left: 0px;
+    }
+
+    .citrus_purebits_desktop_hide {
+        display: none;
+    }
+
+    .citrus_purebits_mobile_hide {
+        display: block;
+    }
+
+    /*-----------------------------------*/
+    /*------------ Splide Css-  //imran ----------*/
+    /*-----------------------------------*/
+    .splide__list {
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        display: -ms-flexbox;
+        display: -webkit-box;
+        display: flex;
+        height: 100%;
+        margin: 0 !important;
+        padding: 0 !important;
+        -webkit-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+    }
+
+    .splide.is-initialized:not(.is-active) .splide__list {
+        display: block;
+    }
+
+    .splide {
+        outline: none;
+        position: relative;
+        visibility: hidden;
+    }
+
+    .splide.is-initialized,
+    .splide.is-rendered {
+        visibility: visible;
+    }
+
+    .splide__slide {
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        -ms-flex-negative: 0;
+        flex-shrink: 0;
+        list-style-type: none !important;
+        margin: 0;
+        outline: none;
+        position: relative;
+    }
+
+    .splide__slide img {
+        vertical-align: bottom;
+        min-height: 100px;
+    }
+
+    .splide__track {
+        overflow: hidden;
+        position: relative;
+        z-index: 0;
+    }
+
+    .splide--draggable>.splide__track {
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+    }
+
+    .splide--fade>.splide__track>.splide__list {
+        display: block;
+    }
+
+    .splide--fade>.splide__track>.splide__list>.splide__slide {
+        left: 0;
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        z-index: 0;
+    }
+
+    .splide--fade>.splide__track>.splide__list>.splide__slide.is-active {
+        opacity: 1;
+        position: relative;
+        z-index: 1;
+    }
+
+    .splide--rtl {
+        direction: rtl;
+    }
+
+    .splide--ttb.is-active>.splide__track>.splide__list {
+        display: block;
+    }
+
+    .splide__arrow {
+        -ms-flex-align: center;
+        -webkit-box-align: center;
+        align-items: center;
+        background: #ccc;
+        border: 0;
+        border-radius: 50%;
+        cursor: pointer;
+        display: -ms-flexbox;
+        display: -webkit-box;
+        display: flex;
+        height: 2em;
+        -ms-flex-pack: center;
+        -webkit-box-pack: center;
+        justify-content: center;
+        opacity: 0.7;
+        padding: 0;
+        position: absolute;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        width: 2em;
+        z-index: 1;
+    }
+
+    .splide__arrow svg {
+        fill: #000;
+        height: 1.2em;
+        width: 1.2em;
+    }
+
+    .splide__arrow:hover {
+        opacity: 0.9;
+    }
+
+    .splide__arrow:focus {
+        outline: none;
+    }
+
+    .splide__arrow--prev {
+        left: 1em;
+    }
+
+    .splide__arrow--prev svg {
+        -webkit-transform: scaleX(-1);
+        -ms-transform: scaleX(-1);
+        transform: scaleX(-1);
+    }
+
+    .splide__arrow--next {
+        right: 1em;
+    }
+
+    /* End splide //imran */
+    /* -------------------------------- */
+
+
+    /*******************************
+product tab carousal style start //imran
+*********************************/
+
+    .citrus__tab_item span {
+        display: block;
+    }
+
+    .citrus__tab_item.citrus_tab_item_active {
+        color: #001952;
+        border-bottom: 8px solid #001952;
+        margin-top: 0px;
+    }
+
+    .cirtus_product_tabs_22 {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    .cirtus_product_tabs_22 .splide__arrow--next {
+        right: 0px;
+    }
+
+    .cirtus_product_tabs_22 .splide__arrow--prev {
+        left: 2px;
+    }
+
+    .cirtus_product_tabs_22 .splide__arrow svg {
+        fill: #122359;
+    }
+
+    .cirtus_product_tabs_22 .splide__arrow {
+        -ms-flex-align: center;
+        -webkit-box-align: center;
+        align-items: center;
+        background: transparent;
+        border: 1px solid #122359;
+        border-radius: 50%;
+        cursor: pointer;
+        display: -ms-flexbox;
+        display: -webkit-box;
+        display: flex;
+        height: 3.2em;
+        -ms-flex-pack: center;
+        -webkit-box-pack: center;
+        justify-content: center;
+        opacity: 1;
+        padding: 0;
+        position: absolute;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        width: 3.2em;
+        z-index: 1;
+    }
+
+    .citrus--main-tab-content {
+        width: 1095px;
+        max-width: 95%;
+        margin: auto;
+        margin-top: 30px;
+    }
+
+    .citrus__tab_item span {
+        display: block;
+    }
+
+    .citrus__tab_item {
+        text-transform: uppercase;
+        padding: 12px 20px;
+        margin: 0px 10px;
+        font-size: 14px;
+        text-decoration: none;
+        background-color: #ffffff;
+        border: none;
+        cursor: pointer;
+        color: #6e6b6b;
+        font-family: "PetcoCircularTT-Regular", arial !important;
+        font-weight: 700;
+        line-height: 1.3;
+        text-align: center;
+        border-bottom: 8px solid #fff;
+        border-radius: 0;
+    }
+
+    .citrus__tab_item.citrus__tab_item_active {
+        color: #001952;
+        border-bottom: 8px solid #001952;
+        margin-top: 12px;
+    }
+
+    .cirtus__tabs,
+    .cirtus_cat_tabs {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    .citrus__tab_content_item {
+        max-width: 230px;
+        width: 100% !important;
+        margin: 0px 10px;
+        display: none;
+    }
+
+    .citrus__tab_content_item>a {
+        font-family: "PetcoCircularTT-Regular", arial !important;
+        text-decoration: none;
+    }
+
+    .citrus__tab_content_item.citrusTabshow {
+        display: block;
+    }
+
+    .citrus-inner-img22 {
+        padding: 0 0px;
+        margin-left: 0px;
+    }
+
+    .citrus-inner-img22>a img {
+        width: 100%;
+        height: auto;
+    }
+
+    .citrus__tab_content_item.citrus_row_opacity_0 {
+        opacity: 0;
+    }
+
+    .cirtus__tabs .splide__pagination,
+    .cirtus_cat_tabs .splide__pagination {
+        display: none;
+    }
+
+    .citrus_product_info22>p {
+        font-family: "PetcoCircularTT-Regular", arial !important;
+        font-size: 13px;
+        color: #333333;
+        min-height: 70px;
+        display: block;
+        margin: 0;
+        margin-top: 18px;
+    }
+
+    .citrus--tab-product>button {
+        color: #001952;
+        font-size: 16px;
+        display: block;
+        font-family: "PetcoCircularTT-Bold", arial !important;
+        text-decoration: underline;
+        font-weight: bold;
+        border: none;
+        background: none;
+        cursor: pointer;
+        margin-left: -6px;
+        text-align: left;
+    }
+
+    .cirtus__tabs .splide__arrow--next,
+    .cirtus_cat_tabs .splide__arrow--next {
+        right: 0px;
+    }
+
+    .cirtus__tabs .splide__arrow--prev,
+    .cirtus_cat_tabs .splide__arrow--prev {
+        left: 2px;
+    }
+
+    .cirtus__tabs .splide__arrow svg,
+    .cirtus_cat_tabs .splide__arrow svg {
+        fill: #122359;
+    }
+
+    .cirtus__tabs .splide__arrow,
+    .cirtus_cat_tabs .splide__arrow {
+        -ms-flex-align: center;
+        -webkit-box-align: center;
+        align-items: center;
+        background: transparent;
+        border: 1px solid #122359;
+        border-radius: 50%;
+        cursor: pointer;
+        display: -ms-flexbox;
+        display: -webkit-box;
+        display: flex;
+        height: 3.2em;
+        -ms-flex-pack: center;
+        -webkit-box-pack: center;
+        justify-content: center;
+        opacity: 1;
+        padding: 0;
+        position: absolute;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        width: 3.2em;
+        z-index: 1;
+    }
+
+    /* ----------------------------
+End product tab carousal style //imran
+--------------------------------- */
+
+    /**************************************/
+    /************ Media Query  Area*************/
+    /************************************/
+    @media (min-width: 1500px) and (max-width: 4800px) {
+        .citrus_purebits_slider-main-flex {
+            top: 40%;
+            left: 52.5%;
+            -webkit-transform: translate(-52.5%, -40%);
+            -ms-transform: translate(-52.5%, -40%);
+            transform: translate(-52.5%, -40%);
+        }
+
+        .citrus_purebits_slider-content>p {
+            max-width: 750px;
+        }
+    }
+
+    @media (min-width: 768px) and (max-width: 1299px) {
+        .citrus_purebits_slider-content>h1 {
+            font-size: 17px !important;
+            padding-bottom: 5px;
+        }
+
+        .citrus_purebits_banner-slider-img {
+            padding-top: 5px;
+            padding-bottom: 0px;
+        }
+
+        .citrus_purebits_slider-content>p {
+            font-size: 12px;
+            padding-bottom: 8px;
+        }
+
+        .citrus_purebits_slider-main-flex {
+            left: 53.5%;
+        }
+
+        .citrus_purebits_slider-main-flex {
+            top: 0px;
+        }
+
+        .citrus_purebits_common-slider-btn>a {
+            margin: 0px 9px;
+            padding: 10px 15px;
+            font-size: 14px;
+        }
+    }
+
+    @media (min-width: 992px) and (max-width: 1299px) {
+        .citrus_purebits_slider-main-flex {
+            top: 30px;
+        }
+    }
+
+    @media (max-width: 1301px) {
+        .citrus_purebitS_containers {
+            max-width: 90%;
+        }
+
+        .citrus_purebits_shopper_container {
+            max-width: 90%;
+        }
+
+        .citrus_purebits_good_container {
+            max-width: 90%;
+        }
+
+        .citrus_purebits_page-booked_container {
+            max-width: 90%;
+        }
+
+        .citrus_purebits_slider-content>h1 {
+            font-size: 20px;
+        }
+
+        .citrus_purebits_slider-content>p {
+            font-size: 13px;
+        }
+    }
+
+    @media only screen and (min-width: 768px) and (max-width: 1023px) {
+
+        /* .citrus_pureBites_carousel-item:nth-child(1){
+            background-image: url("../images/banner1 ");
+        } */
+
+        /* .citrus_pureBites_carousel-item:nth-child(2){
+            background-image: url("../images/banner2 ");
+        }
+        
+        .citrus_pureBites_carousel-item:nth-child(3){
+            background-image: url("../images/banner3 ");
+        } */
+
+        .citrus_pureBites_carousel-item .citrus_purebits_slider-content {
+            padding: 15px;
+        }
+
+
+        .citrus_pureBites_carousel-item .citrus_purebits_slider-content h1 {
+            padding: 10px;
+        }
+
+        .citrus_pureBites_carousel-item .citrus_purebits_slider-content p {
+            padding: 5px 0 10px;
+            font-size: 11px;
+        }
+
+        .citrus_pureBites_carousel-item .citrus_purebits_slider-content .citrus_purebits_common-slider-btn {
+            margin: 0 0 15px;
+        }
+    }
+
+    @media all and (max-width: 991px) {
+        .citrus_purebits_slider-main-flex {
+            left: 56.5%;
+            -webkit-transform: translateX(-56.5%);
+            -ms-transform: translateX(-56.5%);
+            transform: translateX(-56.5%);
+        }
+
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        .citrus_purebits_dog_main_flex::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* Hide scrollbar for IE, Edge and Firefox */
+        .citrus_purebits_dog_main_flex {
+            -ms-overflow-style: none;
+            /* IE and Edge */
+            scrollbar-width: none;
+            /* Firefox */
+        }
+
+        .citrus_purebits_dog_item {
+            text-align: center;
+            flex: 0 0 50%;
+        }
+
+        .citrus_purebits_dog_main_flex {
+            width: 100%;
+            overflow-x: auto;
+            justify-content: start;
+        }
+
+        .citrusPurebite21_show {
+            display: block;
+            width: 150%;
+            overflow: hidden;
+        }
+
+
+
+        .citrus_purebits_dog_inner__content-item {
+            overflow-x: auto;
+            width: 100%;
+            justify-content: start;
+        }
+
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        .citrus_purebits_dog_inner__content-item::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* Hide scrollbar for IE, Edge and Firefox */
+        .citrus_purebits_dog_inner__content-item {
+            -ms-overflow-style: none;
+            /* IE and Edge */
+            scrollbar-width: none;
+            /* Firefox */
+        }
+
+        .citrus_purebitsinner-item {
+            flex: 0 0 55%;
+        }
+
+        .citrus_purebits_page-booked_content span {
+            font-size: 24px;
+        }
+
+        .citrus_purebits_page-booked-area::after {
+            height: 165px;
+        }
+
+        .citrus_purebits_good-single {
+            -webkit-box-flex: 0;
+            -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+            margin-bottom: 50px;
+        }
+
+        .citrus_purebits_good-stuff-area {
+            padding-bottom: 0;
+            padding-top: 30px;
+        }
+
+        .citrus_pureBites_carousel-indicators {
+            left: calc(100%/2 - 45px);
+        }
+
+        .citrus_purebits_slider-content>p {
+            font-size: 12px;
+        }
+    }
+
+    @media all and (max-width: 767px) {
+        .citrus_purebits_mobile_hide {
+            display: none;
+        }
+
+        .citrus_purebits_desktop_hide {
+            display: block;
+        }
+
+
+        .citrus_purebitS_containers .cta-box a {
+            text-transform: capitalize;
+            text-decoration: underline;
+            color: #001952 !important;
+            background: none !important;
+            border: none !important;
+        }
+
+        .citrus_purebits_slider-main-flex {
+            left: 56.5%;
+            -webkit-transform: translate(-56.5%, -60%);
+            -ms-transform: translate(-56.5%, -60%);
+            transform: translate(-56.5%, -60%);
+            top: 60%;
+        }
+
+        .citrus_pureBites_carousel-indicators {
+            left: calc(100%/2 - 52px);
+            display: none;
+        }
+
+        .citrus_purebits_common-slider-btn {
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+            flex-direction: row;
+        }
+
+        .citrus_purebits_common-slider-btn>a {
+            background: transparent;
+            padding: 10px 15px;
+            color: #fff;
+            text-transform: capitalize;
+            font-size: 16px;
+            text-decoration: underline;
+        }
+
+        .citrus_purebits_common-slider-btn>a:hover {
+            background: transparent;
+        }
+
+        .citrus_purebits_banner-slider-img>img {
+            max-width: 160px;
+        }
+
+        .citrus_purebits_single_b_main {
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        }
+
+        .citrus_pureBites_carousel-item {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            justify-content: center;
+            width: 100%;
+            background-position: center;
+            min-height: unset;
+            background: #333;
+        }
+
+        .citrus_pureBites_carousel-item img {
+            width: 100%;
+        }
+
+        .citrus_pureBites_carousel-item:nth-child(1) {
+            background-image: none
+        }
+
+        .citrus_pureBites_carousel-item:nth-child(2) {
+            background-image: none
+        }
+
+        .citrus_pureBites_carousel-item:nth-child(3) {
+            background-image: none
+        }
+
+        .citrus_pureBites_carousel-item .citrus_purebits_slider-content {
+            padding: 15px 15px 10px;
+            max-width: 100%;
+        }
+
+
+        .citrus_pureBites_carousel-item .citrus_purebits_slider-content h1 {
+            padding: 0;
+        }
+
+        .citrus_pureBites_carousel-item .citrus_purebits_slider-content p {
+            padding: 10px 0;
+            font-size: 14px;
+        }
+
+        .citrus_pureBites_carousel-item .citrus_purebits_slider-content .citrus_purebits_common-slider-btn {
+            margin: 0;
+        }
+
+
+        .citrus_purebits_single_banifit {
+            -webkit-box-flex: 0;
+            -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+            margin-bottom: 40px;
+        }
+
+        .citrus_purebits_benefitus_area {
+            padding-bottom: 0px;
+        }
+
+        .citrus_purebits_single_banifit p {
+            width: 54%;
+            margin: 0 auto;
+        }
+
+        .citrus_purebits_page-booked-single {
+            -webkit-box-flex: 0;
+            -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+            text-align: center;
+        }
+
+        .citrus_purebits_page-booked-flex {
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        }
+
+        .citrus_purebits_page-booked_content span {
+            font-size: 25px;
+            color: #000;
+        }
+
+        .citrus_purebits_page-booked_content p {
+            color: #000;
+            display: block;
+            padding-bottom: 14px;
+            width: 60%;
+            margin: 0 auto;
+        }
+
+        .citrus_purebites_parent_button {
+            gap: 45px;
+        }
+
+        .citrus_purebitsnavigation-auto {
+            display: none;
+        }
+
+        .citrus_purebitsnavigation-manual {
+            display: none;
+        }
+
+        .citrus_purebits_slider-content>h1 {
+            font-size: 22px;
+            padding: 0 15px 15px;
+
+        }
+
+        .citrus_purebits_slider-content>p {
+            font-size: 14px;
+            width: 100%;
+            padding: 0 20px 30px;
+        }
+
+
+    }
+
+    @media all and (max-width: 575px) {
+        .citrus_purebits_slider-main-flex {
+            left: 56.5%;
+            -webkit-transform: translate(-56.5%, -85%);
+            -ms-transform: translate(-56.5%, -85%);
+            transform: translate(-56.5%, -85%);
+            top: 85%;
+        }
+
+        .citrus_purebits_single_banifit p {
+            width: 70%;
+            margin: 0 auto;
+        }
+
+        .citrus_purebits_cmon-heading>h2 {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .citrus_catagory-line-main>h4 {
+            margin: 0px 34px;
+        }
+
+
+
+        .citrus_purebits_good-single>iframe {
+            width: 100%;
+            height: 220px;
+        }
+
+        .citrus_purebits_good_v_content p {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .citrus_purebits_good_v_content span {
+            width: 71%;
+            margin: 0 auto;
+        }
+
+        .citrus_purebits_page-booked_content p {
+            width: 85%;
+            margin: 0 auto;
+        }
+
+        .citrus_purebits_good_container {
+            max-width: 100%;
+        }
+
+        .citrus_purebits_page-booked-area {
+            padding-top: 25px;
+        }
+
+        .citrus_purebites-footer-logo {
+            margin-left: 0;
+        }
+
+        .citrus_purebits_dog_item {
+            text-align: center;
+            flex: 0 0 65%;
+        }
+
+        /* product carousal arrow button */
+        .citrus_purebits_dog_inner__content-item .splide__arrows {
+            display: none;
+        }
+    }
+
+    @media all and (max-width: 413px) {
+        .citrus_purebits_slider-content>p {
+            padding-bottom: 5px;
+        }
+    }
+
+    /* revised css add for arrow hide */
+    .cirtus__tabs .splide__arrow,
+    .cirtus_cat_tabs .splide__arrow {
+        -ms-flex-align: center;
+        -webkit-box-align: center;
+        align-items: center;
+        background: #ffffff;
+        border: 1px solid #122359;
+        border-radius: 50%;
+        cursor: pointer;
+        display: -ms-flexbox;
+        display: -webkit-box;
+        display: flex;
+        height: 2.2em;
+        -ms-flex-pack: center;
+        -webkit-box-pack: center;
+        justify-content: center;
+        opacity: 1;
+        padding: 0;
+        position: absolute;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        width: 2.2em;
+        z-index: 1;
+    }
+
+    .cirtus__tabs .splide__arrow:disabled {
+        opacity: 0;
+    }
+</style>
+<div class="citrus_purebits_all-overflow">
+    <!--===============================================================
+                            start banner area
+   ====================================================================-->
+    <section class="citrus_purebits_banner-area">
+        <div class="citrus_purebits_container">
+            <div class="citrus_purebits__slider citrus_pureBites_carousel">
+                <div class="citrus_purebits__slides citrus_pureBites_carousel-inner">
+                    <!-- slide 1 -->
+                    <div class="citrus_pureBites_carousel-item citrus_pureBites_carousel-item1"
+                        title="PureBites logo. Simple, pure ingredients. Crafted with recognizable ingredients that pet parents can trust">
+                        <img class="citrus_purebits_desktop_hide"
+                            src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/banner-mob-1"
+                            alt="PureBites logo. Simple, pure ingredients. Crafted with recognizable ingredients that pet parents can trust" />
+                        <div class="citrus_purebits_slider-content">
+                            <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/PureBites_Logo_White"
+                                alt="img" />
+                            <h1>SIMPLE, PURE INGREDIENTS</h1>
+                            <p>Crafted with ingredients you know and trust.</p>
+                            <div class="citrus_purebits_common-slider-btn">
+                                <a href="https://www.petco.com/shop/en/petcostore/brand/purebites/dog
+                                    " manual_cm_sp="sponsoredbrandpage:purebites:herobanner:1:simplepureingredients:shopdogfood
+                                    " onclick="clickTrackLink(this);">Shop Dog</a>
+                                <a href="https://www.petco.com/shop/en/petcostore/brand/purebites/cat
+                                    " manual_cm_sp="sponsoredbrandpage:purebites:herobanner:1:simplepureingredients:shopcatfood
+                                    " onclick="clickTrackLink(this);">Shop Cat</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- slide 2 -->
+                    <div class="citrus_pureBites_carousel-item citrus_pureBites_carousel-item2"
+                        title="PureBites logo. Made fresh and pure. Essential vitamins, nutrients and minerals packed into every bag">
+                        <img class="citrus_purebits_desktop_hide"
+                            src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/banner-mob-2"
+                            alt="PureBites logo. Made fresh and pure. Essential vitamins, nutrients and minerals packed into every bag" />
+                        <div class="citrus_purebits_slider-content">
+                            <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/PureBites_Logo_White"
+                                alt="img" />
+                            <h1>MADE FRESH AND PURE</h1>
+                            <p>More raw protein and nutrients packed into every bag.</p>
+                            <div class="citrus_purebits_common-slider-btn">
+                                <a href="https://www.petco.com/shop/en/petcostore/brand/purebites/dog
+                                    " manual_cm_sp="sponsoredbrandpage:purebites:herobanner:2:madefresh:shopdogfood
+                                    " onclick="clickTrackLink(this);">Shop Dog</a>
+                                <a href="https://www.petco.com/shop/en/petcostore/brand/purebites/cat
+                                    " manual_cm_sp="sponsoredbrandpage:purebites:herobanner:2:madefresh:shopcatfood
+                                    " onclick="clickTrackLink(this);">Shop Cat</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- slide 3 -->
+                    <div class="citrus_pureBites_carousel-item citrus_pureBites_carousel-item3"
+                        title="PureBites logo. Taste dogs and cats love. Delicious recipes that will captivate your pet’s senses.">
+                        <img class="citrus_purebits_desktop_hide"
+                            src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/banner-mob-3"
+                            alt="PureBites logo. Taste dogs and cats love. Delicious recipes that will captivate your pet’s senses." />
+                        <div class="citrus_purebits_slider-content">
+                            <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/PureBites_Logo_White"
+                                alt="img" />
+                            <h1>AROMA AND TASTE PETS LOVE</h1>
+                            <p>Locked into all PureBites treats, food and toppers with nothing added to get in the way.
+                            </p>
+                            <div class="citrus_purebits_common-slider-btn">
+                                <a href="https://www.petco.com/shop/en/petcostore/brand/purebites/dog
+                                    " manual_cm_sp="sponsoredbrandpage:purebites:herobanner:3:tastedogandcatslove:shopdogfood
+                                    " onclick="clickTrackLink(this);">Shop Dog</a>
+                                <a href="https://www.petco.com/shop/en/petcostore/brand/purebites/cat
+                                    " manual_cm_sp="sponsoredbrandpage:purebites:herobanner:3:tastedogandcatslove:shopcatfood
+                                    " onclick="clickTrackLink(this);">Shop Cat</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="citrus_pureBites_carousel-controls">
+                    <span class="prev"></span>
+                    <span class="next"></span>
+                </div>
+                <div class="citrus_pureBites_carousel-indicators"></div>
+            </div>
+        </div>
+    </section>
+
+    <!--===============================================================
+                            End banner area
+   ====================================================================-->
+
+    <!--===============================================================
+                            start PureBites benefits area
+   ====================================================================-->
+    <section class="citrus_purebits_benefitus_area">
+        <div class="citrus_purebitS_containers">
+            <div class="citrus_purebits_main-benifit-flex">
+                <!-- common heading -->
+                <div class="citrus_purebits_cmon-heading">
+                    <h2>PureBites benefits</h2>
+                </div>
+                <!-- common heading -->
+                <div class="citrus_purebits_single_b_main">
+                    <!-- single item -->
+                    <div class="citrus_purebits_single_banifit">
+                        <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/purebites_b1.1 "
+                            alt="Icons of steak and chicken meat" />
+                        <h3>Made with less</h3>
+                        <p>Turn the bag around and look at the natural, high-quality ingredients.</p>
+                    </div>
+                    <!-- single item -->
+                    <div class="citrus_purebits_single_banifit">
+                        <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/purebites_b2 "
+                            alt="Three separate icons of a snowflake, a droplet and steam rising" />
+                        <h3>Easy for restrictive diets</h3>
+                        <p>Limited ingredients are beneficial for pets who have specific health conditions.</p>
+                    </div>
+                    <!-- single item -->
+                    <div class="citrus_purebits_single_banifit">
+                        <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/purebites_b3 "
+                            alt="Icon of a big heart with four small hearts above" />
+                        <h3>Simplicity pet parents love</h3>
+                        <p>Ingredients that are familiar and easily identifiable.</p>
+                    </div>
+                </div>
+                <div class="citrus-purebite__cta cta-box">
+                    <a href="https://www.petco.com/shop/en/petcostore/brand/purebites"
+                        manual_cm_sp="sponsoredbrandpage:purebites:icons:1:purebitesbenefits:shopall"
+                        onclick="clickTrackLink(this);">Shop All</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--===============================================================
+                            End PureBites benefits area
+   ====================================================================-->
+
+    <!--===============================================================
+                                                start Shopper navigation tab area
+                       ====================================================================-->
+    <div class="citrus_purebits_shopper_nav_area">
+        <div class="citrus_purebits_shopper_container">
+            <!-- common heading -->
+            <div class="citrus_purebits_cmon-heading">
+                <h2>Explore a variety of recipes for your pet</h2>
+            </div>
+            <!-- common heading -->
+            <div class="citrus_purebites_tab">
+                <div id="catBestBtnContainer_citrus22_purebites" class="citrus_purebites_parent_button">
+                    <div class="citrus_purebites_paren_list MiCS_cat_best_tab_item_citrus_purebites MiCS_cat_best_tab_item_active_citrus_purebites"
+                        onclick="filterBestCat('citrus_purebites_cat_all_recipes')">
+                        <img class="citrus_purebits_mobile_hide"
+                            src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/purebites_dog "
+                            alt="Woman cuddling a dog outside." />
+                        <img class="citrus_purebits_desktop_hide"
+                            src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/purebites_dog-mobile "
+                            alt="Woman cuddling a dog outside." />
+                        <span>Shop Dog</span>
+                    </div>
+                    <div class="citrus_purebites_paren_list MiCS_cat_best_tab_item_citrus_purebites"
+                        onclick="filterBestCat('citrus_purebitescat_dry_citrus22')">
+                        <img class="citrus_purebits_mobile_hide"
+                            src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/purebites_cat "
+                            alt="A cat with their paw reaching out." />
+                        <img class="citrus_purebits_desktop_hide"
+                            src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/purebites_cat-mobile "
+                            alt="A cat with their paw reaching out." />
+                        <span>Shop Cat</span>
+                    </div>
+                </div>
+                <div class="citrus_purebits__contents">
+                    <div
+                        class="citrus_purebits_listed_tab filterBestCatDiv_citrus_purebites citrus_purebites_cat_all_recipes">
+                        <div id="dogBestBtnContainer_citrus_purebites" class="citrus_purebits_dog_main_flex">
+                            <div class="citrus_purebits_dog_item MiCS_tab_item_citrus_purebites MiCS_tab_item_active_citrus_purebites"
+                                onclick="filterTabProduct('citrus_purebites_frozen_raw_meals')">
+                                <div class="citrus_catagory-line-main">
+                                    <h4>FREEZE-DRIED TREATS</h4>
+                                </div>
+                            </div>
+                            <div class="citrus_purebits_dog_item MiCS_tab_item_citrus_purebites"
+                                onclick="filterTabProduct('dry_grain_citrus_purebites')">
+                                <div class="citrus_catagory-line-main">
+                                    <h4>SPECIALTY TREATS</h4>
+                                </div>
+                            </div>
+                            <div class="citrus_purebits_dog_item MiCS_tab_item_citrus_purebites"
+                                onclick="filterTabProduct('dry_healthy_citrus_purebites')">
+                                <div class="citrus_catagory-line-main">
+                                    <h4>TOPPERS</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="citrus_purebits_dog_inner__content">
+                            <!-- Dog Raw 01 -->
+                            <div class="citrus_purebits_dog_inner__content-item splide cirtus__tabs">
+                                <div class="splide__track">
+                                    <div class="splide__list">
+                                        <!-- single item 1 -->
+                                        <div
+                                            class="citrus_purebitsinner-item filterBestDogDiv_citrus_purebites citrus_purebites_frozen_raw_meals citrus__tab_content_item citrus_-dogFood splide__slide">
+                                            <div class="citrus_purebitsinner-tab-img">
+                                                <a href="#"> <img
+                                                        src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/purebites_tab1_p1"
+                                                        alt="" /></a>
+                                            </div>
+                                            <a href="#">PureBites Chicken Dog Treats, 11.6 oz.</a>
+                                            <div class="shop-btn">
+                                                <a href="https://www.petco.com/shop/en/petcostore/product/purebites-chicken-breast-dog-treats 
+                                                                " manual_cm_sp="sponsoredbrandpage:purebites:freezedriedtreats:1:purebiteschickendogtreats116oz:shopnow
+                                                                " onclick="clickTrackLink(this);">Shop Now</a>
+                                            </div>
+                                        </div>
+                                        <!-- single item 2 -->
+                                        <div
+                                            class="citrus_purebitsinner-item filterBestDogDiv_citrus_purebites citrus_purebites_frozen_raw_meals citrus__tab_content_item citrus_-dogFood splide__slide">
+                                            <div class="citrus_purebitsinner-tab-img">
+                                                <a href="#"> <img
+                                                        src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/purebites_tab1_p2"
+                                                        alt="" /></a>
+                                            </div>
+                                            <a href="#">PureBites Beef Liver Mid-Size Dog Treats, 16.6 oz.</a>
+                                            <div class="shop-btn">
+                                                <a href="https://www.petco.com/shop/en/petcostore/product/purebites-beef-liver-mid-size-dog-treats 
+                                                                " manual_cm_sp="sponsoredbrandpage:purebites:freezedriedtreats:2:purebitesbeeflivermidsizedogtreats166oz:shopnow
+                                                                " onclick="clickTrackLink(this);">Shop Now</a>
+                                            </div>
+                                        </div>
+                                        <!-- single item 3 -->
+                                        <div
+                                            class="citrus_purebitsinner-item filterBestDogDiv_citrus_purebites citrus_purebites_frozen_raw_meals citrus__tab_content_item citrus_-dogFood splide__slide">
+                                            <div class="citrus_purebitsinner-tab-img">
+                                                <a href="#"> <img
+                                                        src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/purebites_tab1_p3"
+                                                        alt="" /></a>
+                                            </div>
+                                            <a href="#">PureBites Salmon Dog Treats, 2.47 oz.</a>
+                                            <div class="shop-btn">
+                                                <a href="https://www.petco.com/shop/en/petcostore/product/pure-bites-salmon-dog-treats 
+                                                                " manual_cm_sp="sponsoredbrandpage:purebites:freezedriedtreats:3:purebitessalmondogtreats247oz:shopnow
+                                                                " onclick="clickTrackLink(this);">Shop Now</a>
+                                            </div>
+                                        </div>
+                                        <!-- single item 04 -->
+                                        <div
+                                            class="citrus_purebitsinner-item filterBestDogDiv_citrus_purebites citrus_purebites_frozen_raw_meals citrus__tab_content_item citrus_-dogFood splide__slide">
+                                            <div class="citrus_purebitsinner-tab-img">
+                                                <a href="#"> <img
+                                                        src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/purebites_tab1_p4"
+                                                        alt="" /></a>
+                                            </div>
+                                            <a href="#">PureBites Lamb Liver Freeze Dried Dog Treats, 3.35 oz.</a>
+                                            <div class="shop-btn">
+                                                <a href="https://www.petco.com/shop/en/petcostore/product/purebites-natural-freeze-dried-lamb-liver-dog-treats-335-oz-2453100"
+                                                    manual_cm_sp="sponsoredbrandpage:purebites:freezedriedtreats:4:purebites lamb liver freeze dried dog treats, 3.35 oz.:shopnow"
+                                                    onclick="clickTrackLink(this);">Shop Now</a>
+                                            </div>
+                                        </div>
+                                        <!-- single item 05 -->
+                                        <div
+                                            class="citrus_purebitsinner-item filterBestDogDiv_citrus_purebites citrus_purebites_frozen_raw_meals citrus__tab_content_item citrus_-dogFood splide__slide">
+                                            <div class="citrus_purebitsinner-tab-img">
+                                                <a href="#"> <img
+                                                        src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/purebites_tab1_p5"
+                                                        alt="" /></a>
+                                            </div>
+                                            <a href="#">PureBites Turkey Freeze Dried Dog Treats, 2.47 oz.</a>
+                                            <div class="shop-btn">
+                                                <a href="https://www.petco.com/shop/en/petcostore/product/purebites-turkey-freeze-dried-dog-treats-247-oz-3421441"
+                                                    manual_cm_sp="sponsoredbrandpage:purebites:freezedriedtreats:5:purebites turkey freeze dried dog treats, 2.47 oz.:shopnow"
+                                                    onclick="clickTrackLink(this);">Shop Now</a>
+                                            </div>
+                                        </div>
+                                        <!-- single item 06 -->
+                                        <div
+                                            class="citrus_purebitsinner-item filterBestDogDiv_citrus_purebites citrus_purebites_frozen_raw_meals citrus__tab_content_item citrus_-dogFood splide__slide">
+                                            <div class="citrus_purebitsinner-tab-img">
+                                                <a href="#"> <img
+                                                        src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/purebites_tab1_p6-revised"
+                                                        alt="" /></a>
+                                            </div>
+                                            <a href="#">PureBites Cheddar Cheese Freeze Dried Dog Treats, 16 oz.</a>
+                                            <div class="shop-btn">
+                                                <a href="https://www.petco.com/shop/en/petcostore/product/purebites-cheddar-cheese-freeze-dried-dog-treats"
+                                                    manual_cm_sp="sponsoredbrandpage:purebites:freezedriedtreats:6:purebites cheddar cheese freeze dried dog treats, 16 oz. :shopnow"
+                                                    onclick="clickTrackLink(this);">Shop Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Dog Raw 02 -->
+                            <div class="citrus_purebits_dog_inner__content-item splide cirtus__tabs">
+                                <div class="splide__track">
+                                    <div class="splide__list">
+                                        <!-- single item 1-->
+                                        <div
+                                            class="citrus_purebitsinner-item filterBestDogDiv_citrus_purebites dry_grain_citrus_purebites citrus__tab_content_item splide__slide">
+                                            <div class="citrus_purebitsinner-tab-img">
+                                                <a href="#"> <img
+                                                        src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/purebites_tab2_p1"
+                                                        alt="" /></a>
+                                            </div>
+                                            <a href="#">PureBites Mini Trainers Raw Freeze Dried Lamb Liver Dog Treats,
+                                                2.4
+                                                oz.</a>
+                                            <div class="shop-btn">
+                                                <a href="https://www.petco.com/shop/en/petcostore/product/purebites-mini-trainers-raw-freeze-dried-lamb-liver-dog-treats"
+                                                    manual_cm_sp="sponsoredbrandpage:purebites:specialtydogtreats:1:purebitesminitrainersrawfreezedriedlambliverdogtreats24oz:shopnow"
+                                                    onclick="clickTrackLink(this);">Shop Now</a>
+                                            </div>
+                                        </div>
+
+                                        <!-- single item 2 -->
+                                        <div
+                                            class="citrus_purebitsinner-item filterBestDogDiv_citrus_purebites dry_grain_citrus_purebites citrus__tab_content_item splide__slide">
+                                            <div class="citrus_purebitsinner-tab-img">
+                                                <a href="#"> <img
+                                                        src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/purebites_tab2_p2"
+                                                        alt="" /></a>
+                                            </div>
+                                            <a href="#">PureBites Mini Trainers Raw Freeze Dried Chicken Breast Dog
+                                                Treats,
+                                                2.1 oz. </a>
+                                            <div class="shop-btn">
+                                                <a href="https://www.petco.com/shop/en/petcostore/product/purebites-mini-trainers-raw-freeze-dried-chicken-breast-dog-treats"
+                                                    manual_cm_sp="sponsoredbrandpage:purebites:specialtydogtreats:2:purebites mini trainers raw freeze dried chicken breast dog treats, 2.1 oz.:shopnow"
+                                                    onclick="clickTrackLink(this);">Shop Now</a>
+                                            </div>
+                                        </div>
+
+                                        <!-- single item 3 -->
+                                        <div
+                                            class="citrus_purebitsinner-item filterBestDogDiv_citrus_purebites dry_grain_citrus_purebites citrus__tab_content_item splide__slide">
+                                            <div class="citrus_purebitsinner-tab-img">
+                                                <a href="#"> <img
+                                                        src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/purebites_tab2_p3"
+                                                        alt="" /></a>
+                                            </div>
+                                            <a href="#">PureBites Mini Trainers Raw Freeze Dried Beef Liver Dog Treats,
+                                                3
+                                                oz. </a>
+                                            <div class="shop-btn">
+                                                <a href="https://www.petco.com/shop/en/petcostore/product/purebites-mini-trainers-raw-freeze-dried-beef-liver-dog-treats"
+                                                    manual_cm_sp="sponsoredbrandpage:purebites:specialtydogtreats:3:purebites mini trainers raw freeze dried beef liver dog treats, 3 oz.:shopnow"
+                                                    onclick="clickTrackLink(this);">Shop Now</a>
+                                            </div>
+                                        </div>
+
+                                        <!-- single item 4 -->
+                                        <div
+                                            class="citrus_purebitsinner-item filterBestDogDiv_citrus_purebites dry_grain_citrus_purebites citrus__tab_content_item splide__slide">
+                                            <div class="citrus_purebitsinner-tab-img">
+                                                <a href="#"> <img
+                                                        src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/purebites_tab2_p4"
+                                                        alt="" /></a>
+                                            </div>
+                                            <a href="#">PureBites Beef Jerky Dog Treats, 7.5 oz. </a>
+                                            <div class="shop-btn">
+                                                <a href="https://www.petco.com/shop/en/petcostore/product/pure-bites-beef-jerky-dog-treats"
+                                                    manual_cm_sp="sponsoredbrandpage:purebites:specialtydogtreats:4:purebitesbeefjerkydogtreats75oz:shopnow"
+                                                    onclick="clickTrackLink(this);">Shop Now</a>
+                                            </div>
+                                        </div>
+
+                                        <!-- single item 5 -->
+                                        <div
+                                            class="citrus_purebitsinner-item filterBestDogDiv_citrus_purebites dry_grain_citrus_purebites citrus__tab_content_item splide__slide">
+                                            <div class="citrus_purebitsinner-tab-img">
+                                                <a href="#"> <img
+                                                        src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/purebites_tab2_p5"
+                                                        alt="" /></a>
+                                            </div>
+                                            <a href="#">PureBites Chicken Jerky Mid Size Dog Treats, 5.5 oz. </a>
+                                            <div class="shop-btn">
+                                                <a href="https://www.petco.com/shop/en/petcostore/product/purebites-chicken-jerky-mid-size-dog-treats"
+                                                    manual_cm_sp="sponsoredbrandpage:purebites:specialtydogtreats:5:purebiteschickenjerkymidsizedogtreats55oz:shopnow"
+                                                    onclick="clickTrackLink(this);">Shop Now</a>
+                                            </div>
+                                        </div>
+
+                                        <!-- single item 6 -->
+                                        <div
+                                            class="citrus_purebitsinner-item filterBestDogDiv_citrus_purebites dry_grain_citrus_purebites citrus__tab_content_item splide__slide">
+                                            <div class="citrus_purebitsinner-tab-img">
+                                                <a href="#"> <img
+                                                        src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/purebites_tab2_p6"
+                                                        alt="" /></a>
+                                            </div>
+                                            <a href="#">PureBites Duck Jerky Medium Size Dog Treats, 5.5 oz. </a>
+                                            <div class="shop-btn">
+                                                <a href="https://www.petco.com/shop/en/petcostore/product/purebites-duck-jerky-medium-size-dog-treats"
+                                                    manual_cm_sp="sponsoredbrandpage:purebites:specialtydogtreats:6:purebites duck jerky medium size dog treats, 5.5 oz.:shopnow"
+                                                    onclick="clickTrackLink(this);">Shop Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Dog Raw 03 -->
+                            <div class="citrus_purebits_dog_inner__content-item splide cirtus__tabs">
+                                <div class="splide__track">
+                                    <div class="splide__list">
+                                        <!-- single item 1 -->
+                                        <div
+                                            class="citrus_purebitsinner-item filterBestDogDiv_citrus_purebites dry_healthy_citrus_purebites citrus__tab_content_item splide__slide">
+                                            <div class="citrus_purebitsinner-tab-img">
+                                                <a href="#"> <img
+                                                        src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/purebites_tab3_p1"
+                                                        alt="" /></a>
+                                            </div>
+                                            <a href="#">PureBites Plus Gut & Digestion Squeezables Dog Treats, 2.5 oz.
+                                            </a>
+                                            <div class="shop-btn">
+                                                <a href="https://www.petco.com/shop/en/petcostore/product/purebites-plus-gut-and-digestion-squeezables-dog-treats"
+                                                    manual_cm_sp="sponsoredbrandpage:purebites:toppers:1:purebites plus gut & digestion squeezables dog treats, 2.5 oz.:shopnow"
+                                                    onclick="clickTrackLink(this);">Shop Now</a>
+                                            </div>
+                                        </div>
+
+                                        <!-- single item 2 -->
+                                        <div
+                                            class="citrus_purebitsinner-item filterBestDogDiv_citrus_purebites dry_healthy_citrus_purebites citrus__tab_content_item splide__slide">
+                                            <div class="citrus_purebitsinner-tab-img">
+                                                <a href="#"> <img
+                                                        src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/purebites_tab3_p2"
+                                                        alt="" /></a>
+                                            </div>
+                                            <a href="#">PureBites Chicken & Vegetables Broths Dog Treats, 2 oz. </a>
+                                            <div class="shop-btn">
+                                                <a href="https://www.petco.com/shop/en/petcostore/product/purebites-chicken-and-vegetables-broths-dog-treats"
+                                                    manual_cm_sp="sponsoredbrandpage:purebites:toppers:2:purebites chicken & vegetables broths dog treats, 2 oz.:shopnow"
+                                                    onclick="clickTrackLink(this);">Shop Now</a>
+                                            </div>
+                                        </div>
+
+                                        <!-- single item 3 -->
+                                        <div
+                                            class="citrus_purebitsinner-item filterBestDogDiv_citrus_purebites dry_healthy_citrus_purebites citrus__tab_content_item splide__slide">
+                                            <div class="citrus_purebitsinner-tab-img">
+                                                <a href="#"> <img
+                                                        src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/purebites_tab3_p3"
+                                                        alt="" /></a>
+                                            </div>
+                                            <a href="#">PureBites Chicken, Beef & Vegetables Broths Dog Treats, 2 oz.
+                                            </a>
+                                            <div class="shop-btn">
+                                                <a href="https://www.petco.com/shop/en/petcostore/product/purebites-chicken-beef-and-vegetables-broths-dog-treats"
+                                                    manual_cm_sp="sponsoredbrandpage:purebites:toppers:3:purebites chicken, beef & vegetables broths dog treats, 2 oz.:shopnow"
+                                                    onclick="clickTrackLink(this);">Shop Now</a>
+                                            </div>
+                                        </div>
+
+                                        <!-- single item 4 -->
+                                        <div
+                                            class="citrus_purebitsinner-item filterBestDogDiv_citrus_purebites dry_healthy_citrus_purebites citrus__tab_content_item splide__slide">
+                                            <div class="citrus_purebitsinner-tab-img">
+                                                <a href="#"> <img
+                                                        src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/purebites_tab3_p4"
+                                                        alt="" /></a>
+                                            </div>
+                                            <a href="#">PureBites Plus Skin & Coat Squeezables Dog Treats, 2.5 oz. </a>
+                                            <div class="shop-btn">
+                                                <a href="https://www.petco.com/shop/en/petcostore/product/purebites-plus-skin-and-coat-squeezables-dog-treats"
+                                                    manual_cm_sp="sponsoredbrandpage:purebites:toppers:4:purebites plus skin & coat squeezables dog treats, 2.5 oz.:shopnow"
+                                                    onclick="clickTrackLink(this);">Shop Now</a>
+                                            </div>
+                                        </div>
+
+                                        <!-- single item 5 -->
+                                        <div
+                                            class="citrus_purebitsinner-item filterBestDogDiv_citrus_purebites dry_healthy_citrus_purebites citrus__tab_content_item splide__slide">
+                                            <div class="citrus_purebitsinner-tab-img">
+                                                <a href="#"> <img
+                                                        src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/purebites_tab3_p5"
+                                                        alt="" /></a>
+                                            </div>
+                                            <a href="#">PureBites Plus Heart & Eyes Squeezables Dog Treats, 2.5 oz. </a>
+                                            <div class="shop-btn">
+                                                <a href="https://www.petco.com/shop/en/petcostore/product/purebites-plus-heart-and-eyes-squeezables-dog-treats"
+                                                    manual_cm_sp="sponsoredbrandpage:purebites:toppers:5:purebites plus heart & eyes squeezables dog treats, 2.5 oz.:shopnow"
+                                                    onclick="clickTrackLink(this);">Shop Now</a>
+                                            </div>
+                                        </div>
+
+                                        <!-- single item 6 -->
+                                        <div
+                                            class="citrus_purebitsinner-item filterBestDogDiv_citrus_purebites dry_healthy_citrus_purebites citrus__tab_content_item splide__slide">
+                                            <div class="citrus_purebitsinner-tab-img">
+                                                <a href="#"> <img
+                                                        src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/purebites_tab3_p6"
+                                                        alt="" /></a>
+                                            </div>
+                                            <a href="#">PureBites Tuna, Salmon & Vegetables Broths Dog Treats, 2 oz.
+                                            </a>
+                                            <div class="shop-btn">
+                                                <a href="https://www.petco.com/shop/en/petcostore/product/purebites-tuna-salmon-and-vegetables-broths-dog-treats-2-oz-3569825"
+                                                    manual_cm_sp="sponsoredbrandpage:purebites:toppers:6:purebites tuna, salmon & vegetables broths dog treats, 2 oz.:shopnow"
+                                                    onclick="clickTrackLink(this);">Shop Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- cat items  hide-->
+                    <div
+                        class="citrus_purebits_listed_tab filterBestCatDiv_citrus_purebites citrus_purebitescat_dry_citrus22">
+                        <div id="catFoodBtnContainer_citrus21_purebites" class="citrus_purebits_dog_main_flex">
+                            <div class="citrus_purebits_dog_item MiCS_cat_food_tab_citrus21_purebites MiCS_cat_food_tab_citrus21_active_citrus21_purebites"
+                                onclick="filterTabProduct('all_cats_citrus21_purebites')">
+                                <div class="citrus_catagory-line-main">
+                                    <h4>FREEZE-DRIED TREATS</h4>
+                                </div>
+                            </div>
+                            <div class="citrus_purebits_dog_item MiCS_cat_food_tab_citrus21_purebites"
+                                onclick="filterTabProduct('citrus1_cat_food_contet_citrus21_purebites')">
+                                <div class="citrus_catagory-line-main">
+                                    <h4>WET TREATS</h4>
+                                </div>
+                            </div>
+                            <div class="citrus_purebits_dog_item MiCS_cat_food_tab_citrus21_purebites"
+                                onclick="filterTabProduct('citrus2_cat_food_contet_citrus21_purebites')">
+                                <div class="citrus_catagory-line-main">
+                                    <h4>TOPPERS</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="citrus_purebits_dog_inner__content">
+                            <!-- Cat Row 01 -->
+                            <div class="citrus_purebits_dog_inner__content-item splide cirtus__tabs">
+                                <div class="splide__track">
+                                    <div class="splide__list">
+                                        <!-- single item 1 -->
+                                        <div
+                                            class="citrus_purebitsinner-item filterCatFoodDiv_citrus21_purebites all_cats_citrus21_purebites citrus__tab_content_item splide__slide">
+                                            <div class="citrus_purebitsinner-tab-img">
+                                                <a href="#"> <img
+                                                        src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/purebites_tab4_p1"
+                                                        alt="" /></a>
+                                            </div>
+                                            <a href="#">PureBites Freeze-Dried Chicken Breast Cat Treats, 2.3 oz.</a>
+                                            <div class="shop-btn">
+                                                <a href="https://www.petco.com/shop/en/petcostore/product/purebites-freeze-dried-chicken-breast-cat-treats
+                                                                " manual_cm_sp="sponsoredbrandpage:purebites:freezedriedtreats:1:purebitesfreezedriedchickenbreastcattreats23oz:shopnow
+                                                                " onclick="clickTrackLink(this);">Shop Now</a>
+                                            </div>
+                                        </div>
+                                        <!-- single item 2 -->
+                                        <div
+                                            class="citrus_purebitsinner-item filterCatFoodDiv_citrus21_purebites all_cats_citrus21_purebites citrus__tab_content_item splide__slide">
+                                            <div class="citrus_purebitsinner-tab-img">
+                                                <a href="#"> <img
+                                                        src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/purebites_tab4_p2"
+                                                        alt="" /></a>
+                                            </div>
+                                            <a href="#">PureBites Freeze-Dried Shrimp Cat Treats, 0.81 oz.</a>
+                                            <div class="shop-btn">
+                                                <a href="https://www.petco.com/shop/en/petcostore/product/purebites-freeze-dried-shrimp-cat-treats 
+                                                                " manual_cm_sp="sponsoredbrandpage:purebites:freezedriedtreats:2:purebitesfreezedriedshrimpcattreats038oz:shopnow
+                                                                " onclick="clickTrackLink(this);">Shop Now</a>
+                                            </div>
+                                        </div>
+                                        <!-- single item 3 -->
+                                        <div
+                                            class="citrus_purebitsinner-item filterCatFoodDiv_citrus21_purebites all_cats_citrus21_purebites citrus__tab_content_item splide__slide">
+                                            <div class="citrus_purebitsinner-tab-img">
+                                                <a href="#"> <img
+                                                        src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/purebites_tab4_p3"
+                                                        alt="" /></a>
+                                            </div>
+                                            <a href="#">PureBites Freeze-Dried Minnow Value Size Cat Treats, 2.3 oz.</a>
+                                            <div class="shop-btn">
+                                                <a href="https://www.petco.com/shop/en/petcostore/product/purebites-freeze-dried-minnow-value-size-cat-treats 
+                                                                " manual_cm_sp="sponsoredbrandpage:purebites:freezedriedtreats:3:purebitesfreezedriedminnowvaluesizecattreats23oz:shopnow
+                                                                " onclick="clickTrackLink(this);">Shop Now</a>
+                                            </div>
+                                        </div>
+                                        <!-- single item 4 -->
+                                        <div
+                                            class="citrus_purebitsinner-item filterCatFoodDiv_citrus21_purebites all_cats_citrus21_purebites citrus__tab_content_item splide__slide">
+                                            <div class="citrus_purebitsinner-tab-img">
+                                                <a href="#"> <img
+                                                        src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/purebites_tab4_p4"
+                                                        alt="" /></a>
+                                            </div>
+                                            <a href="#">PureBites Freeze Dried Salmon Cat Treats, 2.0 oz. </a>
+                                            <div class="shop-btn">
+                                                <a href="https://www.petco.com/shop/en/petcostore/product/purebites-freeze-dried-salmon-cat-treats"
+                                                    manual_cm_sp="sponsoredbrandpage:purebites:freezedriedtreats:4:purebites freeze dried salmon cat treats, 2.0 oz.:shopnow"
+                                                    onclick="clickTrackLink(this);">Shop Now</a>
+                                            </div>
+                                        </div>
+                                        <!-- single item 5 -->
+                                        <div
+                                            class="citrus_purebitsinner-item filterCatFoodDiv_citrus21_purebites all_cats_citrus21_purebites citrus__tab_content_item splide__slide">
+                                            <div class="citrus_purebitsinner-tab-img">
+                                                <a href="#"> <img
+                                                        src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/purebites_tab4_p5"
+                                                        alt="" /></a>
+                                            </div>
+                                            <a href="#">PureBites Chicken Breast & Catnip Freeze Dried Cat Treats, 1.3
+                                                oz.
+                                            </a>
+                                            <div class="shop-btn">
+                                                <a href="https://www.petco.com/shop/en/petcostore/product/purebites-chicken-breast-and-catnip-cat-treats"
+                                                    manual_cm_sp="sponsoredbrandpage:purebites:freezedriedtreats:5:purebites chicken breast & catnip freeze dried cat treats, 1.3 oz.:shopnow"
+                                                    onclick="clickTrackLink(this);">Shop Now</a>
+                                            </div>
+                                        </div>
+                                        <!-- single item 6 -->
+                                        <div
+                                            class="citrus_purebitsinner-item filterCatFoodDiv_citrus21_purebites all_cats_citrus21_purebites citrus__tab_content_item splide__slide">
+                                            <div class="citrus_purebitsinner-tab-img">
+                                                <a href="#"> <img
+                                                        src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/purebites_tab4_p6"
+                                                        alt="" /></a>
+                                            </div>
+                                            <a href="#">PureBites Ocean Medley Value Size Cat Treats, 0.77 oz. </a>
+                                            <div class="shop-btn">
+                                                <a href="https://www.petco.com/shop/en/petcostore/product/purebites-ocean-medley-value-size-cat-treats"
+                                                    manual_cm_sp="sponsoredbrandpage:purebites:freezedriedtreats:6:purebites ocean medley value size cat treats, 0.77 oz.:shopnow"
+                                                    onclick="clickTrackLink(this);">Shop Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Cat Row 02 -->
+                            <div class="citrus_purebits_dog_inner__content-item splide cirtus__tabs">
+                                <div class="splide__track">
+                                    <div class="splide__list">
+                                        <!-- single item 1 -->
+                                        <div
+                                            class="citrus_purebitsinner-item filterCatFoodDiv_citrus21_purebites citrus1_cat_food_contet_citrus21_purebites citrus__tab_content_item splide__slide">
+                                            <div class="citrus_purebitsinner-tab-img">
+                                                <a href="#"> <img
+                                                        src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/purebites_tab5_p1"
+                                                        alt="" /></a>
+                                            </div>
+                                            <a href="#">PureBites Mixers Wild Skipjack Tuna & Wild Alaskan Salmon in
+                                                Water
+                                                Cat Food Toppers, 1.76 oz., Case of 12</a>
+                                            <div class="shop-btn">
+                                                <a href="https://www.petco.com/shop/en/petcostore/product/purebites-whole-food-wild-skipjack-tuna-and-wild-alaskan-salmon-in-water-cat-toppers 
+                                                                " manual_cm_sp="sponsoredbrandpage:purebites:wetmixers:1:purebitesmixerswildskipjacktuna&wildalaskansalmoninwatercatfoodtoppers176ozcaseof12:shopnow
+                                                                " onclick="clickTrackLink(this);">Shop Now</a>
+                                            </div>
+                                        </div>
+                                        <!-- single item 2 -->
+                                        <div
+                                            class="citrus_purebitsinner-item filterCatFoodDiv_citrus21_purebites citrus1_cat_food_contet_citrus21_purebites citrus__tab_content_item splide__slide">
+                                            <div class="citrus_purebitsinner-tab-img">
+                                                <a href="#"> <img
+                                                        src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/purebites_tab5_p2"
+                                                        alt="" /></a>
+                                            </div>
+                                            <a href="#">PureBites Mixers Wild Skipjack Tuna in Water Cat Food Toppers,
+                                                1.76
+                                                oz., Case of 12</a>
+                                            <div class="shop-btn">
+                                                <a href="https://www.petco.com/shop/en/petcostore/product/purebites-whole-food-wild-skipjack-tuna-in-water-cat-toppers"
+                                                    manual_cm_sp="sponsoredbrandpage:purebites:wetmixers:2:purebitesmixerswildskipjacktunainwatercatfoodtoppers176ozcaseof12:shopnow
+                                                                " onclick="clickTrackLink(this);">Shop Now</a>
+                                            </div>
+                                        </div>
+                                        <!-- single item 3 -->
+                                        <div
+                                            class="citrus_purebitsinner-item filterCatFoodDiv_citrus21_purebites citrus1_cat_food_contet_citrus21_purebites citrus__tab_content_item splide__slide">
+                                            <div class="citrus_purebitsinner-tab-img">
+                                                <a href="#"> <img
+                                                        src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/purebites_tab5_p3"
+                                                        alt="" /></a>
+                                            </div>
+                                            <a href="#">PureBites Mixers Chicken Breast in Water Cat Food Toppers, 1.76
+                                                oz.,
+                                                Case of 12 </a>
+                                            <div class="shop-btn">
+                                                <a href="https://www.petco.com/shop/en/petcostore/product/purebites-whole-food-chicken-breast-in-water-cat-toppers"
+                                                    manual_cm_sp="sponsoredbrandpage:purebites:wetmixers:3:purebites mixers chicken breast in water cat food toppers, 1.76 oz., case of 12:shopnow"
+                                                    onclick="clickTrackLink(this);">Shop Now</a>
+                                            </div>
+                                        </div>
+                                        <!-- single item 4 -->
+                                        <div
+                                            class="citrus_purebitsinner-item filterCatFoodDiv_citrus21_purebites citrus1_cat_food_contet_citrus21_purebites citrus__tab_content_item splide__slide">
+                                            <div class="citrus_purebitsinner-tab-img">
+                                                <a href="#"> <img
+                                                        src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/purebites_tab5_p4"
+                                                        alt="" /></a>
+                                            </div>
+                                            <a href="#">PureBites Mixers Chicken Breast & Wild Ocean Shrimp in Water Cat
+                                                Food Toppers, 1.76 oz., Case of 12 </a>
+                                            <div class="shop-btn">
+                                                <a href="https://www.petco.com/shop/en/petcostore/product/purebites-whole-food-chicken-breast-and-wild-ocean-shrimp-in-water-cat-toppers"
+                                                    manual_cm_sp="sponsoredbrandpage:purebites:wetmixers:4:purebites mixers chicken breast & wild ocean shrimp in water cat food toppers, 1.76 oz., case of 12:shopnow"
+                                                    onclick="clickTrackLink(this);">Shop Now</a>
+                                            </div>
+                                        </div>
+                                        <!-- single item 5 -->
+                                        <div
+                                            class="citrus_purebitsinner-item filterCatFoodDiv_citrus21_purebites citrus1_cat_food_contet_citrus21_purebites citrus__tab_content_item splide__slide">
+                                            <div class="citrus_purebitsinner-tab-img">
+                                                <a href="#"> <img
+                                                        src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/purebites_tab5_p5"
+                                                        alt="" /></a>
+                                            </div>
+                                            <a href="#">PureBites Squeezable Gut & Digestion Creamy Cat Treats, 2.5 oz.
+                                            </a>
+                                            <div class="shop-btn">
+                                                <a href="https://www.petco.com/shop/en/petcostore/product/pure-bites-squeezable-gut-and-digestion-creamy-cat-treats-25-oz-3348694"
+                                                    manual_cm_sp="sponsoredbrandpage:purebites:wetmixers:5:purebites squeezable gut & digestion creamy cat treats, 2.5 oz.:shopnow"
+                                                    onclick="clickTrackLink(this);">Shop Now</a>
+                                            </div>
+                                        </div>
+                                        <!-- single item 6 -->
+                                        <div
+                                            class="citrus_purebitsinner-item filterCatFoodDiv_citrus21_purebites citrus1_cat_food_contet_citrus21_purebites citrus__tab_content_item splide__slide">
+                                            <div class="citrus_purebitsinner-tab-img">
+                                                <a href="#"> <img
+                                                        src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/purebites_tab5_p6"
+                                                        alt="" /></a>
+                                            </div>
+                                            <a href="#">PureBites Chicken Pate Cat Treats, 2.5 oz., Case of 12 </a>
+                                            <div class="shop-btn">
+                                                <a href="https://www.petco.com/shop/en/petcostore/product/purebites-chicken-pate-cat-treats-25-oz-case-of-12-3350014"
+                                                    manual_cm_sp="sponsoredbrandpage:purebites:wetmixers:6:purebites chicken pate cat treats, 2.5 oz., case of 12:shopnow"
+                                                    onclick="clickTrackLink(this);">Shop Now</a>
+                                            </div>
+                                        </div>
+                                        <!-- single item 7 -->
+                                        <div
+                                            class="citrus_purebitsinner-item filterCatFoodDiv_citrus21_purebites citrus1_cat_food_contet_citrus21_purebites citrus__tab_content_item splide__slide">
+                                            <div class="citrus_purebitsinner-tab-img">
+                                                <a href="#"> <img
+                                                        src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/purebites_tab5_p7"
+                                                        alt="" /></a>
+                                            </div>
+                                            <a href="#">PureBites Duck Pate Cat Treats, 2.5 oz., Case of 12 </a>
+                                            <div class="shop-btn">
+                                                <a href="https://www.petco.com/shop/en/petcostore/product/purebites-duck-pate-cat-treats-25-oz-case-of-12-3349996"
+                                                    manual_cm_sp="sponsoredbrandpage:purebites:wetmixers:7:purebites duck pate cat treats, 2.5 oz., case of 12:shopnow"
+                                                    onclick="clickTrackLink(this);">Shop Now</a>
+                                            </div>
+                                        </div>
+                                        <!-- single item 8 -->
+                                        <div
+                                            class="citrus_purebitsinner-item filterCatFoodDiv_citrus21_purebites citrus1_cat_food_contet_citrus21_purebites citrus__tab_content_item splide__slide">
+                                            <div class="citrus_purebitsinner-tab-img">
+                                                <a href="#"> <img
+                                                        src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/purebites_tab5_p8"
+                                                        alt="" /></a>
+                                            </div>
+                                            <a href="#">PureBites Squeezable Skin & Coat Creamy Cat Treats, 2.5 oz. </a>
+                                            <div class="shop-btn">
+                                                <a href="https://www.petco.com/shop/en/petcostore/product/pure-bites-squeezable-skin-and-coat-creamy-cat-treats-25-oz-3348686"
+                                                    manual_cm_sp="sponsoredbrandpage:purebites:wetmixers:8:purebites squeezable skin & coat creamy cat treats, 2.5 oz.:shopnow"
+                                                    onclick="clickTrackLink(this);">Shop Now</a>
+                                            </div>
+                                        </div>
+                                        <!-- single item 09 -->
+                                        <div
+                                            class="citrus_purebitsinner-item filterCatFoodDiv_citrus21_purebites citrus1_cat_food_contet_citrus21_purebites citrus__tab_content_item splide__slide">
+                                            <div class="citrus_purebitsinner-tab-img">
+                                                <a href="#"> <img
+                                                        src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/purebites_tab5_p10"
+                                                        alt="" /></a>
+                                            </div>
+                                            <a href="#">PureBites Chicken & Beef Pate Cat Treats, 2.5 oz., Case of 12
+                                            </a>
+                                            <div class="shop-btn">
+                                                <a href="https://www.petco.com/shop/en/petcostore/product/purebites-chicken-and-beef-pate-cat-treats-25-oz-case-of-12-3350022"
+                                                    manual_cm_sp="sponsoredbrandpage:purebites:wetmixers:10:purebites chicken & beef pate cat treats, 2.5 oz., case of 12:shopnow"
+                                                    onclick="clickTrackLink(this);">Shop Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Cat Row 03 -->
+                            <div class="citrus_purebits_dog_inner__content-item splide cirtus__tabs">
+                                <div class="splide__track">
+                                    <div class="splide__list">
+                                        <!-- single item 1 -->
+                                        <div
+                                            class="citrus_purebitsinner-item filterCatFoodDiv_citrus21_purebites citrus2_cat_food_contet_citrus21_purebites citrus__tab_content_item splide__slide">
+                                            <div class="citrus_purebitsinner-tab-img">
+                                                <a href="#"> <img
+                                                        src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/purebites_tab6_p1"
+                                                        alt="" /></a>
+                                            </div>
+                                            <a href="#">PureBites Squeezable Gut & Digestion Creamy Cat Treats, 2.5 oz.
+                                            </a>
+                                            <div class="shop-btn">
+                                                <a href="https://www.petco.com/shop/en/petcostore/product/pure-bites-squeezable-gut-and-digestion-creamy-cat-treats "
+                                                    manual_cm_sp="sponsoredbrandpage:purebites:toppers:1:purebitessqueezablegut&digestioncreamycattreats25oz:shopnow"
+                                                    onclick="clickTrackLink(this);">Shop Now</a>
+                                            </div>
+                                        </div>
+                                        <!-- single item 2 -->
+                                        <div
+                                            class="citrus_purebitsinner-item filterCatFoodDiv_citrus21_purebites citrus2_cat_food_contet_citrus21_purebites citrus__tab_content_item splide__slide">
+                                            <div class="citrus_purebitsinner-tab-img">
+                                                <a href="#"> <img
+                                                        src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/purebites_tab6_p2"
+                                                        alt="" /></a>
+                                            </div>
+                                            <a href="#">PureBites Chicken Pate Cat Treats, 2.5 oz., Case of 12 </a>
+                                            <div class="shop-btn">
+                                                <a href="https://www.petco.com/shop/en/petcostore/product/purebites-chicken-pate-cat-treats"
+                                                    manual_cm_sp="sponsoredbrandpage:purebites:toppers:2:purebiteschickenpatecattreats25ozcaseof12:shopnow"
+                                                    onclick="clickTrackLink(this);">Shop Now</a>
+                                            </div>
+                                        </div>
+                                        <!-- single item 3 -->
+                                        <div
+                                            class="citrus_purebitsinner-item filterCatFoodDiv_citrus21_purebites citrus2_cat_food_contet_citrus21_purebites citrus__tab_content_item splide__slide">
+                                            <div class="citrus_purebitsinner-tab-img">
+                                                <a href="#"> <img
+                                                        src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/purebites_tab6_p3"
+                                                        alt="" /></a>
+                                            </div>
+                                            <a href="#">PureBites Duck Pate Cat Treats, 2.5 oz., Case of 12 </a>
+                                            <div class="shop-btn">
+                                                <a href="https://www.petco.com/shop/en/petcostore/product/purebites-duck-pate-cat-treats"
+                                                    manual_cm_sp="sponsoredbrandpage:purebites:toppers:3:purebitesduckpatecattreats25ozcaseof12:shopnow"
+                                                    onclick="clickTrackLink(this);">Shop Now</a>
+                                            </div>
+                                        </div>
+                                        <!-- single item 4 -->
+                                        <div
+                                            class="citrus_purebitsinner-item filterCatFoodDiv_citrus21_purebites citrus2_cat_food_contet_citrus21_purebites citrus__tab_content_item splide__slide">
+                                            <div class="citrus_purebitsinner-tab-img">
+                                                <a href="#"> <img
+                                                        src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/purebites_tab6_p4"
+                                                        alt="" /></a>
+                                            </div>
+                                            <a href="#">PureBites Squeezable Skin & Coat Creamy Cat Treats, 2.5 oz. </a>
+                                            <div class="shop-btn">
+                                                <a href="https://www.petco.com/shop/en/petcostore/product/pure-bites-squeezable-skin-and-coat-creamy-cat-treats "
+                                                    manual_cm_sp="sponsoredbrandpage:purebites:toppers:4:purebitessqueezableskin&coatcreamycattreats25oz:shopnow"
+                                                    onclick="clickTrackLink(this);">Shop Now</a>
+                                            </div>
+                                        </div>
+                                        <!-- single item 5 -->
+                                        <div
+                                            class="citrus_purebitsinner-item filterCatFoodDiv_citrus21_purebites citrus2_cat_food_contet_citrus21_purebites citrus__tab_content_item splide__slide">
+                                            <div class="citrus_purebitsinner-tab-img">
+                                                <a href="#"> <img
+                                                        src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/purebites_tab6_p5"
+                                                        alt="" /></a>
+                                            </div>
+                                            <a href="#">PureBites Squeezable Gut & Digestion Creamy Cat Treats, 2.5
+                                                oz.</a>
+                                            <div class="shop-btn">
+                                                <a href="https://www.petco.com/shop/en/petcostore/product/pure-bites-squeezable-gut-and-digestion-creamy-cat-treats"
+                                                    manual_cm_sp="sponsoredbrandpage:purebites:toppers:5:purebitessqueezablegut&digestioncattreats25oz:shopnow"
+                                                    onclick="clickTrackLink(this);">Shop Now</a>
+                                            </div>
+                                        </div>
+                                        <!-- single item 6 -->
+                                        <div
+                                            class="citrus_purebitsinner-item filterCatFoodDiv_citrus21_purebites citrus2_cat_food_contet_citrus21_purebites citrus__tab_content_item splide__slide">
+                                            <div class="citrus_purebitsinner-tab-img">
+                                                <a href="#"> <img
+                                                        src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/purebites_tab6_p6"
+                                                        alt="" /></a>
+                                            </div>
+                                            <a href="#">PureBites Chicken & Beef Pate Cat Treats, 2.5 oz., Case of 12
+                                            </a>
+                                            <div class="shop-btn">
+                                                <a href="https://www.petco.com/shop/en/petcostore/product/purebites-chicken-and-beef-pate-cat-treats"
+                                                    manual_cm_sp="sponsoredbrandpage:purebites:toppers:6:purebites chicken & beef pate cat treats, 2.5 oz., case of 12:shopnow"
+                                                    onclick="clickTrackLink(this);">Shop Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- cat items  hide-->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--===============================================================
+                                                End Shopper navigation tab area
+                       ====================================================================-->
+
+    <!--===============================================================
+                 start good stuff  area
+   ====================================================================-->
+    <section class="citrus_purebits_good-stuff-area">
+        <div class="citrus_purebits_good_container">
+            <!-- common heading -->
+            <div class="citrus_purebits_cmon-heading">
+                <h2>Only serve the good stuff</h2>
+            </div>
+            <!-- common heading -->
+            <div class="citrus_purebits_good-video-flex">
+                <!-- single item -->
+                <div class="citrus_purebits_good-single">
+                    <iframe manual_cm_sp="sponsoredbrandpage:purebites:onlyservegoodstuff:1:superiorqualityvideo:video
+                        " onclick="clickTrackLink(this);" width="560" height="315"
+                        src="https://www.youtube.com/embed/Wp6uRm9AphM" title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                    <div class="citrus_purebits_good_v_content">
+                        <span>Superior quality your dog deserves</span>
+                        <p>Elevate their diet with tasty, limited-ingredient treats and toppers.</p>
+                    </div>
+                </div>
+                <!-- single item -->
+                <div class="citrus_purebits_good-single">
+                    <iframe manual_cm_sp="sponsoredbrandpage:purebites:onlyservegoodstuff:1:buildyourcatvideo:video
+                        " onclick="clickTrackLink(this);" width="560" height="315"
+                        src="https://www.youtube.com/embed/oguy5qM8eoM" title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                    <div class="citrus_purebits_good_v_content">
+                        <span>Only 1–3 simple ingredients</span>
+                        <p>Unsurpassed nutrition with the taste and smell they can’t resist.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--===============================================================
+          End good stuff  area
+   ====================================================================-->
+
+    <!--===============================================================
+                 start Page Bookend  area
+   ====================================================================-->
+    <section class="citrus_purebits_page-booked-area">
+        <div class="citrus_purebits_page-booked_container">
+            <div class="citrus_purebits_page-booked-flex">
+                <!-- single item -->
+                <div class="citrus_purebits_page-booked-single">
+                    <div class="citrus_purebites-footer-logo">
+                        <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/PureBites_Logo_White"
+                            alt="PureBites logo with product shots." />
+                    </div>
+                    <div class="citrus_purebits_page-booked_content">
+                        <span>Two paws up for PureBites</span>
+                        <p>Give your dog or cat PureBites to support a happy, wholesome future.</p>
+                        <div class="citrus_purebits_common-slider-btn">
+                            <a manual_cm_sp="sponsoredbrandpage:purebites:twopawsup:1:giveyourdog:shopnow"
+                                onclick="clickTrackLink(this);"
+                                href="https://www.petco.com/shop/en/petcostore/brand/purebites">SHOP All</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- single item -->
+                <div class="citrus_purebits_page-booked-single">
+                    <div class="citrus_purebits_page-booked_content_img">
+                        <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/purebites_footer-product "
+                            alt="PureBites logo with product shots." />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--===============================================================
+      End Page Bookend  area
+====================================================================-->
+</div>
+
+<!-- Merrick Gold brand page -->
+<!-- splide plugin js -->
+<script>
+    function At(n, t) { for (var e = 0; e < t.length; e++) { var i = t[e]; i.enumerable = i.enumerable || !1, i.configurable = !0, "value" in i && (i.writable = !0), Object.defineProperty(n, i.key, i) } } var n, t; n = this, t = function () { "use strict"; var n = "splide", t = "data-" + n, e = 10; function i(n) { n.length = 0 } function o(n) { return !c(n) && "object" == typeof n } function r(n) { return Array.isArray(n) } function u(n) { return "string" == typeof n } function s(n) { return void 0 === n } function c(n) { return null === n } function a(n) { return n instanceof HTMLElement } function f(n) { return r(n) ? n : [n] } function l(n, t) { f(n).forEach(t) } function d(n, t) { return -1 < n.indexOf(t) } function h(n, t) { return n.push.apply(n, f(t)), n } var p = Array.prototype; function g(n, t, e) { return p.slice.call(n, t, e) } function v(n, t, e) { n && l(t, function (t) { t && n.classList[e ? "add" : "remove"](t) }) } function m(n, t) { v(n, u(t) ? t.split(" ") : t, !0) } function y(n, t) { l(t, n.appendChild.bind(n)) } function b(n, t) { l(n, function (n) { var e = t.parentNode; e && e.insertBefore(n, t) }) } function w(n, t) { return a(n) && (n.msMatchesSelector || n.matches).call(n, t) } function x(n, t) { return n ? g(n.children).filter(function (n) { return w(n, t) }) : [] } function E(n, t) { return t ? x(n, t)[0] : n.firstElementChild } function S(n, t, e) { if (n) for (var i = Object.keys(n), o = (i = e ? i.reverse() : i, 0); o < i.length; o++) { var r = i[o]; if ("__proto__" !== r && !1 === t(n[r], r)) break } return n } function P(n) { return g(arguments, 1).forEach(function (t) { S(t, function (e, i) { n[i] = t[i] }) }), n } function k(n, t) { return S(t, function (t, e) { r(t) ? n[e] = t.slice() : o(t) ? n[e] = k(o(n[e]) ? n[e] : {}, t) : n[e] = t }), n } function _(n, t) { n && l(t, function (t) { n.removeAttribute(t) }) } function A(n, t, e) { o(t) ? S(t, function (t, e) { A(n, e, t) }) : c(e) ? _(n, t) : n.setAttribute(t, String(e)) } function L(n, t, e) { return n = document.createElement(n), t && (u(t) ? m : A)(n, t), e && y(e, n), n } function C(n, t, e) { if (s(e)) return getComputedStyle(n)[t]; c(e) || (n = n.style)[t] !== (e = "" + e) && (n[t] = e) } function z(n, t) { C(n, "display", t) } function D(n, t) { return n.getAttribute(t) } function M(n, t) { return n && n.classList.contains(t) } function I(n) { return n.getBoundingClientRect() } function N(n) { l(n, function (n) { n && n.parentNode && n.parentNode.removeChild(n) }) } function T(n) { return E((new DOMParser).parseFromString(n, "text/html").body) } function O(n, t) { n.preventDefault(), t && (n.stopPropagation(), n.stopImmediatePropagation()) } function R(n, t) { return n && n.querySelector(t) } function F(n, t) { return g(n.querySelectorAll(t)) } function j(n, t) { v(n, t, !1) } function W(n) { return u(n) ? n : n ? n + "px" : "" } function B(t, e) { if (void 0 === e && (e = ""), !t) throw new Error("[" + n + "] " + e) } function X(n) { setTimeout(n) } function H() { } function G(n) { return requestAnimationFrame(n) } var Y = Math.min, q = Math.max, U = Math.floor, J = Math.ceil, K = Math.abs; function Q(n, t, e, i) { var o = Y(t, e); e = q(t, e); return i ? o < n && n < e : o <= n && n <= e } function V(n, t, e) { var i = Y(t, e); e = q(t, e); return Y(q(i, n), e) } function Z(n) { return (0 < n) - (n < 0) } function $(n, t) { return l(t, function (t) { n = n.replace("%s", "" + t) }), n } function nn(n) { return n < 10 ? "0" + n : "" + n } var tn = {}; var en = "mounted", on = "move", rn = "moved", un = "shifted", sn = "click", cn = "active", an = "inactive", fn = "visible", ln = "hidden", dn = "slide:keydown", hn = "refresh", pn = "updated", gn = "resize", vn = "resized", mn = "repositioned", yn = "scrolled", bn = "destroy", wn = "navigation:mounted", xn = "lazyload:loaded"; function En(n) { var t = n.event, e = {}, i = []; function o(n, t, e) { r(n, t, function (n, t) { i = i.filter(function (i) { return !!(i[0] !== n || i[1] !== t || e && i[2] !== e) || (n.removeEventListener(t, i[2], i[3]), !1) }) }) } function r(n, t, e) { l(n, function (n) { n && t.split(" ").forEach(e.bind(null, n)) }) } function u() { i = i.filter(function (n) { return o(n[0], n[1]) }), t.offBy(e) } return t.on(bn, u, e), { on: function (n, i, o) { t.on(n, i, e, o) }, off: function (n) { t.off(n, e) }, emit: t.emit, bind: function (n, t, e, o) { r(n, t, function (n, t) { i.push([n, t, e, o]), n.addEventListener(t, e, o) }) }, unbind: o, destroy: u } } function Sn(n, t, e, i) { var o, r, u = Date.now, s = 0, c = !0, a = 0; function f() { if (!c) { var r = u() - o; if (n <= r ? (s = 1, o = u()) : s = r / n, e && e(s), 1 === s && (t(), i && ++a >= i)) return l(); G(f) } } function l() { c = !0 } function d() { cancelAnimationFrame(r), c = !(r = s = 0) } return { start: function (t) { t || d(), o = u() - (t ? s * n : 0), c = !1, G(f) }, rewind: function () { o = u(), s = 0, e && e(s) }, pause: l, cancel: d, set: function (t) { n = t }, isPaused: function () { return c } } } function Pn(n, t) { var e; return function () { var i = arguments, o = this; e || (e = Sn(t || 0, function () { n.apply(o, i), e = null }, null, 1)).start() } } var kn = { marginRight: ["marginBottom", "marginLeft"], autoWidth: ["autoHeight"], fixedWidth: ["fixedHeight"], paddingLeft: ["paddingTop", "paddingRight"], paddingRight: ["paddingBottom", "paddingLeft"], width: ["height"], left: ["top", "right"], right: ["bottom", "left"], x: ["y"], X: ["Y"], Y: ["X"], ArrowLeft: ["ArrowUp", "ArrowRight"], ArrowRight: ["ArrowDown", "ArrowLeft"] }, _n = n, An = n + "__slider", Ln = n + "__track", Cn = n + "__list", zn = n + "__slide", Dn = zn + "--clone", Mn = zn + "__container", In = n + "__arrows", Nn = n + "__arrow", Tn = Nn + "--prev", On = Nn + "--next", Rn = n + "__pagination", Fn = n + "__progress", jn = Fn + "__bar", Wn = n + "__autoplay", Bn = n + "__play", Xn = n + "__pause", Hn = "is-active", Gn = "is-prev", Yn = "is-next", qn = "is-visible", Un = "is-loading", Jn = [Hn, qn, Gn, Yn, Un], Kn = "role", Qn = "aria-controls", Vn = "aria-current", Zn = "aria-label", $n = "aria-hidden", nt = "tabindex", tt = "aria-orientation", et = [Kn, Qn, Vn, Zn, $n, tt, nt, "disabled"], it = "slide", ot = "loop", rt = "fade"; var ut = t + "-interval", st = { passive: !1, capture: !0 }, ct = "touchmove mousemove", at = "touchend touchcancel mouseup", ft = ["Left", "Right", "Up", "Down"], lt = "keydown", dt = t + "-lazy", ht = dt + "-srcset", pt = "[" + dt + "], [" + ht + "]", gt = [" ", "Enter", "Spacebar"], vt = Object.freeze({ __proto__: null, Options: function (n, e, i) { var o, r, u, s = Pn(a); function c(n) { n && removeEventListener("resize", s) } function a() { var t; (t = (t = function (n) { return n[1].matches }, g(r).filter(t)[0] || []))[0] !== u && function (t) { (t = i.breakpoints[t] || o).destroy ? (n.options = o, n.destroy("completely" === t.destroy)) : (n.state.is(5) && (c(!0), n.mount()), n.options = t) }(u = t[0]) } return { setup: function () { try { k(i, JSON.parse(D(n.root, t))) } catch (u) { B(!1, u.message) } o = k({}, i); var e, u = i.breakpoints; u && (e = "min" === i.mediaQuery, r = Object.keys(u).sort(function (n, t) { return e ? +t - +n : +n - +t }).map(function (n) { return [n, matchMedia("(" + (e ? "min" : "max") + "-width:" + n + "px)")] }), a()) }, mount: function () { r && addEventListener("resize", s) }, destroy: c } }, Direction: function (n, t, e) { return { resolve: function (n, t) { var i = e.direction; return kn[n]["rtl" !== i || t ? "ttb" === i ? 0 : -1 : 1] || n }, orient: function (n) { return n * ("rtl" === e.direction ? 1 : -1) } } }, Elements: function (t, o, r) { var u, s, c, a, f = En(t).on, l = t.root, d = {}, p = []; function g() { var t; !function () { s = E(l, "." + An), c = R(l, "." + Ln), a = E(c, "." + Cn), B(c && a, "A track/list element is missing."), h(p, x(a, "." + zn + ":not(." + Dn + ")")); var n = w("." + Wn), t = w("." + In); P(d, { root: l, slider: s, track: c, list: a, slides: p, arrows: t, autoplay: n, prev: R(t, "." + Tn), next: R(t, "." + On), bar: R(w("." + Fn), "." + jn), play: R(n, "." + Bn), pause: R(n, "." + Xn) }) }(), t = l.id || function (n) { return "" + n + nn(tn[n] = (tn[n] || 0) + 1) }(n), l.id = t, c.id = c.id || t + "-track", a.id = a.id || t + "-list", m(l, u = S()) } function v() { [l, c, a].forEach(function (n) { _(n, "style") }), i(p), j(l, u) } function y() { v(), g() } function b() { j(l, u), m(l, u = S()) } function w(n) { return E(l, n) || E(s, n) } function S() { return [_n + "--" + r.type, _n + "--" + r.direction, r.drag && _n + "--draggable", r.isNavigation && _n + "--nav", Hn] } return P(d, { setup: g, mount: function () { f(hn, y, e - 2), f(pn, b) }, destroy: v }) }, Slides: function (n, t, e) { var o = En(n), r = o.on, s = o.emit, c = o.bind, h = (o = t.Elements).slides, p = o.list, g = []; function x() { h.forEach(function (n, t) { k(n, t, -1) }) } function S() { z(function (n) { n.destroy() }), i(g) } function P() { S(), x() } function k(t, e, i) { (t = function (n, t, e, i) { var o, r = En(n), u = r.on, s = r.emit, c = r.bind, a = r.destroy, f = n.Components, l = n.root, d = n.options, h = d.isNavigation, p = d.updateOnMove, g = f.Direction.resolve, m = D(i, "style"), y = -1 < e, b = E(i, "." + Mn), w = d.focusableNodes && F(i, d.focusableNodes); function x() { var o = y ? e : t, r = $(d.i18n.slideX, o + 1); o = n.splides.map(function (n) { return n.splide.root.id }).join(" "), A(i, Zn, r), A(i, Qn, o), A(i, Kn, "menuitem"), k(L()) } function S() { o || P() } function P() { var e; o || (e = n.index, k(L()), function (n) { var t = !n && (!L() || y); A(i, $n, t || null), A(i, nt, !t && d.slideFocus ? 0 : null), w && w.forEach(function (n) { A(n, nt, t ? -1 : null) }), n !== M(i, qn) && (v(i, qn, n), s(n ? fn : ln, z)) }(function () { if (n.is(rt)) return L(); var t = I(f.Elements.track), e = I(i), o = g("left"), r = g("right"); return U(t[o]) <= J(e[o]) && U(e[r]) <= J(t[r]) }()), v(i, Gn, t === e - 1), v(i, Yn, t === e + 1)) } function k(n) { n !== M(i, Hn) && (v(i, Hn, n), h && A(i, Vn, n || null), s(n ? cn : an, z)) } function L() { var i = n.index; return i === t || d.cloneStatus && i === e } var z = { index: t, slideIndex: e, slide: i, container: b, isClone: y, mount: function () { y || (i.id = l.id + "-slide" + nn(t + 1)), c(i, "click keydown", function (n) { s("click" === n.type ? sn : dn, z, n) }), u([hn, mn, un, rn, yn], P), u(wn, x), p && u(on, S) }, destroy: function () { o = !0, a(), j(i, Jn), _(i, et), A(i, "style", m) }, update: P, style: function (n, t, e) { C(e && b || i, n, t) }, isWithin: function (e, i) { return e = K(e - t), (e = y || !d.rewind && !n.is(ot) ? e : Y(e, n.length - e)) <= i } }; return z }(n, e, i, t)).mount(), g.push(t) } function L(n) { return n ? O(function (n) { return !n.isClone }) : g } function z(n, t) { L(t).forEach(n) } function O(n) { return g.filter("function" == typeof n ? n : function (t) { return u(n) ? w(t.slide, n) : d(f(n), t.index) }) } return { mount: function () { x(), r(hn, P), r([en, hn], function () { g.sort(function (n, t) { return n.index - t.index }) }) }, destroy: S, update: function () { z(function (n) { n.update() }) }, register: k, get: L, getIn: function (n) { var i = t.Controller, o = i.toIndex(n), r = i.hasFocus() ? 1 : e.perPage; return O(function (n) { return Q(n.index, o, o + r - 1) }) }, getAt: function (n) { return O(n)[0] }, add: function (n, t) { l(n, function (n) { var i, o, r; a(n = u(n) ? T(n) : n) && ((i = h[t]) ? b(n, i) : y(p, n), m(n, e.classes.slide), n = n, o = s.bind(null, gn), n = F(n, "img"), (r = n.length) ? n.forEach(function (n) { c(n, "load error", function () { --r || o() }) }) : o()) }), s(hn) }, remove: function (n) { N(O(n).map(function (n) { return n.slide })), s(hn) }, forEach: z, filter: O, style: function (n, t, e) { z(function (i) { i.style(n, t, e) }) }, getLength: function (n) { return (n ? h : g).length }, isEnough: function () { return g.length > e.perPage } } }, Layout: function (n, t, e) { var i, r, u = En(n), s = u.on, c = u.bind, a = u.emit, f = t.Slides, l = t.Direction.resolve, d = (t = t.Elements).root, h = t.track, p = t.list, g = f.getAt; function v() { r = null, i = "ttb" === e.direction, C(d, "maxWidth", W(e.width)), C(h, l("paddingLeft"), y(!1)), C(h, l("paddingRight"), y(!0)), m() } function m() { var n = I(d); r && r.width === n.width && r.height === n.height || (C(h, "height", function () { var n = ""; return i && (B(n = b(), "height or heightRatio is missing."), n = "calc(" + n + " - " + y(!1) + " - " + y(!0) + ")"), n }()), f.style(l("marginRight"), W(e.gap)), f.style("width", (e.autoWidth ? "" : W(e.fixedWidth) || (i ? "" : w())) || null), f.style("height", W(e.fixedHeight) || (i ? e.autoHeight ? "" : w() : b()) || null, !0), r = n, a(vn)) } function y(n) { var t = e.padding; n = l(n ? "right" : "left"); return t && W(t[n] || (o(t) ? 0 : t)) || "0px" } function b() { return W(e.height || I(p).width * e.heightRatio) } function w() { var n = W(e.gap); return "calc((100%" + (n && " + " + n) + ")/" + (e.perPage || 1) + (n && " - " + n) + ")" } function x(n, t) { var e = g(n); return e ? (n = I(e.slide)[l("right")], e = I(p)[l("left")], K(n - e) + (t ? 0 : E())) : 0 } function E() { var n = g(0); return n && parseFloat(C(n.slide, l("marginRight"))) || 0 } return { mount: function () { v(), c(window, "resize load", Pn(a.bind(this, gn))), s([pn, hn], v), s(gn, m) }, listSize: function () { return I(p)[l("width")] }, slideSize: function (n, t) { return (n = g(n || 0)) ? I(n.slide)[l("width")] + (t ? 0 : E()) : 0 }, sliderSize: function () { return x(n.length - 1, !0) - x(-1, !0) }, totalSize: x, getPadding: function (n) { return parseFloat(C(h, l("padding" + (n ? "Right" : "Left")))) || 0 } } }, Clones: function (n, t, e) { var o, r = En(n), s = r.on, c = r.emit, a = t.Elements, f = t.Slides, l = t.Direction.resolve, d = []; function p() { (o = x()) && (function (t) { var i = f.get().slice(), o = i.length; if (o) { for (; i.length < t;)h(i, i); h(i.slice(-t), i.slice(0, t)).forEach(function (r, u) { var s = u < t, c = function (t, i) { return m(t = t.cloneNode(!0), e.classes.clone), t.id = n.root.id + "-clone" + nn(i + 1), t }(r.slide, u); s ? b(c, i[0].slide) : y(a.list, c), h(d, c), f.register(c, u - t + (s ? 0 : o), r.index) }) } }(o), c(gn)) } function g() { N(d), i(d) } function v() { g(), p() } function w() { o < x() && c(hn) } function x() { var t, i, o = e.clones; return n.is(ot) ? o || (t = a.list, u(i = e[l("fixedWidth")]) && (i = I(t = L("div", { style: "width: " + i + "; position: absolute;" }, t)).width, N(t)), o = ((i = i) && J(I(a.track)[l("width")] / i) || e[l("autoWidth")] && n.length || e.perPage) * (e.drag ? (e.flickMaxPages || 1) + 1 : 2)) : o = 0, o } return { mount: function () { p(), s(hn, v), s([pn, gn], w) }, destroy: g } }, Move: function (n, t, e) { var i, o = En(n), r = o.on, u = o.emit, c = (o = t.Layout).slideSize, a = o.getPadding, f = o.totalSize, l = o.listSize, d = o.sliderSize, h = (o = t.Direction).resolve, p = o.orient, g = (o = t.Elements).list, v = o.track; function m() { P() || (t.Scroll.cancel(), y(n.index), u(mn)) } function y(n) { b(x(n, !0)) } function b(t, e) { n.is(rt) || (e = e ? t : function (t) { var e, i; return n.is(ot) && (i = p(t - E()), e = k(!1, t) && i < 0, i = k(!0, t) && 0 < i, (e || i) && (t = w(t, i))), t }(t), g.style.transform = "translate" + h("X") + "(" + e + "px)", t !== e && u(un)) } function w(n, t) { var e = n - S(t), i = d(); return n - p(i * (J(K(e) / i) || 1)) * (t ? 1 : -1) } function x(t, i) { var o = p(f(t - 1) - (o = t, "center" === (t = e.focus) ? (l() - c(o, !0)) / 2 : +t * c(o) || 0)); return i ? function (t) { return e.trimSpace && n.is(it) && (t = V(t, 0, p(d() - l()))), t }(o) : o } function E() { var n = h("left"); return I(g)[n] - I(v)[n] + p(a(!1)) } function S(n) { return x(n ? t.Controller.getEnd() : 0, !!e.trimSpace) } function P() { return n.state.is(4) && e.waitForTransition } function k(n, t) { t = s(t) ? E() : t; var e = !0 !== n && p(t) < p(S(!1)); t = !1 !== n && p(t) > p(S(!0)); return e || t } return { mount: function () { i = t.Transition, r([en, vn, pn, hn], m) }, destroy: function () { _(g, "style") }, move: function (o, r, s, c) { var a, f; P() || (a = n.state.set, f = E(), o !== r && (i.cancel(), b(w(f, r < o), !0)), a(4), u(on, r, s, o), i.start(r, function () { a(3), u(rn, r, s, o), "move" === e.trimSpace && o !== s && f === E() ? t.Controller.go(s < o ? ">" : "<", !1, c) : c && c() })) }, jump: y, translate: b, shift: w, cancel: function () { b(E()), i.cancel() }, toIndex: function (n) { for (var e = t.Slides.get(), i = 0, o = 1 / 0, r = 0; r < e.length; r++) { var u = e[r].index, s = K(x(u, !0) - n); if (!(s <= o)) break; o = s, i = u } return i }, toPosition: x, getPosition: E, getLimit: S, isBusy: P, exceededLimit: k } }, Controller: function (n, t, i) { var o, r, c, a = En(n).on, f = t.Move, l = f.getPosition, d = f.getLimit, h = t.Slides, p = h.isEnough, g = h.getLength, v = n.is(ot), m = n.is(it), y = i.start || 0, b = y; function w() { o = g(!0), r = i.perMove, c = i.perPage, y = V(y, 0, o - 1) } function x(n, e, i, o, r) { var u = e ? n : z(n); t.Scroll.scroll(e || i ? f.toPosition(u, !0) : n, o, function () { D(f.toIndex(f.getPosition())), r && r() }) } function E(n) { return P(!1, n) } function S(n) { return P(!0, n) } function P(n, t) { var e, i, o = r || (M() ? 1 : c), u = k(y + o * (n ? -1 : 1), y); return -1 !== u || !m || (e = l(), i = d(!n), o = 1, K(e - i) < o) ? t ? u : A(u) : n ? 0 : _() } function k(n, t, e) { var u; return p() ? (u = _(), n < 0 || u < n ? n = Q(0, n, t, !0) || Q(u, t, n, !0) ? L(C(n)) : v ? r || M() ? n : n < 0 ? -(o % c || c) : o : i.rewind ? n < 0 ? u : 0 : -1 : e || n === t || (n = r ? n : L(C(t) + (n < t ? -1 : 1)))) : n = -1, n } function _() { var n = o - c; return (M() || v && r) && (n = o - 1), q(n, 0) } function A(n) { return v ? p() ? n % o + (n < 0 ? o : 0) : -1 : n } function L(n) { return V(M() ? n : c * n, 0, _()) } function C(n) { return M() || (n = Q(n, o - c, o - 1) ? o - 1 : n, n = U(n / c)), n } function z(n) { return n = f.toIndex(n), m ? V(n, 0, _()) : n } function D(n) { n !== y && (b = y, y = n) } function M() { return !s(i.focus) || i.isNavigation } return { mount: function () { w(), a([pn, hn], w, e - 1) }, go: function (n, t, e) { var o = function (n) { var t, e, i = y; return u(n) ? (t = (e = n.match(/([+\-<>])(\d+)?/) || [])[1], e = e[2], "+" === t || "-" === t ? i = k(y + +("" + t + (+e || 1)), y, !0) : ">" === t ? i = e ? L(+e) : E(!0) : "<" === t && (i = S(!0))) : i = v ? n : V(n, 0, _()), i }(n); i.useScroll ? x(o, !0, !0, i.speed, e) : -1 < (n = A(o)) && !f.isBusy() && (t || n !== y) && (D(n), f.move(o, n, b, e)) }, scroll: x, getNext: E, getPrev: S, getAdjacent: P, getEnd: _, setIndex: D, getIndex: function (n) { return n ? b : y }, toIndex: L, toPage: C, toDest: z, hasFocus: M } }, Arrows: function (n, t, e) { var i, o = En(n), r = o.on, u = o.bind, s = o.emit, c = e.classes, a = e.i18n, f = t.Elements, l = t.Controller, d = f.arrows, h = f.prev, p = f.next, g = {}; function v() { var t, o; e.arrows && (h && p || (d = L("div", c.arrows), h = m(!0), p = m(!1), i = !0, y(d, [h, p]), b(d, E("slider" === e.arrows && f.slider || n.root)))), h && p && (g.prev ? z(d, !1 === e.arrows ? "none" : "") : (t = f.track.id, A(h, Qn, t), A(p, Qn, t), g.prev = h, g.next = p, o = l.go, r([en, rn, pn, hn, yn], w), u(p, "click", function () { o(">", !0) }), u(h, "click", function () { o("<", !0) }), s("arrows:mounted", h, p))) } function m(n) { return T('<button class="' + c.arrow + " " + (n ? c.prev : c.next) + '" type="button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40"><path d="' + (e.arrowPath || "m15.5 0.932-4.3 4.38 14.5 14.6-14.5 14.5 4.3 4.4 14.6-14.6 4.4-4.3-4.4-4.4-14.6-14.6z") + '" />') } function w() { var t = n.index, e = l.getPrev(), i = l.getNext(), o = -1 < e && t < e ? a.last : a.prev; t = -1 < i && i < t ? a.first : a.next; h.disabled = e < 0, p.disabled = i < 0, A(h, Zn, o), A(p, Zn, t), s("arrows:updated", h, p, e, i) } return { arrows: g, mount: function () { v(), r(pn, v) }, destroy: function () { i ? N(d) : (_(h, et), _(p, et)) } } }, Autoplay: function (n, t, e) { var i, o, r, u = En(n), s = u.on, c = u.bind, a = u.emit, f = Sn(e.interval, n.go.bind(n, ">"), function (n) { var t = d.bar; t && C(t, "width", 100 * n + "%"), a("autoplay:playing", n) }), l = f.isPaused, d = t.Elements; function h(n) { var t = n ? "pause" : "play", i = d[t]; i && (A(i, Qn, d.track.id), A(i, Zn, e.i18n[t]), c(i, "click", n ? g : p)) } function p() { l() && t.Slides.isEnough() && (f.start(!e.resetProgress), o = i = r = !1, a("autoplay:play")) } function g(n) { void 0 === n && (n = !0), l() || (f.pause(), a("autoplay:pause")), r = n } function v() { r || (i || o ? g(!1) : p()) } function m() { var i = t.Slides.getAt(n.index); f.set(i && +D(i.slide, ut) || e.interval) } return { mount: function () { var n = e.autoplay; n && (h(!0), h(!1), function () { var n = d.root; e.pauseOnHover && c(n, "mouseenter mouseleave", function (n) { i = "mouseenter" === n.type, v() }), e.pauseOnFocus && c(n, "focusin focusout", function (n) { o = "focusin" === n.type, v() }), s([on, "scroll", hn], f.rewind), s(on, m) }(), "pause" !== n && p()) }, destroy: f.cancel, play: p, pause: g, isPaused: l } }, Cover: function (n, t, e) { var i = En(n).on; function o(n) { t.Slides.forEach(function (t) { var e = E(t.container || t.slide, "img"); e && e.src && r(n, e, t) }) } function r(n, t, e) { e.style("background", n ? 'center/cover no-repeat url("' + t.src + '")' : "", !0), z(t, n ? "none" : "") } return { mount: function () { e.cover && (i(xn, function (n, t) { r(!0, n, t) }), i([en, pn, hn], o.bind(null, !0))) }, destroy: function () { o(!1) } } }, Scroll: function (n, t, e) { var i, o, r = En(n), u = r.on, s = r.emit, c = t.Move, a = c.getPosition, f = c.getLimit, l = c.exceededLimit; function d() { var t = a(), e = c.toIndex(t); Q(e, 0, n.length - 1) || c.translate(c.shift(t, 0 < e), !0), o && o(), s(yn) } function h() { i && i.cancel() } function p() { i && !i.isPaused() && (h(), d()) } return { mount: function () { u(on, h), u([pn, hn], p) }, destroy: h, scroll: function t(r, u, p, g) { var v, m = a(), y = 1; u = u || (v = K(r - m), q(v / 1.5, 800)), o = p, h(), i = Sn(u, d, function (i) { var o = a(), u = (m + (r - m) * (u = i, (i = e.easingFunc) ? i(u) : 1 - Math.pow(1 - u, 4)) - a()) * y; c.translate(o + u), n.is(it) && !g && l() && (y *= .6, K(u) < 10 && (u = l(!1), t(f(!u), 600, null, !0))) }, 1), s("scroll"), i.start() }, cancel: p } }, Drag: function (n, t, e) { var i, r, u, s, c, a, f, l, d, h = En(n), p = h.on, g = h.emit, v = h.bind, m = h.unbind, y = t.Move, b = t.Scroll, x = t.Controller, E = t.Elements.track, S = (h = t.Direction).resolve, P = h.orient, k = y.getPosition, _ = y.exceededLimit, A = !1; function L() { var n = e.drag; j(!n), c = "free" === n } function C(n) { var t, i; l || (i = e.noDrag, t = F(n), i = !i || !w(n.target, i), f = !1, !i || !t && n.button || (y.isBusy() ? O(n, !0) : (d = t ? E : window, s = u = null, v(d, ct, z, st), v(d, at, D, st), y.cancel(), b.cancel(), M(n)))) } function z(t) { var u, c, l; s || g("drag"), (s = t).cancelable && (u = T(t) - T(r), a ? (y.translate(i + u / (A && n.is(it) ? 5 : 1)), c = 200 < R(t) - R(r), l = A !== (A = _()), (c || l) && M(t), g("dragging"), f = !0, O(t)) : (l = o(l = e.dragMinThreshold) ? l : { mouse: 0, touch: +l || 10 }, a = K(u) > (F(t) ? l.touch : l.mouse), N() && O(t))) } function D(i) { m(d, ct, z), m(d, at, D); var o, f, l = n.index; s ? ((a || i.cancelable && N()) && (f = o = function (t) { if (n.is(ot) || !A) { var e = r === s && u || r, i = T(s) - T(e); e = R(t) - R(e), t = R(t) - R(s) < 200; if (e && t) return i / e } return 0 }(i), f = k() + Z(f) * Y(K(f) * (e.flickPower || 600), c ? 1 / 0 : t.Layout.listSize() * (e.flickMaxPages || 1)), c ? x.scroll(f) : n.is(rt) ? x.go(l + P(Z(o))) : x.go(x.toDest(f), !0), O(i)), g("dragged")) : c || k() === y.toPosition(l) || x.go(l, !0), a = !1 } function M(n) { u = r, r = n, i = k() } function I(n) { !l && f && O(n, !0) } function N() { var n = K(T(s) - T(r)); return K(T(s, !0) - T(r, !0)) < n } function T(n, t) { return (F(n) ? n.touches[0] : n)["page" + S(t ? "Y" : "X")] } function R(n) { return n.timeStamp } function F(n) { return "undefined" != typeof TouchEvent && n instanceof TouchEvent } function j(n) { l = n } return { mount: function () { v(E, ct, H, st), v(E, at, H, st), v(E, "touchstart mousedown", C, st), v(E, "click", I, { capture: !0 }), v(E, "dragstart", O), p([en, pn], L) }, disable: j, isDragging: function () { return a } } }, Keyboard: function (n, t, e) { var i, o, r = En(n), u = r.on, s = r.bind, c = r.unbind, f = n.root, l = t.Direction.resolve; function h() { var n = e.keyboard; n && ("focused" === n ? A(i = f, nt, 0) : i = window, s(i, lt, m)) } function p() { c(i, lt), a(i) && _(i, nt) } function g() { var n = o; o = !0, X(function () { o = n }) } function v() { p(), h() } function m(t) { o || (t = t.key, (t = d(ft, t) ? "Arrow" + t : t) === l("ArrowLeft") ? n.go("<") : t === l("ArrowRight") && n.go(">")) } return { mount: function () { h(), u(pn, v), u(on, g) }, destroy: p, disable: function (n) { o = n } } }, LazyLoad: function (n, t, e) { var i = En(n), o = i.on, r = i.off, u = i.bind, s = i.emit, c = "sequential" === e.lazyLoad, a = [], f = 0; function l() { h(), d() } function d() { t.Slides.forEach(function (n) { F(n.slide, pt).forEach(function (t) { var i, o, r = D(t, dt), u = D(t, ht); r === t.src && u === t.srcset || (i = e.classes.spinner, A(o = E(o = t.parentElement, "." + i) || L("span", i, o), Kn, "presentation"), a.push({ o: t, e: n, src: r, srcset: u, c: o }), t.src || z(t, "none")) }) }), c && v() } function h() { f = 0, a = [] } function p() { (a = a.filter(function (t) { var i = e.perPage * ((e.preloadPages || 1) + 1) - 1; return !t.e.isWithin(n.index, i) || g(t) })).length || r(rn) } function g(n) { var t = n.o; m(n.e.slide, Un), u(t, "load error", function (t) { !function (n, t) { var e = n.e; j(e.slide, Un), t || (N(n.c), z(n.o, ""), s(xn, n.o, e), s(gn)), c && v() }(n, "error" === t.type) }), ["src", "srcset"].forEach(function (e) { n[e] && (A(t, e, n[e]), _(t, "src" === e ? dt : ht)) }) } function v() { f < a.length && g(a[f++]) } return { mount: function () { e.lazyLoad && (d(), o(hn, l), c || o([en, hn, rn, yn], p)) }, destroy: h } }, Pagination: function (n, t, e) { var o, r = En(n), u = r.on, s = r.emit, c = r.bind, a = r.unbind, f = t.Slides, l = t.Elements, d = t.Controller, h = d.hasFocus, p = d.getIndex, g = []; function v() { y(), e.pagination && f.isEnough() && (function () { var t = n.length, i = e.classes, r = e.i18n, u = e.perPage, s = "slider" === e.pagination && l.slider || l.root, a = h() ? t : J(t / u); o = L("ul", i.pagination, s); for (var d = 0; d < a; d++) { var p = L("li", null, o), v = L("button", { class: i.page, type: "button" }, p), m = f.getIn(d).map(function (n) { return n.slide.id }), y = !h() && 1 < u ? r.pageX : r.slideX; c(v, "click", b.bind(null, d)), A(v, Qn, m.join(" ")), A(v, Zn, $(y, d + 1)), g.push({ li: p, button: v, page: d }) } }(), s("pagination:mounted", { list: o, items: g }, w(n.index)), x()) } function y() { o && (N(o), g.forEach(function (n) { a(n.button, "click") }), i(g), o = null) } function b(n) { d.go(">" + n, !0, function () { var t = f.getAt(d.toIndex(n)); t && ((t = t.slide).setActive && t.setActive() || t.focus({ preventScroll: !0 })) }) } function w(n) { return g[d.toPage(n)] } function x() { var n = w(p(!0)), t = w(p()); n && (j(n.button, Hn), _(n.button, Vn)), t && (m(t.button, Hn), A(t.button, Vn, !0)), s("pagination:updated", { list: o, items: g }, n, t) } return { items: g, mount: function () { v(), u([pn, hn], v), u([on, yn], x) }, destroy: y, getAt: w, update: x } }, Sync: function (n, t, e) { var o = t.Elements.list, r = []; function u() { var t, i; n.splides.forEach(function (t) { var e; t.isParent || (e = t.splide, [n, e].forEach(function (t) { var i = En(t), o = t === n ? e : n; i.on(on, function (n, t, e) { o.go(o.is(ot) ? e : n) }), r.push(i) })) }), e.isNavigation && ((i = (t = En(n)).on)(sn, a), i(dn, f), i([en, pn], c), A(o, Kn, "menu"), r.push(t), t.emit(wn, n.splides)) } function s() { _(o, et), r.forEach(function (n) { n.destroy() }), i(r) } function c() { A(o, tt, "ttb" !== e.direction ? "horizontal" : null) } function a(t) { n.go(t.index) } function f(n, t) { d(gt, t.key) && (a(n), O(t)) } return { mount: u, destroy: s, remount: function () { s(), u() } } }, Wheel: function (n, t, e) { var i = En(n).bind; function o(i) { var o; !i.cancelable || (o = i.deltaY) && (n.go((o = o < 0) ? "<" : ">"), o = o, e.releaseWheel && !n.state.is(4) && -1 === t.Controller.getAdjacent(o) || O(i)) } return { mount: function () { e.wheel && i(t.Elements.track, "wheel", o, st) } } } }), mt = { type: "slide", speed: 400, waitForTransition: !0, perPage: 1, cloneStatus: !0, arrows: !0, pagination: !0, interval: 5e3, pauseOnHover: !0, pauseOnFocus: !0, resetProgress: !0, keyboard: !0, easing: "cubic-bezier(0.25, 1, 0.5, 1)", drag: !0, direction: "ltr", slideFocus: !0, trimSpace: !0, focusableNodes: "a, button, textarea, input, select, iframe", classes: { slide: zn, clone: Dn, arrows: In, arrow: Nn, prev: Tn, next: On, pagination: Rn, page: Rn + "__page", spinner: n + "__spinner" }, i18n: { prev: "Previous slide", next: "Next slide", first: "Go to first slide", last: "Go to last slide", slideX: "Go to slide %s", pageX: "Go to page %s", play: "Start autoplay", pause: "Pause autoplay" } }; function yt(n, t, e) { var i = En(n).on; return { mount: function () { i([en, hn], function () { X(function () { t.Slides.style("transition", "opacity " + e.speed + "ms " + e.easing) }) }) }, start: function (n, e) { var i = t.Elements.track; C(i, "height", W(I(i).height)), X(function () { e(), C(i, "height", "") }) }, cancel: H } } function bt(n, t, e) { var i, o = En(n).bind, r = t.Move, u = t.Controller, s = t.Elements.list; function c() { a("") } function a(n) { C(s, "transition", n) } return { mount: function () { o(s, "transitionend", function (n) { n.target === s && i && (c(), i()) }) }, start: function (t, o) { var s = r.toPosition(t, !0), c = r.getPosition(), f = function (t) { var i = e.rewindSpeed; if (n.is(it) && i) { var o = u.getIndex(!0), r = u.getEnd(); if (0 === o && r <= t || r <= o && 0 === t) return i } return e.speed }(t); 1 <= K(s - c) && 1 <= f ? (a("transform " + f + "ms " + e.easing), r.translate(s, !0), i = o) : (r.jump(t), o()) }, cancel: c } } return (Rn = function () { function n(t, i) { this.event = function () { var n = {}; function t(t, e) { i(t, function (t, i) { var o = n[t]; n[t] = o && o.filter(function (n) { return n.n ? n.n !== e : e || n.t !== i }) }) } function i(n, t) { f(n).join(" ").split(" ").forEach(function (n) { n = n.split("."), t(n[0], n[1]) }) } return { on: function (t, o, r, u) { void 0 === u && (u = e), i(t, function (t, e) { n[t] = n[t] || [], h(n[t], { i: t, r: o, t: e, u: u, n: r }).sort(function (n, t) { return n.u - t.u }) }) }, off: t, offBy: function (e) { S(n, function (n, i) { t(i, e) }) }, emit: function (t) { var e = arguments; (n[t] || []).forEach(function (n) { n.r.apply(n, g(e, 1)) }) }, destroy: function () { n = {} } } }(), this.Components = {}, this.state = function (n) { var t = n; return { set: function (n) { t = n }, is: function (n) { return d(f(n), t) } } }(1), this.splides = [], this.f = {}, this.a = {}, B(t = u(t) ? R(document, t) : t, t + " is invalid."), this.root = t, k(mt, n.defaults), k(k(this.f, mt), i || {}) } var t, o = n.prototype; return o.mount = function (n, t) { var e = this, i = this.state, o = this.Components; return B(i.is([1, 5]), "Already mounted!"), i.set(1), this.s = o, this.l = t || this.l || (this.is(rt) ? yt : bt), this.a = n || this.a, S(P({}, vt, this.a, { Transition: this.l }), function (n, t) { n = n(e, o, e.f), (o[t] = n).setup && n.setup() }), S(o, function (n) { n.mount && n.mount() }), this.emit(en), m(this.root, "is-initialized"), i.set(3), this.emit("ready"), this }, o.sync = function (n) { return this.splides.push({ splide: n }), n.splides.push({ splide: this, isParent: !0 }), this.state.is(3) && (this.s.Sync.remount(), n.Components.Sync.remount()), this }, o.go = function (n) { return this.s.Controller.go(n), this }, o.on = function (n, t) { return this.event.on(n, t, null, 20), this }, o.off = function (n) { return this.event.off(n), this }, o.emit = function (n) { var t; return (t = this.event).emit.apply(t, [n].concat(g(arguments, 1))), this }, o.add = function (n, t) { return this.s.Slides.add(n, t), this }, o.remove = function (n) { return this.s.Slides.remove(n), this }, o.is = function (n) { return this.f.type === n }, o.refresh = function () { return this.emit(hn), this }, o.destroy = function (n) { void 0 === n && (n = !0); var t = this.event, e = this.state; return e.is(1) ? t.on("ready", this.destroy.bind(this, n), this) : (S(this.s, function (t) { t.destroy && t.destroy(n) }, !0), t.emit(bn), t.destroy(), n && i(this.splides), e.set(5)), this }, t = n, (o = [{ key: "options", get: function () { return this.f }, set: function (n) { var t = this.f; k(t, n), this.state.is(1) || this.emit(pn, t) } }, { key: "length", get: function () { return this.s.Slides.getLength(!0) } }, { key: "index", get: function () { return this.s.Controller.getIndex() } }]) && At(t.prototype, o), n }()).defaults = {}, Rn.STATES = { CREATED: 1, MOUNTED: 2, IDLE: 3, MOVING: 4, DESTROYED: 5 }, Rn }, "object" == typeof exports && "undefined" != typeof module ? module.exports = t() : "function" == typeof define && define.amd ? define(t) : (n = "undefined" != typeof globalThis ? globalThis : n || self).Splide = t();
+</script>
+<!-- custom js -->
+<script type="text/javascript">
+    // start parent tab cat & dog js //
+    filterBestCat("citrus_purebites_cat_all_recipes");
+
+    function filterBestCat(c) {
+        var x, i;
+        x = document.getElementsByClassName("filterBestCatDiv_citrus_purebites");
+        if (c == "all") c = "";
+        for (i = 0; i < x.length; i++) {
+            RemoveClassBestCat(x[i], "citrusPurebite21_show");
+            if (x[i].className.indexOf(c) > -1)
+                AddClassCatBest(x[i], "citrusPurebite21_show");
+        }
+        // change tab image call default tab category
+        if (c == "citrus_purebitescat_dry_citrus22") {
+            filterTabProduct("all_cats_citrus21_purebites");
+        } else if (c == "citrus_purebites_cat_all_recipes") {
+            filterTabProduct("citrus_purebites_frozen_raw_meals");
+        }
+    }
+
+    function AddClassCatBest(element, name) {
+        var i, arr1, arr2;
+        arr1 = element.className.split(" ");
+        arr2 = name.split(" ");
+        for (i = 0; i < arr2.length; i++) {
+            if (arr1.indexOf(arr2[i]) == -1) {
+                element.className += " " + arr2[i];
+            }
+        }
+    }
+
+    function RemoveClassBestCat(element, name) {
+        var i, arr1, arr2;
+        arr1 = element.className.split(" ");
+        arr2 = name.split(" ");
+        for (i = 0; i < arr2.length; i++) {
+            while (arr1.indexOf(arr2[i]) > -1) {
+                arr1.splice(arr1.indexOf(arr2[i]), 1);
+            }
+        }
+        element.className = arr1.join(" ");
+    }
+
+    // Add active class to the current button (highlight it)
+    var catBtnContainer = document.getElementById(
+        "catBestBtnContainer_citrus22_purebites"
+    );
+    var catBestBtns = catBtnContainer.getElementsByClassName(
+        "MiCS_cat_best_tab_item_citrus_purebites"
+    );
+    for (var i = 0; i < catBestBtns.length; i++) {
+        catBestBtns[i].addEventListener("click", function () {
+            var current = document.getElementsByClassName(
+                "MiCS_cat_best_tab_item_active_citrus_purebites"
+            );
+            current[0].className = current[0].className.replace(
+                " MiCS_cat_best_tab_item_active_citrus_purebites",
+                ""
+            );
+            this.className += " MiCS_cat_best_tab_item_active_citrus_purebites";
+        });
+    }
+    // End parent tab cat & dog js //
+
+
+    // tab carocel js
+    var splides = document.querySelectorAll(
+        ".cirtus__tabs"
+    );
+    if (splides.length) {
+        for (var i = 0; i < splides.length; i++) {
+            var splideElement = splides[i];
+            var splideDefaultOptions = {
+                arrows: true,
+                type: "slide",
+                start: 0,
+                pagination: false,
+                rewindSpeed: 500,
+                speed: 500,
+                pauseOnHover: true,
+                perPage: 5,
+                perMove: 1,
+                gap: 20,
+                omitEnd: true,
+                breakpoints: {
+                    375: {
+                        perPage: 1,
+                    },
+                    576: {
+                        perPage: 2,
+                    },
+                    991: {
+                        perPage: 3,
+                    },
+                    992: {
+                        perPage: 3,
+                    },
+                    1024: {
+                        perPage: 5,
+                    },
+                    1200: {
+                        perPage: 5,
+                    },
+                    1440: {
+                        perPage: 5,
+                    },
+                },
+            };
+
+            new Splide(splideElement, splideDefaultOptions).mount();
+        }
+    }
+    //for tab switcher
+    document.addEventListener("DOMContentLoaded", function () {
+        filterTabProduct("citrus_purebites_frozen_raw_meals");
+    });
+
+    function filterTabProduct(c) {
+        var x, i;
+        x = document.getElementsByClassName("citrus_purebitsinner-item");
+        if (c == "all") c = "";
+        for (i = 0; i < x.length; i++) {
+            RemoveClassBestDog(x[i], "citrusTabshow");
+            if (x[i].className.indexOf(c) > -1) AddClassDogBest(x[i], "citrusTabshow");
+        }
+    }
+
+    function AddClassDogBest(element, name) {
+        var i, arr1, arr2;
+        arr1 = element.className.split(" ");
+        arr2 = name.split(" ");
+        for (i = 0; i < arr2.length; i++) {
+            if (arr1.indexOf(arr2[i]) == -1) {
+                element.className += " " + arr2[i];
+            }
+        }
+    }
+
+    function RemoveClassBestDog(element, name) {
+        var i, arr1, arr2;
+        arr1 = element.className.split(" ");
+        arr2 = name.split(" ");
+        for (i = 0; i < arr2.length; i++) {
+            while (arr1.indexOf(arr2[i]) > -1) {
+                arr1.splice(arr1.indexOf(arr2[i]), 1);
+            }
+        }
+        element.className = arr1.join(" ");
+    }
+
+    // Add active class to the current button (highlight it)
+    var dogBtnContainer = document.getElementById(
+        "dogBestBtnContainer_citrus_purebites"
+    );
+    var dogBestbtns = dogBtnContainer.getElementsByClassName(
+        "MiCS_tab_item_citrus_purebites"
+    );
+    for (var i = 0; i < dogBestbtns.length; i++) {
+        dogBestbtns[i].addEventListener("click", function () {
+            var current = document.getElementsByClassName(
+                "MiCS_tab_item_active_citrus_purebites"
+            );
+            current[0].className = current[0].className.replace(
+                " MiCS_tab_item_active_citrus_purebites",
+                ""
+            );
+            this.className += " MiCS_tab_item_active_citrus_purebites";
+        });
+    }
+
+    // End child tab for Dog js //
+    // Add active class to the current button (highlight it)
+    var catfoodButtonContainer = document.getElementById(
+        "catFoodBtnContainer_citrus21_purebites"
+    );
+    var catFoodbtns = catfoodButtonContainer.getElementsByClassName(
+        "MiCS_cat_food_tab_citrus21_purebites"
+    );
+    for (var i = 0; i < catFoodbtns.length; i++) {
+        catFoodbtns[i].addEventListener("click", function () {
+            var current = document.getElementsByClassName(
+                "MiCS_cat_food_tab_citrus21_active_citrus21_purebites"
+            );
+            current[0].className = current[0].className.replace(
+                " MiCS_cat_food_tab_citrus21_active_citrus21_purebites",
+                ""
+            );
+            this.className += " MiCS_cat_food_tab_citrus21_active_citrus21_purebites";
+        });
+    }
+
+    // Slider scripts Raw JS
+
+    let citrus_pureBites_carousel = document.querySelector('.citrus_pureBites_carousel');
+
+    let citrus_pureBites_carouselInner = document.querySelector('.citrus_pureBites_carousel-inner');
+
+    let prev = document.querySelector('.citrus_pureBites_carousel-controls .prev');
+
+    let next = document.querySelector('.citrus_pureBites_carousel-controls .next');
+
+    let slides = document.querySelectorAll('.citrus_pureBites_carousel-inner .citrus_pureBites_carousel-item');
+
+    let totalSlides = slides.length;
+
+    let step = 100 / totalSlides;
+
+    let activeSlide = 0;
+
+    let activeIndicator = 0;
+
+    let direction = -1;
+
+    let jump = 1;
+
+    let interval = 5000;
+
+    let time;
+
+
+
+    //Init citrus_pureBites_carousel
+    citrus_pureBites_carouselInner.style.minWidth = (totalSlides * 100) + '%';
+    loadIndicators();
+    loop(true);
+
+
+    //citrus_pureBites_carousel events
+
+    document.addEventListener('DOMContentLoaded', function () {
+        citrus_pureBites_carousel.style.display = 'flex';
+    });
+
+    next.addEventListener('click', () => {
+        slideToNext();
+    });
+
+    prev.addEventListener('click', () => {
+        slideToPrev();
+    });
+
+    citrus_pureBites_carouselInner.addEventListener('transitionend', () => {
+        if (direction === -1) {
+            if (jump > 1) {
+                for (let i = 0; i < jump; i++) {
+                    activeSlide++;
+                    citrus_pureBites_carouselInner.append(citrus_pureBites_carouselInner.firstElementChild);
+                }
+            } else {
+                activeSlide++;
+                citrus_pureBites_carouselInner.append(citrus_pureBites_carouselInner.firstElementChild);
+            }
+        } else if (direction === 1) {
+            if (jump > 1) {
+                for (let i = 0; i < jump; i++) {
+                    activeSlide--;
+                    citrus_pureBites_carouselInner.prepend(citrus_pureBites_carouselInner.lastElementChild);
+                }
+            } else {
+                activeSlide--;
+                citrus_pureBites_carouselInner.prepend(citrus_pureBites_carouselInner.lastElementChild);
+            }
+        };
+
+        citrus_pureBites_carouselInner.style.transition = 'none';
+        citrus_pureBites_carouselInner.style.transform = 'translateX(0%)';
+        setTimeout(() => {
+            jump = 1;
+            citrus_pureBites_carouselInner.style.transition = 'all ease .5s';
+        });
+        updateIndicators();
+    });
+
+    document.querySelectorAll('.citrus_pureBites_carousel-indicators span').forEach(item => {
+        item.addEventListener('click', (e) => {
+            let slideTo = parseInt(e.target.dataset.slideTo);
+
+            let indicators = document.querySelectorAll('.citrus_pureBites_carousel-indicators span');
+
+            indicators.forEach((item, index) => {
+                if (item.classList.contains('active')) {
+                    activeIndicator = index
+                }
+            })
+
+            if (slideTo - activeIndicator > 1) {
+                jump = slideTo - activeIndicator;
+                step = jump * step;
+                slideToNext();
+            } else if (slideTo - activeIndicator === 1) {
+                slideToNext();
+            } else if (slideTo - activeIndicator < 0) {
+
+                if (Math.abs(slideTo - activeIndicator) > 1) {
+                    jump = Math.abs(slideTo - activeIndicator);
+                    step = jump * step;
+                    slideToPrev();
+                }
+                slideToPrev();
+            }
+            step = 100 / totalSlides;
+        })
+    });
+
+    citrus_pureBites_carousel.addEventListener('mouseover', () => {
+        loop(false);
+    })
+
+    citrus_pureBites_carousel.addEventListener('mouseout', () => {
+        loop(true);
+    })
+
+    //citrus_pureBites_carousel functions
+
+    function loadIndicators() {
+        slides.forEach((slide, index) => {
+            if (index === 0) {
+                document.querySelector('.citrus_pureBites_carousel-indicators').innerHTML +=
+                    `<span data-slide-to="${index}" class="active"></span>`;
+            } else {
+                document.querySelector('.citrus_pureBites_carousel-indicators').innerHTML +=
+                    `<span data-slide-to="${index}"></span>`;
+            }
+        });
+    };
+
+    function updateIndicators() {
+        if (activeSlide > (totalSlides - 1)) {
+            activeSlide = 0;
+        } else if (activeSlide < 0) {
+            activeSlide = (totalSlides - 1);
+        }
+        document.querySelector('.citrus_pureBites_carousel-indicators span.active').classList.remove('active');
+        document.querySelectorAll('.citrus_pureBites_carousel-indicators span')[activeSlide].classList.add('active');
+    };
+
+    function slideToNext() {
+        if (direction === 1) {
+            direction = -1;
+            citrus_pureBites_carouselInner.prepend(citrus_pureBites_carouselInner.lastElementChild);
+        };
+
+        citrus_pureBites_carousel.style.justifyContent = 'flex-start';
+        citrus_pureBites_carouselInner.style.transform = `translateX(-${step}%)`;
+    };
+
+    function slideToPrev() {
+        if (direction === -1) {
+            direction = 1;
+            citrus_pureBites_carouselInner.append(citrus_pureBites_carouselInner.firstElementChild);
+        };
+        citrus_pureBites_carousel.style.justifyContent = 'flex-end'
+        citrus_pureBites_carouselInner.style.transform = `translateX(${step}%)`;
+    };
+
+    function loop(status) {
+        if (status === true) {
+            time = setInterval(() => {
+                slideToNext();
+            }, interval);
+        } else {
+            clearInterval(time);
+        }
+    }
+
+
+    // start child tab for Cat js //
+</script>

@@ -1,0 +1,1367 @@
+<style>
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.citrus-kong-main-wrapper img{
+    width: 100%;
+}
+
+a{
+    text-decoration: none;
+}
+
+.kong-flex-container{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.kong-container{
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.kong-container-fluid{
+    width: 100%;
+}
+
+/* POV sections */
+.citrus-kong-pov{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.citrus-kong-pov .citrus_kong_carousel{
+    overflow-x: hidden;
+    position: relative;
+    display: none;
+    justify-content: flex-start;
+}
+.citrus_kong_carousel{
+    overflow-x: hidden;
+    position: relative;
+    display: none;
+    justify-content: flex-start;
+}
+.citrus-kong-pov .citrus_kong_carousel .citrus_kong_carousel__inner{
+    display: flex;
+    background: #DB0032;
+    transition: all ease .5s;
+}
+.citrus-kong-pov .citrus_kong_carousel .citrus_kong_carousel__inner .pov2{
+    background-image: url("https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrus-kong-pov2-ingredient");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+}
+.citrus-kong-pov .citrus_kong_carousel .citrus_kong_carousel__inner .pov3{
+    background-image: url("https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrus-kong-pov3-ingredient");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+}
+.citrus-kong-pov .citrus_kong_carousel .citrus_kong_carousel__inner--item{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.citrus-kong-pov .citrus_kong_carousel .citrus_kong_carousel__inner--item-wrapper{
+    justify-content: space-between;
+    width: 100%;
+}
+.citrus-kong-pov .citrus_kong_carousel .citrus_kong_carousel__inner--item-wrapper .pov3-text .citrus_kong_carousel__inner--item-wrapper-text{
+    padding: 0;
+}
+.citrus-kong-pov .citrus_kong_carousel .citrus_kong_carousel__inner--item-wrapper .pov2-text .citrus_kong_carousel__inner--item-wrapper-text{
+    padding: 0;
+}
+.citrus-kong-pov .citrus_kong_carousel .citrus_kong_carousel__inner--item-wrapper .pov3-text{
+    width: 70%;
+    padding: 0 5%;
+}
+.citrus-kong-pov .citrus_kong_carousel .citrus_kong_carousel__inner--item-wrapper .pov2-text{
+    padding: 0 3%;
+    width: 70%;
+}
+.citrus-kong-pov .citrus_kong_carousel .citrus_kong_carousel__inner--item-wrapper .citrus_kong_carousel__inner--item-wrapper-text{
+    padding: 5%;
+}
+.citrus-kong-pov .citrus_kong_carousel .citrus_kong_carousel__inner--item-wrapper .pov1-splite{
+    width: 50%;
+}
+.citrus-kong-pov .citrus_kong_carousel .citrus_kong_carousel__inner--item-wrapper .citrus_kong_carousel__inner--item-wrapper-text .item-wrapper__logo{
+    max-width: 30%;
+}
+.citrus-kong-pov .citrus_kong_carousel .citrus_kong_carousel__inner--item-wrapper .citrus_kong_carousel__inner--item-wrapper-text .item-wrapper__title{
+    font-family: "PetcoCircularTT-Black", arial !important;
+    font-size: 35px;
+    color: #fff;
+    padding: 10px 0;
+    line-height: initial !important;
+}
+.citrus-kong-pov .citrus_kong_carousel .citrus_kong_carousel__inner--item-wrapper .citrus_kong_carousel__inner--item-wrapper-text .item-wrapper__subhead{
+    font-family: "PetcoCircularTT-Book", arial !important;
+    font-size: 18px;
+    color: #fff;
+    width: 50%;
+    line-height: initial !important;
+}
+.citrus-kong-pov .citrus_kong_carousel .citrus_kong_carousel__inner--item-wrapper .citrus_kong_carousel__inner--item-wrapper-text .item-wrapper__cta{
+    padding-top: 20px;
+}
+.citrus-kong-pov .citrus_kong_carousel .citrus_kong_carousel__inner--item-wrapper .citrus_kong_carousel__inner--item-wrapper-text .item-wrapper__cta a{
+    font-family: "PetcoCircularTT-Bold", arial !important;
+    color: #001952;
+    font-size: 16px;
+    padding: 17px;
+    background: #fff;
+    text-transform: uppercase;
+    width: 160px;
+    display: block;
+    text-align: center;
+    border-radius: 5px;
+}
+.citrus-kong-pov .citrus_kong_carousel .citrus_kong_carousel__inner--item-wrapper .citrus_kong_carousel__inner--item-wrapper-text .item-wrapper__cta a:hover{
+    color: #fff;
+    background: #001952;
+}
+.citrus-kong-pov .citrus_kong_carousel .citrus_kong_carousel__inner--item-wrapper-img{
+    border-left: 12px solid #fff;
+    vertical-align: middle;
+    overflow: hidden;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}   
+
+.citrus-kong-pov .citrus_kong_carousel .citrus_kong_carousel__inner--item-wrapper-img img{
+    vertical-align: middle;
+    width: 130%;
+}   
+
+
+.citrus-kong-pov .citrus_kong_carousel .pov2-img{
+    border-right: 12px solid #fff;
+    border-left: none !important;
+    width: 30%;
+}
+
+.citrus-kong-pov .citrus_kong_carousel .pov2-img{
+    border-right: 12px solid #fff;
+    border-left: none !important;
+    width: 35%;
+}
+
+.prev:hover, .next:hover{
+    opacity: 1;
+}
+
+.citrus_kong_carousel-indicators{
+    position: absolute;
+    bottom: 0;
+    left: calc(100%/2 - 52px);
+    text-align: center;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 5px 5px 0 0;
+    padding: 10px 10px 5px;
+}
+
+.citrus_kong_carousel-indicators span{
+    display: inline-block;
+    border: 2px solid #09205c;
+    padding: 7px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+.citrus_kong_carousel-indicators span.active{
+    opacity: 1;
+    background: #09205c;
+}
+
+/* Category Sections */
+.citrus-kong-category  .citrus-kong-category__category-wrapper{
+    overflow-x: auto;
+    justify-content: space-between;
+}
+.citrus-kong-category  .citrus-kong-category__category-wrapper .kong-flex-container{
+    width: 100%;
+    justify-content: flex-start;
+}
+.citrus-kong__headline{
+    font-family: "PetcoCircularTT-Bold", arial !important;
+    font-size: 25px;
+    color: #000;
+    padding: 50px 15px 30px;
+    text-align: center;
+}
+.citrus-kong__subhead{
+    font-family: "PetcoCircularTT-Regular", arial !important;
+    font-size: 16px;
+    color: #000;
+    padding: 0 15px 0;
+    text-align: center;
+    line-height: 22px;
+    max-width: 70%;
+    margin: -20px auto 0;
+}
+
+.citrus-kong-category  .citrus-kong-category__category-wrapper .citrus-kong-category__category-wrapper--single-category{
+    padding: 20px 30px;
+    min-width: 180px;
+}
+.citrus-kong-category  .citrus-kong-category__category-wrapper .citrus-kong-category__category-wrapper--single-category .title a{
+    font-family: "PetcoCircularTT-Bold", arial !important;
+    font-size: 16px;
+    color: #000;
+    padding: 20px 0;
+    text-align: center;
+    text-decoration: underline;
+    display: block;
+}
+.citrus-kong-category  .citrus-kong-category__category-wrapper .citrus-kong-category__category-wrapper--single-category .img a{
+    display: block;
+}
+.citrus-kong-category  .citrus-kong-category__category-wrapper .citrus-kong-category__category-wrapper--single-category .title a:hover{
+    color: #09205c;
+}
+
+/* Video Sections */
+.citrus-kong-videos{
+    background-image: url("https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrus-kong-video-bg-DSK");
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 50px 0;
+    padding: 0 5%;
+}
+.citrus-kong-videos .citrus-kong-videos__wrapper{
+    justify-content: space-between;
+    align-items: center;
+}
+.citrus-kong-videos .citrus-kong-videos__wrapper .citrus-kong-videos__wrapper--col{
+    width: 50%;
+}
+.citrus-kong-videos .citrus-kong-videos__wrapper .citrus-kong-videos__wrapper--single-video{
+    padding-bottom: 60px;
+}
+.citrus-kong-videos .citrus-kong-videos__wrapper .citrus-kong-videos__wrapper--text{
+    padding: 15px;
+    color: #fff;
+    text-align: center;
+}
+.citrus-kong-videos .citrus-kong-videos__wrapper .citrus-kong-videos__wrapper--col .citrus-kong-videos__title{
+    font-family: "PetcoCircularTT-Bold", arial !important;
+    font-size: 30px;
+    padding-bottom: 20px;
+}
+.citrus-kong-videos .citrus-kong-videos__wrapper .citrus-kong-videos__wrapper--col .citrus-kong-videos__sub-title{
+    max-width: 60%;
+    margin: 0 auto;
+    font-family: "PetcoCircularTT-Regular", arial !important;
+    font-size: 18px;
+}
+.citrus-kong-videos .citrus-kong-videos__wrapper .citrus-kong-videos__wrapper--col iframe{
+    width: 100%;
+    height: 40vh;
+}
+
+/* Right kong sections */
+.citrus-right-kong{
+    overflow-x: auto;
+}
+.citrus-right-kong .citrus-right-kong__content-wrapper{
+    overflow: hidden;
+}
+.citrus-right-kong .kong-flex-container{
+    width: 100%;
+}
+.citrus-right-kong .citrus-right-kong__type .single-item{
+    padding: 15px 50px;
+    width: calc(100%/6);
+    position: relative;
+}
+.citrus-right-kong .citrus-right-kong__type .single-item span{
+    border-radius: 100%;
+    background-color: #A7A4A4;
+    display: block;
+    margin: 20px auto 0;
+}
+.citrus-right-kong .citrus-right-kong__type .single-item:nth-child(1){
+    width: 10%;
+}
+.citrus-right-kong .citrus-right-kong__type .single-item:nth-child(2) span{
+    width: 8px;
+    height: 8px;
+}
+.citrus-right-kong .citrus-right-kong__type .single-item:nth-child(2) p{
+    color: #FFD405;
+    font-family: "PetcoCircularTT-Bold", arial !important;
+    font-size: 16px;
+    padding-left: 15px;
+    position: absolute;
+    left: -30px;
+    bottom: 6px;
+}
+.citrus-right-kong .citrus-right-kong__type .single-item:nth-child(3) span{
+    width: 12px;
+    height: 12px;
+}
+.citrus-right-kong .citrus-right-kong__type .single-item:nth-child(4) span{
+    width: 16px;
+    height: 16px;
+}
+.citrus-right-kong .citrus-right-kong__type .single-item:nth-child(5) span{
+    width: 20px;
+    height: 20px;
+}
+.citrus-right-kong .citrus-right-kong__type .single-item:nth-child(5) p{
+    color: #B4B4B4;
+    font-family: "PetcoCircularTT-Bold", arial !important;
+    font-size: 16px;
+    padding: 0;
+    position: absolute;
+    right: -30px;
+    bottom: 9px;
+}
+.citrus-right-kong .citrus-right-kong__packages--title-wrapper{
+    background:  #DB0032;
+    justify-content: space-between;
+}
+.citrus-right-kong .citrus-right-kong__packages--title-wrapper .single-item{
+    padding: 15px 30px;
+    width: calc(100%/5);
+    color: #fff;
+    font-family: "PetcoCircularTT-Bold", arial !important;
+    font-size: 16px;
+    text-align: center;
+}
+.citrus-right-kong .citrus-right-kong__packages--title-wrapper .single-item:first-child{
+    width: 10%;
+}
+.citrus-right-kong .citrus-right-kong__packages--title-wrapper .single-item a{
+    color: #fff;
+    font-family: "PetcoCircularTT-Regular", arial !important;
+    font-size: 16px;
+    text-decoration: underline;
+    display: block;
+}
+.citrus-right-kong .citrus-right-kong__packages--contents{
+    justify-content: space-between;
+}
+.citrus-right-kong .citrus-right-kong__packages--contents .single-item{
+    width: calc(100%/5);
+    padding: 20px 30px;
+    text-align: center;
+    font-family: "PetcoCircularTT-Regular", arial !important;
+    font-size: 16px;
+    min-height: 32px;
+    border-bottom: 1px solid #BABABA;
+    min-height: 85px;
+}
+.citrus-right-kong .citrus-right-kong__packages--contents:nth-child(5) .single-item{
+    border-bottom: none;
+}
+.citrus-right-kong .citrus-right-kong__packages--contents .single-item:first-child{
+    width: 10%;
+    background: #333333;
+    color: #fff;
+    border-bottom: 1px solid #333;
+}
+.padding-top-30{
+    padding-top: 30px !important;
+}
+.citrus-right-kong .citrus-right-kong__packages--contents .single-item:nth-child(even){
+    background: #EFEFEF;
+}
+.citrus-right-kong .citrus-right-kong__packages--contents .single-item:nth-child(2){
+    margin-left: 20px;
+}
+
+.citrus-right-kong .citrus-right-kong__made-by{
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+.citrus-right-kong .citrus-right-kong__made-by img{
+    max-width: 160px;
+    padding: 15px;
+}
+
+/* Right kong sizes */
+.citrus-kong-sizes .citrus-kong-sizes__wrapper {
+    overflow-x: auto;
+}
+.citrus-kong-sizes .citrus-kong-sizes__wrapper .citrus-kong-sizes__wrapper--contents{
+ overflow: hidden;
+ align-items: flex-end;
+ justify-content: flex-start;
+ width: 100%;
+ overflow-x: auto;
+}
+.citrus-kong-sizes .citrus-kong-sizes__wrapper .citrus-kong-sizes__wrapper--single-item{
+    padding: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.citrus-kong-sizes .citrus-kong-sizes__wrapper .citrus-kong-sizes__wrapper--single-item:nth-child(1) img{
+    max-width: 60px;
+    margin: 0 auto;
+}
+.citrus-kong-sizes .citrus-kong-sizes__wrapper .citrus-kong-sizes__wrapper--single-item:nth-child(2) img{
+    max-width: 75px;
+    margin: 0 auto;
+}
+.citrus-kong-sizes .citrus-kong-sizes__wrapper .citrus-kong-sizes__wrapper--single-item:nth-child(3) img{
+    max-width: 90px;
+    margin: 0 auto;
+}
+.citrus-kong-sizes .citrus-kong-sizes__wrapper .citrus-kong-sizes__wrapper--single-item:nth-child(4) img{
+    max-width: 105px;
+    margin: 0 auto;
+}
+.citrus-kong-sizes .citrus-kong-sizes__wrapper .citrus-kong-sizes__wrapper--single-item:nth-child(5) img{
+    max-width: 125px;
+    margin: 0 auto;
+}
+.citrus-kong-sizes .citrus-kong-sizes__wrapper .citrus-kong-sizes__wrapper--single-item:nth-child(6) img{
+    max-width: 140px;
+    margin: 0 auto;
+}
+.citrus-kong-sizes .citrus-kong-sizes__wrapper .single-item__img{
+    width: 100%;
+    text-align: center;
+}
+.citrus-kong-sizes .citrus-kong-sizes__wrapper .single-item__title{
+    font-family: "PetcoCircularTT-Bold", arial !important;
+    font-size: 18px;
+    color: #000;
+    padding: 20px 0;
+    min-width: 120px;
+    text-align: center;
+    width: 100%;
+}
+.citrus-kong-sizes .citrus-kong-sizes__wrapper .single-item__sub-title{
+    font-family: "PetcoCircularTT-Regular", arial !important;
+    font-size: 16px;
+    color: #000;
+    min-width: 150px;
+    text-align: center;
+    width: 100%;
+}
+
+/* Kong Stuff */
+.citrus-kong-stuff .citrus-kong-stuff__contents{
+    overflow-x: auto;
+}
+.citrus-kong-stuff .citrus-kong-stuff__contents .citrus-kong-stuff__contents--wrapper{
+    overflow: hidden;
+    padding: 20px;
+}
+.citrus-kong-stuff .citrus-kong-stuff__contents .citrus-kong-stuff__contents--wrapper .single-item{
+    padding: 15px;
+}
+.citrus-kong-stuff .citrus-kong-stuff__contents .citrus-kong-stuff__contents--wrapper .single-item .single-item__title{
+    font-family: "PetcoCircularTT-Bold", arial !important;
+    font-size: 20px;
+    color: #000;
+    text-align: center;
+    padding: 20px 0;
+}
+.citrus-kong-stuff .citrus-kong-stuff__contents .citrus-kong-stuff__contents--disclaimer{
+    font-family: "PetcoCircularTT-Regular", arial !important;
+    font-size: 18px;
+    color: #030303;
+    text-align: center;
+    padding: 20px;
+}
+
+
+
+
+
+/* Responsive devices */
+@media only screen and (min-width: 2560px){
+
+    /* POV sections */
+    .citrus-kong-pov .citrus_kong_carousel .citrus_kong_carousel__inner--item-wrapper-img{
+        height: 50vh;
+    } 
+    .citrus-kong-pov .citrus_kong_carousel .citrus_kong_carousel__inner--item-wrapper-img img {
+        width: 110%;
+    }
+
+    .citrus-kong-pov .citrus_kong_carousel .citrus_kong_carousel__inner--item-wrapper .citrus_kong_carousel__inner--item-wrapper-text .item-wrapper__title{
+        font-size: 52px;
+        padding: 20px 0;
+    }
+    .citrus-kong-pov .citrus_kong_carousel .citrus_kong_carousel__inner--item-wrapper .citrus_kong_carousel__inner--item-wrapper-text .item-wrapper__subhead{
+        font-size: 30px;
+    }
+    .citrus-kong-pov .citrus_kong_carousel .citrus_kong_carousel__inner--item-wrapper .citrus_kong_carousel__inner--item-wrapper-text .item-wrapper__cta{
+        padding-top: 30px;
+    }
+
+    /* Video Sections */
+    .citrus-kong-videos .citrus-kong-videos__wrapper .citrus-kong-videos__wrapper--col .citrus-kong-videos__title{
+        font-size: 42px;
+    }
+    .citrus-kong-videos .citrus-kong-videos__wrapper .citrus-kong-videos__wrapper--col .citrus-kong-videos__sub-title{
+        max-width: 70%;
+        font-size: 24px;
+    }
+    .citrus-kong-videos .citrus-kong-videos__wrapper .citrus-kong-videos__wrapper--col iframe{
+        height: 40vh;
+    }
+
+
+}
+
+@media only screen and (min-width:1920px) and (max-width: 2559px){
+
+     /* POV sections */
+    .citrus-kong-pov .citrus_kong_carousel .citrus_kong_carousel__inner--item-wrapper-img{
+        height: 56vh;
+    }  
+    .citrus-kong-pov .citrus_kong_carousel .citrus_kong_carousel__inner--item-wrapper-img img {
+        width: 115%;
+    }
+
+    .citrus-kong-pov .citrus_kong_carousel .citrus_kong_carousel__inner--item-wrapper .citrus_kong_carousel__inner--item-wrapper-text .item-wrapper__title{
+        font-size: 52px;
+        padding: 20px 0;
+    }
+    .citrus-kong-pov .citrus_kong_carousel .citrus_kong_carousel__inner--item-wrapper .citrus_kong_carousel__inner--item-wrapper-text .item-wrapper__subhead{
+        font-size: 30px;
+    }
+    .citrus-kong-pov .citrus_kong_carousel .citrus_kong_carousel__inner--item-wrapper .citrus_kong_carousel__inner--item-wrapper-text .item-wrapper__cta{
+        padding-top: 30px;
+    }
+
+    /* Video Sections */
+    .citrus-kong-videos .citrus-kong-videos__wrapper .citrus-kong-videos__wrapper--col .citrus-kong-videos__title{
+        font-size: 42px;
+    }
+    .citrus-kong-videos .citrus-kong-videos__wrapper .citrus-kong-videos__wrapper--col .citrus-kong-videos__sub-title{
+        max-width: 70%;
+        font-size: 24px;
+    }
+    .citrus-kong-videos .citrus-kong-videos__wrapper .citrus-kong-videos__wrapper--col iframe{
+        height: 45vh;
+    }
+}
+
+@media only screen and (min-width:1440px) and (max-width: 1919px){
+
+     /* POV sections */
+    .citrus-kong-pov .citrus_kong_carousel .citrus_kong_carousel__inner--item-wrapper-img{
+        height: 50vh;
+    }  
+    .citrus-kong-pov .citrus_kong_carousel .citrus_kong_carousel__inner--item-wrapper-img img{
+        width: 115%;
+    } 
+}
+
+
+@media only screen and (min-width:1280px) and (max-width: 1439px){
+
+    /* POV sections */
+    .citrus-kong-pov .citrus_kong_carousel .citrus_kong_carousel__inner--item-wrapper .citrus_kong_carousel__inner--item-wrapper-text {
+        padding: 0 5%;
+    }
+    .citrus-kong-pov .citrus_kong_carousel .citrus_kong_carousel__inner--item-wrapper-img{
+        height: 38vh;
+    } 
+
+}
+
+@media only screen and (min-width:1024px) and (max-width: 1279px){
+
+    /* POV sections */
+    .citrus-kong-pov .citrus_kong_carousel .citrus_kong_carousel__inner--item-wrapper .citrus_kong_carousel__inner--item-wrapper-text .item-wrapper__logo {
+        max-width: 20%;
+    }
+    .citrus-kong-pov .citrus_kong_carousel .citrus_kong_carousel__inner--item-wrapper .citrus_kong_carousel__inner--item-wrapper-text {
+        padding: 0 5%;
+    }
+    .citrus-kong-pov .citrus_kong_carousel .citrus_kong_carousel__inner--item-wrapper .citrus_kong_carousel__inner--item-wrapper-text .item-wrapper__title{
+        font-size: 24px;
+        padding: 5px 0;
+    }
+    .citrus-kong-pov .citrus_kong_carousel .citrus_kong_carousel__inner--item-wrapper .citrus_kong_carousel__inner--item-wrapper-text .item-wrapper__subhead{
+        font-size: 14px;
+    }
+    .citrus-kong-pov .citrus_kong_carousel .citrus_kong_carousel__inner--item-wrapper .citrus_kong_carousel__inner--item-wrapper-text .item-wrapper__cta{
+        padding-top: 10px;
+    }
+    .citrus-kong-pov .citrus_kong_carousel .pov2-img, .citrus-kong-pov .citrus_kong_carousel .pov3-img {
+        width: 40%;
+    }
+    .citrus-kong-pov .citrus_kong_carousel .citrus_kong_carousel__inner--item-wrapper-img {
+        height: 39vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .citrus-kong-pov .citrus_kong_carousel .citrus_kong_carousel__inner--item-wrapper .pov2-text .citrus_kong_carousel__inner--item-wrapper-text{
+        margin: -10px 0 0;
+    }
+
+    /* Video Sections */
+    .citrus-kong-videos .citrus-kong-videos__wrapper .citrus-kong-videos__wrapper--col .citrus-kong-videos__title{
+        font-size: 24px;
+    }
+    .citrus-kong-videos .citrus-kong-videos__wrapper .citrus-kong-videos__wrapper--col .citrus-kong-videos__sub-title{
+        max-width: 70%;
+        font-size: 16px;
+    }
+    .citrus-kong-videos .citrus-kong-videos__wrapper .citrus-kong-videos__wrapper--col iframe{
+        height: 35vh;
+    }
+
+    /* Kong Sizes */
+    .citrus-right-kong .citrus-right-kong__type .single-item {
+        padding: 15px 30px;
+    }
+    .citrus-right-kong .citrus-right-kong__type .single-item:nth-child(5) p {
+        font-size: 14px;
+        right: -30px;
+        bottom: 9px;
+    }
+    .citrus-right-kong .citrus-right-kong__type .single-item:nth-child(2) p {
+        font-size: 14px;
+        left: -30px;
+        bottom: 6px;
+    }
+
+}
+
+@media only screen and (min-width:768px) and (max-width: 1023px){
+
+    /* POV sections */
+    .citrus-kong-pov .citrus_kong_carousel .citrus_kong_carousel__inner--item-wrapper .citrus_kong_carousel__inner--item-wrapper-text {
+        padding: 0 5%;
+    }
+    .citrus-kong-pov .citrus_kong_carousel .citrus_kong_carousel__inner--item-wrapper .citrus_kong_carousel__inner--item-wrapper-text .item-wrapper__title{
+        font-size: 24px;
+        padding: 5px 0;
+    }
+    .citrus-kong-pov .citrus_kong_carousel .citrus_kong_carousel__inner--item-wrapper .citrus_kong_carousel__inner--item-wrapper-text .item-wrapper__subhead{
+        font-size: 14px;
+        width: 90%;
+    }
+    .citrus-kong-pov .citrus_kong_carousel .citrus_kong_carousel__inner--item-wrapper .citrus_kong_carousel__inner--item-wrapper-text .item-wrapper__cta{
+        padding-top: 10px;
+    }
+    .citrus-kong-pov .citrus_kong_carousel .pov2-img, .citrus-kong-pov .citrus_kong_carousel .pov3-img {
+        width: 35%;
+    }
+    .citrus-kong-pov .citrus_kong_carousel .citrus_kong_carousel__inner--item-wrapper .citrus_kong_carousel__inner--item-wrapper-text .item-wrapper__logo {
+        max-width: 40%;
+    } 
+    .citrus-kong-pov .citrus_kong_carousel .citrus_kong_carousel__inner--item-wrapper-img img {
+        width: 130%;
+        margin: 0 0 0 -25%;
+    }
+    .citrus-kong-pov .citrus_kong_carousel .pov2-img img{
+        margin: 0 0 0 -25%;
+    }
+    .citrus-kong-pov .citrus_kong_carousel .pov3-img img {
+        margin: 0 !important;
+    }
+    .citrus-kong-pov .citrus_kong_carousel .citrus_kong_carousel__inner--item-wrapper-img {
+        height: 40vh;
+    }
+    .citrus-kong-pov .citrus_kong_carousel .citrus_kong_carousel__inner .pov2{
+        background-image: none;
+    }
+    .citrus-kong-pov .citrus_kong_carousel .citrus_kong_carousel__inner .pov3{
+        background-image: none;
+    }
+
+    /* Video Sections */
+    .citrus-kong-videos .citrus-kong-videos__wrapper .citrus-kong-videos__wrapper--col .citrus-kong-videos__title{
+        font-size: 21px;
+    }
+    .citrus-kong-videos .citrus-kong-videos__wrapper .citrus-kong-videos__wrapper--col .citrus-kong-videos__sub-title{
+        max-width: 90%;
+        font-size: 14px;
+    }
+    .citrus-kong-videos .citrus-kong-videos__wrapper .citrus-kong-videos__wrapper--col iframe{
+        height: 30vh;
+    }
+
+    /* Right kong sections */
+    .citrus-right-kong .citrus-right-kong__packages--contents .single-item {
+        padding: 15px;
+    }
+
+        /* Kong Sizes */
+        .citrus-right-kong .citrus-right-kong__type .single-item {
+            padding: 15px;
+        }
+        .citrus-right-kong .citrus-right-kong__packages--contents .single-item:first-child{
+            width: 15%;
+        }
+        .citrus-right-kong .citrus-right-kong__type .single-item:nth-child(2) p {
+            font-size: 14px;
+            left: -50px;
+            bottom: 7px;
+        }
+        .citrus-right-kong .citrus-right-kong__type .single-item:nth-child(5) p {
+            font-size: 14px;
+            right: -50px;
+            bottom: 10px;
+        }
+
+}
+
+@media only screen and (max-width: 767px){
+
+    /* POV section */
+    .citrus-kong-pov .citrus_kong_carousel .pov2-img {
+        border-right: none !important;
+        border-left: none !important;
+        width: 100%;
+    }
+    .citrus-kong-pov .citrus_kong_carousel .pov2-img, .citrus-kong-pov .citrus_kong_carousel .pov3-img {
+        width: 100%;
+    }
+    .citrus-kong-pov .citrus_kong_carousel .citrus_kong_carousel__inner--item-wrapper .pov2-text, .citrus-kong-pov .citrus_kong_carousel .citrus_kong_carousel__inner--item-wrapper .pov3-text {
+        width: 100%;
+        padding: 5%;
+    }
+    .citrus-kong-pov .citrus_kong_carousel .citrus_kong_carousel__inner--item-wrapper .pov1-splite {
+        width: 100%;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+    }
+    .citrus-kong-pov .citrus_kong_carousel .citrus_kong_carousel__inner--item-wrapper{
+        flex-wrap: wrap;
+        text-align: center;
+    }
+    .citrus-kong-pov .citrus_kong_carousel .citrus_kong_carousel__inner--item {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    .citrus-kong-pov .citrus_kong_carousel .citrus_kong_carousel__inner--item .pov1-splite:first-child{
+        order: 2;
+    }
+    .citrus-kong-pov .citrus_kong_carousel .citrus_kong_carousel__inner {
+        flex-wrap: wrap;
+    }
+    .citrus-kong-pov .citrus_kong_carousel .citrus_kong_carousel__inner--item-wrapper-img {
+        border-left: none;
+    }
+    .citrus_kong_carousel__inner--item-wrapper-img.pov1-splite:last-child {
+        border-bottom: 12px solid #fff;
+    }
+    .citrus-kong-pov .citrus_kong_carousel .pov2-img {
+        border-right: none !important;
+        border-left: none !important;
+        border-bottom: 12px solid #fff;
+    }
+    .citrus-kong-pov .citrus_kong_carousel .citrus_kong_carousel__inner--item-wrapper .citrus_kong_carousel__inner--item-wrapper-text .item-wrapper__logo {
+        max-width: 30%;
+        margin: 0 auto;
+        position: absolute;
+        top: 0;
+        left: 10px;
+    }
+    .citrus-kong-pov .citrus_kong_carousel .citrus_kong_carousel__inner--item-wrapper .citrus_kong_carousel__inner--item-wrapper-text .item-wrapper__logo img{
+        width: 130px;
+    }
+    .citrus-kong-pov .citrus_kong_carousel .citrus_kong_carousel__inner--item-wrapper .citrus_kong_carousel__inner--item-wrapper-text .item-wrapper__title{
+        font-size: 30px;
+        padding: 10px 0;
+    }
+    .citrus-kong-pov .citrus_kong_carousel .citrus_kong_carousel__inner--item-wrapper .citrus_kong_carousel__inner--item-wrapper-text .item-wrapper__subhead{
+        font-size: 16px;
+        width: 100%;
+    }
+    .citrus-kong-pov .citrus_kong_carousel .citrus_kong_carousel__inner--item-wrapper .citrus_kong_carousel__inner--item-wrapper-text .item-wrapper__cta{
+        padding-top: 0px;
+    }
+    .citrus-kong-pov .citrus_kong_carousel .citrus_kong_carousel__inner--item-wrapper .citrus_kong_carousel__inner--item-wrapper-text .item-wrapper__cta a{
+        margin: 0 auto 30px;
+        color: #fff;
+        text-transform: capitalize;
+        text-decoration: underline;
+        background: none;
+    }
+    .citrus-kong-pov .citrus_kong_carousel .citrus_kong_carousel__inner--item-wrapper .citrus_kong_carousel__inner--item-wrapper-text .item-wrapper__cta a:hover{
+        color: #001952;
+        background: none;
+    }
+    .citrus-kong-pov .citrus_kong_carousel .citrus_kong_carousel__inner--item-wrapper .pov1-splite:last-child img {
+        width: 140%;
+        margin-left: 0;
+    }
+    .citrus-kong-pov .citrus_kong_carousel .citrus_kong_carousel__inner--item-wrapper-img img {
+        width: 100%;
+    }
+    .citrus-kong-pov .citrus_kong_carousel .citrus_kong_carousel__inner--item-wrapper-img {
+        height: 38vh;
+    }
+
+    .citrus-kong-pov .citrus_kong_carousel .citrus_kong_carousel__inner .pov2{
+        background-image: none;
+    }
+    .citrus-kong-pov .citrus_kong_carousel .citrus_kong_carousel__inner .pov3{
+        background-image: none;
+    }
+
+    /* Category Sections */
+    .citrus-kong-category  .citrus-kong-category__category-wrapper{
+        width: 120%;
+    }
+    .citrus-kong-category  .citrus-kong-category__category-wrapper .citrus-kong-category__category-wrapper--single-category{
+
+        min-width: 20%;
+    }
+
+    /* Video Sections */
+    .citrus-kong-videos {
+        background-image: url(https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrus-kong-video-bg-MOB);
+        margin: 50px 0;
+        padding: 0;
+    }
+    .citrus-kong-videos .citrus-kong-videos__wrapper {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .citrus-kong-videos .citrus-kong-videos__wrapper .citrus-kong-videos__wrapper--col{
+        width: 100%;
+    }
+    .citrus-kong-videos .citrus-kong-videos__wrapper .citrus-kong-videos__wrapper--col:first-child{
+        order: 2;
+    }
+    .citrus-kong-videos .citrus-kong-videos__wrapper .citrus-kong-videos__wrapper--single-video {
+        padding-bottom: 0;
+    }
+    .citrus-kong-videos .citrus-kong-videos__wrapper .citrus-kong-videos__wrapper--col iframe {
+        margin: 0 0 -5px;
+    }
+    .citrus-kong-videos .citrus-kong-videos__wrapper .citrus-kong-videos__wrapper--text {
+        padding: 150px 15px 60px;
+    }
+    .citrus-kong-videos .citrus-kong-videos__wrapper .citrus-kong-videos__wrapper--col .citrus-kong-videos__title{
+        font-size: 24px;
+    }
+    .citrus-kong-videos .citrus-kong-videos__wrapper .citrus-kong-videos__wrapper--col .citrus-kong-videos__sub-title{
+        max-width: 90%;
+        font-size: 16px;
+    }
+    .citrus-kong-videos .citrus-kong-videos__wrapper .citrus-kong-videos__wrapper--col iframe{
+        height: 35vh;
+    }
+
+    /* Right kong sections */
+    .citrus-right-kong .citrus-right-kong__content-wrapper{
+        width: 250%;
+    }
+
+    /* Right kong sizes */
+
+
+
+    /* Kong Stuff */
+    .citrus-kong-stuff .citrus-kong-stuff__contents .citrus-kong-stuff__contents--wrapper{
+        flex-wrap: wrap;
+    }
+ 
+
+}
+
+@media only screen and (max-width: 320px){
+
+    /* POV Sections */
+    .citrus-kong-pov .citrus_kong_carousel .citrus_kong_carousel__inner--item-wrapper .pov1-splite:last-child img {
+        width: 160%;
+        margin-left: -20%;
+    }
+    .citrus-kong-pov .citrus_kong_carousel .citrus_kong_carousel__inner--item-wrapper-img img {
+        width: 100%;
+    }
+    .citrus-kong-pov .citrus_kong_carousel .citrus_kong_carousel__inner--item-wrapper-img {
+        height: 38vh;
+    }
+}
+</style>
+
+<div class="citrus-kong-main-wrapper">
+    <!-- POV Sections -->
+    <section class="citrus-kong-pov">
+        <div class="citrus_kong_carousel citrus_kong_carousel">
+            <div class="citrus_kong_carousel__inner citrus_kong_carousel-inner">
+                <!-- Slides 01 -->
+                <div class="citrus_kong_carousel__inner--item citrus_kong_carousel-item pov1">
+                    <div class="citrus_kong_carousel__inner--item-wrapper kong-flex-container">
+                        <div class="pov1-splite">
+                            <div class="citrus_kong_carousel__inner--item-wrapper-text">
+                                <div class="item-wrapper__logo"><img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/kong_logo_white"/></div>
+                                <div class="item-wrapper__title">IT’S NOT JUST A TOY, IT’S A KONG </div>
+                                <div class="item-wrapper__subhead">Explore the variety of entertaining toys and reward your pet with fun.</div>
+                                <div class="item-wrapper__cta"><a href="https://www.petco.com/shop/en/petcostore/brand/kong" "/shop/en/petcostore" manual_cm_sp="sponsoredbrandpage:kong:heropov:1:itsnotjustatoy:shopall" onclick="clickTrackLink(this);">Shop All </a></div>
+                            </div>
+                        </div>
+                        <div class="citrus_kong_carousel__inner--item-wrapper-img pov1-splite">
+                            <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/kong_pov1" alt="Four dogs with different sized Kong toys." />
+                        </div>
+                    </div>
+                </div>
+                <!-- Slides 02 -->
+                <div class="citrus_kong_carousel__inner--item citrus_kong_carousel-item pov2">
+                    <div class="citrus_kong_carousel__inner--item-wrapper kong-flex-container">
+                        <div class="citrus_kong_carousel__inner--item-wrapper-img pov2-img">
+                            <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/kong_pov2" alt="A dog running with a Kong in their mouth. A hand inserting a treat into a Kong." />
+                        </div>
+                        <div class="pov2-text">
+                            <div class="citrus_kong_carousel__inner--item-wrapper-text">
+                                <div class="item-wrapper__logo"><img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/kong_logo_white"/></div>
+                                <div class="item-wrapper__title">DOGS NEED TO PLAY®</div>
+                                <div class="item-wrapper__subhead">KONG toys encourage play, satisfy instinctual needs and strengthen the bond between dog and pet parent. </div>
+                                <div class="item-wrapper__cta"><a href="https://www.petco.com/shop/en/petcostore/brand/kong/dog" "/shop/en/petcostore" manual_cm_sp="sponsoredbrandpage:kong:heropov:2:dogsneedtoplay:shopdog" onclick="clickTrackLink(this);">Shop Dog </a></div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slides 03 -->
+                <div class="citrus_kong_carousel__inner--item citrus_kong_carousel-item pov3">
+                    <div class="citrus_kong_carousel__inner--item-wrapper kong-flex-container">
+                        <div class="citrus_kong_carousel__inner--item-wrapper-img pov3-img pov2-img">
+                            <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/kong_pov3" alt="A cat licking a Kong toy. A hand inserting a treat into a Kong." />
+                        </div>
+                        <div class="pov3-text">
+                            <div class="citrus_kong_carousel__inner--item-wrapper-text">
+                                <div class="item-wrapper__logo"><img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/kong_logo_white"/></div>
+                                <div class="item-wrapper__title">CATS NEED TO PLAY® </div>
+                                <div class="item-wrapper__subhead">KONG toys are designed to tap into your cat’s natural curiosity and hunting instinct. </div>
+                                <div class="item-wrapper__cta"><a href="https://www.petco.com/shop/en/petcostore/brand/kong/cat" "/shop/en/petcostore" manual_cm_sp="sponsoredbrandpage:kong:heropov:3:catsneedtoplay:shopcat" onclick="clickTrackLink(this);">Shop Cat  </a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="citrus_kong_carousel-controls">
+                <span class="prev"></span>
+                <span class="next"></span>
+            </div>
+            <div class="citrus_kong_carousel-indicators"></div>
+        </div>
+
+    </section>
+    <!-- End POV Sections -->
+
+    <!-- Category Sections -->
+    <section class="citrus-kong-category kong-container">
+        <div class="citrus-kong__headline">Shop by category</div>
+        <div class="citrus-kong-category__category-wrapper">
+            <div class="kong-flex-container">
+                <div class="citrus-kong-category__category-wrapper--single-category">
+                    <div class="img">
+                        <a href="https://www.petco.com/shop/en/petcostore/brand/kong/dog/dog-toys/dog-chew-toys" "/shop/en/petcostore" manual_cm_sp="sponsoredbrandpage:kong:shopbycategory:1:chewtoys:chewtoys" onclick="clickTrackLink(this);">
+                            <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrus-kong-cate1" alt="Dog with a Kong." />
+                        </a>
+                    </div>
+                    <div class="title"><a href="https://www.petco.com/shop/en/petcostore/brand/kong/dog/dog-toys/dog-chew-toys" "/shop/en/petcostore" manual_cm_sp="sponsoredbrandpage:kong:shopbycategory:1:chewtoys:chewtoys" onclick="clickTrackLink(this);">Chew Toys</a></div>
+                </div>
+                <div class="citrus-kong-category__category-wrapper--single-category">
+                    <div class="img">
+                        <a href="https://www.petco.com/shop/en/petcostore/brand/kong/dog/dog-toys" "/shop/en/petcostore" manual_cm_sp="sponsoredbrandpage:kong:shopbycategory:2:dogtoys:dogtoys" onclick="clickTrackLink(this);">
+                            <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrus-kong-cate2" alt="Dog with a stuffed animal." />
+                        </a>
+                    </div>
+                    <div class="title"><a href="https://www.petco.com/shop/en/petcostore/brand/kong/dog/dog-toys" "/shop/en/petcostore" manual_cm_sp="sponsoredbrandpage:kong:shopbycategory:2:dogtoys:dogtoys" onclick="clickTrackLink(this);">Dog Toys</a></div>
+                </div>
+                <div class="citrus-kong-category__category-wrapper--single-category">
+                    <div class="img">
+                        <a href="https://www.petco.com/shop/en/petcostore/brand/kong/dog/dog-toys/puppy-dog-toys" "/shop/en/petcostore" manual_cm_sp="sponsoredbrandpage:kong:shopbycategory:3:puppytoys:puppytoys" onclick="clickTrackLink(this);">
+                            <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrus-kong-cate3" alt="Dog with a Kong.>" />
+                        </a>
+                    </div>
+                    <div class="title"><a href="https://www.petco.com/shop/en/petcostore/brand/kong/dog/dog-toys/puppy-dog-toys" "/shop/en/petcostore" manual_cm_sp="sponsoredbrandpage:kong:shopbycategory:3:puppytoys:puppytoys" onclick="clickTrackLink(this);">Puppy Toys </a></div>
+                </div>
+                <div class="citrus-kong-category__category-wrapper--single-category">
+                    <div class="img">
+                        <a href="https://www.petco.com/shop/en/petcostore/brand/kong/cat/cat-toys" "/shop/en/petcostore" manual_cm_sp="sponsoredbrandpage:kong:shopbycategory:4:cattoys:cattoys" onclick="clickTrackLink(this);">
+                            <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrus-kong-cate4" alt="Cat with a Kong." />
+                        </a>
+                    </div>
+                    <div class="title"><a href="https://www.petco.com/shop/en/petcostore/brand/kong/cat/cat-toys" "/shop/en/petcostore" manual_cm_sp="sponsoredbrandpage:kong:shopbycategory:4:cattoys:cattoys" onclick="clickTrackLink(this);">Cat Toys</a></div>
+                </div>
+                <div class="citrus-kong-category__category-wrapper--single-category">
+                    <div class="img">
+                        <a href="https://www.petco.com/shop/en/petcostore/brand/kong/dog/dog-treats-and-chews" "/shop/en/petcostore" manual_cm_sp="sponsoredbrandpage:kong:shopbycategory:5:dogtreats:dogtreats" onclick="clickTrackLink(this);">
+                            <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrus-kong-cate5" alt="Two dogs sniffing a treat." />
+                        </a>
+                    </div>
+                    <div class="title"><a href="https://www.petco.com/shop/en/petcostore/brand/kong/dog/dog-treats-and-chews" "/shop/en/petcostore" manual_cm_sp="sponsoredbrandpage:kong:shopbycategory:5:dogtreats:dogtreats" onclick="clickTrackLink(this);">Dog Treats</a></div>
+                </div>
+                <div class="citrus-kong-category__category-wrapper--single-category">
+                    <div class="img">
+                        <a href="https://www.petco.com/shop/en/petcostore/brand/kong/dog/dog-toys/interactive-dog-toys" "/shop/en/petcostore" manual_cm_sp="sponsoredbrandpage:kong:shopbycategory:6:treatdispensers:treatdispensers" onclick="clickTrackLink(this);">
+                            <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrus-kong-cate6" alt="Dog with a Kong." />
+                        </a>
+                    </div>
+                    <div class="title"><a href="https://www.petco.com/shop/en/petcostore/brand/kong/dog/dog-toys/interactive-dog-toys" "/shop/en/petcostore" manual_cm_sp="sponsoredbrandpage:kong:shopbycategory:6:treatdispensers:treatdispensers" onclick="clickTrackLink(this);">Treat Dispensers </a></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Category Sections -->
+
+    <!-- Video Sections -->
+    <section class="citrus-kong-videos">
+        <div class="citrus-kong-videos__wrapper kong-flex-container kong-container">
+            <div class="citrus-kong-videos__wrapper--col citrus-kong-videos__wrapper--single-video">
+                <iframe width="1017" height="572" src="https://www.youtube.com/embed/bowCqPS66Lo" title="KONG Academy - Dog Instincts" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="citrus-kong-videos__wrapper--col citrus-kong-videos__wrapper--text">
+                <div class="citrus-kong-videos__title">Nature of the dog</div>
+                <div class="citrus-kong-videos__sub-title">Give your dog a KONG to fulfill their natural instincts and help prevent problem behaviors before they start.  </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Video Sections -->
+
+    <!-- Chose Right Kong Sections -->
+    <div class="citrus-kong__headline">Choose the right KONG for your dog</div>
+    <section class="citrus-right-kong">
+        <div class="citrus-right-kong__content-wrapper">
+            <!-- Kong types -->
+            <div class="citrus-right-kong__type kong-flex-container kong-container">
+                <div class="single-item">
+                    
+                </div>
+                <div class="single-item">
+                    <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrus-kong_puppy" alt="Kong Puppy logo and image of blue and pink toys" />
+                    <span></span>
+                    <p>Soft Durable</p>
+                </div>
+                <div class="single-item">
+                    <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrus-kong_senior" alt="Kong Senior logo and image of purple toy" />
+                    <span></span>
+                </div>
+                <div class="single-item">
+                    <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrus-kong_classic" alt="Kong Classic logo and image of red toy" />
+                    <span></span>
+                </div>
+                <div class="single-item">
+                    <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrus-kong_extreme" alt="Kong Extreme logo and image of black toy" />
+                    <span></span>
+                    <p>Most Durable</p>
+                </div>
+            </div>
+            <div class="citrus-right-kong__durables--border kong-flex-container kong-container">
+                <div class="single-item">
+                    <div class="borders"></div>
+                </div>
+            </div>
+            <!-- Chart Tables -->
+            <div class="citrus-right-kong__packages kong-container">
+                <!-- Charts Title -->
+                <div class="citrus-right-kong__packages--title-wrapper kong-flex-container">
+                    <div class="single-item">Type</div>
+                    <div class="single-item"><a href="https://www.petco.com/shop/en/petcostore/product/puppy-kong-dog-toys" "/shop/en/petcostore" manual_cm_sp="sponsoredbrandpage:kong:chosetherightkongforyourdog:1:kongpuppy:image" onclick="clickTrackLink(this);">Shop Puppy</a></div>
+                    <div class="single-item"><a href="https://www.petco.com/shop/en/petcostore/product/kong-senior-dog-toy" "/shop/en/petcostore" manual_cm_sp="sponsoredbrandpage:kong:chosetherightkongforyourdog:2:kongsenior:image" onclick="clickTrackLink(this);">Shop Senior</a></div>
+                    <div class="single-item"><a href="https://www.petco.com/shop/en/petcostore/product/kong-classic-dog-toy" "/shop/en/petcostore" manual_cm_sp="sponsoredbrandpage:kong:chosetherightkongforyourdog:3:kongclassic:image" onclick="clickTrackLink(this);">Shop Classic </a></div>
+                    <div class="single-item"><a href="https://www.petco.com/shop/en/petcostore/product/extreme-kong-dog-toy" "/shop/en/petcostore" manual_cm_sp="sponsoredbrandpage:kong:chosetherightkongforyourdog:4:kongextreme:image" onclick="clickTrackLink(this);">Shop Extreme </a></div>
+                </div>
+                <!-- Charts Content row 01 -->
+                <div class="citrus-right-kong__packages--contents kong-flex-container">
+                    <div class="single-item padding-top-30">Chewing Style  </div>
+                    <div class="single-item padding-top-30">Beginning to light chewers </div>
+                    <div class="single-item padding-top-30">Light chewers </div>
+                    <div class="single-item padding-top-30">Average chewers </div>
+                    <div class="single-item padding-top-30">Power chewers </div>
+                </div>
+                <!-- Charts Content row 02 -->
+                <div class="citrus-right-kong__packages--contents kong-flex-container">
+                    <div class="single-item">Dental</div>
+                    <div class="single-item">Designed for puppy teeth and gums </div>
+                    <div class="single-item">Designed for aging teeth and gums </div>
+                    <div class="single-item">Designed for most adult dogs </div>
+                    <div class="single-item">Designed for extreme chewers </div>
+                </div>
+                <!-- Charts Content row 03 -->
+                <div class="citrus-right-kong__packages--contents kong-flex-container">
+                    <div class="single-item">Material </div>
+                    <div class="single-item">Natural teething rubber </div>
+                    <div class="single-item">Gentle natural rubber </div>
+                    <div class="single-item">Durable natural rubber </div>
+                    <div class="single-item">Toughest natural rubber </div>
+                </div>
+                <!-- Charts Content row 04 -->
+                <div class="citrus-right-kong__packages--contents kong-flex-container">
+                    <div class="single-item padding-top-30">Color </div>
+                    <div class="single-item padding-top-30">Blue and pink </div>
+                    <div class="single-item padding-top-30">Purple</div>
+                    <div class="single-item padding-top-30">Red </div>
+                    <div class="single-item padding-top-30">Black</div>
+                </div>
+                <div class="citrus-right-kong__made-by kong-container kong-flex-container">
+                    <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrus-kong-made-by" />
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Chose Right Kong Sections -->
+
+    <!-- Right kong sizes -->
+    <section class="citrus-kong-sizes">
+        <div class="citrus-kong__headline">Choose the right size KONG for your dog </div>
+        <div class="citrus-kong__subhead">Use weight and mouth size to select the correct size. Remember to always size up for safety.</div>
+        <div class="citrus-kong-sizes__wrapper kong-flex-container kong-container">
+            <div class="citrus-kong-sizes__wrapper--contents kong-flex-container">
+                <div class="citrus-kong-sizes__wrapper--single-item">
+                    <div class="single-item__img"><img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrus-kong-x-small" alt="Illustration of an extra-small Kong toy" /></div>
+                    <div class="single-item__title">X-Small </div>
+                    <div class="single-item__sub-title">Up to 5 lbs.</div>
+                </div>
+                <div class="citrus-kong-sizes__wrapper--single-item">
+                    <div class="single-item__img"><img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrus-kong-small" alt="Illustration of a small Kong toy" /></div>
+                    <div class="single-item__title">Small </div>
+                    <div class="single-item__sub-title">Up to 20 lbs. </div>
+                </div>
+                <div class="citrus-kong-sizes__wrapper--single-item">
+                    <div class="single-item__img"><img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrus-kong-medium" alt="Illustration of a medium-sized Kong toy" /></div>
+                    <div class="single-item__title">Medium  </div>
+                    <div class="single-item__sub-title">15–35 lbs.</div>
+                </div>
+                <div class="citrus-kong-sizes__wrapper--single-item">
+                    <div class="single-item__img"><img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrus-kong-large" alt="Illustration of a large Kong toy" /></div>
+                    <div class="single-item__title">Large  </div>
+                    <div class="single-item__sub-title">30–65 lbs. </div>
+                </div>
+                <div class="citrus-kong-sizes__wrapper--single-item">
+                    <div class="single-item__img"><img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrus-kong-x-large" alt="Illustration of an extra-large Kong toy>" /></div>
+                    <div class="single-item__title">X-Large </div>
+                    <div class="single-item__sub-title">60–90 lbs.</div>
+                </div>
+                <div class="citrus-kong-sizes__wrapper--single-item">
+                    <div class="single-item__img"><img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrus-kong-xx-large" alt="Illustration of an extra- extra-large Kong toy>" /></div>
+                    <div class="single-item__title">XX-Large </div>
+                    <div class="single-item__sub-title">Greater than 85 lbs. </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Right kong sizes -->
+
+    <!-- Stuff a kong -->
+    <section class="citrus-kong-stuff">
+        <div class="citrus-kong__headline">How to stuff a KONG </div>
+        <div class="citrus-kong__subhead">Use anything that is safe for your dog to eat (in healthy amounts). Top off with Easy Treat or peanut butter to hold in the fun. </div>
+        <div class="citrus-kong-stuff__contents kong-container">
+            <div class="citrus-kong-stuff__contents--wrapper kong-flex-container">
+                <div class="single-item">
+                    <div class="single-item__img"><img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrus-kong-stuff-mix" alt="Illustration of Kong toy, food, and sealing can" /></div>
+                    <div class="single-item__title">Mix </div>
+                </div>
+                <div class="single-item">
+                    <div class="single-item__img"><img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrus-kong-stuff-fill" alt="Illustration of Kong being filled with food" /></div>
+                    <div class="single-item__title">Fill </div>
+                </div>
+                <div class="single-item">
+                    <div class="single-item__img"><img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrus-kong-stuff-seal" alt="Illustration of Kong being sealed" /></div>
+                    <div class="single-item__title">Seal</div>
+                </div>
+                <div class="single-item">
+                    <div class="single-item__img"><img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrus-kong-stuff-give" alt="Person’s hand presenting Kong toy to dog" /></div>
+                    <div class="single-item__title">Give</div>
+                </div>
+            </div>
+            <div class="citrus-kong-stuff__contents--disclaimer">Bonus: For an added challenge, freeze KONG for 4–6 hours before giving it to your dog. </div>
+        </div>
+    </section>
+    <!-- End Stuff a kong -->
+
+</div>
+
+    <!-- POV Slider JS -->
+    <script type="text/javascript">
+        let citrus_kong_carousel = document.querySelector('.citrus_kong_carousel');
+
+        let citrus_kong_carouselInner = document.querySelector('.citrus_kong_carousel-inner');
+
+        let prev = document.querySelector('.citrus_kong_carousel-controls .prev');
+
+        let next = document.querySelector('.citrus_kong_carousel-controls .next');
+
+        let slides =  document.querySelectorAll('.citrus_kong_carousel-inner .citrus_kong_carousel-item');
+
+        let totalSlides = slides.length;
+
+        let step = 100 / totalSlides;
+
+        let activeSlide = 0;
+
+        let activeIndicator = 0;
+
+        let direction = -1;
+
+        let jump = 1;
+
+        let interval = 5000;
+
+        let time;
+
+
+
+        //Init citrus_kong_carousel
+        citrus_kong_carouselInner.style.minWidth = (totalSlides * 100) + '%';
+        loadIndicators();
+        loop(true);
+
+
+        //citrus_kong_carousel events
+
+        next.addEventListener('click',()=>{
+            slideToNext();
+        });
+
+        prev.addEventListener('click',()=>{
+            slideToPrev();
+        });
+
+        citrus_kong_carouselInner.addEventListener('transitionend',()=>{
+            if(direction === -1){
+                if(jump > 1){
+                    for(let i = 0; i < jump; i++){
+                        activeSlide++;
+                        citrus_kong_carouselInner.append(citrus_kong_carouselInner.firstElementChild);
+                    }
+                }else{
+                    activeSlide++;
+                    citrus_kong_carouselInner.append(citrus_kong_carouselInner.firstElementChild);
+                }
+            }else if(direction === 1){
+                if(jump > 1){
+                    for(let i = 0; i < jump; i++){
+                        activeSlide--;
+                        citrus_kong_carouselInner.prepend(citrus_kong_carouselInner.lastElementChild);
+                    }
+                }else{
+                    activeSlide--;
+                    citrus_kong_carouselInner.prepend(citrus_kong_carouselInner.lastElementChild);
+                }
+            };
+
+            citrus_kong_carouselInner.style.transition = 'none';
+            citrus_kong_carouselInner.style.transform = 'translateX(0%)';
+            setTimeout(()=>{
+                jump = 1;
+                citrus_kong_carouselInner.style.transition = 'all ease .5s';
+            });
+            updateIndicators();
+        });
+
+        document.querySelectorAll('.citrus_kong_carousel-indicators span').forEach(item=>{
+            item.addEventListener('click',(e)=>{
+                let slideTo = parseInt(e.target.dataset.slideTo);
+                
+                let indicators = document.querySelectorAll('.citrus_kong_carousel-indicators span');
+
+                indicators.forEach((item,index)=>{
+                    if(item.classList.contains('active')){
+                        activeIndicator = index
+                    }
+                })
+
+                if(slideTo - activeIndicator > 1){
+                    jump = slideTo - activeIndicator;
+                    step = jump * step;
+                    slideToNext();
+                }else if(slideTo - activeIndicator === 1){
+                    slideToNext();
+                }else if(slideTo - activeIndicator < 0){
+
+                    if(Math.abs(slideTo - activeIndicator) > 1){
+                        jump = Math.abs(slideTo - activeIndicator);
+                        step = jump * step;
+                        slideToPrev();
+                    }
+                        slideToPrev();
+                }
+                step = 100 / totalSlides; 
+            })
+        });
+
+        citrus_kong_carousel.addEventListener('mouseover',()=>{
+            loop(false);
+        })
+
+        citrus_kong_carousel.addEventListener('mouseout',()=>{
+            loop(true);
+        })
+
+        //citrus_kong_carousel functions
+
+        function loadIndicators(){
+            slides.forEach((slide,index)=>{
+                if(index === 0){
+                    document.querySelector('.citrus_kong_carousel-indicators').innerHTML +=
+                    `<span data-slide-to="${index}" class="active"></span>`;
+                }else{
+                    document.querySelector('.citrus_kong_carousel-indicators').innerHTML +=
+                    `<span data-slide-to="${index}"></span>`;
+                }
+            }); 
+        };
+
+        function updateIndicators(){
+            if(activeSlide > (totalSlides - 1)){
+                activeSlide = 0;
+            }else if(activeSlide < 0){
+                activeSlide = (totalSlides - 1);
+            }
+            document.querySelector('.citrus_kong_carousel-indicators span.active').classList.remove('active');
+            document.querySelectorAll('.citrus_kong_carousel-indicators span')[activeSlide].classList.add('active');
+        };
+
+        function slideToNext(){
+            if(direction === 1){
+                direction = -1;
+                citrus_kong_carouselInner.prepend(citrus_kong_carouselInner.lastElementChild);
+            };
+            
+            citrus_kong_carousel.style.justifyContent = 'flex-start';
+            citrus_kong_carouselInner.style.transform = `translateX(-${step}%)`;
+        };
+
+        function slideToPrev(){
+            if(direction === -1){
+                direction = 1;
+                citrus_kong_carouselInner.append(citrus_kong_carouselInner.firstElementChild);
+            };
+            citrus_kong_carousel.style.justifyContent = 'flex-end'
+            citrus_kong_carouselInner.style.transform = `translateX(${step}%)`;
+        };
+
+        function loop(status){
+            if(status === true){
+                time = setInterval(()=>{
+                    slideToNext();
+                },interval);
+            }else{
+                clearInterval(time);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            citrus_kong_carousel.style.display = 'flex';
+        });
+
+    </script>

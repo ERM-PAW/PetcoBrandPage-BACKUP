@@ -1,0 +1,38 @@
+
+
+/* Bottom Hero */
+.hound_gatos .bottom-hero{
+    padding: 50px 0 0;
+}
+
+.hound_gatos .bottom-hero__content{
+    background: rgba(223, 30, 54, 0.2);
+}
+
+.hound_gatos .bottom-hero__content--col{
+    width: 50%;
+}
+
+.hound_gatos .bottom-hero__content--text{
+    text-align: center;
+    padding: 20px;
+}
+
+.hound_gatos .bottom-hero__content--text h3{
+    font-family: "PetcoCircularTT-Bold", arial !important;
+    font-size: 25px;
+    color: #000000;
+}
+
+.hound_gatos .bottom-hero__content--text p{
+    font-family: "PetcoCircularTT-Regular", arial !important;
+    font-size: 16px;
+    color: #000000;
+    padding: 20px 0;
+    max-width: 450px;
+    margin: 0 auto;
+}
+
+.hound_gatos .bottom-hero__content--text .cta-box{
+    padding: 0;
+}

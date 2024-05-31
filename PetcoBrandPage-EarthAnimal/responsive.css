@@ -1,0 +1,209 @@
+
+/* Medium devices */
+@media only screen and (min-width: 1024px) and (max-width: 1279px) {
+
+    /* Bottom Hero */
+    .earth-animal .bottom-hero__content-wrapper{
+        min-height: 250px;
+    }
+    
+    .earth-animal .bottom-hero__content--img{
+        top: -180px;
+    }
+    
+}
+
+/* Tab devices */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+
+    /* POV Section */
+    .citrus_earth_animal__pov--text h1 {
+        font-size: 30px;
+    }
+
+    /* Bottom Hero */
+    .earth-animal .bottom-hero__content-wrapper{
+        min-height: 230px;
+    }
+    
+    .earth-animal .bottom-hero__content--img{
+        top: -128px;
+        padding: 0;
+    }
+    
+}
+
+
+
+/* Mobile devices */
+@media only screen and (max-width: 767px){
+
+    /* Show hide class */
+    .m-hide{
+        display: none;
+    }
+
+    .d-hide{
+        display: block;
+    }
+
+    /* CTA Styles */
+    .earth-animal .cta-box {
+        width: 100%;
+    }
+
+    .earth-animal .cta-box a{
+        text-transform: capitalize;
+        text-decoration: underline;
+        color: #001952 !important;
+        background: none !important;
+        border: none !important;
+    }
+
+    .earth-animal .cta-box a:hover{
+        color: #001952;
+        border: none;
+    }
+
+    /* POV section */
+    .citrus_earth_animal_carousel-item .custom-container {
+        flex-wrap: wrap;
+    }
+
+    .citrus_earth_animal_carousel-inner{
+        align-items: flex-start !important;
+    }
+
+    .citrus_earth_animal_carousel-inner .pov1{
+        background-image: none;
+        background: #489399;
+    }
+    .citrus_earth_animal_carousel-inner .pov2{
+        background-image: none;
+        background: #001952;
+    }
+    .citrus_earth_animal_carousel-inner .pov3{
+        background-image: none;
+        background: #D58641;
+    }
+
+    .citrus_earth_animal_carousel-inner .pov1 .citrus_earth_animal_carousel-item__col:last-child{
+        background-image: url("https://assets.petco.com/petco/image/upload/f_auto,q_auto/petco-earth-animal-pov1-mob");
+    }
+    .citrus_earth_animal_carousel-inner .pov2 .citrus_earth_animal_carousel-item__col:last-child{
+        background-image: url("https://assets.petco.com/petco/image/upload/f_auto,q_auto/petco-earth-animal-pov2-mob");
+    }
+    .citrus_earth_animal_carousel-inner .pov3 .citrus_earth_animal_carousel-item__col:last-child{
+        background-image: url("https://assets.petco.com/petco/image/upload/f_auto,q_auto/petco-earth-animal-pov3-mob");
+    }
+
+    .citrus_earth_animal_carousel-inner .pov2 .citrus_earth_animal_carousel-item__col:last-child .citrus_earth_animal__pov--shots{
+        opacity: 1;
+    }
+
+    .citrus_earth_animal_carousel-item__col{
+        width: 100%;
+    }
+
+    .citrus_earth_animal_carousel-item__col:first-child{
+        order: 2;
+        padding: 40px 15px;
+        min-height: 290px;
+    }
+
+    .citrus_earth_animal__pov--logo {
+        max-width: 130px;
+        margin: 0 auto;
+    }
+
+    .citrus_earth_animal__pov--shots{
+        max-width: 70%;
+    }
+
+    .citrus_earth_animal_carousel-inner .pov1 .citrus_earth_animal__pov--shots img{
+
+    }
+
+    .citrus_earth_animal_carousel-inner .pov3 .citrus_earth_animal__pov--shots{
+        margin: 0 auto;
+    }
+
+    .citrus_earth_animal__pov--text{
+        padding: 0 15px;
+    }
+
+    .citrus_earth_animal__pov--text h1{
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .citrus_earth_animal__pov--text p {
+        text-align: center;
+    }
+
+    .citrus_earth_animal_carousel-item__col .citrus_earth_animal__pov--cta a{
+        color: #fff !important;
+    }
+
+    .pov3 .citrus_earth_animal_carousel-item__col .citrus_earth_animal__pov--cta a{
+        color: #00205B !important;
+    }
+
+    /* Size section */
+    .earth-animal__sizes--content-wrapper{
+        overflow-x: auto;
+        width: 330%;
+    }
+
+    .earth-animal__sizes--content .sizes__single-item{
+        width: 70%;
+    }
+
+    /* Variety proteins */
+    .earth-animal .variety-proteins__content--wrapper{
+        overflow-x: auto;
+        width: 245%;
+    }
+
+    .earth-animal .variety-proteins__single-item{
+        width: 40%;
+    }
+
+
+    /* Bottom Hero */
+    .earth-animal .bottom-hero {
+        margin: 50px 0 30px;
+    }
+
+    .earth-animal .bottom-hero__bg{
+        background-image: none;
+    }
+
+    .earth-animal .bottom-hero__content-wrapper{
+        flex-wrap: wrap;
+    }
+
+    .earth-animal .bottom-hero__content-wrapper--col{
+        width: 100%;
+    }
+
+    .earth-animal .bottom-hero__content-wrapper--col:first-child{
+        order: 2;
+    }
+
+    .earth-animal .bottom-hero__content--text {
+        padding: 40px 15px 30px;
+    }
+
+    .bottom-hero__content--text .cta-box a{
+        color: #001952 !important;
+    }
+
+    .earth-animal .bottom-hero__content--img{
+        padding: 0;
+        position: unset;
+        display: flex;
+    }
+
+
+}

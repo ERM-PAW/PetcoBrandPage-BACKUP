@@ -1,0 +1,643 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.pov-text{
+    @apply p-5 2xl:p-10 lg:p-6 2xl:pl-12 md:pt-3 md:pb-3 block sm:order-none xs:order-2 w-1/2 sm:w-1/2 xs:w-full;
+}
+
+.pov-text__title{
+    @apply text-4xl 2xl:text-4xl xl:text-4xl lg:text-2xl md:text-base font-bold block w-full pt-5 2xl:pt-8 lg:pt-4 md:pt-2 md:text-left xs:text-center;
+}
+
+
+
+
+/* Common Classes */
+.citrus-diamonpet-cta-box{
+    @apply w-36 md:w-36 lg:w-52 bg-white text-black p-4 lg:p-4 md:p-3 rounded text-center xs:w-full
+}
+
+.citrus-diamonpet-cta-box-tab{
+    @apply w-40 md:w-40 lg:w-52 bg-white text-black p-4 lg:p-4 md:p-3 rounded text-center xs:w-full
+}
+
+.citrus-diamonpet-cta-box-tab:hover{
+    color: #001952;
+    background: #fff;
+}
+
+.citrus-diamonpet-cta-box:hover{
+    background: #001952;
+    color: #fff;
+}
+
+.citrus-diamonpet-main-wrapper img{
+    width: 100%;
+}
+
+
+/* Citrus Diamond Pet Tab */
+  /**************************************/
+    /************ Diamond Pet tab Area*************/
+    /************************************/
+    .citrus-diamonpet-tab-area {
+        overflow: hidden;
+        padding-top: 35px;
+        padding-bottom: 26px;
+    }
+
+    .citrus-diamonpet-tab-container {
+        max-width: 1246px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+
+    .citrus_diamonpet_grain_div.citrusTabshow {
+        display: block;
+    }
+
+    .citrus_diamonpet_grain_div {
+        float: left;
+        display: none;
+    }
+
+    .citrus_diamonpet_tab{
+        padding-bottom: 40px;
+    }
+
+    .citrus_diamonpet_tab_item span {
+        display: block;
+    }
+
+
+    .citrus_diamonpet_tab_item {
+        text-transform: uppercase;
+        padding: 12px 20px;
+        margin: 0px 10px;
+        font-size: 14px;
+        text-decoration: none;
+        border: none;
+        cursor: pointer;
+        color: #6E6B6B;
+        font-family: "PetcoCircularTT-Regular", arial !important;
+        font-weight: 700;
+        line-height: 1.3;
+        text-align: center;
+    }
+
+    button {
+        font-family: "PetcoCircularTT-Regular", arial !important;
+    }
+
+    .citrus_diamonpet_tab_item.citrus_diamonpet_tab_item_active {
+        color: #001952;
+        border-bottom: 8px solid #001952;
+        margin-top: 8px;
+    }
+
+    .citrus-diamonpet-tab__btn {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        margin-bottom: 30px;
+        border-bottom: 1px solid #021B4E;
+    }
+
+
+    .cirtus_tabs_22 {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    .citrus_item_section__tab_content_item {
+        max-width: 190px;
+        width: 100% !important;
+        margin: 0px 9px;
+    }
+
+    .citrus-inner-img22 {
+        padding: 0 15px;
+    }
+
+    .citrus-inner-img22>a img {
+        width: 100%;
+        height: auto;
+    }
+
+    .citrus_item_section__tab_content_item.citrus_row_opacity_0 {
+        opacity: 0;
+    }
+
+    .cirtus_tabs_main_22 .splide__pagination {
+        display: none;
+    }
+
+    .citrus_product_info22>p {
+        font-size: 13px;
+        color: #333333;
+        min-height: 82px;
+        display: block;
+        margin-top: 18px;
+    }
+
+    .citrus-meet-tab-product>a {
+        color: #001952;
+        font-size: 16px;
+        display: block;
+        font-family: "PetcoCircularTT-Bold", arial !important;
+        text-decoration: underline;
+    }
+
+    .cirtus_tabs_22 .splide__arrow--next {
+        right: 0px;
+    }
+
+    .cirtus_tabs_22 .splide__arrow--prev {
+        left: 2px;
+    }
+
+    .cirtus_tabs_22 .splide__arrow svg {
+        fill: #122359;
+    }
+
+    .cirtus_tabs_22 .splide__arrow {
+        -ms-flex-align: center;
+        -webkit-box-align: center;
+        align-items: center;
+        background: transparent;
+        border: 1px solid #122359;
+        border-radius: 50%;
+        cursor: pointer;
+        display: -ms-flexbox;
+        display: -webkit-box;
+        display: flex;
+        height: 3.2em;
+        -ms-flex-pack: center;
+        -webkit-box-pack: center;
+        justify-content: center;
+        opacity: 1;
+        padding: 0;
+        position: absolute;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        width: 3.2em;
+        z-index: 1;
+    }
+
+
+
+.citrus_diamond_carousel{
+    width: 100%;
+    position: relative;
+}
+
+.citrus_diamond_carousel-inner{
+    display: flex;
+    transition: all ease .5s;
+}
+
+.citrus_diamond_carousel-inner .pov1{
+    background-image: url("img/diamondpet-pov1-full.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.citrus_diamond_carousel-inner .pov2{
+    background-image: url("img/diamondpet-pov2-full.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.citrus_diamond_carousel-inner .pov3{
+    background-image: url("img/diamondpet-pov3-full.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+.citrus_diamond_carousel-item{
+    width: 100%;
+    overflow: hidden;
+}
+
+.citrus_diamond_carousel-indicators{
+    position: absolute;
+    bottom: 0;
+    left: calc(100%/2 - 52px);
+    text-align: center;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 5px 5px 0 0;
+    padding: 10px 10px 5px;
+}
+
+.citrus_diamond_carousel-indicators span{
+    display: inline-block;
+    border: 2px solid #09205c;
+    padding: 7px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+.citrus_diamond_carousel-indicators span.active{
+    background-color: #09205c;
+}
+
+/* Products Tab */
+
+
+.citrus_diamondpet__dog_tabs--cta .citrus_diamonpet_tab__list--item{
+    border-bottom: 8px solid #EFEEE7;
+}
+
+.citrus_diamondpet__dog_tabs--cta .citrus_diamonpet_tab__list--item .is--active{
+    border-bottom: 8px solid #001952;
+}
+
+.citrus-tab-section__tab-content .cirtus_tabs_main_22 .splide__arrows button:hover{
+    background: #fff;
+}
+
+
+/* Splide Styles */
+.splide__list {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100%;
+    margin: 0 !important;
+    padding: 0 !important;
+    transform-style: preserve-3d;
+}
+.splide.is-initialized:not(.is-active) .splide__list {
+    display: block;
+}
+.splide__pagination {
+    -ms-flex-align: center;
+    align-items: center;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin: 0;
+    pointer-events: none;
+}
+.splide__pagination li {
+    display: inline-block;
+    line-height: 1;
+    list-style-type: none;
+    margin: 0;
+    pointer-events: auto;
+}
+.splide__progress__bar {
+    width: 0;
+}
+.splide {
+    outline: none;
+    position: relative;
+    visibility: hidden;
+}
+.splide.is-initialized,
+.splide.is-rendered {
+    visibility: visible;
+}
+.splide__slide {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    box-sizing: border-box;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    list-style-type: none !important;
+    margin: 0;
+    outline: none;
+    position: relative;
+}
+.splide__slide img {
+    vertical-align: bottom;
+}
+.splide__slider {
+    position: relative;
+}
+.splide__spinner {
+    animation: splide-loading 1s linear infinite;
+    border: 2px solid #999;
+    border-left-color: transparent;
+    border-radius: 50%;
+    bottom: 0;
+    contain: strict;
+    display: inline-block;
+    height: 20px;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 20px;
+}
+.splide__track {
+    overflow: hidden;
+    position: relative;
+    z-index: 0;
+}
+@keyframes splide-loading {
+    0% {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(1turn);
+    }
+}
+.splide--draggable > .splide__slider > .splide__track,
+.splide--draggable > .splide__track {
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.splide--fade > .splide__slider > .splide__track > .splide__list,
+.splide--fade > .splide__track > .splide__list {
+    display: block;
+}
+.splide--fade > .splide__slider > .splide__track > .splide__list > .splide__slide,
+.splide--fade > .splide__track > .splide__list > .splide__slide {
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    z-index: 0;
+}
+.splide--fade > .splide__slider > .splide__track > .splide__list > .splide__slide.is-active,
+.splide--fade > .splide__track > .splide__list > .splide__slide.is-active {
+    opacity: 1;
+    position: relative;
+    z-index: 1;
+}
+.splide--rtl {
+    direction: rtl;
+}
+.splide--ttb.is-active > .splide__slider > .splide__track > .splide__list,
+.splide--ttb.is-active > .splide__track > .splide__list {
+    display: block;
+}
+.splide__arrow {
+    -ms-flex-align: center;
+    align-items: center;
+    background: #ccc;
+    border: 0;
+    border-radius: 50%;
+    cursor: pointer;
+    display: -ms-flexbox;
+    display: flex;
+    height: 2em;
+    -ms-flex-pack: center;
+    justify-content: center;
+    opacity: 0.7;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2em;
+    z-index: 1;
+}
+.splide__arrow svg {
+    fill: #000;
+    height: 1.2em;
+    width: 1.2em;
+}
+.splide__arrow:hover {
+    opacity: 0.9;
+}
+.splide__arrow:focus {
+    outline: none;
+}
+.splide__arrow--prev {
+    left: 1em;
+}
+.splide__arrow--prev svg {
+    transform: scaleX(-1);
+}
+.splide__arrow--next {
+    right: 1em;
+}
+.splide__pagination {
+    bottom: 0.5em;
+    left: 0;
+    padding: 0 1em;
+    position: absolute;
+    right: 0;
+    z-index: 1;
+}
+.splide__pagination__page {
+    background: #ccc;
+    border: 0;
+    border-radius: 50%;
+    display: inline-block;
+    height: 8px;
+    margin: 3px;
+    opacity: 0.7;
+    padding: 0;
+    transition: transform 0.2s linear;
+    width: 8px;
+}
+.splide__pagination__page.is-active {
+    background: #fff;
+    transform: scale(1.4);
+}
+.splide__pagination__page:hover {
+    cursor: pointer;
+    opacity: 0.9;
+}
+.splide__pagination__page:focus {
+    outline: none;
+}
+.splide__progress__bar {
+    background: #ccc;
+    height: 3px;
+}
+.splide--nav > .splide__slider > .splide__track > .splide__list > .splide__slide,
+.splide--nav > .splide__track > .splide__list > .splide__slide {
+    border: 3px solid transparent;
+    cursor: pointer;
+}
+.splide--nav > .splide__slider > .splide__track > .splide__list > .splide__slide.is-active,
+.splide--nav > .splide__track > .splide__list > .splide__slide.is-active {
+    border: 3px solid #000;
+}
+.splide--nav > .splide__slider > .splide__track > .splide__list > .splide__slide:focus,
+.splide--nav > .splide__track > .splide__list > .splide__slide:focus {
+    outline: none;
+}
+.splide--rtl > .splide__arrows .splide__arrow--prev,
+.splide--rtl > .splide__slider > .splide__track > .splide__arrows .splide__arrow--prev,
+.splide--rtl > .splide__track > .splide__arrows .splide__arrow--prev {
+    left: auto;
+    right: 1em;
+}
+.splide--rtl > .splide__arrows .splide__arrow--prev svg,
+.splide--rtl > .splide__slider > .splide__track > .splide__arrows .splide__arrow--prev svg,
+.splide--rtl > .splide__track > .splide__arrows .splide__arrow--prev svg {
+    transform: scaleX(1);
+}
+.splide--rtl > .splide__arrows .splide__arrow--next,
+.splide--rtl > .splide__slider > .splide__track > .splide__arrows .splide__arrow--next,
+.splide--rtl > .splide__track > .splide__arrows .splide__arrow--next {
+    left: 1em;
+    right: auto;
+}
+.splide--rtl > .splide__arrows .splide__arrow--next svg,
+.splide--rtl > .splide__slider > .splide__track > .splide__arrows .splide__arrow--next svg,
+.splide--rtl > .splide__track > .splide__arrows .splide__arrow--next svg {
+    transform: scaleX(-1);
+}
+.splide--ttb > .splide__arrows .splide__arrow,
+.splide--ttb > .splide__slider > .splide__track > .splide__arrows .splide__arrow,
+.splide--ttb > .splide__track > .splide__arrows .splide__arrow {
+    left: 50%;
+    transform: translate(-50%);
+}
+.splide--ttb > .splide__arrows .splide__arrow--prev,
+.splide--ttb > .splide__slider > .splide__track > .splide__arrows .splide__arrow--prev,
+.splide--ttb > .splide__track > .splide__arrows .splide__arrow--prev {
+    top: 1em;
+}
+.splide--ttb > .splide__arrows .splide__arrow--prev svg,
+.splide--ttb > .splide__slider > .splide__track > .splide__arrows .splide__arrow--prev svg,
+.splide--ttb > .splide__track > .splide__arrows .splide__arrow--prev svg {
+    transform: rotate(-90deg);
+}
+.splide--ttb > .splide__arrows .splide__arrow--next,
+.splide--ttb > .splide__slider > .splide__track > .splide__arrows .splide__arrow--next,
+.splide--ttb > .splide__track > .splide__arrows .splide__arrow--next {
+    bottom: 1em;
+    top: auto;
+}
+.splide--ttb > .splide__arrows .splide__arrow--next svg,
+.splide--ttb > .splide__slider > .splide__track > .splide__arrows .splide__arrow--next svg,
+.splide--ttb > .splide__track > .splide__arrows .splide__arrow--next svg {
+    transform: rotate(90deg);
+}
+.splide--ttb > .splide__pagination,
+.splide--ttb > .splide__slider > .splide__pagination {
+    bottom: 0;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    left: auto;
+    padding: 1em 0;
+    right: 0.5em;
+    top: 0;
+}
+
+
+.splide-banner-instinct .splide__arrows {
+    display: none;
+}
+
+
+.splide-banner-instinct .splide__list {
+    height: inherit;
+}
+
+.tab__list_top_img_btn .tab__item.is--active .active{
+    display: block;
+}
+.tab__list_top_img_btn .tab__item.is--active .normal{
+    display: none;
+}
+
+.tab__list_top_img_btn .tab__item .active{
+    display: none;
+}
+.tab__list_top_img_btn .tab__item .normal{
+    display: block;
+}
+
+/* Cat Section */
+.citrus-diamonpet__cat .single-item img{
+    min-width: 230px;
+    margin: 0 auto;
+}
+
+.diamonpet-product-grid::-webkit-scrollbar {
+    display: none;
+}
+.diamonpet-product-grid {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
+
+/* Videos   */
+.citrus-diamondpet-videos .content-text{
+    /* background: #948258; */
+    background: rgba(148, 130, 88, 0.5);
+}
+
+
+
+/* Responsive */
+
+@media only screen and (max-width: 767px) {
+
+    /* POV */
+    .citrus_diamond_carousel-inner .pov1{
+        background-image: unset;
+    }
+    
+    .citrus_diamond_carousel-inner .pov2{
+        background-image: unset;
+    }
+    
+    .citrus_diamond_carousel-inner .pov3{
+        background-image: unset;
+    }
+
+    .citrus-diamonpet-cta-box{
+        background: transparent;
+        color: #001952;
+        text-decoration: underline;
+    }
+
+    .citrus-diamonpet-cta-box:hover{
+        background: transparent;
+        color: #001952;
+    }
+
+    /* Cat Section */
+    .citrus-diamonpet__cat .flex{
+        width: 300%;
+    }
+
+    .citrus-diamonpet__cat{
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .citrus-diamonpet__cat .flex .single-item{
+        width: 60%;
+    }
+
+}

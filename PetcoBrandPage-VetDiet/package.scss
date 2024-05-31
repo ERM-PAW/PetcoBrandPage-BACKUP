@@ -1,0 +1,25 @@
+
+
+.citrus_purina__packages{
+    .citrus_purina__packages_wrapper{
+        .citrus_purina__packages_wrapper--single-package{
+            margin: 24px;
+            background: #F4F7FF;
+            a{
+                display: block;
+                text-align: center;
+                .single-package__img{
+                    display: flex;
+                }
+                .single-package__text{
+                    h3{
+                        font-size: 20px;
+                        color: #000000;
+                        font-family: "PetcoCircularTT-Bold", arial !important;
+                        padding: 3rem 15px;
+                    }
+                }
+            }
+        }
+    }
+}

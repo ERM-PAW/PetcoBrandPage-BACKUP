@@ -1,0 +1,523 @@
+<!-- This page is developed by SEBPO citrusAd team member Imran Ahmed. Hand-off date 08/16/2022 -->
+
+<style>
+    body {
+	margin: 0;
+	padding: 0;
+	font-family: PetcoCircularTT-Regular, arial!important
+}
+a {
+	text-decoration: none
+}
+#citrusPrecious__povContainer {
+	width: 100%;
+	max-width: 100%;
+	min-height: 380px;
+	position: relative;
+	overflow: hidden
+}
+.citrusPrecious__PovRow {
+	position: relative;
+	max-width: 100%;
+	display: grid;
+	grid-template-columns: 72% 28%;
+	grid-gap: 0
+}
+.citrusPrecious__povLeft {
+	width: 100%;
+	min-height: 310px;
+	background: #001952
+}
+.citrusPrecious__povRight {
+	width: 100%;
+	min-height: 310px;
+	background: #e9f7ff
+}
+.citrusPrecious__logo {
+	margin: 30px 0;
+	width: 216px;
+	max-width: 100%
+}
+.citrusPrecious__povProduct {
+	position: relative;
+	width: 442px;
+	height: 315px;
+	top: 43px;
+	left: -201px
+}
+.citrusPrecious__povTextContainer {
+	width: 558px;
+	max-width: 100%;
+	margin-left: 10%
+}
+.citrusPrecious__povTextContainer h1 {
+	margin: 0;
+	font-family: PetcoCircularTT-Bold, arial!important;
+	font-size: 35px;
+	font-weight: 700;
+	color: #fff
+}
+.citrusPrecious__povTextContainer p {
+	margin: 10px 0 0 0;
+	font-family: PetcoCircularTT-Regular, arial!important;
+	font-size: 16px;
+	line-height: 22px;
+	color: #fff
+}
+.citrusPrecious__CTA button {
+	margin-top: 30px;
+	width: 211px;
+	height: 56px;
+	background: #fff;
+	font-family: PetcoCircularTT-Bold, arial!important;
+	font-size: 16px;
+	color: #001952;
+	text-transform: uppercase;
+	font-weight: 700;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer
+}
+.citrusPrecious__CTA button:hover {
+	background: #001952;
+	color: #fff
+}
+.citrusPrecious__sectionTitle {
+	font-family: PetcoCircularTT-Bold, arial!important;
+	font-size: 25px;
+	font-weight: 700;
+	color: #000;
+	text-align: center;
+	margin-bottom: 30px
+}
+.citrusPrecious__litterCategory {
+	width: 994px;
+	max-width: 100%;
+	margin: auto;
+	overflow: auto
+}
+.citrusPrecious__litterRow {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	column-gap: 20px;
+	text-align: center
+}
+.citrusPrecious__categoryCard {
+	width: 199px;
+	margin: auto
+}
+.citrusPrecious__categoryCard img {
+	width: 177px;
+	max-width: 100%;
+	object-fit: contain
+}
+.citrusPrecious__categoryCard--body p {
+	font-family: PetcoCircularTT-Bold, arial!important;
+	font-size: 18px;
+	line-height: 22px;
+	font-weight: 700;
+	color: #000;
+	margin-top: 30px
+}
+.citrusPrecious__largeCTA {
+	text-align: center
+}
+.citrusPrecious__largeCTA button {
+	margin-top: 40px;
+	width: 211px;
+	height: 56px;
+	background: #001952;
+	font-family: PetcoCircularTT-Bold, arial!important;
+	font-size: 16px;
+	color: #fff;
+	text-transform: uppercase;
+	font-weight: 700;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer
+}
+#citrusPrecious__productContainer {
+	margin-top: 50px
+}
+.citrusPrecious__products {
+	width: 826px;
+	max-width: 100%;
+	margin: auto;
+	overflow: auto
+}
+.citrusPrecious__productsRow {
+	display: flex;
+	flex-direction: row;
+	gap: 10px
+}
+.citrusPrecious__productCard {
+	margin-top: 25px;
+	width: 198px;
+	max-width: 100%
+}
+.citrusPrecious__productCard img {
+	max-width: 100%;
+	margin: auto
+}
+.citrusPrecious__productCard--body p {
+	font-family: PetcoCircularTT-Regular, arial!important;
+	font-size: 13px;
+	line-height: 18px;
+	color: #333;
+	margin: 15px 0
+}
+.citrusPrecious__productCard--body a {
+	font-family: PetcoCircularTT-Bold, arial!important;
+	font-size: 16px;
+	color: #001952;
+	text-decoration: underline
+}
+.citrusPrecious__VideoContainer {
+	margin: 70px auto;
+	background-color: #e9f7ff;
+	position: relative
+}
+.citrusPrecious__videoRow {
+	width: 1100px;
+	max-width: 100%;
+	margin: auto;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 20px;
+	justify-content: center;
+	align-items: center
+}
+.citrusPrecious__DarkLogo {
+	width: 247px;
+	margin: auto
+}
+.citrusPrecious__col {
+	position: relative
+}
+.citrusPrecious__footerTextContainer, .citrusPrecious__videoTextContainer {
+	text-align: center
+}
+.citrusPrecious__footerTextContainer h3, .citrusPrecious__videoTextContainer h3 {
+	font-family: PetcoCircularTT-Bold, arial!important;
+	font-size: 25px;
+	font-weight: 700;
+	color: #000;
+	margin: 15px 0
+}
+.citrusPrecious__footerTextContainer p, .citrusPrecious__videoTextContainer p {
+	font-family: PetcoCircularTT-Regular, arial!important;
+	font-size: 16px;
+	color: #000;
+	line-height: 22px
+}
+.citrusPrecious__footerTextContainer p {
+	margin-bottom: 30px
+}
+.citrusPrecious__iframeContainer {
+	position: relative;
+	top: -30px
+}
+.citrusPrecious__footer {
+	margin-bottom: 30px
+}
+.citrusPrecious__footerRow {
+	width: 1100px;
+	max-width: 100%;
+	margin: auto;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 20px
+}
+.citrusPrecious__footerImg {
+	width: 448px;
+	max-width: 100%;
+	object-fit: contain;
+	margin: auto
+}
+.citrusPrecious__footerTextContainer .citrusPrecious__largeCTA button {
+	margin-top: 0
+}
+@media all and (min-width:922px) and (max-width:1200px) {
+	.citrusPrecious__povProduct {
+		width: 366px;
+		object-fit: contain;
+		left: -133px;
+		top: 63px
+	}
+	.citrusPrecious__videoTextContainer {
+		padding-left: 10px
+	}
+	.citrusPrecious__footerTextContainer {
+		padding-right: 10px
+	}
+}
+@media all and (min-width:600px) and (max-width:921px) {
+	.citrusPrecious__PovRow {
+		display: flex;
+		flex-direction: column
+	}
+	.citrusPrecious__povLeft {
+		order: 2
+	}
+	.citrusPrecious__povRight {
+		min-height: 200px;
+		display: flex;
+		justify-content: center
+	}
+	.citrusPrecious__povProduct {
+		position: relative;
+		max-width: 100%;
+		left: 0;
+		right: 0;
+		margin: auto
+	}
+	.citrusPrecious__povTextContainer {
+		margin: 40px auto
+	}
+	.citrusPrecious__litterRow, .citrusPrecious__productsRow {
+		width: 100%;
+		margin-left: 20px
+	}
+	.citrusPrecious__litterRow {
+		justify-content: left
+	}
+}
+@media all and (max-width:768px) {
+	#citrusPrecious__povContainer {
+		min-height: 380px
+	}
+	.citrusPrecious__PovRow {
+		display: flex;
+		flex-direction: column
+	}
+	.citrusPrecious__povLeft {
+		order: 2
+	}
+	.citrusPrecious__povRight {
+		min-height: 200px;
+		display: flex;
+		justify-content: center
+	}
+	.citrusPrecious__povProduct {
+		position: relative;
+		width: 266px;
+		max-width: 100%;
+		height: 196px;
+		left: 0;
+		right: 0;
+		margin: auto
+	}
+	.citrusPrecious__povTextContainer {
+		margin-left: 0;
+		text-align: center;
+		margin-bottom: 0;
+		margin: auto
+	}
+	.citrusPrecious__logo {
+		width: 162px;
+		margin: 60px auto 30px
+	}
+	.citrusPrecious__povTextContainer h1 {
+		font-size: 25px
+	}
+	.citrusPrecious__CTA button, .citrusPrecious__largeCTA button {
+		background: 0 0;
+		color: #fff;
+		text-transform: capitalize;
+		text-decoration: underline;
+		margin-top: 20px
+	}
+	.citrusPrecious__largeCTA button {
+		color: #001952
+	}
+	.citrusPrecious__sectionTitle {
+		font-size: 20px
+	}
+	#citrusPrecious__litterContainer {
+		margin-top: 35px
+	}
+	.citrusPrecious__litterRow {
+		justify-content: start
+	}
+	.citrusPrecious__categoryCard {
+		width: 130px
+	}
+	.citrusPrecious__categoryCard img {
+		width: 115px
+	}
+	.citrusPrecious__categoryCard--body p {
+		font-size: 15px;
+		line-height: 17px
+	}
+	.citrusPrecious__products {
+		padding: 0 10px 0 20px;
+		max-width: 90%
+	}
+	.citrusPrecious__DarkLogo {
+		width: 171px;
+		max-width: 100%
+	}
+	.citrusPrecious__footerTextContainer h3, .citrusPrecious__videoTextContainer h3 {
+		font-size: 20px
+	}
+	.citrusPrecious__footerTextContainer, .citrusPrecious__videoTextContainer {
+		padding: 35px 10px 40px 10px
+	}
+	.citrusPrecious__VideoContainer {
+		background: 0 0;
+		margin: 30px auto
+	}
+	.citrusPrecious__videoTextContainer {
+		background-color: #e9f7ff
+	}
+	.citrusPrecious__footerRow, .citrusPrecious__videoRow {
+		grid-template-columns: repeat(1, 1fr)
+	}
+	.citrusPrecious__footerRow .citrusPrecious__col {
+		text-align: center
+	}
+}
+@media all and (min-width:600px) and (max-width:768px) {
+	.citrusPrecious__litterRow {
+		justify-content: center
+	}
+}
+@media all and (max-width:450px) {
+	.citrusPrecious__povTextContainer p {
+		padding: 0 10px
+	}
+}
+</style>
+<main class="citrusPrecious__wrapper">
+    <section class="citrusPrecious__povContainer" id="citrusPrecious__povContainer">
+        <div class="citrusPrecious__PovRow">
+            <div class="citrusPrecious__povLeft">
+                <div class="citrusPrecious__povTextContainer">
+                    <img alt="Dr. Elsey’s logo" class="citrusPrecious__logo" src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/preciouscat_drelseys_logo_white.png">
+                    <h1>THE LITTER CATS LOVE™</h1>
+                    <p>Dr. Elsey’s believes that litter can be loved™—by cats and pet parents. Explore their proven, veterinarian-formulated solutions.</p>
+                    <div class="citrusPrecious__CTA">
+                        <a href="https://www.petco.com/shop/en/petcostore/brand/dr-elseys" onclick="clickTrackLink(this)"><button>Shop Now</button></a>
+                    </div>
+                </div>
+            </div>
+            <div class="citrusPrecious__povRight"><img alt="Image of Ultra cat litter and a cartoon cat" class="citrusPrecious__povProduct" src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/preciouscat_Dr%20Elsey's_Hero_Products.png"></div>
+        </div>
+    </section>
+    <section id="citrusPrecious__litterContainer">
+        <h2 class="citrusPrecious__sectionTitle">The Ultra litter difference</h2>
+        <div class="citrusPrecious__litterCategory">
+            <div class="citrusPrecious__litterRow">
+                <div class="citrusPrecious__litterCol">
+                    <div class="citrusPrecious__categoryCard">
+                        <img alt="Illustration of a cat nose." src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/preciouscat_elsey-odor-control.png">
+                        <div class="citrusPrecious__categoryCard--body">
+                            <p>Superior odor control</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="citrusPrecious__litterCol">
+                    <div class="citrusPrecious__categoryCard">
+                        <img alt="Illustration of paw prints." src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/preciouscat_elsey-dust-free.png">
+                        <div class="citrusPrecious__categoryCard--body">
+                            <p>99% dust-free low tracking</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="citrusPrecious__litterCol">
+                    <div class="citrusPrecious__categoryCard">
+                        <img alt="Illustration of mountains." src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/preciouscat_elsey-natural.png">
+                        <div class="citrusPrecious__categoryCard--body">
+                            <p>Natural ingredients</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="citrusPrecious__litterCol">
+                    <div class="citrusPrecious__categoryCard">
+                        <img alt="Illustration of two cat faces." src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/preciouscat_elsey-multicat.png">
+                        <div class="citrusPrecious__categoryCard--body">
+                            <p>Multi-cat strength</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="citrusPrecious__largeCTA">
+            <a href="https://www.petco.com/shop/en/petcostore/brand/dr-elseys/clumping-cat-litter" onclick="clickTrackLink(this)"><button>Shop Ultra</button></a>
+        </div>
+    </section>
+    <section id="citrusPrecious__productContainer">
+        <h2 class="citrusPrecious__sectionTitle">Find the right litter for your cat, home and needs</h2>
+        <div class="citrusPrecious__products">
+            <div class="citrusPrecious__productsRow">
+                <div class="citrusPrecious__productCol">
+                    <div class="citrusPrecious__productCard">
+                        <a href="https://www.petco.com/shop/en/petcostore/product/precious-cat-dr-elseys-touch-of-outdoors-multi-cat-litter" onclick="clickTrackLink(this)"><img alt="Illustration of a cat nose." src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/preciouscat_11.png"></a>
+                        <div class="citrusPrecious__productCard--body">
+                            <p>Dr. Elsey’s Touch of Outdoors Clumping Clay Cat Litter</p><a href="https://www.petco.com/shop/en/petcostore/product/precious-cat-dr-elseys-touch-of-outdoors-multi-cat-litter" onclick="clickTrackLink(this)">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="citrusPrecious__productCol">
+                    <div class="citrusPrecious__productCard">
+                        <a href="https://www.petco.com/shop/en/petcostore/product/precious-cat-dr-elseys-cat-attract-scoopable-cat-litter" onclick="clickTrackLink(this)"><img alt="Illustration of paw prints." src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/preciouscat_22.png"></a>
+                        <div class="citrusPrecious__productCard--body">
+                            <p>Dr. Elsey’s Cat Attract Clumping Clay Cat Litter</p><a href="https://www.petco.com/shop/en/petcostore/product/precious-cat-dr-elseys-cat-attract-scoopable-cat-litter" onclick="clickTrackLink(this)">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="citrusPrecious__productCol">
+                    <div class="citrusPrecious__productCard">
+                        <a href="https://www.petco.com/shop/en/petcostore/product/precious-cat-dr-elseys-senior-cat-litter" onclick="clickTrackLink(this)"><img alt="Illustration of mountains." src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/preciouscat_33.png"></a>
+                        <div class="citrusPrecious__productCard--body">
+                            <p>Dr. Elsey’s Senior Cat Silica Gel Litter</p><a href="https://www.petco.com/shop/en/petcostore/product/precious-cat-dr-elseys-senior-cat-litter" onclick="clickTrackLink(this)">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="citrusPrecious__productCol">
+                    <div class="citrusPrecious__productCard">
+                        <a href="https://www.petco.com/shop/en/petcostore/product/precious-cat-dr-elseys-kitten-attract-scoopable-cat-litter" onclick="clickTrackLink(this)"><img alt="Illustration of two cat faces." src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/preciouscat_44.png"></a>
+                        <div class="citrusPrecious__productCard--body">
+                            <p>Dr. Elsey’s Kitten Attract Clumping Clay Cat Litter</p><a href="https://www.petco.com/shop/en/petcostore/product/precious-cat-dr-elseys-kitten-attract-scoopable-cat-litter" onclick="clickTrackLink(this)">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="citrusPrecious__largeCTA">
+            <a href="https://www.petco.com/shop/en/petcostore/brand/dr-elseys" onclick="clickTrackLink(this)"><button>Shop All Products</button></a>
+        </div>
+    </section>
+    <section class="citrusPrecious__VideoContainer">
+        <div class="citrusPrecious__videoRow">
+            <div class="citrusPrecious__col">
+                <div class="citrusPrecious__videoTextContainer">
+                    <img alt="Doctor Elsey’s logo" class="citrusPrecious__DarkLogo" src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/preciouscat_drelseys_logo_black.png">
+                    <h3>Made with heart, soul and science</h3>
+                    <p>Since 1987, Dr. Elsey’s has been creating products that solve complex needs to help keep cats in loving homes.</p>
+                </div>
+            </div>
+            <div class="citrusPrecious__col">
+                <div class="citrusPrecious__iframeContainer">
+                    <iframe allowfullscreen frameborder="0" height="315" src="https://www.youtube-nocookie.com/embed/KI0LsqjOy2g" title="YouTube video player" width="100%"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="citrusPrecious__footer">
+        <div class="citrusPrecious__footerRow">
+            <div class="citrusPrecious__col"><img alt="Two happy cartoon cats rub up against each other." class="citrusPrecious__footerImg" src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/preciouscat_footerIconImage.png"></div>
+            <div class="citrusPrecious__col">
+                <div class="citrusPrecious__footerTextContainer">
+                    <h3>Buy a package with purpose</h3>
+                    <p>Dr. Elsey and his wife, Kathy, have a vision to help support pets and people in need. The company has donated over $13 million to nonprofit organizations, shelters and rescues across the country.</p>
+                    <div class="citrusPrecious__largeCTA">
+                        <a href="https://www.petco.com/shop/en/petcostore/brand/dr-elseys" onclick="clickTrackLink(this)"><button>Explore Products</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>

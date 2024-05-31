@@ -1,0 +1,980 @@
+/*-----------------------------------*/
+/*------------ Splide Css-  //imran ----------*/
+/*-----------------------------------*/
+.splide__list {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  height: 100%;
+  margin: 0 !important;
+  padding: 0 !important;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.splide.is-initialized:not(.is-active) .splide__list {
+  display: block;
+}
+
+.splide {
+  outline: none;
+  position: relative;
+  visibility: hidden;
+}
+
+.splide.is-initialized,
+.splide.is-rendered {
+  visibility: visible;
+}
+
+.splide__slide {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  list-style-type: none !important;
+  margin: 0;
+  outline: none;
+  position: relative;
+}
+
+.splide__slide img {
+  vertical-align: bottom;
+  min-height: 100px;
+}
+
+.splide__track {
+  overflow: hidden;
+  position: relative;
+  z-index: 0;
+}
+
+.splide--draggable > .splide__track {
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.splide--fade > .splide__track > .splide__list {
+  display: block;
+}
+
+.splide--fade > .splide__track > .splide__list > .splide__slide {
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  z-index: 0;
+}
+
+.splide--fade > .splide__track > .splide__list > .splide__slide.is-active {
+  opacity: 1;
+  position: relative;
+  z-index: 1;
+}
+
+.splide--rtl {
+  direction: rtl;
+}
+
+.splide--ttb.is-active > .splide__track > .splide__list {
+  display: block;
+}
+
+.splide__arrow {
+  -ms-flex-align: center;
+  -webkit-box-align: center;
+  align-items: center;
+  background: #ccc;
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  height: 2em;
+  -ms-flex-pack: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  opacity: 0.7;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 2em;
+  z-index: 1;
+}
+
+.splide__arrow svg {
+  fill: #000;
+  height: 1.2em;
+  width: 1.2em;
+}
+
+.splide__arrow:hover {
+  opacity: 0.9;
+}
+
+.splide__arrow:focus {
+  outline: none;
+}
+
+.splide__arrow--prev {
+  left: 1em;
+}
+
+.splide__arrow--prev svg {
+  -webkit-transform: scaleX(-1);
+  -ms-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+.splide__arrow--next {
+  right: 1em;
+}
+/* End splide //imran */
+/* -------------------------------- */
+
+.citrus_purebits_all-overflow a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.citrus_purebits_all-overflow {
+  overflow: hidden !important;
+}
+
+/**************************************/
+/************ Shopper navigation  Area*************/
+/************************************/
+.citrus_purebits_shopper_nav_area {
+  padding-top: 42px;
+  padding-bottom: 65px;
+  overflow: hidden;
+}
+
+.citrus_purebits_shopper_container {
+  max-width: 1255px;
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.citrus_purebites_parent_button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: 60px;
+}
+.citrus_purebites_paren_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  text-align: center;
+  cursor: pointer;
+}
+.citrus_purebites_paren_list img {
+  max-width: 433px;
+  width: 100%;
+  height: auto;
+}
+
+.citrus_purebites_paren_list img {
+  max-width: 433px;
+  width: 100%;
+  height: auto;
+  border: 5px solid transparent;
+}
+
+.citrus_purebites_paren_list > span {
+  color: #000;
+  font-family: "PetcoCircularTT-Bold", arial !important;
+  font-size: 20px;
+  font-weight: bold;
+  display: block;
+  padding-top: 10px;
+}
+
+.MiCS_cat_best_tab_item_active_citrus_purebites {
+  background: transparent;
+  color: #000 !important;
+}
+
+.MiCS_cat_best_tab_item_active_citrus_purebites img {
+  border: 5px solid #d23139;
+}
+
+.filterBestDogDiv_citrus_purebites {
+  display: none;
+}
+
+.filterBestCatDiv_citrus_purebites {
+  float: left;
+  display: none;
+}
+
+.filterDogFoodDiv_citrus {
+  float: left;
+  display: none;
+}
+
+.filterCatFoodDiv_citrus21_purebites {
+  float: left;
+  display: none;
+}
+
+/*cat food tabs*/
+.citrusPurebite21_show {
+  display: block;
+}
+
+.MiCS_tab_item_active_citrus_purebites .citrus_catagory-line-main h4 {
+  color: #001952;
+  border-bottom: 8px solid #001952;
+}
+
+.MiCS_cat_food_tab_citrus21_active_citrus21_purebites
+  .citrus_catagory-line-main
+  h4 {
+  color: #001952;
+  border-bottom: 8px solid #001952;
+}
+
+.citrus_purebits_dog_main_flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 40px;
+  border-bottom: 1px solid #021b4e;
+  margin-bottom: 25px;
+}
+.citrus_purebites_tab {
+  padding-top: 12px;
+}
+.citrus_catagory-line-main > h4 {
+  color: #9b9b9b;
+  font-size: 14px;
+  font-family: "PetcoCircularTT-Bold", arial !important;
+  display: block;
+  padding: 20px 0px;
+  text-transform: uppercase;
+  margin: 0px 50px;
+  border-bottom: 8px solid transparent;
+  cursor: pointer;
+}
+
+.citrus_purebits_dog_inner__content-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: flex-start;
+}
+.citrus_purebitsinner-item {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 230px;
+  flex: 0 0 230px;
+  margin: 15px;
+}
+
+.citrus_purebitsinner-tab-img > a > img {
+  width: 100%;
+  min-height: 100px;
+}
+.citrus_purebits__contents {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.citrus_purebitsinner-item > a {
+  color: #220c0b;
+  font-size: 13px;
+  font-family: "PetcoCircularTT-Regular", arial !important;
+  font-weight: 400;
+  display: block;
+  padding-top: 20px;
+  border-top: 1px solid #212529;
+  margin-top: 18px;
+  min-height: 76px;
+  width: 100%;
+  line-height: 1.3;
+}
+
+.citrus_purebitsinner-item .shop-btn > a {
+  color: #001952;
+  font-size: 16px;
+  font-family: "PetcoCircularTT-Bold", arial !important;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+/**************************************/
+/************ Page Bookend Area*************/
+/************************************/
+.citrus_purebits_page-booked-area {
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  padding-top: 60px;
+  margin-bottom: 5px;
+  padding-bottom: 20px;
+}
+.citrus_purebits_page-booked_container {
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+}
+.citrus_purebits_page-booked-area::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 210px;
+  background: #343a40;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+}
+.citrus_purebits_page-booked-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+.citrus_purebits_page-booked_content_img > img {
+  width: 100%;
+  height: auto;
+}
+
+.citrus_purebites-footer-logo img {
+  max-width: 342px;
+  width: 100%;
+  height: auto;
+}
+.citrus_purebits_page-booked-single {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 45%;
+  flex: 0 0 45%;
+}
+.citrus_purebites-footer-logo {
+  margin-bottom: 18px;
+  margin-left: -18px;
+}
+.citrus_purebits_page-booked_content span {
+  color: #ffffff;
+  font-size: 25px;
+  font-weight: bold;
+  font-family: "PetcoCircularTT-Bold", arial !important;
+  display: block;
+  padding-bottom: 10px;
+}
+.citrus_purebits_page-booked_content p {
+  color: #fff;
+  display: block;
+  padding-bottom: 14px;
+}
+.citrus_purebits_page-booked_content .citrus_purebits_common-slider-btn {
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: start;
+}
+
+.citrus_purebits_page-booked_content .citrus_purebits_common-slider-btn a {
+  margin-left: 0px;
+}
+
+.citrus_purebits_desktop_hide {
+  display: none;
+}
+.citrus_purebits_mobile_hide {
+  display: block;
+}
+
+/*******************************
+product tab carousal style start //imran
+*********************************/
+
+.citrus__tab_item span {
+  display: block;
+}
+
+.citrus__tab_item.citrus_tab_item_active {
+  color: #001952;
+  border-bottom: 8px solid #001952;
+  margin-top: 0px;
+}
+
+.cirtus_product_tabs_22 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.cirtus_product_tabs_22 .splide__arrow--next {
+  right: 0px;
+}
+
+.cirtus_product_tabs_22 .splide__arrow--prev {
+  left: 2px;
+}
+
+.cirtus_product_tabs_22 .splide__arrow svg {
+  fill: #122359;
+}
+
+.cirtus_product_tabs_22 .splide__arrow {
+  -ms-flex-align: center;
+  -webkit-box-align: center;
+  align-items: center;
+  background: transparent;
+  border: 1px solid #122359;
+  border-radius: 50%;
+  cursor: pointer;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  height: 3.2em;
+  -ms-flex-pack: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  opacity: 1;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 3.2em;
+  z-index: 1;
+}
+
+.citrus--main-tab-content {
+  width: 1095px;
+  max-width: 95%;
+  margin: auto;
+  margin-top: 30px;
+}
+
+.citrus__tab_item span {
+  display: block;
+}
+
+.citrus__tab_item {
+  text-transform: uppercase;
+  padding: 12px 20px;
+  margin: 0px 10px;
+  font-size: 14px;
+  text-decoration: none;
+  background-color: #ffffff;
+  border: none;
+  cursor: pointer;
+  color: #6e6b6b;
+  font-family: "PetcoCircularTT-Regular", arial !important;
+  font-weight: 700;
+  line-height: 1.3;
+  text-align: center;
+  border-bottom: 8px solid #fff;
+  border-radius: 0;
+}
+
+.citrus__tab_item.citrus__tab_item_active {
+  color: #001952;
+  border-bottom: 8px solid #001952;
+  margin-top: 12px;
+}
+
+.cirtus__tabs,
+.cirtus_cat_tabs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.citrus__tab_content_item {
+  max-width: 230px;
+  width: 100% !important;
+  margin: 0px 10px;
+  display: none;
+}
+.citrus__tab_content_item > a {
+  font-family: "PetcoCircularTT-Regular", arial !important;
+  text-decoration: none;
+}
+.citrus__tab_content_item.citrusTabshow {
+  display: block;
+}
+.citrus-inner-img22 {
+  padding: 0 0px;
+  margin-left: 0px;
+}
+
+.citrus-inner-img22 > a img {
+  width: 100%;
+  height: auto;
+}
+
+.citrus__tab_content_item.citrus_row_opacity_0 {
+  opacity: 0;
+}
+
+.cirtus__tabs .splide__pagination,
+.cirtus_cat_tabs .splide__pagination {
+  display: none;
+}
+
+.citrus_product_info22 > p {
+  font-family: "PetcoCircularTT-Regular", arial !important;
+  font-size: 13px;
+  color: #333333;
+  min-height: 70px;
+  display: block;
+  margin: 0;
+  margin-top: 18px;
+}
+
+.citrus--tab-product > button {
+  color: #001952;
+  font-size: 16px;
+  display: block;
+  font-family: "PetcoCircularTT-Bold", arial !important;
+  text-decoration: underline;
+  font-weight: bold;
+  border: none;
+  background: none;
+  cursor: pointer;
+  margin-left: -6px;
+  text-align: left;
+}
+
+.cirtus__tabs .splide__arrow--next,
+.cirtus_cat_tabs .splide__arrow--next {
+  right: 0px;
+}
+
+.cirtus__tabs .splide__arrow--prev,
+.cirtus_cat_tabs .splide__arrow--prev {
+  left: 2px;
+}
+
+.cirtus__tabs .splide__arrow svg,
+.cirtus_cat_tabs .splide__arrow svg {
+  fill: #122359;
+}
+
+.cirtus__tabs .splide__arrow,
+.cirtus_cat_tabs .splide__arrow {
+  -ms-flex-align: center;
+  -webkit-box-align: center;
+  align-items: center;
+  background: transparent;
+  border: 1px solid #122359;
+  border-radius: 50%;
+  cursor: pointer;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  height: 3.2em;
+  -ms-flex-pack: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  opacity: 1;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 3.2em;
+  z-index: 1;
+}
+/* ----------------------------
+End product tab carousal style //imran
+--------------------------------- */
+
+/**************************************/
+/************ Media Query  Area*************/
+/************************************/
+
+@media (max-width: 1301px) {
+  .citrus_purebitS_containers {
+    max-width: 90%;
+  }
+  .citrus_purebits_shopper_container {
+    max-width: 90%;
+  }
+  .citrus_purebits_good_container {
+    max-width: 90%;
+  }
+  .citrus_purebits_page-booked_container {
+    max-width: 90%;
+  }
+  .citrus_purebits_slider-content > h1 {
+    font-size: 20px;
+  }
+  .citrus_purebits_slider-content > p {
+    font-size: 13px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .citrus_pureBites_carousel-item .citrus_purebits_slider-content {
+    padding: 15px;
+  }
+
+  .citrus_pureBites_carousel-item .citrus_purebits_slider-content h1 {
+    padding: 10px;
+  }
+
+  .citrus_pureBites_carousel-item .citrus_purebits_slider-content p {
+    padding: 5px 0 10px;
+    font-size: 11px;
+  }
+
+  .citrus_pureBites_carousel-item
+    .citrus_purebits_slider-content
+    .citrus_purebits_common-slider-btn {
+    margin: 0 0 15px;
+  }
+}
+
+@media all and (max-width: 991px) {
+  .citrus_purebits_slider-main-flex {
+    left: 56.5%;
+    -webkit-transform: translateX(-56.5%);
+    -ms-transform: translateX(-56.5%);
+    transform: translateX(-56.5%);
+  }
+
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .citrus_purebits_dog_main_flex::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .citrus_purebits_dog_main_flex {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+
+  .citrus_purebits_dog_item {
+    text-align: center;
+    flex: 0 0 50%;
+  }
+  .citrus_purebits_dog_main_flex {
+    width: 100%;
+    overflow-x: auto;
+    justify-content: start;
+  }
+  .citrusPurebite21_show {
+    display: block;
+    width: 150%;
+    overflow: hidden;
+  }
+
+  .citrus_purebits_dog_inner__content-item {
+    overflow-x: auto;
+    width: 100%;
+    justify-content: start;
+  }
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .citrus_purebits_dog_inner__content-item::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .citrus_purebits_dog_inner__content-item {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+  .citrus_purebitsinner-item {
+    flex: 0 0 55%;
+  }
+  .citrus_purebits_page-booked_content span {
+    font-size: 24px;
+  }
+  .citrus_purebits_page-booked-area::after {
+    height: 165px;
+  }
+  .citrus_purebits_good-single {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    margin-bottom: 50px;
+  }
+  .citrus_purebits_good-stuff-area {
+    padding-bottom: 0;
+    padding-top: 30px;
+  }
+  .citrus_pureBites_carousel-indicators {
+    left: calc(100% / 2 - 45px);
+  }
+  .citrus_purebits_slider-content > p {
+    font-size: 12px;
+  }
+}
+
+@media all and (max-width: 767px) {
+  .citrus_purebits_mobile_hide {
+    display: none;
+  }
+  .citrus_purebits_desktop_hide {
+    display: block;
+  }
+
+  .citrus_purebitS_containers .cta-box a {
+    text-transform: capitalize;
+    text-decoration: underline;
+    color: #001952 !important;
+    background: none !important;
+    border: none !important;
+  }
+
+  .citrus_purebits_slider-main-flex {
+    left: 56.5%;
+    -webkit-transform: translate(-56.5%, -60%);
+    -ms-transform: translate(-56.5%, -60%);
+    transform: translate(-56.5%, -60%);
+    top: 60%;
+  }
+  .citrus_pureBites_carousel-indicators {
+    left: calc(100% / 2 - 52px);
+    display: none;
+  }
+
+  .citrus_purebits_common-slider-btn {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+
+  .citrus_purebits_common-slider-btn > a {
+    background: transparent;
+    padding: 10px 15px;
+    color: #fff;
+    text-transform: capitalize;
+    font-size: 16px;
+    text-decoration: underline;
+  }
+  .citrus_purebits_common-slider-btn > a:hover {
+    background: transparent;
+  }
+  .citrus_purebits_banner-slider-img > img {
+    max-width: 160px;
+  }
+  .citrus_purebits_single_b_main {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+
+  .citrus_pureBites_carousel-item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    background-position: center;
+    min-height: unset;
+    background: #333;
+  }
+
+  .citrus_pureBites_carousel-item img {
+    width: 100%;
+  }
+
+  .citrus_pureBites_carousel-item:nth-child(1) {
+    background-image: none;
+  }
+
+  .citrus_pureBites_carousel-item:nth-child(2) {
+    background-image: none;
+  }
+
+  .citrus_pureBites_carousel-item:nth-child(3) {
+    background-image: none;
+  }
+
+  .citrus_pureBites_carousel-item .citrus_purebits_slider-content {
+    padding: 15px 15px 10px;
+    max-width: 100%;
+  }
+
+  .citrus_pureBites_carousel-item .citrus_purebits_slider-content h1 {
+    padding: 0;
+  }
+
+  .citrus_pureBites_carousel-item .citrus_purebits_slider-content p {
+    padding: 10px 0;
+    font-size: 14px;
+  }
+
+  .citrus_pureBites_carousel-item
+    .citrus_purebits_slider-content
+    .citrus_purebits_common-slider-btn {
+    margin: 0;
+  }
+
+  .citrus_purebits_single_banifit {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    margin-bottom: 40px;
+  }
+  .citrus_purebits_benefitus_area {
+    padding-bottom: 0px;
+  }
+  .citrus_purebits_single_banifit p {
+    width: 54%;
+    margin: 0 auto;
+  }
+  .citrus_purebits_page-booked-single {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    text-align: center;
+  }
+  .citrus_purebits_page-booked-flex {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  .citrus_purebits_page-booked_content span {
+    font-size: 25px;
+    color: #000;
+  }
+  .citrus_purebits_page-booked_content p {
+    color: #000;
+    display: block;
+    padding-bottom: 14px;
+    width: 60%;
+    margin: 0 auto;
+  }
+  .citrus_purebites_parent_button {
+    gap: 45px;
+  }
+  .citrus_purebitsnavigation-auto {
+    display: none;
+  }
+  .citrus_purebitsnavigation-manual {
+    display: none;
+  }
+
+  .citrus_purebits_slider-content > h1 {
+    font-size: 22px;
+    padding: 0 15px 15px;
+  }
+  .citrus_purebits_slider-content > p {
+    font-size: 14px;
+    width: 100%;
+    padding: 0 20px 30px;
+  }
+}
+
+@media all and (max-width: 575px) {
+  .citrus_purebits_slider-main-flex {
+    left: 56.5%;
+    -webkit-transform: translate(-56.5%, -85%);
+    -ms-transform: translate(-56.5%, -85%);
+    transform: translate(-56.5%, -85%);
+    top: 85%;
+  }
+  .citrus_purebits_single_banifit p {
+    width: 70%;
+    margin: 0 auto;
+  }
+  .citrus_purebits_cmon-heading > h2 {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .citrus_catagory-line-main > h4 {
+    margin: 0px 34px;
+  }
+
+  .citrus_purebits_good-single > iframe {
+    width: 100%;
+    height: 220px;
+  }
+  .citrus_purebits_good_v_content p {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .citrus_purebits_good_v_content span {
+    width: 71%;
+    margin: 0 auto;
+  }
+  .citrus_purebits_page-booked_content p {
+    width: 85%;
+    margin: 0 auto;
+  }
+  .citrus_purebits_good_container {
+    max-width: 100%;
+  }
+  .citrus_purebits_page-booked-area {
+    padding-top: 25px;
+  }
+  .citrus_purebites-footer-logo {
+    margin-left: 0;
+  }
+  .citrus_purebits_dog_item {
+    text-align: center;
+    flex: 0 0 65%;
+  }
+  /* product carousal arrow button */
+  .citrus_purebits_dog_inner__content-item .splide__arrows {
+    display: none;
+  }
+}
+
+@media all and (max-width: 413px) {
+  .citrus_purebits_slider-content > p {
+    padding-bottom: 5px;
+  }
+}

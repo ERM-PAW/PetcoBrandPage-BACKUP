@@ -1,0 +1,30 @@
+
+
+.citrus_tidyCat_scrollerHero{
+    background-image: url("img/citrus_tidyCat_scroller_hero.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 500px;
+    justify-content: flex-end !important;
+    margin-top: 60px;
+}
+
+.citrus_tidyCat_scrollerHero__text{
+    width: 50%;
+    text-align: center;
+    padding-top: 4%;
+}
+
+.citrus_tidyCat_scrollerHero__text h2{
+    font-size: 30px;
+}
+
+.citrus_tidyCat_scrollerHero__text p{
+    padding: 30px 0 48px;
+    max-width: 320px;
+    margin: 0 auto;
+}
+
+.citrus_tidyCat_scrollerHero__text .cta-box a{
+    margin: 0 auto;
+}

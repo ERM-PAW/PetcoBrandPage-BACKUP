@@ -1,0 +1,38 @@
+.citrus_vetdiet_pet-health {
+  background: #F1F2F5;
+}
+
+.citrus_vetdiet_pet-health__container {
+  padding: 0 5%;
+}
+
+.citrus_vetdiet_pet-health__container .single-content {
+  padding: 0 15px;
+}
+
+.citrus_vetdiet_pet-health__container .single-content a {
+  display: block;
+  text-align: center;
+  cursor: unset;
+}
+
+.citrus_vetdiet_pet-health__container .single-content a .single-content__img {
+  max-width: 230px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.citrus_vetdiet_pet-health__container .single-content a .single-content__txt {
+  padding: 25px 15px 40px;
+}
+
+.citrus_vetdiet_pet-health__container .single-content a .single-content__txt h3 {
+  font-size: 20px;
+  color: #000000;
+}
+
+.citrus_vetdiet_pet-health__container .single-content a .single-content__txt p {
+  font-size: 18px;
+  padding-top: 25px;
+}
+/*# sourceMappingURL=pet-health.css.map */

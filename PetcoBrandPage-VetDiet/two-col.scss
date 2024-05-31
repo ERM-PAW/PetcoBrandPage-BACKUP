@@ -1,0 +1,28 @@
+@import "variables";
+@import "common";
+
+.citrus_vetdiet_help-pet{
+    &__container{
+        padding: 0 5%;
+        margin-bottom: 40px;
+        .single-col{
+            padding: 0 15px;
+            a{
+                display: block;
+                text-align: center;
+            }
+            .single-col__txt{
+                background: $bg1;
+                padding: 40px 15px;
+                h3{
+                    font-size: 20px;
+                    color: #000000;
+                    max-width: 310px;
+                    margin: 0 auto;
+                    padding-bottom: 25px;
+                }
+
+            }
+        }
+    }
+}

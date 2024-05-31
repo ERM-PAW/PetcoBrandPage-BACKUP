@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* default css */
+        body {
+            margin: 0px;
+            padding: 0px;
+            font-family: "PetcoCircularTT-Regular", arial !important;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin: 0;
+            padding: 0;
+            font-family: "PetcoCircularTT-Bold", arial !important;
+            line-height: initial;
+            color: #000;
+        }
+
+        .citrusClorox__wrapper p {
+            margin: 0;
+            padding: 0;
+            font-family: "PetcoCircularTT-Regular", arial !important;
+            line-height: initial;
+            color: #000;
+        }
+
+        .citrusClorox__wrapper a {
+            font-family: "PetcoCircularTT-Regular", arial !important;
+            text-decoration: none;
+            color: #000;
+        }
+
+        a:hover {
+            text-decoration: none;
+        }
+
+        .citrusClorox__faqleft_container,
+        .citrusClorox__faqLeft,
+        .citrusClorox__faqImage-box {
+            -ms-overflow-style: none;
+            /* Internet Explorer 10+ */
+            scrollbar-width: none;
+            /* Firefox */
+        }
+
+        .citrusClorox__faqleft_container::-webkit-scrollbar,
+        .citrusClorox__faqLeft::-webkit-scrollbar,
+        .citrusClorox__faqImage-box::-webkit-scrollbar {
+            display: none;
+            /* Safari and Chrome */
+        }
+
+        /* common styling */
+
+        .citrusClorox__wrapper {
+            width: 100%;
+            max-width: 1440px;
+            margin: auto;
+        }
+
+        .citrusClorox__desktop-version {
+            display: block;
+        }
+
+        .citrusClorox__mobile-version {
+            display: none;
+        }
+
+        /* hero banner */
+        .citrusClorox__heroContainer {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #00205b;
+        }
+
+        .citrusClorox__heroImage-box img {
+            width: 100%;
+            max-width: 1440px;
+            object-fit: cover;
+        }
+
+        #citrusClorox__newAtPetco_badge {
+            position: absolute;
+            width: 7%;
+            right: 16%;
+            top: 5%;
+        }
+
+        .citrusClorox__heroImage-copy {
+            position: absolute;
+            width: 40%;
+            height: 100%;
+            top: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: auto;
+        }
+
+        .citrusClorox__freshStep_logo {
+            justify-content: center;
+            display: flex;
+            align-items: center;
+        }
+
+        .citrusClorox__freshStep_logo img {
+            width: 100%;
+            max-width: 85%;
+        }
+
+        .hero-left {
+            display: flex;
+            align-items: center;
+            column-gap: 7%;
+            position: relative;
+        }
+
+        .citrusClorox__freshStep_copy h1 {
+            color: #fff;
+            font-size: 36px;
+            font-weight: 900;
+            font-family: "PetcoCircularTT-Bold", arial !important;
+        }
+
+        .hero-cta {
+            text-align: center;
+        }
+
+        .hero-cta a {
+            font-family: "PetcoCircularTT-Bold", arial !important;
+            display: flex;
+            width: 170px;
+            height: 52px;
+            justify-content: center;
+            align-items: center;
+            font-size: 16px;
+            font-weight: 900;
+            color: #001952;
+            background: white;
+            border: 1px solid #00205b;
+            border-radius: 7px;
+            text-transform: uppercase;
+            transition: background-color 1s ease;
+        }
+
+        .hero-cta a:hover {
+            background: #f8f6f6;
+            color: #00205b;
+        }
+
+        .citrusClorox__freshStep_copy p {
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 22px;
+            color: #fff;
+            font-family: "PetcoCircularTT-Regular", arial !important;
+            padding-top: 15px;
+            padding-bottom: 25px;
+            width: 375px;
+        }
+
+        .hero-rightCTA {
+            text-align: center;
+        }
+
+        .citrusClorox__disclaimer {
+            font-size: 12px;
+            line-height: 12px;
+            color: black;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .citrusClorox__disclaimer.hero {
+            padding-top: 10px;
+        }
+
+        /* End hero banner */
+
+        /* FAQ start */
+        .citrusClorox__FAQ {
+            width: 100%;
+            max-width: 1150px;
+            margin: 0px auto 30px;
+            padding-top: 30px;
+        }
+
+        .citrusClorox__faqRow {
+            display: grid;
+            grid-template-columns: 27% 73%;
+            grid-gap: 30px;
+        }
+
+        .citrusClorox__faqleft_video {
+            width: 313px;
+            height: 356px;
+            margin-bottom: 16px;
+        }
+
+        .citrusClorox__faqImage-box iframe {
+            border-radius: 10px;
+            height: 100%;
+            width: 100%;
+        }
+
+        .citrusClorox__frameText_container,
+        .citrusClorox__frameText_row {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 313px;
+        }
+
+        .citrusClorox__faqImage-box img {
+            margin-bottom: 16px;
+            max-width: 100%;
+            object-fit: contain;
+        }
+
+        .citrusClorox__frameImgText_copy {
+            position: absolute;
+            display: grid;
+            grid-template-rows: repeat(4, 1fr);
+            gap: 30px;
+            width: 245px;
+            margin-left: 35px;
+        }
+
+        .citrusClorox__frameImgText_copy_item {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .citrusClorox__frameImgText_copy_img img {
+            max-width: 56px;
+            height: 56px;
+            margin: 0;
+            padding-right: 15px;
+        }
+
+        .citrusClorox__frameImgText_copy_details h4 {
+            font-weight: 900;
+            font-size: 14px;
+            font-family: "PetcoCircularTT-Bold", arial !important;
+        }
+
+        #citrusClorox__orange {
+            color: #eb9653;
+        }
+
+        #citrusClorox__green {
+            color: #6ba500;
+        }
+
+        #citrusClorox__blue {
+            color: #4a72ae;
+        }
+
+        #citrusClorox__pink {
+            color: #f44696;
+        }
+
+        .citrusClorox__frameImgText_copy_details p {
+            padding: 5px 0;
+            font-family: "PetcoCircularTT-Regular", arial !important;
+            font-weight: 600;
+            color: black;
+            font-size: 12px;
+        }
+
+        .citrusClorox__faqTitle h2 {
+            font-size: 24px;
+            line-height: 30px;
+            font-weight: 900;
+            color: #001952;
+            font-family: "PetcoCircularTT-Bold", arial !important;
+        }
+
+        .citrusClorox__faqTitle p {
+            font-size: 16px;
+            line-height: 20px;
+            font-weight: 400;
+            padding-bottom: 18px;
+            font-family: "PetcoCircularTT-Regular", arial !important;
+        }
+
+        /* accordion style */
+        .citrusClorox__accordion {
+            border: 1px solid #c1c1c1;
+            border-left: none;
+            border-right: none;
+            border-radius: 0px;
+            overflow: hidden;
+            border-bottom: none;
+        }
+
+        .citrusClorox__accordion-item {
+            border-top: 1px solid #c1c1c1;
+        }
+
+        .citrusClorox__accordion-item:first-child {
+            border-top: 0;
+        }
+
+        .citrusClorox__accordion-title {
+            padding: 30px 10px 10px;
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .citrusClorox__accordion-title h3 {
+            font-size: 20px;
+            line-height: 25px;
+            font-weight: 700;
+            color: #001952;
+            font-family: "PetcoCircularTT-Bold", arial !important;
+        }
+
+        .citrusClorox__accordion-content {
+            padding: 0 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            white-space: normal;
+            margin-bottom: 16px;
+        }
+
+        .citrusClorox__accordion-content p {
+            font-size: 16px;
+            line-height: 20px;
+            font-weight: 400;
+            text-align: left;
+            font-family: "PetcoCircularTT-Regular", arial !important;
+        }
+
+        #citrusClorox__sectionCTA_bleowParagraph {
+            margin-top: 24px;
+            font-size: 12px;
+            font-family: "PetcoCircularTT-Regular", arial !important;
+        }
+
+        #citrusClorox__sectionCTA_bleowParagraph b {
+            font-weight: 900;
+            font-size: 13.5px;
+            font-family: "PetcoCircularTT-Bold", arial !important;
+        }
+
+        .citrusClorox__accordion-content .text-accordion .citrusClorox__sectionCTA {
+            justify-content: flex-start;
+            margin-top: 24px;
+        }
+
+        .citrusClorox__accordion-item.active .citrusClorox__accordion-content {
+            height: max-content;
+            margin-bottom: 10px;
+        }
+
+        /* FAQ CTA Start */
+        .citrusClorox__sectionCTA {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .citrusClorox__sectionCTA a {
+            min-width: 169px;
+            line-height: 50px;
+            background: #001952;
+            font-family: "PetcoCircularTT-Bold", arial !important;
+            font-size: 16px;
+            font-weight: 900;
+            text-align: center;
+            color: #fff;
+            text-transform: uppercase;
+            border: 1px solid #001952;
+            border-radius: 7px;
+            transition: background-color 1s ease;
+        }
+
+        .citrusClorox__sectionCTA a:hover {
+            background: #fff;
+            color: #001952;
+        }
+
+        /* End FAQ CTA */
+
+        .citrusClorox__disclaimer.spotlightFaq-dis {
+            margin-top: 20px;
+            font-size: 12px;
+            line-height: 15px;
+            font-weight: 400;
+            text-align: left;
+        }
+
+        /* ------------------------- */
+        /** Responsive Style Start **/
+        /* ------------------------- */
+
+        @media screen and (min-width: 1101px) and (max-width: 1250px) {
+            .citrusClorox__freshStep_logo img {
+                max-width: 70%;
+            }
+        }
+
+        @media all and (min-width: 922px) and (max-width: 1250px) {
+            .citrusClorox__freshStep_copy h1 {
+                font-size: 22px;
+                line-height: 26px;
+            }
+
+            .citrusClorox__freshStep_copy p {
+                margin-top: 10px;
+                font-size: 17px;
+                line-height: 17px;
+                padding-top: 0;
+                width: 85%;
+            }
+
+            .citrusClorox__FAQ {
+                width: 94%;
+            }
+
+            .citrusClorox__faqleft_video {
+                height: 315px;
+            }
+
+            .citrusClorox__frameImgText_copy {
+                gap: 12px;
+                width: 206px;
+                margin-left: 35px;
+            }
+        }
+
+        @media all and (min-width: 769px) and (max-width: 921px) {
+            .citrusClorox__heroImage-copy {
+                margin: auto 2%;
+            }
+
+            .citrusClorox__hero_details {
+                width: 62%;
+            }
+
+            .citrusClorox__freshStep_copy h1 {
+                font-size: 20px;
+            }
+
+            .citrusClorox__freshStep_copy p {
+                margin-top: 10px;
+                font-size: 14px;
+                line-height: 17px;
+                width: 230px;
+                padding-top: 0;
+                padding-bottom: 15px;
+            }
+
+            .citrusClorox__freshStep_logo {
+                width: 20%;
+            }
+
+            .hero-cta a {
+                width: 140px;
+                height: 40px;
+            }
+
+            /* faq section */
+            .citrusClorox__faqRow {
+                position: relative;
+                display: grid;
+                grid-template-columns: 100%;
+                grid-gap: 0px;
+                padding: 0 10px;
+            }
+
+            .citrusClorox__faqImage-box {
+                /* text-align: center; */
+                justify-content: center;
+                display: flex;
+                gap: 40px;
+                margin-top: 10%;
+            }
+
+            .citrusClorox__faqTitle {
+                position: absolute;
+                top: 0;
+                width: 100%;
+                margin: auto;
+                text-align: center;
+            }
+
+            .citrusClorox__accordion-content .text-accordion .citrusClorox__sectionCTA {
+                justify-content: center;
+            }
+        }
+
+        @media all and (max-width: 768px) {
+            .citrusClorox__desktop-version {
+                display: none;
+            }
+
+            .citrusClorox__mobile-version {
+                display: block;
+            }
+
+            .citrusClorox__sectionTitle,
+            .citrusClorox__faqTitle h2 {
+                font-size: 24px;
+                margin: auto;
+                line-height: 22px;
+                padding: 20px 0;
+            }
+
+            /* hero banner */
+            .citrusClorox__heroContainer {
+                border: 5px solid #00205b;
+            }
+
+            .citrusClorox__heroImage-box img {
+                padding-top: 50%;
+            }
+
+            .citrusClorox__heroImage-copy {
+                width: 90%;
+                margin: auto 5%;
+                height: auto;
+                align-items: center;
+                text-align: center;
+                position: absolute;
+                top: 12%;
+            }
+
+            .hero-left {
+                column-gap: 0px;
+                /* width: 100% !important; */
+                margin: auto !important;
+            }
+
+            .citrusClorox__freshStep_copy h1 {
+                font-size: 18px;
+                margin-bottom: 10px;
+            }
+
+            .citrusClorox__freshStep_copy p {
+                margin-top: 10px;
+                font-size: 14px;
+                line-height: 17px;
+                margin-bottom: 15px;
+            }
+
+            .hero-cta {
+                max-width: fit-content;
+                margin: auto;
+            }
+
+            .hero-cta a {
+                min-width: max-content;
+                font-size: 16px;
+                line-height: 20px;
+                font-weight: 900;
+                color: #fff;
+                text-decoration: underline;
+                text-transform: capitalize;
+                text-align: left;
+                border: none;
+                background: none;
+                height: 100%;
+                width: 100%;
+                justify-content: center;
+            }
+
+            #citrusClorox__newAtPetco_badge {
+                position: absolute;
+                width: 15%;
+                left: 40%;
+                top: 55%;
+            }
+
+            .citrusClorox__disclaimer.hero {
+                color: #fff;
+            }
+
+            .hero-cta a:hover {
+                background: none;
+                color: #fff;
+            }
+
+            /* faq section */
+            .citrusClorox__FAQ {
+                padding-top: 0;
+                margin: auto;
+            }
+
+            .citrusClorox__faqRow {
+                position: relative;
+                display: grid;
+                grid-template-columns: 100%;
+                grid-gap: 0px;
+                padding: 0 0;
+                margin: auto;
+            }
+
+            .citrusClorox__faqImage-box {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                overflow: auto;
+                gap: 40px;
+                margin-top: 15%;
+            }
+
+            .citrusClorox__faqTitle {
+                position: absolute;
+                top: 0;
+                width: 100%;
+                margin: auto;
+                text-align: center;
+            }
+
+
+            .citrusClorox__disclaimer.spotlightFaq-dis {
+                margin-top: 10px;
+            }
+
+            /* section cta style */
+            .citrusClorox__accordion-item {
+                padding: 0 10px;
+            }
+
+            .citrusClorox__accordion-content .text-accordion .citrusClorox__sectionCTA {
+                justify-content: center;
+            }
+
+            .citrusClorox__sectionCTA a {
+                min-width: max-content;
+                line-height: 32px;
+                background: none;
+                border: none;
+                color: #001952;
+                text-transform: capitalize;
+                text-decoration: underline;
+            }
+        }
+
+        @media all and (min-width: 476px) and (max-width: 768px) {
+
+            /* hero banner */
+            .citrusClorox__heroImage-copy .citrusClorox__mobile-version {
+                display: none;
+            }
+
+            .citrusClorox__heroImage-copy {
+                width: 100%;
+                margin: auto;
+            }
+
+            .citrusClorox__freshStep_copy h1 {
+                font-size: 30px;
+                line-height: 30px;
+                margin-bottom: 0;
+            }
+
+            .citrusClorox__freshStep_copy p {
+                margin-top: 10px;
+                font-size: 24px;
+                line-height: 28px;
+                margin: 0 auto;
+            }
+        }
+
+        @media screen and (min-width: 426px) and (max-width: 668px) {
+            .citrusClorox__faqleft_container {
+                margin: auto;
+                overflow: auto;
+            }
+
+            .citrusClorox__faqImage-box {
+                width: 650px;
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                gap: 20px;
+                margin-top: 17%;
+                padding-left: 20px;
+            }
+        }
+
+        @media screen and (max-width: 475px) {
+            .citrusClorox__FAQ {
+                padding-top: 0;
+                margin: auto;
+            }
+
+            .citrusClorox__faqLeft {
+                width: 600px;
+                margin: auto;
+                max-width: 100%;
+            }
+
+            .citrusClorox__faqleft_container {
+                margin: auto;
+                overflow: auto;
+            }
+
+            .citrusClorox__faqImage-box {
+                width: 600px;
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                gap: 20px;
+                margin-top: 35%;
+                padding-left: 20px;
+            }
+
+            .citrusClorox__faqleft_video {
+                width: 100%;
+                height: 256px;
+                margin-bottom: 16px;
+            }
+
+            .citrusClorox__faqImage-box img {
+                object-fit: fill;
+                max-height: 256px;
+                width: 280px;
+            }
+
+            .citrusClorox__frameImgText_copy {
+                gap: 16px;
+                width: 259px;
+                margin-left: 70px;
+            }
+
+            .citrusClorox__frameImgText_copy_img img {
+                max-width: 37px;
+                /* height: 37px; */
+                height: 100%;
+            }
+
+            /* .citrusClorox__frameImgText_copy .citrusClorox__frameImgText_copy_item:nth-child(4){
+        padding-left: 10px;
+      } */
+
+            /* .citrusClorox__frameImgText_copy_details{
+        padding: 0 0 0 10px;
+      } */
+
+            .citrusClorox__frameImgText_copy_details h4 {
+                font-size: 12px;
+            }
+
+            .citrusClorox__frameImgText_copy_details p {
+                width: 184px;
+                font-size: 10px;
+            }
+
+            .citrusClorox__sectionTitle,
+            .citrusClorox__faqTitle h2 {
+                font-size: 18px;
+                width: 200px;
+                margin: auto;
+            }
+        }
+
+        @media screen and (max-width: 475px) {
+
+            /* hero banner */
+            .citrusClorox__heroImage-copy {
+                top: 8%;
+            }
+
+            .citrusClorox__freshStep_copy h1 {
+                font-size: 28px;
+            }
+
+            .citrusClorox__freshStep_copy p {
+                font-size: 16px;
+                line-height: 18px;
+                width: 255px;
+                margin: auto;
+                padding-top: 0;
+                padding-bottom: 15px;
+            }
+
+            .citrusClorox__faqTitle {
+                width: 100%;
+                margin: auto;
+                text-align: center;
+            }
+
+            /* FAQ */
+            .citrusClorox__faqTitle p {
+                width: 335px;
+                margin: auto;
+            }
+        }
+
+        @media screen and (max-width: 375px) {
+            .citrusClorox__heroImage-copy {
+                top: 5%;
+            }
+
+            /* FAQ */
+            .citrusClorox__faqImage-box {
+                width: 600px;
+                margin-top: 40%;
+                padding-left: 20px;
+            }
+
+            .citrusClorox__faqleft_video {
+                height: 257px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="citrusClorox__wrapper">
+        <!-- Hero banner start -->
+        <section class="citrusClorox__heroBanner">
+            <div class="citrusClorox__heroContainer">
+                <!-- full width image -->
+                <div class="citrusClorox__heroImage-box">
+                    <img class="citrusClorox__desktop-version"
+                        src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrusCloroxFreshStep__Desktop_Hero"
+                        alt="New at Petco. Crystals health monitoring litter turned orange, green, and blue to indicate P H levels. Pack of litter." />
+                    <img class="citrusClorox__mobile-version"
+                        src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrusCloroxFreshStep__Mobile_Hero"
+                        alt="New at Petco. Crystals health monitoring litter turned orange, green, and blue to indicate P H levels. Pack of litter." />
+                </div>
+
+                <!-- Badge -->
+                <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrusCloroxFreshStep__NEW_AT_PETCO_-_WHITE"
+                    alt="NEW at petco" id="citrusClorox__newAtPetco_badge" />
+
+                <div class="citrusClorox__heroImage-copy">
+                    <div class="hero-left">
+                        <div class="citrusClorox__freshStep_logo">
+                            <img class="citrusClorox__desktop-version"
+                                src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrusCloroxFreshStep__Fresh Logo"
+                                alt="Fresh Step" />
+                        </div>
+                        <div class="citrusClorox__hero_details">
+                            <div class="citrusClorox__freshStep_copy">
+                                <h1>CRYSTALS HEALTH-MONITORING LITTER</h1>
+                                <p>Color-changing litter that helps detect illness early.</p>
+                            </div>
+                            <div class="hero-cta">
+                                <a href="https://www.petco.com/shop/en/petcostore/product/fresh-step-crystals-health-monitoring-cat-litter-7-lbs-3825032"
+                                    manual_cm_sp="sponsoredbrandpage:freshstep:heropov:1:crystalshealthmonitoringlitter:shopnow">Shop
+                                    Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End hero banner -->
+
+        <!-- FAQ section -->
+        <section class="citrusClorox__FAQ">
+            <div class="citrusClorox__FAQ-container">
+                <div class="citrusClorox__faqRow">
+                    <!-- Graphics Content -->
+                    <div class="citrusClorox__faqLeft">
+                        <div class="citrusClorox__faqleft_container">
+                            <div class="citrusClorox__faqImage-box">
+                                <div class="citrusClorox__frameText">
+                                    <!-- YouTube Content -->
+                                    <div class="citrusClorox__frameText_row">
+                                        <div class="citrusClorox__faqleft_video">
+                                            <iframe src="https://www.youtube.com/embed/9QPacnBi4v8"
+                                                manual_cm_sp="sponsoredbrandpage:freshstep:video:1:video:video"
+                                                title="YouTube video player" frameborder="0"
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                                allowfullscreen></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Text Content -->
+                                <div class="citrusClorox__frameText">
+                                    <div class="citrusClorox__frameText_row">
+                                        <!-- Box Image -->
+                                        <div class="citrusClorox__frameText_imgBox">
+                                            <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrusCloroxFreshStep__accordion_text_background"
+                                                alt="Crystals litter changes color based on urine P H. Orange is low, green is normal, and dark blue is high. Contact vet if red." />
+                                        </div>
+
+                                        <div class="citrusClorox__frameImgText_copy">
+                                            <!-- Orange -->
+                                            <div class="citrusClorox__frameImgText_copy_item">
+                                                <div class="citrusClorox__frameImgText_copy_img">
+                                                    <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrusCloroxFreshStep__accordion_text_orange"
+                                                        alt="" />
+                                                </div>
+                                                <div class="citrusClorox__frameImgText_copy_details">
+                                                    <h4 id="citrusClorox__orange">Orange (low pH)</h4>
+                                                    <p>Urine is acidic.</p>
+                                                </div>
+                                            </div>
+
+                                            <!-- Green -->
+                                            <div class="citrusClorox__frameImgText_copy_item">
+                                                <div class="citrusClorox__frameImgText_copy_img">
+                                                    <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrusCloroxFreshStep__accordion_text_green"
+                                                        alt="" />
+                                                </div>
+                                                <div class="citrusClorox__frameImgText_copy_details">
+                                                    <h4 id="citrusClorox__green">
+                                                        Yellow/Green (typical pH)
+                                                    </h4>
+                                                    <p>Urine is within standard range.</p>
+                                                </div>
+                                            </div>
+
+                                            <!-- Blue -->
+                                            <div class="citrusClorox__frameImgText_copy_item">
+                                                <div class="citrusClorox__frameImgText_copy_img">
+                                                    <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrusCloroxFreshStep__accordion_text_blue"
+                                                        alt="" />
+                                                </div>
+                                                <div class="citrusClorox__frameImgText_copy_details">
+                                                    <h4 id="citrusClorox__blue">
+                                                        Dark Green/Blue (high pH)
+                                                    </h4>
+                                                    <p>Urine is alkaline.</p>
+                                                </div>
+                                            </div>
+
+                                            <!-- Pink -->
+                                            <div class="citrusClorox__frameImgText_copy_item">
+                                                <div class="citrusClorox__frameImgText_copy_details">
+                                                    <h4 id="citrusClorox__pink">
+                                                        Red/Pink (potentially bloody)
+                                                    </h4>
+                                                    <p>
+                                                        If blood is visible, contact your vet immediately.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Copy Content -->
+                    <div class="citrusClorox__faqRight">
+                        <!-- Title -->
+                        <div class="citrusClorox__faqTitle">
+                            <h2>Monitor your cat’s health from home</h2>
+                            <p>
+                                Choose a premium litter that makes it easy to stay on top of your
+                                cat’s wellbeing.
+                            </p>
+                        </div>
+                        <!-- Accordion -->
+                        <div class="citrusClorox__accordion">
+                            <div class="citrusClorox__accordion-item">
+                                <div class="citrusClorox__accordion-title">
+                                    <h3>pH-activated crystals </h3>
+                                </div>
+                                <div class="citrusClorox__accordion-content">
+                                    <div class="text-accordion">
+                                        <p>
+                                            Litter changes color instantly to indicate potential health
+                                            issues like UTIs and acidosis.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="citrusClorox__accordion-item">
+                                <div class="citrusClorox__accordion-title">
+                                    <h3>Powerful 30-day odor control</h3>
+                                </div>
+                                <div class="citrusClorox__accordion-content">
+                                    <div class="text-accordion">
+                                        <p>
+                                            Ammonia Block Technology helps control odors for up to 30
+                                            days, keeping the litter box clean and your cat happy.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="citrusClorox__accordion-item">
+                                <div class="citrusClorox__accordion-title">
+                                    <h3>Lightweight crystals</h3>
+                                </div>
+                                <div class="citrusClorox__accordion-content">
+                                    <div class="text-accordion">
+                                        <p>
+                                            Crystals litter is easy to use and gentle on your cat’s
+                                            paws. One bag equals 25 lbs. of traditional clumping litter.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="citrusClorox__accordion-item">
+                                <div class="citrusClorox__accordion-content">
+                                    <div class="text-accordion">
+                                        <div class="citrusClorox__sectionCTA">
+                                            <a href="https://www.petco.com/shop/en/petcostore/product/fresh-step-crystals-health-monitoring-cat-litter-7-lbs-3825032"
+                                                manual_cm_sp="sponsoredbrandpage:freshstep:contentmodulue:1:monitorcatshealthfromhome:shopnow">Shop
+                                                Now</a>
+                                        </div>
+                                        <p id="citrusClorox__sectionCTA_bleowParagraph">
+                                            For more information about how to decode color changes and
+                                            interpret your cat’s urinary health, go to
+                                            <b>
+                                                <nbr>freshstep.com/healthmonitor.</nbr>
+                                            </b>
+                                        </p>
+                                        <p class="citrusClorox__disclaimer spotlightFaq-dis">
+                                            © 2023 FRESH STEP is a registered trademark of The Clorox
+                                            Pet Products Company. Certain trademarks used under license
+                                            from The Procter & Gamble Company or its affiliates.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+</body>
+
+</html>

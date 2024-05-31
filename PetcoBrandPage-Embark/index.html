@@ -1,0 +1,1018 @@
+<!-- This brand page developed by SEBPO citrusAd team. team member Imran Ahmed. date 10/19/2022 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Embark | Petco</title>
+</head>
+
+<body>
+
+
+    <style>
+        /* common style */
+        .citrusEmbark__Wrapper {
+            font-family: "PetcoCircularTT-Regular", arial !important;
+            font-size: 16px;
+            background: #fff;
+            /* overflow: hidden; */
+        }
+
+        .citrusEmbark__desktop_hide {
+            display: none;
+        }
+
+        .citrusEmbark__mobile_hide {
+            display: block;
+        }
+
+        .citrusEmbark__wrapper a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        h2.citrusEmbark__sectionTitle {
+            margin: 0;
+            padding: 0;
+            font-family: "PetcoCircularTT-Bold", arial !important;
+            font-size: 25px;
+            font-weight: bold;
+            text-align: center;
+            color: #000;
+        }
+
+        p.citrusEmbark__sectionSubtitle {
+            width: 515px;
+            margin: 20px auto;
+            font-family: "PetcoCircularTT-Regular";
+            font-size: 16px;
+            font-weight: normal;
+            text-align: center;
+            color: #000;
+        }
+
+        /* POV style */
+        .citrus_Embark_carousel {
+            width: 100%;
+            position: relative;
+            display: none;
+            justify-content: flex-start;
+            overflow: hidden;
+        }
+
+        .citrus_Embark_carousel,
+        .citrus_Embark_carousel-inner,
+        .citrus_Embark_carousel-item,
+        .citrusEmbark__pov-img img {
+            height: 280px;
+            object-fit: cover;
+        }
+
+        .citrus_Embark_carousel .citrus_Embark_carousel-inner .citrus_Embark_carousel-item {
+            justify-content: flex-start;
+            flex: 1;
+        }
+
+        .citrus_Embark_carousel-inner {
+            display: flex;
+            transition: all ease 0.5s;
+        }
+
+        .citrus_Embark_carousel-item {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        /* pov text */
+        .citrusEmbark__pov-img {
+            position: relative;
+        }
+
+        .citrusEmbark__pov-img img {
+            width: 100%;
+            text-align: center;
+            object-fit: cover;
+        }
+
+        .citrusEmbark_pov-text {
+            position: absolute;
+            top: 0%;
+            left: 0%;
+            height: 100%;
+        }
+
+        .citrusEmbark_pov-text__wrapper {
+            position: relative;
+            display: flex;
+            height: 100%;
+            align-items: center;
+            justify-content: center;
+            /* top: -5%; */
+        }
+
+        .citrusEmbark_pov-logo img {
+            width: 275px;
+            object-fit: contain;
+        }
+
+        h1.citrusEmbark_pov-text__title {
+            margin: 0;
+            font-family: "PetcoCircularTT-Bold";
+            font-size: 2rem;
+            line-height: 2.1rem;
+            font-weight: bolder;
+            color: #000;
+        }
+
+        p.citrusEmbark_pov-text__subhead {
+            margin: 5px 0;
+            width: 431px;
+            max-width: 95%;
+            font-family: "PetcoCircularTT-Bold";
+            font-size: 1rem;
+            font-weight: 400;
+            color: #000;
+        }
+
+        .citrusEmbark_pov-cta {
+            position: relative;
+        }
+
+        .citrusEmbark_pov-cta a {
+            font-family: "PetcoCircularTT-Bold";
+            font-size: 16px;
+            line-height: 22px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #fff;
+            background-color: #001952;
+            padding: 18px 22px 16px;
+            border-radius: 7px;
+            display: inline-block;
+            width: fit-content;
+        }
+
+        .citrusEmbark_pov-text p.citrusEmbark__disclaimer {
+            margin-top: 5px;
+        }
+
+        /* indicator styling */
+        .citrus_Embark_carousel-indicators {
+            position: absolute;
+            bottom: 0;
+            left: calc(100% / 2 - 52px);
+            text-align: center;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 5px 5px 0 0;
+            padding: 10px 10px 5px;
+        }
+
+        .citrus_Embark_carousel-indicators span {
+            display: inline-block;
+            border: 2px solid #09205c;
+            padding: 7px;
+            border-radius: 20px;
+            cursor: pointer;
+            margin: 0 5px;
+        }
+
+        .citrus_Embark_carousel-indicators span.active {
+            background-color: #09205c;
+        }
+
+        @media screen and (min-width: 1800px) {
+            .citrusEmbark_pov-logo img {
+                width: 375px;
+                object-fit: contain;
+            }
+
+            h1.citrusEmbark_pov-text__title {
+                font-size: 2.5rem;
+                line-height: 2.8rem;
+            }
+
+            p.citrusEmbark_pov-text__subhead {
+                width: 75%;
+                margin: 5px 0;
+                font-size: 1.5rem;
+                line-height: 1.8rem;
+            }
+
+            .citrusEmbark_pov-cta {
+                margin-top: 20px;
+            }
+
+            .citrusEmbark_pov-cta a {
+                font-size: 18px;
+                padding: 20px 24px 18px;
+            }
+        }
+
+        @media screen and (min-width: 922px) and (max-width: 1240px) {}
+
+        @media screen and (min-width: 769px) and (max-width: 1240px) {
+
+            .citrus_Embark_carousel,
+            .citrus_Embark_carousel-inner,
+            .citrus_Embark_carousel-item,
+            .citrusEmbark__pov-img img {
+                height: 280px;
+                object-fit: cover;
+            }
+
+            .citrusEmbark_pov-logo img {
+                width: 175px;
+                object-fit: contain;
+            }
+        }
+
+        @media only screen and (max-width: 768px) {
+            .citrus_Embark_carousel .citrus_Embark_carousel-inner .citrus_Embark_carousel-item {
+                align-items: flex-start;
+                flex-wrap: wrap;
+                justify-content: center;
+                flex: 1;
+            }
+
+            .citrus_Embark_carousel,
+            .citrus_Embark_carousel-inner,
+            .citrus_Embark_carousel-item,
+            .citrusEmbark__pov-img img {
+                height: auto;
+            }
+
+            .citrus_Embark_carousel .citrus_Embark_carousel-inner {
+                background: #ffd719;
+            }
+
+            .citrusEmbark_pov-text {
+                position: relative;
+                height: fit-content;
+                margin-bottom: 80px;
+            }
+
+            .citrusEmbark_pov-text__wrapper {
+                flex-direction: column;
+                top: 0;
+                text-align: center;
+            }
+
+            .citrusEmbark_pov-logo img {
+                width: 175px;
+            }
+
+            h1.citrusEmbark_pov-text__title {
+                font-size: 1.5rem;
+                line-height: 1.6rem;
+            }
+
+            p.citrusEmbark_pov-text__subhead {
+                width: 95%;
+                margin: 5px auto;
+            }
+
+            .citrusEmbark_pov-cta a {
+                background-color: unset;
+                text-transform: capitalize;
+                color: #001952;
+                text-decoration: underline;
+                padding: 0;
+            }
+
+            .citrusEmbark_pov-text p.citrusEmbark__disclaimer {
+                margin-top: 0px;
+            }
+        }
+
+        /* choose test type section */
+        .citrusEmbark__chooseTestContainer {
+            margin: 40px auto;
+        }
+
+        .citrusEmbark__testType {
+            width: 680px;
+            max-width: 100%;
+            margin: auto;
+            overflow: auto;
+        }
+
+        .citrusEmbark__testTypeRow {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        .citrusEmbark__testTypeCard {
+            width: 226px;
+            max-width: 100%;
+            margin: auto;
+        }
+
+        .citrusEmbark__testTypeCard img {
+            max-width: 100%;
+            min-height: 190px;
+            object-fit: contain;
+        }
+
+        .citrusEmbark__testTypeCardTitle {
+            margin: 0;
+            font-family: "PetcoCircularTT-Regular";
+            font-weight: normal;
+            font-size: 16px;
+            color: #000;
+        }
+
+        .citrusEmbark__cardCTA {
+            margin-top: 20px;
+        }
+
+        .citrusEmbark__cardCTA a {
+            font-family: "PetcoCircularTT-Bold";
+            font-weight: bold;
+            font-size: 16px;
+            text-decoration: underline;
+            color: #001952;
+        }
+
+        /* highly recommend Embark section */
+        .citrusEmbark__recommendContainer {
+            margin: 40px auto;
+        }
+
+        .citrusEmbark__testTypeContainer {
+            width: 1050px;
+            max-width: 100%;
+            margin: auto;
+            overflow: auto;
+        }
+
+        .citrusEmbark__testRow {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 20px;
+        }
+
+        .citrusEmbark__testCard {
+            width: 250px;
+            max-width: 100%;
+            margin: auto;
+            text-align: center;
+        }
+
+        .citrusEmbark__cardBody {
+            width: 210px;
+            margin: auto;
+        }
+
+        h3.citrusEmbark__cardTitle {
+            margin: 30px 22px 0 22px;
+            font-family: "PetcoCircularTT-Bold";
+            font-size: 18px;
+            font-weight: bold;
+            color: #000;
+            text-align: center;
+        }
+
+        .citrusEmbark__cardBody p {
+            margin: 30px 0;
+            font-family: "PetcoCircularTT-Regular";
+            font-size: 16px;
+            line-height: 20px;
+            font-weight: normal;
+            color: #000;
+        }
+
+        .citrusEmbark__disclaimerContainer {
+            text-align: center;
+            margin-top: 10px;
+            margin-bottom: 0px;
+        }
+
+        p.citrusEmbark__disclaimer {
+            margin: 0;
+            font-family: "PetcoCircularTT-Regular";
+            font-size: 12px;
+            color: #000;
+        }
+
+        /* footer style */
+        .citrusEmbark__footer {
+            margin-top: 90px;
+            /* margin-bottom: 60px; */
+            width: 100%;
+            max-width: 100%;
+            background: #5bdbe630;
+        }
+
+        .citrusEmbark__footerRow {
+            width: 1150px;
+            max-width: 100%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 20px;
+            position: relative;
+        }
+
+        .citrusEmbark__iframe {
+            position: relative;
+            top: -30px;
+        }
+
+        .citrusEmbark__iframe iframe {
+            width: 100%;
+            max-width: 100%;
+            margin: auto;
+            height: 317px;
+        }
+
+        .citrusEmbark__footerText {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .citrusEmbark__footerText p {
+            width: 395px;
+            max-width: 80%;
+            margin: 10px 0 20px;
+            font-family: "PetcoCircularTT-Regular", arial !important;
+            font-size: 16px;
+            line-height: 22px;
+            color: #000;
+            text-align: center;
+        }
+
+        .citrusEmbark__footerCTA,
+        .citrusEmbark__CTA {
+            display: flex;
+            justify-content: center;
+        }
+
+        .citrusEmbark__CTA button,
+        .citrusEmbark__footerCTA button {
+            border: 0;
+            background: #001952;
+            color: #fff;
+            font-family: "PetcoCircularTT-Bold", arial !important;
+            font-weight: bold;
+            font-size: 16px;
+            width: 211px;
+            height: 56px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 7px;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+
+        /* ------------------------------- */
+        /* responsive style start */
+        /* ------------------------------- */
+
+        @media all and (min-width: 769px) and (max-width: 1250px) {
+
+            /* footer style */
+            .citrusEmbark__footerRow {
+                width: 95%;
+            }
+        }
+
+        @media all and (max-width: 768px) {
+
+            /* common style */
+            .citrusEmbark__desktop_hide {
+                display: block;
+            }
+
+            .citrusEmbark__mobile_hide {
+                display: none;
+            }
+
+            h2.citrusEmbark__sectionTitle,
+            p.citrusEmbark__sectionSubtitle {
+                width: 95%;
+                margin: auto;
+            }
+
+            p.citrusEmbark__sectionSubtitle {
+                padding: 20px 0;
+            }
+
+            /* footer style */
+            .citrusEmbark__CTA button,
+            .citrusEmbark__footerCTA button {
+                color: #001952;
+                background: none;
+                width: fit-content;
+                height: fit-content;
+                text-transform: capitalize;
+                text-decoration: underline;
+            }
+
+            .citrusEmbark__testTypeRow {
+                justify-content: left;
+            }
+
+            .citrusEmbark__footerRow {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .citrusEmbark__footerCol.order1 {
+                order: 2;
+            }
+
+            .citrusEmbark__footerCol.order2 {
+                order: 1;
+            }
+
+            .citrusEmbark__iframe {
+                top: 3px;
+            }
+
+            .citrusEmbark__footerText {
+                padding-top: 40px;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .citrusEmbark__testTypeRow {
+                margin-left: 10px;
+            }
+        }
+
+        @media screen and (max-width: 375px) {
+            .citrusEmbark__testCard {
+                width: 230px;
+            }
+        }
+    </style>
+    <!-- Embark landing page wrapper start -->
+    <main class="citrusEmbark__wrapper">
+        <!-- POV slider -->
+        <section class="citrus_Embark_carousel">
+            <div class="citrus_Embark_carousel-inner">
+                <!-- POV 01 -->
+                <div class="citrus_Embark_carousel-item">
+                    <div class="citrusEmbark__pov-img">
+                        <img class="citrusEmbark__mobile_hide"
+                            src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/Embark-Hero1"
+                            alt="Phone screens show Oliver the dog’s health and breed summaries. Oliver poses with Dog DNA Test box.">
+                        <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/Embark-POV1Lifestyle"
+                            class="citrusEmbark__desktop_hide"
+                            alt="Phone screens show Oliver the dog’s health and breed summaries. Oliver poses with Dog DNA Test box.">
+                    </div>
+                    <div class="citrusEmbark_pov-text">
+                        <div class="citrusEmbark_pov-text__wrapper">
+                            <div class="citrusEmbark_pov-logo">
+                                <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/Embark-logo"
+                                    alt="Embark logo">
+                            </div>
+                            <div>
+                                <h1 class="citrusEmbark_pov-text__title">KNOW YOUR DOG<br>DOWN TO THEIR DNA</h1>
+                                <p class="citrusEmbark_pov-text__subhead">Decode breed mix, screen for health
+                                    conditions, connect
+                                    with relatives and more.</p>
+                                <div class="citrusEmbark_pov-cta">
+                                    <a href="https://www.petco.com/shop/en/petcostore/product/embark-vet-breed-and-health-dog-dna-test"
+                                        manual_cm_sp="sponsoredbrandpage:embark:herobanner:1:knowyourdogdowntotheirdna:shopbreedkitandhealthkit"
+                                        onclick="clickTrackLink(this);">Shop Breed & Health
+                                        Kit</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- POV 02 -->
+                <div class="citrus_Embark_carousel-item">
+                    <div class="citrusEmbark__pov-img">
+                        <img class="citrusEmbark__mobile_hide"
+                            src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/Embark-Hero2"
+                            alt="Oliver’s health summary on phone screen. Oliver smiles outside.">
+                        <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/Embark-POV2Lifestyle"
+                            class="citrusEmbark__desktop_hide"
+                            alt="Oliver’s health summary on phone screen. Oliver smiles outside.">
+                    </div>
+                    <div class="citrusEmbark_pov-text">
+                        <div class="citrusEmbark_pov-text__wrapper">
+                            <div class="citrusEmbark_pov-logo">
+                                <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/Embark-logo"
+                                    alt="Embark logo">
+                            </div>
+                            <div>
+                                <h1 class="citrusEmbark_pov-text__title">PROACTIVE CARE<br>YOUR DOG DESERVES</h1>
+                                <p class="citrusEmbark_pov-text__subhead">Learn about your dog’s unique health needs to
+                                    help give
+                                    them the best care possible.</p>
+                                <div class="citrusEmbark_pov-cta">
+                                    <a href="https://www.petco.com/shop/en/petcostore/brand/embark-vet"
+                                        manual_cm_sp="sponsoredbrandpage:embark:herobanner:2:proactivecareyourdogdeserves:shopkits"
+                                        onclick="clickTrackLink(this);">Shop Kits</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- POV 03 -->
+                <div class="citrus_Embark_carousel-item">
+                    <div class="citrusEmbark__pov-img">
+                        <img class="citrusEmbark__mobile_hide"
+                            src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/Embark-Hero3"
+                            alt="Closed Dog DNA Test box next to an open box featuring the 3-step instructions and test swab.">
+                        <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/Embark-POV3Lifestyle"
+                            class="citrusEmbark__desktop_hide"
+                            alt="Closed Dog DNA Test box next to an open box featuring the 3-step instructions and test swab.">
+                    </div>
+                    <div class="citrusEmbark_pov-text">
+                        <div class="citrusEmbark_pov-text__wrapper">
+                            <div class="citrusEmbark_pov-logo">
+                                <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/Embark-logo"
+                                    alt="Embark logo">
+                            </div>
+                            <div>
+                                <h1 class="citrusEmbark_pov-text__title">THE MOST SCIENTIFICALLY<br>ADVANCED DOG DNA
+                                    TEST*
+                                </h1>
+                                <p class="citrusEmbark_pov-text__subhead">Developed in partnership with the Cornell
+                                    University College of Veterinary Medicine.</p>
+                                <div class="citrusEmbark_pov-cta">
+                                    <a href="https://www.petco.com/shop/en/petcostore/brand/embark-vet"
+                                        manual_cm_sp="sponsoredbrandpage:embark:herobanner:3:themostscientificallyadvanceddogdnatest:shopembark"
+                                        onclick="clickTrackLink(this);">Shop Embark</a>
+                                </div>
+                                <p class="citrusEmbark__disclaimer">*Based on competitor analysis on
+                                    <b>embarkvet.com.</b>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="citrus_Embark_carousel-controls">
+                <span class="prev"></span>
+                <span class="next"></span>
+            </div>
+            <div class="citrus_Embark_carousel-indicators"></div>
+        </section>
+        <!-- End POV slider -->
+
+
+        <!-- choose test type section start -->
+        <section class="citrusEmbark__chooseTestContainer">
+            <h2 class="citrusEmbark__sectionTitle">Choose the test that’s right for you and your dog</h2>
+            <p class="citrusEmbark__sectionSubtitle">61% of pet parents plan to adjust their dog's routine or feel more
+                prepared to be a good pet parent after testing with Embark.</p>
+            <div class="citrusEmbark__testType">
+                <div class="citrusEmbark__testTypeRow">
+                    <!-- Product 1 -->
+                    <div class="citrusEmbark__testCol">
+                        <a href="https://www.petco.com/shop/en/petcostore/product/embark-vet-breed-and-health-dog-dna-test"
+                            manual_cm_sp="sponsoredbrandpage:embark:choosethetestthatsrightforyouandyourdog:1:embarkvetbreedandhealthdogdnatest:product"
+                            onclick="clickTrackLink(this);">
+                            <div class="citrusEmbark__testTypeCard">
+                                <div class="citrusEmbark__cardImg">
+                                    <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/Embark-VetBreadDogDNAtest1"
+                                        alt="">
+                                </div>
+                                <div class="citrusEmbark__testTypeCardBody">
+                                    <h3 class="citrusEmbark__testTypeCardTitle">Embark Vet Breed & Health Dog DNA Test
+                                    </h3>
+                                </div>
+                                <div class="citrusEmbark__cardCTA">
+                                    <a href="https://www.petco.com/shop/en/petcostore/product/embark-vet-breed-and-health-dog-dna-test"
+                                        manual_cm_sp="sponsoredbrandpage:embark:choosethetestthatsrightforyouandyourdog:1:embarkvetbreedandhealthdogdnatest:shopnow"
+                                        onclick="clickTrackLink(this);">Shop Now</a>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- Product 2 -->
+                    <!-- <div class="citrusEmbark__testCol">
+                        <a href="https://www.petco.com/shop/en/petcostore/product/embark-vet-dog-dna-breed-identification-kit"
+                            manual_cm_sp="sponsoredbrandpage:embark:choosethetestthatsrightforyouandyourdog:2:embarkvetdogdnabreedidentificationkit:product"
+                            onclick="clickTrackLink(this);">
+                            <div class="citrusEmbark__testTypeCard">
+                                <div class="citrusEmbark__cardImg">
+                                    <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/Embark-VetDogDNAIdKit2"
+                                        alt="">
+                                </div>
+                                <div class="citrusEmbark__testTypeCardBody">
+                                    <h3 class="citrusEmbark__testTypeCardTitle">Embark Vet Dog DNA Breed Identification
+                                        Kit</h3>
+                                </div>
+                                <div class="citrusEmbark__cardCTA">
+                                    <a href="https://www.petco.com/shop/en/petcostore/product/embark-vet-dog-dna-breed-identification-kit"
+                                        manual_cm_sp="sponsoredbrandpage:embark:choosethetestthatsrightforyouandyourdog:2:embarkvetdogdnabreedidentificationkit:shopnow"
+                                        onclick="clickTrackLink(this);">Shop Now</a>
+                                </div>
+                            </div>
+                        </a>
+                    </div> -->
+                    <!-- Product 3 -->
+                    <div class="citrusEmbark__testCol">
+                        <a href="https://www.petco.com/shop/en/petcostore/product/embark-vet-dna-test-kit-for-purebred-dogs"
+                            manual_cm_sp="sponsoredbrandpage:embark:choosethetestthatsrightforyouandyourdog:3:embarkvetpurebredbreedandhealthdogdnatest:product"
+                            onclick="clickTrackLink(this);">
+                            <div class="citrusEmbark__testTypeCard">
+                                <div class="citrusEmbark__cardImg">
+                                    <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/Embark-VetPurebredDogDNAtest3"
+                                        alt="">
+                                </div>
+                                <div class="citrusEmbark__testTypeCardBody">
+                                    <h3 class="citrusEmbark__testTypeCardTitle">Embark Vet Purebred Breed & Health Dog
+                                        DNA Test</h3>
+                                </div>
+                                <div class="citrusEmbark__cardCTA">
+                                    <a href="https://www.petco.com/shop/en/petcostore/product/embark-vet-dna-test-kit-for-purebred-dogs"
+                                        manual_cm_sp="sponsoredbrandpage:embark:choosethetestthatsrightforyouandyourdog:3:embarkvetpurebredbreedandhealthdogdnatest:shopnow"
+                                        onclick="clickTrackLink(this);">Shop Now</a>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End choose test type section -->
+
+        <!-- highly recommend Embark section start -->
+        <section class="citrusEmbark__recommendContainer">
+            <h2 class="citrusEmbark__sectionTitle">Over 80% of customers* highly recommend Embark</h2>
+            <!-- product catalog -->
+            <div class="citrusEmbark__testTypeContainer">
+                <a href="https://www.petco.com/shop/en/petcostore/brand/embark-vet"
+                    manual_cm_sp="sponsoredbrandpage:embark:over80percentofcustomershighlyrecommendembark:1:shopembark:sectionlink"
+                    onclick="clickTrackLink(this);">
+                    <div class="citrusEmbark__testRow">
+                        <!-- product 1 -->
+                        <div class="citrusEmbark__testCol">
+                            <div class="citrusEmbark__testCard">
+                                <div class="citrusEmbark__cardImg">
+                                    <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/Embark-screenshot01"
+                                        alt="Phone displays Duke the dog’s mixed breed percentage breakdown">
+                                </div>
+                                <div class="citrusEmbark__cardBody">
+                                    <h3 class="citrusEmbark__cardTitle">More breeds than any other test</h3>
+                                    <p>With 350+ breeds, you can easily find what makes up your pup’s unique mix.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- product 2 -->
+                        <div class="citrusEmbark__testCol">
+                            <div class="citrusEmbark__testCard">
+                                <div class="citrusEmbark__cardImg">
+                                    <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/Embark-screenshot02"
+                                        alt="Apollo’s health summary on phone screen reports Apollo inherited a variant you should learn more about">
+                                </div>
+                                <div class="citrusEmbark__cardBody">
+                                    <h3 class="citrusEmbark__cardTitle">Tests 215+ genetic health risks</h3>
+                                    <p>75% of dogs** are at risk of or a carrier for a genetic health condition.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- product 3 -->
+                        <div class="citrusEmbark__testCol">
+                            <div class="citrusEmbark__testCard">
+                                <div class="citrusEmbark__cardImg">
+                                    <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/Embark-screenshot03"
+                                        alt="Sadie’s health summary reports Sadie inherited and is at risk of variants you should learn more about">
+                                </div>
+                                <div class="citrusEmbark__cardBody">
+                                    <h3 class="citrusEmbark__cardTitle">Discover your dog’s relatives</h3>
+                                    <p>Over 90% of tested dogs** find a relative who has also tested with Embark.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <!-- shop all cta -->
+            <div class="citrusEmbark__CTA">
+                <a href="https://www.petco.com/shop/en/petcostore/brand/embark-vet"
+                    manual_cm_sp="sponsoredbrandpage:embark:over80percentofcustomershighlyrecommendembark:1:shopembark:shopembark"
+                    onclick="clickTrackLink(this);">
+                    <button>Shop Embark</button>
+                </a>
+            </div>
+            <div class="citrusEmbark__disclaimerContainer">
+                <p class="citrusEmbark__disclaimer">*Based on Embark NPS scores.</p>
+                <p class="citrusEmbark__disclaimer">**Based on Embark tested canines.</p>
+            </div>
+        </section>
+        <!-- End highly recommend Embark -->
+
+        <!-- Footer section start -->
+        <section class="citrusEmbark__footer">
+            <div class="citrusEmbark__footerRow">
+                <div class="citrusEmbark__footerCol order1">
+                    <div class="citrusEmbark__iframe">
+                        <iframe src="https://www.youtube.com/embed/IGL__pivmXM" title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="citrusEmbark__footerCol order2">
+                    <div class="citrusEmbark__footerText">
+                        <h2 class="citrusEmbark__sectionTitle">Swab, seal and send</h2>
+                        <p>From swabbing your dog to analyzing the results, Embark makes it easy to learn more about
+                            their breed, ancestry and health risks.</p>
+                        <div class="citrusEmbark__footerCTA">
+                            <a href="https://www.petco.com/shop/en/petcostore/brand/embark-vet"
+                                manual_cm_sp="sponsoredbrandpage:embark:swabswealandsend:1:shopnow:shopnow"
+                                onclick="clickTrackLink(this);">
+                                <button>Shop Now</button>
+                            </a>
+                        </div>
+                        <p class="citrusEmbark__disclaimer"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Footer section -->
+    </main>
+    <!-- End Embark landing page wrapper -->
+    <!-- custom js code for POV section -->
+    <script>
+        let citrus_Embark_carousel = document.querySelector('.citrus_Embark_carousel');
+
+        let citrus_Embark_carouselInner = document.querySelector('.citrus_Embark_carousel-inner');
+
+        let prev = document.querySelector('.citrus_Embark_carousel-controls .prev');
+
+        let next = document.querySelector('.citrus_Embark_carousel-controls .next');
+
+        let slides = document.querySelectorAll('.citrus_Embark_carousel-inner .citrus_Embark_carousel-item');
+
+        let totalSlides = slides.length;
+
+        let step = 100 / totalSlides;
+
+        let activeSlide = 0;
+
+        let activeIndicator = 0;
+
+        let direction = -1;
+
+        let jump = 1;
+
+        let interval = 5000; /*5000*/
+
+        let time;
+
+
+
+        //Init citrus_Embark_carousel
+        citrus_Embark_carouselInner.style.minWidth = (totalSlides * 100) + '%';
+        loadIndicators();
+        loop(true);
+
+
+        //citrus_Embark_carousel events
+
+        next.addEventListener('click', () => {
+            slideToNext();
+        });
+
+        prev.addEventListener('click', () => {
+            slideToPrev();
+        });
+
+        citrus_Embark_carouselInner.addEventListener('transitionend', () => {
+            if (direction === -1) {
+                if (jump > 1) {
+                    for (let i = 0; i < jump; i++) {
+                        activeSlide++;
+                        citrus_Embark_carouselInner.append(citrus_Embark_carouselInner.firstElementChild);
+                    }
+                } else {
+                    activeSlide++;
+                    citrus_Embark_carouselInner.append(citrus_Embark_carouselInner.firstElementChild);
+                }
+            } else if (direction === 1) {
+                if (jump > 1) {
+                    for (let i = 0; i < jump; i++) {
+                        activeSlide--;
+                        citrus_Embark_carouselInner.prepend(citrus_Embark_carouselInner.lastElementChild);
+                    }
+                } else {
+                    activeSlide--;
+                    citrus_Embark_carouselInner.prepend(citrus_Embark_carouselInner.lastElementChild);
+                }
+            };
+
+            citrus_Embark_carouselInner.style.transition = 'none';
+            citrus_Embark_carouselInner.style.transform = 'translateX(0%)';
+            setTimeout(() => {
+                jump = 1;
+                citrus_Embark_carouselInner.style.transition = 'all ease .5s';
+            });
+            updateIndicators();
+        });
+
+        document.querySelectorAll('.citrus_Embark_carousel-indicators span').forEach(item => {
+            item.addEventListener('click', (e) => {
+                let slideTo = parseInt(e.target.dataset.slideTo);
+                let indicators = document.querySelectorAll('.citrus_Embark_carousel-indicators span');
+
+                indicators.forEach((item, index) => {
+                    if (item.classList.contains('active')) {
+                        activeIndicator = index
+                    }
+                })
+                if (slideTo - activeIndicator > 1) {
+                    jump = slideTo - activeIndicator;
+                    step = jump * step;
+                    slideToNext();
+                } else if (slideTo - activeIndicator === 1) {
+                    slideToNext();
+                } else if (slideTo - activeIndicator < 0) {
+
+                    if (Math.abs(slideTo - activeIndicator) > 1) {
+                        jump = Math.abs(slideTo - activeIndicator);
+                        step = jump * step;
+                        slideToPrev();
+                    }
+                    slideToPrev();
+                }
+                step = 100 / totalSlides;
+            })
+        });
+
+        citrus_Embark_carousel.addEventListener('mouseover', () => {
+            loop(false);
+        })
+
+        citrus_Embark_carousel.addEventListener('mouseout', () => {
+            loop(true);
+        })
+
+        //citrus_Embark_carousel functions
+
+        function loadIndicators() {
+            slides.forEach((slide, index) => {
+                if (index === 0) {
+                    document.querySelector('.citrus_Embark_carousel-indicators').innerHTML +=
+                        `<span data-slide-to="${index}" class="active"></span>`;
+                } else {
+                    document.querySelector('.citrus_Embark_carousel-indicators').innerHTML +=
+                        `<span data-slide-to="${index}"></span>`;
+                }
+            });
+        };
+
+        function updateIndicators() {
+            if (activeSlide > (totalSlides - 1)) {
+                activeSlide = 0;
+            } else if (activeSlide < 0) {
+                activeSlide = (totalSlides - 1);
+            }
+            document.querySelector('.citrus_Embark_carousel-indicators span.active').classList.remove('active');
+            document.querySelectorAll('.citrus_Embark_carousel-indicators span')[activeSlide].classList.add('active');
+        };
+
+        function slideToNext() {
+            if (direction === 1) {
+                direction = -1;
+                citrus_Embark_carouselInner.prepend(citrus_Embark_carouselInner.lastElementChild);
+            };
+
+            citrus_Embark_carousel.style.justifyContent = 'flex-start';
+            citrus_Embark_carouselInner.style.transform = `translateX(-${step}%)`;
+        };
+
+        function slideToPrev() {
+            if (direction === -1) {
+                direction = 1;
+                citrus_Embark_carouselInner.append(citrus_Embark_carouselInner.firstElementChild);
+            };
+            citrus_Embark_carousel.style.justifyContent = 'flex-end'
+            citrus_Embark_carouselInner.style.transform = `translateX(${step}%)`;
+            loop(false)
+        };
+
+        function loop(status) {
+            if (status === true) {
+                time = setInterval(() => {
+                    slideToNext();
+                }, interval);
+            } else {
+                clearInterval(time);
+            }
+        }
+        // pov loader add. before full load js pov none.
+        document.addEventListener('DOMContentLoaded', function () {
+            citrus_Embark_carousel.style.display = 'flex';
+        });
+    </script>
+</body>
+
+</html>

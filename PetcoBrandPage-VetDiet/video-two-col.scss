@@ -1,0 +1,47 @@
+.citrus_purina__video_container{
+    margin: 5rem 0;
+    background: #F4F7FF;
+    flex-wrap: wrap;
+    .citrus_purina__video_container--col{
+        width: 50%;
+        .single-video{
+            max-width: 80%;
+            margin: 0 auto;
+            iframe{
+                width: 100%;
+                min-height: 36vh;
+                margin-top: -15%;
+            }
+        }
+        .video-text{
+            text-align: center;
+            padding: 5rem 0;
+            h3{
+                font-size: 25px;
+                color: #000000;
+                font-family: "PetcoCircularTT-Bold", arial !important;
+            }
+            p{
+                padding: 24px 15px;
+                max-width: 400px;
+                margin: 0 auto;
+                font-size: 16px;
+                sup{
+                    font-size: 12px;
+                }
+            }
+            .cta-box{
+                a{
+                    margin: 0 auto;
+                    max-width : 211px;
+                }
+            }
+            .disclaimer{
+                p{
+                    font-size: 12px;
+                    padding: 10px 0;
+                }
+            }
+        }
+    }
+}

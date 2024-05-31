@@ -1,0 +1,946 @@
+/*
+ * Legal Disclaimer
+ *
+ * These web fonts are licensed exclusively for use on the following:
+ * All domains belonging to Petco
+ *
+ * It is strictly forbidden to download or use these fonts on any other website domain or media.
+ *
+ * While the @font-face statements below may be modified by the client, this
+ * disclaimer may not be removed.
+ *
+ * Lineto.com, 2020
+ */
+
+
+ @font-face {
+	font-family: PetcoCircularTT-Regular;
+	src: url(assets/fonts/PetcoCircularTT-Regular.woff2) format("woff2"), url(Assets/fonts/PetcoCircularTT-Regular.woff) format("woff")
+}
+
+@font-face {
+	font-family: PetcoCircularTT-Bold;
+	src: url(assets/fonts/PetcoCircularTT-Bold.woff2) format("woff2"), url(Assets/fonts/PetcoCircularTT-Bold.woff) format("woff")
+}
+
+@font-face {
+	font-family: "PetcoCircularTT Black Italic";
+	src: url("fonts/PetcoCircularTT-BlackItalic.woff2") format("woff2"),
+		 url("fonts/PetcoCircularTT-BlackItalic.woff") format("woff");
+}
+
+@font-face {
+	font-family: "PetcoCircularTT Bold";
+	src: url("fonts/PetcoCircularTT-Bold.woff2") format("woff2"),
+		 url("fonts/PetcoCircularTT-Bold.woff") format("woff");
+}
+
+@font-face {
+	font-family: "PetcoCircularTT Bold Italic";
+	src: url("fonts/PetcoCircularTT-BoldItalic.woff2") format("woff2"),
+		 url("fonts/PetcoCircularTT-BoldItalic.woff") format("woff");
+}
+
+@font-face {
+	font-family: "PetcoCircularTT Book";
+	src: url("fonts/PetcoCircularTT-Book.woff2") format("woff2"),
+		 url("fonts/PetcoCircularTT-Book.woff") format("woff");
+}
+
+@font-face {
+	font-family: "PetcoCircularTT Book Italic";
+	src: url("fonts/PetcoCircularTT-BookItalic.woff2") format("woff2"),
+		 url("fonts/PetcoCircularTT-BookItalic.woff") format("woff");
+}
+
+@font-face {
+	font-family: "PetcoCircularTT ExtraBlack";
+	src: url("fonts/PetcoCircularTT-ExtraBlack.woff2") format("woff2"),
+		 url("fonts/PetcoCircularTT-ExtraBlack.woff") format("woff");
+}
+
+@font-face {
+	font-family: "PetcoCircularTT ExtraBlack Italic";
+	src: url("fonts/PetcoCircularTT-ExtraBlackItalic.woff2") format("woff2"),
+		 url("fonts/PetcoCircularTT-ExtraBlackItalic.woff") format("woff");
+}
+
+@font-face {
+	font-family: "PetcoCircularTT Italic";
+	src: url("fonts/PetcoCircularTT-Italic.woff2") format("woff2"),
+		 url("fonts/PetcoCircularTT-Italic.woff") format("woff");
+}
+
+@font-face {
+	font-family: "PetcoCircularTT Light";
+	src: url("fonts/PetcoCircularTT-Light.woff2") format("woff2"),
+		 url("fonts/PetcoCircularTT-Light.woff") format("woff");
+}
+
+@font-face {
+	font-family: "PetcoCircularTT Light Italic";
+	src: url("fonts/PetcoCircularTT-LightItalic.woff2") format("woff2"),
+		 url("fonts/PetcoCircularTT-LightItalic.woff") format("woff");
+}
+
+@font-face {
+	font-family: "PetcoCircularTT Medium";
+	src: url("fonts/PetcoCircularTT-Medium.woff2") format("woff2"),
+		 url("fonts/PetcoCircularTT-Medium.woff") format("woff");
+}
+
+@font-face {
+	font-family: "PetcoCircularTT Medium Italic";
+	src: url("fonts/PetcoCircularTT-MediumItalic.woff2") format("woff2"),
+		 url("fonts/PetcoCircularTT-MediumItalic.woff") format("woff");
+}
+
+@font-face {
+	font-family: "PetcoCircularTT Regular";
+	src: url("fonts/PetcoCircularTT-Regular.woff2") format("woff2"),
+		 url("fonts/PetcoCircularTT-Regular.woff") format("woff");
+}
+
+@font-face {
+	font-family: "PetcoCircularTT Thin";
+	src: url("fonts/PetcoCircularTT-Thin.woff2") format("woff2"),
+		 url("fonts/PetcoCircularTT-Thin.woff") format("woff");
+}
+
+@font-face {
+	font-family: "PetcoCircularTT Thin Italic";
+	src: url("fonts/PetcoCircularTT-ThinItalic.woff2") format("woff2"),
+		 url("fonts/PetcoCircularTT-ThinItalic.woff") format("woff");
+}
+
+@font-face {
+	font-family: "PetcoCircularTT Black";
+	src: url("fonts/PetcoCircularTT-Black.woff2") format("woff2"),
+		 url("fonts/PetcoCircularTT-Black.woff") format("woff");
+}
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+img{
+    width: 100%;
+}
+
+a{
+    text-decoration: none;
+}
+
+.kong-flex-container{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.kong-container{
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.kong-container-fluid{
+    width: 100%;
+}
+
+/* POV sections */
+.citrus-kong-pov{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.citrus-kong-pov .citrus-kong-carousel{
+    overflow-x: hidden;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+}
+.citrus-kong-pov .citrus-kong-carousel .citrus-kong-carousel__inner{
+    display: flex;
+    background: #DB0032;
+    transition: all ease .5s;
+}
+.citrus-kong-pov .citrus-kong-carousel .citrus-kong-carousel__inner--item{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.citrus-kong-pov .citrus-kong-carousel .citrus-kong-carousel__inner--item-wrapper{
+    justify-content: space-between;
+    width: 100%;
+}
+.citrus-kong-pov .citrus-kong-carousel .citrus-kong-carousel__inner--item-wrapper .pov2-text, .citrus-kong-pov .citrus-kong-carousel .citrus-kong-carousel__inner--item-wrapper .pov3-text{
+    width: 70%;
+    padding: 0 5%;
+}
+.citrus-kong-pov .citrus-kong-carousel .citrus-kong-carousel__inner--item-wrapper .citrus-kong-carousel__inner--item-wrapper-text{
+    padding: 5%;
+}
+.citrus-kong-pov .citrus-kong-carousel .citrus-kong-carousel__inner--item-wrapper .pov1-splite{
+    width: 50%;
+}
+.citrus-kong-pov .citrus-kong-carousel .citrus-kong-carousel__inner--item-wrapper .citrus-kong-carousel__inner--item-wrapper-text .item-wrapper__logo{
+    max-width: 30%;
+}
+.citrus-kong-pov .citrus-kong-carousel .citrus-kong-carousel__inner--item-wrapper .citrus-kong-carousel__inner--item-wrapper-text .item-wrapper__title{
+    font-family: "PetcoCircularTT Black" !important;
+    font-size: 35px;
+    color: #fff;
+    padding: 10px 0;
+}
+.citrus-kong-pov .citrus-kong-carousel .citrus-kong-carousel__inner--item-wrapper .citrus-kong-carousel__inner--item-wrapper-text .item-wrapper__subhead{
+    font-family: "PetcoCircularTT Book" !important;
+    font-size: 18px;
+    color: #fff;
+    width: 60%;
+}
+.citrus-kong-pov .citrus-kong-carousel .citrus-kong-carousel__inner--item-wrapper .citrus-kong-carousel__inner--item-wrapper-text .item-wrapper__cta{
+    padding-top: 20px;
+}
+.citrus-kong-pov .citrus-kong-carousel .citrus-kong-carousel__inner--item-wrapper .citrus-kong-carousel__inner--item-wrapper-text .item-wrapper__cta a{
+    font-family: "PetcoCircularTT Bold" !important;
+    color: #001952;
+    font-size: 16px;
+    padding: 17px;
+    background: #fff;
+    text-transform: uppercase;
+    width: 160px;
+    display: block;
+    text-align: center;
+    border-radius: 5px;
+}
+.citrus-kong-pov .citrus-kong-carousel .citrus-kong-carousel__inner--item-wrapper .citrus-kong-carousel__inner--item-wrapper-text .item-wrapper__cta a:hover{
+    color: #fff;
+    background: #001952;
+}
+.citrus-kong-pov .citrus-kong-carousel .citrus-kong-carousel__inner--item-wrapper-img{
+    border-left: 12px solid #fff;
+    vertical-align: middle;
+    overflow: hidden;
+    height: 40vh;
+}   
+
+.citrus-kong-pov .citrus-kong-carousel .citrus-kong-carousel__inner--item-wrapper-img img{
+    vertical-align: middle;
+    width: 115%;
+}   
+
+
+.citrus-kong-pov .citrus-kong-carousel .pov2-img{
+    border-right: 12px solid #fff;
+    border-left: none !important;
+    width: 30%;
+}
+
+.citrus-kong-pov .citrus-kong-carousel .pov2-img{
+    border-right: 12px solid #fff;
+    border-left: none !important;
+    width: 35%;
+}
+
+.prev:hover, .next:hover{
+    opacity: 1;
+}
+
+.citrus_kong_carousel-indicators{
+    position: absolute;
+    bottom: 0;
+    left: calc(100%/2 - 52px);
+    text-align: center;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 5px 5px 0 0;
+    padding: 10px 10px 5px;
+}
+
+.citrus_kong_carousel-indicators span{
+    display: inline-block;
+    border: 2px solid #09205c;
+    padding: 7px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+.citrus_kong_carousel-indicators span.active{
+    opacity: 1;
+    background: #09205c;
+}
+
+/* Category Sections */
+.citrus-kong-category  .citrus-kong-category__category-wrapper{
+    overflow-x: auto;
+    justify-content: space-between;
+}
+.citrus-kong-category  .citrus-kong-category__category-wrapper .kong-flex-container{
+    width: 100%;
+    justify-content: flex-start;
+}
+.citrus-kong__headline{
+    font-family: "PetcoCircularTT Bold" !important;
+    font-size: 25px;
+    color: #000;
+    padding: 50px 15px 30px;
+    text-align: center;
+}
+.citrus-kong__subhead{
+    font-family: "PetcoCircularTT Regular" !important;
+    font-size: 16px;
+    color: #000;
+    padding: 0 15px 0;
+    text-align: center;
+    line-height: 22px;
+    max-width: 70%;
+    margin: -20px auto 0;
+}
+
+.citrus-kong-category  .citrus-kong-category__category-wrapper .citrus-kong-category__category-wrapper--single-category{
+    padding: 20px 30px;
+    min-width: 180px;
+}
+.citrus-kong-category  .citrus-kong-category__category-wrapper .citrus-kong-category__category-wrapper--single-category .title a{
+    font-family: "PetcoCircularTT Bold" !important;
+    font-size: 16px;
+    color: #000;
+    padding: 20px 0;
+    text-align: center;
+    text-decoration: underline;
+    display: block;
+}
+.citrus-kong-category  .citrus-kong-category__category-wrapper .citrus-kong-category__category-wrapper--single-category .title a:hover{
+    color: #09205c;
+}
+
+/* Video Sections */
+.citrus-kong-videos{
+    background-image: url("images/citrus-kong-video-bg-DSK.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 50px 0;
+    padding: 0 5%;
+}
+.citrus-kong-videos .citrus-kong-videos__wrapper{
+    justify-content: space-between;
+}
+.citrus-kong-videos .citrus-kong-videos__wrapper .citrus-kong-videos__wrapper--col{
+    width: 50%;
+}
+.citrus-kong-videos .citrus-kong-videos__wrapper .citrus-kong-videos__wrapper--single-video{
+    padding-bottom: 60px;
+}
+.citrus-kong-videos .citrus-kong-videos__wrapper .citrus-kong-videos__wrapper--text{
+    padding: 15px;
+    color: #fff;
+    text-align: center;
+}
+.citrus-kong-videos .citrus-kong-videos__wrapper .citrus-kong-videos__wrapper--col .citrus-kong-videos__title{
+    font-family: "PetcoCircularTT Bold" !important;
+    font-size: 30px;
+    padding-bottom: 20px;
+}
+.citrus-kong-videos .citrus-kong-videos__wrapper .citrus-kong-videos__wrapper--col .citrus-kong-videos__sub-title{
+    max-width: 60%;
+    margin: 0 auto;
+    font-family: "PetcoCircularTT Regular" !important;
+    font-size: 18px;
+}
+.citrus-kong-videos .citrus-kong-videos__wrapper .citrus-kong-videos__wrapper--col iframe{
+    width: 100%;
+    height: 40vh;
+}
+
+/* Right kong sections */
+.citrus-right-kong{
+    overflow-x: auto;
+}
+.citrus-right-kong .citrus-right-kong__content-wrapper{
+    overflow: hidden;
+}
+.citrus-right-kong .kong-flex-container{
+    width: 100%;
+}
+.citrus-right-kong .citrus-right-kong__type .single-item{
+    padding: 15px 50px;
+    width: calc(100%/6);
+}
+.citrus-right-kong .citrus-right-kong__durables{
+    position: relative;
+}
+.citrus-right-kong .citrus-right-kong__durables .single-item{
+    padding: 15px 50px;
+    width: calc(100%/6);
+}
+.citrus-right-kong .citrus-right-kong__durables .single-item:first-child{
+    width: 10%;
+    color: #FFD405;
+    font-family: "PetcoCircularTT Bold" !important;
+    font-size: 18px;
+    padding-left: 15px;
+}
+.citrus-right-kong .citrus-right-kong__durables .single-item:last-child{
+    width: 10%;
+    color: #B4B4B4;
+    font-family: "PetcoCircularTT Bold" !important;
+    font-size: 18px;
+    padding-right: 15px;
+}
+.citrus-right-kong .citrus-right-kong__durables .single-item:nth-child(2){
+    padding: 15px 30px 15px 0;
+}
+.citrus-right-kong .citrus-right-kong__durables .single-item:nth-child(2) span{
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    background-color: #A7A4A4;
+    display: block;
+}
+.citrus-right-kong .citrus-right-kong__durables .single-item:nth-child(3) span{
+    width: 12px;
+    height: 12px;
+    border-radius: 100%;
+    background-color: #A7A4A4;
+    display: block;
+    margin: 0 auto;
+}
+.citrus-right-kong .citrus-right-kong__durables .single-item:nth-child(4) span{
+    width: 16px;
+    height: 16px;
+    border-radius: 100%;
+    background-color: #A7A4A4;
+    display: block;
+    margin: 0 auto;
+}
+.citrus-right-kong .citrus-right-kong__durables .single-item:nth-child(5) span{
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background-color: #A7A4A4;
+    display: block;
+    float: right;
+}
+.citrus-right-kong .citrus-right-kong__durables .single-item:nth-child(5){
+    padding: 15px 0 15px 30px;
+}
+.citrus-right-kong .citrus-right-kong__durables--border .borders{
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: #A7A4A4;
+    margin: 0 0 14px;
+}
+.citrus-right-kong .citrus-right-kong__packages--title-wrapper{
+    background:  #DB0032;
+    justify-content: space-between;
+}
+.citrus-right-kong .citrus-right-kong__packages--title-wrapper .single-item{
+    padding: 15px 30px;
+    width: calc(100%/5);
+    color: #fff;
+    font-family: "PetcoCircularTT Bold" !important;
+    font-size: 16px;
+    text-align: center;
+}
+.citrus-right-kong .citrus-right-kong__packages--title-wrapper .single-item:first-child{
+    width: 10%;
+}
+.citrus-right-kong .citrus-right-kong__packages--title-wrapper .single-item a{
+    color: #fff;
+    font-family: "PetcoCircularTT Bold" !important;
+    font-size: 16px;
+    text-decoration: underline;
+    display: block;
+}
+.citrus-right-kong .citrus-right-kong__packages--contents{
+    justify-content: space-between;
+}
+.citrus-right-kong .citrus-right-kong__packages--contents .single-item{
+    width: calc(100%/5);
+    padding: 20px 30px;
+    text-align: center;
+    font-family: "PetcoCircularTT Regular" !important;
+    font-size: 16px;
+    min-height: 32px;
+    border-bottom: 1px solid #BABABA;
+}
+.citrus-right-kong .citrus-right-kong__packages--contents:nth-child(5) .single-item{
+    border-bottom: none;
+}
+.citrus-right-kong .citrus-right-kong__packages--contents .single-item:first-child{
+    width: 10%;
+    background: #333333;
+    color: #fff;
+    border-bottom: 1px solid #333;
+}
+.padding-top-30{
+    padding-top: 30px !important;
+}
+.citrus-right-kong .citrus-right-kong__packages--contents .single-item:nth-child(even){
+    background: #EFEFEF;
+}
+.citrus-right-kong .citrus-right-kong__packages--contents .single-item:nth-child(2){
+    margin-left: 20px;
+}
+
+.citrus-right-kong .citrus-right-kong__made-by{
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+.citrus-right-kong .citrus-right-kong__made-by img{
+    max-width: 160px;
+    padding: 15px;
+}
+
+/* Right kong sizes */
+.citrus-kong-sizes .citrus-kong-sizes__wrapper {
+    overflow-x: auto;
+}
+.citrus-kong-sizes .citrus-kong-sizes__wrapper .citrus-kong-sizes__wrapper--contents{
+ overflow: hidden;
+ align-items: flex-end;
+ justify-content: flex-start;
+ width: 100%;
+ overflow-x: auto;
+}
+.citrus-kong-sizes .citrus-kong-sizes__wrapper .citrus-kong-sizes__wrapper--single-item{
+    padding: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.citrus-kong-sizes .citrus-kong-sizes__wrapper .citrus-kong-sizes__wrapper--single-item:nth-child(1) img{
+    max-width: 60px;
+    margin: 0 auto;
+}
+.citrus-kong-sizes .citrus-kong-sizes__wrapper .citrus-kong-sizes__wrapper--single-item:nth-child(2) img{
+    max-width: 75px;
+    margin: 0 auto;
+}
+.citrus-kong-sizes .citrus-kong-sizes__wrapper .citrus-kong-sizes__wrapper--single-item:nth-child(3) img{
+    max-width: 90px;
+    margin: 0 auto;
+}
+.citrus-kong-sizes .citrus-kong-sizes__wrapper .citrus-kong-sizes__wrapper--single-item:nth-child(4) img{
+    max-width: 105px;
+    margin: 0 auto;
+}
+.citrus-kong-sizes .citrus-kong-sizes__wrapper .citrus-kong-sizes__wrapper--single-item:nth-child(5) img{
+    max-width: 125px;
+    margin: 0 auto;
+}
+.citrus-kong-sizes .citrus-kong-sizes__wrapper .citrus-kong-sizes__wrapper--single-item:nth-child(6) img{
+    max-width: 140px;
+    margin: 0 auto;
+}
+.citrus-kong-sizes .citrus-kong-sizes__wrapper .single-item__title{
+    font-family: "PetcoCircularTT Bold" !important;
+    font-size: 18px;
+    color: #000;
+    padding: 20px 0;
+    min-width: 120px;
+    text-align: center;
+}
+.citrus-kong-sizes .citrus-kong-sizes__wrapper .single-item__sub-title{
+    font-family: "PetcoCircularTT Regular" !important;
+    font-size: 16px;
+    color: #000;
+    min-width: 150px;
+    text-align: center;
+}
+
+/* Kong Stuff */
+.citrus-kong-stuff .citrus-kong-stuff__contents{
+    overflow-x: auto;
+}
+.citrus-kong-stuff .citrus-kong-stuff__contents .citrus-kong-stuff__contents--wrapper{
+    overflow: hidden;
+    padding: 20px;
+}
+.citrus-kong-stuff .citrus-kong-stuff__contents .citrus-kong-stuff__contents--wrapper .single-item{
+    padding: 15px;
+}
+.citrus-kong-stuff .citrus-kong-stuff__contents .citrus-kong-stuff__contents--wrapper .single-item .single-item__title{
+    font-family: "PetcoCircularTT Bold" !important;
+    font-size: 20px;
+    color: #000;
+    text-align: center;
+    padding: 20px 0;
+}
+.citrus-kong-stuff .citrus-kong-stuff__contents .citrus-kong-stuff__contents--disclaimer{
+    font-family: "PetcoCircularTT Regular" !important;
+    font-size: 18px;
+    color: #030303;
+    text-align: center;
+    padding: 20px;
+}
+
+
+
+
+
+/* Responsive devices */
+@media only screen and (min-width: 2560px){
+
+    /* POV sections */
+    .citrus-kong-pov .citrus-kong-carousel .citrus-kong-carousel__inner--item-wrapper-img{
+        height: 50vh;
+    } 
+    .citrus-kong-pov .citrus-kong-carousel .citrus-kong-carousel__inner--item-wrapper-img img {
+        width: 110%;
+    }
+
+    .citrus-kong-pov .citrus-kong-carousel .citrus-kong-carousel__inner--item-wrapper .citrus-kong-carousel__inner--item-wrapper-text .item-wrapper__title{
+        font-size: 52px;
+        padding: 20px 0;
+    }
+    .citrus-kong-pov .citrus-kong-carousel .citrus-kong-carousel__inner--item-wrapper .citrus-kong-carousel__inner--item-wrapper-text .item-wrapper__subhead{
+        font-size: 30px;
+    }
+    .citrus-kong-pov .citrus-kong-carousel .citrus-kong-carousel__inner--item-wrapper .citrus-kong-carousel__inner--item-wrapper-text .item-wrapper__cta{
+        padding-top: 30px;
+    }
+
+    /* Video Sections */
+    .citrus-kong-videos .citrus-kong-videos__wrapper .citrus-kong-videos__wrapper--col .citrus-kong-videos__title{
+        font-size: 42px;
+    }
+    .citrus-kong-videos .citrus-kong-videos__wrapper .citrus-kong-videos__wrapper--col .citrus-kong-videos__sub-title{
+        max-width: 70%;
+        font-size: 24px;
+    }
+    .citrus-kong-videos .citrus-kong-videos__wrapper .citrus-kong-videos__wrapper--col iframe{
+        height: 40vh;
+    }
+
+
+}
+
+@media only screen and (min-width:1920px) and (max-width: 2559px){
+
+     /* POV sections */
+    .citrus-kong-pov .citrus-kong-carousel .citrus-kong-carousel__inner--item-wrapper-img{
+        height: 56vh;
+    }  
+    .citrus-kong-pov .citrus-kong-carousel .citrus-kong-carousel__inner--item-wrapper-img img {
+        width: 115%;
+    }
+
+    .citrus-kong-pov .citrus-kong-carousel .citrus-kong-carousel__inner--item-wrapper .citrus-kong-carousel__inner--item-wrapper-text .item-wrapper__title{
+        font-size: 52px;
+        padding: 20px 0;
+    }
+    .citrus-kong-pov .citrus-kong-carousel .citrus-kong-carousel__inner--item-wrapper .citrus-kong-carousel__inner--item-wrapper-text .item-wrapper__subhead{
+        font-size: 30px;
+    }
+    .citrus-kong-pov .citrus-kong-carousel .citrus-kong-carousel__inner--item-wrapper .citrus-kong-carousel__inner--item-wrapper-text .item-wrapper__cta{
+        padding-top: 30px;
+    }
+
+    /* Video Sections */
+    .citrus-kong-videos .citrus-kong-videos__wrapper .citrus-kong-videos__wrapper--col .citrus-kong-videos__title{
+        font-size: 42px;
+    }
+    .citrus-kong-videos .citrus-kong-videos__wrapper .citrus-kong-videos__wrapper--col .citrus-kong-videos__sub-title{
+        max-width: 70%;
+        font-size: 24px;
+    }
+    .citrus-kong-videos .citrus-kong-videos__wrapper .citrus-kong-videos__wrapper--col iframe{
+        height: 45vh;
+    }
+}
+
+@media only screen and (min-width:1440px) and (max-width: 1919px){
+
+     /* POV sections */
+    .citrus-kong-pov .citrus-kong-carousel .citrus-kong-carousel__inner--item-wrapper-img{
+        height: 50vh;
+    }  
+    .citrus-kong-pov .citrus-kong-carousel .citrus-kong-carousel__inner--item-wrapper-img img{
+        width: 115%;
+    } 
+}
+
+
+@media only screen and (min-width:1280px) and (max-width: 1439px){
+
+    /* POV sections */
+    .citrus-kong-pov .citrus-kong-carousel .citrus-kong-carousel__inner--item-wrapper .citrus-kong-carousel__inner--item-wrapper-text {
+        padding: 0 5%;
+    }
+    .citrus-kong-pov .citrus-kong-carousel .citrus-kong-carousel__inner--item-wrapper-img{
+        height: 50vh;
+    } 
+
+}
+
+@media only screen and (min-width:1024px) and (max-width: 1279px){
+
+    /* POV sections */
+    .citrus-kong-pov .citrus-kong-carousel .citrus-kong-carousel__inner--item-wrapper .citrus-kong-carousel__inner--item-wrapper-text {
+        padding: 0 5%;
+    }
+    .citrus-kong-pov .citrus-kong-carousel .citrus-kong-carousel__inner--item-wrapper .citrus-kong-carousel__inner--item-wrapper-text .item-wrapper__title{
+        font-size: 30px;
+        padding: 5px 0;
+    }
+    .citrus-kong-pov .citrus-kong-carousel .citrus-kong-carousel__inner--item-wrapper .citrus-kong-carousel__inner--item-wrapper-text .item-wrapper__subhead{
+        font-size: 16px;
+        width: 80%;
+    }
+    .citrus-kong-pov .citrus-kong-carousel .citrus-kong-carousel__inner--item-wrapper .citrus-kong-carousel__inner--item-wrapper-text .item-wrapper__cta{
+        padding-top: 10px;
+    }
+    .citrus-kong-pov .citrus-kong-carousel .pov2-img, .citrus-kong-pov .citrus-kong-carousel .pov3-img {
+        width: 40%;
+    }
+
+    /* Video Sections */
+    .citrus-kong-videos .citrus-kong-videos__wrapper .citrus-kong-videos__wrapper--col .citrus-kong-videos__title{
+        font-size: 24px;
+    }
+    .citrus-kong-videos .citrus-kong-videos__wrapper .citrus-kong-videos__wrapper--col .citrus-kong-videos__sub-title{
+        max-width: 70%;
+        font-size: 16px;
+    }
+    .citrus-kong-videos .citrus-kong-videos__wrapper .citrus-kong-videos__wrapper--col iframe{
+        height: 35vh;
+    }
+
+}
+
+@media only screen and (min-width:768px) and (max-width: 1023px){
+
+    /* POV sections */
+    .citrus-kong-pov .citrus-kong-carousel .citrus-kong-carousel__inner--item-wrapper .citrus-kong-carousel__inner--item-wrapper-text {
+        padding: 0 7%;
+    }
+    .citrus-kong-pov .citrus-kong-carousel .citrus-kong-carousel__inner--item-wrapper .citrus-kong-carousel__inner--item-wrapper-text .item-wrapper__title{
+        font-size: 30px;
+        padding: 5px 0;
+    }
+    .citrus-kong-pov .citrus-kong-carousel .citrus-kong-carousel__inner--item-wrapper .citrus-kong-carousel__inner--item-wrapper-text .item-wrapper__subhead{
+        font-size: 14px;
+        width: 100%;
+    }
+    .citrus-kong-pov .citrus-kong-carousel .citrus-kong-carousel__inner--item-wrapper .citrus-kong-carousel__inner--item-wrapper-text .item-wrapper__cta{
+        padding-top: 10px;
+    }
+    .citrus-kong-pov .citrus-kong-carousel .pov2-img, .citrus-kong-pov .citrus-kong-carousel .pov3-img {
+        width: 45%;
+    }
+    .citrus-kong-pov .citrus-kong-carousel .citrus-kong-carousel__inner--item-wrapper .citrus-kong-carousel__inner--item-wrapper-text .item-wrapper__logo {
+        max-width: 40%;
+    } 
+    .citrus-kong-pov .citrus-kong-carousel .citrus-kong-carousel__inner--item-wrapper-img img {
+        width: 140%;
+        margin: 0 0 0 -35%;
+    }
+    .citrus-kong-pov .citrus-kong-carousel .citrus-kong-carousel__inner--item-wrapper-img img {
+        width: 140%;
+        margin: 0 0 0 -35%;
+    }
+    .citrus-kong-pov .citrus-kong-carousel .pov2-img img{
+        margin: 0 0 0 -25%;
+    }
+    .citrus-kong-pov .citrus-kong-carousel .pov3-img img {
+        margin: 0 !important;
+    }
+    .citrus-kong-pov .citrus-kong-carousel .citrus-kong-carousel__inner--item-wrapper-img {
+        height: 38vh;
+    }
+
+    /* Video Sections */
+    .citrus-kong-videos .citrus-kong-videos__wrapper .citrus-kong-videos__wrapper--col .citrus-kong-videos__title{
+        font-size: 21px;
+    }
+    .citrus-kong-videos .citrus-kong-videos__wrapper .citrus-kong-videos__wrapper--col .citrus-kong-videos__sub-title{
+        max-width: 90%;
+        font-size: 14px;
+    }
+    .citrus-kong-videos .citrus-kong-videos__wrapper .citrus-kong-videos__wrapper--col iframe{
+        height: 30vh;
+    }
+
+    /* Right kong sections */
+    .citrus-right-kong .citrus-right-kong__packages--contents .single-item {
+        padding: 15px;
+        min-height: 48px;
+    }
+
+}
+
+@media only screen and (max-width: 767px){
+
+    /* POV section */
+    .citrus-kong-pov .citrus-kong-carousel .pov2-img {
+        border-right: none !important;
+        border-left: none !important;
+        width: 100%;
+    }
+    .citrus-kong-pov .citrus-kong-carousel .pov2-img, .citrus-kong-pov .citrus-kong-carousel .pov3-img {
+        width: 100%;
+    }
+    .citrus-kong-pov .citrus-kong-carousel .citrus-kong-carousel__inner--item-wrapper .pov2-text, .citrus-kong-pov .citrus-kong-carousel .citrus-kong-carousel__inner--item-wrapper .pov3-text {
+        width: 100%;
+        padding: 0 5%;
+    }
+    .citrus-kong-pov .citrus-kong-carousel .citrus-kong-carousel__inner--item-wrapper .pov1-splite {
+        width: 100%;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+    }
+    .citrus-kong-pov .citrus-kong-carousel .citrus-kong-carousel__inner--item-wrapper{
+        flex-wrap: wrap;
+        text-align: center;
+    }
+    .citrus-kong-pov .citrus-kong-carousel .citrus-kong-carousel__inner--item {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    .citrus-kong-pov .citrus-kong-carousel .citrus-kong-carousel__inner--item .pov1-splite:first-child{
+        order: 2;
+    }
+    .citrus-kong-pov .citrus-kong-carousel .citrus-kong-carousel__inner {
+        flex-wrap: wrap;
+    }
+    .citrus-kong-pov .citrus-kong-carousel .citrus-kong-carousel__inner--item-wrapper-img {
+        border-left: none;
+    }
+    .citrus-kong-carousel__inner--item-wrapper-img.pov1-splite:last-child {
+        border-bottom: 12px solid #fff;
+    }
+    .citrus-kong-pov .citrus-kong-carousel .pov2-img {
+        border-right: none !important;
+        border-left: none !important;
+        border-bottom: 12px solid #fff;
+    }
+    .citrus-kong-pov .citrus-kong-carousel .citrus-kong-carousel__inner--item-wrapper .citrus-kong-carousel__inner--item-wrapper-text .item-wrapper__logo {
+        max-width: 30%;
+        margin: 0 auto;
+        position: absolute;
+        top: 0;
+        left: 10px;
+    }
+    .citrus-kong-pov .citrus-kong-carousel .citrus-kong-carousel__inner--item-wrapper .citrus-kong-carousel__inner--item-wrapper-text .item-wrapper__logo img{
+        width: 130px;
+    }
+    .citrus-kong-pov .citrus-kong-carousel .citrus-kong-carousel__inner--item-wrapper .citrus-kong-carousel__inner--item-wrapper-text .item-wrapper__title{
+        font-size: 30px;
+        padding: 10px 0;
+    }
+    .citrus-kong-pov .citrus-kong-carousel .citrus-kong-carousel__inner--item-wrapper .citrus-kong-carousel__inner--item-wrapper-text .item-wrapper__subhead{
+        font-size: 16px;
+        width: 100%;
+    }
+    .citrus-kong-pov .citrus-kong-carousel .citrus-kong-carousel__inner--item-wrapper .citrus-kong-carousel__inner--item-wrapper-text .item-wrapper__cta{
+        padding-top: 0px;
+    }
+    .citrus-kong-pov .citrus-kong-carousel .citrus-kong-carousel__inner--item-wrapper .citrus-kong-carousel__inner--item-wrapper-text .item-wrapper__cta a{
+        margin: 0 auto 30px;
+        color: #fff;
+        text-transform: capitalize;
+        text-decoration: underline;
+        background: none;
+    }
+    .citrus-kong-pov .citrus-kong-carousel .citrus-kong-carousel__inner--item-wrapper .citrus-kong-carousel__inner--item-wrapper-text .item-wrapper__cta a:hover{
+        color: #001952;
+        background: none;
+    }
+    .citrus-kong-pov .citrus-kong-carousel .citrus-kong-carousel__inner--item-wrapper .pov1-splite:last-child img {
+        width: 140%;
+        margin-left: 0;
+    }
+    .citrus-kong-pov .citrus-kong-carousel .citrus-kong-carousel__inner--item-wrapper-img img {
+        width: 100%;
+    }
+    .citrus-kong-pov .citrus-kong-carousel .citrus-kong-carousel__inner--item-wrapper-img {
+        height: 38vh;
+    }
+
+    /* Category Sections */
+    .citrus-kong-category  .citrus-kong-category__category-wrapper{
+        width: 120%;
+    }
+    .citrus-kong-category  .citrus-kong-category__category-wrapper .citrus-kong-category__category-wrapper--single-category{
+
+        min-width: 20%;
+    }
+
+    /* Video Sections */
+    .citrus-kong-videos {
+        background-image: url(images/citrus-kong-video-bg-MOB.png);
+        margin: 50px 0;
+        padding: 0;
+    }
+    .citrus-kong-videos .citrus-kong-videos__wrapper {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .citrus-kong-videos .citrus-kong-videos__wrapper .citrus-kong-videos__wrapper--col{
+        width: 100%;
+    }
+    .citrus-kong-videos .citrus-kong-videos__wrapper .citrus-kong-videos__wrapper--col:first-child{
+        order: 2;
+    }
+    .citrus-kong-videos .citrus-kong-videos__wrapper .citrus-kong-videos__wrapper--single-video {
+        padding-bottom: 0;
+    }
+    .citrus-kong-videos .citrus-kong-videos__wrapper .citrus-kong-videos__wrapper--col iframe {
+        margin: 0 0 -5px;
+    }
+    .citrus-kong-videos .citrus-kong-videos__wrapper .citrus-kong-videos__wrapper--text {
+        padding: 150px 15px 60px;
+    }
+    .citrus-kong-videos .citrus-kong-videos__wrapper .citrus-kong-videos__wrapper--col .citrus-kong-videos__title{
+        font-size: 24px;
+    }
+    .citrus-kong-videos .citrus-kong-videos__wrapper .citrus-kong-videos__wrapper--col .citrus-kong-videos__sub-title{
+        max-width: 90%;
+        font-size: 16px;
+    }
+    .citrus-kong-videos .citrus-kong-videos__wrapper .citrus-kong-videos__wrapper--col iframe{
+        height: 35vh;
+    }
+
+    /* Right kong sections */
+    .citrus-right-kong .citrus-right-kong__content-wrapper{
+        width: 250%;
+    }
+
+    /* Right kong sizes */
+
+
+
+    /* Kong Stuff */
+    .citrus-kong-stuff .citrus-kong-stuff__contents .citrus-kong-stuff__contents--wrapper{
+        flex-wrap: wrap;
+    }
+ 
+
+}
+
+@media only screen and (max-width: 320px){
+
+    /* POV Sections */
+    .citrus-kong-pov .citrus-kong-carousel .citrus-kong-carousel__inner--item-wrapper .pov1-splite:last-child img {
+        width: 160%;
+        margin-left: -20%;
+    }
+    .citrus-kong-pov .citrus-kong-carousel .citrus-kong-carousel__inner--item-wrapper-img img {
+        width: 100%;
+    }
+    .citrus-kong-pov .citrus-kong-carousel .citrus-kong-carousel__inner--item-wrapper-img {
+        height: 38vh;
+    }
+}

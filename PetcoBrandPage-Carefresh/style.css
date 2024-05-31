@@ -1,0 +1,664 @@
+*
+ * Legal Disclaimer
+ *
+ * These web fonts are licensed exclusively for use on the following:
+ * All domains belonging to Petco
+ *
+ * It is strictly forbidden to download or use these fonts on any other website domain or media.
+ *
+ * While the @font-face statements below may be modified by the client, this
+ * disclaimer may not be removed.
+ *
+ * Lineto.com, 2020
+ */
+
+@font-face {
+  font-family: PetcoCircularTT-Regular;
+  src: url(fonts/PetcoCircularTT-Regular.woff);
+}
+
+@font-face {
+  font-family: PetcoCircularTT-Bold;
+  src: url(fonts/PetcoCircularTT-Bold.woff);
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "PetcoCircularTT-Regular", arial !important;
+}
+
+/*-----------------------------------*/
+/*------------ Splide Css-----------*/
+/*-----------------------------------*/
+.splide__list {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  height: 100%;
+  margin: 0 !important;
+  padding: 0 !important;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.splide.is-initialized:not(.is-active) .splide__list {
+  display: block;
+}
+
+.splide {
+  outline: none;
+  position: relative;
+  visibility: hidden;
+}
+
+.splide.is-initialized,
+.splide.is-rendered {
+  visibility: visible;
+}
+
+.splide__slide {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  list-style-type: none !important;
+  margin: 0;
+  outline: none;
+  position: relative;
+}
+
+.splide__slide img {
+  vertical-align: bottom;
+  min-height: 100px;
+}
+
+.splide__track {
+  overflow: hidden;
+  position: relative;
+  z-index: 0;
+}
+
+.splide--draggable > .splide__track {
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.splide--fade > .splide__track > .splide__list {
+  display: block;
+}
+
+.splide--fade > .splide__track > .splide__list > .splide__slide {
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  z-index: 0;
+}
+
+.splide--fade > .splide__track > .splide__list > .splide__slide.is-active {
+  opacity: 1;
+  position: relative;
+  z-index: 1;
+}
+
+.splide--rtl {
+  direction: rtl;
+}
+
+.splide--ttb.is-active > .splide__track > .splide__list {
+  display: block;
+}
+
+.splide__arrow {
+  -ms-flex-align: center;
+  -webkit-box-align: center;
+  align-items: center;
+  background: #fff;
+  border: 1px solid #001952;
+  border-radius: 50%;
+  cursor: pointer;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  height: 2em;
+  -ms-flex-pack: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  opacity: 1;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 2em;
+  z-index: 1;
+}
+
+.splide__arrow svg {
+  fill: #001952;
+  height: 1.2em;
+  width: 1.2em;
+}
+
+.splide__arrow:hover {
+  opacity: 0.9;
+}
+
+.splide__arrow:focus {
+  outline: none;
+}
+
+.splide__arrow--prev {
+  left: 1em;
+}
+
+.splide__arrow--prev svg {
+  -webkit-transform: scaleX(-1);
+  -ms-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+.splide__arrow--next {
+  right: 1em;
+}
+
+/* Common styling */
+.citrusCarefresh__Wrapper {
+  font-family: "PetcoCircularTT-Regular", arial !important;
+  font-size: 16px;
+  background: #fff;
+  /* overflow: hidden; */
+}
+.citrusCarefresh__Wrapper a {
+  text-decoration: none;
+}
+.citrusCarefresh__Wrapper h1,
+.citrusCarefresh__Wrapper h2,
+.citrusCarefresh__Wrapper h3 {
+  font-family: "petcoCircularTT-Bold", arial !important;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+.citrusCarefresh__Wrapper h1 {
+  font-weight: 900;
+}
+.citrusCarefresh__Wrapper p {
+  font-family: "PetcoCircularTT-Regular", arial !important;
+  margin: 0;
+  padding: 0;
+}
+.citrusCarefresh__desktop_hide {
+  display: none;
+}
+
+.citrusCarefresh__mobile_hide {
+  display: block;
+}
+
+/* POV or Banner styling */
+.citrusCarefresh__Banner {
+  max-width: 100%;
+  max-width: 100%;
+  height: 100%;
+  background: #e3fdef;
+}
+.citrusCarefresh__BannerRow {
+  max-width: 100%;
+  display: flex;
+  /* grid-template-columns: 70% 30%; */
+  /* grid-gap: 0; */
+  justify-content: space-between;
+  column-gap: 0;
+  overflow: hidden;
+}
+/* banner text */
+.citrusCarefresh__txtContainer {
+  height: 100%;
+  margin: auto;
+  padding: 0 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.citrusCarefresh__logo img {
+  max-width: 100%;
+  object-fit: contain;
+  text-align: center;
+}
+.citrusCarefresh__bannerText {
+  margin: auto;
+  margin-left: 50px;
+}
+.citrusCarefresh__bannerText h1 {
+  margin-bottom: 5px;
+  font-size: 35px;
+  line-height: 40px;
+  color: #001952;
+}
+.citrusCarefresh__bannerText p {
+  margin-bottom: 20px;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 600;
+  color: #001952;
+}
+.citrusCarefresh__BannerCTA {
+  display: flex;
+  justify-content: flex-start;
+  column-gap: 30px;
+  text-align: center;
+}
+.citrusCarefresh__BannerCTA a {
+  font-family: "PetcoCircularTT-Bold", arial !important;
+  font-size: 16px;
+  background-color: #001952;
+  color: #fff;
+  padding: 18px 44px;
+  border-radius: 8px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.citrusCarefresh__BannerColRight {
+  background: #6abf4d;
+}
+.citrusCarefresh__bannerRightImage {
+  width: 100%;
+  max-width: 100%;
+  padding-left: 10px;
+}
+.citrusCarefresh__BannerColRight img {
+  width: 100%;
+
+  object-fit: cover;
+}
+
+/* category icon style */
+.citrusCarefresh__CategoryContainer {
+  margin-top: 50px;
+  width: 100%;
+  max-width: 100%;
+}
+h2.citrusCarefresh__sectionTitle {
+  margin: 0;
+  padding: 0;
+  font-family: "PetcoCircularTT-Bold", arial !important;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+  color: #000;
+}
+.citrusCarefresh__category {
+  width: 100%;
+  max-width: 100%;
+  margin: auto;
+  margin-top: 40px;
+  overflow-x: auto;
+}
+.citrusCarefresh__categoryRow {
+  width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+.citrusCarefresh__categoryCard {
+  width: 258px;
+  max-width: 100%;
+  margin: auto;
+  text-align: center;
+}
+.citrusCarefresh__categoryCard h3 {
+  margin: 10px auto;
+  font-size: 18px;
+  font-weight: bold;
+  color: #000;
+}
+.citrusCarefresh__categoryCard p {
+  margin: 0 auto 10px;
+  padding: 0 5px;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 20px;
+  color: #000;
+}
+/* ----------------------------------
+
+-------------------------------------*/
+
+/* Product section / Complete comfort care small pet bedding */
+.citrusCarefresh__productContainer {
+  width: 1150px;
+  max-width: 100%;
+  margin: auto;
+  margin-top: 40px;
+}
+.citrusCarefresh__productRow {
+  margin-top: 40px;
+}
+.citrusCarefresh__ProductVideo {
+  width: 50%;
+  float: left;
+  position: relative;
+  background-color: #ddffea40;
+}
+.citrusCarefresh__ProductVideo iframe {
+  width: 100%;
+}
+.citrusCarefresh__videoText {
+  padding: 60px 40px;
+}
+.citrusCarefresh__videoText h3 {
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 30px;
+  color: #000;
+}
+.citrusCarefresh__videoText p {
+  font-size: 16px;
+  color: #000;
+  text-align: center;
+}
+.product-right {
+  width: 50%;
+  float: left;
+  position: relative;
+}
+.product-right .splide__track {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.splide__slide {
+  width: 230px !important;
+}
+.citrusCarefresh__Card {
+  width: 230px !important;
+
+  margin-bottom: 20px;
+}
+.citruscarefresh__cardBody p {
+  font-size: 16px;
+  line-height: 20px;
+  color: #000;
+  min-height: 59px;
+  padding: 0 10px 0 0;
+}
+.citruscarefresh__cardBody a {
+  font-family: "PetcoCircularTT-Bold", arial !important;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: underline;
+  color: #001952;
+}
+.citrusCarefresh__shopAllCTA {
+  clear: both;
+  text-align: center;
+  padding-top: 40px;
+}
+.citrusCarefresh__shopAllCTA a {
+  font-family: "PetcoCircularTT-Bold", arial !important;
+  font-size: 16px;
+  background-color: #001952;
+  color: #fff;
+  padding: 18px 44px;
+  border-radius: 8px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+/* footer style */
+.citrusCarefresh__footer {
+  clear: both;
+  margin-top: 90px;
+  /* margin-bottom: 60px; */
+  width: 100%;
+  max-width: 100%;
+  background: #ddffea;
+}
+.citrusCarefresh__footerRow {
+  width: 1150px;
+  max-width: 100%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  position: relative;
+}
+.citrusCarefresh__footerImage {
+  position: relative;
+  top: -30px;
+}
+.citrusCarefresh__footerImage img {
+  width: 100%;
+  max-width: 100%;
+  margin: auto;
+  height: auto;
+}
+.citrusCarefresh__footerText {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.citrusCarefresh__footerText p {
+  width: 395px;
+  max-width: 80%;
+  margin: 10px 0 20px;
+  font-family: "PetcoCircularTT-Regular", arial !important;
+  font-size: 16px;
+  line-height: 22px;
+  color: #000;
+  text-align: center;
+}
+.citrusCarefresh__footerCTA {
+  display: flex;
+  justify-content: center;
+}
+.citrusCarefresh__footerCTA button {
+  border: 0;
+  background: #001952;
+  color: #fff;
+  font-family: "PetcoCircularTT-Bold", arial !important;
+  font-weight: bold;
+  font-size: 16px;
+  width: 211px;
+  height: 56px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 7px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+p.citrusCarefresh__disclaimer {
+  margin: 20px 0;
+  font-family: "petcoCircularTT-Regular", arial !important;
+  font-size: 12px;
+  color: #000;
+}
+/********************* 
+Responsive styles 
+*************************/
+@media all and (min-width: 769px) and (max-width: 1250px) {
+  .citrusCarefresh__footerRow {
+    width: 95%;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .citrusCarefresh__desktop_hide {
+    display: block;
+  }
+  .citrusCarefresh__mobile_hide {
+    display: none;
+  }
+  /* banner style */
+  .citrusCarefresh__BannerRow {
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 70% 30%;
+    /* grid-gap: 0; */
+    /* justify-content: space-between; */
+    align-items: center;
+  }
+  .citrusCarefresh__txtContainer {
+    padding: 10px 50px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .citrusCarefresh__logo {
+    /* width: 88px; */
+    text-align: left;
+    margin-bottom: 20px;
+  }
+  .citrusCarefresh__bannerText {
+    margin-top: 0px;
+    margin-left: 0;
+  }
+  .citrusCarefresh__bannerText h1 {
+    font-size: 25px;
+    line-height: 30px;
+  }
+  .citrusCarefresh__bannerText p {
+    font-size: 14px;
+    margin-bottom: 0;
+  }
+  .citrusCarefresh__bannerRightImage {
+    height: 100%;
+  }
+  .citrusCarefresh__bannerRightImage img {
+    height: 100%;
+  }
+  /* product section */
+  .citrusCarefresh__ProductVideo {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-direction: column-reverse;
+  }
+  .product-right {
+    width: 100%;
+  }
+  .citrusCarefresh__sectionTitle.citrusCarefresh__desktop_hide {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  .product-right .splide__track {
+    width: 95%;
+    margin: 0 auto;
+  }
+  .product-right .splide__slide {
+    display: flex;
+    flex-direction: row;
+  }
+  .splide__slide {
+    width: 500px !important;
+  }
+  .product-right .splide__arrow {
+    display: none;
+  }
+  .citrusCarefresh__footerCTA button,
+  .citrusCarefresh__shopAllCTA a,
+  .citrusCarefresh__BannerCTA a {
+    font-size: 16px;
+    font-weight: bold;
+    color: #001952;
+    background: none;
+    width: fit-content;
+    height: fit-content;
+    text-transform: capitalize;
+    text-decoration: underline;
+    padding: 18px 4px;
+  }
+  h2.citrusCarefresh__sectionTitle {
+    width: 95%;
+    margin: auto;
+  }
+  /* category style */
+  .citrusCarefresh__categoryRow {
+    width: 800px;
+    grid-gap: 0;
+  }
+  .citrusCarefresh__categoryCard {
+    width: 220px;
+  }
+
+  /* footer style */
+  .citrusCarefresh__footerRow {
+    display: flex;
+    flex-direction: column;
+  }
+  .citrusCarefresh__footerCol.order1 {
+    order: 2;
+  }
+  .citrusCarefresh__footerCol.order2 {
+    order: 1;
+  }
+  .citrusCarefresh__footerImage {
+    top: 3px;
+  }
+  .citrusCarefresh__footerText {
+    padding-top: 40px;
+  }
+}
+
+@media all and (max-width: 476px) {
+  /* banner style */
+  .citrusCarefresh__txtContainer {
+    padding: 10px 20px;
+  }
+  .citrusCarefresh__bannerText p {
+    line-height: 18px;
+  }
+  .citrusCarefresh__logo {
+    width: 88px;
+    margin-bottom: 0;
+  }
+  .citrusCarefresh__bannerText {
+    margin: auto;
+  }
+  .citrusCarefresh__Card {
+    width: 260px !important;
+  }
+  .citruscarefresh__cardBody p {
+    padding-top: 20px;
+    min-height: 70px;
+  }
+  .citrusCarefresh__cardBody {
+    width: 248px;
+  }
+}
+@media all and (max-width: 375px) {
+  .citrusCarefresh__txtContainer {
+    padding: 10px 10px;
+  }
+  .citrusCarefresh__bannerText h1 {
+    font-size: 20px;
+    line-height: 20px;
+    margin-top: 10px;
+  }
+  .citrusCarefresh__footerCTA button,
+  .citrusCarefresh__shopAllCTA a,
+  .citrusCarefresh__BannerCTA a {
+    font-size: 14px;
+    padding: 10px 0;
+  }
+  .citrusCarefresh__Card {
+    width: 190px !important;
+  }
+}
+@media all and (max-width: 320px) {
+  .citrusCarefresh__txtContainer {
+    padding: 10px 10px;
+  }
+}

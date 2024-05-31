@@ -1,0 +1,453 @@
+body {
+  width: 100%;
+  max-width: 1440px;
+  margin: auto;
+}
+.citrusAcana__desktop_hide {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .citrusAcana__desktop_hide {
+    display: block;
+  }
+  .citrusAcana__mobile_hide {
+    display: none;
+  }
+}
+/* custom carousal style start */
+.citrusAcana_carousel {
+  width: 100%;
+  position: relative;
+  display: none;
+  justify-content: flex-start;
+  overflow: hidden;
+}
+
+.citrusAcana_carousel,
+.citrusAcana_carousel-inner,
+.citrusAcana_carousel-item {
+  height: 270px;
+  position: relative;
+  object-fit: cover;
+}
+
+.citrusAcana_carousel .citrusAcana_carousel-inner .citrusAcana_carousel-item {
+  justify-content: flex-start;
+  flex: 1;
+}
+
+.citrusAcana_carousel-inner {
+  display: flex;
+  transition: all ease 0.5s;
+}
+
+.citrusAcana_carousel-item {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+/* indicator styling */
+.citrusAcana_carousel-indicators {
+  position: absolute;
+  bottom: 0;
+  left: calc(100% / 2 - 52px);
+  text-align: center;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 5px 5px 0 0;
+  padding: 10px 10px 5px;
+}
+
+.citrusAcana_carousel-indicators span {
+  display: inline-block;
+  border: 2px solid #09205c;
+  padding: 7px;
+  border-radius: 20px;
+  cursor: pointer;
+  margin: 0 5px;
+}
+
+.citrusAcana_carousel-indicators span.active {
+  background-color: #09205c;
+}
+/* above custom slider style */
+/* pov container styling */
+.citrusAcana__pov01-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f1f1da;
+}
+.citrusAcana__pov01-colLeft,
+.citrusAcana__pov01-colRight {
+  width: 100%;
+  max-width: 370px;
+}
+.citrusAcana__pov01-colLeft img,
+.citrusAcana__pov01-colRight img {
+  width: 100%;
+  max-width: 370px;
+  object-fit: contain;
+}
+.citrusAcana__pov01-textContainer {
+  width: 100%;
+  margin: auto;
+}
+.citrusAcana__pov01-colRight {
+  position: relative;
+  text-align: center;
+}
+.citrusAcana__pov01-textContainer h1 {
+  margin: 0;
+  padding: 0;
+  font-family: "PetcoCircularTT-bold", arial !important;
+  font-size: 38px;
+  line-height: 40px;
+  color: #001952;
+  text-align: center;
+}
+.citrusAcana__pov01-textContainer > p {
+  width: 100%;
+  max-width: 497px;
+  margin: 12px auto 0;
+  font-family: "PetcoCircularTT-Regular", arial !important;
+  font-size: 16px;
+  line-height: 22px;
+  color: #001952;
+  text-align: center;
+}
+.citrusAcana__logo {
+  width: 100%;
+  max-width: 198px;
+  position: absolute;
+  top: 25%;
+  left: -15%;
+}
+.citrusAcana__logo img {
+  width: 100%;
+  height: auto;
+}
+.citrusAcana__povCTA.pov01CTA {
+  display: flex;
+  justify-content: space-evenly;
+}
+.citrusAcana__povCTA a {
+  text-decoration: none;
+}
+.citrusAcana__povCTA button {
+  margin-top: 16px;
+  margin-bottom: 10px;
+  border: 0;
+  background: #001952;
+  color: #fff;
+  font-family: "PetcoCircularTT-Bold", arial !important;
+  font-weight: 700;
+  font-size: 16px;
+  width: 212px;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.citrusAcana__povCTA button:hover {
+  background: #fff;
+  color: #001952;
+  border: 1px solid #001952;
+}
+/* pov02 */
+.citrusAcana__pov02,
+.citrusAcana__pov03 {
+  position: relative;
+}
+.citrusAcana__pov02-imageBox img,
+.citrusAcana__pov03-imageBox img {
+  width: 100%;
+  object-fit: contain;
+}
+.citrusAcana__pov02-textBox {
+  position: absolute;
+  top: 15%;
+  right: 7%;
+}
+.citrusAcana__logoPremium {
+  width: 232px;
+  max-width: 100%;
+  margin: auto;
+}
+.citrusAcana__logoPremium img {
+  max-width: 100%;
+}
+.citrusAcana__pov02-textBox h1,
+.citrusAcana__pov03-textBox h1 {
+  margin: 25px 0 0;
+  font-family: "PetcoCircularTT-Bold", arial !important;
+  font-size: 38px;
+  line-height: 40px;
+  color: #001952;
+  text-align: center;
+}
+.citrusAcana__pov02-textBox p,
+.citrusAcana__pov03-textBox p {
+  margin: 0;
+  font-family: "PetcoCircularTT-Regular", arial !important;
+  font-size: 16px;
+  line-height: 22px;
+  color: #001952;
+  text-align: center;
+}
+.citrusAcana__povCTA.pov02CTA {
+  display: flex;
+  justify-content: center;
+}
+.hideAcana {
+  display: none;
+}
+/* pov03 */
+.citrusAcana__pov03-textBox {
+  position: absolute;
+  top: 0%;
+  left: 3%;
+}
+.citrusAcana__pov03-textBox h1 {
+  text-align: left;
+}
+.citrusAcana__pov03-textBox h1 span {
+  display: block;
+}
+.citrusAcana__pov03-textBox p {
+  width: 100%;
+  max-width: 518px;
+  text-align: left;
+  margin-top: 12px;
+}
+@media screen and (min-width: 1025px) and (max-width: 1320px) {
+  .citrusAcana__pov01-textContainer > p {
+    max-width: 400px;
+    margin: 0px auto 0;
+  }
+  .citrusAcana__pov01-textContainer h1 {
+    font-size: 30px;
+    line-height: 32px;
+  }
+  .citrusAcana__povCTA button {
+    width: 200px;
+    height: 50px;
+  }
+  /* pov02 */
+  .citrusAcana__pov02-imageBox img,
+  .citrusAcana__pov03-imageBox img {
+    width: 100%;
+    height: 270px;
+    object-fit: cover;
+  }
+  /* pov03 */
+  .citrusAcana__pov03-textBox h1 {
+    font-size: 34px;
+    line-height: 36px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .citrusAcana_carousel,
+  .citrusAcana_carousel-inner,
+  .citrusAcana_carousel-item {
+    height: auto;
+    position: relative;
+    object-fit: cover;
+  }
+  .citrusAcana__pov01-colLeft,
+  .citrusAcana__pov01-colRight {
+    width: 100%;
+    max-width: 270px;
+  }
+  .citrusAcana__pov01-textContainer {
+    margin-top: -5%;
+  }
+  .citrusAcana__pov01-textContainer > p {
+    max-width: 400px;
+    margin: 0px auto 0;
+  }
+  .citrusAcana__pov01-textContainer h1 {
+    font-size: 30px;
+    line-height: 32px;
+  }
+  .citrusAcana__povCTA button {
+    width: 130px;
+    height: 40px;
+    margin: 5px auto;
+  }
+  .citrusAcana__logo {
+    width: 100%;
+    max-width: 160px;
+    position: absolute;
+    top: 25%;
+    left: -15%;
+  }
+  /* pov02 & pov03 */
+  .citrusAcana__pov02-imageBox img,
+  .citrusAcana__pov03-imageBox img {
+    width: 104%;
+    object-fit: contain;
+    text-align: left;
+  }
+  .citrusAcana__pov02-textBox {
+    position: absolute;
+    top: 10%;
+    right: 5%;
+  }
+  .citrusAcana__pov02-textBox h1,
+  .citrusAcana__pov03-textBox h1 {
+    margin-top: 15px;
+    font-size: 30px;
+    line-height: 32px;
+  }
+  .hideAcana {
+    display: block;
+  }
+  .citrusAcana__logoPremium {
+    width: 180px;
+  }
+  /* pov03 */
+  .pov03CTA {
+    display: flex;
+    justify-content: left;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 921px) {
+  .citrusAcana__pov01-textContainer {
+    margin-top: -7%;
+  }
+  .citrusAcana__pov01-textContainer > p {
+    max-width: 95%;
+    margin: 0px auto 0;
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .citrusAcana__pov01-textContainer h1,
+  .citrusAcana__pov03-textBox h1 {
+    font-size: 18px;
+    line-height: 20px;
+  }
+  .citrusAcana__povCTA button {
+    width: 100px;
+    height: 30px;
+    margin: 5px auto;
+    font-size: 14px;
+  }
+  .citrusAcana__logo {
+    width: 100%;
+    max-width: 130px;
+    position: absolute;
+    top: 25%;
+    left: 0;
+  }
+  /* pov02 */
+  .citrusAcana__pov02-imageBox img,
+  .citrusAcana__pov03-imageBox img {
+    width: 100%;
+    height: 205px;
+    object-fit: cover;
+    text-align: left;
+  }
+  /* pov 03 */
+  .citrusAcana__pov03-textBox h1 {
+    font-size: 20px;
+    line-height: 22px;
+  }
+  .citrusAcana__pov03-textBox p {
+    max-width: 350px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .citrusAcana_carousel,
+  .citrusAcana_carousel-inner,
+  .citrusAcana_carousel-item {
+    height: auto;
+    position: relative;
+    object-fit: cover;
+  }
+  .citrusAcana__pov01-colLeft,
+  .citrusAcana__pov01-colRight,
+  .citrusAcana__pov01-colLeft img,
+  .citrusAcana__pov01-colRight img {
+    max-width: 100%;
+  }
+  .citrusAcana__pov01-row {
+    flex-direction: column;
+  }
+  .citrusAcana__pov01-textContainer {
+    margin: 24px auto;
+  }
+  .citrusAcana__pov01-textContainer h1 {
+    font-size: 30px;
+    line-height: 32px;
+  }
+  .citrusAcana__pov01-textContainer > p {
+    max-width: 265px;
+  }
+  .citrusAcana__povCTA button {
+    width: auto;
+    height: auto;
+    background: none;
+    color: #001952;
+    text-transform: capitalize;
+    text-decoration: underline;
+    margin-bottom: 24px;
+  }
+  .citrusAcana__povCTA button:hover {
+    background: none;
+    color: #001952;
+    border: 0;
+  }
+  /* pov02 */
+  .citrusAcana__pov02-textBox,
+  .citrusAcana__pov03-textBox {
+    position: relative;
+    top: 0;
+    right: 0;
+  }
+  .citrusAcana__pov02-textBox h1,
+  .citrusAcana__pov03-textBox h1 {
+    margin: 33px 0 0;
+    font-size: 25px;
+    line-height: 27px;
+    text-align: center;
+  }
+  .citrusAcana__pov02-textBox p,
+  .citrusAcana__pov03-textBox p {
+    margin-top: 12px;
+    padding: 0 5%;
+    text-align: center;
+  }
+  .citrusAcana_carousel-item.acanaPov02 {
+    border-bottom: 20px solid #8d9b3c;
+  }
+  /* pov03 */
+  .pov03Acana {
+    background: #f1f1da;
+  }
+  .citrusAcana__pov03-textBox {
+    left: 0;
+  }
+  .citrusAcana__pov03 {
+    display: grid;
+  }
+  .order01acana {
+    order: 1;
+  }
+  .order02acana {
+    order: 2;
+  }
+  .citrusAcana__pov03-textBox p {
+    padding: 0;
+    margin: 20px auto;
+    max-width: 300px;
+  }
+  .pov03CTA {
+    display: flex;
+    justify-content: center;
+  }
+}
+/* ----------------------------- */
+/* End custom carousal style */

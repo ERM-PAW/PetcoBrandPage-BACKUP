@@ -1,0 +1,179 @@
+/* Imported files */
+@import "font.css";
+
+
+/* All the common classes that have common styles */
+
+
+/* Need to remove the body styles during handoff */
+body{
+    margin: 0;
+    padding: 0;
+}
+
+/* Show hide class */
+.m-hide{
+    display: block;
+    width: 100%;
+}
+
+.d-hide{
+    display: none;
+    width: 100%;
+}
+
+.citrus_vetdiet{
+    max-width: 1440px;
+    margin: 0 auto;
+    a{
+        text-decoration: none;
+        color: #000000;
+    }
+    img{
+        width: 100%;
+        display: flex;
+    }
+    h1, h2, h3{
+        font-family: "PetcoCircularTT-Bold", arial !important;
+        line-height: initial !important;
+        margin: 0;
+    }
+    p{
+        font-family: "PetcoCircularTT-Regular", arial !important;
+        line-height: initial !important;
+        font-size: 13px;
+        color: #333333;
+        margin: 0;
+    }
+    .cta-box{
+        max-width: 300px;
+        margin: 0 auto;
+        a{
+            border-radius: 5px;
+            color: #fff;
+            background: #001952;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: "PetcoCircularTT-Bold", arial !important;
+            font-size: 16px;
+            text-transform: uppercase;
+            border: 1px solid #001952;
+            min-width: 209px;
+            margin: 0 15px;
+            height: 54px;
+        }
+    }
+    .cta-underline{
+        font-size: 16px;
+        color: #001952;
+        text-decoration: underline;
+        text-transform: capitalize;
+        font-family: "PetcoCircularTT-Bold", arial !important;
+        cursor: pointer;
+        text-align: left;
+        a{
+            font-size: 16px;
+            color: #001952;
+            text-decoration: underline;
+            text-transform: capitalize;
+            font-family: "PetcoCircularTT-Bold", arial !important;
+            cursor: pointer;
+        }
+    }
+    .cta-all-container{
+        justify-content: center !important;
+        flex-wrap: wrap !important;
+        a{
+            color: #fff;
+        }
+        span{
+            width: 100%;
+            text-align: center;
+            font-size: 14px;
+            color: #000000;
+            font-family: "PetcoCircularTT-Regular", arial !important;
+            padding: 10px;
+        }
+    }
+    .citrus-vetdiet-section-title{
+        h2{
+            sup{
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+.citrus_vetdiet  a:hover{
+    .cta-box{
+        a:hover{
+            background: #fff;
+            color: #001952;
+            border: 1px solid #001952;
+            transition: 0.5s ease-in-out;
+            &:hover{
+                background: #fff;
+                color: #001952;
+                border: 1px solid #001952;
+                transition: 0.5s ease-in-out;
+            }
+        }
+    }
+}
+
+.citrus_vetdiet {
+    .custom-container{
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+}
+
+.citrus_vetdiet {
+    .container-full{
+        width: 100%;
+    }
+}
+
+.citrus_vetdiet {
+    .flex-box{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+    }
+    
+}
+
+.citrus_vetdiet__section-title{
+    padding: 25px 15px;
+}
+
+.citrus_vetdiet {
+    .section-padding30{
+        padding: 30px 0;
+    }
+}
+
+.citrus_vetdiet__section-title{
+    h2{
+        text-align: center;
+        font-size: 25px;
+        color: #000000;
+        font-family: "PetcoCircularTT-Bold", arial !important;
+    }
+}
+
+.citrus-vetdiet-section-title{
+    padding: 40px 15px;
+    font-family: "PetcoCircularTT Bold" !important;
+    h2{
+        font-size: 1.5rem;
+        color: #000000;
+        text-align: center;
+        font-weight: 700;
+        line-height: initial;
+        font-family: "PetcoCircularTT-Bold", arial !important;
+    }
+}

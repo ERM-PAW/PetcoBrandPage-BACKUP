@@ -1,0 +1,3473 @@
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-size: 18px;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box
+    }
+
+    * {
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box
+    }
+
+    abbr,
+    address,
+    article,
+    aside,
+    audio,
+    b,
+    blockquote,
+    body,
+    canvas,
+    caption,
+    cite,
+    code,
+    dd,
+    del,
+    details,
+    dfn,
+    div,
+    dl,
+    dt,
+    em,
+    fieldset,
+    figcaption,
+    figure,
+    footer,
+    form,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    header,
+    hgroup,
+    html,
+    i,
+    iframe,
+    img,
+    ins,
+    kbd,
+    label,
+    legend,
+    li,
+    mark,
+    menu,
+    nav,
+    object,
+    ol,
+    p,
+    pre,
+    q,
+    samp,
+    section,
+    small,
+    span,
+    strong,
+    sub,
+    summary,
+    sup,
+    table,
+    tbody,
+    td,
+    tfoot,
+    th,
+    thead,
+    time,
+    tr,
+    ul,
+    var,
+    video {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      outline: 0;
+      font-size: 100%;
+      background: 0 0
+    }
+
+    img {
+      vertical-align: middle
+    }
+
+    p a {
+      background: 0 0 !important
+    }
+
+    article,
+    aside,
+    details,
+    figcaption,
+    figure,
+    footer,
+    header,
+    hgroup,
+    menu,
+    nav,
+    section {
+      display: block
+    }
+
+    textarea {
+      outline: 0 !important
+    }
+
+    audio,
+    canvas,
+    video {
+      display: inline-block
+    }
+
+    a {
+      outline: 0 !important
+    }
+
+    audio:not([controls]) {
+      display: none;
+      height: 0
+    }
+
+    [hidden] {
+      display: none
+    }
+
+    code,
+    kbd,
+    pre,
+    samp {
+      font-family: monospace, serif;
+      font-size: 1em
+    }
+
+    pre {
+      white-space: pre;
+      white-space: pre-wrap;
+      word-wrap: break-word
+    }
+
+    blockquote:after,
+    blockquote:before,
+    q:after,
+    q:before {
+      content: "";
+      content: none
+    }
+
+    ins {
+      background-color: #ff9;
+      color: #000;
+      text-decoration: none
+    }
+
+    mark {
+      background-color: #a7f4f6;
+      color: #555
+    }
+
+    del {
+      text-decoration: line-through
+    }
+
+    abbr[title],
+    dfn[title] {
+      border-bottom: 1px dotted;
+      cursor: help
+    }
+
+    table {
+      border-collapse: collapse;
+      border-spacing: 0
+    }
+
+    button {
+      outline: 0 !important
+    }
+
+    input {
+      outline: 0 !important
+    }
+
+    textarea {
+      outline: 0 !important
+    }
+
+    .splide__container {
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      position: relative
+    }
+
+    .splide__list {
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      display: -ms-flexbox;
+      display: -webkit-box;
+      display: flex;
+      height:auto !important;
+      margin: 0 !important;
+      padding: 0 !important
+    }
+
+    .splide.is-initialized:not(.is-active) .splide__list {
+      display: block
+    }
+
+    .splide__pagination {
+      -ms-flex-align: center;
+      -webkit-box-align: center;
+      align-items: center;
+      display: -ms-flexbox;
+      display: -webkit-box;
+      display: flex;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      -ms-flex-pack: center;
+      -webkit-box-pack: center;
+      justify-content: center;
+      margin: 0;
+      pointer-events: none
+    }
+
+    .splide__pagination li {
+      display: inline-block;
+      line-height: 1;
+      list-style-type: none;
+      margin: 0;
+      pointer-events: auto
+    }
+
+    .splide__progress__bar {
+      width: 0
+    }
+
+    .splide {
+      position: relative;
+      visibility: hidden
+    }
+
+    .splide.is-initialized,
+    .splide.is-rendered {
+      visibility: visible
+    }
+
+    .splide__slide {
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      -ms-flex-negative: 0;
+      flex-shrink: 0;
+      list-style-type: none !important;
+      margin: 0;
+      position: relative
+    }
+
+    .splide__slide img {
+      vertical-align: bottom
+    }
+
+    .splide__spinner {
+      -webkit-animation: splide-loading 1s linear infinite;
+      animation: splide-loading 1s linear infinite;
+      border: 2px solid #999;
+      border-left-color: transparent;
+      border-radius: 50%;
+      bottom: 0;
+      contain: strict;
+      display: inline-block;
+      height: 20px;
+      left: 0;
+      margin: auto;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 20px
+    }
+
+    .splide__sr {
+      clip: rect(0 0 0 0);
+      border: 0;
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px
+    }
+
+    .splide__toggle.is-active .splide__toggle__play,
+    .splide__toggle__pause {
+      display: none
+    }
+
+    .splide__toggle.is-active .splide__toggle__pause {
+      display: inline
+    }
+
+    .splide__track {
+      overflow: hidden;
+      position: relative;
+      z-index: 0
+    }
+
+    @-webkit-keyframes splide-loading {
+      0% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0)
+      }
+
+      to {
+        -webkit-transform: rotate(1turn);
+        transform: rotate(1turn)
+      }
+    }
+
+    @keyframes splide-loading {
+      0% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0)
+      }
+
+      to {
+        -webkit-transform: rotate(1turn);
+        transform: rotate(1turn)
+      }
+    }
+
+    .splide__track--draggable {
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -ms-user-select: none;
+      -moz-user-select: none;
+      user-select: none
+    }
+
+    .splide__track--fade>.splide__list {
+      display: block
+    }
+
+    .splide__track--fade>.splide__list>.splide__slide {
+      left: 0;
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      z-index: 0
+    }
+
+    .splide__track--fade>.splide__list>.splide__slide.is-active {
+      opacity: 1;
+      position: relative;
+      z-index: 1
+    }
+
+    .splide--rtl {
+      direction: rtl
+    }
+
+    .splide__track--ttb>.splide__list {
+      display: block
+    }
+
+    .splide__arrow {
+      -ms-flex-align: center;
+      -webkit-box-align: center;
+      align-items: center;
+      background: #ccc;
+      border: 0;
+      border-radius: 50%;
+      cursor: pointer;
+      display: -ms-flexbox;
+      display: -webkit-box;
+      display: flex;
+      height: 2em;
+      -ms-flex-pack: center;
+      -webkit-box-pack: center;
+      justify-content: center;
+      opacity: .7;
+      padding: 0;
+      position: absolute;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%);
+      width: 2em;
+      z-index: 1
+    }
+
+    .splide__arrow svg {
+      fill: #000;
+      height: 1.2em;
+      width: 1.2em
+    }
+
+    .splide__arrow:hover:not(:disabled) {
+      opacity: .9
+    }
+
+    .splide__arrow:disabled {
+      opacity: .3
+    }
+
+    .splide__arrow:focus-visible {
+      outline: 3px solid #0bf;
+      outline-offset: 3px
+    }
+
+    .splide__arrow--prev {
+      left: 1em
+    }
+
+    .splide__arrow--prev svg {
+      -webkit-transform: scaleX(-1);
+      transform: scaleX(-1)
+    }
+
+    .splide__arrow--next {
+      right: 1em
+    }
+
+    .splide.is-focus-in .splide__arrow:focus {
+      outline: 3px solid #0bf;
+      outline-offset: 3px
+    }
+
+    .splide__pagination {
+      bottom: .5em;
+      left: 0;
+      padding: 0 1em;
+      position: absolute;
+      right: 0;
+      z-index: 1
+    }
+
+    .splide__pagination__page {
+      background: #ccc;
+      border: 0;
+      border-radius: 50%;
+      display: inline-block;
+      height: 8px;
+      margin: 3px;
+      opacity: .7;
+      padding: 0;
+      position: relative;
+      -webkit-transition: -webkit-transform .2s linear;
+      transition: -webkit-transform .2s linear;
+      transition: transform .2s linear;
+      transition: transform .2s linear, -webkit-transform .2s linear;
+      width: 8px
+    }
+
+    .splide__pagination__page.is-active {
+      background: #fff;
+      -webkit-transform: scale(1.4);
+      transform: scale(1.4);
+      z-index: 1
+    }
+
+    .splide__pagination__page:hover {
+      cursor: pointer;
+      opacity: .9
+    }
+
+    .splide__pagination__page:focus-visible {
+      outline: 3px solid #0bf;
+      outline-offset: 3px
+    }
+
+    .splide.is-focus-in .splide__pagination__page:focus {
+      outline: 3px solid #0bf;
+      outline-offset: 3px
+    }
+
+    .splide__progress__bar {
+      background: #ccc;
+      height: 3px
+    }
+
+    .splide__slide {
+      -webkit-tap-highlight-color: transparent
+    }
+
+    .splide__slide:focus {
+      outline: 0
+    }
+
+    @supports (outline-offset:-3px) {
+      .splide__slide:focus-visible {
+        outline: 3px solid #0bf;
+        outline-offset: -3px
+      }
+    }
+
+    @media screen and (-ms-high-contrast:none) {
+      .splide__slide:focus-visible {
+        border: 3px solid #0bf
+      }
+    }
+
+    @supports (outline-offset:-3px) {
+      .splide.is-focus-in .splide__slide:focus {
+        outline: 3px solid #0bf;
+        outline-offset: -3px
+      }
+    }
+
+    @media screen and (-ms-high-contrast:none) {
+      .splide.is-focus-in .splide__slide:focus {
+        border: 3px solid #0bf
+      }
+
+      .splide.is-focus-in .splide__track>.splide__list>.splide__slide:focus {
+        border-color: #0bf
+      }
+    }
+
+    .splide__toggle {
+      cursor: pointer
+    }
+
+    .splide__toggle:focus-visible {
+      outline: 3px solid #0bf;
+      outline-offset: 3px
+    }
+
+    .splide.is-focus-in .splide__toggle:focus {
+      outline: 3px solid #0bf;
+      outline-offset: 3px
+    }
+
+    .splide__track--nav>.splide__list>.splide__slide {
+      border: 3px solid transparent;
+      cursor: pointer
+    }
+
+    .splide__track--nav>.splide__list>.splide__slide.is-active {
+      border: 3px solid #000
+    }
+
+    .splide__arrows--rtl .splide__arrow--prev {
+      left: auto;
+      right: 1em
+    }
+
+    .splide__arrows--rtl .splide__arrow--prev svg {
+      -webkit-transform: scaleX(1);
+      transform: scaleX(1)
+    }
+
+    .splide__arrows--rtl .splide__arrow--next {
+      left: 1em;
+      right: auto
+    }
+
+    .splide__arrows--rtl .splide__arrow--next svg {
+      -webkit-transform: scaleX(-1);
+      transform: scaleX(-1)
+    }
+
+    .splide__arrows--ttb .splide__arrow {
+      left: 50%;
+      -webkit-transform: translate(-50%);
+      transform: translate(-50%)
+    }
+
+    .splide__arrows--ttb .splide__arrow--prev {
+      top: 1em
+    }
+
+    .splide__arrows--ttb .splide__arrow--prev svg {
+      -webkit-transform: rotate(-90deg);
+      transform: rotate(-90deg)
+    }
+
+    .splide__arrows--ttb .splide__arrow--next {
+      bottom: 1em;
+      top: auto
+    }
+
+    .splide__arrows--ttb .splide__arrow--next svg {
+      -webkit-transform: rotate(90deg);
+      transform: rotate(90deg)
+    }
+
+    .splide__pagination--ttb {
+      bottom: 0;
+      display: -ms-flexbox;
+      display: -webkit-box;
+      display: flex;
+      -ms-flex-direction: column;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      flex-direction: column;
+      left: auto;
+      padding: 1em 0;
+      right: .5em;
+      top: 0
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p {
+      margin: 0;
+      padding: 0
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none
+    }
+
+    a {
+      margin: 0;
+      padding: 0;
+      text-decoration: none
+    }
+
+    a:hover {
+      text-decoration: none
+    }
+
+    .way-container {
+      max-width: 1100px;
+      width: 100%;
+      margin: 0 auto;
+      display: block !important
+    }
+
+    .citrus-orijin-all-overflow {
+      overflow: hidden !important;
+      background-color: #fff;
+      font-family: PetcoCircularTT-Regular, arial
+    }
+
+    .citrus-noramg-container {
+      max-width: 1100px;
+      width: 100%;
+      margin: 0 auto
+    }
+
+    .citrus_splide_banner_orijin .splide__list {
+      height:auto !important;
+    }
+
+    .citrus_splide_banner_orijin .splide__arrows {
+      display: none
+    }
+
+    .citrus_desktop-hide {
+      display: none
+    }
+
+    .citrus_mobile-hide {
+      display: block
+    }
+
+    .citrus-orijien-section__slider {
+      overflow: hidden;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      width: 100%;
+      position: relative
+    }
+
+    .citrus-orijien-section__slider input {
+      display: none
+    }
+
+    .citrus_splide_banner_orijin {
+      width: 300%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex
+    }
+
+    .citrus_orijinSlide {
+      min-width: 100%
+    }
+
+    .citrus_orijin-navigation-manual {
+      position: absolute;
+      width: 100%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      bottom: 0;
+      padding: 10px 0 10px;
+      width: 100px;
+      left: calc(50% - 75px);
+      display: none
+    }
+
+    .citrus_orijin-manual-btn {
+      padding: 8px;
+      border-radius: 10px;
+      cursor: pointer;
+      -webkit-transition: 1s;
+      transition: 1s
+    }
+
+    .citrus_orijin-manual-btn:not(:last-child) {
+      margin-right: 10px
+    }
+
+    #radio1:checked~.citrus_splidefirst {
+      margin-left: 0
+    }
+
+    #radio2:checked~.citrus_splidefirst {
+      margin-left: -100%;
+      -webkit-transition: 2s;
+      transition: 2s
+    }
+
+    #radio3:checked~.citrus_splidefirst {
+      margin-left: -200%;
+      -webkit-transition: 2s;
+      transition: 2s
+    }
+
+    .citrus_orijin-navigation-auto {
+      position: absolute;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      bottom: 0;
+      background: 0 0;
+      padding: 10px 0 10px;
+      width: 100px;
+      left: calc(50% - 75px);
+      border-radius: 5px 5px 0 0;
+      display: none
+    }
+
+    .citrus_orijin-navigation-auto div {
+      padding: 8px;
+      border-radius: 10px;
+      -webkit-transition: 1s;
+      transition: 1s;
+      background: #b1b1b1
+    }
+
+    .citrus_orijin-navigation-auto div:not(:last-child) {
+      margin-right: 10px
+    }
+
+    #radio1:checked~.citrus_orijin-navigation-auto .auto-btn1 {
+      background: #fff
+    }
+
+    #radio2:checked~.citrus_orijin-navigation-auto .auto-btn2 {
+      background: #fff
+    }
+
+    #radio3:checked~.citrus_orijin-navigation-auto .auto-btn3 {
+      background: #fff
+    }
+
+    .citrus-banner-area {
+      overflow: hidden;
+      position: relative
+    }
+
+    .citrus-slider-single-item>img {
+      width: 100%;
+      height: auto
+    }
+
+    .citrus-banner-inner-right2>img,
+    .citrus-banner-middle-content-inner>img {
+      width: 114px;
+      height: 115px
+    }
+
+    .citrus-slider-banner-content {
+      position: absolute;
+      top: 60%;
+      left: 18.5%;
+      -webkit-transform: translate(-18.5%, -60%);
+      transform: translate(-18.5%, -60%)
+    }
+
+    .citrus-slider-banner-content.citrus-slider-banner-content_mobile {
+      left: inherit;
+      right: 21%;
+      top: 67%;
+      -webkit-transform: translate(-21.5%, -65%);
+      transform: translate(-21.5%, -65%)
+    }
+
+    .citrus-slider-banner-content.citrus-slider-banner-content3 {
+      top: 50%;
+      left: 20%;
+      -webkit-transform: translate(-20%, -50%);
+      transform: translate(-20%, -50%)
+    }
+
+    .citrus-slider-single-item {
+      position: relative
+    }
+
+    .citrus-banner-inner-right>h2,
+    .citrus-innx-content>h2 {
+      font-weight: 700;
+      font-family: PetcoCircularTT-Bold, arial !important;
+      font-size: 32px;
+      color: #fff;
+      display: block;
+      line-height: 1
+    }
+
+    .citrus-innx-content>h2 {
+      color: #001952
+    }
+
+    .citrus-banner-inner-right>p,
+    .citrus-innx-content>p {
+      color: #fff;
+      font-size: 16px;
+      font-family: PetcoCircularTT-Regular, arial !important;
+      font-weight: 400;
+      width: 74%;
+      line-height: 1.3;
+      display: block;
+      padding-bottom: 25px;
+      padding-top: 5px
+    }
+
+    .citrus-innx-content>p {
+      color: #001952;
+      width: 100%
+    }
+
+    .citrus-banner-btn>a,
+    .citrus-innx-content>a {
+      background: #fff;
+      display: inline-block;
+      color: #001952;
+      padding: 17px 45px;
+      font-family: PetcoCircularTT-Bold, arial !important;
+      font-weight: 700;
+      font-size: 16px;
+      border-radius: 5px;
+      -webkit-transition: .5s;
+      transition: .5s;
+      text-transform: uppercase
+    }
+
+    .citrus-banner-inner-right .citrus-banner-btn .citrus_ex_margin {
+      margin-left: 20px
+    }
+
+    .citrus-slider-single-item2 .citrus-banner-middle-content-inner {
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between
+    }
+
+    .citrus-banner-inner-right.citrus-banner-inner-right2 {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      padding-left: 0
+    }
+
+    .citrus-banner-inner-right.citrus-banner-inner-right2 .citrus-innx-content {
+      padding-left: 20px
+    }
+
+    .citrus-slider-single-item2 .citrus-banner-middle-content-inner>img {
+      width: 300px;
+      height: 132px
+    }
+
+    .citrus-innx-content>span {
+      color: #fff;
+      font-size: 15px;
+      font-family: PetcoCircularTT-Bold, arial !important;
+      background: #001952;
+      display: inline-block;
+      padding: 2px 10px;
+      border-radius: 50px
+    }
+
+    .citrus-banner-inner-right>h2>span {
+      display: block
+    }
+
+    .citrus_splide_banner_orijin .splide__pagination__page {
+      background: #b1b1b1;
+      border: 0;
+      border-radius: 50%;
+      display: inline-block;
+      height: 16px;
+      margin: 4px;
+      opacity: 1;
+      padding: 0;
+      -webkit-transition: -webkit-transform .2s linear;
+      transition: -webkit-transform .2s linear;
+      transition: transform .2s linear;
+      transition: transform .2s linear, -webkit-transform .2s linear;
+      width: 16px
+    }
+
+    .citrus_splide_banner_orijin .splide__pagination__page.is-active {
+      background: #fff;
+      -webkit-transform: inherit;
+      transform: inherit
+    }
+
+    .citrus-meet-orijen-tab-area {
+      overflow: hidden;
+      padding-top: 35px;
+      padding-bottom: 26px
+    }
+
+    .citrus-meet-orijen-tab-container {
+      max-width: 1273px;
+      width: 100%;
+      margin: 0 auto
+    }
+
+    .citrusfilterMeetDiv.citrusTabshow {
+      display: block
+    }
+
+    .citrusfilterMeetDiv {
+      float: left;
+      display: none
+    }
+
+    .citrus_meet_tab_item span {
+      display: block
+    }
+
+    .citrus_meet_tab_item {
+      text-transform: uppercase;
+      padding: 12px 20px;
+      margin: 0 10px;
+      font-size: 14px;
+      text-decoration: none;
+      background-color: #fff;
+      border: none;
+      cursor: pointer;
+      color: #6e6b6b;
+      font-family: PetcoCircularTT-Regular, arial !important;
+      font-weight: 700;
+      line-height: 1.3;
+      text-align: center
+    }
+
+    button {
+      font-family: PetcoCircularTT-Regular, arial !important
+    }
+
+    .citrus_meet_tab_item.citrus_meet_tab_item_active {
+      color: #001952;
+      border-bottom: 8px solid #001952;
+      margin-top: 12px
+    }
+
+    .citrus-meet-orijen-main21 {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      margin-bottom: 30px;
+      border-bottom: 1px solid #021b4e
+    }
+
+    .cirtus_meet_tabs_22 {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      overflow: hidden
+    }
+
+    .citrus_item_section__tab_content_item {
+      max-width: 195px;
+      width: 100% !important;
+      margin: 0 9px
+    }
+
+    .citrus-inner-img22 {
+      padding: 0 15px
+    }
+
+    .citrus-inner-img22>a img {
+      width: 100%;
+      height: auto
+    }
+
+    .citrus_item_section__tab_content_item.citrus_row_opacity_0 {
+      opacity: 0
+    }
+
+    .cirtus_meet_tabs_main_22 .splide__pagination {
+      display: none
+    }
+
+    .citrus_product_info22>p {
+      font-size: 13px;
+      color: #333;
+      min-height: 82px;
+      display: block;
+      margin-top: 18px
+    }
+
+    .citrus-meet-tab-product>a {
+      color: #001952;
+      font-size: 16px;
+      display: block;
+      font-family: PetcoCircularTT-Bold, arial !important;
+      text-decoration: underline
+    }
+
+    .cirtus_meet_tabs_22 .splide__arrow--next {
+      right: 0
+    }
+
+    .cirtus_meet_tabs_22 .splide__arrow--prev {
+      left: 2px
+    }
+
+    .cirtus_meet_tabs_22 .splide__arrow svg {
+      fill: #122359
+    }
+
+    .cirtus_meet_tabs_22 .splide__arrow {
+      -ms-flex-align: center;
+      -webkit-box-align: center;
+      align-items: center;
+      background: 0 0;
+      border: 1px solid #122359;
+      border-radius: 50%;
+      cursor: pointer;
+      display: -ms-flexbox;
+      display: -webkit-box;
+      display: flex;
+      height: 3.2em;
+      -ms-flex-pack: center;
+      -webkit-box-pack: center;
+      justify-content: center;
+      opacity: 1;
+      padding: 0;
+      position: absolute;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%);
+      width: 3.2em;
+      z-index: 1
+    }
+
+    .citrus-life-cycle-chart-area {
+      background-color: #f4f7ff;
+      padding: 10px;
+      margin-top: 150px;
+      margin-bottom: 150px;
+      height: 350px
+    }
+
+    .citrus-life-cycle-chart-area .citrus-nourish-right {
+      background-color: #f4f7ff;
+      text-align: center;
+      font-size: 18px;
+      margin: 50px 0
+    }
+
+    .citrus-life-cycle-chart-area .citrus-nourish-right h1 {
+      font-size: 24px;
+      margin: 40px 0
+    }
+
+    .citrus-life-cycle-chart-area .citrus-mm-img img {
+      width: 450px;
+      position: absolute;
+      margin-top: -50px
+    }
+
+    .citrus-nourish-area {
+      padding: 0 20px;
+      background-color: #bce5f6;
+      margin-top: 100px;
+      color: #fff
+    }
+
+    .citrus-nourish-area iframe {
+      margin-top: -50px
+    }
+
+    .citrus-green-bg {
+      background-color: #bce5f6
+    }
+
+    .citrus-main-nourish-flex {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex
+    }
+
+    .citrus-mm-img>img {
+      width: 100%;
+      height: auto
+    }
+
+    .citrus-chart {
+      display: block;
+      overflow-y: auto
+    }
+
+    .citrus-chart>img {
+      width: 100%;
+      height: auto
+    }
+
+    .citrus-nourish-left {
+      margin-right: 10px;
+      -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+      flex: 0 0 50%
+    }
+
+    .citrus-nourish-right {
+      -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+      flex: 0 0 50%;
+      padding: 100px 50px
+    }
+
+    .citrus-nourish-right h1 {
+      color: #001952;
+      font-size: 30px;
+      font-family: PetcoCircularTT-Bold, arial !important;
+      font-weight: 700;
+      display: block;
+      padding-bottom: 25px;
+      line-height: 1
+    }
+
+    .citrus-nourish-right p {
+      font-size: 16px;
+      color: #001952;
+      font-family: PetcoCircularTT-Regular, arial !important;
+      font-weight: 400;
+      display: block;
+      padding-bottom: 20px
+    }
+
+    .citrus-nourish-right>iframe {
+      height: 100%;
+      width: 100%
+    }
+
+    .citrus-common-header>h2 {
+      color: #000;
+      font-size: 25px;
+      font-family: PetcoCircularTT-Bold, arial !important;
+      font-weight: 700;
+      display: block;
+      padding-bottom: 50px;
+      line-height: 1
+    }
+
+    .citrus-common-header>p {
+      font-size: 16px;
+      color: #000;
+      font-family: PetcoCircularTT-Regular, arial !important;
+      font-weight: 400;
+      display: block;
+      padding-bottom: 20px
+    }
+
+    .citrus-common-header>h2 sub {
+      font-weight: 400;
+      font-size: 18px;
+      position: relative;
+      top: -10px;
+      left: -5px
+    }
+
+    p {
+      font-size: 16px;
+      color: #000;
+      font-family: PetcoCircularTT-Regular, arial !important;
+      font-weight: 400;
+      display: block;
+      line-height: 1.4
+    }
+
+    .citrus-mm-content {
+      background: #cce3f8;
+      padding-top: 60px;
+      padding-bottom: 70px;
+      margin-top: -38px;
+      text-align: center
+    }
+
+    .citrus-mm-content>h3 {
+      font-size: 20px;
+      color: #000;
+      font-family: PetcoCircularTT-Bold, arial !important;
+      font-weight: 700;
+      display: block;
+      padding-bottom: 25px
+    }
+
+    .citrus-mm-content>p {
+      width: 88%;
+      margin: 0 auto
+    }
+
+    .citrus-common-header {
+      text-align: center
+    }
+
+    .citrus-amazing-grains-area {
+      overflow: hidden;
+      background: #fff;
+      padding-top: 60px;
+      padding-bottom: 52px
+    }
+
+    .citrus-organs-container {
+      max-width: 1246px;
+      width: 100%;
+      margin: 0 auto;
+      overflow: hidden
+    }
+
+    .citrus-container {
+      max-width: 1246px;
+      width: 100%;
+      margin: 0 auto;
+      overflow: hidden
+    }
+
+    .citrus-bg-img {
+      padding: 40px 0 0 20px;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0
+    }
+
+    .citrus-orgins-left img {
+      width: 100%;
+      height: auto
+    }
+
+    .citrus-orgins-main-flex {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between
+    }
+
+    .citrus-orgins-left {
+      -webkit-box-flex: 0;
+      -ms-flex: 0 0 30%;
+      flex: 0 0 30%;
+      position: relative;
+      padding-left: 10px
+    }
+
+    .citrus-orgins-right {
+      -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+      flex: 0 0 100%;
+      overflow: hidden
+    }
+
+    .citrus-origins-single-item a img {
+      width: 100%;
+      height: auto
+    }
+
+    .citrus-orgin-single>h5 {
+      font-family: PetcoCircularTT-Bold, arial !important;
+      color: #fff;
+      font-weight: 700;
+      font-size: 18px
+    }
+
+    .citrus-orgin-single>h5 span {
+      display: block
+    }
+
+    .citrus-orgin-single {
+      margin-bottom: 42px
+    }
+
+    .citrus-bdr {
+      background: #fff;
+      width: 165px;
+      height: 1px
+    }
+
+    .citrus-bdr.citrus-bdr2 {
+      width: 142px
+    }
+
+    .citrus-orgins-btm-content {
+      text-align: center;
+      padding-top: 34px
+    }
+
+    .citrus-orgins-btm-content>h4 {
+      font-family: PetcoCircularTT-Bold, arial !important;
+      font-weight: 700;
+      font-size: 20px;
+      display: block;
+      padding-bottom: 17px
+    }
+
+    .citrus-origins-single-item {
+      max-width: 220px;
+      width: 100%;
+      margin: 0 25px
+    }
+
+    .citrus-origins-single-item>p {
+      font-size: 13px;
+      color: #000;
+      font-family: PetcoCircularTT-Regular, arial !important;
+      font-weight: 600;
+      display: block;
+      padding-top: 24px;
+      padding-bottom: 13px
+    }
+
+    .citrus-origins-single-item>a {
+      color: #001952;
+      font-size: 13px;
+      display: block;
+      font-family: PetcoCircularTT-Bold, arial !important;
+      text-decoration: underline;
+      font-weight: 800
+    }
+
+    .citrus_origins_product_slide2 .splide__arrow.splide__arrow--prev {
+      display: none
+    }
+
+    .citrus_origins_product_slide2 .splide__pagination {
+      display: none
+    }
+
+    .citrus_origins_product_slide2 .splide__arrow--next {
+      right: 2px
+    }
+
+    .citrus_origins_product_slide2 .splide__arrow svg {
+      fill: #122359
+    }
+
+    .citrus_origins_product_slide2 .splide__arrow {
+      -ms-flex-align: center;
+      -webkit-box-align: center;
+      align-items: center;
+      background: 0 0;
+      border: 1px solid #122359;
+      border-radius: 50%;
+      cursor: pointer;
+      display: -ms-flexbox;
+      display: -webkit-box;
+      display: flex;
+      height: 3.2em;
+      -ms-flex-pack: center;
+      -webkit-box-pack: center;
+      justify-content: center;
+      opacity: 1;
+      padding: 0;
+      position: absolute;
+      top: 30%;
+      -webkit-transform: translateY(-30%);
+      transform: translateY(-30%);
+      width: 3.2em;
+      z-index: 1
+    }
+
+    .citrus-wet-cat-launch-area {
+      overflow: hidden;
+      padding-top: 72px;
+      padding-bottom: 37px;
+      background: #fff
+    }
+
+    .citrus-wet-cat-container {
+      max-width: 1245px;
+      width: 100%;
+      margin: 0 auto
+    }
+
+    .citrus-wet-cat-main-flex {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center
+    }
+
+    .citrus-wet-cat-left {
+      -webkit-box-flex: 0;
+      -ms-flex: 0 0 40%;
+      flex: 0 0 40%;
+      margin-left: 22px
+    }
+
+    .citrus-wet-cat-right {
+      -webkit-box-flex: 0;
+      -ms-flex: 0 0 58%;
+      flex: 0 0 58%;
+      padding-left: 20px
+    }
+
+    .citrus-wet-cat-left>img {
+      width: 100%;
+      height: auto
+    }
+
+    .citrus-wet-cat-carocel {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex
+    }
+
+    .citrus-wet-single-item {
+      -webkit-box-flex: 0;
+      -ms-flex: 0 0 200px;
+      flex: 0 0 200px;
+      margin: 0 10px
+    }
+
+    .citrus-wet-single-item>a>img {
+      width: 140px;
+      height: auto;
+      margin: 0 auto;
+      display: block
+    }
+
+    .citrus-common-header2 {
+      text-align: left;
+      border-bottom: 1px solid #333;
+      margin-bottom: 18px
+    }
+
+    .citrus-wet-single-item>p {
+      color: #333;
+      font-size: 13px;
+      padding-top: 64px;
+      padding-bottom: 28px
+    }
+
+    .citrus-wet-single-item>a {
+      color: #001952;
+      font-size: 16px;
+      display: block;
+      font-family: PetcoCircularTT-Bold, arial !important;
+      text-decoration: underline
+    }
+
+    .citrus-transitioning-orijen-area {
+      padding-top: 38px;
+      padding-bottom: 30px;
+      overflow: hidden;
+      background: #fff
+    }
+
+    .citrus-transitioning-container {
+      max-width: 1100px;
+      width: 100%;
+      margin: 0 auto
+    }
+
+    .citrus-transitioning-main-flex {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      -ms-flex-line-pack: center;
+      align-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center
+    }
+
+    .citrus-transitioning-left {
+      -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+      flex: 0 0 50%;
+      padding-right: 10px
+    }
+
+    .citrus-transitioning-img>img {
+      width: 100%;
+      height: auto
+    }
+
+    .citrus-transitioning-right {
+      -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+      flex: 0 0 50%;
+      padding-left: 10px
+    }
+
+    .citrus-transitioning-right>img {
+      width: 100%;
+      height: auto
+    }
+
+    .citrus-transitioning-content {
+      padding-top: 61px;
+      padding-bottom: 64px;
+      background: #cce3f8;
+      text-align: center
+    }
+
+    .citrus-transitioning-content>h4 {
+      font-size: 20px;
+      color: #000;
+      font-family: PetcoCircularTT-Bold, arial !important;
+      font-weight: 700;
+      display: block;
+      padding-bottom: 25px
+    }
+
+    .citrus-transitioning-content>p {
+      width: 90%;
+      margin: 0 auto;
+      padding-bottom: 5px
+    }
+
+    .cirtus_meet_tabs_main_22_hide_arrow .splide__arrows {
+      display: none
+    }
+
+    .citrus-bottom-hero-area {
+      overflow: hidden;
+      padding-bottom: 10px
+    }
+
+    .citrus-btm-main>img {
+      width: 100%;
+      height: auto
+    }
+
+    .citrus-btm-main {
+      position: relative
+    }
+
+    .citrus-btm-main-overly>h4 {
+      font-size: 25px;
+      font-family: PetcoCircularTT-Bold, arial !important;
+      display: block;
+      padding-bottom: 25px;
+      color: #000
+    }
+
+    .citrus-btm-main-overly>p {
+      width: 80%;
+      text-align: center
+    }
+
+    .citrus-btm-main-overly {
+      position: absolute;
+      right: 0;
+      top: 0;
+      max-width: 665px;
+      width: 100%;
+      margin: 0 auto;
+      text-align: center;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      bottom: 0
+    }
+
+    .citrus-btm-main-overly>span {
+      color: #000;
+      font-size: 12px;
+      font-family: PetcoCircularTT-Regular, arial !important;
+      display: block;
+      padding-top: 15px
+    }
+
+    #citrus-carousel .splide__slide {
+      background-color: #001952;
+      color: #fff !important;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+      flex-direction: row-reverse
+    }
+
+    #citrus-carousel .citrus-banner-slider-copy {
+      text-align: center;
+      padding: 0;
+      color: #1a1818;
+      margin: auto 0;
+      position: absolute;
+      left: 50%;
+      top: 5%;
+      -webkit-transform: translate(-50%, -5%);
+      transform: translate(-50%, -5%);
+      width: 560px
+    }
+
+    #citrus-carousel .citrus-banner-slider-copy .citrus-banner-title-logo {
+      font-size: 50px;
+      font-family: PetcoCircularTT-Bold, arial !important;
+      font-weight: 200;
+      margin: 20px 0 30px 0;
+      letter-spacing: -2px
+    }
+
+    #citrus-carousel .citrus-banner-slider-copy .citrus-banner-title-logo b {
+      font-weight: 600
+    }
+
+    #citrus-carousel .citrus-banner-slider-copy .citrus-banner-title {
+      font-size: 35px;
+      font-family: PetcoCircularTT-Bold, arial !important;
+      font-weight: 600;
+      margin: 20px 0
+    }
+
+    .citrus-banner-slider-copy p {
+      margin: 10px 0;
+      color: #001952;
+      font-size: 16px;
+      font-family: PetcoCircularTT-Bold, arial !important
+    }
+
+    .citrus-banner-slider-image {
+      background-color: #bce5f6;
+      text-align: center;
+      padding: 0;
+    }
+
+    .citrus-banner-slider-image img {
+      width: 100%;
+      height: auto;
+      margin: auto
+    }
+
+    .splide__pagination {
+      bottom: 0;
+      left: 50%;
+      -webkit-transform: translate(-50%, 0);
+      transform: translate(-50%, 0);
+      padding: 0 1em;
+      position: absolute;
+      background-color: #fff;
+      z-index: 1;
+      width: 100px;
+      height: 30px;
+      border-radius: 5px 5px 0 0;
+      border-bottom: 0
+    }
+
+    .splide__pagination__page {
+      border: 1px solid #00205b;
+      height: 12px;
+      width: 12px
+    }
+
+    .splide__pagination__page.is-active {
+      background-color: #00205b;
+      -webkit-transform: scale(1);
+      transform: scale(1)
+    }
+
+    .citrus-banner-slider-desktop-view {
+      display: block
+    }
+
+    .citrus-banner-slider-mobile-view {
+      display: none
+    }
+
+    .citrus-banner-slider-desktop-view22.citrus-banner-slider-desktop-view .citrus_orijin_normal {
+      display: block
+    }
+
+    .citrus-banner-slider-desktop-view22.citrus-banner-slider-desktop-view .citrus_orijin_active {
+      display: none
+    }
+
+    .citrus-wet-cate-desktop {
+      display: block
+    }
+
+    .citrus-wet-cate-mobile {
+      display: none
+    }
+
+    .citrus-btm-main-desktop {
+      display: block
+    }
+
+    .citrus-btm-main-mobile {
+      display: none
+    }
+
+    .benefits-area {
+      overflow: hidden;
+      padding-top: 65px;
+      padding-bottom: 40px;
+      background: #fff
+    }
+
+    .common-heading {
+      text-align: center
+    }
+
+    .common-heading>h2 {
+      color: #000;
+      font-size: 25px;
+      font-family: PetcoCircularTT-Bold, arial !important;
+      font-weight: 700;
+      display: block;
+      padding-bottom: 15px
+    }
+
+    .common-heading>p {
+      color: #000;
+      width: 60%;
+      margin: 0 auto
+    }
+
+    .benefits-icon-flex {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      margin-top: 25px;
+      overflow-x: auto;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap
+    }
+
+    .benefits-single-item img {
+      max-width: 150px;
+      width: 100%;
+      height: auto
+    }
+
+    .benefits-icon-flex.second .benefits-single-item img {
+      max-width: 88px;
+      width: 100%;
+      height: auto
+    }
+
+    .benefits-single-item {
+      text-align: center;
+      -webkit-box-flex: 0;
+      -ms-flex: 0 0 30%;
+      flex: 0 0 30%;
+      margin-bottom: 50px;
+      padding: 50px 20px
+    }
+
+    .benefits-single-item p>span {
+      display: block
+    }
+
+    .benefits-single-item>p {
+      color: #000;
+      font-size: 16px;
+      font-family: PetcoCircularTT-Bold, arial !important;
+      font-weight: 600;
+      padding: 7px 15px
+    }
+
+    .benefits-single-item a {
+      background: 0 0;
+      color: #001952;
+      padding: 0 4px;
+      text-decoration: underline;
+      text-transform: capitalize;
+      font-size: 16px;
+      font-family: PetcoCircularTT-Bold, arial !important;
+      font-weight: 600
+    }
+
+    .mobile-hide {
+      display: block
+    }
+
+    .mobile-show {
+      display: none
+    }
+
+    .splide__arrow {
+      background: unset !important
+    }
+
+    .citrus-comments-area {
+      margin-bottom: 200px
+    }
+
+    .citrus-comments-area .citrus-comments-container {
+      display: block;
+      margin: 0 auto;
+      width: 1000px
+    }
+
+    .citrus-comments-area .citrus-comments-container .citrus-comments-photo {
+      width: 200px;
+      height: 200px;
+      position: absolute;
+      margin-top: -25px;
+      margin-left: 0;
+      left: 120px
+    }
+
+    .citrus-comments-area .citrus-comments-container .citrus-comments {
+      background-color: #bce5f6;
+      padding: 50px 50px 50px 200px;
+      border-radius: 15px;
+      text-align: center;
+      margin: 0 0 0 10%;
+      font-size: 16px;
+      min-height: 260px
+    }
+
+    .citrus-comments-area .citrus-comments-container .citrus-comments h2 {
+      font-size: 20px;
+      font-weight: 600
+    }
+
+    .citrus-comments-area .citrus-comments-container .citrus-comments p {
+      margin: 10px 0
+    }
+
+    .citrus-product-list {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      overflow-x: auto;
+      padding-bottom: 25px
+    }
+
+    .citrus-product-list .citrus-product-single-item {
+      display: block;
+      width: 25%;
+      min-width: 200px;
+      border: 0 solid #ccc;
+      padding: 10px;
+      overflow: hidden;
+      font-size: 13px;
+      font-family: PetcoCircularTT-Bold, arial !important;
+      margin: 0 40px
+    }
+
+    .citrus-product-list .citrus-product-single-item a {
+      background: 0 0;
+      color: #001952;
+      padding: 0;
+      text-decoration: underline;
+      text-transform: capitalize;
+      font-size: 13px;
+      font-family: PetcoCircularTT-Bold, arial !important;
+      font-weight: 600
+    }
+
+    .citrus-product-list .citrus-product-single-item p {
+      font-family: PetcoCircularTT-Bold, arial !important;
+      font-size: 13px;
+      font-weight: 600;
+      margin: 10px 0
+    }
+
+    .citrus-product-list .citrus-product-single-item img {
+      width: 100%;
+      height: auto
+    }
+
+    .citrus-chart {
+      font-size: 12px;
+      font-family: PetcoCircularTT-Regular, arial !important;
+      font-weight: 600;
+      overflow-y: auto
+    }
+
+    .citrus-chart table {
+      width: 100%
+    }
+
+    .citrus-chart .logo {
+      width: 100%;
+      height: auto;
+      max-width: 200px
+    }
+
+    .citrus-chart table thead td,
+    .citrus-chart table thead th {
+      padding: 0;
+      text-align: center;
+      border: 0
+    }
+
+    .citrus-chart table thead img {
+      width: auto;
+      height: 150px
+    }
+
+    .citrus-chart table tbody td img {
+      width: 100%;
+      height: auto;
+      max-width: 20px
+    }
+
+    .citrus-chart table tbody th,
+    .citrus-chart tbody td {
+      border: 1px solid #87ceeb;
+      text-align: center;
+      padding: 20px 10px
+    }
+
+    .citrus-chart .small-text {
+      font-size: 11px;
+      font-weight: 200;
+      font-family: PetcoCircularTT-Regular, arial !important
+    }
+
+    .citrus-chart table tbody th {
+      background-color: #d9effa;
+      font-size: 16px;
+      font-family: PetcoCircularTT-Bold, arial !important;
+      font-weight: 600
+    }
+
+    .citrus-chart table tbody th:first-child {
+      width: 300px
+    }
+
+    .citrus-chart table tbody tr:first-child td,
+    .citrus-chart table tbody tr:first-child th {
+      background-color: #41b5e6 !important;
+      color: #fff;
+      font-size: 16px;
+      font-family: PetcoCircularTT-Bold, arial !important;
+      font-weight: 600
+    }
+
+    @media all and (min-width:1920px) and (max-width:4800px) {
+      #citrus-carousel .citrus-banner-slider-copy .citrus-banner-title-logo {
+        margin: 20px 0 100px 0
+      }
+
+      .citrus-banner-slider-copy p {
+        font-size: 16px;
+        margin: 30px 0
+      }
+    }
+
+    @media all and (max-width:1280px) {
+      #citrus-carousel .citrus-banner-slider-copy {
+        width: 420px
+      }
+
+      #citrus-carousel .citrus-banner-slider-copy .citrus-banner-title-logo {
+        margin-bottom: 20px;
+        font-size: 30px
+      }
+
+      #citrus-carousel .citrus-banner-slider-copy .citrus-banner-title {
+        margin-bottom: 10px;
+        font-size: 25px
+      }
+
+      .citrus-banner-slider-copy p {
+        margin: 10px 0
+      }
+
+      .citrus-banner-btn>a,
+      .citrus-innx-content>a {
+        padding: 7px 20px;
+        font-size: 16px
+      }
+
+      .citrus-meet-orijen-wrapper {
+        overflow-y: auto
+      }
+
+      .citrus-meet-orijen-wrapper::-webkit-scrollbar {
+        display: none
+      }
+
+      .citrus-meet-orijen-wrapper {
+        -ms-overflow-style: none;
+        scrollbar-width: none
+      }
+
+      .citrus-nourish-right {
+        padding: 50px;
+        padding-bottom: 100px
+      }
+
+      .citrus-nourish-right h1 {
+        font-size: 25px;
+        padding-bottom: 15px
+      }
+
+      .citrus-nourish-right p {
+        padding-right: 50px
+      }
+
+      .citrus-comments-area .citrus-comments-container {
+        width: 70%
+      }
+    }
+
+    @media all and (max-width:991px) {
+      #citrus-carousel .citrus-banner-slider-copy {
+        padding: 10px;
+        width: 400px
+      }
+
+      #citrus-carousel .citrus-banner-slider-copy .citrus-banner-title-logo {
+        margin-top: 0;
+        margin-bottom: 10px;
+        font-size: 20px
+      }
+
+      #citrus-carousel .citrus-banner-slider-copy .citrus-banner-title {
+        margin: 10px 0;
+        font-size: 16px
+      }
+
+      .citrus-banner-btn>a,
+      .citrus-innx-content>a {
+        padding: 7px 15px;
+        font-size: 12px
+      }
+
+      .citrus-banner-slider-copy p {
+        font-size: 12px;
+        margin: 10px
+      }
+
+      .citrus-banner-btn>a,
+      .citrus-innx-content>a {
+        padding: 13px 25px
+      }
+
+      .citrus-slider-single-item>img {
+        width: 100%
+      }
+
+      .citrus-main-nourish-flex {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center
+      }
+
+      .citrus-mm-content {
+        margin-top: -50px
+      }
+
+      .citrus-nourish-left {
+        margin-right: 0;
+        margin-left: 0;
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        margin-bottom: 25px
+      }
+
+      .citrus-nourish-right {
+        margin-left: 0;
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        padding: 10px
+      }
+
+      .citrus-nourish-area iframe {
+        height: 400px;
+        width: 100%
+      }
+
+      .citrus-nourish-area {
+        padding-bottom: 40px
+      }
+
+      .citrus-orgins-main-flex {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap
+      }
+
+      .citrus-orgins-left {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%
+      }
+
+      .citrus-orgins-right {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        padding-left: 0;
+        overflow: hidden;
+        padding-top: 25px
+      }
+
+      .citrus-bg-img {
+        padding: 0 0 0 20px;
+        display: block;
+        position: absolute;
+        top: 40%;
+        left: 0;
+        -webkit-transform: translateY(-40%);
+        transform: translateY(-40%)
+      }
+
+      .citrus-bdr {
+        width: 275px
+      }
+
+      .citrus-bdr.citrus-bdr2 {
+        width: 255px
+      }
+
+      .citrus-organs-container {
+        width: 82%
+      }
+
+      .citrus-wet-cat-main-flex {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap
+      }
+
+      .citrus-wet-cat-left {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        margin-left: 0;
+        padding-bottom: 55px
+      }
+
+      .citrus-wet-cat-right {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        padding-left: 0
+      }
+
+      .citrus-wet-cat-carocel {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        overflow-y: auto
+      }
+
+      .citrus-wet-cat-carocel::-webkit-scrollbar {
+        display: none
+      }
+
+      .citrus-wet-cat-carocel {
+        -ms-overflow-style: none;
+        scrollbar-width: none
+      }
+
+      .citrus-wet-single-item {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 60%;
+        flex: 0 0 60%
+      }
+
+      .citrus-transitioning-main-flex {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap
+      }
+
+      .citrus-transitioning-left {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        padding-right: 0
+      }
+
+      .citrus-transitioning-right {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        padding-left: 0
+      }
+
+      .citrus-btm-main-overly {
+        max-width: 500px
+      }
+
+      .citrus-btm-main-overly>h4 {
+        font-size: 15px;
+        padding-bottom: 14px
+      }
+
+      .citrus-btm-main-overly>p {
+        width: 53%;
+        text-align: center
+      }
+
+      .citrus-wet-single-item>a>img {
+        width: 100%
+      }
+
+      .citrus-chart>img {
+        width: auto;
+        height: 900px
+      }
+    }
+
+    @media all and (max-width:768px) {
+      .citrus-comments-area {
+        background-color: #bce5f6
+      }
+
+      .citrus-comments-area .citrus-comments-container {
+        width: 85%
+      }
+
+      .citrus-comments-area .citrus-common-header>h2 {
+        padding-bottom: 10px
+      }
+
+      .citrus-comments-area .citrus-comments-container .citrus-comments-photo {
+        top: unset;
+        left: unset;
+        margin: 0 auto;
+        position: relative !important;
+        margin-bottom: 20px
+      }
+
+      .citrus-comments-area .citrus-comments-container .citrus-comments {
+        padding: 10px;
+        margin: 0
+      }
+
+      #citrus-carousel .citrus-banner-slider-copy {
+        padding: 10px;
+        width: 400px
+      }
+
+      #citrus-carousel .citrus-banner-slider-copy .citrus-banner-title-logo {
+        margin-top: 0;
+        margin-bottom: 10px;
+        font-size: 20px
+      }
+
+      #citrus-carousel .citrus-banner-slider-copy .citrus-banner-title {
+        margin: 10px 0;
+        font-size: 16px
+      }
+
+      .citrus-banner-btn>a,
+      .citrus-innx-content>a {
+        padding: 7px 15px;
+        font-size: 12px
+      }
+
+      .citrus-banner-slider-copy p {
+        font-size: 12px;
+        margin: 10px
+      }
+
+      .citrus-slider-banner-content {
+        position: absolute;
+        top: inherit;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+        bottom: 12%
+      }
+
+      .citrus-slider-banner-content.citrus-slider-banner-content_mobile {
+        left: 50%;
+        right: inherit;
+        top: inherit;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+        bottom: 7%
+      }
+
+      .citrus-slider-banner-content.citrus-slider-banner-content3 {
+        top: inherit;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+        bottom: 7%
+      }
+
+      .citrus_desktop-hide {
+        display: block
+      }
+
+      .citrus_mobile-hide {
+        display: none
+      }
+
+      .citrus-slider-single-item>img {
+        height: auto
+      }
+
+      .citrus-slider-banner-content {
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center
+      }
+
+      .citrus-banner-middle-content-inner {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center
+      }
+
+      .citrus-banner-inner-right2>img,
+      .citrus-banner-middle-content-inner>img {
+        width: 73px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 17px
+      }
+
+      .citrus-banner-inner-right {
+        padding-left: 0;
+        margin-top: 0;
+        text-align: center
+      }
+
+      .citrus-banner-inner-right>p,
+      .citrus-innx-content>p {
+        width: 56%;
+        margin: 0 auto
+      }
+
+      .citrus-banner-inner-right>h2,
+      .citrus-innx-content>h2 {
+        font-size: 20px;
+        padding-bottom: 17px;
+        line-height: .7
+      }
+
+      .citrus-banner-slider-desktop-view22.citrus-banner-slider-mobile-view .citrus_orijin_active {
+        display: block
+      }
+
+      .citrus-banner-slider-desktop-view22.citrus-banner-slider-mobile-view .citrus_orijin_normal {
+        display: none
+      }
+
+      .citrus-banner-inner-right.citrus-banner-inner-right2 {
+        width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -ms-flex-line-pack: center;
+        align-content: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        padding-top: 195px
+      }
+
+      .citrus-banner-slider-desktop-view22 .citrus-slider-banner-content.citrus-slider-banner-content_mobile .citrus-banner-middle-content-inner {
+        display: none
+      }
+
+      .citrus-banner-slider-desktop-view22.citrus-banner-slider-mobile-view .citrus-banner-inner-right.citrus-banner-inner-right2 {
+        width: 100%
+      }
+
+      .citrus-banner-slider-desktop-view22.citrus-banner-slider-mobile-view .citrus-banner-inner-right.citrus-banner-inner-right2 {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        padding-left: 0;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        padding-top: 208px
+      }
+
+      .citrus-innx-content>span {
+        color: #001952;
+        font-size: 20px;
+        font-family: PetcoCircularTT-Bold, arial !important;
+        background: 0 0;
+        display: inline-block;
+        padding: 2px 10px;
+        border-radius: 50px;
+        font-weight: 700;
+        text-transform: uppercase
+      }
+
+      .citrus-banner-middle-content-inner3 {
+        padding-top: 80px
+      }
+
+      .citrus-banner-middle-content-inner3 .citrus-banner-inner-right h2 {
+        line-height: 1.1
+      }
+
+      .citrus_orijin-navigation-auto {
+        left: 40%
+      }
+
+      .citrus-common-header>h2 {
+        font-size: 20px
+      }
+
+      .citrus_meet_tab_item {
+        width: 100%
+      }
+
+      .citrus_item_section__tab_content_item {
+        max-width: 235px
+      }
+
+      .citrus-common-header>p {
+        width: 55%;
+        margin: 0 auto
+      }
+
+      .citrus-noramg-container {
+        width: 100%
+      }
+
+      .citrus-mm-content>h3 {
+        font-size: 18px;
+        width: 50%;
+        margin: 0 auto
+      }
+
+      .citrus-mm-content>p {
+        width: 58%;
+        margin: 0 auto
+      }
+
+      .citrus-organs-container {
+        width: 90%
+      }
+
+      .citrus-bdr {
+        width: 220px
+      }
+
+      .citrus-bdr.citrus-bdr2 {
+        width: 204px
+      }
+
+      .citrus-orgins-btm-content>p {
+        width: 70%;
+        margin: 0 auto
+      }
+
+      .citrus-origins-single-item {
+        max-width: 100%
+      }
+
+      .citrus_origins_product_slide2 .splide__arrow.splide__arrow--next {
+        display: none
+      }
+
+      .cirtus_meet_tabs_main_22 .splide__arrows {
+        display: none
+      }
+
+      .citrus-common-header.citrus-common-header2>h2 {
+        width: 58%;
+        margin: 0 auto;
+        text-align: center
+      }
+
+      .citrus-common-header>p {
+        text-align: center
+      }
+
+      .citrus-common-header2 {
+        border-bottom: none
+      }
+
+      .citrus-wet-cate-mobile {
+        display: block
+      }
+
+      .citrus-wet-cate-desktop {
+        display: none
+      }
+
+      .citrus-btm-main-mobile {
+        display: block
+      }
+
+      .citrus-btm-main-desktop {
+        display: none
+      }
+
+      .citrus-btm-main-des img {
+        width: 100%;
+        height: auto
+      }
+
+      .citrus-btm-main-overly-des h4 {
+        font-size: 18px;
+        display: block;
+        padding-top: 23px;
+        padding-bottom: 27px;
+        font-family: PetcoCircularTT-Bold, arial !important;
+        text-align: center
+      }
+
+      .citrus-btm-main-overly-des p {
+        width: 70%;
+        margin: 0 auto;
+        text-align: center
+      }
+
+      .citrus-chart>img {
+        width: auto;
+        height: 600px
+      }
+    }
+
+    @media all and (max-width:575px) {
+      .mobile-hide {
+        display: none !important
+      }
+
+      .mobile-show {
+        display: block !important
+      }
+
+      #citrus-carousel .citrus-banner-slider-copy .citrus-banner-title-logo {
+        margin-bottom: 20px;
+        font-size: 30px
+      }
+
+      .citrus-life-cycle-chart-area {
+        padding-top: 0;
+        margin-top: 100px;
+        margin-bottom: 300px
+      }
+
+      .citrus-common-header>h2 {
+        padding-left: 10px;
+        padding-right: 10px;
+        font-size: 18px;
+        line-height: 24px
+      }
+
+      .citrus-orgins-right {
+        padding-bottom: 25px
+      }
+
+      .benefits-icon-flex {
+        display: -webkit-box !important;
+        display: -ms-flexbox !important;
+        display: flex !important;
+        -ms-flex-wrap: unset;
+        flex-wrap: unset
+      }
+
+      .benefits-single-item {
+        margin-bottom: 30px;
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 65%;
+        flex: 0 0 65%;
+        padding: 10px
+      }
+
+      .citrus-life-cycle-chart-area .citrus-nourish-right {
+        padding: 0 20px 50px 20px;
+        margin: 0
+      }
+
+      .citrus-life-cycle-chart-area .citrus-mm-img img {
+        width: 80% !important;
+        position: relative;
+        margin-top: -50px;
+        left: 12%
+      }
+
+      .citrus-banner-btn>a,
+      .citrus-innx-content>a {
+        background: 0 0;
+        color: #001952;
+        padding: 0 4px;
+        text-decoration: underline;
+        text-transform: capitalize
+      }
+
+      .citrus-banner-slider-desktop-view {
+        display: block
+      }
+
+      .citrus-banner-slider-mobile-view {
+        display: block
+      }
+
+      #citrus-carousel .splide__slide {
+        display: block;
+        -webkit-box-orient: horizontal !important;
+        -webkit-box-direction: normal !important;
+        -ms-flex-direction: row !important;
+        flex-direction: row !important
+      }
+
+      #citrus-carousel .citrus-banner-slider-copy {
+        text-align: center;
+        padding: 20px;
+        color: #001952;
+        margin: auto 0;
+        width: 100%;
+        position: absolute;
+        bottom: 15%;
+        top: auto
+      }
+
+      #citrus-carousel .citrus-banner-slider-copy .citrus-banner-title {
+        font-size: 20px
+      }
+
+      .citrus-banner-slider-copy p {
+        margin: 10px 0;
+        font-size: 12px
+      }
+
+      .citrus-banner-slider-image {
+        padding: 0;
+      }
+
+      .citrus-banner-slider-image img {
+        width: 100%;
+        height: auto
+      }
+
+      .citrus-btm-main-overly-des p {
+        width: 100%
+      }
+
+      .citrus-wet-single-item>a>img {
+        width: 100%
+      }
+
+      .citrus-wet-single-item>p {
+        padding-top: 25px;
+        padding-bottom: 20px
+      }
+
+      .citrus-wet-cat-left {
+        padding-bottom: 30px
+      }
+
+      .citrus-wet-cat-launch-area {
+        padding-top: 42px;
+        padding-bottom: 30px
+      }
+
+      .citrus-orgins-btm-content>p {
+        width: 91%
+      }
+
+      .citrus-bdr {
+        width: 165px
+      }
+
+      .citrus-bdr.citrus-bdr2 {
+        width: 80%
+      }
+
+      .citrus-bdr.citrus-bdr2 {
+        width: 145px
+      }
+
+      .citrus-bg-img {
+        top: 20%;
+        -webkit-transform: translateY(-20%);
+        transform: translateY(-20%)
+      }
+
+      .citrus-nourish-right>iframe {
+        height: 300px;
+        width: 100%
+      }
+
+      .citrus-amazing-grains-area {
+        padding-top: 40px;
+        padding-bottom: 42px
+      }
+
+      .citrus-mm-content>h3 {
+        width: 60%
+      }
+
+      .citrus-mm-content>p {
+        width: 75%;
+        margin: 0 auto
+      }
+
+      .citrus-meet-orijen-main21 {
+        width: 500%
+      }
+
+      .citrus_item_section__tab_content_item {
+        max-width: 195px
+      }
+
+      .citrus-transitioning-content {
+        padding-top: 31px;
+        padding-bottom: 25px
+      }
+
+      .citrus-transitioning-content>h4 {
+        padding-bottom: 15px
+      }
+
+      .citrus-banner-inner-right>h2,
+      .citrus-innx-content>h2 {
+        width: 58%;
+        margin: 0 auto;
+        line-height: 1
+      }
+
+      .citrus-banner-middle-content-inner {
+        padding-top: 100px
+      }
+
+      .citrus-banner-inner-right>p,
+      .citrus-innx-content>p {
+        width: 80%;
+        margin: 0 auto
+      }
+
+      .citrus_orijin-navigation-auto {
+        left: 35%
+      }
+
+      .citrus_orijin-navigation-manual {
+        left: 35%
+      }
+
+      .citrus-banner-inner-right.citrus-banner-inner-right2 .citrus-innx-content {
+        padding-left: 0
+      }
+
+      .citrus-banner-inner-right.citrus-banner-inner-right2 .citrus-innx-content h2 {
+        width: 84%
+      }
+
+      .citrus-banner-slider-desktop-view22.citrus-banner-slider-mobile-view .citrus-banner-inner-right.citrus-banner-inner-right2 {
+        padding-top: 185px
+      }
+
+      .citrus-banner-inner-right.citrus-banner-inner-right2 .citrus-innx-content p {
+        padding-bottom: 0;
+        padding-top: 0
+      }
+
+      .citrus-banner-inner-right.citrus-banner-inner-right2 .citrus-innx-content .citrus-banner-btn>a {
+        color: #001952;
+        text-transform: capitalize;
+        display: block;
+        margin-top: 8px
+      }
+
+      .citrus-banner-middle-content-inner3 .citrus-banner-inner-right h2 {
+        line-height: 1.1;
+        width: 100%
+      }
+
+      .citrus-orgin-single>h5 {
+        font-size: 15px
+      }
+
+      .citrus-banner-inner-right.citrus-banner-inner-right2 {
+        padding-top: 170px
+      }
+
+      .citrus-chart>img {
+        width: auto;
+        height: 500px
+      }
+
+      .citrus-nourish-area iframe {
+        width: 100% !important
+      }
+
+      .citrus-nourish-right h1 {
+        font-size: 20px;
+        padding-bottom: 15px
+      }
+
+      .citrus-nourish-right p {
+        font-size: 14px
+      }
+    }
+
+    @media all and (max-width:413px) {
+      .citrus-origins-single-item {
+        max-width: 180px
+      }
+
+      .citrus-common-header.citrus-common-header2>h2 {
+        width: 78%
+      }
+
+      .citrus-common-header>p {
+        width: 65%;
+        margin: 0 auto
+      }
+
+      .citrus-wet-single-item>p {
+        height: 100px
+      }
+
+      .citrus-transitioning-content>p {
+        width: 99%
+      }
+
+      .citrus-banner-inner-right>h2,
+      .citrus-innx-content>h2 {
+        width: 64%
+      }
+
+      .citrus-banner-middle-content-inner {
+        padding-top: 80px
+      }
+
+      .citrus-banner-inner-right.citrus-banner-inner-right2 .citrus-innx-content h2 {
+        width: 100%;
+        padding-bottom: 5px
+      }
+
+      .citrus-banner-slider-desktop-view22.citrus-banner-slider-mobile-view .citrus-banner-inner-right.citrus-banner-inner-right2 {
+        padding-top: 170px
+      }
+
+      .citrus-banner-inner-right>p,
+      .citrus-innx-content>p {
+        width: 90%;
+        margin: 0 auto
+      }
+
+      .citrus-banner-inner-right.citrus-banner-inner-right2 {
+        padding-top: 145px
+      }
+
+      .citrus-comments-area {
+        background-color: #bce5f6
+      }
+
+      .citrus-comments-area .citrus-comments-container {
+        width: 85%
+      }
+
+      .citrus-comments-area .citrus-comments-container .citrus-comments-photo {
+        top: unset;
+        left: unset;
+        margin: 0 auto;
+        position: relative !important;
+        margin-bottom: 20px
+      }
+
+      .citrus-comments-area .citrus-comments-container .citrus-comments {
+        padding: 10px;
+        margin: 0
+      }
+    }
+
+    @media all and (max-width:374px) {
+      #citrus-carousel .citrus-banner-slider-copy {
+        bottom: 3%
+      }
+
+      .citrus-banner-inner-right>h2,
+      .citrus-innx-content>h2 {
+        width: 90%
+      }
+
+      .citrus-banner-inner-right>p,
+      .citrus-innx-content>p {
+        font-size: 13px;
+        padding-bottom: 10px
+      }
+
+      .citrus-banner-inner-right.citrus-banner-inner-right2 .citrus-innx-content h2 {
+        font-size: 18px
+      }
+
+      .citrus-banner-inner-right2>img,
+      .citrus-banner-middle-content-inner>img {
+        width: 60px;
+        height: auto;
+        display: block;
+        margin-bottom: 6px
+      }
+
+      .citrus-mm-content>h3 {
+        width: 70%
+      }
+
+      .citrus-orgins-btm-content>h4 {
+        font-size: 18px
+      }
+
+      .citrus-chart>img {
+        width: auto;
+        height: 300px
+      }
+
+      .citrus-nourish-area iframe {
+        width: 100% !important
+      }
+
+      .citrus-nourish-right h1 {
+        font-size: 16px;
+        padding-bottom: 10px
+      }
+
+      .citrus-nourish-right p {
+        font-size: 12px
+      }
+    }
+  </style>
+
+  <!-- Markup Start -->
+  <div class="citrus-orijin-all-overflow">
+
+    <!--==================== start banner area ================================-->
+    <section id="citrus-carousel" class="splide" aria-label="Beautiful Images">
+      <div class="splide__track">
+        <ul class="splide__list">
+          <li class="splide__slide citrus-banner-inner-right">
+            <div class="citrus-banner-slider-image">
+              <img class="mobile-hide" src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/JFFD_pov1"
+                alt="Just Food for Dogs logo. Image of a dog mom lifting and kissing her pup. Image of 2 dogs walking the beach at sunset.">
+              <img class="mobile-show" src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/JFFD_pov1_mobile"
+                alt="Just Food for Dogs logo. Image of a dog mom lifting and kissing her pup. Image of 2 dogs walking the beach at sunset.">
+            </div>
+            <div class="citrus-banner-slider-copy citrus-banner-btn">
+              <h1 class="citrus-banner-title-logo"><b>JustFood</b>ForDogs.</h1>
+              <h1 class="citrus-banner-title">ON A MISSION</h1>
+              <p>Dedicated to helping every dog live their best life through the transformational power of fresh food,
+                backed by science.</p>
+
+              <a class="citrus_cta_btn "
+                href="https://www.petco.com/shop/en/petcostore/brand/justfoodfordogs" "/shop/en/petcostore"
+                manual_cm_sp="sponsoredbrandpage:justfoodfordogs:herobanner:1:onamission:shopnow"
+                onclick="clickTrackLink(this);">Shop Now
+              </a>
+            </div>
+          </li>
+
+          <li class="splide__slide citrus-banner-inner-right">
+            <div class="citrus-banner-slider-image">
+              <img class="mobile-hide" src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/JFFD_pov2"
+                alt="Just Food for Dogs logo. Image of vegetables in an industrial kitchen. Collage of colorful dog food, salmon and a boat">
+              <img class="mobile-show" src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/JFFD_pov2_mobile"
+                alt="Just Food for Dogs logo. Image of vegetables in an industrial kitchen. Collage of colorful dog food, salmon and a boat">
+            </div>
+            <div class="citrus-banner-slider-copy citrus-banner-btn">
+              <h1 class="citrus-banner-title-logo"><b>JustFood</b>ForDogs.</h1>
+              <h1 class="citrus-banner-title">BETTER INGREDIENTS</h1>
+              <p>Using only the very best ingredients from the human-grade food supply chain, bought straight from the
+                source.</p>
+
+              <a class="citrus_cta_btn "
+                href="https://www.petco.com/shop/en/petcostore/brand/justfoodfordogs" "/shop/en/petcostore"
+                manual_cm_sp="sponsoredbrandpage:justfoodfordogs:herobanner:2:betteringredients:shopnow"
+                onclick="clickTrackLink(this);">Shop Now
+              </a>
+            </div>
+          </li>
+
+          <li class="splide__slide citrus-banner-inner-right">
+            <div class="citrus-banner-slider-image">
+              <img class="mobile-hide" src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/JFFD_pov3"
+                alt="Ingredients and measuring cups. Veterinarians and scientists discussing ingredients">
+              <img class="mobile-show" src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/JFFD_pov3_mobile"
+                alt="Ingredients and measuring cups. Veterinarians and scientists discussing ingredients">
+            </div>
+            <div class="citrus-banner-slider-copy citrus-banner-btn">
+              <h1 class="citrus-banner-title-logo"><b>JustFood</b>ForDogs.</h1>
+              <h1 class="citrus-banner-title">#1 VET-RECOMMENDED FRESH FOOD BRAND</h1>
+              <p>Recipes formulated by a team of veterinarians who conduct published, peer-reviewed research to
+                demonstrate the food’s
+                efficacy.</p>
+
+              <a class="citrus_cta_btn "
+                href="https://www.petco.com/shop/en/petcostore/brand/justfoodfordogs" "/shop/en/petcostore"
+                manual_cm_sp="sponsoredbrandpage:justfoodfordogs:herobanner:3:1vetrecommendedfreshfoodbrand:shopnow"
+                onclick="clickTrackLink(this);">Shop Now
+              </a>
+            </div>
+          </li>
+
+
+        </ul>
+      </div>
+    </section>
+    <!--======================= End banner area ==============================-->
+
+    <!--================= start product area ==================================-->
+    <section class="citrus-amazing-grains-area">
+      <div class="citrus-organs-container">
+        <!-- common header -->
+        <div class="citrus-common-header">
+          <h2>Best sellers and dogs’ favorite recipes</h2>
+        </div>
+        <div class="citrus-product-list">
+          <!-- single item 1-->
+          <div class="citrus-product-single-item ">
+            <a href="https://www.petco.com/shop/en/petcostore/product/justfoodfordogs-daily-diets-beef-and-russet-potato-frozen-dog-food" "/shop/en/petcostore"
+              manual_cm_sp="sponsoredbrandpage:justfoodfordogs:bestsellersanddogs’favoriterecipes:1:beefrussetpotato:product"
+              onclick="clickTrackLink(this);"><img
+                src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/JFFD_product1"
+                alt="Product package next to food in bowl" /></a>
+            <p>Beef & Russet Potato</p>
+            <a href="https://www.petco.com/shop/en/petcostore/product/justfoodfordogs-daily-diets-beef-and-russet-potato-frozen-dog-food" "/shop/en/petcostore"
+              manual_cm_sp="sponsoredbrandpage:justfoodfordogs:bestsellersanddogs’favoriterecipes:1:beefrussetpotato:shopnow"
+              onclick="clickTrackLink(this);">Shop Now</a>
+          </div>
+          <!-- single item 2-->
+          <div class="citrus-product-single-item ">
+            <a href="https://www.petco.com/shop/en/petcostore/product/justfoodfordogs-daily-diets-chicken-and-white-rice-frozen-dog-food" "/shop/en/petcostore"
+              manual_cm_sp="sponsoredbrandpage:justfoodfordogs:bestsellersanddogs’favoriterecipes:2:chickenwhiterice:product"
+              onclick="clickTrackLink(this);"><img
+                src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/JFFD_product2"
+                alt="Product package next to food in bowl" /></a>
+            <p>Chicken & White Rice</p>
+            <a href="https://www.petco.com/shop/en/petcostore/product/justfoodfordogs-daily-diets-chicken-and-white-rice-frozen-dog-food" "/shop/en/petcostore"
+              manual_cm_sp="sponsoredbrandpage:justfoodfordogs:bestsellersanddogs’favoriterecipes:2:chickenwhiterice:shopnow"
+              onclick="clickTrackLink(this);">Shop Now</a>
+          </div>
+          <!-- single item 3-->
+          <div class="citrus-product-single-item ">
+            <a href="https://www.petco.com/shop/en/petcostore/product/justfoodfordogs-daily-diets-fish-and-sweet-potato-frozen-dog-food" "/shop/en/petcostore"
+              manual_cm_sp="sponsoredbrandpage:justfoodfordogs:bestsellersanddogs’favoriterecipes:3:fishsweetpotato:product"
+              onclick="clickTrackLink(this);"><img
+                src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/JFFD_product3"
+                alt="Product package next to food in bowl" /></a>
+            <p>Fish & Sweet Potato</p>
+            <a href="https://www.petco.com/shop/en/petcostore/product/justfoodfordogs-daily-diets-fish-and-sweet-potato-frozen-dog-food" "/shop/en/petcostore"
+              manual_cm_sp="sponsoredbrandpage:justfoodfordogs:bestsellersanddogs’favoriterecipes:3:fishsweetpotato:shopnow"
+              onclick="clickTrackLink(this);">Shop Now</a>
+          </div>
+          <!-- single item 4-->
+          <div class="citrus-product-single-item ">
+            <a href="https://www.petco.com/shop/en/petcostore/product/justfoodfordogs-daily-diets-turkey-and-whole-wheat-macaroni-frozen-dog-food" "/shop/en/petcostore"
+              manual_cm_sp="sponsoredbrandpage:justfoodfordogs:bestsellersanddogs’favoriterecipes:4:turkeywholewheatmacaroni:product"
+              onclick="clickTrackLink(this);"><img
+                src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/JFFD_product4"
+                alt="Product package next to food in bowl" /></a>
+            <p>Turkey & Whole Wheat Macaroni</p>
+            <a href="https://www.petco.com/shop/en/petcostore/product/justfoodfordogs-daily-diets-turkey-and-whole-wheat-macaroni-frozen-dog-food" "/shop/en/petcostore"
+              manual_cm_sp="sponsoredbrandpage:justfoodfordogs:bestsellersanddogs’favoriterecipes:4:turkeywholewheatmacaroni:shopnow"
+              onclick="clickTrackLink(this);">Shop Now</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!--======================== End product area ==========================-->
+
+
+    <!--===================== start video area ==============================-->
+    <section class="citrus-nourish-area citrus-green-bg">
+      <div class="citrus-noramg-container">
+        <!-- common header -->
+
+        <!-- common header -->
+        <div class="citrus-main-nourish-flex">
+          <div class="citrus-nourish-left">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/KzdCSuaHyDw"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+
+          </div>
+          <div class="citrus-nourish-right">
+            <h1>A new way to nourish <span style="white-space: nowrap">four-legged</span>&nbsp;family&nbsp;members</h1>
+            <p>JustFoodForDogs recipes are balanced with whole-food ingredients to meet your pet’s unique nutritional
+              needs.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--========================== End video area ====================================================-->
+
+    <!--===================== start chart area ==============================-->
+    <section class="citrus-amazing-grains-area">
+      <div class="citrus-organs-container">
+        <!-- common header -->
+        <div class="citrus-common-header">
+          <h2>Learn more about JustFoodForDogs products</h2>
+        </div>
+        <div class="citrus-chart">
+          <table>
+            <thead>
+              <tr>
+                <th><img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/JFFD__chart_logo"
+                    alt="Just Food for Dogs logo"></th>
+                <td><img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/JFFD__chart_product1"
+                    alt="Product package and bowl of fresh frozen food"></td>
+                <td><img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/JFFD__chart_product2"
+                    alt="Product package of Pantry Fresh dog food"></td>
+                <td><img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/JFFD__chart_product3"
+                    alt="Product package and bowl of dog food"></td>
+                <td><img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/JFFD__chart_product4"
+                    alt="Nutrients product package"></td>
+                <td><img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/JFFD__chart_product5"
+                    alt="Nutrients product package"></td>
+              </tr>
+            </thead>
+
+            <tbody>
+              <!-- row header -->
+              <tr>
+                <th rowspan="2"><img class="logo"
+                    src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/JFFD__chart_logo"
+                    alt="Just Food for Dogs logo"></th>
+                <td>Fresh Frozen</td>
+                <td>PantryFresh</td>
+                <td>Vet Support</td>
+                <td>Do-It-Yourself</td>
+                <td>Toppers</td>
+              </tr>
+              <!-- row 1 -->
+              <tr>
+                <td>Daily meals that deliver life-changing nutrition</td>
+                <td>Complete meals ready to serve from your pantry</td>
+                <td>Formulated to meet specific, critical care needs</td>
+                <td>Vet-developed recipes and nutrient blends for at-home cooking</td>
+                <td>An extra boost of nutrition designed to be mixed with your pet’s current food</td>
+              </tr>
+
+              <!-- row 2 -->
+              <tr>
+                <th>Delivers life-changing nutrition</th>
+                <td><img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/JFFD__chart_check"
+                    alt="JFFD__chart_check"></td>
+                <td><img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/JFFD__chart_check"
+                    alt="JFFD__chart_check"></td>
+                <td><img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/JFFD__chart_check"
+                    alt="JFFD__chart_check"></td>
+                <td><img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/JFFD__chart_check"
+                    alt="JFFD__chart_check"></td>
+                <td><img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/JFFD__chart_check"
+                    alt="JFFD__chart_check"></td>
+
+              </tr>
+
+              <!-- row 3 -->
+              <tr>
+                <th>Made with fresh, whole-food ingredients</th>
+                <td><img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/JFFD__chart_check"
+                    alt="JFFD__chart_check"></td>
+                <td><img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/JFFD__chart_check"
+                    alt="JFFD__chart_check"></td>
+                <td><img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/JFFD__chart_check"
+                    alt="JFFD__chart_check"></td>
+                <td>&nbsp;</td>
+                <td><img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/JFFD__chart_check"
+                    alt="JFFD__chart_check"></td>
+              </tr>
+
+              <!-- row 4 -->
+              <tr>
+                <th>Formulated by a team of veterinarians</th>
+                <td><img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/JFFD__chart_check"
+                    alt="JFFD__chart_check"></td>
+                <td><img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/JFFD__chart_check"
+                    alt="JFFD__chart_check"></td>
+                <td><img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/JFFD__chart_check"
+                    alt="JFFD__chart_check"></td>
+                <td><img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/JFFD__chart_check"
+                    alt="JFFD__chart_check"></td>
+                <td><img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/JFFD__chart_check"
+                    alt="JFFD__chart_check"></td>
+              </tr>
+
+              <!-- row 5 -->
+              <tr>
+                <th>A complete meal for your pet</th>
+
+                <td><img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/JFFD__chart_check"
+                    alt="JFFD__chart_check"></td>
+                <td><img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/JFFD__chart_check"
+                    alt="JFFD__chart_check"></td>
+                <td><img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/JFFD__chart_check"
+                    alt="JFFD__chart_check"></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <!-- row 6 -->
+              <tr>
+                <th>Requires a prescription</th>
+                <td></td>
+                <td></td>
+                <td><img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/JFFD__chart_check"
+                    alt="JFFD__chart_check"><br />
+                  <span class="small-text">(Except for Balanced Remedy and Joint and Skin Support)</span>
+                </td>
+                <td></td>
+                <td></td>
+              </tr>
+
+              <!-- row 7 -->
+              <tr>
+                <th>Stored in your...</th>
+                <td>Freezer</td>
+                <td>Pantry</td>
+                <td>Freezer</td>
+                <td>Pantry</td>
+                <td>Freezer</td>
+              </tr>
+
+            </tbody>
+
+          </table>
+        </div>
+      </div>
+    </section>
+    <!--===================== End chart area ==============================-->
+
+    <section class="benefits-area">
+      <div class="custom-container citrus-noramg-container">
+        <!-- common heading -->
+        <div class="common-heading">
+          <h2>Your best friend just deserves the best</h2>
+          <!-- <p>test</p> -->
+        </div>
+        <!-- common heading -->
+        <div class="benefits-icon-flex">
+          <!-- single item 1-->
+          <div class="benefits-single-item">
+            <a href="https://www.petco.com/shop/en/petcostore/brand/justfoodfordogs/dog/dog-food/fresh-dog-food" "="" shop="" en="" petcostore"=""
+              manual_cm_sp="sponsoredbrandpage:justfoodfordogs:yourbestfriendjustdeservesthebest:1:freshfrozendailydiets:category"
+              onclick="clickTrackLink(this);">
+              <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/JFFD_product5"
+                alt="Frozen food in metal pet bowl">
+            </a>
+            <p>Fresh frozen daily diets</p>
+            <a href="https://www.petco.com/shop/en/petcostore/brand/justfoodfordogs/dog/dog-food/fresh-dog-food" "="" shop="" en="" petcostore"=""
+              manual_cm_sp="sponsoredbrandpage:justfoodfordogs:yourbestfriendjustdeservesthebest:1:freshfrozendailydiets:shopnow"
+              onclick="clickTrackLink(this);">Shop Now</a>
+          </div>
+          <!-- single item 2-->
+          <div class="benefits-single-item">
+            <a href="https://www.petco.com/shop/en/petcostore/brand/justfoodfordogs/dog/dog-food/prescription-dog-food-and-treats" "="" shop="" en="" petcostore"=""
+              manual_cm_sp="sponsoredbrandpage:justfoodfordogs:yourbestfriendjustdeservesthebest:2:freshfrozensupportdiets:category"
+              onclick="clickTrackLink(this);">
+              <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/JFFD_product6"
+                alt="Frozen food in metal pet bowl">
+            </a>
+            <p>Fresh frozen support diets</p>
+            <a href="https://www.petco.com/shop/en/petcostore/brand/justfoodfordogs/dog/dog-food/prescription-dog-food-and-treats" "="" shop="" en="" petcostore"=""
+              manual_cm_sp="sponsoredbrandpage:justfoodfordogs:yourbestfriendjustdeservesthebest:2:freshfrozensupportdiets:shopnow"
+              onclick="clickTrackLink(this);">Shop Now</a>
+          </div>
+
+          <!-- single item 3-->
+          <div class="benefits-single-item">
+            <a href="https://www.petco.com/shop/en/petcostore/category/trending-shops/trending-fresh-food/pantry-fresh-food" "="" shop="" en="" petcostore"=""
+              manual_cm_sp="sponsoredbrandpage:justfoodfordogs:yourbestfriendjustdeservesthebest:3:pantryfreshdiets:category"
+              onclick="clickTrackLink(this);">
+              <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/JFFD_product7"
+                alt="Just Food for Dogs product package">
+            </a>
+            <p>PantryFresh diets</p>
+            <a href="https://www.petco.com/shop/en/petcostore/category/trending-shops/trending-fresh-food/pantry-fresh-food" "="" shop="" en="" petcostore"=""
+              manual_cm_sp="sponsoredbrandpage:justfoodfordogs:yourbestfriendjustdeservesthebest:3:pantryfreshdiets:shopnow"
+              onclick="clickTrackLink(this);">Shop Now</a>
+          </div>
+          <!-- single item 4-->
+          <div class="benefits-single-item">
+            <a href="https://www.petco.com/shop/en/petcostore/brand/justfoodfordogs/dog/dog-health-and-wellness/dog-vitamins" "="" shop="" en="" petcostore"=""
+              manual_cm_sp="sponsoredbrandpage:justfoodfordogs:yourbestfriendjustdeservesthebest:4:diykitsandsupplements:category"
+              onclick="clickTrackLink(this);">
+              <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/JFFD_product8"
+                alt="Just Food for Dogs supplement bottles">
+            </a>
+            <p>DIY kits and supplements</p>
+            <a href="https://www.petco.com/shop/en/petcostore/brand/justfoodfordogs/dog/dog-health-and-wellness/dog-vitamins" "="" shop="" en="" petcostore"=""
+              manual_cm_sp="sponsoredbrandpage:justfoodfordogs:yourbestfriendjustdeservesthebest:4:diykitsandsupplements:shopnow"
+              onclick="clickTrackLink(this);">Shop Now</a>
+          </div>
+          <!-- single item 5-->
+          <div class="benefits-single-item">
+            <a href="https://www.petco.com/shop/en/petcostore/brand/justfoodfordogs/dog/dog-treats-and-chews" "="" shop="" en="" petcostore"=""
+              manual_cm_sp="sponsoredbrandpage:justfoodfordogs:yourbestfriendjustdeservesthebest:5:treats:category"
+              onclick="clickTrackLink(this);">
+              <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/JFFD_product9"
+                alt="Just Food for Dogs treat bag">
+            </a>
+            <p>Treats</p>
+            <a href="https://www.petco.com/shop/en/petcostore/brand/justfoodfordogs/dog/dog-treats-and-chews" "="" shop="" en="" petcostore"=""
+              manual_cm_sp="sponsoredbrandpage:justfoodfordogs:yourbestfriendjustdeservesthebest:5:treats:shopnow"
+              onclick="clickTrackLink(this);">Shop Now</a>
+          </div>
+          <!-- single item ss 6-->
+          <div class="benefits-single-item">
+            <a href="https://www.petco.com/shop/en/petcostore/brand/justfoodfordogs/dog/dog-food/dog-food-toppers" "="" shop="" en="" petcostore"=""
+              manual_cm_sp="sponsoredbrandpage:justfoodfordogs:yourbestfriendjustdeservesthebest:6:toppers:category"
+              onclick="clickTrackLink(this);">
+              <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/JFFD_product6"
+                alt="Just Food for Dogs topper product package">
+            </a>
+            <p>Toppers</p>
+            <a href="https://www.petco.com/shop/en/petcostore/brand/justfoodfordogs/dog/dog-food/dog-food-toppers" "="" shop="" en="" petcostore"=""
+              manual_cm_sp="sponsoredbrandpage:justfoodfordogs:yourbestfriendjustdeservesthebest:6:toppers:shopnow"
+              onclick="clickTrackLink(this);">Shop Now</a>
+          </div>
+
+
+        </div>
+      </div>
+    </section>
+
+    <!--===================== start comments area ==============================-->
+    <section class="citrus-amazing-grains-area citrus-comments-area">
+      <div class="citrus-organs-container">
+        <!-- common header -->
+        <div class="citrus-common-header">
+          <h2>JustFoodForDogs transforms dogs’ lives</h2>
+        </div>
+
+
+        <div id="citrus-comments-slider" class="citrus-comments splide">
+          <div class="splide__track">
+            <ul class="splide__list">
+
+              <!-- single item 1-->
+              <li class="splide__slide">
+                <div class="citrus-comments-container">
+                  <div class="citrus-comments">
+                    <img class="citrus-comments-photo"
+                      src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/JFFD_comment1"
+                      alt="Picture of a happy, tiny dog">
+                    <h2>Sophie’s story</h2>
+                    <p>“I promised ... I would do everything in my power to give her the best life possible. I truly
+                      feel that JustFoodForDogs
+                      is helping me keep ... my promises.”</p>
+                    <p><b>-Pet parent Lauren P.</b></p>
+                  </div>
+                </div>
+              </li>
+
+              <!-- single item 2-->
+              <li class="splide__slide">
+                <div class="citrus-comments-container">
+                  <div class="citrus-comments">
+                    <img class="citrus-comments-photo"
+                      src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/JFFD_comment2"
+                      alt="Picture of a happy dog outside">
+                    <h2>Maverick’s story</h2>
+                    <p>“His coat is shinier, he has more energy and he’s stopped itching. He’s a much happier dog.”</p>
+                    <p><b>-Pet parent Madeline P.</b></p>
+                  </div>
+                </div>
+              </li>
+
+              <!-- single item 3-->
+              <li class="splide__slide">
+                <div class="citrus-comments-container">
+                  <div class="citrus-comments">
+                    <img class="citrus-comments-photo"
+                      src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/JFFD_comment3"
+                      alt="Picture of a happy, black and white dog">
+                    <h2>Beau’s story</h2>
+                    <p>“He’s like our child and to discover food that makes him feel his best and act like a puppy is
+                      all we could ask for.”</p>
+                    <p><b>-Pet parent Amanda V.</b></p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+
+
+
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--===================== End comments area ==============================-->
+
+  </div>
+  <!-- Markup End -->
+  <script>
+    function At(n, t) { for (var e = 0; e < t.length; e++) { var i = t[e]; i.enumerable = i.enumerable || !1, i.configurable = !0, "value" in i && (i.writable = !0), Object.defineProperty(n, i.key, i) } } var n, t; n = this, t = function () { "use strict"; var n = "splide", t = "data-" + n; function e(n) { n.length = 0 } function i(n) { return !s(n) && "object" == typeof n } function o(n) { return Array.isArray(n) } function r(n) { return "string" == typeof n } function u(n) { return void 0 === n } function s(n) { return null === n } function c(n) { return n instanceof HTMLElement } function a(n) { return o(n) ? n : [n] } function f(n, t) { a(n).forEach(t) } function l(n, t) { return -1 < n.indexOf(t) } function d(n, t) { return n.push.apply(n, a(t)), n } var p = Array.prototype; function h(n, t, e) { return p.slice.call(n, t, e) } function g(n, t, e) { n && f(t, (function (t) { t && n.classList[e ? "add" : "remove"](t) })) } function v(n, t) { g(n, r(t) ? t.split(" ") : t, !0) } function m(n, t) { f(t, n.appendChild.bind(n)) } function y(n, t) { f(n, (function (n) { var e = t.parentNode; e && e.insertBefore(n, t) })) } function b(n, t) { return c(n) && (n.msMatchesSelector || n.matches).call(n, t) } function w(n, t) { return n ? h(n.children).filter((function (n) { return b(n, t) })) : [] } function x(n, t) { return t ? w(n, t)[0] : n.firstElementChild } function E(n, t, e) { if (n) for (var i = Object.keys(n), o = (i = e ? i.reverse() : i, 0); o < i.length; o++) { var r = i[o]; if ("__proto__" !== r && !1 === t(n[r], r)) break } return n } function S(n) { return h(arguments, 1).forEach((function (t) { E(t, (function (e, i) { n[i] = t[i] })) })), n } function P(n, t) { return E(t, (function (t, e) { o(t) ? n[e] = t.slice() : i(t) ? n[e] = P(i(n[e]) ? n[e] : {}, t) : n[e] = t })), n } function k(n, t) { n && f(t, (function (t) { n.removeAttribute(t) })) } function _(n, t, e) { i(t) ? E(t, (function (t, e) { _(n, e, t) })) : s(e) ? k(n, t) : n.setAttribute(t, String(e)) } function L(n, t, e) { return n = document.createElement(n), t && (r(t) ? v : _)(n, t), e && m(e, n), n } function A(n, t, e) { if (u(e)) return getComputedStyle(n)[t]; s(e) || (n = n.style)[t] !== (e = "" + e) && (n[t] = e) } function C(n, t) { A(n, "display", t) } function z(n, t) { return n.getAttribute(t) } function D(n, t) { return n && n.classList.contains(t) } function M(n) { return n.getBoundingClientRect() } function I(n) { f(n, (function (n) { n && n.parentNode && n.parentNode.removeChild(n) })) } function O(n) { return x((new DOMParser).parseFromString(n, "text/html").body) } function N(n, t) { n.preventDefault(), t && (n.stopPropagation(), n.stopImmediatePropagation()) } function T(n, t) { return n && n.querySelector(t) } function R(n, t) { return h(n.querySelectorAll(t)) } function F(n, t) { g(n, t, !1) } function j(n) { return r(n) ? n : n ? n + "px" : "" } function W(t, e) { if (void 0 === e && (e = ""), !t) throw new Error("[" + n + "] " + e) } function B(n) { setTimeout(n) } function X() { } function H(n) { return requestAnimationFrame(n) } var G = Math.min, Y = Math.max, q = Math.floor, U = Math.ceil, J = Math.abs; function K(n, t, e, i) { var o = G(t, e); return e = Y(t, e), i ? o < n && n < e : o <= n && n <= e } function Q(n, t, e) { var i = G(t, e); return e = Y(t, e), G(Y(i, n), e) } function V(n) { return (0 < n) - (n < 0) } function Z(n, t) { return f(t, (function (t) { n = n.replace("%s", "" + t) })), n } function $(n) { return n < 10 ? "0" + n : "" + n } var nn = {}, tn = "mounted", en = "move", on = "moved", rn = "shifted", un = "click", sn = "slide:keydown", cn = "refresh", an = "updated", fn = "resize", ln = "resized", dn = "repositioned", pn = "scrolled", hn = "destroy", gn = "navigation:mounted", vn = "lazyload:loaded"; function mn(n) { var t = n.event, e = {}, i = []; function o(n, t, e) { r(n, t, (function (n, t) { i = i.filter((function (i) { return !!(i[0] !== n || i[1] !== t || e && i[2] !== e) || (n.removeEventListener(t, i[2], i[3]), !1) })) })) } function r(n, t, e) { f(n, (function (n) { n && t.split(" ").forEach(e.bind(null, n)) })) } function u() { i = i.filter((function (n) { return o(n[0], n[1]) })), t.offBy(e) } return t.on(hn, u, e), { on: function (n, i, o) { t.on(n, i, e, o) }, off: function (n) { t.off(n, e) }, emit: t.emit, bind: function (n, t, e, o) { r(n, t, (function (n, t) { i.push([n, t, e, o]), n.addEventListener(t, e, o) })) }, unbind: o, destroy: u } } function yn(n, t, e, i) { var o, r, u = Date.now, s = 0, c = !0, a = 0; function f() { if (!c) { var r = u() - o; if (n <= r ? (s = 1, o = u()) : s = r / n, e && e(s), 1 === s && (t(), i && ++a >= i)) return l(); H(f) } } function l() { c = !0 } function d() { cancelAnimationFrame(r), c = !(r = s = 0) } return { start: function (t) { t || d(), o = u() - (t ? s * n : 0), c = !1, H(f) }, rewind: function () { o = u(), s = 0, e && e(s) }, pause: l, cancel: d, set: function (t) { n = t }, isPaused: function () { return c } } } function bn(n, t) { var e; return function () { var i = arguments, o = this; e || (e = yn(t || 0, (function () { n.apply(o, i), e = null }), null, 1)).start() } } var wn = { marginRight: ["marginBottom", "marginLeft"], autoWidth: ["autoHeight"], fixedWidth: ["fixedHeight"], paddingLeft: ["paddingTop", "paddingRight"], paddingRight: ["paddingBottom", "paddingLeft"], width: ["height"], left: ["top", "right"], right: ["bottom", "left"], x: ["y"], X: ["Y"], Y: ["X"], ArrowLeft: ["ArrowUp", "ArrowRight"], ArrowRight: ["ArrowDown", "ArrowLeft"] }, xn = n, En = n + "__slide", Sn = En + "--clone", Pn = n + "__arrows", kn = n + "__arrow", _n = kn + "--prev", Ln = kn + "--next", An = n + "__pagination", Cn = n + "__progress", zn = "is-active", Dn = "is-prev", Mn = "is-next", In = "is-visible", On = "is-loading", Nn = [zn, In, Dn, Mn, On], Tn = "role", Rn = "aria-controls", Fn = "aria-current", jn = "aria-label", Wn = "aria-hidden", Bn = "tabindex", Xn = "aria-orientation", Hn = [Tn, Rn, Fn, jn, Wn, Xn, Bn, "disabled"], Gn = "slide", Yn = "loop", qn = "fade", Un = { passive: !1, capture: !0 }, Jn = "touchmove mousemove", Kn = "touchend touchcancel mouseup", Qn = ["Left", "Right", "Up", "Down"], Vn = "keydown", Zn = t + "-lazy", $n = Zn + "-srcset", nt = [" ", "Enter", "Spacebar"], tt = Object.freeze({ __proto__: null, Options: function (n, e, i) { var o, r, u, s = bn(a); function c(n) { n && removeEventListener("resize", s) } function a() { var t; (t = function (n) { return n[1].matches }, t = h(r).filter(t)[0] || [])[0] !== u && function (t) { (t = i.breakpoints[t] || o).destroy ? (n.options = o, n.destroy("completely" === t.destroy)) : (n.state.is(5) && (c(!0), n.mount()), n.options = t) }(u = t[0]) } return { setup: function () { try { P(i, JSON.parse(z(n.root, t))) } catch (u) { W(!1, u.message) } o = P({}, i); var e, u = i.breakpoints; u && (e = "min" === i.mediaQuery, r = Object.keys(u).sort((function (n, t) { return e ? +t - +n : +n - +t })).map((function (n) { return [n, matchMedia("(" + (e ? "min" : "max") + "-width:" + n + "px)")] })), a()) }, mount: function () { r && addEventListener("resize", s) }, destroy: c } }, Direction: function (n, t, e) { return { resolve: function (n, t) { var i = e.direction; return wn[n]["rtl" !== i || t ? "ttb" === i ? 0 : -1 : 1] || n }, orient: function (n) { return n * ("rtl" === e.direction ? 1 : -1) } } }, Elements: function (t, i, o) { var r, u, s, c, a = mn(t).on, f = t.root, l = {}, p = []; function h() { var t; !function () { u = x(f, ".splide__slider"), s = T(f, ".splide__track"), c = x(s, ".splide__list"), W(s && c, "A track/list element is missing."), d(p, w(c, "." + En + ":not(." + Sn + ")")); var n = b(".splide__autoplay"), t = b("." + Pn); S(l, { root: f, slider: u, track: s, list: c, slides: p, arrows: t, autoplay: n, prev: T(t, "." + _n), next: T(t, "." + Ln), bar: T(b("." + Cn), ".splide__progress__bar"), play: T(n, ".splide__play"), pause: T(n, ".splide__pause") }) }(), t = f.id || function (n) { return "" + n + $(nn[n] = (nn[n] || 0) + 1) }(n), f.id = t, s.id = s.id || t + "-track", c.id = c.id || t + "-list", v(f, r = E()) } function g() { [f, s, c].forEach((function (n) { k(n, "style") })), e(p), F(f, r) } function m() { g(), h() } function y() { F(f, r), v(f, r = E()) } function b(n) { return x(f, n) || x(u, n) } function E() { return [xn + "--" + o.type, xn + "--" + o.direction, o.drag && xn + "--draggable", o.isNavigation && xn + "--nav", zn] } return S(l, { setup: h, mount: function () { a(cn, m, 8), a(an, y) }, destroy: g }) }, Slides: function (n, t, i) { var o = mn(n), u = o.on, s = o.emit, d = o.bind, p = (o = t.Elements).slides, h = o.list, w = []; function E() { p.forEach((function (n, t) { L(n, t, -1) })) } function S() { N((function (n) { n.destroy() })), e(w) } function P() { S(), E() } function L(t, e, i) { (t = function (n, t, e, i) { var o, r = mn(n), u = r.on, s = r.emit, c = r.bind, a = r.destroy, f = n.Components, l = n.root, d = n.options, p = d.isNavigation, h = d.updateOnMove, v = f.Direction.resolve, m = z(i, "style"), y = -1 < e, b = x(i, ".splide__slide__container"), w = d.focusableNodes && R(i, d.focusableNodes); function E() { var o = y ? e : t, r = Z(d.i18n.slideX, o + 1); o = n.splides.map((function (n) { return n.splide.root.id })).join(" "), _(i, jn, r), _(i, Rn, o), _(i, Tn, "menuitem"), L(C()) } function S() { o || P() } function P() { var e; o || (e = n.index, L(C()), function (n) { var t = !n && (!C() || y); _(i, Wn, t || null), _(i, Bn, !t && d.slideFocus ? 0 : null), w && w.forEach((function (n) { _(n, Bn, t ? -1 : null) })), n !== D(i, In) && (g(i, In, n), s(n ? "visible" : "hidden", I)) }(function () { if (n.is(qn)) return C(); var t = M(f.Elements.track), e = M(i), o = v("left"), r = v("right"); return q(t[o]) <= U(e[o]) && q(e[r]) <= U(t[r]) }()), g(i, Dn, t === e - 1), g(i, Mn, t === e + 1)) } function L(n) { n !== D(i, zn) && (g(i, zn, n), p && _(i, Fn, n || null), s(n ? "active" : "inactive", I)) } function C() { var i = n.index; return i === t || d.cloneStatus && i === e } var I = { index: t, slideIndex: e, slide: i, container: b, isClone: y, mount: function () { y || (i.id = l.id + "-slide" + $(t + 1)), c(i, "click keydown", (function (n) { s("click" === n.type ? un : sn, I, n) })), u([cn, dn, rn, on, pn], P), u(gn, E), h && u(en, S) }, destroy: function () { o = !0, a(), F(i, Nn), k(i, Hn), _(i, "style", m) }, update: P, style: function (n, t, e) { A(e && b || i, n, t) }, isWithin: function (e, i) { return e = J(e - t), (e = y || !d.rewind && !n.is(Yn) ? e : G(e, n.length - e)) <= i } }; return I }(n, e, i, t)).mount(), w.push(t) } function C(n) { return n ? T((function (n) { return !n.isClone })) : w } function N(n, t) { C(t).forEach(n) } function T(n) { return w.filter("function" == typeof n ? n : function (t) { return r(n) ? b(t.slide, n) : l(a(n), t.index) }) } return { mount: function () { E(), u(cn, P), u([tn, cn], (function () { w.sort((function (n, t) { return n.index - t.index })) })) }, destroy: S, update: function () { N((function (n) { n.update() })) }, register: L, get: C, getIn: function (n) { var e = t.Controller, o = e.toIndex(n), r = e.hasFocus() ? 1 : i.perPage; return T((function (n) { return K(n.index, o, o + r - 1) })) }, getAt: function (n) { return T(n)[0] }, add: function (n, t) { f(n, (function (n) { var e, o, u; c(n = r(n) ? O(n) : n) && ((e = p[t]) ? y(n, e) : m(h, n), v(n, i.classes.slide), o = s.bind(null, fn), n = R(n, "img"), (u = n.length) ? n.forEach((function (n) { d(n, "load error", (function () { --u || o() })) })) : o()) })), s(cn) }, remove: function (n) { I(T(n).map((function (n) { return n.slide }))), s(cn) }, forEach: N, filter: T, style: function (n, t, e) { N((function (i) { i.style(n, t, e) })) }, getLength: function (n) { return (n ? p : w).length }, isEnough: function () { return w.length > i.perPage } } }, Layout: function (n, t, e) { var o, r, u = mn(n), s = u.on, c = u.bind, a = u.emit, f = t.Slides, l = t.Direction.resolve, d = (t = t.Elements).root, p = t.track, h = t.list, g = f.getAt; function v() { r = null, o = "ttb" === e.direction, A(d, "maxWidth", j(e.width)), A(p, l("paddingLeft"), y(!1)), A(p, l("paddingRight"), y(!0)), m() } function m() { var n = M(d); r && r.width === n.width && r.height === n.height || (A(p, "height", function () { var n = ""; return o && (W(n = b(), "height or heightRatio is missing."), n = "calc(" + n + " - " + y(!1) + " - " + y(!0) + ")"), n }()), f.style(l("marginRight"), j(e.gap)), f.style("width", (e.autoWidth ? "" : j(e.fixedWidth) || (o ? "" : w())) || null), f.style("height", j(e.fixedHeight) || (o ? e.autoHeight ? "" : w() : b()) || null, !0), r = n, a(ln)) } function y(n) { var t = e.padding; return n = l(n ? "right" : "left"), t && j(t[n] || (i(t) ? 0 : t)) || "0px" } function b() { return j(e.height || M(h).width * e.heightRatio) } function w() { var n = j(e.gap); return "calc((100%" + (n && " + " + n) + ")/" + (e.perPage || 1) + (n && " - " + n) + ")" } function x(n, t) { var e = g(n); return e ? (n = M(e.slide)[l("right")], e = M(h)[l("left")], J(n - e) + (t ? 0 : E())) : 0 } function E() { var n = g(0); return n && parseFloat(A(n.slide, l("marginRight"))) || 0 } return { mount: function () { v(), c(window, "resize load", bn(a.bind(this, fn))), s([an, cn], v), s(fn, m) }, listSize: function () { return M(h)[l("width")] }, slideSize: function (n, t) { return (n = g(n || 0)) ? M(n.slide)[l("width")] + (t ? 0 : E()) : 0 }, sliderSize: function () { return x(n.length - 1, !0) - x(-1, !0) }, totalSize: x, getPadding: function (n) { return parseFloat(A(p, l("padding" + (n ? "Right" : "Left")))) || 0 } } }, Clones: function (n, t, i) { var o, u = mn(n), s = u.on, c = u.emit, a = t.Elements, f = t.Slides, l = t.Direction.resolve, p = []; function h() { (o = x()) && (function (t) { var e = f.get().slice(), o = e.length; if (o) { for (; e.length < t;)d(e, e); d(e.slice(-t), e.slice(0, t)).forEach((function (r, u) { var s = u < t, c = function (t, e) { return v(t = t.cloneNode(!0), i.classes.clone), t.id = n.root.id + "-clone" + $(e + 1), t }(r.slide, u); s ? y(c, e[0].slide) : m(a.list, c), d(p, c), f.register(c, u - t + (s ? 0 : o), r.index) })) } }(o), c(fn)) } function g() { I(p), e(p) } function b() { g(), h() } function w() { o < x() && c(cn) } function x() { var t, e, o = i.clones; return n.is(Yn) ? o || (t = a.list, r(e = i[l("fixedWidth")]) && (e = M(t = L("div", { style: "width: " + e + "; position: absolute;" }, t)).width, I(t)), o = (e && U(M(a.track)[l("width")] / e) || i[l("autoWidth")] && n.length || i.perPage) * (i.drag ? (i.flickMaxPages || 1) + 1 : 2)) : o = 0, o } return { mount: function () { h(), s(cn, b), s([an, fn], w) }, destroy: g } }, Move: function (n, t, e) { var i, o = mn(n), r = o.on, s = o.emit, c = (o = t.Layout).slideSize, a = o.getPadding, f = o.totalSize, l = o.listSize, d = o.sliderSize, p = (o = t.Direction).resolve, h = o.orient, g = (o = t.Elements).list, v = o.track; function m() { P() || (t.Scroll.cancel(), y(n.index), s(dn)) } function y(n) { b(x(n, !0)) } function b(t, e) { n.is(qn) || (e = e ? t : function (t) { var e, i; return n.is(Yn) && (i = h(t - E()), e = _(!1, t) && i < 0, i = _(!0, t) && 0 < i, (e || i) && (t = w(t, i))), t }(t), g.style.transform = "translate" + p("X") + "(" + e + "px)", t !== e && s(rn)) } function w(n, t) { var e = n - S(t), i = d(); return n - h(i * (U(J(e) / i) || 1)) * (t ? 1 : -1) } function x(t, i) { var o = h(f(t - 1) - (o = t, "center" === (t = e.focus) ? (l() - c(o, !0)) / 2 : +t * c(o) || 0)); return i ? function (t) { return e.trimSpace && n.is(Gn) && (t = Q(t, 0, h(d() - l()))), t }(o) : o } function E() { var n = p("left"); return M(g)[n] - M(v)[n] + h(a(!1)) } function S(n) { return x(n ? t.Controller.getEnd() : 0, !!e.trimSpace) } function P() { return n.state.is(4) && e.waitForTransition } function _(n, t) { t = u(t) ? E() : t; var e = !0 !== n && h(t) < h(S(!1)); return t = !1 !== n && h(t) > h(S(!0)), e || t } return { mount: function () { i = t.Transition, r([tn, ln, an, cn], m) }, destroy: function () { k(g, "style") }, move: function (o, r, u, c) { var a, f; P() || (a = n.state.set, f = E(), o !== r && (i.cancel(), b(w(f, r < o), !0)), a(4), s(en, r, u, o), i.start(r, (function () { a(3), s(on, r, u, o), "move" === e.trimSpace && o !== u && f === E() ? t.Controller.go(u < o ? ">" : "<", !1, c) : c && c() }))) }, jump: y, translate: b, shift: w, cancel: function () { b(E()), i.cancel() }, toIndex: function (n) { for (var e = t.Slides.get(), i = 0, o = 1 / 0, r = 0; r < e.length; r++) { var u = e[r].index, s = J(x(u, !0) - n); if (!(s <= o)) break; o = s, i = u } return i }, toPosition: x, getPosition: E, getLimit: S, isBusy: P, exceededLimit: _ } }, Controller: function (n, t, e) { var i, o, s, c = mn(n).on, a = t.Move, f = a.getPosition, l = a.getLimit, d = t.Slides, p = d.isEnough, h = d.getLength, g = n.is(Yn), v = n.is(Gn), m = e.start || 0, y = m; function b() { i = h(!0), o = e.perMove, s = e.perPage, m = Q(m, 0, i - 1) } function w(n, e, i, o, r) { var u = e ? n : C(n); t.Scroll.scroll(e || i ? a.toPosition(u, !0) : n, o, (function () { z(a.toIndex(a.getPosition())), r && r() })) } function x(n) { return S(!1, n) } function E(n) { return S(!0, n) } function S(n, t) { var e, i, r = o || (D() ? 1 : s), u = P(m + r * (n ? -1 : 1), m); return -1 !== u || !v || (e = f(), i = l(!n), r = 1, J(e - i) < r) ? t ? u : _(u) : n ? 0 : k() } function P(n, t, r) { var u; return p() ? (u = k(), n < 0 || u < n ? n = K(0, n, t, !0) || K(u, t, n, !0) ? L(A(n)) : g ? o || D() ? n : n < 0 ? -(i % s || s) : i : e.rewind ? n < 0 ? u : 0 : -1 : r || n === t || (n = o ? n : L(A(t) + (n < t ? -1 : 1)))) : n = -1, n } function k() { var n = i - s; return (D() || g && o) && (n = i - 1), Y(n, 0) } function _(n) { return g ? p() ? n % i + (n < 0 ? i : 0) : -1 : n } function L(n) { return Q(D() ? n : s * n, 0, k()) } function A(n) { return D() || (n = K(n, i - s, i - 1) ? i - 1 : n, n = q(n / s)), n } function C(n) { return n = a.toIndex(n), v ? Q(n, 0, k()) : n } function z(n) { n !== m && (y = m, m = n) } function D() { return !u(e.focus) || e.isNavigation } return { mount: function () { b(), c([an, cn], b, 9) }, go: function (n, t, i) { var o = function (n) { var t, e, i = m; return r(n) ? (t = (e = n.match(/([+\-<>])(\d+)?/) || [])[1], e = e[2], "+" === t || "-" === t ? i = P(m + +("" + t + (+e || 1)), m, !0) : ">" === t ? i = e ? L(+e) : x(!0) : "<" === t && (i = E(!0))) : i = g ? n : Q(n, 0, k()), i }(n); e.useScroll ? w(o, !0, !0, e.speed, i) : -1 < (n = _(o)) && !a.isBusy() && (t || n !== m) && (z(n), a.move(o, n, y, i)) }, scroll: w, getNext: x, getPrev: E, getAdjacent: S, getEnd: k, setIndex: z, getIndex: function (n) { return n ? y : m }, toIndex: L, toPage: A, toDest: C, hasFocus: D } }, Arrows: function (n, t, e) { var i, o = mn(n), r = o.on, u = o.bind, s = o.emit, c = e.classes, a = e.i18n, f = t.Elements, l = t.Controller, d = f.arrows, p = f.prev, h = f.next, g = {}; function v() { var t, o; e.arrows && (p && h || (d = L("div", c.arrows), p = b(!0), h = b(!1), i = !0, m(d, [p, h]), y(d, x("slider" === e.arrows && f.slider || n.root)))), p && h && (g.prev ? C(d, !1 === e.arrows ? "none" : "") : (t = f.track.id, _(p, Rn, t), _(h, Rn, t), g.prev = p, g.next = h, o = l.go, r([tn, on, an, cn, pn], w), u(h, "click", (function () { o(">", !0) })), u(p, "click", (function () { o("<", !0) })), s("arrows:mounted", p, h))) } function b(n) { return O('<button class="' + c.arrow + " " + (n ? c.prev : c.next) + '" type="button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40"><path d="' + (e.arrowPath || "m15.5 0.932-4.3 4.38 14.5 14.6-14.5 14.5 4.3 4.4 14.6-14.6 4.4-4.3-4.4-4.4-14.6-14.6z") + '" />') } function w() { var t = n.index, e = l.getPrev(), i = l.getNext(), o = -1 < e && t < e ? a.last : a.prev; t = -1 < i && i < t ? a.first : a.next, p.disabled = e < 0, h.disabled = i < 0, _(p, jn, o), _(h, jn, t), s("arrows:updated", p, h, e, i) } return { arrows: g, mount: function () { v(), r(an, v) }, destroy: function () { i ? I(d) : (k(p, Hn), k(h, Hn)) } } }, Autoplay: function (n, t, e) { var i, o, r, u = mn(n), s = u.on, c = u.bind, a = u.emit, f = yn(e.interval, n.go.bind(n, ">"), (function (n) { var t = d.bar; t && A(t, "width", 100 * n + "%"), a("autoplay:playing", n) })), l = f.isPaused, d = t.Elements; function p(n) { var t = n ? "pause" : "play", i = d[t]; i && (_(i, Rn, d.track.id), _(i, jn, e.i18n[t]), c(i, "click", n ? g : h)) } function h() { l() && t.Slides.isEnough() && (f.start(!e.resetProgress), o = i = r = !1, a("autoplay:play")) } function g(n) { void 0 === n && (n = !0), l() || (f.pause(), a("autoplay:pause")), r = n } function v() { r || (i || o ? g(!1) : h()) } function m() { var i = t.Slides.getAt(n.index); f.set(i && +z(i.slide, "data-splide-interval") || e.interval) } return { mount: function () { var n = e.autoplay; n && (p(!0), p(!1), function () { var n = d.root; e.pauseOnHover && c(n, "mouseenter mouseleave", (function (n) { i = "mouseenter" === n.type, v() })), e.pauseOnFocus && c(n, "focusin focusout", (function (n) { o = "focusin" === n.type, v() })), s([en, "scroll", cn], f.rewind), s(en, m) }(), "pause" !== n && h()) }, destroy: f.cancel, play: h, pause: g, isPaused: l } }, Cover: function (n, t, e) { var i = mn(n).on; function o(n) { t.Slides.forEach((function (t) { var e = x(t.container || t.slide, "img"); e && e.src && r(n, e, t) })) } function r(n, t, e) { e.style("background", n ? 'center/cover no-repeat url("' + t.src + '")' : "", !0), C(t, n ? "none" : "") } return { mount: function () { e.cover && (i(vn, (function (n, t) { r(!0, n, t) })), i([tn, an, cn], o.bind(null, !0))) }, destroy: function () { o(!1) } } }, Scroll: function (n, t, e) { var i, o, r = mn(n), u = r.on, s = r.emit, c = t.Move, a = c.getPosition, f = c.getLimit, l = c.exceededLimit; function d() { var t = a(), e = c.toIndex(t); K(e, 0, n.length - 1) || c.translate(c.shift(t, 0 < e), !0), o && o(), s(pn) } function p() { i && i.cancel() } function h() { i && !i.isPaused() && (p(), d()) } return { mount: function () { u(en, p), u([an, cn], h) }, destroy: p, scroll: function t(r, u, h, g) { var v, m = a(), y = 1; u = u || (v = J(r - m), Y(v / 1.5, 800)), o = h, p(), i = yn(u, d, (function (i) { var o = a(), u = (m + (r - m) * (u = i, (i = e.easingFunc) ? i(u) : 1 - Math.pow(1 - u, 4)) - a()) * y; c.translate(o + u), n.is(Gn) && !g && l() && (y *= .6, J(u) < 10 && (u = l(!1), t(f(!u), 600, null, !0))) }), 1), s("scroll"), i.start() }, cancel: h } }, Drag: function (n, t, e) { var o, r, u, s, c, a, f, l, d, p = mn(n), h = p.on, g = p.emit, v = p.bind, m = p.unbind, y = t.Move, w = t.Scroll, x = t.Controller, E = t.Elements.track, S = (p = t.Direction).resolve, P = p.orient, k = y.getPosition, _ = y.exceededLimit, L = !1; function A() { var n = e.drag; j(!n), c = "free" === n } function C(n) { var t, i; l || (i = e.noDrag, t = F(n), i = !i || !b(n.target, i), f = !1, !i || !t && n.button || (y.isBusy() ? N(n, !0) : (d = t ? E : window, s = u = null, v(d, Jn, z, Un), v(d, Kn, D, Un), y.cancel(), w.cancel(), M(n)))) } function z(t) { var u, c, l; s || g("drag"), (s = t).cancelable && (u = T(t) - T(r), a ? (y.translate(o + u / (L && n.is(Gn) ? 5 : 1)), c = 200 < R(t) - R(r), l = L !== (L = _()), (c || l) && M(t), g("dragging"), f = !0, N(t)) : (l = i(l = e.dragMinThreshold) ? l : { mouse: 0, touch: +l || 10 }, a = J(u) > (F(t) ? l.touch : l.mouse), O() && N(t))) } function D(i) { m(d, Jn, z), m(d, Kn, D); var o, f, l = n.index; s ? ((a || i.cancelable && O()) && (f = o = function (t) { if (n.is(Yn) || !L) { var e = r === s && u || r, i = T(s) - T(e); if (e = R(t) - R(e), t = R(t) - R(s) < 200, e && t) return i / e } return 0 }(i), f = k() + V(f) * G(J(f) * (e.flickPower || 600), c ? 1 / 0 : t.Layout.listSize() * (e.flickMaxPages || 1)), c ? x.scroll(f) : n.is(qn) ? x.go(l + P(V(o))) : x.go(x.toDest(f), !0), N(i)), g("dragged")) : c || k() === y.toPosition(l) || x.go(l, !0), a = !1 } function M(n) { u = r, r = n, o = k() } function I(n) { !l && f && N(n, !0) } function O() { var n = J(T(s) - T(r)); return J(T(s, !0) - T(r, !0)) < n } function T(n, t) { return (F(n) ? n.touches[0] : n)["page" + S(t ? "Y" : "X")] } function R(n) { return n.timeStamp } function F(n) { return "undefined" != typeof TouchEvent && n instanceof TouchEvent } function j(n) { l = n } return { mount: function () { v(E, Jn, X, Un), v(E, Kn, X, Un), v(E, "touchstart mousedown", C, Un), v(E, "click", I, { capture: !0 }), v(E, "dragstart", N), h([tn, an], A) }, disable: j, isDragging: function () { return a } } }, Keyboard: function (n, t, e) { var i, o, r = mn(n), u = r.on, s = r.bind, a = r.unbind, f = n.root, d = t.Direction.resolve; function p() { var n = e.keyboard; n && ("focused" === n ? _(i = f, Bn, 0) : i = window, s(i, Vn, m)) } function h() { a(i, Vn), c(i) && k(i, Bn) } function g() { var n = o; o = !0, B((function () { o = n })) } function v() { h(), p() } function m(t) { o || (t = t.key, (t = l(Qn, t) ? "Arrow" + t : t) === d("ArrowLeft") ? n.go("<") : t === d("ArrowRight") && n.go(">")) } return { mount: function () { p(), u(an, v), u(en, g) }, destroy: h, disable: function (n) { o = n } } }, LazyLoad: function (n, t, e) { var i = mn(n), o = i.on, r = i.off, u = i.bind, s = i.emit, c = "sequential" === e.lazyLoad, a = [], f = 0; function l() { p(), d() } function d() { t.Slides.forEach((function (n) { R(n.slide, "[data-splide-lazy], [data-splide-lazy-srcset]").forEach((function (t) { var i, o, r = z(t, Zn), u = z(t, $n); r === t.src && u === t.srcset || (i = e.classes.spinner, _(o = x(o = t.parentElement, "." + i) || L("span", i, o), Tn, "presentation"), a.push({ o: t, e: n, src: r, srcset: u, c: o }), t.src || C(t, "none")) })) })), c && m() } function p() { f = 0, a = [] } function h() { (a = a.filter((function (t) { var i = e.perPage * ((e.preloadPages || 1) + 1) - 1; return !t.e.isWithin(n.index, i) || g(t) }))).length || r(on) } function g(n) { var t = n.o; v(n.e.slide, On), u(t, "load error", (function (t) { !function (n, t) { var e = n.e; F(e.slide, On), t || (I(n.c), C(n.o, ""), s(vn, n.o, e), s(fn)), c && m() }(n, "error" === t.type) })), ["src", "srcset"].forEach((function (e) { n[e] && (_(t, e, n[e]), k(t, "src" === e ? Zn : $n)) })) } function m() { f < a.length && g(a[f++]) } return { mount: function () { e.lazyLoad && (d(), o(cn, l), c || o([tn, cn, on, pn], h)) }, destroy: p } }, Pagination: function (n, t, i) { var o, r = mn(n), u = r.on, s = r.emit, c = r.bind, a = r.unbind, f = t.Slides, l = t.Elements, d = t.Controller, p = d.hasFocus, h = d.getIndex, g = []; function m() { y(), i.pagination && f.isEnough() && (function () { var t = n.length, e = i.classes, r = i.i18n, u = i.perPage, s = "slider" === i.pagination && l.slider || l.root, a = p() ? t : U(t / u); o = L("ul", e.pagination, s); for (var d = 0; d < a; d++) { var h = L("li", null, o), v = L("button", { class: e.page, type: "button" }, h), m = f.getIn(d).map((function (n) { return n.slide.id })), y = !p() && 1 < u ? r.pageX : r.slideX; c(v, "click", b.bind(null, d)), _(v, Rn, m.join(" ")), _(v, jn, Z(y, d + 1)), g.push({ li: h, button: v, page: d }) } }(), s("pagination:mounted", { list: o, items: g }, w(n.index)), x()) } function y() { o && (I(o), g.forEach((function (n) { a(n.button, "click") })), e(g), o = null) } function b(n) { d.go(">" + n, !0, (function () { var t = f.getAt(d.toIndex(n)); t && ((t = t.slide).setActive && t.setActive() || t.focus({ preventScroll: !0 })) })) } function w(n) { return g[d.toPage(n)] } function x() { var n = w(h(!0)), t = w(h()); n && (F(n.button, zn), k(n.button, Fn)), t && (v(t.button, zn), _(t.button, Fn, !0)), s("pagination:updated", { list: o, items: g }, n, t) } return { items: g, mount: function () { m(), u([an, cn], m), u([en, pn], x) }, destroy: y, getAt: w, update: x } }, Sync: function (n, t, i) { var o = t.Elements.list, r = []; function u() { var t, e; n.splides.forEach((function (t) { var e; t.isParent || (e = t.splide, [n, e].forEach((function (t) { var i = mn(t), o = t === n ? e : n; i.on(en, (function (n, t, e) { o.go(o.is(Yn) ? e : n) })), r.push(i) }))) })), i.isNavigation && ((e = (t = mn(n)).on)(un, a), e(sn, f), e([tn, an], c), _(o, Tn, "menu"), r.push(t), t.emit(gn, n.splides)) } function s() { k(o, Hn), r.forEach((function (n) { n.destroy() })), e(r) } function c() { _(o, Xn, "ttb" !== i.direction ? "horizontal" : null) } function a(t) { n.go(t.index) } function f(n, t) { l(nt, t.key) && (a(n), N(t)) } return { mount: u, destroy: s, remount: function () { s(), u() } } }, Wheel: function (n, t, e) { var i = mn(n).bind; function o(i) { var o; !i.cancelable || (o = i.deltaY) && (n.go((o = o < 0) ? "<" : ">"), e.releaseWheel && !n.state.is(4) && -1 === t.Controller.getAdjacent(o) || N(i)) } return { mount: function () { e.wheel && i(t.Elements.track, "wheel", o, Un) } } } }), et = { type: "slide", speed: 400, waitForTransition: !0, perPage: 1, cloneStatus: !0, arrows: !0, pagination: !0, interval: 5e3, pauseOnHover: !0, pauseOnFocus: !0, resetProgress: !0, keyboard: !0, easing: "cubic-bezier(0.25, 1, 0.5, 1)", drag: !0, direction: "ltr", slideFocus: !0, trimSpace: !0, focusableNodes: "a, button, textarea, input, select, iframe", classes: { slide: En, clone: Sn, arrows: Pn, arrow: kn, prev: _n, next: Ln, pagination: An, page: An + "__page", spinner: n + "__spinner" }, i18n: { prev: "Previous slide", next: "Next slide", first: "Go to first slide", last: "Go to last slide", slideX: "Go to slide %s", pageX: "Go to page %s", play: "Start autoplay", pause: "Pause autoplay" } }; function it(n, t, e) { var i = mn(n).on; return { mount: function () { i([tn, cn], (function () { B((function () { t.Slides.style("transition", "opacity " + e.speed + "ms " + e.easing) })) })) }, start: function (n, e) { var i = t.Elements.track; A(i, "height", j(M(i).height)), B((function () { e(), A(i, "height", "") })) }, cancel: X } } function ot(n, t, e) { var i, o = mn(n).bind, r = t.Move, u = t.Controller, s = t.Elements.list; function c() { a("") } function a(n) { A(s, "transition", n) } return { mount: function () { o(s, "transitionend", (function (n) { n.target === s && i && (c(), i()) })) }, start: function (t, o) { var s = r.toPosition(t, !0), c = r.getPosition(), f = function (t) { var i = e.rewindSpeed; if (n.is(Gn) && i) { var o = u.getIndex(!0), r = u.getEnd(); if (0 === o && r <= t || r <= o && 0 === t) return i } return e.speed }(t); 1 <= J(s - c) && 1 <= f ? (a("transform " + f + "ms " + e.easing), r.translate(s, !0), i = o) : (r.jump(t), o()) }, cancel: c } } return (An = function () { function n(t, e) { this.event = function () { var n = {}; function t(t, i) { e(t, (function (t, e) { var o = n[t]; n[t] = o && o.filter((function (n) { return n.n ? n.n !== i : i || n.t !== e })) })) } function e(n, t) { a(n).join(" ").split(" ").forEach((function (n) { n = n.split("."), t(n[0], n[1]) })) } return { on: function (t, i, o, r) { void 0 === r && (r = 10), e(t, (function (t, e) { n[t] = n[t] || [], d(n[t], { i: t, r: i, t: e, u: r, n: o }).sort((function (n, t) { return n.u - t.u })) })) }, off: t, offBy: function (e) { E(n, (function (n, i) { t(i, e) })) }, emit: function (t) { var e = arguments; (n[t] || []).forEach((function (n) { n.r.apply(n, h(e, 1)) })) }, destroy: function () { n = {} } } }(), this.Components = {}, this.state = function (n) { var t = 1; return { set: function (n) { t = n }, is: function (n) { return l(a(n), t) } } }(), this.splides = [], this.f = {}, this.a = {}, W(t = r(t) ? T(document, t) : t, t + " is invalid."), this.root = t, P(et, n.defaults), P(P(this.f, et), e || {}) } var t = n.prototype; return t.mount = function (n, t) { var e = this, i = this.state, o = this.Components; return W(i.is([1, 5]), "Already mounted!"), i.set(1), this.s = o, this.l = t || this.l || (this.is(qn) ? it : ot), this.a = n || this.a, E(S({}, tt, this.a, { Transition: this.l }), (function (n, t) { n = n(e, o, e.f), (o[t] = n).setup && n.setup() })), E(o, (function (n) { n.mount && n.mount() })), this.emit(tn), v(this.root, "is-initialized"), i.set(3), this.emit("ready"), this }, t.sync = function (n) { return this.splides.push({ splide: n }), n.splides.push({ splide: this, isParent: !0 }), this.state.is(3) && (this.s.Sync.remount(), n.Components.Sync.remount()), this }, t.go = function (n) { return this.s.Controller.go(n), this }, t.on = function (n, t) { return this.event.on(n, t, null, 20), this }, t.off = function (n) { return this.event.off(n), this }, t.emit = function (n) { var t; return (t = this.event).emit.apply(t, [n].concat(h(arguments, 1))), this }, t.add = function (n, t) { return this.s.Slides.add(n, t), this }, t.remove = function (n) { return this.s.Slides.remove(n), this }, t.is = function (n) { return this.f.type === n }, t.refresh = function () { return this.emit(cn), this }, t.destroy = function (n) { void 0 === n && (n = !0); var t = this.event, i = this.state; return i.is(1) ? t.on("ready", this.destroy.bind(this, n), this) : (E(this.s, (function (t) { t.destroy && t.destroy(n) }), !0), t.emit(hn), t.destroy(), n && e(this.splides), i.set(5)), this }, (t = [{ key: "options", get: function () { return this.f }, set: function (n) { var t = this.f; P(t, n), this.state.is(1) || this.emit(an, t) } }, { key: "length", get: function () { return this.s.Slides.getLength(!0) } }, { key: "index", get: function () { return this.s.Controller.getIndex() } }]) && At(n.prototype, t), n }()).defaults = {}, An.STATES = { CREATED: 1, MOUNTED: 2, IDLE: 3, MOVING: 4, DESTROYED: 5 }, An }, "object" == typeof exports && "undefined" != typeof module ? module.exports = t() : "function" == typeof define && define.amd ? define(t) : (n = "undefined" != typeof globalThis ? globalThis : n || self).Splide = t(), document.addEventListener("DOMContentLoaded", (function () { new Splide("#citrus-carousel", { type: "loop", autoplay: !1, arrows: !1, pagination: !0, drag: !0, speed: 1e3, perPage: 1 }).mount() })), document.addEventListener("DOMContentLoaded", (function () { new Splide("#citrus-comments-slider", { type: "region", autoplay: !1, arrows: !0, pagination: !1, drag: !0, speed: 1e3, perPage: 1 }).mount() }));
+  </script>

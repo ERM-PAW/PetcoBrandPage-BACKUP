@@ -1,0 +1,5242 @@
+<style>
+/* Start Splide CSS */
+/* default splide js library style */
+.splide__container {
+  box-sizing: border-box;
+  position: relative;
+}
+
+.splide__list {
+  backface-visibility: hidden;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.splide.is-initialized:not(.is-active) .splide__list {
+  display: block;
+}
+
+.splide__pagination {
+  -ms-flex-align: center;
+  align-items: center;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: 0;
+  pointer-events: none;
+}
+
+.splide__pagination li {
+  display: inline-block;
+  line-height: 1;
+  list-style-type: none;
+  margin: 0;
+  pointer-events: auto;
+}
+
+.splide:not(.is-overflow) .splide__pagination {
+  display: none;
+}
+
+.splide__progress__bar {
+  width: 0;
+}
+
+.splide {
+  position: relative;
+  visibility: hidden;
+}
+
+.splide.is-initialized,
+.splide.is-rendered {
+  visibility: visible;
+}
+
+.splide__slide {
+  backface-visibility: hidden;
+  box-sizing: border-box;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  list-style-type: none !important;
+  margin: 0;
+  position: relative;
+}
+
+.splide__slide img {
+  vertical-align: bottom;
+}
+
+.splide__spinner {
+  animation: splide-loading 1s linear infinite;
+  border: 2px solid #999;
+  border-left-color: transparent;
+  border-radius: 50%;
+  bottom: 0;
+  contain: strict;
+  display: inline-block;
+  height: 20px;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 20px;
+}
+
+.splide__sr {
+  clip: rect(0 0 0 0);
+  border: 0;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.splide__toggle.is-active .splide__toggle__play,
+.splide__toggle__pause {
+  display: none;
+}
+
+.splide__toggle.is-active .splide__toggle__pause {
+  display: inline;
+}
+
+.splide__track {
+  overflow: hidden;
+  position: relative;
+  z-index: 0;
+}
+
+@keyframes splide-loading {
+  0% {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+.splide__track--draggable {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.splide__track--fade > .splide__list > .splide__slide {
+  margin: 0 !important;
+  opacity: 0;
+  z-index: 0;
+}
+
+.splide__track--fade > .splide__list > .splide__slide.is-active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.splide--rtl {
+  direction: rtl;
+}
+
+.splide__track--ttb > .splide__list {
+  display: block;
+}
+
+.splide__arrow {
+  -ms-flex-align: center;
+  -webkit-box-align: center;
+  align-items: center;
+  background: transparent;
+  border: 1px solid #122359;
+  border-radius: 50%;
+  cursor: pointer;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  height: 2.2em;
+  -ms-flex-pack: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  opacity: 1;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 2.2em;
+  z-index: 1;
+}
+
+.splide__arrow svg {
+  fill: #122359;
+  height: 1.2em;
+  width: 1.2em;
+}
+
+.splide__arrow:hover:not(:disabled) {
+  opacity: 1;
+}
+
+.splide__arrow:disabled {
+  opacity: 0;
+}
+
+.splide__arrow:focus-visible {
+  outline: 1px solid #122359;
+  outline-offset: 3px;
+}
+
+.splide__arrow--prev {
+  left: 0em;
+}
+
+.splide__arrow--prev svg {
+  transform: scaleX(-1);
+}
+
+.splide__arrow--next {
+  right: 0em;
+}
+
+.splide.is-focus-in .splide__arrow:focus {
+  outline: 1px solid #122359;
+  outline-offset: 3px;
+}
+
+.splide__pagination {
+  bottom: 0.5em;
+  left: 0;
+  padding: 0 1em;
+  position: absolute;
+  right: 0;
+  z-index: 1;
+}
+
+.splide__pagination__page {
+  background: #ccc;
+  border: 0;
+  border-radius: 50%;
+  display: inline-block;
+  height: 8px;
+  margin: 3px;
+  opacity: 0.7;
+  padding: 0;
+  position: relative;
+  transition: transform 0.2s linear;
+  width: 8px;
+}
+
+.splide__pagination__page.is-active {
+  background: #fff;
+  transform: scale(1.4);
+  z-index: 1;
+}
+
+.splide__pagination__page:hover {
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+.splide__pagination__page:focus-visible {
+  outline: 3px solid #0bf;
+  outline-offset: 3px;
+}
+
+.splide.is-focus-in .splide__pagination__page:focus {
+  outline: 3px solid #0bf;
+  outline-offset: 3px;
+}
+
+.splide__progress__bar {
+  background: #ccc;
+  height: 3px;
+}
+
+.splide__slide {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.splide__slide:focus {
+  outline: 0;
+}
+
+@supports (outline-offset: -3px) {
+  .splide__slide:focus-visible {
+    outline: 3px solid #0bf;
+    outline-offset: -3px;
+  }
+}
+
+@media screen and (-ms-high-contrast: none) {
+  .splide__slide:focus-visible {
+    border: 3px solid #0bf;
+  }
+}
+
+@supports (outline-offset: -3px) {
+  .splide.is-focus-in .splide__slide:focus {
+    outline: 3px solid #0bf;
+    outline-offset: -3px;
+  }
+}
+
+@media screen and (-ms-high-contrast: none) {
+  .splide.is-focus-in .splide__slide:focus {
+    border: 3px solid #0bf;
+  }
+
+  .splide.is-focus-in .splide__track > .splide__list > .splide__slide:focus {
+    border-color: #0bf;
+  }
+}
+
+.splide__toggle {
+  cursor: pointer;
+}
+
+.splide__toggle:focus-visible {
+  outline: 3px solid #0bf;
+  outline-offset: 3px;
+}
+
+.splide.is-focus-in .splide__toggle:focus {
+  outline: 3px solid #0bf;
+  outline-offset: 3px;
+}
+
+.splide__track--nav > .splide__list > .splide__slide {
+  border: 3px solid transparent;
+  cursor: pointer;
+}
+
+.splide__track--nav > .splide__list > .splide__slide.is-active {
+  border: 3px solid #000;
+}
+
+.splide__arrows--rtl .splide__arrow--prev {
+  left: auto;
+  right: 1em;
+}
+
+.splide__arrows--rtl .splide__arrow--prev svg {
+  transform: scaleX(1);
+}
+
+.splide__arrows--rtl .splide__arrow--next {
+  left: 1em;
+  right: auto;
+}
+
+.splide__arrows--rtl .splide__arrow--next svg {
+  transform: scaleX(-1);
+}
+
+.splide__arrows--ttb .splide__arrow {
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.splide__arrows--ttb .splide__arrow--prev {
+  top: 1em;
+}
+
+.splide__arrows--ttb .splide__arrow--prev svg {
+  transform: rotate(-90deg);
+}
+
+.splide__arrows--ttb .splide__arrow--next {
+  bottom: 1em;
+  top: auto;
+}
+
+.splide__arrows--ttb .splide__arrow--next svg {
+  transform: rotate(90deg);
+}
+
+.splide__pagination--ttb {
+  bottom: 0;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  left: auto;
+  padding: 1em 0;
+  right: 0.5em;
+  top: 0;
+}
+/* End Splide CSS */
+
+/* Start Custom CSS */
+/* Universal styles */
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+.citrusNulo__wrapper {
+  width: 100%;
+  max-width: 1440px;
+  margin: auto;
+}
+
+.citrusNulo__wrapper a {
+  text-decoration: none;
+}
+
+.citrusNulo__wrapper h1,
+.citrusNulo__wrapper h2,
+.citrusNulo__wrapper h3,
+.citrusNulo__wrapper h4,
+.citrusNulo__wrapper h5,
+.citrusNulo__wrapper h6 {
+  margin: 0;
+  padding: 0;
+  line-height: initial;
+}
+
+.citrusNulo__wrapper p {
+  margin: 0;
+  padding: 0;
+  line-height: initial;
+}
+
+.citrusNulo__wrapper img {
+  width: 100%;
+}
+
+.citrusNulo__sectionGap {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.citrusNulo__sectionCTAgap {
+  padding-top: 35px;
+  padding-bottom: 40px;
+}
+
+.citrusNulo__sectionTitle {
+  margin: 0;
+  font-family: "PetcoCircularTT-Bold", arial !important;
+  font-weight: 900;
+  font-size: 25px;
+  text-align: center;
+  color: #000000;
+  padding-bottom: 30px !important;
+}
+
+.citrusNulo__sectionSubhead {
+  text-align: center;
+  font-size: 16px;
+  font-family: "PetcoCircularTT-Regular", arial !important;
+  color: black;
+  padding-bottom: 10px !important;
+}
+
+.citrusNulo__commonCTA {
+  color: #fff;
+  text-transform: uppercase;
+  background-color: #001952;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  width: 211px;
+  height: 56px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-family: "PetcoCircularTT-Bold", arial !important;
+  font-weight: 900;
+  margin: 0 auto;
+}
+
+.citrusNulo__desktop_block {
+  display: block;
+}
+
+.citrusNulo__mobile_block {
+  display: none;
+}
+
+/* Overflow Scrollbar */
+.citrusNulo-wrapper::-webkit-scrollbar,
+.citrusNuloDogCat__ProductCarousel-wrapper::-webkit-scrollbar,
+.citrusNulo__RawFoodContainer::-webkit-scrollbar,
+.citrusNulo__productCarousel-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.citrusNulo__productCarousel-wrapper,
+.citrusNulo__RawFoodContainer {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+/* Default CSS */
+
+/* Hero Single Slide */
+.citrusNulo__desktop-version {
+  display: block;
+}
+
+.citrusNulo__mobile-version {
+  display: none;
+}
+
+.citrusNulo__carousel {
+  background-color: #081946;
+  margin-bottom: 40px;
+}
+
+.citrusNulo__carousel_inner {
+  object-fit: cover;
+}
+
+.citrusNulo__carousel_item {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.citrusNulo__carousel_background_image {
+  object-fit: cover;
+  background-color: #081946;
+}
+
+.citrusNulo__carousel_copy {
+  position: absolute;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100%;
+  left: 3%;
+}
+
+.citrusNulo__item_image img {
+  width: 87px;
+}
+
+.citrusNulo__item_details h1 {
+  font-size: 34px;
+  line-height: 1.2em;
+  width: 603px;
+  color: white;
+  padding: 20px 0;
+  font-family: "PetcoCircularTT-Bold", arial !important;
+}
+
+.citrusNulo__heroCTa_container {
+  display: flex;
+  gap: 20px;
+  padding-bottom: 14px;
+}
+
+.citrusNulo__heroCTa {
+  color: #001952;
+  text-transform: uppercase;
+  background-color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  width: 211px;
+  height: 56px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-family: "PetcoCircularTT-Bold", arial !important;
+  font-weight: 900;
+}
+
+@media screen and (max-width: 1320px) {
+  .citrusNulo__item_details h1 {
+    font-size: 26px;
+    line-height: initial;
+    width: 450px;
+  }
+}
+
+@media screen and (max-width: 1180px) {
+  p.citrusNuloDogCat_details {
+    padding: 10px 15px !important;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .citrusNuloDogCat__tab-content {
+    width: 90%;
+    margin: auto;
+  }
+
+  .citrusNulo__item_image img {
+    width: 80px;
+  }
+
+  .citrusNulo__item_details h1 {
+    font-size: 22px;
+    line-height: initial;
+    width: 400px;
+    padding: 15px 0;
+  }
+
+  .citrusNulo__heroCTa {
+    width: 130px;
+    height: 40px;
+  }
+}
+
+@media screen and (max-width: 921px) {
+  .citrusNulo__item_image img {
+    width: 70px;
+  }
+
+  .citrusNulo__item_details h1 {
+    font-size: 18px;
+    line-height: 22px;
+    width: 350px;
+    color: white;
+    padding: 10px 0;
+  }
+
+  .citrusNulo__heroCTa {
+    color: white;
+    text-transform: capitalize;
+    background-color: unset;
+    border: none;
+    border-radius: 0;
+    width: 100%;
+    height: 100%;
+    font-family: "PetcoCircularTT-Bold", arial !important;
+    font-weight: 900;
+    text-decoration: underline;
+  }
+}
+
+@media screen and (max-width: 810px) {
+  p.citrusNuloDogCat_details {
+    padding: 15px 30px !important;
+    min-height: 5em !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .splide__arrow {
+    display: none;
+  }
+
+  .citrusNulo__heroCTa_container {
+    padding-bottom: 8px;
+  }
+
+  .citrusNulo__main-tab-content {
+    padding: 0 0 0 30px;
+  }
+  .citrusNuloDogCat__tab-content {
+    width: 95%;
+    margin: auto;
+  }
+
+  p.citrusNuloDogCat_details {
+    min-height: 4em !important;
+    padding: 10px !important;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .citrusNulo__desktop-version {
+    display: none;
+  }
+
+  .citrusNulo__mobile-version {
+    display: block;
+  }
+
+  .citrusNulo__carousel_copy {
+    height: unset;
+  }
+
+  .citrusNulo__carousel_background_image img {
+    padding-top: 40%;
+  }
+
+  .citrusNulo__carousel_copy {
+    height: unset;
+    align-items: center;
+    width: 100%;
+    top: 6%;
+    left: unset;
+  }
+
+  .citrusNulo__item_image img {
+    width: 87px;
+  }
+
+  .citrusNulo__item_details h1 {
+    text-align: center;
+    width: 364px;
+    font-size: 38px;
+    line-height: 42px;
+    padding: 25px 0;
+  }
+
+  .citrusNulo__heroCTa {
+    color: white;
+    text-transform: capitalize;
+    background-color: unset;
+    border: none;
+    border-radius: 0;
+    width: 100%;
+    height: 100%;
+    font-family: "PetcoCircularTT-Bold", arial !important;
+    font-weight: 900;
+    text-decoration: underline;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .citrusNulo__carousel_background_image img {
+    padding-top: 50%;
+  }
+
+  .citrusNulo__carousel_copy {
+    top: 3%;
+  }
+
+  .citrusNulo__item_image img {
+    width: 87px;
+  }
+
+  .citrusNulo__item_details h1 {
+    text-align: center;
+    width: 225px;
+    font-size: 22px;
+    line-height: 26px;
+    padding: 25px 0;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .citrusNulo__carousel_background_image img {
+    padding-top: 60%;
+  }
+
+  .citrusNulo__carousel_copy {
+    top: 6%;
+  }
+
+  .citrusNulo__item_image img {
+    width: 75px;
+  }
+
+  .citrusNulo__item_details h1 {
+    line-height: 28px;
+    text-align: center;
+    width: 245px;
+    font-size: 24px;
+  }
+  p.citrusNuloDogCat_details {
+    min-height: 4em !important;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .citrusNulo__carousel_background_image img {
+    padding-top: 65%;
+  }
+  .citrusNulo__carousel_copy {
+    top: 5%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .citrusNulo__carousel_background_image img {
+    padding-top: 60%;
+  }
+
+  .citrusNulo__item_details h1 {
+    line-height: 20px;
+    font-size: 17px;
+  }
+
+  .citrusNulo__sectionTitle {
+    font-size: 22px;
+  }
+}
+
+/* End Hero Single Slide */
+
+/* Product Carousel section */
+/* tab button style */
+.citrusNulo__productCarousel-wrapper,
+.citrusNuloDogCat__ProductCarousel-wrapper {
+  width: 100%;
+  max-width: 1273px;
+  margin: auto;
+  overflow-x: auto;
+}
+
+.citrusNuloTabId,
+.citrusNuloDogCat_ID {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.citrusNulo__tab-area {
+  overflow: hidden;
+}
+
+.citrusNulo__tab-container {
+  max-width: 1273px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.citrusNuloDogCat__tab-container.citrusNuloDogCat__main-tab-content {
+  max-width: 1273px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.splide__pagination {
+  display: none;
+}
+
+.citrusNulo__Product {
+  display: none;
+}
+
+.citrusNulo__Product img {
+  object-fit: contain;
+}
+
+.citrusNuloDogCat__Product {
+  display: none;
+}
+
+.citrusNuloDogCat__Product img {
+  object-fit: contain;
+}
+
+.citrusNulo-tab-cardImg img {
+  max-width: 100%;
+  max-height: 175px;
+}
+
+.citrusNulo-tab-card > a {
+  text-decoration: none;
+  color: #000;
+}
+
+.citrusNulo-tab-card p {
+  font-family: "PetcoCircularTT-Regular", arial !important;
+  color: #333333;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: left;
+  margin: 20px 0 10px;
+  text-decoration: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  max-height: 4em;
+  /*standard size is 4em*/
+  font-weight: 500;
+}
+
+.citrusNuloDogCat__Product .citrusNulo-tab-card,
+.citrusNuloDogCat__Product .citrusNulo-tab-card p {
+  text-align: center;
+}
+
+.citrusNuloDogCat__cardBody {
+  padding-top: 20px;
+}
+
+.citrusNuloDogCat__cardBody h3 {
+  font-family: "PetcoCircularTT-Bold", arial !important;
+}
+
+.citrusNuloDogCat__cardBody p {
+  margin-top: 10px;
+}
+
+p.citrusNuloDogCat_details {
+  margin: auto;
+  padding: 10px 35px;
+  -webkit-line-clamp: 4;
+  line-clamp: unset;
+  min-height: 4em;
+}
+
+.citrusNulo__productCTA {
+  border: 0;
+  padding-left: 0;
+  background: none;
+  text-decoration: underline;
+  font-family: "PetcoCircularTT-Bold", arial !important;
+  color: #001952;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.citrusNuloDogCat__ProductCTA {
+  border: 0;
+  background: none;
+  text-decoration: underline;
+  font-family: "PetcoCircularTT-Bold", arial !important;
+  color: #001952;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.citrusNulo__Products {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.citrusNuloDogCat__Products {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  overflow: hidden;
+  max-width: 1273px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.citrusNulo-tab-cardImg {
+  padding: 0 10px;
+  margin: auto;
+}
+
+.citrusTabShow {
+  display: block;
+}
+
+.citrusNulo__groupProductShot {
+  border: 1px solid #001952;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+.citrusNulo__groupProductShot__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin: auto;
+}
+
+.citrusNulo__groupProductShotImage img {
+  max-height: 144px;
+  padding: 20px 0;
+}
+
+.groupProductCTA {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  gap: 20px;
+  margin: auto;
+}
+
+.groupCtaDimention {
+  display: flex;
+  flex-direction: column;
+  font-weight: 900;
+}
+
+.groupCtaDimention p {
+  line-height: 18px;
+  font-family: "PetcoCircularTT-Bold", arial !important;
+  color: #001952;
+  margin-top: 0;
+  text-decoration: underline;
+}
+
+.groupCtaArrow p {
+  font-size: 34px;
+  margin-top: 0;
+}
+
+.citrusNulo__tab_item,
+.citrusNuloDogCat__tab_item {
+  text-transform: uppercase;
+  padding: 12px 20px;
+  margin: 0px 10px;
+  font-size: 14px;
+  text-decoration: none;
+  background-color: transparent;
+  border: none;
+  border-bottom: 10px solid transparent;
+  cursor: pointer;
+  color: #9b9b9b;
+  font-family: "PetcoCircularTT-Bold", arial !important;
+  font-weight: 700;
+  line-height: 1.3;
+  text-align: center;
+}
+
+.citrusNulo__tab_item.citrusNulo__active_tab,
+.citrusNuloDogCat__tab_item.citrusNuloDogCat__active_tab {
+  color: #001952;
+  border-bottom: 10px solid #001952;
+  border-radius: 0;
+}
+
+.citrusNuloTabId,
+.citrusNuloDogCat_ID {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #021b4e;
+}
+
+#citrusNulo__boringToBon {
+  padding-bottom: 10px !important;
+}
+
+/* hide arrow */
+.citrusNulo_hide_arrow .splide__arrows {
+  display: none;
+}
+
+@media all and (max-width: 1301px) {
+  .citrusNulo__tab-container {
+    width: 90%;
+  }
+}
+
+@media screen and (min-width: 922px) and (max-width: 1120px) {
+  .citrusNulo__commonCTA {
+    width: 170px;
+    height: 40px;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .citrusNulo__commonCTA {
+    width: 150px;
+    height: 40px;
+  }
+
+  .citrusNulo__productCarousel-wrapper {
+    width: max-content;
+  }
+
+  /* Lifestyle Image */
+  .citrusNulo_Lifestyle_text-block h4 {
+    padding: 3.5% !important;
+    font-size: 12px !important;
+    line-height: 12px !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* product section */
+  .citrusNuloTabId {
+    width: max-content;
+    margin: 0 auto 20px;
+  }
+
+  .citrusNuloDogCat_ID {
+    margin: 0 auto 20px;
+  }
+
+  .citrusNulo__tab-container {
+    width: 100%;
+  }
+
+  #citrusNulo__boringToBon {
+    padding-bottom: 10px !important;
+  }
+
+  .citrusNulo__commonCTA {
+    font-size: 16px;
+    color: #001952;
+    text-transform: capitalize;
+    background: none;
+    padding: 0;
+    text-decoration: underline !important;
+    font-family: "PetcoCircularTT-Bold", arial !important;
+    font-weight: 900;
+    margin: 0 auto;
+    width: fit-content;
+    height: fit-content;
+  }
+}
+
+@media all and (max-width: 575px) {
+  .citrusNulo__Product {
+    max-width: 195px;
+  }
+}
+
+@media all and (max-width: 375px) {
+  #citrusNulo__boringToBon {
+    width: 214px;
+    margin: auto;
+    padding-bottom: 10px !important;
+  }
+
+  #citrusNulo__mouthwatering {
+    width: 332px;
+    margin: auto;
+  }
+}
+
+/* custom css */
+.splide__arrow:disabled {
+  opacity: 0;
+}
+
+/* Food Item section */
+#nulo_different {
+  padding-top: 0;
+}
+
+#citrusNulo__RawFood button {
+  font-family: "PetcoCircularTT-Bold", arial !important;
+  font-size: 16px;
+  color: #fff;
+  text-transform: uppercase;
+  background-color: #001952;
+  border: none;
+  border-radius: 5px;
+  padding: 22px 60px 18px;
+  cursor: pointer;
+}
+
+#citrusNulo__RawFood {
+  text-align: center;
+  background-color: #f5f5f5;
+  padding-top: 40px;
+}
+
+.citrusNulo__RawFoodContainer {
+  width: 1384px;
+  max-width: 100%;
+  margin: auto;
+  overflow: auto;
+  text-align: center;
+}
+
+.citrusNulo__category {
+  width: 1384px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  column-gap: 20px;
+  text-align: center;
+}
+
+.citrusNulo__card {
+  width: 254px;
+  text-align: center;
+}
+
+.citrusNulo__card img {
+  width: 104px;
+  max-width: 100%;
+  text-align: center;
+}
+
+.citrusNulo__card-title h3 {
+  margin: 20px 0;
+  font-family: "PetcoCircularTT-Bold", arial !important;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+  color: #000000;
+}
+
+.citrusNulo__card-title p {
+  margin: auto;
+  font-family: "PetcoCircularTT-Regular", arial !important;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #000;
+}
+
+p.citrusNulo__card-individual_width {
+  width: 223px;
+  margin: auto;
+}
+
+/* Lifestyle Image Section */
+.citrusNulo__lifestyle_image_section {
+  padding: 40px 0;
+}
+
+.citrusNulo__lifestyle_image_row {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  background-color: #f5f5f5;
+}
+
+.order-1 {
+  order: 1;
+}
+
+.order-2 {
+  order: 2;
+}
+
+.citrusNulo_Lifestyle_container {
+  position: relative;
+}
+
+.citrusNulo_Lifestyle_img img {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.citrusNulo_Lifestyle_text-block {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  color: #001952;
+  border-radius: 0 10px 0 0;
+  font-size: 16px;
+  line-height: 20px;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+}
+
+.citrusNulo_Lifestyle_text-block h4 {
+  margin: auto;
+  padding: 20px;
+  font-size: 14px;
+  line-height: 16px;
+  color: white;
+  font-family: "PetcoCircularTT-Bold", arial !important;
+}
+
+.citrusNulo_lifestyle_image_text {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  margin: auto;
+}
+
+.citrusNulo_lifestyle_image_text h3 {
+  margin: 0;
+  font-size: 25px;
+  line-height: 32px;
+  font-family: "PetcoCircularTT-Bold", arial !important;
+}
+
+.citrusNulo_lifestyle_image_text p {
+  font-size: 16px;
+  line-height: 22px;
+  margin-top: 20px;
+  margin-bottom: 45px;
+  font-family: "PetcoCircularTT-Regular", arial !important;
+}
+
+.citrusNulo__lifestyle_image_section .citrusNulo__btn_alternative {
+  margin: 0 auto;
+}
+
+/*------------------*/
+/* Responsive CSS */
+
+@media all and (max-width: 320px) {
+  /* lifestyle_image Grade Section */
+  #citusHonest__lifestyle_imageDesc {
+    width: 250px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .citrusNulo_Lifestyle_text-block h4 {
+    padding-bottom: 8% !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* Common Style */
+  .citrusNulo__desktop_block {
+    display: none;
+  }
+
+  .citrusNulo__mobile_block {
+    display: block;
+  }
+
+  .citrusNulo__commonCTA {
+    color: #001952;
+    text-transform: capitalize;
+    background-color: unset;
+    border: none;
+    border-radius: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: underline;
+    font-family: "PetcoCircularTT-Bold", arial !important;
+    font-weight: 900;
+    margin: 0 auto;
+  }
+
+  /* Food Item section */
+  .citrusNulo__category {
+    width: 1200px;
+  }
+
+  /* lifestyle_image Grade Section */
+  /* .citrusNulo__lifestyle_image_section {
+    margin-bottom: 40px !important;
+  } */
+
+  .citrusNulo__lifestyle_image_container {
+    background-color: #fff;
+    height: 100%;
+  }
+
+  .citrusNulo__lifestyle_image_row {
+    grid-template-rows: 1fr;
+    grid-template-columns: unset;
+  }
+
+  .order-1 {
+    order: 2;
+  }
+
+  .order-2 {
+    order: 1;
+  }
+
+  .citrusNulo_lifestyle_image_text {
+    width: 100%;
+    min-height: 240px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .citrusNulo_lifestyle_image_text p {
+    margin-bottom: 30px;
+  }
+
+  .citrusNulo_Lifestyle_img {
+    text-align: center;
+    width: 100%;
+  }
+
+  .citrusNulo_Lifestyle_text-block {
+    border-radius: 10px 10px 0 0;
+  }
+
+  .citrusNulo_Lifestyle_container .citrusNulo_Lifestyle_text-block {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+  }
+
+  .citrusNulo_Lifestyle_text-block h4 {
+    margin: auto;
+    padding-bottom: 4%;
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  /* lifestyle_image Grade Section */
+
+  .citrusNulo_lifestyle_image_text {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+  }
+
+  .citrusNulo_Lifestyle_img {
+    text-align: center;
+    width: 100%;
+  }
+
+  .citrusNulo_lifestyle_image_text p {
+    margin-top: 10px;
+    margin-bottom: 22px;
+    padding: 0 20px;
+  }
+
+  .citrusNulo_tablet_br {
+    display: block;
+  }
+
+  .citrusNulo_head_title_br_mob {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  /* Common Style */
+  /* .splide__arrows {
+    display: none;
+  } */
+
+  /* Food Item section */
+  .citrusNulo__category {
+    width: 1140px;
+  }
+
+  /* lifestyle_image Grade Section */
+  .citrusNulo_Lifestyle_text-block h4 {
+    width: 294px;
+    margin: auto;
+    padding-bottom: 15px;
+  }
+
+  .citrusNulo__lifestyle_image_row {
+    padding: 0;
+  }
+
+  #lifestyle_imageDesktopImage {
+    display: none;
+  }
+
+  #lifestyle_imageMobileImage {
+    display: block;
+  }
+
+  .citrusNulo_Lifestyle_text-block h4 {
+    padding-bottom: 5% !important;
+  }
+
+  .citrusNulo_lifestyle_image_text p {
+    width: 335px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  /* Food Item section */
+  .citrusNulo__category {
+    width: 1080px !important;
+    column-gap: 0;
+  }
+
+  /* Lifestyle Image Section */
+  .citrusNulo_lifestyle_image_text {
+    min-height: 214px;
+  }
+  .citrusNulo_lifestyle_image_text h3 {
+    width: 282px;
+  }
+  .citrusNulo_lifestyle_image_text p {
+    margin-bottom: 25px;
+  }
+  .citrusNulo_Lifestyle_text-block h4 {
+    padding-bottom: 5% !important;
+  }
+}
+/* End Custom CSS */
+</style>
+
+<!-- Landing Page Wrapper -->
+<main class="citrusNulo__wrapper">
+  <!-- Hero Single Slide -->
+  <section class="citrusNulo__carousel">
+    <div class="citrusNulo__carousel_inner">
+      <div class="citrusNulo__carousel_item">
+        <div class="citrusNulo__carousel_background_image">
+          <!-- Background Image Desktop -->
+          <img class="citrusNulo__desktop-version" src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/ Nulo_Desktop_Hero"
+            alt="A man pushing weights with his dog next to him. Ingredients on a countertop. A woman holding her cat." />
+          <!-- Background Image Mobile -->
+          <img class="citrusNulo__mobile-version" src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/ Nulo_Mobile_Hero"
+            alt="A man pushing weights with his dog next to him. Ingredients on a countertop. A woman holding her cat." />
+        </div>
+        <div class="citrusNulo__carousel_copy">
+          <!-- Logo -->
+          <div class="citrusNulo__item_image">
+            <img class="citrusNulo__logo_common" src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/ Nulo_Logo_Light" alt="" />
+          </div>
+
+          <div class="citrusNulo__item_details">
+            <h1>MORE FLAVOR, MORE NUTRIENTS, MORE HAPPY DAYS</h1>
+          </div>
+
+          <div class="citrusNulo__heroCTa_container">
+            <a href="https://www.petco.com/shop/en/petcostore/brand/nulo/dog" manual_cm_sp="sponsoredbrandpage:nulo :heropov:1:shopdog:shopdog" onclick="clickTrackLink(this);">
+              <div class="citrusNulo__heroCTa">Shop Dog</div>
+            </a>
+            <a href="https://www.petco.com/shop/en/petcostore/brand/nulo/cat" manual_cm_sp="sponsoredbrandpage:nulo :heropov:2:shopcat:shopcat" onclick="clickTrackLink(this);">
+              <div class="citrusNulo__heroCTa">Shop Cat</div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+  <!-- End Hero Single Slide -->
+
+  <!-- Product Carousel Tab section -->
+  <section class="citrusNulo__tab-area">
+    <div class="citrusNulo__tab-container">
+      <h2 class="citrusNulo__sectionTitle">
+        Explore Nulo bestsellers
+      </h2>
+      <!-- product tab main content -->
+      <div class="citrusNulo__main-tab-content">
+        <!-- tab button -->
+        <div class="citrusNulo__productCarousel-wrapper">
+          <div id="citrusNuloTabId" class="citrusNuloTabId">
+            <button class="citrusNulo__tab_item" onclick="filterProducts('nulo-CatFood-product')">
+              CAT FOOD
+            </button>
+            <button class="citrusNulo__tab_item" onclick="filterProducts('nulo-ToppersForCatsFood-product')">
+              TOPPERS FOR CATS
+            </button>
+            <button class="citrusNulo__tab_item" onclick="filterProducts('nulo-CatTreatsFood-product')">
+              CAT TREATS
+            </button>
+            <!-- <button class="citrusNulo__tab_item" onclick="filterProducts('nulo-CatTreatsFood-product')">
+              CAT TREATS
+            </button> -->
+            <button class="citrusNulo__tab_item citrusNulo__active_tab" onclick="filterProducts('nulo-DogFood-product')">
+              Dog FOOD
+            </button>
+            <button class="citrusNulo__tab_item" onclick="filterProducts('nulo-ToppersForDogsFood-product')">
+              TOPPERS FOR DOGS
+            </button>
+          </div>
+        </div>
+        <!-- End tab button -->
+        
+        <!-- product content -->
+        <div class="citrusNulo-section__tab-content">
+          <!-- Cat FOOD RAW product row 01 -->
+          <div id="nulo-CatFood-product" class="splide citrusNulo__Products">
+            <div class="splide__track">
+              <div class="splide__list">
+                <!-- tab item 01-->
+                <div class="citrusNulo__Product nulo-CatFood-product splide__slide">
+                  <div class="citrusNulo-tab-card">
+                    <a href="https://www.petco.com/shop/en/petcostore/product/nulo-medalseries-grain-free-chicken-and-cod-adult-hairball-management-dry-cat-food-12-lbs-3745542" manual_cm_sp="sponsoredbrandpage:nulo:catfood:1:medalseriesgrainfreechickenandcodadulthairballmanagementdrycatfood:shopnow" onclick="clickTrackLink(this);">
+                      <div class="citrusNulo-tab-cardImg">
+                        <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/ Nulo_Cat_Food_1_3745542" alt="" />
+                      </div>
+                      <div class="citrusNulo-tab-cardBody">
+                        <p>
+                          Nulo MedalSeries Grain-Free Chicken & Cod Adult Hairball Management Dry Cat Food
+                        </p>
+                        <button class="citrusNulo__productCTA">
+                          Shop Now
+                        </button>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <!-- tab item -->
+
+                <!-- tab item 02-->
+                <div class="citrusNulo__Product nulo-CatFood-product splide__slide">
+                  <div class="citrusNulo-tab-card">
+                    <a href="https://www.petco.com/shop/en/petcostore/product/nulo-medalseries-digestive-health-chicken-and-whitefish-adult-dry-cat-food-10-lbs-3745420" manual_cm_sp="sponsoredbrandpage:nulo:catfood:2:medalseriesgrainfreechickenandwhitefishadultdrycatfood:shopnow" onclick="clickTrackLink(this);">
+                      <div class="citrusNulo-tab-cardImg">
+                        <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/ Nulo_Cat_Food_2_3745420" alt="" />
+                      </div>
+                      <div class="citrusNulo-tab-cardBody">
+                        <p>
+                          Nulo MedalSeries Digestive Health Chicken & Whitefish Adult Dry Cat Food
+                        </p>
+                        <button class="citrusNulo__productCTA">
+                          Shop Now
+                        </button>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <!-- tab item -->
+
+                <!-- tab item 03-->
+                <div class="citrusNulo__Product nulo-CatFood-product splide__slide">
+                  <div class="citrusNulo-tab-card">
+                    <a href="https://www.petco.com/shop/en/petcostore/product/nulo-medalseries-grain-free-turkey-and-chicken-indoor-dry-cat-food-12-lbs-3745091" manual_cm_sp="sponsoredbrandpage:nulo:catfood:3:medalseriesgrainfreeturkeychickenindoordrycatfood:shopnow" onclick="clickTrackLink(this);">
+                      <div class="citrusNulo-tab-cardImg">
+                        <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/ Nulo_Cat_Food_3_3745091" alt="" />
+                      </div>
+                      <div class="citrusNulo-tab-cardBody">
+                        <p>
+                          Nulo MedalSeries Grain-Free Turkey & Chicken Indoor Dry Cat Food
+                        </p>
+                        <button class="citrusNulo__productCTA">
+                          Shop Now
+                        </button>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <!-- tab item -->
+
+                <!-- tab item 04-->
+                <div class="citrusNulo__Product nulo-CatFood-product splide__slide">
+                  <div class="citrusNulo-tab-card">
+                    <a href="https://www.petco.com/shop/en/petcostore/product/nulo-medalseries-grain-free-turkey-and-cod-dry-cat-and-kitten-food-12-lbs-3744831" manual_cm_sp="sponsoredbrandpage:nulo:catfood:4:medalseriesgrainfreeturkeycoddrycat&kittenfood:shopnow" onclick="clickTrackLink(this);">
+                      <div class="citrusNulo-tab-cardImg">
+                        <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/ Nulo_Cat_Food_4_3744831" alt="" />
+                      </div>
+                      <div class="citrusNulo-tab-cardBody">
+                        <p>
+                          Nulo MedalSeries Grain-Free Turkey & Cod Dry Cat & Kitten Food
+                        </p>
+                        <button class="citrusNulo__productCTA">
+                          Shop Now
+                        </button>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <!-- tab item -->
+
+                <!-- tab item 05-->
+                <div class="citrusNulo__Product nulo-CatFood-product splide__slide">
+                  <div class="citrusNulo-tab-card">
+                    <a href="https://www.petco.com/shop/en/petcostore/product/nulo-medalseries-chicken-and-salmon-wet-cat-food-28-oz-case-of-12-3746422" manual_cm_sp="sponsoredbrandpage:nulo:catfood:5:medalserieschickensalmonwetcatfood:shopnow" onclick="clickTrackLink(this);">
+                      <div class="citrusNulo-tab-cardImg">
+                        <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/ Nulo_Cat_Food_5_3746422" alt="" />
+                      </div>
+                      <div class="citrusNulo-tab-cardBody">
+                        <p>
+                          Nulo MedalSeries Chicken & Salmon Wet Cat Food
+                        </p>
+                        <button class="citrusNulo__productCTA">
+                          Shop Now
+                        </button>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <!-- tab item -->
+
+                <!-- tab item 06-->
+                <div class="citrusNulo__Product nulo-CatFood-product splide__slide">
+                  <div class="citrusNulo-tab-card">
+                    <a href="https://www.petco.com/shop/en/petcostore/product/nulo-medalseries-grain-free-salmon-and-mackerel-wet-cat-food-125-oz-case-of-12-3746692" manual_cm_sp="sponsoredbrandpage:nulo:catfood:6:medalseriesgrainfreesalmonmackerelwetcatfood:shopnow" onclick="clickTrackLink(this);">
+                      <div class="citrusNulo-tab-cardImg">
+                        <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/ Nulo_Cat_Food_6_3746692" alt="" />
+                      </div>
+                      <div class="citrusNulo-tab-cardBody">
+                        <p>
+                          Nulo MedalSeries Grain-Free Salmon & Mackerel Wet Cat Food
+                        </p>
+                        <button class="citrusNulo__productCTA">
+                          Shop Now
+                        </button>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <!-- tab item -->
+
+                <!-- tab item 07-->
+                <div class="citrusNulo__Product nulo-CatFood-product splide__slide">
+                  <div class="citrusNulo-tab-card">
+                    <a href="https://www.petco.com/shop/en/petcostore/product/nulo-medalseries-grain-free-chicken-and-herring-wet-cat-food-55-oz-3745403" manual_cm_sp="sponsoredbrandpage:nulo:catfood:7:medalseriesgrainfreechickenherringwetcatfood:shopnow" onclick="clickTrackLink(this);">
+                      <div class="citrusNulo-tab-cardImg">
+                        <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/ Nulo_Cat_Food_7_3745403" alt="" />
+                      </div>
+                      <div class="citrusNulo-tab-cardBody">
+                        <p>
+                          Nulo MedalSeries Grain-Free Chicken & Herring Wet Cat Food
+                        </p>
+                        <button class="citrusNulo__productCTA">
+                          Shop Now
+                        </button>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <!-- tab item -->
+
+                <!-- tab item 08-->
+                <div class="citrusNulo__Product nulo-CatFood-product splide__slide">
+                  <div class="citrusNulo-tab-card">
+                    <a href="https://www.petco.com/shop/en/petcostore/product/nulo-medalseries-grain-free-minced-beef-and-mackerel-wet-cat-food-3-oz-3745041" manual_cm_sp="sponsoredbrandpage:nulo:catfood:8:medalseriesgrainfreemincedbeefmackerelwetcatfood:shopnow" onclick="clickTrackLink(this);">
+                      <div class="citrusNulo-tab-cardImg">
+                        <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/ Nulo_Cat_Food_8_3745041" alt="" />
+                      </div>
+                      <div class="citrusNulo-tab-cardBody">
+                        <p>
+                          Nulo MedalSeries Grain-Free Minced Beef & Mackerel Wet Cat Food
+                        </p>
+                        <button class="citrusNulo__productCTA">
+                          Shop Now
+                        </button>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <!-- tab item -->
+
+                <!-- tab item 09-->
+                <div class="citrusNulo__Product nulo-CatFood-product splide__slide">
+                  <div class="citrusNulo-tab-card">
+                    <a href="https://www.petco.com/shop/en/petcostore/product/nulo-medalseries-beef-and-sardine-silky-mousse-wet-cat-food-28-oz-case-of-24-3746748" manual_cm_sp="sponsoredbrandpage:nulo:catfood:9:medalseriesbeefsardinesilkymoussewetcatfood:shopnow" onclick="clickTrackLink(this);">
+                      <div class="citrusNulo-tab-cardImg">
+                        <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/ Nulo_Cat_Food_9_3746748" alt="" />
+                      </div>
+                      <div class="citrusNulo-tab-cardBody">
+                        <p>
+                          Nulo MedalSeries Beef & Sardine Silky Mousse Wet Cat Food
+                        </p>
+                        <button class="citrusNulo__productCTA">
+                          Shop Now
+                        </button>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <!-- tab item -->
+
+                <!-- tab item 10-->
+                <div class="citrusNulo__Product nulo-CatFood-product splide__slide">
+                  <div class="citrusNulo-tab-card">
+                    <a href="https://www.petco.com/shop/en/petcostore/product/nulo-medalseries-signature-stew-chicken-duck-and-pumpkin-wet-cat-food-28-oz-3744700" manual_cm_sp="sponsoredbrandpage:nulo:catfood:10:medalseriessignaturestewchickenduckpumpkinwetcatfood:shopnow" onclick="clickTrackLink(this);">
+                      <div class="citrusNulo-tab-cardImg">
+                        <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/ Nulo_Cat_Food_10_3744700" alt="" />
+                      </div>
+                      <div class="citrusNulo-tab-cardBody">
+                        <p>
+                          Nulo MedalSeries Signature Stew Chicken, Duck & Pumpkin Wet Cat Food
+                        </p>
+                        <button class="citrusNulo__productCTA">
+                          Shop Now
+                        </button>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <!-- tab item -->
+
+                <!-- tab item Group Product Shots -->
+                <div class="citrusNulo__Product nulo-CatFood-product splide__slide citrusNulo__groupProductShot">
+                  <div class="citrusNulo-tab-card citrusNulo__groupProductShot__item">
+                    <a href="https://www.petco.com/shop/en/petcostore/brand/nulo/cat/cat-food" manual_cm_sp="sponsoredbrandpage:nulo:catfood:11:shopallcatfood:shopnow" onclick="clickTrackLink(this);">
+                      <div class="citrusNulo-tab-cardImg citrusNulo__groupProductShotImage">
+                        <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/ Nulo_Cat_Group_ProductShots" alt="" />
+                      </div>
+                      <div class="citrusNulo-tab-cardBody">
+                        <button class="citrusNulo__productCTA groupProductCTA">
+                          <div class="groupCtaDimention">
+                            <p>SHOP ALL<br> 
+                            CAT FOOD</p>
+                          </div> 
+                          <div class="groupCtaArrow">
+                            <p>&#8594</p>
+                          </div>
+                        </button>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <!-- tab item Group Product Shots -->
+
+              </div>
+            </div>
+          </div>
+          <!-- End Cat FOOD RAW product row 01 -->
+
+          <!-- TOPPERS FOR CATS Food RAW product row 02 -->
+          <div id="nulo-ToppersForCatsFood-product" class="splide citrusNulo__Products">
+            <div class="splide__track">
+              <div class="splide__list">
+                <!-- tab item 01-->
+                <div class="citrusNulo__Product nulo-ToppersForCatsFood-product splide__slide">
+                  <div class="citrusNulo-tab-card">
+                    <a href="https://www.petco.com/shop/en/petcostore/product/nulo-medalseries-chunky-broth-variety-pack-wet-cat-food-28-oz-count-of-12-3745382" manual_cm_sp="sponsoredbrandpage:nulo:toppersforcats:1:medalserieschunkybrothvarietypackwetcatfood:shopnow" onclick="clickTrackLink(this);">
+                      <div class="citrusNulo-tab-cardImg">
+                        <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/ Nulo_Toppers_For_Cats_Food_1" alt="" />
+                      </div>
+                      <div class="citrusNulo-tab-cardBody">
+                        <p>
+                          Nulo MedalSeries Chunky Broth Variety Pack Wet Cat Food
+                        </p>
+                        <button class="citrusNulo__productCTA">
+                          Shop Now
+                        </button>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <!-- tab item -->
+
+                <!-- tab item 02-->
+                <div class="citrusNulo__Product nulo-ToppersForCatsFood-product splide__slide">
+                  <div class="citrusNulo-tab-card">
+                    <a href="https://www.petco.com/shop/en/petcostore/product/nulo-medalseries-grain-free-sardine-and-beef-in-broth-wet-cat-food-28-oz-3745075" manual_cm_sp="sponsoredbrandpage:nulo:toppersforcats:2:medalseriesgrainfreesardine&beefinbrothwetcatfood:shopnow" onclick="clickTrackLink(this);">
+                      <div class="citrusNulo-tab-cardImg">
+                        <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/ Nulo_Toppers_For_Cats_Food_2" alt="" />
+                      </div>
+                      <div class="citrusNulo-tab-cardBody">
+                        <p>
+                          Nulo MedalSeries Grain-Free Sardine & Beef in Broth Wet Cat Food
+                        </p>
+                        <button class="citrusNulo__productCTA">
+                          Shop Now
+                        </button>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <!-- tab item -->
+
+                <!-- tab item 03-->
+                <div class="citrusNulo__Product nulo-ToppersForCatsFood-product splide__slide">
+                  <div class="citrusNulo-tab-card">
+                    <a href="https://www.petco.com/shop/en/petcostore/product/nulo-medalseries-grain-free-chicken-and-mackerel-in-broth-wet-cat-food-28-oz-3745323" manual_cm_sp="sponsoredbrandpage:nulo:toppersforcats:3:medalseriesgrain-freechickenmackerelinbrothwetcatfood:shopnow" onclick="clickTrackLink(this);">
+                      <div class="citrusNulo-tab-cardImg">
+                        <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/ Nulo_Toppers_For_Cats_Food_3" alt="" />
+                      </div>
+                      <div class="citrusNulo-tab-cardBody">
+                        <p>
+                          Nulo MedalSeries Grain-Free Chicken & Mackerel in Broth Wet Cat Food
+                        </p>
+                        <button class="citrusNulo__productCTA">
+                          Shop Now
+                        </button>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <!-- tab item -->
+
+                <!-- tab item 04-->
+                <div class="citrusNulo__Product nulo-ToppersForCatsFood-product splide__slide">
+                  <div class="citrusNulo-tab-card">
+                    <a href="https://www.petco.com/shop/en/petcostore/product/nulo-medalseries-grain-free-chicken-yellowfin-tuna-and-duck-in-broth-wet-cat-food-28-oz-3745315" manual_cm_sp="sponsoredbrandpage:nulo:toppersforcats:4:medalseriesgrainfreechickenyellowfintunaduckinbrothwetcatfood:shopnow" onclick="clickTrackLink(this);">
+                      <div class="citrusNulo-tab-cardImg">
+                        <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/ Nulo_Toppers_For_Cats_Food_4" alt="" />
+                      </div>
+                      <div class="citrusNulo-tab-cardBody">
+                        <p>
+                          Nulo MedalSeries Grain-Free Chicken, Yellowfin Tuna & Duck in Broth Wet Cat Food
+                        </p>
+                        <button class="citrusNulo__productCTA">
+                          Shop Now
+                        </button>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <!-- tab item -->
+
+                <!-- tab item 05-->
+                <div class="citrusNulo__Product nulo-ToppersForCatsFood-product splide__slide">
+                  <div class="citrusNulo-tab-card">
+                    <a href="https://www.petco.com/shop/en/petcostore/product/nulo-medalseries-grain-free-chicken-in-broth-wet-cat-food-28-oz-3745260" manual_cm_sp="sponsoredbrandpage:nulo:toppersforcats:5:medalseriesgrainfreechickeninbrothwetcatfood:shopnow" onclick="clickTrackLink(this);">
+                      <div class="citrusNulo-tab-cardImg">
+                        <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/ Nulo_Toppers_For_Cats_Food_5" alt="" />
+                      </div>
+                      <div class="citrusNulo-tab-cardBody">
+                        <p>
+                          Nulo MedalSeries Grain-Free Chicken in Broth Wet Cat Food
+                        </p>
+                        <button class="citrusNulo__productCTA">
+                          Shop Now
+                        </button>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <!-- tab item -->
+
+                <!-- tab item 06-->
+                <div class="citrusNulo__Product nulo-ToppersForCatsFood-product splide__slide">
+                  <div class="citrusNulo-tab-card">
+                    <a href="https://www.petco.com/shop/en/petcostore/product/nulo-medalseries-grain-free-tuna-and-shrimp-in-broth-wet-cat-food-28-oz-3745438" manual_cm_sp="sponsoredbrandpage:nulo:toppersforcats:6:medalseriesgrainfreetunashrimpinbrothwetcatfood:shopnow" onclick="clickTrackLink(this);">
+                      <div class="citrusNulo-tab-cardImg">
+                        <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/ Nulo_Toppers_For_Cats_Food_6" alt="" />
+                      </div>
+                      <div class="citrusNulo-tab-cardBody">
+                        <p>
+                          Nulo MedalSeries Grain-Free Tuna & Shrimp in Broth Wet Cat Food
+                        </p>
+                        <button class="citrusNulo__productCTA">
+                          Shop Now
+                        </button>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <!-- tab item -->
+              </div>
+            </div>
+          </div>
+          <!-- End TOPPERS FOR CATS FOOD RAW product row 02 -->
+
+          <!-- Cat Treats FOOD product row 03 -->
+          <div id="nulo-CatTreatsFood-product" class="splide citrusNulo__Products">
+            <div class="splide__track">
+              <div class="splide__list">
+                <!-- tab item 01-->
+                <div class="citrusNulo__Product nulo-CatTreatsFood-product splide__slide">
+                  <div class="citrusNulo-tab-card">
+                    <a href="https://www.petco.com/shop/en/petcostore/product/nulo-medalseries-puree-variety-pack-wet-cat-food-05-oz-count-of-10-3744793" manual_cm_sp="sponsoredbrandpage:nulo:cattreats:1:medalseriespureevarietypackwetcatfood:shopnow" onclick="clickTrackLink(this);">
+                      <div class="citrusNulo-tab-cardImg">
+                        <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/ Nulo_Cat_Treats_Food_1" alt="" />
+                      </div>
+                      <div class="citrusNulo-tab-cardBody">
+                        <p>
+                          Nulo MedalSeries Puree Variety Pack Wet Cat Food
+                        </p>
+                        <button class="citrusNulo__productCTA">
+                          Shop Now
+                        </button>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <!-- tab item -->
+
+                <!-- tab item 02-->
+                <div class="citrusNulo__Product nulo-CatTreatsFood-product splide__slide">
+                  <div class="citrusNulo-tab-card">
+                    <a href="https://www.petco.com/shop/en/petcostore/product/nulo-medalseries-tuna-and-scallop-puree-wet-cat-food-05-oz-3744769" manual_cm_sp="sponsoredbrandpage:nulo:cattreats:2:medalseriestun&scalloppureewetcatfood:shopnow" onclick="clickTrackLink(this);">
+                      <div class="citrusNulo-tab-cardImg">
+                        <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/ Nulo_Cat_Treats_Food_2" alt="" />
+                      </div>
+                      <div class="citrusNulo-tab-cardBody">
+                        <p>
+                          Nulo MedalSeries Tuna & Scallop Puree Wet Cat Food
+                        </p>
+                        <button class="citrusNulo__productCTA">
+                          Shop Now
+                        </button>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <!-- tab item -->
+                
+                <!-- tab item 03-->
+                <!-- <div class="citrusNulo__Product nulo-CatTreatsFood-product splide__slide">
+                  <div class="citrusNulo-tab-card">
+                    <a href="###" manual_cm_sp="###" onclick="clickTrackLink(this);">
+                      <div class="citrusNulo-tab-cardImg">
+                        <img src="" alt="" />
+                      </div>
+                      <div class="citrusNulo-tab-cardBody">
+                        <p>
+                          
+                        </p>
+                        <button class="citrusNulo__productCTA">
+                          Shop Now
+                        </button>
+                      </div>
+                    </a>
+                  </div>
+                </div> -->
+                <!-- tab item -->
+                
+                <!-- tab item 04-->
+                <div class="citrusNulo__Product nulo-CatTreatsFood-product splide__slide">
+                  <div class="citrusNulo-tab-card">
+                    <a href="https://www.petco.com/shop/en/petcostore/product/nulo-medalseries-chicken-puree-wet-cat-food-05-oz-3744751" manual_cm_sp="sponsoredbrandpage:nulo:cattreats:4:medalserieschickenpureewetcatfood:shopnow" onclick="clickTrackLink(this);">
+                      <div class="citrusNulo-tab-cardImg">
+                        <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/ Nulo_Cat_Treats_Food_4" alt="" />
+                      </div>
+                      <div class="citrusNulo-tab-cardBody">
+                        <p>
+                          Nulo MedalSeries Chicken Puree Wet Cat Food
+                        </p>
+                        <button class="citrusNulo__productCTA">
+                          Shop Now
+                        </button>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <!-- tab item -->
+                
+                <!-- tab item 05-->
+                <div class="citrusNulo__Product nulo-CatTreatsFood-product splide__slide">
+                  <div class="citrusNulo-tab-card">
+                    <a href="https://www.petco.com/shop/en/petcostore/product/nulo-medalseries-chicken-and-salmon-puree-wet-cat-food-05-oz-3744777" manual_cm_sp="sponsoredbrandpage:nulo:cattreats:5:medalserieschickensalmonpureewetcatfood:shopnow" onclick="clickTrackLink(this);">
+                      <div class="citrusNulo-tab-cardImg">
+                        <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/ Nulo_Cat_Treats_Food_5" alt="" />
+                      </div>
+                      <div class="citrusNulo-tab-cardBody">
+                        <p>
+                          Nulo MedalSeries Chicken & Salmon Puree Wet Cat Food
+                        </p>
+                        <button class="citrusNulo__productCTA">
+                          Shop Now
+                        </button>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <!-- tab item -->
+                
+                <!-- tab item 06-->
+                <div class="citrusNulo__Product nulo-CatTreatsFood-product splide__slide">
+                  <div class="citrusNulo-tab-card">
+                    <a href="https://www.petco.com/shop/en/petcostore/product/nulo-medalseries-tuna-and-crab-puree-wet-cat-food-05-oz-3744785" manual_cm_sp="sponsoredbrandpage:nulo:cattreats:6:medalseriestunacrabpureewetcatfood:shopnow" onclick="clickTrackLink(this);">
+                      <div class="citrusNulo-tab-cardImg">
+                        <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/ Nulo_Cat_Treats_Food_6" alt="" />
+                      </div>
+                      <div class="citrusNulo-tab-cardBody">
+                        <p>
+                          Nulo MedalSeries Tuna & Crab Puree Wet Cat Food
+                        </p>
+                        <button class="citrusNulo__productCTA">
+                          Shop Now
+                        </button>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <!-- tab item -->
+              </div>
+            </div>
+          </div>
+          <!-- End Cat Treats FOOD product row 03 -->
+
+          <!-- Dog FOOD product row 04 -->
+          <div id="nulo-DogFood-product" class="splide citrusNulo__Products">
+            <div class="splide__track">
+              <div class="splide__list">
+                <!-- tab item 01-->
+                <div class="citrusNulo__Product nulo-DogFood-product splide__slide">
+                  <div class="citrusNulo-tab-card">
+                    <a href="https://www.petco.com/shop/en/petcostore/product/nulo-medalseries-grain-free-lamb-and-lentils-adult-dry-dog-food-24-lbs-3746271" manual_cm_sp="sponsoredbrandpage:nulo:dogfood:1:medalseriesgrain-freelamblentilsadultdrydogfood:shopnow" onclick="clickTrackLink(this);">
+                      <div class="citrusNulo-tab-cardImg">
+                        <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/ Nulo_Dog_Food_1" alt="" />
+                      </div>
+                      <div class="citrusNulo-tab-cardBody">
+                        <p>
+                          Nulo MedalSeries Grain-Free Lamb & Lentils Adult Dry Dog Food
+                        </p>
+                        <button class="citrusNulo__productCTA">
+                          Shop Now
+                        </button>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <!-- tab item -->
+
+                <!-- tab item 02-->
+                <div class="citrusNulo__Product nulo-DogFood-product splide__slide">
+                  <div class="citrusNulo-tab-card">
+                    <a href="https://www.petco.com/shop/en/petcostore/product/nulo-medalseries-grain-free-weight-management-chicken-and-sweet-potato-adult-dry-dog-food-24-lbs-3746369" manual_cm_sp="sponsoredbrandpage:nulo:dogfood:2:medalseriesgrainfreeweightmanagementchickensweetpotatoadultdrydogfood:shopnow" onclick="clickTrackLink(this);">
+                      <div class="citrusNulo-tab-cardImg">
+                        <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/ Nulo_Dog_Food_2" alt="" />
+                      </div>
+                      <div class="citrusNulo-tab-cardBody">
+                        <p>
+                          Nulo MedalSeries Grain-Free Weight Management Chicken & Sweet Potato Adult Dry Dog Food
+                        </p>
+                        <button class="citrusNulo__productCTA">
+                          Shop Now
+                        </button>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <!-- tab item -->
+
+                <!-- tab item 03-->
+                <div class="citrusNulo__Product nulo-DogFood-product splide__slide">
+                  <div class="citrusNulo-tab-card">
+                    <a href="https://www.petco.com/shop/en/petcostore/product/nulo-medalseries-grain-free-salmon-large-breed-dry-puppy-food-24-lbs-3746342" manual_cm_sp="sponsoredbrandpage:nulo:dogfood:3:medalseriesgrainfreesalmonlargebreeddrypuppyfood:shopnow" onclick="clickTrackLink(this);">
+                      <div class="citrusNulo-tab-cardImg">
+                        <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/ Nulo_Dog_Food_3" alt="" />
+                      </div>
+                      <div class="citrusNulo-tab-cardBody">
+                        <p>
+                          Nulo MedalSeries Grain-Free Salmon Large Breed Dry Puppy Food
+                        </p>
+                        <button class="citrusNulo__productCTA">
+                          Shop Now
+                        </button>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <!-- tab item -->
+
+                <!-- tab item 04-->
+                <div class="citrusNulo__Product nulo-DogFood-product splide__slide">
+                  <div class="citrusNulo-tab-card">
+                    <a href="https://www.petco.com/shop/en/petcostore/product/nulo-medalseries-ancient-grains-beef-barley-and-lamb-adult-dry-dog-food-24-lbs-3746297" manual_cm_sp="sponsoredbrandpage:nulo:dogfood:4:medalseriesancientgrainsbeefbarleylambadultdrydogfood:shopnow" onclick="clickTrackLink(this);">
+                      <div class="citrusNulo-tab-cardImg">
+                        <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/ Nulo_Dog_Food_4" alt="" />
+                      </div>
+                      <div class="citrusNulo-tab-cardBody">
+                        <p>
+                          Nulo MedalSeries Ancient Grains Beef, Barley & Lamb Adult Dry Dog Food
+                        </p>
+                        <button class="citrusNulo__productCTA">
+                          Shop Now
+                        </button>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <!-- tab item -->
+
+                <!-- tab item 05-->
+                <div class="citrusNulo__Product nulo-DogFood-product splide__slide">
+                  <div class="citrusNulo-tab-card">
+                    <a href="https://www.petco.com/shop/en/petcostore/product/nulo-medalseries-grain-free-salmon-and-sweet-potato-adult-dry-dog-food-24-lbs-3746289" manual_cm_sp="sponsoredbrandpage:nulo:dogfood:5:medalseriesgrainfreesalmonsweetpotatoadultdrydogfood:shopnow" onclick="clickTrackLink(this);">
+                      <div class="citrusNulo-tab-cardImg">
+                        <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/ Nulo_Dog_Food_5" alt="" />
+                      </div>
+                      <div class="citrusNulo-tab-cardBody">
+                        <p>
+                          Nulo MedalSeries Grain-Free Salmon & Sweet Potato Adult Dry Dog Food
+                        </p>
+                        <button class="citrusNulo__productCTA">
+                          Shop Now
+                        </button>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <!-- tab item -->
+
+                <!-- tab item 06-->
+                <div class="citrusNulo__Product nulo-DogFood-product splide__slide">
+                  <div class="citrusNulo-tab-card">
+                    <a href="https://www.petco.com/shop/en/petcostore/product/nulo-medalseries-grain-free-beef-peas-and-carrots-wet-dog-food-13-oz-case-of-12-3746895" manual_cm_sp="sponsoredbrandpage:nulo:dogfood:6:medalseriesgrainfreebeefpeascarrotswetdogfood:shopnow" onclick="clickTrackLink(this);">
+                      <div class="citrusNulo-tab-cardImg">
+                        <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/ Nulo_Dog_Food_6" alt="" />
+                      </div>
+                      <div class="citrusNulo-tab-cardBody">
+                        <p>
+                          Nulo MedalSeries Grain-Free Beef, Peas & Carrots Wet Dog Food
+                        </p>
+                        <button class="citrusNulo__productCTA">
+                          Shop Now
+                        </button>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <!-- tab item -->
+
+                <!-- tab item 07-->
+                <div class="citrusNulo__Product nulo-DogFood-product splide__slide">
+                  <div class="citrusNulo-tab-card">
+                    <a href="https://www.petco.com/shop/en/petcostore/product/nulo-medalseries-grain-free-chicken-salmon-and-lentils-wet-puppy-food-13-oz-3745825" manual_cm_sp="sponsoredbrandpage:nulo:dogfood:7:medalseriesgrainfreechickensalmonlentilswetpuppyfood:shopnow" onclick="clickTrackLink(this);">
+                      <div class="citrusNulo-tab-cardImg">
+                        <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/ Nulo_Dog_Food_7" alt="" />
+                      </div>
+                      <div class="citrusNulo-tab-cardBody">
+                        <p>
+                          Nulo MedalSeries Grain-Free Chicken, Salmon & Lentils Wet Puppy Food
+                        </p>
+                        <button class="citrusNulo__productCTA">
+                          Shop Now
+                        </button>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <!-- tab item -->
+
+                <!-- tab item 08-->
+                <div class="citrusNulo__Product nulo-DogFood-product splide__slide">
+                  <div class="citrusNulo-tab-card">
+                    <a href="https://www.petco.com/shop/en/petcostore/product/nulo-medalseries-grain-free-duck-and-chickpeas-small-breed-wet-dog-food-55-oz-case-of-24-3747020" manual_cm_sp="sponsoredbrandpage:nulo:dogfood:8:medalseriesgrainfreeduckchickpeassmallbreedwetdogfood:shopnow" onclick="clickTrackLink(this);">
+                      <div class="citrusNulo-tab-cardImg">
+                        <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/ Nulo_Dog_Food_8" alt="" />
+                      </div>
+                      <div class="citrusNulo-tab-cardBody">
+                        <p>
+                          Nulo MedalSeries Grain-Free Duck & Chickpeas Small Breed Wet Dog Food
+                        </p>
+                        <button class="citrusNulo__productCTA">
+                          Shop Now
+                        </button>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <!-- tab item -->
+
+                <!-- tab item 09-->
+                <div class="citrusNulo__Product nulo-DogFood-product splide__slide">
+                  <div class="citrusNulo-tab-card">
+                    <a href="https://www.petco.com/shop/en/petcostore/product/nulo-medalseries-tasty-toppers-beef-freeze-dried-raw-dog-food-6-oz-3746107" manual_cm_sp="sponsoredbrandpage:nulo:dogfood:9:medalseriestastytoppersbeeffreezedriedrawdogfood:shopnow" onclick="clickTrackLink(this);">
+                      <div class="citrusNulo-tab-cardImg">
+                        <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/ Nulo_Dog_Food_9" alt="" />
+                      </div>
+                      <div class="citrusNulo-tab-cardBody">
+                        <p>
+                          Nulo MedalSeries Tasty Toppers Beef Freeze-Dried Raw Dog Food
+                        </p>
+                        <button class="citrusNulo__productCTA">
+                          Shop Now
+                        </button>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <!-- tab item -->
+
+                <!-- tab item 10-->
+                <div class="citrusNulo__Product nulo-DogFood-product splide__slide">
+                  <div class="citrusNulo-tab-card">
+                    <a href="https://www.petco.com/shop/en/petcostore/product/nulo-medalseries-tasty-toppers-chicken-freeze-dried-raw-dog-food-6-oz-3746115" manual_cm_sp="sponsoredbrandpage:nulo:dogfood:10:medalseriestastytopperschickenfreezedriedrawdogfood:shopnow" onclick="clickTrackLink(this);">
+                      <div class="citrusNulo-tab-cardImg">
+                        <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/ Nulo_Dog_Food_10" alt="" />
+                      </div>
+                      <div class="citrusNulo-tab-cardBody">
+                        <p>
+                          Nulo MedalSeries Tasty Toppers Chicken Freeze-Dried Raw Dog Food
+                        </p>
+                        <button class="citrusNulo__productCTA">
+                          Shop Now
+                        </button>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <!-- tab item -->
+
+                <!-- tab item Group Product Shots -->
+                <div class="citrusNulo__Product nulo-DogFood-product splide__slide citrusNulo__groupProductShot">
+                  <div class="citrusNulo-tab-card citrusNulo__groupProductShot__item">
+                    <a href="https://www.petco.com/shop/en/petcostore/brand/nulo/dog/dog-food" manual_cm_sp="sponsoredbrandpage:nulo:dogfood:11:shopalldogfood:shopnow" onclick="clickTrackLink(this);">
+                      <div class="citrusNulo-tab-cardImg citrusNulo__groupProductShotImage">
+                        <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/ Nulo_Dog_Group_ProductShots" alt="" />
+                      </div>
+                      <div class="citrusNulo-tab-cardBody">
+                        <button class="citrusNulo__productCTA groupProductCTA">
+                          <div class="groupCtaDimention">
+                            <p>SHOP ALL<br>
+                            DOG FOOD</p>
+                          </div> 
+                          <div class="groupCtaArrow">
+                            <p>&#8594</p>
+                          </div>
+                        </button>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <!-- tab item Group Product Shots -->
+              </div>
+            </div>
+          </div>
+          <!-- End Dog FOOD product row 04 -->
+
+          <!-- Toppers For Dogs FOOD product row 05 -->
+          <div id="nulo-ToppersForDogsFood-product" class="splide citrusNulo__Products">
+            <div class="splide__track">
+              <div class="splide__list">
+                <!-- tab item 01-->
+                <div class="citrusNulo__Product nulo-ToppersForDogsFood-product splide__slide">
+                  <div class="citrusNulo-tab-card">
+                    <a href="https://www.petco.com/shop/en/petcostore/product/nulo-medalseries-chicken-duck-and-kale-in-broth-wet-dog-food-toppers-28-oz-3745631" manual_cm_sp="sponsoredbrandpage:nulo:toppersfordog:1:medalserieschickenduckkaleinbrothwetdogfoodtoppers:shopnow" onclick="clickTrackLink(this);">
+                      <div class="citrusNulo-tab-cardImg">
+                        <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/ Nulo_Toppers_For_Dog_Food_1" alt="" />
+                      </div>
+                      <div class="citrusNulo-tab-cardBody">
+                        <p>
+                          Nulo MedalSeries Chicken, Duck & Kale in Broth Wet Dog Food Toppers
+                        </p>
+                        <button class="citrusNulo__productCTA">
+                          Shop Now
+                        </button>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <!-- tab item -->
+
+                <!-- tab item 02-->
+                <div class="citrusNulo__Product nulo-ToppersForDogsFood-product splide__slide">
+                  <div class="citrusNulo-tab-card">
+                    <a href="https://www.petco.com/shop/en/petcostore/product/nulo-medalseries-lamb-mackerel-and-kelp-in-broth-wet-dog-food-toppers-28-oz-3745702" manual_cm_sp="sponsoredbrandpage:nulo:toppersfordog:2:medalserieslambmackerelkelpinbrothwetdogfoodtoppers:shopnow" onclick="clickTrackLink(this);">
+                      <div class="citrusNulo-tab-cardImg">
+                        <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/ Nulo_Toppers_For_Dog_Food_2" alt="" />
+                      </div>
+                      <div class="citrusNulo-tab-cardBody">
+                        <p>
+                          Nulo MedalSeries Lamb, Mackerel & Kelp in Broth Wet Dog Food Toppers
+                        </p>
+                        <button class="citrusNulo__productCTA">
+                          Shop Now
+                        </button>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <!-- tab item -->
+
+                <!-- tab item 03-->
+                <div class="citrusNulo__Product nulo-ToppersForDogsFood-product splide__slide">
+                  <div class="citrusNulo-tab-card">
+                    <a href="https://www.petco.com/shop/en/petcostore/product/nulo-medalseries-chicken-salmon-and-carrot-in-broth-wet-dog-food-toppers-28-oz-3745729" manual_cm_sp="sponsoredbrandpage:nulo:toppersfordog:3:medalserieschickensalmoncarrotinbrothwetdogfoodtoppers:shopnow" onclick="clickTrackLink(this);">
+                      <div class="citrusNulo-tab-cardImg">
+                        <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/ Nulo_Toppers_For_Dog_Food_3" alt="" />
+                      </div>
+                      <div class="citrusNulo-tab-cardBody">
+                        <p>
+                          Nulo MedalSeries Chicken, Salmon & Carrot in Broth Wet Dog Food Toppers
+                        </p>
+                        <button class="citrusNulo__productCTA">
+                          Shop Now
+                        </button>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <!-- tab item -->
+
+                <!-- tab item 04-->
+                <div class="citrusNulo__Product nulo-ToppersForDogsFood-product splide__slide">
+                  <div class="citrusNulo-tab-card">
+                    <a href="https://www.petco.com/shop/en/petcostore/product/nulo-medalseries-chicken-and-green-beans-in-broth-wet-dog-food-toppers-28-oz-3745622" manual_cm_sp="sponsoredbrandpage:nulo:toppersfordog:4:medalserieschickengreenbeansinbrothwetdogfoodtoppers:shopnow" onclick="clickTrackLink(this);">
+                      <div class="citrusNulo-tab-cardImg">
+                        <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/ Nulo_Toppers_For_Dog_Food_4" alt="" />
+                      </div>
+                      <div class="citrusNulo-tab-cardBody">
+                        <p>
+                          Nulo MedalSeries Chicken & Green Beans in Broth Wet Dog Food Toppers
+                        </p>
+                        <button class="citrusNulo__productCTA">
+                          Shop Now
+                        </button>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <!-- tab item -->
+
+                <!-- tab item 05-->
+                <div class="citrusNulo__Product nulo-ToppersForDogsFood-product splide__slide">
+                  <div class="citrusNulo-tab-card">
+                    <a href="https://www.petco.com/shop/en/petcostore/product/nulo-medalseries-beef-beef-liver-and-kale-in-broth-wet-dog-food-toppers-28-oz-3745614" manual_cm_sp="sponsoredbrandpage:nulo:toppersfordog:5:medalseriesbeefbeefliverkaleinbrothwetdogfoodtoppers:shopnow" onclick="clickTrackLink(this);">
+                      <div class="citrusNulo-tab-cardImg">
+                        <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/ Nulo_Toppers_For_Dog_Food_5" alt="" />
+                      </div>
+                      <div class="citrusNulo-tab-cardBody">
+                        <p>
+                          Nulo MedalSeries Beef, Beef Liver & Kale in Broth Wet Dog Food Toppers
+                        </p>
+                        <button class="citrusNulo__productCTA">
+                          Shop Now
+                        </button>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <!-- tab item -->
+
+                <!-- tab item 06-->
+                <div class="citrusNulo__Product nulo-ToppersForDogsFood-product splide__slide">
+                  <div class="citrusNulo-tab-card">
+                    <a href="https://www.petco.com/shop/en/petcostore/product/nulo-medalseries-mackerel-chicken-and-mussel-in-broth-wet-dog-food-toppers-28-oz-3745711" manual_cm_sp="sponsoredbrandpage:nulo:toppersfordog:6:medalseriesmackerelchickenmusselinbrothwetdogfoodtoppers:shopnow" onclick="clickTrackLink(this);">
+                      <div class="citrusNulo-tab-cardImg">
+                        <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/ Nulo_Toppers_For_Dog_Food_6" alt="" />
+                      </div>
+                      <div class="citrusNulo-tab-cardBody">
+                        <p>
+                          Nulo MedalSeries Mackerel, Chicken & Mussel in Broth Wet Dog Food Toppers
+                        </p>
+                        <button class="citrusNulo__productCTA">
+                          Shop Now
+                        </button>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <!-- tab item -->
+              </div>
+            </div>
+          </div>
+          <!-- End Toppers For Dogs FOOD product row 05 -->
+        </div>
+        <!-- End Product content -->
+      </div>
+      <!-- product tab main content -->
+      <div class="citrusNulo__sectionCTAgap">
+        <a href="https://www.petco.com/shop/en/petcostore/brand/nulo" manual_cm_sp="sponsoredbrandpage:nulo :explorenulobestsellers:1:shopall:tab" onclick="clickTrackLink(this);">
+          <div class="citrusNulo__commonCTA">Shop All</div>
+        </a>
+      </div>
+    </div>
+  </section>
+  <!-- End Product Carousel Tab section -->
+
+  <!-- Food Item Section start -->
+  <section class="citrusNulo__sectionGap" id="nulo_different">
+    <div id="citrusNulo__RawFood">
+      <h2 class="citrusNulo__sectionTitle">What makes Nulo different</h2>
+      <div class="citrusNulo__RawFoodContainer">
+        <a href="https://www.petco.com/shop/en/petcostore/brand/nulo"
+          manual_cm_sp="sponsoredbrandpage:nulo:content4up:1:whatmakesnulodifferent:shopnow"
+          onclick="clickTrackLink(this);">
+          <div class="citrusNulo__category">
+            <!-- food 01 -->
+            <div class="citrusNulo__card">
+              <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/ Nulo_backed_by_science_icon" alt="Icon of molecules" />
+              <div class="citrusNulo__card-title">
+                <h3>Backed by science</h3>
+                <p>
+                  Formulated by animal nutritionists and tested through multi-step quality and safety programs.
+                </p>
+              </div>
+            </div>
+
+            <!-- food 02 -->
+            <div class="citrusNulo__card">
+              <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/ Nulo_high_in_animal-based_protein" alt="A scale with an arrow pointing to high" />
+              <div class="citrusNulo__card-title">
+                <h3>High in animal-based protein</h3>
+                <p class="citrusNulo__card-individual_width">
+                  Models your pet’s ancestral diet and provides essential amino acids.
+                </p>
+              </div>
+            </div>
+
+            <!-- food 03 -->
+            <div class="citrusNulo__card">
+              <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/ Nulo_low_in_carbohydrates" alt="An arrow pointing down to the right" />
+              <div class="citrusNulo__card-title">
+                <h3>Low in carbohydrates</h3>
+                <p class="citrusNulo__card-individual_width">
+                  Low-carb, low-glycemic ingredients help them maintain a healthy weight.
+                </p>
+              </div>
+            </div>
+
+            <!-- food 04 -->
+            <div class="citrusNulo__card">
+              <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/ Nulo_BC30TM_probiotic" alt="An image of a pet organ" />
+              <div class="citrusNulo__card-title">
+                <h3>BC30™ probiotic</h3>
+                <p class="citrusNulo__card-individual_width">
+                  Patented probiotic with viability to support gut and immune health. 
+                </p>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="citrusNulo__sectionCTAgap">
+        <a href="https://www.petco.com/shop/en/petcostore/brand/nulo" manual_cm_sp="sponsoredbrandpage:nulo:content4up:1:whatmakesnulodifferent:shopnow" onclick="clickTrackLink(this);">
+          <div class="citrusNulo__commonCTA">Shop Now</div>
+        </a>
+      </div>
+    </div>
+  </section>
+  <!-- End Food Item Section -->
+
+  <!-- Dog Cat boring to bon  carousel section -->
+  <section class="citrusNulo__tab-area">
+    <div class="citrusNuloDogCat__tab-container">
+      <h2 class="citrusNulo__sectionTitle" id="citrusNulo__boringToBon">
+        Go from boring to bon appétit
+      </h2>
+      <p class="citrusNulo__sectionSubhead" id="citrusNulo__mouthwatering">Combine Nulo kibble with mouthwatering toppers to enhance their mealtime experience.</p>
+      <!-- product tab main content -->
+      <div class="citrusNuloDogCat__main-tab-content">
+        <!-- tab button -->
+        <div class="citrusNuloDogCat__ProductCarousel-wrapper">
+          <div id="citrusNuloDogCat_ID" class="citrusNuloDogCat_ID">
+            <button class="citrusNuloDogCat__tab_item citrusNuloDogCat__active_tab"
+              onclick="filterDogCatProducts('citrusNulo-Dog-Product')">
+              <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/ Nulo-Icon_Dog"
+                alt="Dog icon" />
+              <p>DOG</p>
+            </button>
+            <button class="citrusNuloDogCat__tab_item" onclick="filterDogCatProducts('citrusNulo-Cat-Product')">
+              <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/ Nulo-Icon_Cat"
+                alt="Cat icon" />
+              <p>CAT</p>
+            </button>
+          </div>
+        </div>
+        <!-- tab button -->
+        <!-- product content -->
+        <div class="citrusNulo-section__tab-content citrusNuloDogCat__tab-content">
+          <!-- Dog FOOD product -->
+          <div id="citrusNulo-Dog-Product" class="splide citrusNuloDogCat__Products">
+            <div class="splide__track">
+              <div class="splide__list">
+                <!-- tab item 01-->
+                <div class="citrusNuloDogCat__Product citrusNulo-Dog-Product splide__slide">
+                  <div class="citrusNulo-tab-card">
+                    <a href="https://www.petco.com/shop/en/petcostore/brand/nulo/dog/dog-food/dry-dog-food" manual_cm_sp="sponsoredbrandpage:nulo:dog:1:kibble:shopnow" onclick="clickTrackLink(this);">
+                      <div class="citrusNulo-tab-cardImg">
+                        <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/ Nulo_Kibble_Dog" alt="" />
+                      </div>
+                      <div class="citrusNulo-tab-cardBody citrusNuloDogCat__cardBody">
+                        <h3>Kibble</h3>
+                        <p class="citrusNuloDogCat_details">
+                          Protein-rich with the first 3–4 ingredients being proteins from animal sources.
+                        </p>
+                        <button class="citrusNuloDogCat__ProductCTA">
+                          Shop Now
+                        </button>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <!-- tab item -->
+                <!-- tab item 02-->
+                <div class="citrusNuloDogCat__Product citrusNulo-Dog-Product splide__slide">
+                  <div class="citrusNulo-tab-card">
+                    <a href="https://www.petco.com/shop/en/petcostore/brand/nulo/dog/dog-food/freeze-dried-dog-food-treats" manual_cm_sp="sponsoredbrandpage:nulo:dog:2:freezedriedraw:shopnow" onclick="clickTrackLink(this);">
+                      <div class="citrusNulo-tab-cardImg">
+                        <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/ Nulo_Freeze-Dried-Raw_Dog" alt="" />
+                      </div>
+                      <div class="citrusNulo-tab-cardBody citrusNuloDogCat__cardBody">
+                        <h3>Freeze-Dried Raw</h3>
+                        <p class="citrusNuloDogCat_details">
+                          A convenient and safe alternative to fresh and frozen forms of raw food.
+                        </p>
+                        <button class="citrusNuloDogCat__ProductCTA">
+                          Shop Now
+                        </button>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <!-- tab item -->
+                <!-- tab item 03-->
+                <div class="citrusNuloDogCat__Product citrusNulo-Dog-Product splide__slide">
+                  <div class="citrusNulo-tab-card">
+                    <a href="https://www.petco.com/shop/en/petcostore/brand/nulo/dog/dog-food/dog-food-broth-and-toppers" manual_cm_sp="sponsoredbrandpage:nulo:dog:3:meatypouches:shopnow" onclick="clickTrackLink(this);">
+                      <div class="citrusNulo-tab-cardImg">
+                        <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/ Nulo_Meaty-Pouches_Dog" alt="" />
+                      </div>
+                      <div class="citrusNulo-tab-cardBody citrusNuloDogCat__cardBody">
+                        <h3>Meaty Pouches</h3>
+                        <p class="citrusNuloDogCat_details">
+                          Simply 6 or less ingredients, with real shreds of meat and vegetables in broth.
+                        </p>
+                        <button class="citrusNuloDogCat__ProductCTA">
+                          Shop Now
+                        </button>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <!-- tab item -->
+                <!-- tab item 04-->
+                <div class="citrusNuloDogCat__Product citrusNulo-Dog-Product splide__slide">
+                  <div class="citrusNulo-tab-card">
+                    <a href="https://www.petco.com/shop/en/petcostore/brand/nulo/dog/dog-food/dog-food-broth-and-toppers" manual_cm_sp="sponsoredbrandpage:nulo:dog:4:bonebroth:shopnow" onclick="clickTrackLink(this);">
+                      <div class="citrusNulo-tab-cardImg">
+                        <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/ Nulo_Bone-Broth_Dog" alt="" />
+                      </div>
+                      <div class="citrusNulo-tab-cardBody citrusNuloDogCat__cardBody">
+                        <h3>Bone Broth</h3>
+                        <p class="citrusNuloDogCat_details">
+                          Slowly simmered and infused with herbs and superfoods for more health benefits.
+                        </p>
+                        <button class="citrusNuloDogCat__ProductCTA">
+                          Shop Now
+                        </button>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <!-- tab item -->
+              </div>
+            </div>
+          </div>
+          <!-- End Dog FOOD product -->
+
+          <!-- CAT FOOD product -->
+          <div id="citrusNulo-Cat-Product" class="splide citrusNuloDogCat__Products">
+            <div class="splide__track">
+              <div class="splide__list">
+                <!-- tab item 01-->
+                <div class="citrusNuloDogCat__Product citrusNulo-Cat-Product splide__slide">
+                  <div class="citrusNulo-tab-card">
+                    <a href="https://www.petco.com/shop/en/petcostore/brand/nulo/cat/cat-food/dry-cat-food" manual_cm_sp="sponsoredbrandpage:nulo:cat:1:kibble:shopnow" onclick="clickTrackLink(this);">
+                      <div class="citrusNulo-tab-cardImg">
+                        <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/ Nulo_Kibble_Cat" alt="" />
+                      </div>
+                      <div class="citrusNulo-tab-cardBody citrusNuloDogCat__cardBody">
+                        <h3>Kibble</h3>
+                        <p class="citrusNuloDogCat_details">
+                          Protein-rich with the first 3–4 ingredients being proteins from animal sources.
+                        </p>
+                        <button class="citrusNuloDogCat__ProductCTA">
+                          Shop Now
+                        </button>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <!-- tab item -->
+                <!-- tab item 02-->
+                <div class="citrusNuloDogCat__Product citrusNulo-Cat-Product splide__slide">
+                  <div class="citrusNulo-tab-card">
+                    <a href="https://www.petco.com/shop/en/petcostore/brand/nulo/cat/cat-food/freeze-dried-cat-food" manual_cm_sp="sponsoredbrandpage:nulo:cat:2:freezedriedraw:shopnow" onclick="clickTrackLink(this);">
+                      <div class="citrusNulo-tab-cardImg">
+                        <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/ Nulo_Freeze-Dried-Raw_Cat" alt="" />
+                      </div>
+                      <div class="citrusNulo-tab-cardBody citrusNuloDogCat__cardBody">
+                        <h3>Freeze-Dried Raw</h3>
+                        <p class="citrusNuloDogCat_details">
+                          A convenient and safe alternative to fresh and frozen forms of raw food.
+                        </p>
+                        <button class="citrusNuloDogCat__ProductCTA">
+                          Shop Now
+                        </button>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <!-- tab item -->
+                <!-- tab item 03-->
+                <div class="citrusNuloDogCat__Product citrusNulo-Cat-Product splide__slide">
+                  <div class="citrusNulo-tab-card">
+                    <a href="https://www.petco.com/shop/en/petcostore/brand/nulo/cat/cat-food/cat-food-toppings" manual_cm_sp="sponsoredbrandpage:nulo:cat:3:meatypouches:shopnow" onclick="clickTrackLink(this);">
+                      <div class="citrusNulo-tab-cardImg">
+                        <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/ Nulo_Meaty-Pouches_Cat" alt="" />
+                      </div>
+                      <div class="citrusNulo-tab-cardBody citrusNuloDogCat__cardBody">
+                        <h3>Meaty Pouches</h3>
+                        <p class="citrusNuloDogCat_details">
+                          All ingredients are either meat or high-moisture broth to help increase water intake.
+                        </p>
+                        <button class="citrusNuloDogCat__ProductCTA">
+                          Shop Now
+                        </button>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <!-- tab item -->
+                <!-- tab item 04-->
+                <div class="citrusNuloDogCat__Product citrusNulo-Cat-Product splide__slide">
+                  <div class="citrusNulo-tab-card">
+                    <a href="https://www.petco.com/shop/en/petcostore/brand/nulo/cat/cat-food/cat-broths-and-food-toppers/cat-broth" manual_cm_sp="sponsoredbrandpage:nulo:cat:4:bonebroth:shopnow" onclick="clickTrackLink(this);">
+                      <div class="citrusNulo-tab-cardImg">
+                        <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/ Nulo_Bone-Broth_Cat" alt="" />
+                      </div>
+                      <div class="citrusNulo-tab-cardBody citrusNuloDogCat__cardBody">
+                        <h3>Bone Broth</h3>
+                        <p class="citrusNuloDogCat_details">
+                          Slowly simmered and infused with herbs and superfoods for more health benefits.
+                        </p>
+                        <button class="citrusNuloDogCat__ProductCTA">
+                          Shop Now
+                        </button>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <!-- tab item -->
+              </div>
+            </div>
+          </div>
+          <!-- End TREATS FOOD product row 03 -->
+        </div>
+        <!-- End Product content -->
+      </div>
+      <!-- product tab main content -->
+    </div>
+  </section>
+  <!-- End Dog Cat boring to bon carousel section -->
+
+  <!-- Lifestyle Image Section -->
+  <section class="citrusNulo__lifestyle_image_section ">
+    <div class="citrusNulo__lifestyle_image_container">
+      <div class="citrusNulo__lifestyle_image_row">
+        <div class="citrusNulo_Lifestyle_img order-1">
+          <div class="citrusNulo_Lifestyle_container">
+            <div class="citrusNulo__lifestyle_container_image">
+              <img class="citrusNulo__desktop-version" src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/ Nulo_lifestyle_image" alt="A photo of all-American athlete and founder Michael Landa and his dog Max" />
+              <img class="citrusNulo__mobile-version" src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/ Nulo_lifestyle_image_mobile" alt="A photo of all-American athlete and founder Michael Landa and his dog Max" />
+            </div>
+            <div class="citrusNulo_Lifestyle_text-block">
+              <h4>All-American athlete and founder Michael Landa and his dog Max</h4>
+            </div>
+          </div>
+        </div>
+        <div class="citrusNulo_lifestyle_image_text order-2">
+          <h3>
+            Enrich the way you feed your pet
+          </h3>
+          <p id="citusHonest__lifestyle_imageDesc">
+            Nulo recipes feature industry-leading levels of animal-based protein your pet needs to thrive.
+          </p>
+
+          <a href="https://www.petco.com/shop/en/petcostore/brand/nulo" manual_cm_sp="sponsoredbrandpage:nulo:contentbanner:1:enrichthewayyoufeedyourpet:shopnow" onclick="clickTrackLink(this);">
+            <div class="citrusNulo__commonCTA">Shop Now</div>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- End Lifestyle Image Section -->
+</main>
+<!-- End Landing Page -->
+
+<!-- JS Dependency Start-->
+<!-- Splide JS Library -->
+<script >
+  function r(n, t) {
+  for (var i = 0; i < t.length; i++) {
+    var r = t[i];
+    (r.enumerable = r.enumerable || !1),
+      (r.configurable = !0),
+      "value" in r && (r.writable = !0),
+      Object.defineProperty(n, r.key, r);
+  }
+}
+function Jt(n, t, i) {
+  t && r(n.prototype, t),
+    i && r(n, i),
+    Object.defineProperty(n, "prototype", { writable: !1 });
+}
+/*!
+ * Splide.js
+ * Version  : 4.1.2
+ * License  : MIT
+ * Copyright: 2022 Naotoshi Fujita
+ */
+var n, t;
+(n = this),
+  (t = function () {
+    "use strict";
+    var v = "(prefers-reduced-motion: reduce)",
+      G = 4,
+      rn = 5,
+      r = {
+        CREATED: 1,
+        MOUNTED: 2,
+        IDLE: 3,
+        MOVING: G,
+        SCROLLING: rn,
+        DRAGGING: 6,
+        DESTROYED: 7,
+      };
+    function D(n) {
+      n.length = 0;
+    }
+    function o(n, t, i) {
+      return Array.prototype.slice.call(n, t, i);
+    }
+    function R(n) {
+      return n.bind.apply(n, [null].concat(o(arguments, 1)));
+    }
+    function on() {}
+    var p = setTimeout;
+    function h(n) {
+      return requestAnimationFrame(n);
+    }
+    function u(n, t) {
+      return typeof t === n;
+    }
+    function un(n) {
+      return !c(n) && u("object", n);
+    }
+    var e = Array.isArray,
+      x = R(u, "function"),
+      C = R(u, "string"),
+      en = R(u, "undefined");
+    function c(n) {
+      return null === n;
+    }
+    function m(n) {
+      try {
+        return n instanceof (n.ownerDocument.defaultView || window).HTMLElement;
+      } catch (n) {
+        return !1;
+      }
+    }
+    function y(n) {
+      return e(n) ? n : [n];
+    }
+    function g(n, t) {
+      y(n).forEach(t);
+    }
+    function b(n, t) {
+      return -1 < n.indexOf(t);
+    }
+    function k(n, t) {
+      return n.push.apply(n, y(t)), n;
+    }
+    function A(t, n, i) {
+      t &&
+        g(n, function (n) {
+          n && t.classList[i ? "add" : "remove"](n);
+        });
+    }
+    function M(n, t) {
+      A(n, C(t) ? t.split(" ") : t, !0);
+    }
+    function L(n, t) {
+      g(t, n.appendChild.bind(n));
+    }
+    function O(n, i) {
+      g(n, function (n) {
+        var t = (i || n).parentNode;
+        t && t.insertBefore(n, i);
+      });
+    }
+    function cn(n, t) {
+      return m(n) && (n.msMatchesSelector || n.matches).call(n, t);
+    }
+    function S(n, t) {
+      n = n ? o(n.children) : [];
+      return t
+        ? n.filter(function (n) {
+            return cn(n, t);
+          })
+        : n;
+    }
+    function fn(n, t) {
+      return t ? S(n, t)[0] : n.firstElementChild;
+    }
+    var E = Object.keys;
+    function w(t, i, n) {
+      t &&
+        (n ? E(t).reverse() : E(t)).forEach(function (n) {
+          "__proto__" !== n && i(t[n], n);
+        });
+    }
+    function an(r) {
+      return (
+        o(arguments, 1).forEach(function (i) {
+          w(i, function (n, t) {
+            r[t] = i[t];
+          });
+        }),
+        r
+      );
+    }
+    function d(i) {
+      return (
+        o(arguments, 1).forEach(function (n) {
+          w(n, function (n, t) {
+            e(n)
+              ? (i[t] = n.slice())
+              : un(n)
+              ? (i[t] = d({}, un(i[t]) ? i[t] : {}, n))
+              : (i[t] = n);
+          });
+        }),
+        i
+      );
+    }
+    function sn(t, n) {
+      g(n || E(t), function (n) {
+        delete t[n];
+      });
+    }
+    function P(n, i) {
+      g(n, function (t) {
+        g(i, function (n) {
+          t && t.removeAttribute(n);
+        });
+      });
+    }
+    function I(i, t, r) {
+      un(t)
+        ? w(t, function (n, t) {
+            I(i, t, n);
+          })
+        : g(i, function (n) {
+            c(r) || "" === r ? P(n, t) : n.setAttribute(t, String(r));
+          });
+    }
+    function j(n, t, i) {
+      n = document.createElement(n);
+      return t && (C(t) ? M : I)(n, t), i && L(i, n), n;
+    }
+    function _(n, t, i) {
+      if (en(i)) return getComputedStyle(n)[t];
+      c(i) || (n.style[t] = "" + i);
+    }
+    function ln(n, t) {
+      _(n, "display", t);
+    }
+    function dn(n) {
+      (n.setActive && n.setActive()) || n.focus({ preventScroll: !0 });
+    }
+    function z(n, t) {
+      return n.getAttribute(t);
+    }
+    function vn(n, t) {
+      return n && n.classList.contains(t);
+    }
+    function N(n) {
+      return n.getBoundingClientRect();
+    }
+    function T(n) {
+      g(n, function (n) {
+        n && n.parentNode && n.parentNode.removeChild(n);
+      });
+    }
+    function hn(n) {
+      return fn(new DOMParser().parseFromString(n, "text/html").body);
+    }
+    function F(n, t) {
+      n.preventDefault(),
+        t && (n.stopPropagation(), n.stopImmediatePropagation());
+    }
+    function pn(n, t) {
+      return n && n.querySelector(t);
+    }
+    function gn(n, t) {
+      return t ? o(n.querySelectorAll(t)) : [];
+    }
+    function X(n, t) {
+      A(n, t, !1);
+    }
+    function mn(n) {
+      return n.timeStamp;
+    }
+    function W(n) {
+      return C(n) ? n : n ? n + "px" : "";
+    }
+    var yn = "splide",
+      f = "data-" + yn;
+    function bn(n, t) {
+      if (!n) throw new Error("[" + yn + "] " + (t || ""));
+    }
+    var Y = Math.min,
+      wn = Math.max,
+      xn = Math.floor,
+      kn = Math.ceil,
+      U = Math.abs;
+    function Sn(n, t, i) {
+      return U(n - t) < i;
+    }
+    function En(n, t, i, r) {
+      var o = Y(t, i),
+        t = wn(t, i);
+      return r ? o < n && n < t : o <= n && n <= t;
+    }
+    function q(n, t, i) {
+      var r = Y(t, i),
+        t = wn(t, i);
+      return Y(wn(r, n), t);
+    }
+    function Ln(n) {
+      return (0 < n) - (n < 0);
+    }
+    function On(t, n) {
+      return (
+        g(n, function (n) {
+          t = t.replace("%s", "" + n);
+        }),
+        t
+      );
+    }
+    function An(n) {
+      return n < 10 ? "0" + n : "" + n;
+    }
+    var _n = {};
+    function zn() {
+      var c = [];
+      function i(n, i, r) {
+        g(n, function (t) {
+          t &&
+            g(i, function (n) {
+              n.split(" ").forEach(function (n) {
+                n = n.split(".");
+                r(t, n[0], n[1]);
+              });
+            });
+        });
+      }
+      return {
+        bind: function (n, t, u, e) {
+          i(n, t, function (n, t, i) {
+            var r = "addEventListener" in n,
+              o = r
+                ? n.removeEventListener.bind(n, t, u, e)
+                : n.removeListener.bind(n, u);
+            r ? n.addEventListener(t, u, e) : n.addListener(u),
+              c.push([n, t, i, u, o]);
+          });
+        },
+        unbind: function (n, t, o) {
+          i(n, t, function (t, i, r) {
+            c = c.filter(function (n) {
+              return (
+                !!(
+                  n[0] !== t ||
+                  n[1] !== i ||
+                  n[2] !== r ||
+                  (o && n[3] !== o)
+                ) || (n[4](), !1)
+              );
+            });
+          });
+        },
+        dispatch: function (n, t, i) {
+          var r;
+          return (
+            "function" == typeof CustomEvent
+              ? (r = new CustomEvent(t, { bubbles: !0, detail: i }))
+              : (r = document.createEvent("CustomEvent")).initCustomEvent(
+                  t,
+                  !0,
+                  !1,
+                  i
+                ),
+            n.dispatchEvent(r),
+            r
+          );
+        },
+        destroy: function () {
+          c.forEach(function (n) {
+            n[4]();
+          }),
+            D(c);
+        },
+      };
+    }
+    var B = "mounted",
+      H = "move",
+      Dn = "moved",
+      Mn = "click",
+      Pn = "active",
+      In = "inactive",
+      Rn = "visible",
+      Cn = "hidden",
+      J = "refresh",
+      K = "updated",
+      jn = "resize",
+      Nn = "resized",
+      Tn = "scroll",
+      V = "scrolled",
+      a = "destroy",
+      Gn = "navigation:mounted",
+      Fn = "autoplay:play",
+      Xn = "autoplay:pause",
+      Wn = "lazyload:loaded",
+      Yn = "sk",
+      Un = "sh";
+    function Q(n) {
+      var i = n ? n.event.bus : document.createDocumentFragment(),
+        r = zn();
+      return (
+        n && n.event.on(a, r.destroy),
+        an(r, {
+          bus: i,
+          on: function (n, t) {
+            r.bind(i, y(n).join(" "), function (n) {
+              t.apply(t, e(n.detail) ? n.detail : []);
+            });
+          },
+          off: R(r.unbind, i),
+          emit: function (n) {
+            r.dispatch(i, n, o(arguments, 1));
+          },
+        })
+      );
+    }
+    function qn(t, n, i, r) {
+      var o,
+        u,
+        e = Date.now,
+        c = 0,
+        f = !0,
+        a = 0;
+      function s() {
+        if (!f) {
+          if (
+            ((c = t ? Y((e() - o) / t, 1) : 1),
+            i && i(c),
+            1 <= c && (n(), (o = e()), r && ++a >= r))
+          )
+            return l();
+          u = h(s);
+        }
+      }
+      function l() {
+        f = !0;
+      }
+      function d() {
+        u && cancelAnimationFrame(u), (f = !(u = c = 0));
+      }
+      return {
+        start: function (n) {
+          n || d(), (o = e() - (n ? c * t : 0)), (f = !1), (u = h(s));
+        },
+        rewind: function () {
+          (o = e()), (c = 0), i && i(c);
+        },
+        pause: l,
+        cancel: d,
+        set: function (n) {
+          t = n;
+        },
+        isPaused: function () {
+          return f;
+        },
+      };
+    }
+    function s(n) {
+      var t = n;
+      return {
+        set: function (n) {
+          t = n;
+        },
+        is: function (n) {
+          return b(y(n), t);
+        },
+      };
+    }
+    var n = "Arrow",
+      Bn = n + "Left",
+      Hn = n + "Right",
+      t = n + "Up",
+      n = n + "Down",
+      Jn = "ttb",
+      l = {
+        width: ["height"],
+        left: ["top", "right"],
+        right: ["bottom", "left"],
+        x: ["y"],
+        X: ["Y"],
+        Y: ["X"],
+        ArrowLeft: [t, Hn],
+        ArrowRight: [n, Bn],
+      };
+    var Z = "role",
+      $ = "tabindex",
+      i = "aria-",
+      Kn = i + "controls",
+      Vn = i + "current",
+      Qn = i + "selected",
+      nn = i + "label",
+      Zn = i + "labelledby",
+      $n = i + "hidden",
+      nt = i + "orientation",
+      tt = i + "roledescription",
+      it = i + "live",
+      rt = i + "busy",
+      ot = i + "atomic",
+      ut = [Z, $, "disabled", Kn, Vn, nn, Zn, $n, nt, tt],
+      i = yn + "__",
+      et = yn,
+      ct = i + "track",
+      ft = i + "list",
+      at = i + "slide",
+      st = at + "--clone",
+      lt = at + "__container",
+      dt = i + "arrows",
+      vt = i + "arrow",
+      ht = vt + "--prev",
+      pt = vt + "--next",
+      gt = i + "pagination",
+      mt = gt + "__page",
+      yt = i + "progress" + "__bar",
+      bt = i + "toggle",
+      wt = i + "sr",
+      tn = "is-active",
+      xt = "is-prev",
+      kt = "is-next",
+      St = "is-visible",
+      Et = "is-loading",
+      Lt = "is-focus-in",
+      Ot = "is-overflow",
+      At = [tn, St, xt, kt, Et, Lt, Ot];
+    var _t = "touchstart mousedown",
+      zt = "touchmove mousemove",
+      Dt = "touchend touchcancel mouseup click";
+    var Mt = "slide",
+      Pt = "loop",
+      It = "fade";
+    function Rt(o, r, t, u) {
+      var e,
+        n = Q(o),
+        i = n.on,
+        c = n.emit,
+        f = n.bind,
+        a = o.Components,
+        s = o.root,
+        l = o.options,
+        d = l.isNavigation,
+        v = l.updateOnMove,
+        h = l.i18n,
+        p = l.pagination,
+        g = l.slideFocus,
+        m = a.Direction.resolve,
+        y = z(u, "style"),
+        b = z(u, nn),
+        w = -1 < t,
+        x = fn(u, "." + lt);
+      function k() {
+        var n = o.splides
+          .map(function (n) {
+            n = n.splide.Components.Slides.getAt(r);
+            return n ? n.slide.id : "";
+          })
+          .join(" ");
+        I(u, nn, On(h.slideX, (w ? t : r) + 1)),
+          I(u, Kn, n),
+          I(u, Z, g ? "button" : ""),
+          g && P(u, tt);
+      }
+      function S() {
+        e || E();
+      }
+      function E() {
+        var n, t, i;
+        e ||
+          ((n = o.index),
+          (i = L()) !== vn(u, tn) &&
+            (A(u, tn, i), I(u, Vn, (d && i) || ""), c(i ? Pn : In, O)),
+          (i = (function () {
+            if (o.is(It)) return L();
+            var n = N(a.Elements.track),
+              t = N(u),
+              i = m("left", !0),
+              r = m("right", !0);
+            return xn(n[i]) <= kn(t[i]) && xn(t[r]) <= kn(n[r]);
+          })()),
+          (t = !i && (!L() || w)),
+          o.state.is([G, rn]) || I(u, $n, t || ""),
+          I(gn(u, l.focusableNodes || ""), $, t ? -1 : ""),
+          g && I(u, $, t ? -1 : 0),
+          i !== vn(u, St) && (A(u, St, i), c(i ? Rn : Cn, O)),
+          i ||
+            document.activeElement !== u ||
+            ((t = a.Slides.getAt(o.index)) && dn(t.slide)),
+          A(u, xt, r === n - 1),
+          A(u, kt, r === n + 1));
+      }
+      function L() {
+        var n = o.index;
+        return n === r || (l.cloneStatus && n === t);
+      }
+      var O = {
+        index: r,
+        slideIndex: t,
+        slide: u,
+        container: x,
+        isClone: w,
+        mount: function () {
+          w ||
+            ((u.id = s.id + "-slide" + An(r + 1)),
+            I(u, Z, p ? "tabpanel" : "group"),
+            I(u, tt, h.slide),
+            I(u, nn, b || On(h.slideLabel, [r + 1, o.length]))),
+            f(u, "click", R(c, Mn, O)),
+            f(u, "keydown", R(c, Yn, O)),
+            i([Dn, Un, V], E),
+            i(Gn, k),
+            v && i(H, S);
+        },
+        destroy: function () {
+          (e = !0),
+            n.destroy(),
+            X(u, At),
+            P(u, ut),
+            I(u, "style", y),
+            I(u, nn, b || "");
+        },
+        update: E,
+        style: function (n, t, i) {
+          _((i && x) || u, n, t);
+        },
+        isWithin: function (n, t) {
+          return (
+            (n = U(n - r)),
+            (n = w || (!l.rewind && !o.is(Pt)) ? n : Y(n, o.length - n)) <= t
+          );
+        },
+      };
+      return O;
+    }
+    var Ct = f + "-interval";
+    var jt = { passive: !1, capture: !0 };
+    var Nt = { Spacebar: " ", Right: Hn, Left: Bn, Up: t, Down: n };
+    function Tt(n) {
+      return (n = C(n) ? n : n.key), Nt[n] || n;
+    }
+    var Gt = "keydown";
+    var Ft = f + "-lazy",
+      Xt = Ft + "-srcset",
+      Wt = "[" + Ft + "], [" + Xt + "]";
+    var Yt = [" ", "Enter"];
+    var Ut = Object.freeze({
+        __proto__: null,
+        Media: function (r, n, o) {
+          var u = r.state,
+            t = o.breakpoints || {},
+            e = o.reducedMotion || {},
+            i = zn(),
+            c = [];
+          function f(n) {
+            n && i.destroy();
+          }
+          function a(n, t) {
+            t = matchMedia(t);
+            i.bind(t, "change", s), c.push([n, t]);
+          }
+          function s() {
+            var n = u.is(7),
+              t = o.direction,
+              i = c.reduce(function (n, t) {
+                return d(n, t[1].matches ? t[0] : {});
+              }, {});
+            sn(o),
+              l(i),
+              o.destroy
+                ? r.destroy("completely" === o.destroy)
+                : n
+                ? (f(!0), r.mount())
+                : t !== o.direction && r.refresh();
+          }
+          function l(n, t, i) {
+            d(o, n),
+              t && d(Object.getPrototypeOf(o), n),
+              (!i && u.is(1)) || r.emit(K, o);
+          }
+          return {
+            setup: function () {
+              var i = "min" === o.mediaQuery;
+              E(t)
+                .sort(function (n, t) {
+                  return i ? +n - +t : +t - +n;
+                })
+                .forEach(function (n) {
+                  a(t[n], "(" + (i ? "min" : "max") + "-width:" + n + "px)");
+                }),
+                a(e, v),
+                s();
+            },
+            destroy: f,
+            reduce: function (n) {
+              matchMedia(v).matches && (n ? d(o, e) : sn(o, E(e)));
+            },
+            set: l,
+          };
+        },
+        Direction: function (n, t, o) {
+          return {
+            resolve: function (n, t, i) {
+              var r =
+                "rtl" !== (i = i || o.direction) || t ? (i === Jn ? 0 : -1) : 1;
+              return (
+                (l[n] && l[n][r]) ||
+                n.replace(/width|left|right/i, function (n, t) {
+                  n = l[n.toLowerCase()][r] || n;
+                  return 0 < t ? n.charAt(0).toUpperCase() + n.slice(1) : n;
+                })
+              );
+            },
+            orient: function (n) {
+              return n * ("rtl" === o.direction ? 1 : -1);
+            },
+          };
+        },
+        Elements: function (n, t, i) {
+          var r,
+            o,
+            u,
+            e = Q(n),
+            c = e.on,
+            f = e.bind,
+            a = n.root,
+            s = i.i18n,
+            l = {},
+            d = [],
+            v = [],
+            h = [];
+          function p() {
+            (r = y("." + ct)),
+              (o = fn(r, "." + ft)),
+              bn(r && o, "A track/list element is missing."),
+              k(d, S(o, "." + at + ":not(." + st + ")")),
+              w(
+                {
+                  arrows: dt,
+                  pagination: gt,
+                  prev: ht,
+                  next: pt,
+                  bar: yt,
+                  toggle: bt,
+                },
+                function (n, t) {
+                  l[t] = y("." + n);
+                }
+              ),
+              an(l, { root: a, track: r, list: o, slides: d });
+            var n =
+                a.id ||
+                (function (n) {
+                  return "" + n + An((_n[n] = (_n[n] || 0) + 1));
+                })(yn),
+              t = i.role;
+            (a.id = n),
+              (r.id = r.id || n + "-track"),
+              (o.id = o.id || n + "-list"),
+              !z(a, Z) && "SECTION" !== a.tagName && t && I(a, Z, t),
+              I(a, tt, s.carousel),
+              I(o, Z, "presentation"),
+              m();
+          }
+          function g(n) {
+            var t = ut.concat("style");
+            D(d), X(a, v), X(r, h), P([r, o], t), P(a, n ? t : ["style", tt]);
+          }
+          function m() {
+            X(a, v),
+              X(r, h),
+              (v = b(et)),
+              (h = b(ct)),
+              M(a, v),
+              M(r, h),
+              I(a, nn, i.label),
+              I(a, Zn, i.labelledby);
+          }
+          function y(n) {
+            n = pn(a, n);
+            return n &&
+              (function (n, t) {
+                if (x(n.closest)) return n.closest(t);
+                for (var i = n; i && 1 === i.nodeType && !cn(i, t); )
+                  i = i.parentElement;
+                return i;
+              })(n, "." + et) === a
+              ? n
+              : void 0;
+          }
+          function b(n) {
+            return [
+              n + "--" + i.type,
+              n + "--" + i.direction,
+              i.drag && n + "--draggable",
+              i.isNavigation && n + "--nav",
+              n === et && tn,
+            ];
+          }
+          return an(l, {
+            setup: p,
+            mount: function () {
+              c(J, g),
+                c(J, p),
+                c(K, m),
+                f(
+                  document,
+                  _t + " keydown",
+                  function (n) {
+                    u = "keydown" === n.type;
+                  },
+                  { capture: !0 }
+                ),
+                f(a, "focusin", function () {
+                  A(a, Lt, !!u);
+                });
+            },
+            destroy: g,
+          });
+        },
+        Slides: function (r, o, u) {
+          var n = Q(r),
+            t = n.on,
+            e = n.emit,
+            c = n.bind,
+            f = (n = o.Elements).slides,
+            a = n.list,
+            s = [];
+          function i() {
+            f.forEach(function (n, t) {
+              d(n, t, -1);
+            });
+          }
+          function l() {
+            h(function (n) {
+              n.destroy();
+            }),
+              D(s);
+          }
+          function d(n, t, i) {
+            t = Rt(r, t, i, n);
+            t.mount(),
+              s.push(t),
+              s.sort(function (n, t) {
+                return n.index - t.index;
+              });
+          }
+          function v(n) {
+            return n
+              ? p(function (n) {
+                  return !n.isClone;
+                })
+              : s;
+          }
+          function h(n, t) {
+            v(t).forEach(n);
+          }
+          function p(t) {
+            return s.filter(
+              x(t)
+                ? t
+                : function (n) {
+                    return C(t) ? cn(n.slide, t) : b(y(t), n.index);
+                  }
+            );
+          }
+          return {
+            mount: function () {
+              i(), t(J, l), t(J, i);
+            },
+            destroy: l,
+            update: function () {
+              h(function (n) {
+                n.update();
+              });
+            },
+            register: d,
+            get: v,
+            getIn: function (n) {
+              var t = o.Controller,
+                i = t.toIndex(n),
+                r = t.hasFocus() ? 1 : u.perPage;
+              return p(function (n) {
+                return En(n.index, i, i + r - 1);
+              });
+            },
+            getAt: function (n) {
+              return p(n)[0];
+            },
+            add: function (n, o) {
+              g(n, function (n) {
+                var t, i, r;
+                m((n = C(n) ? hn(n) : n)) &&
+                  ((t = f[o]) ? O(n, t) : L(a, n),
+                  M(n, u.classes.slide),
+                  (t = n),
+                  (i = R(e, jn)),
+                  (t = gn(t, "img")),
+                  (r = t.length)
+                    ? t.forEach(function (n) {
+                        c(n, "load error", function () {
+                          --r || i();
+                        });
+                      })
+                    : i());
+              }),
+                e(J);
+            },
+            remove: function (n) {
+              T(
+                p(n).map(function (n) {
+                  return n.slide;
+                })
+              ),
+                e(J);
+            },
+            forEach: h,
+            filter: p,
+            style: function (t, i, r) {
+              h(function (n) {
+                n.style(t, i, r);
+              });
+            },
+            getLength: function (n) {
+              return (n ? f : s).length;
+            },
+            isEnough: function () {
+              return s.length > u.perPage;
+            },
+          };
+        },
+        Layout: function (t, n, i) {
+          var r,
+            o,
+            u,
+            e = (a = Q(t)).on,
+            c = a.bind,
+            f = a.emit,
+            a = n.Slides,
+            s = n.Direction.resolve,
+            l = (n = n.Elements).root,
+            d = n.track,
+            v = n.list,
+            h = a.getAt,
+            p = a.style;
+          function g() {
+            (r = i.direction === Jn),
+              _(l, "maxWidth", W(i.width)),
+              _(d, s("paddingLeft"), y(!1)),
+              _(d, s("paddingRight"), y(!0)),
+              m(!0);
+          }
+          function m(n) {
+            var t = N(l);
+            (!n && o.width === t.width && o.height === t.height) ||
+              (_(
+                d,
+                "height",
+                (function () {
+                  var n = "";
+                  r &&
+                    (bn((n = b()), "height or heightRatio is missing."),
+                    (n = "calc(" + n + " - " + y(!1) + " - " + y(!0) + ")"));
+                  return n;
+                })()
+              ),
+              p(s("marginRight"), W(i.gap)),
+              p(
+                "width",
+                i.autoWidth ? null : W(i.fixedWidth) || (r ? "" : w())
+              ),
+              p(
+                "height",
+                W(i.fixedHeight) || (r ? (i.autoHeight ? null : w()) : b()),
+                !0
+              ),
+              (o = t),
+              f(Nn),
+              u !== (u = O()) && (A(l, Ot, u), f("overflow", u)));
+          }
+          function y(n) {
+            var t = i.padding,
+              n = s(n ? "right" : "left");
+            return (t && W(t[n] || (un(t) ? 0 : t))) || "0px";
+          }
+          function b() {
+            return W(i.height || N(v).width * i.heightRatio);
+          }
+          function w() {
+            var n = W(i.gap);
+            return (
+              "calc((100%" +
+              (n && " + " + n) +
+              ")/" +
+              (i.perPage || 1) +
+              (n && " - " + n) +
+              ")"
+            );
+          }
+          function x() {
+            return N(v)[s("width")];
+          }
+          function k(n, t) {
+            n = h(n || 0);
+            return n ? N(n.slide)[s("width")] + (t ? 0 : L()) : 0;
+          }
+          function S(n, t) {
+            var i,
+              n = h(n);
+            return n
+              ? ((n = N(n.slide)[s("right")]),
+                (i = N(v)[s("left")]),
+                U(n - i) + (t ? 0 : L()))
+              : 0;
+          }
+          function E(n) {
+            return S(t.length - 1) - S(0) + k(0, n);
+          }
+          function L() {
+            var n = h(0);
+            return (n && parseFloat(_(n.slide, s("marginRight")))) || 0;
+          }
+          function O() {
+            return t.is(It) || E(!0) > x();
+          }
+          return {
+            mount: function () {
+              var n, t, i;
+              g(),
+                c(
+                  window,
+                  "resize load",
+                  ((n = R(f, jn)),
+                  (i = qn(t || 0, n, null, 1)),
+                  function () {
+                    i.isPaused() && i.start();
+                  })
+                ),
+                e([K, J], g),
+                e(jn, m);
+            },
+            resize: m,
+            listSize: x,
+            slideSize: k,
+            sliderSize: E,
+            totalSize: S,
+            getPadding: function (n) {
+              return (
+                parseFloat(_(d, s("padding" + (n ? "Right" : "Left")))) || 0
+              );
+            },
+            isOverflow: O,
+          };
+        },
+        Clones: function (c, i, f) {
+          var t,
+            r = Q(c),
+            n = r.on,
+            a = i.Elements,
+            s = i.Slides,
+            o = i.Direction.resolve,
+            l = [];
+          function u() {
+            if ((n(J, d), n([K, jn], v), (t = h()))) {
+              var o = t,
+                u = s.get().slice(),
+                e = u.length;
+              if (e) {
+                for (; u.length < o; ) k(u, u);
+                k(u.slice(-o), u.slice(0, o)).forEach(function (n, t) {
+                  var i = t < o,
+                    r = (function (n, t) {
+                      n = n.cloneNode(!0);
+                      return (
+                        M(n, f.classes.clone),
+                        (n.id = c.root.id + "-clone" + An(t + 1)),
+                        n
+                      );
+                    })(n.slide, t);
+                  i ? O(r, u[0].slide) : L(a.list, r),
+                    k(l, r),
+                    s.register(r, t - o + (i ? 0 : e), n.index);
+                });
+              }
+              i.Layout.resize(!0);
+            }
+          }
+          function d() {
+            e(), u();
+          }
+          function e() {
+            T(l), D(l), r.destroy();
+          }
+          function v() {
+            var n = h();
+            t !== n && (t < n || !n) && r.emit(J);
+          }
+          function h() {
+            var n,
+              t = f.clones;
+            return (
+              c.is(Pt)
+                ? en(t) &&
+                  (t =
+                    ((n = f[o("fixedWidth")] && i.Layout.slideSize(0)) &&
+                      kn(N(a.track)[o("width")] / n)) ||
+                    (f[o("autoWidth")] && c.length) ||
+                    2 * f.perPage)
+                : (t = 0),
+              t
+            );
+          }
+          return { mount: u, destroy: e };
+        },
+        Move: function (r, c, o) {
+          var e,
+            n = Q(r),
+            t = n.on,
+            f = n.emit,
+            a = r.state.set,
+            u = (n = c.Layout).slideSize,
+            i = n.getPadding,
+            s = n.totalSize,
+            l = n.listSize,
+            d = n.sliderSize,
+            v = (n = c.Direction).resolve,
+            h = n.orient,
+            p = (n = c.Elements).list,
+            g = n.track;
+          function m() {
+            c.Controller.isBusy() ||
+              (c.Scroll.cancel(), y(r.index), c.Slides.update());
+          }
+          function y(n) {
+            b(S(n, !0));
+          }
+          function b(n, t) {
+            r.is(It) ||
+              ((t = t
+                ? n
+                : (function (n) {
+                    {
+                      var t, i;
+                      r.is(Pt) &&
+                        ((t = k(n)),
+                        (i = t > c.Controller.getEnd()),
+                        (t < 0 || i) && (n = w(n, i)));
+                    }
+                    return n;
+                  })(n)),
+              _(p, "transform", "translate" + v("X") + "(" + t + "px)"),
+              n !== t && f(Un));
+          }
+          function w(n, t) {
+            var i = n - L(t),
+              r = d();
+            return (n -= h(r * (kn(U(i) / r) || 1)) * (t ? 1 : -1));
+          }
+          function x() {
+            b(E(), !0), e.cancel();
+          }
+          function k(n) {
+            for (
+              var t = c.Slides.get(), i = 0, r = 1 / 0, o = 0;
+              o < t.length;
+              o++
+            ) {
+              var u = t[o].index,
+                e = U(S(u, !0) - n);
+              if (!(e <= r)) break;
+              (r = e), (i = u);
+            }
+            return i;
+          }
+          function S(n, t) {
+            var i = h(
+              s(n - 1) -
+                ((n = n),
+                "center" === (i = o.focus)
+                  ? (l() - u(n, !0)) / 2
+                  : +i * u(n) || 0)
+            );
+            return t
+              ? ((n = i),
+                (n = o.trimSpace && r.is(Mt) ? q(n, 0, h(d(!0) - l())) : n))
+              : i;
+          }
+          function E() {
+            var n = v("left");
+            return N(p)[n] - N(g)[n] + h(i(!1));
+          }
+          function L(n) {
+            return S(n ? c.Controller.getEnd() : 0, !!o.trimSpace);
+          }
+          return {
+            mount: function () {
+              (e = c.Transition), t([B, Nn, K, J], m);
+            },
+            move: function (n, t, i, r) {
+              var o, u;
+              n !== t &&
+                ((o = i < n),
+                (u = h(w(E(), o))),
+                o ? 0 <= u : u <= p[v("scrollWidth")] - N(g)[v("width")]) &&
+                (x(), b(w(E(), i < n), !0)),
+                a(G),
+                f(H, t, i, n),
+                e.start(t, function () {
+                  a(3), f(Dn, t, i, n), r && r();
+                });
+            },
+            jump: y,
+            translate: b,
+            shift: w,
+            cancel: x,
+            toIndex: k,
+            toPosition: S,
+            getPosition: E,
+            getLimit: L,
+            exceededLimit: function (n, t) {
+              t = en(t) ? E() : t;
+              var i = !0 !== n && h(t) < h(L(!1)),
+                n = !1 !== n && h(t) > h(L(!0));
+              return i || n;
+            },
+            reposition: m,
+          };
+        },
+        Controller: function (o, u, e) {
+          var c,
+            f,
+            a,
+            s,
+            n = Q(o),
+            t = n.on,
+            i = n.emit,
+            l = u.Move,
+            d = l.getPosition,
+            r = l.getLimit,
+            v = l.toPosition,
+            h = (n = u.Slides).isEnough,
+            p = n.getLength,
+            g = e.omitEnd,
+            m = o.is(Pt),
+            y = o.is(Mt),
+            b = R(L, !1),
+            w = R(L, !0),
+            x = e.start || 0,
+            k = x;
+          function S() {
+            (f = p(!0)), (a = e.perMove), (s = e.perPage), (c = _());
+            var n = q(x, 0, g ? c : f - 1);
+            n !== x && ((x = n), l.reposition());
+          }
+          function E() {
+            c !== _() && i("ei");
+          }
+          function L(n, t) {
+            var i = a || (P() ? 1 : s),
+              i = O(x + i * (n ? -1 : 1), x, !(a || P()));
+            return -1 === i && y && !Sn(d(), r(!n), 1)
+              ? n
+                ? 0
+                : c
+              : t
+              ? i
+              : A(i);
+          }
+          function O(n, t, i) {
+            var r;
+            return (
+              h() || P()
+                ? ((r = (function (n) {
+                    if (y && "move" === e.trimSpace && n !== x)
+                      for (
+                        var t = d();
+                        t === v(n, !0) && En(n, 0, o.length - 1, !e.rewind);
+
+                      )
+                        n < x ? --n : ++n;
+                    return n;
+                  })(n)) !== n && ((t = n), (n = r), (i = !1)),
+                  n < 0 || c < n
+                    ? (n =
+                        a || (!En(0, n, t, !0) && !En(c, t, n, !0))
+                          ? m
+                            ? i
+                              ? n < 0
+                                ? -(f % s || s)
+                                : f
+                              : n
+                            : e.rewind
+                            ? n < 0
+                              ? c
+                              : 0
+                            : -1
+                          : z(D(n)))
+                    : i && n !== t && (n = z(D(t) + (n < t ? -1 : 1))))
+                : (n = -1),
+              n
+            );
+          }
+          function A(n) {
+            return m ? (n + f) % f || 0 : n;
+          }
+          function _() {
+            for (var n = f - (P() || (m && a) ? 1 : s); g && 0 < n--; )
+              if (v(f - 1, !0) !== v(n, !0)) {
+                n++;
+                break;
+              }
+            return q(n, 0, f - 1);
+          }
+          function z(n) {
+            return q(P() ? n : s * n, 0, c);
+          }
+          function D(n) {
+            return P() ? Y(n, c) : xn((c <= n ? f - 1 : n) / s);
+          }
+          function M(n) {
+            n !== x && ((k = x), (x = n));
+          }
+          function P() {
+            return !en(e.focus) || e.isNavigation;
+          }
+          function I() {
+            return o.state.is([G, rn]) && !!e.waitForTransition;
+          }
+          return {
+            mount: function () {
+              S(), t([K, J, "ei"], S), t(Nn, E);
+            },
+            go: function (n, t, i) {
+              var r;
+              I() ||
+                (-1 <
+                  (r = A(
+                    (n = (function (n) {
+                      var t = x;
+                      {
+                        var i, r;
+                        C(n)
+                          ? ((r = n.match(/([+\-<>])(\d+)?/) || []),
+                            (i = r[1]),
+                            (r = r[2]),
+                            "+" === i || "-" === i
+                              ? (t = O(x + +("" + i + (+r || 1)), x))
+                              : ">" === i
+                              ? (t = r ? z(+r) : b(!0))
+                              : "<" === i && (t = w(!0)))
+                          : (t = m ? n : q(n, 0, c));
+                      }
+                      return t;
+                    })(n))
+                  )) &&
+                  (t || r !== x) &&
+                  (M(r), l.move(n, r, k, i)));
+            },
+            scroll: function (n, t, i, r) {
+              u.Scroll.scroll(n, t, i, function () {
+                var n = A(l.toIndex(d()));
+                M(g ? Y(n, c) : n), r && r();
+              });
+            },
+            getNext: b,
+            getPrev: w,
+            getAdjacent: L,
+            getEnd: _,
+            setIndex: M,
+            getIndex: function (n) {
+              return n ? k : x;
+            },
+            toIndex: z,
+            toPage: D,
+            toDest: function (n) {
+              return (n = l.toIndex(n)), y ? q(n, 0, c) : n;
+            },
+            hasFocus: P,
+            isBusy: I,
+          };
+        },
+        Arrows: function (o, n, t) {
+          var i,
+            r,
+            u = Q(o),
+            e = u.on,
+            c = u.bind,
+            f = u.emit,
+            a = t.classes,
+            s = t.i18n,
+            l = n.Elements,
+            d = n.Controller,
+            v = l.arrows,
+            h = l.track,
+            p = v,
+            g = l.prev,
+            m = l.next,
+            y = {};
+          function b() {
+            var n = t.arrows;
+            !n ||
+              (g && m) ||
+              ((p = v || j("div", a.arrows)),
+              (g = S(!0)),
+              (m = S(!1)),
+              (i = !0),
+              L(p, [g, m]),
+              v || O(p, h)),
+              g &&
+                m &&
+                (an(y, { prev: g, next: m }),
+                ln(p, n ? "" : "none"),
+                M(p, (r = dt + "--" + t.direction)),
+                n &&
+                  (e([B, Dn, J, V, "ei"], E),
+                  c(m, "click", R(k, ">")),
+                  c(g, "click", R(k, "<")),
+                  E(),
+                  I([g, m], Kn, h.id),
+                  f("arrows:mounted", g, m))),
+              e(K, w);
+          }
+          function w() {
+            x(), b();
+          }
+          function x() {
+            u.destroy(),
+              X(p, r),
+              i ? (T(v ? [g, m] : p), (g = m = null)) : P([g, m], ut);
+          }
+          function k(n) {
+            d.go(n, !0);
+          }
+          function S(n) {
+            return hn(
+              '<button class="' +
+                a.arrow +
+                " " +
+                (n ? a.prev : a.next) +
+                '" type="button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40" focusable="false"><path d="' +
+                (t.arrowPath ||
+                  "m15.5 0.932-4.3 4.38 14.5 14.6-14.5 14.5 4.3 4.4 14.6-14.6 4.4-4.3-4.4-4.4-14.6-14.6z") +
+                '" />'
+            );
+          }
+          function E() {
+            var n, t, i, r;
+            g &&
+              m &&
+              ((r = o.index),
+              (n = d.getPrev()),
+              (t = d.getNext()),
+              (i = -1 < n && r < n ? s.last : s.prev),
+              (r = -1 < t && t < r ? s.first : s.next),
+              (g.disabled = n < 0),
+              (m.disabled = t < 0),
+              I(g, nn, i),
+              I(m, nn, r),
+              f("arrows:updated", g, m, n, t));
+          }
+          return { arrows: y, mount: b, destroy: x, update: E };
+        },
+        Autoplay: function (n, t, i) {
+          var r,
+            o,
+            u = Q(n),
+            e = u.on,
+            c = u.bind,
+            f = u.emit,
+            a = qn(i.interval, n.go.bind(n, ">"), function (n) {
+              var t = l.bar;
+              t && _(t, "width", 100 * n + "%"), f("autoplay:playing", n);
+            }),
+            s = a.isPaused,
+            l = t.Elements,
+            d = (u = t.Elements).root,
+            v = u.toggle,
+            h = i.autoplay,
+            p = "pause" === h;
+          function g() {
+            s() &&
+              t.Slides.isEnough() &&
+              (a.start(!i.resetProgress), (o = r = p = !1), b(), f(Fn));
+          }
+          function m(n) {
+            (p = !!(n = void 0 === n ? !0 : n)), b(), s() || (a.pause(), f(Xn));
+          }
+          function y() {
+            p || (r || o ? m(!1) : g());
+          }
+          function b() {
+            v && (A(v, tn, !p), I(v, nn, i.i18n[p ? "play" : "pause"]));
+          }
+          function w(n) {
+            n = t.Slides.getAt(n);
+            a.set((n && +z(n.slide, Ct)) || i.interval);
+          }
+          return {
+            mount: function () {
+              h &&
+                (i.pauseOnHover &&
+                  c(d, "mouseenter mouseleave", function (n) {
+                    (r = "mouseenter" === n.type), y();
+                  }),
+                i.pauseOnFocus &&
+                  c(d, "focusin focusout", function (n) {
+                    (o = "focusin" === n.type), y();
+                  }),
+                v &&
+                  c(v, "click", function () {
+                    p ? g() : m(!0);
+                  }),
+                e([H, Tn, J], a.rewind),
+                e(H, w),
+                v && I(v, Kn, l.track.id),
+                p || g(),
+                b());
+            },
+            destroy: a.cancel,
+            play: g,
+            pause: m,
+            isPaused: s,
+          };
+        },
+        Cover: function (n, t, i) {
+          var r = Q(n).on;
+          function o(i) {
+            t.Slides.forEach(function (n) {
+              var t = fn(n.container || n.slide, "img");
+              t && t.src && u(i, t, n);
+            });
+          }
+          function u(n, t, i) {
+            i.style(
+              "background",
+              n ? 'center/cover no-repeat url("' + t.src + '")' : "",
+              !0
+            ),
+              ln(t, n ? "none" : "");
+          }
+          return {
+            mount: function () {
+              i.cover && (r(Wn, R(u, !0)), r([B, K, J], R(o, !0)));
+            },
+            destroy: R(o, !1),
+          };
+        },
+        Scroll: function (n, c, u) {
+          var f,
+            a,
+            t = Q(n),
+            i = t.on,
+            s = t.emit,
+            l = n.state.set,
+            d = c.Move,
+            v = d.getPosition,
+            e = d.getLimit,
+            h = d.exceededLimit,
+            p = d.translate,
+            g = n.is(Mt),
+            m = 1;
+          function y(n, t, i, r, o) {
+            var u,
+              e = v(),
+              i =
+                (x(),
+                !i ||
+                  (g && h()) ||
+                  ((i = c.Layout.sliderSize()),
+                  (u = Ln(n) * i * xn(U(n) / i) || 0),
+                  (n = d.toPosition(c.Controller.toDest(n % i)) + u)),
+                Sn(e, n, 1));
+            (m = 1),
+              (t = i ? 0 : t || wn(U(n - e) / 1.5, 800)),
+              (a = r),
+              (f = qn(t, b, R(w, e, n, o), 1)),
+              l(rn),
+              s(Tn),
+              f.start();
+          }
+          function b() {
+            l(3), a && a(), s(V);
+          }
+          function w(n, t, i, r) {
+            var o = v(),
+              r =
+                (n +
+                  (t - n) *
+                    ((t = r),
+                    (n = u.easingFunc) ? n(t) : 1 - Math.pow(1 - t, 4)) -
+                  o) *
+                m;
+            p(o + r),
+              g &&
+                !i &&
+                h() &&
+                ((m *= 0.6), U(r) < 10 && y(e(h(!0)), 600, !1, a, !0));
+          }
+          function x() {
+            f && f.cancel();
+          }
+          function r() {
+            f && !f.isPaused() && (x(), b());
+          }
+          return {
+            mount: function () {
+              i(H, x), i([K, J], r);
+            },
+            destroy: x,
+            scroll: y,
+            cancel: r,
+          };
+        },
+        Drag: function (e, o, c) {
+          var f,
+            t,
+            u,
+            a,
+            s,
+            l,
+            d,
+            v,
+            n = Q(e),
+            i = n.on,
+            h = n.emit,
+            p = n.bind,
+            g = n.unbind,
+            m = e.state,
+            y = o.Move,
+            b = o.Scroll,
+            w = o.Controller,
+            x = o.Elements.track,
+            k = o.Media.reduce,
+            r = (n = o.Direction).resolve,
+            S = n.orient,
+            E = y.getPosition,
+            L = y.exceededLimit,
+            O = !1;
+          function j() {
+            var n = c.drag;
+            C(!n), (a = "free" === n);
+          }
+          function N(n) {
+            var t, i, r;
+            (l = !1),
+              d ||
+                ((t = R(n)),
+                (i = n.target),
+                (r = c.noDrag),
+                cn(i, "." + mt + ", ." + vt) ||
+                  (r && cn(i, r)) ||
+                  (!t && n.button) ||
+                  (w.isBusy()
+                    ? F(n, !0)
+                    : ((v = t ? x : window),
+                      (s = m.is([G, rn])),
+                      (u = null),
+                      p(v, zt, A, jt),
+                      p(v, Dt, _, jt),
+                      y.cancel(),
+                      b.cancel(),
+                      z(n))));
+          }
+          function A(n) {
+            var t, i, r, o, u;
+            m.is(6) || (m.set(6), h("drag")),
+              n.cancelable &&
+                (s
+                  ? (y.translate(f + D(n) / (O && e.is(Mt) ? 5 : 1)),
+                    (u = 200 < M(n)),
+                    (t = O !== (O = L())),
+                    (u || t) && z(n),
+                    (l = !0),
+                    h("dragging"),
+                    F(n))
+                  : U(D((u = n))) > U(D(u, !0)) &&
+                    ((t = n),
+                    (i = c.dragMinThreshold),
+                    (r = un(i)),
+                    (o = (r && i.mouse) || 0),
+                    (r = (r ? i.touch : +i) || 10),
+                    (s = U(D(t)) > (R(t) ? r : o)),
+                    F(n)));
+          }
+          function _(n) {
+            var t, i, r;
+            m.is(6) && (m.set(3), h("dragged")),
+              s &&
+                ((i = (function (n) {
+                  return (
+                    E() +
+                    Ln(n) *
+                      Y(
+                        U(n) * (c.flickPower || 600),
+                        a ? 1 / 0 : o.Layout.listSize() * (c.flickMaxPages || 1)
+                      )
+                  );
+                })(
+                  (t = (function (n) {
+                    if (e.is(Pt) || !O) {
+                      var t = M(n);
+                      if (t && t < 200) return D(n) / t;
+                    }
+                    return 0;
+                  })((t = n)))
+                )),
+                (r = c.rewind && c.rewindByDrag),
+                k(!1),
+                a
+                  ? w.scroll(i, 0, c.snap)
+                  : e.is(It)
+                  ? w.go(S(Ln(t)) < 0 ? (r ? "<" : "-") : r ? ">" : "+")
+                  : e.is(Mt) && O && r
+                  ? w.go(L(!0) ? ">" : "<")
+                  : w.go(w.toDest(i), !0),
+                k(!0),
+                F(n)),
+              g(v, zt, A),
+              g(v, Dt, _),
+              (s = !1);
+          }
+          function T(n) {
+            !d && l && F(n, !0);
+          }
+          function z(n) {
+            (u = t), (t = n), (f = E());
+          }
+          function D(n, t) {
+            return I(n, t) - I(P(n), t);
+          }
+          function M(n) {
+            return mn(n) - mn(P(n));
+          }
+          function P(n) {
+            return (t === n && u) || t;
+          }
+          function I(n, t) {
+            return (R(n) ? n.changedTouches[0] : n)["page" + r(t ? "Y" : "X")];
+          }
+          function R(n) {
+            return "undefined" != typeof TouchEvent && n instanceof TouchEvent;
+          }
+          function C(n) {
+            d = n;
+          }
+          return {
+            mount: function () {
+              p(x, zt, on, jt),
+                p(x, Dt, on, jt),
+                p(x, _t, N, jt),
+                p(x, "click", T, { capture: !0 }),
+                p(x, "dragstart", F),
+                i([B, K], j);
+            },
+            disable: C,
+            isDragging: function () {
+              return s;
+            },
+          };
+        },
+        Keyboard: function (t, n, i) {
+          var r,
+            o,
+            u = Q(t),
+            e = u.on,
+            c = u.bind,
+            f = u.unbind,
+            a = t.root,
+            s = n.Direction.resolve;
+          function l() {
+            var n = i.keyboard;
+            n && ((r = "global" === n ? window : a), c(r, Gt, h));
+          }
+          function d() {
+            f(r, Gt);
+          }
+          function v() {
+            var n = o;
+            (o = !0),
+              p(function () {
+                o = n;
+              });
+          }
+          function h(n) {
+            o || ((n = Tt(n)) === s(Bn) ? t.go("<") : n === s(Hn) && t.go(">"));
+          }
+          return {
+            mount: function () {
+              l(), e(K, d), e(K, l), e(H, v);
+            },
+            destroy: d,
+            disable: function (n) {
+              o = n;
+            },
+          };
+        },
+        LazyLoad: function (i, n, o) {
+          var t = Q(i),
+            r = t.on,
+            u = t.off,
+            e = t.bind,
+            c = t.emit,
+            f = "sequential" === o.lazyLoad,
+            a = [Dn, V],
+            s = [];
+          function l() {
+            D(s),
+              n.Slides.forEach(function (r) {
+                gn(r.slide, Wt).forEach(function (n) {
+                  var t = z(n, Ft),
+                    i = z(n, Xt);
+                  (t === n.src && i === n.srcset) ||
+                    ((t = o.classes.spinner),
+                    (t = fn((i = n.parentElement), "." + t) || j("span", t, i)),
+                    s.push([n, r, t]),
+                    n.src || ln(n, "none"));
+                });
+              }),
+              (f ? p : (u(a), r(a, d), d))();
+          }
+          function d() {
+            (s = s.filter(function (n) {
+              var t = o.perPage * ((o.preloadPages || 1) + 1) - 1;
+              return !n[1].isWithin(i.index, t) || v(n);
+            })).length || u(a);
+          }
+          function v(n) {
+            var t = n[0];
+            M(n[1].slide, Et),
+              e(t, "load error", R(h, n)),
+              I(t, "src", z(t, Ft)),
+              I(t, "srcset", z(t, Xt)),
+              P(t, Ft),
+              P(t, Xt);
+          }
+          function h(n, t) {
+            var i = n[0],
+              r = n[1];
+            X(r.slide, Et),
+              "error" !== t.type && (T(n[2]), ln(i, ""), c(Wn, i, r), c(jn)),
+              f && p();
+          }
+          function p() {
+            s.length && v(s.shift());
+          }
+          return {
+            mount: function () {
+              o.lazyLoad && (l(), r(J, l));
+            },
+            destroy: R(D, s),
+            check: d,
+          };
+        },
+        Pagination: function (l, n, d) {
+          var v,
+            h,
+            t = Q(l),
+            p = t.on,
+            g = t.emit,
+            m = t.bind,
+            y = n.Slides,
+            b = n.Elements,
+            w = n.Controller,
+            x = w.hasFocus,
+            r = w.getIndex,
+            e = w.go,
+            c = n.Direction.resolve,
+            k = b.pagination,
+            S = [];
+          function E() {
+            v && (T(k ? o(v.children) : v), X(v, h), D(S), (v = null)),
+              t.destroy();
+          }
+          function L(n) {
+            e(">" + n, !0);
+          }
+          function O(n, t) {
+            var i = S.length,
+              r = Tt(t),
+              o = A(),
+              u = -1,
+              o =
+                (r === c(Hn, !1, o)
+                  ? (u = ++n % i)
+                  : r === c(Bn, !1, o)
+                  ? (u = (--n + i) % i)
+                  : "Home" === r
+                  ? (u = 0)
+                  : "End" === r && (u = i - 1),
+                S[u]);
+            o && (dn(o.button), e(">" + u), F(t, !0));
+          }
+          function A() {
+            return d.paginationDirection || d.direction;
+          }
+          function _(n) {
+            return S[w.toPage(n)];
+          }
+          function z() {
+            var n,
+              t = _(r(!0)),
+              i = _(r());
+            t && (X((n = t.button), tn), P(n, Qn), I(n, $, -1)),
+              i && (M((n = i.button), tn), I(n, Qn, !0), I(n, $, "")),
+              g("pagination:updated", { list: v, items: S }, t, i);
+          }
+          return {
+            items: S,
+            mount: function n() {
+              E(), p([K, J, "ei"], n);
+              var t = d.pagination;
+              if ((k && ln(k, t ? "" : "none"), t)) {
+                p([H, Tn, V], z);
+                var t = l.length,
+                  i = d.classes,
+                  r = d.i18n,
+                  o = d.perPage,
+                  u = x() ? w.getEnd() + 1 : kn(t / o);
+                M(
+                  (v = k || j("ul", i.pagination, b.track.parentElement)),
+                  (h = gt + "--" + A())
+                ),
+                  I(v, Z, "tablist"),
+                  I(v, nn, r.select),
+                  I(v, nt, A() === Jn ? "vertical" : "");
+                for (var e = 0; e < u; e++) {
+                  var c = j("li", null, v),
+                    f = j("button", { class: i.page, type: "button" }, c),
+                    a = y.getIn(e).map(function (n) {
+                      return n.slide.id;
+                    }),
+                    s = !x() && 1 < o ? r.pageX : r.slideX;
+                  m(f, "click", R(L, e)),
+                    d.paginationKeyboard && m(f, "keydown", R(O, e)),
+                    I(c, Z, "presentation"),
+                    I(f, Z, "tab"),
+                    I(f, Kn, a.join(" ")),
+                    I(f, nn, On(s, e + 1)),
+                    I(f, $, -1),
+                    S.push({ li: c, button: f, page: e });
+                }
+                z(), g("pagination:mounted", { list: v, items: S }, _(l.index));
+              }
+            },
+            destroy: E,
+            getAt: _,
+            update: z,
+          };
+        },
+        Sync: function (i, n, t) {
+          var r = t.isNavigation,
+            o = t.slideFocus,
+            u = [];
+          function e() {
+            var n, t;
+            i.splides.forEach(function (n) {
+              n.isParent || (f(i, n.splide), f(n.splide, i));
+            }),
+              r &&
+                ((n = Q(i)),
+                (t = n.on)(Mn, s),
+                t(Yn, l),
+                t([B, K], a),
+                u.push(n),
+                n.emit(Gn, i.splides));
+          }
+          function c() {
+            u.forEach(function (n) {
+              n.destroy();
+            }),
+              D(u);
+          }
+          function f(n, r) {
+            n = Q(n);
+            n.on(H, function (n, t, i) {
+              r.go(r.is(Pt) ? i : n);
+            }),
+              u.push(n);
+          }
+          function a() {
+            I(n.Elements.list, nt, t.direction === Jn ? "vertical" : "");
+          }
+          function s(n) {
+            i.go(n.index);
+          }
+          function l(n, t) {
+            b(Yt, Tt(t)) && (s(n), F(t));
+          }
+          return {
+            setup: R(n.Media.set, { slideFocus: en(o) ? r : o }, !0),
+            mount: e,
+            destroy: c,
+            remount: function () {
+              c(), e();
+            },
+          };
+        },
+        Wheel: function (e, c, f) {
+          var n = Q(e).bind,
+            a = 0;
+          function t(n) {
+            var t, i, r, o, u;
+            n.cancelable &&
+              ((t = (u = n.deltaY) < 0),
+              (i = mn(n)),
+              (r = f.wheelMinThreshold || 0),
+              (o = f.wheelSleep || 0),
+              U(u) > r && o < i - a && (e.go(t ? "<" : ">"), (a = i)),
+              (u = t),
+              (f.releaseWheel &&
+                !e.state.is(G) &&
+                -1 === c.Controller.getAdjacent(u)) ||
+                F(n));
+          }
+          return {
+            mount: function () {
+              f.wheel && n(c.Elements.track, "wheel", t, jt);
+            },
+          };
+        },
+        Live: function (n, t, i) {
+          var r = Q(n).on,
+            o = t.Elements.track,
+            u = i.live && !i.isNavigation,
+            e = j("span", wt),
+            c = qn(90, R(f, !1));
+          function f(n) {
+            I(o, rt, n), n ? (L(o, e), c.start()) : (T(e), c.cancel());
+          }
+          function a(n) {
+            u && I(o, it, n ? "off" : "polite");
+          }
+          return {
+            mount: function () {
+              u &&
+                (a(!t.Autoplay.isPaused()),
+                I(o, ot, !0),
+                (e.textContent = "…"),
+                r(Fn, R(a, !0)),
+                r(Xn, R(a, !1)),
+                r([Dn, V], R(f, !0)));
+            },
+            disable: a,
+            destroy: function () {
+              P(o, [it, ot, rt]), T(e);
+            },
+          };
+        },
+      }),
+      qt = {
+        type: "slide",
+        role: "region",
+        speed: 400,
+        perPage: 1,
+        cloneStatus: !0,
+        arrows: !0,
+        pagination: !0,
+        paginationKeyboard: !0,
+        interval: 5e3,
+        pauseOnHover: !0,
+        pauseOnFocus: !0,
+        resetProgress: !0,
+        easing: "cubic-bezier(0.25, 1, 0.5, 1)",
+        drag: !0,
+        direction: "ltr",
+        trimSpace: !0,
+        focusableNodes: "a, button, textarea, input, select, iframe",
+        live: !0,
+        classes: {
+          slide: at,
+          clone: st,
+          arrows: dt,
+          arrow: vt,
+          prev: ht,
+          next: pt,
+          pagination: gt,
+          page: mt,
+          spinner: i + "spinner",
+        },
+        i18n: {
+          prev: "Previous slide",
+          next: "Next slide",
+          first: "Go to first slide",
+          last: "Go to last slide",
+          slideX: "Go to slide %s",
+          pageX: "Go to page %s",
+          play: "Start autoplay",
+          pause: "Pause autoplay",
+          carousel: "carousel",
+          slide: "slide",
+          select: "Select a slide to show",
+          slideLabel: "%s of %s",
+        },
+        reducedMotion: { speed: 0, rewindSpeed: 0, autoplay: "pause" },
+      };
+    function Bt(n, t, i) {
+      var r = t.Slides;
+      function o() {
+        r.forEach(function (n) {
+          n.style("transform", "translateX(-" + 100 * n.index + "%)");
+        });
+      }
+      return {
+        mount: function () {
+          Q(n).on([B, J], o);
+        },
+        start: function (n, t) {
+          r.style("transition", "opacity " + i.speed + "ms " + i.easing), p(t);
+        },
+        cancel: on,
+      };
+    }
+    function Ht(u, n, e) {
+      var c,
+        f = n.Move,
+        a = n.Controller,
+        s = n.Scroll,
+        t = n.Elements.list,
+        l = R(_, t, "transition");
+      function i() {
+        l(""), s.cancel();
+      }
+      return {
+        mount: function () {
+          Q(u).bind(t, "transitionend", function (n) {
+            n.target === t && c && (i(), c());
+          });
+        },
+        start: function (n, t) {
+          var i = f.toPosition(n, !0),
+            r = f.getPosition(),
+            o = (function (n) {
+              var t = e.rewindSpeed;
+              if (u.is(Mt) && t) {
+                var i = a.getIndex(!0),
+                  r = a.getEnd();
+                if ((0 === i && r <= n) || (r <= i && 0 === n)) return t;
+              }
+              return e.speed;
+            })(n);
+          1 <= U(i - r) && 1 <= o
+            ? e.useScroll
+              ? s.scroll(i, o, !1, t)
+              : (l("transform " + o + "ms " + e.easing),
+                f.translate(i, !0),
+                (c = t))
+            : (f.jump(n), t());
+        },
+        cancel: i,
+      };
+    }
+    t = (function () {
+      function i(n, t) {
+        (this.event = Q()),
+          (this.Components = {}),
+          (this.state = s(1)),
+          (this.splides = []),
+          (this.n = {}),
+          (this.t = {});
+        n = C(n) ? pn(document, n) : n;
+        bn(n, n + " is invalid."),
+          (t = d(
+            {
+              label: z((this.root = n), nn) || "",
+              labelledby: z(n, Zn) || "",
+            },
+            qt,
+            i.defaults,
+            t || {}
+          ));
+        try {
+          d(t, JSON.parse(z(n, f)));
+        } catch (n) {
+          bn(!1, "Invalid JSON");
+        }
+        this.n = Object.create(d({}, t));
+      }
+      var n = i.prototype;
+      return (
+        (n.mount = function (n, t) {
+          var i = this,
+            r = this.state,
+            o = this.Components;
+          return (
+            bn(r.is([1, 7]), "Already mounted!"),
+            r.set(1),
+            (this.i = o),
+            (this.r = t || this.r || (this.is(It) ? Bt : Ht)),
+            (this.t = n || this.t),
+            w(an({}, Ut, this.t, { Transition: this.r }), function (n, t) {
+              n = n(i, o, i.n);
+              (o[t] = n).setup && n.setup();
+            }),
+            w(o, function (n) {
+              n.mount && n.mount();
+            }),
+            this.emit(B),
+            M(this.root, "is-initialized"),
+            r.set(3),
+            this.emit("ready"),
+            this
+          );
+        }),
+        (n.sync = function (n) {
+          return (
+            this.splides.push({ splide: n }),
+            n.splides.push({ splide: this, isParent: !0 }),
+            this.state.is(3) &&
+              (this.i.Sync.remount(), n.Components.Sync.remount()),
+            this
+          );
+        }),
+        (n.go = function (n) {
+          return this.i.Controller.go(n), this;
+        }),
+        (n.on = function (n, t) {
+          return this.event.on(n, t), this;
+        }),
+        (n.off = function (n) {
+          return this.event.off(n), this;
+        }),
+        (n.emit = function (n) {
+          var t;
+          return (
+            (t = this.event).emit.apply(t, [n].concat(o(arguments, 1))), this
+          );
+        }),
+        (n.add = function (n, t) {
+          return this.i.Slides.add(n, t), this;
+        }),
+        (n.remove = function (n) {
+          return this.i.Slides.remove(n), this;
+        }),
+        (n.is = function (n) {
+          return this.n.type === n;
+        }),
+        (n.refresh = function () {
+          return this.emit(J), this;
+        }),
+        (n.destroy = function (t) {
+          void 0 === t && (t = !0);
+          var n = this.event,
+            i = this.state;
+          return (
+            i.is(1)
+              ? Q(this).on("ready", this.destroy.bind(this, t))
+              : (w(
+                  this.i,
+                  function (n) {
+                    n.destroy && n.destroy(t);
+                  },
+                  !0
+                ),
+                n.emit(a),
+                n.destroy(),
+                t && D(this.splides),
+                i.set(7)),
+            this
+          );
+        }),
+        Jt(i, [
+          {
+            key: "options",
+            get: function () {
+              return this.n;
+            },
+            set: function (n) {
+              this.i.Media.set(n, !0, !0);
+            },
+          },
+          {
+            key: "length",
+            get: function () {
+              return this.i.Slides.getLength(!0);
+            },
+          },
+          {
+            key: "index",
+            get: function () {
+              return this.i.Controller.getIndex();
+            },
+          },
+        ]),
+        i
+      );
+    })();
+    return (t.defaults = {}), (t.STATES = r), t;
+  }),
+  "object" == typeof exports && "undefined" != typeof module
+    ? (module.exports = t())
+    : "function" == typeof define && define.amd
+    ? define(t)
+    : ((n = "undefined" != typeof globalThis ? globalThis : n || self).Splide =
+        t());
+//# sourceMappingURL=splide.min.js.map
+
+</script>
+
+<!-- Product_carousel_tab_item.js -->
+<script>
+  /**----------------------
+     * product scroller js ---
+     --------------------------*/
+    // tab Carousel js
+    // initialize product scroller
+    advanceArrows("nulo-DogFood-product");
+    function advanceArrows(idx) {
+        var splideElement = "#" + idx;
+        var splideDefaultOptions = {
+            arrows: true,
+            type: "slide",
+            start: 0,
+            focus: 0,
+            pagination: false,
+            rewindSpeed: 500,
+            speed: 500,
+            pauseOnHover: true,
+            perPage: 6,
+            perMove: 1,
+            gap:20,
+            omitEnd: true,
+            breakpoints: {
+                375: {
+                    perPage: 1,
+                },
+                576: {
+                    perPage: 1,
+                },
+                991: {
+                    perPage: 3,
+                },
+                992: {
+                    perPage: 3,
+                },
+                1024: {
+                    perPage: 4,
+                },
+                1200: {
+                    perPage: 6,
+                },
+                1440: {
+                    perPage: 6,
+                },
+            },
+            
+        };
+
+        // If the add 3rd product then we will skip it
+        if(idx==="nulo-CatTreatsFood-product"){
+            var splideDefaultOptions = {
+                arrows: true,
+                type: "slide",
+                start: 0,
+                focus: 0,
+                pagination: false,
+                rewindSpeed: 500,
+                speed: 500,
+                pauseOnHover: true,
+                perPage: 5,
+                perMove: 1,
+                gap:20,
+                omitEnd: true,
+                breakpoints: {
+                    375: {
+                        perPage: 1,
+                    },
+                    576: {
+                        perPage: 1,
+                    },
+                    991: {
+                        perPage: 3,
+                    },
+                    992: {
+                        perPage: 3,
+                    },
+                    1024: {
+                        perPage: 4,
+                    },
+                    1200: {
+                        perPage: 5,
+                    },
+                    1440: {
+                        perPage: 5,
+                    },
+                },
+                
+            };
+        }
+        // at there.
+
+        new Splide(splideElement, splideDefaultOptions).mount();
+    }
+
+    /* ************************************************************************************** */
+    //for tab sweater & loader added
+    document.addEventListener("DOMContentLoaded", function () {
+        filterProducts("nulo-DogFood-product");
+    });
+    // for dog filter function
+    function filterProducts(c) {
+        var x, i;
+        x = document.getElementsByClassName("citrusNulo__Product");
+        if (c == "all") c = "";
+        for (i = 0; i < x.length; i++) {
+            RemoveClass(x[i], "citrusTabShow");
+            if (x[i].className.indexOf(c) > -1) AddClass(x[i], " citrusTabShow");
+        }
+        advanceArrows(c);
+    }
+    function AddClass(element, name) {
+        var i, arr1, arr2;
+        arr1 = element.className.split(" ");
+        arr2 = name.split(" ");
+        for (i = 0; i < arr2.length; i++) {
+            if (arr1.indexOf(arr2[i]) == -1) {
+                element.className += " " + arr2[i];
+            }
+        }
+    }
+
+    function RemoveClass(element, name) {
+        var i, arr1, arr2;
+        arr1 = element.className.split(" ");
+        arr2 = name.split(" ");
+        for (i = 0; i < arr2.length; i++) {
+            while (arr1.indexOf(arr2[i]) > -1) {
+                arr1.splice(arr1.indexOf(arr2[i]), 1);
+            }
+        }
+        element.className = arr1.join(" ");
+    }
+
+    // Add active class to the current button (highlight it)
+    document.addEventListener("DOMContentLoaded", function () {
+        // for dog active class filter
+        var dogBtnContainer = document.getElementById("citrusNuloTabId");
+        var dogBtns = dogBtnContainer.getElementsByClassName("citrusNulo__tab_item");
+        addActiveClass(dogBtns, "citrusNulo__active_tab");
+    });
+    function addActiveClass(element, activeClass) {
+        for (var i = 0; i < element.length; i++) {
+            element[i].addEventListener("click", function () {
+                var current = document.getElementsByClassName(activeClass);
+                current[0].className = current[0].className.replace(
+                    " " + activeClass,
+                    ""
+                );
+                this.className += " " + activeClass;
+            });
+        }
+    }
+    //for Dog best seller tab switcher
+</script>
+
+<!-- dogCat.js -->
+<script>
+  
+      /**----------------------
+         * product scroller js ---
+         --------------------------*/
+      // tab  carouseljs
+      // initialize product scroller
+      advanceArrowsDogCat("citrusNulo-Dog-Product");
+      function advanceArrowsDogCat(idx) {
+        var splideElement = "#" + idx;
+        var splideDefaultOptions = {
+          arrows: true,
+          type: "slide",
+          start: 0,
+          focus: 0,
+          pagination: false,
+          rewindSpeed: 500,
+          speed: 500,
+          pauseOnHover: true,
+          perPage: 4,
+          perMove: 1,
+          gap: 20,
+          omitEnd: true,
+          breakpoints: {
+            375: {
+              perPage: 1.4,
+            },
+            576: {
+              perPage: 1,
+            },
+            991: {
+              perPage: 3,
+            },
+            992: {
+              perPage: 3,
+            },
+            1024: {
+              perPage: 3,
+            },
+            1200: {
+              perPage: 4,
+            },
+            1440: {
+              perPage: 4,
+            },
+          },
+        };
+        new Splide(splideElement, splideDefaultOptions).mount();
+      }
+
+      /* ************************************************************************************** */
+      //for tab sweater & loader added
+      document.addEventListener("DOMContentLoaded", function () {
+        filterDogCatProducts("citrusNulo-Dog-Product");
+      });
+      // for dog filter function
+      function filterDogCatProducts(c) {
+        var x, i;
+        x = document.getElementsByClassName("citrusNuloDogCat__Product");
+        if (c == "all") c = "";
+        for (i = 0; i < x.length; i++) {
+          RemoveClass(x[i], "citrusTabShow");
+          if (x[i].className.indexOf(c) > -1) AddClass(x[i], " citrusTabShow");
+        }
+        advanceArrowsDogCat(c);
+      }
+      function AddClass(element, name) {
+        var i, arr1, arr2;
+        arr1 = element.className.split(" ");
+        arr2 = name.split(" ");
+        for (i = 0; i < arr2.length; i++) {
+          if (arr1.indexOf(arr2[i]) == -1) {
+            element.className += " " + arr2[i];
+          }
+        }
+      }
+
+      function RemoveClass(element, name) {
+        var i, arr1, arr2;
+        arr1 = element.className.split(" ");
+        arr2 = name.split(" ");
+        for (i = 0; i < arr2.length; i++) {
+          while (arr1.indexOf(arr2[i]) > -1) {
+            arr1.splice(arr1.indexOf(arr2[i]), 1);
+          }
+        }
+        element.className = arr1.join(" ");
+      }
+
+      // Add active class to the current button (highlight it)
+      document.addEventListener("DOMContentLoaded", function () {
+        // for dog active class filter
+        var dogBtnContainer = document.getElementById("citrusNuloDogCat_ID");
+        var dogBtns =
+          dogBtnContainer.getElementsByClassName("citrusNuloDogCat__tab_item");
+        addActiveClass(dogBtns, "citrusNuloDogCat__active_tab");
+      });
+      function addActiveClass(element, activeClass) {
+        for (var i = 0; i < element.length; i++) {
+          element[i].addEventListener("click", function () {
+            var current = document.getElementsByClassName(activeClass);
+            current[0].className = current[0].className.replace(
+              " " + activeClass,
+              ""
+            );
+            this.className += " " + activeClass;
+          });
+        }
+      }
+      //for Dog best seller tab switcher
+</script>
+<!-- End JS Dependency -->

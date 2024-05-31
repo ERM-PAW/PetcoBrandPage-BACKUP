@@ -1,0 +1,171 @@
+.citrus_earth_animal_carousel{
+    overflow-x: hidden;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+}
+
+
+.citrus_earth_animal_carousel-inner{
+    display: flex;
+    transition: all ease .5s;
+    width: 100%;
+    overflow: hidden;
+    justify-content: space-between;
+    align-items: flex-end !important;
+}
+
+.citrus_earth_animal_carousel-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+}
+
+.citrus_earth_animal_carousel-item .custom-container{
+    justify-content: space-between;
+}
+
+.citrus_earth_animal_carousel-item__col{
+    width: 50%;
+    justify-content: flex-start !important;
+    flex-wrap: wrap !important;
+}
+
+.citrus_earth_animal_carousel-item__col:first-child{
+    padding: 30px 0 30px 30px;
+    min-height: 290px;
+}
+
+.citrus_earth_animal__pov--text{
+    width: 100%;
+}
+
+.citrus_earth_animal__pov--text h1{
+    font-size: 35px;
+    color: #fff;
+    padding: 15px 0;
+}
+
+
+.pov3 .citrus_earth_animal__pov--text h1{
+    color: #00205B;
+}
+
+.pov3 .citrus_earth_animal__pov--text p{
+    color: #00205B;
+}
+
+.pov3 .citrus_earth_animal__pov--cta a{
+    background: #00205B !important;
+    color: #fff !important;
+    border: 1px solid #00205B !important;
+}
+
+.pov3 .citrus_earth_animal__pov--cta a:hover{
+    background: #fff !important;
+    color: #00205B !important;
+}
+
+.citrus_earth_animal__pov--text p{
+    font-size: 16px;
+    color: #fff;
+    padding-bottom: 20px;
+}
+
+.citrus_earth_animal__pov--cta {
+    width: 100%;
+    margin: initial !important;
+}
+
+.citrus_earth_animal__pov--cta a{
+    background: #fff !important;
+    color: #001952 !important;
+    border: 1px solid #fff !important;
+}
+
+.citrus_earth_animal__pov--cta a:hover{
+    background: #001952 !important;
+    color: #fff !important;
+    border: 1px solid #001952 !important;
+}
+
+.citrus_earth_animal__pov--logo{
+    max-width: 160px;
+}
+
+.citrus_earth_animal__pov--shots{
+    max-width: 400px;
+}
+
+.citrus_earth_animal_carousel-inner .pov1{
+    background-image: url("https://assets.petco.com/petco/image/upload/f_auto,q_auto/petco-earth-animal-pov1-dsk");
+}
+.citrus_earth_animal_carousel-inner .pov2{
+    background-image: url("https://assets.petco.com/petco/image/upload/f_auto,q_auto/petco-earth-animal-pov2-dsk");
+}
+.citrus_earth_animal_carousel-inner .pov3{
+    background-image: url("https://assets.petco.com/petco/image/upload/f_auto,q_auto/petco-earth-animal-pov3-dsk");
+}
+
+.citrus_earth_animal_carousel-controls .prev{
+    display: inline-block;
+    height: 32px;
+    width: 32px;
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-image: url('prev.svg');
+    background-position: center;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    opacity: .5;
+}
+
+.citrus_earth_animal_carousel-controls .next{
+    display: inline-block;
+    height: 32px;
+    width: 32px;
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-image: url('next.svg');
+    background-position: center;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    opacity: .5;
+}
+
+.prev:hover, .next:hover{
+    opacity: 1;
+}
+
+.citrus_earth_animal_carousel-indicators{
+    position: absolute;
+    bottom: 0;
+    left: calc(100% / 2 - 52px);
+    text-align: center;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 5px 5px 0 0;
+    padding: 10px 10px 5px;
+}
+
+.citrus_earth_animal_carousel-indicators span{
+    display: inline-block;
+    border: 2px solid #09205c;
+    padding: 7px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+.citrus_earth_animal_carousel-indicators span.active{
+    background-color: #09205c;
+}

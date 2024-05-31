@@ -1,0 +1,617 @@
+/*
+ * Legal Disclaimer
+ *
+ * These web fonts are licensed exclusively for use on the following:
+ * All domains belonging to Petco
+ *
+ * It is strictly forbidden to download or use these fonts on any other website domain or media.
+ *
+ * While the @font-face statements below may be modified by the client, this
+ * disclaimer may not be removed.
+ *
+ * Lineto.com, 2020
+ */
+
+
+ @font-face {
+	font-family: PetcoCircularTT-Regular;
+	src: url(Assets/fonts/PetcoCircularTT-Regular.woff2) format("woff2"), url(Assets/fonts/PetcoCircularTT-Regular.woff) format("woff")
+}
+
+@font-face {
+	font-family: PetcoCircularTT-Bold;
+	src: url(Assets/fonts/PetcoCircularTT-Bold.woff2) format("woff2"), url(Assets/fonts/PetcoCircularTT-Bold.woff) format("woff")
+}
+
+
+a{
+    font-family: "PetcoCircularTT-Regular", arial !important;
+    text-decoration: none;
+    color: black;
+}
+
+h2{
+    font-family: "PetcoCircularTT-Bold", arial !important;
+    font-size:25px;
+    font-weight: bold;
+}
+p{
+    font-size: 16px;font-family: "PetcoCircularTT-Regular", arial !important;
+}
+.mobile{
+    display: none;
+}
+
+/* hero banner */
+.dig_hero_banner_row{
+    background: url("https://assets.petco.com/petco/image/upload/f_auto,q_auto/digd-hero_first_vackground");
+    background-position: 0;
+    background-repeat: no-repeat;
+    min-height: 400px;
+    background-size: contain;
+    display: grid;
+    grid-template-columns: 40% 60%;
+}
+
+.mobile_version_banner_img{
+    display: none;
+}
+
+.dig_hero_banner .dig_hero_banner_text_container{
+    background: url("https://assets.petco.com/petco/image/upload/f_auto,q_auto/digd-Hero-bg");
+    background-repeat: no-repeat;
+    background-position: 0;
+    min-height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.dig_hero_banner_text_container .banner_text{
+    text-align: center;
+
+}
+.dig_hero_banner .banner_logo{
+    max-width: 227px;
+    margin: auto;
+}
+.dig_hero_banner_text_container .banner_text h2{
+    font-size: 35px;
+    color: #001952;
+    font-weight: bold;
+}
+.dig_hero_banner_text_container .banner_text p{
+    font-size: 16px;
+    color: #001952;
+    margin-bottom: 20px;
+}
+.dig_cta{
+    display: flex;
+    justify-content: center;
+}
+.dig_cta a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background: #001952;
+    padding: 20px 55px;
+    border: 1px solid #001952;
+    border-radius: 5px;
+}
+.dig_cta a:hover{
+    background-color: #fff;
+    color: #001952;
+    border: 1px solid #001952;
+}
+
+/* category section */
+.dig_container{
+    position: relative;
+}
+
+.dig_section_title_container{
+    padding: 50px 15px;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.dig_section_title_container{
+    text-decoration: none;
+    font-size: 25px;
+    font-family: "PetcoCircularTT-Bold", arial !important;
+    font-weight: bold;
+    color: #000;
+}
+
+.dig_category_container{
+width: 100%;
+max-width: 100%;
+/* background: rgba(155, 214, 178, .21); */
+position: relative;
+overflow-x: auto;
+padding-bottom: 20px;
+}
+
+.testing-nPosition{
+    background: rgba(155, 214, 178, .21);
+    height: 291px;
+    width: 100%;
+    position: absolute;
+    top:215px;
+}
+
+.dig_row{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.dig_row .dig_card{
+    width: 249px;
+    max-width: 100%;
+    text-align: center;
+}
+
+.dig_card_body a p{
+    line-height: 20px;
+}
+
+.dig_card .dig_card_img{
+    width: 177px;
+    margin: auto;
+}
+
+.img_circle{
+    border-radius: 50%;
+    z-index: 10;
+}
+
+.dig_row .dig_card .card_body_title a{
+    font-size: 18px;
+    font-weight: bold;
+    font-family: "PetcoCircularTT-Bold", arial !important;
+    color: #000;
+}
+
+.dig_card_cta a{
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: capitalize;
+    text-decoration: underline;
+    font-family: "PetcoCircularTT-Bold", arial !important;
+    color: #001952;
+}
+.dig_card .dig_card_body p{
+    font-size: 16px;
+    font-family: Petco Circular CAP;
+    color: #000;
+    min-height: 60px;
+}
+/* find your defence */
+.dig_find_defence{
+    margin-top: 30px;
+}
+.dig_defence_container{
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+}
+.dig_defence_row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #E2E2E2;
+    width: 80%;
+    margin: auto;
+}
+.dig_defence_card,.dig_defence_card_description{
+    width: 190px;
+    max-width: 100%;
+    margin: auto;
+}
+.dig_defence_card_description h3{
+    font-family: "PetcoCircularTT-Bold", arial !important;
+}
+.dig_defence_card a p{
+    font-family: "PetcoCircularTT-Regular", arial !important;
+}
+.card_top_img img{
+    width: 100%;
+    max-width: 100%;
+}
+.dig_defence_card .dig_card_body p a{
+    font-size: 13px;
+    font-family: "PetcoCircularTT-Regular", arial !important;
+    min-height: 48px;
+}
+.dig_card_body .card_body_title{
+    font-family: "PetcoCircularTT-Bold", arial !important;
+    margin: 20px 0 20px 0;
+}
+.dig_defence_card .dig_card_cta{
+    margin-bottom: 20px;
+}
+.dig_defence_card_description p{
+    font-size:13px;
+    color: #000;
+    line-height:18px;
+    margin: 0;
+    padding: 5px 0;
+    font-family: "PetcoCircularTT-Regular", arial !important;
+}
+.brif_text{
+    text-align:top;
+}
+.border-remove{
+    border: none;
+}
+/* tips and trick */
+#dig_tip{
+    margin-top:100px;
+    background: url("https://assets.petco.com/petco/image/upload/f_auto,q_auto/digd-embed-bg");
+    background-size: cover;
+    background-position: bottom -40px right 0;
+    background-repeat: no-repeat;
+    padding-bottom: 60px;
+    position: relative;
+}
+.dig_tip_container{
+    width:80%;
+    margin: auto;
+}
+.dig_tip .dig_tip_container p{
+    max-width: 400px;
+    margin: 0 auto;
+}
+.dig_tip_row{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+}
+.dig_embed_video{
+    cursor:pointer;
+    max-width: 100%;
+    margin-top:-30px;
+    text-align: center;
+}
+.dig_embed_video iframe{
+    height: 315px;
+    width: 537px;
+    max-width:100%;
+}
+.dig_tip_content{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    min-height:315px;
+}
+.dig_tip_content h2 a{
+    font-family: "PetcoCircularTT-Bold", arial !important;
+    font-size: 25px;
+}
+/* sustainable  */
+.dig_sustainable_container{
+    background: rgba(114,197,147,.2);
+}
+.dig_sustainable_content{
+    width: 100%;
+    max-width: 100%;
+    overflow-x:auto;
+}
+.dig_card_img img{
+    max-width: 100%;
+}
+.dig_sustainable .dig_card{
+    width:350px;
+    max-width: 100%;
+    background: #fff;
+}
+.dig_sustainable .dig_card .dig_card_img{
+    width:auto;
+    max-width: 100%;
+}
+.dig_sustainable .dig_card .dig_card_body{
+    background: #fff;
+    padding: 0 20px 20px;
+    text-align:left;
+}
+.dig_sustainable .dig_card .dig_card_body p{
+    min-height: auto;
+    line-height: 20px;
+}
+.dig_sustainable .dig_cta{
+    margin-top:30px;
+}
+
+p.dig_sustainable_text{
+    text-align:center;
+    padding: 40px 15px;
+    margin: 0;
+}
+
+/* 4k device styling */
+@media (min-width:1440px) {
+    /* hero banner */
+    .dig_hero_banner_row{
+        background-size: contain;
+        min-height: 400px;
+        text-align: right;
+        display: grid;
+        grid-template-columns: 40% 60%;
+    }
+    .dig_hero_banner .dig_hero_banner_text_container{
+        width: 100%;
+        background-size: cover;
+        background-position: 0 0;
+        height: 400px;
+    }
+    
+    .dig_defence_row{
+        justify-content: space-evenly;
+    }
+
+    .dig_sustainable_content, .dig_category_container, .dig_defence_container{
+        max-width: 1440px;
+        margin: auto;
+    }
+
+    .dig_tip_container{
+        width: 1100px;
+        margin: auto;
+        max-width: 1440px;
+    }
+}
+/* hero banner styling for specific device range 980 to 1300px */
+@media (min-width:980px) and (max-width: 1300px){
+    .dig_hero_banner_row {
+        min-height: 378px;
+    }
+    .dig_hero_banner .dig_hero_banner_text_container {
+        justify-content: end;
+        padding-right: 96px;
+    }
+    .mobile{
+        display: block;
+    }
+    /* embed video section */
+    .dig_embed_video {
+        margin-top: 0px;
+    }
+}
+/* Just Hero Banner Resizing */
+@media  (min-width:769px ) and (max-width:1200px) {
+    .dig_hero_banner_row {
+        min-height: 360px;
+    }
+    .dig_hero_banner .banner_logo {
+        max-width: 170px;
+        margin: auto;
+    }
+    .dig_hero_banner .banner_logo img{
+        max-width: 100%;
+    }
+    .mobile{
+        display: block;
+    }
+    .dig_hero_banner_text_container .banner_text h2 {
+        font-size: 28px;
+        color: #001952;
+        font-weight: bold;
+    }
+    .dig_hero_banner_text_container .banner_text{
+        padding: 0 15px;
+    }
+    .dig_hero_banner_text_container .dig_cta a{
+        padding: 10px 40px;
+    }
+    .dig_hero_banner .dig_hero_banner_text_container {
+        min-height: 360px;
+        justify-content:end;
+        padding-right: 40px;
+    }
+    /* defence */
+    .dig_defence_row,.dig_tip_container {
+        width: 95%;
+    }
+    /* embed video */
+    .dig_embed_video {
+        margin-top: 0px;
+    }
+}
+
+@media  (min-width:769px ) and (max-width:1100px) {
+    .dig_sustainable .dig_row{
+        padding:0 20px;
+    }
+    .dig_sustainable .dig_card{
+        width:330px;
+        max-width: 100%;
+        margin-right:  10px;
+        text-align: left;
+    }
+    .dig_defence_row .dig_defence_col{
+        width: 180px;
+        margin-right: 20px;
+        max-width: 100%;
+    }
+    .dig_sustainable .dig_card {
+        width: 263px;
+        max-width: 100%;
+        margin-right: 10px;
+        text-align: left;
+    }
+    .dig_embed_video iframe{
+        height: 250px;
+        width: 100%;
+        max-width:100%;
+    }
+
+}
+
+/* mobile responsive max width 768px */
+@media (max-width:768px) {
+    /* hero banner */
+.dig_hero_banner_row{
+    display: flex;
+    flex-direction: column;
+    background: #9BD6B2;
+    min-height: 250px;
+}
+.mobile_version_banner_img{
+    display: block;
+    max-width: 100%;
+    object-fit: contain;
+}
+.dig_hero_banner .dig_hero_banner_text_container{
+    background: #9BD6B2;
+    padding: 0 10px;
+    min-height: 100px;
+}
+.dig_hero_banner .dig_hero_banner_text_container .banner_logo{
+    display: none;
+}
+
+.dig_hero_banner .dig_hero_banner_text_container .banner_text{
+    padding: 20px 10px 20px 0;
+}
+
+    .dig_hero_banner_text_container .banner_text h2{
+        font-size: 22px;
+        margin: 10px 0;
+    }
+    .dig_hero_banner_text_container .banner_text p{
+        font-size: 16px;
+        line-height: 22px;
+        color: #001952;
+        margin: 0;
+        margin-bottom: 10px;
+    }
+    .dig_cta a{
+        background: none;
+        border: none;
+        color: #001952;
+        text-decoration: underline;
+        padding: 10px;
+    }
+    .mobile{
+        display: block;
+    }
+    /* dig category */
+    .dig_category{
+        margin-top: 20px;
+    }
+    .dig_row{
+        display: inline-flex;
+        width: 200%;
+        justify-content: flex-start;
+    }
+    .dig_row .dig_col{
+        width: 70%;
+    }
+    .dig_row .dig_card {
+        width: auto;
+        max-width: 100%;
+        text-align: center;
+    }
+    .dig_row .dig_card .dig_card_body {
+        padding: 0 10px;
+    }
+
+    .dig_section_title_container{
+        text-align: center;
+    }
+    .dig_section_title_container a{
+        font-size: 20px;
+    }
+
+    /* find your defence */
+
+    .dig_find_defence{
+        margin-top: 20px;
+    }
+    .dig_defence_row{
+        display: inline-flex;
+        width: 160%;
+        justify-content:flex-start;
+    }
+    .dig_defence_row .dig_defence_col{
+        /* width: 164px; */
+        width: 100%;
+        max-width: 100%;
+    }
+    .dig_defence_card .dig_card_body p{
+        min-height: 84px;
+    }
+    .dig_defence_card,.dig_defence_card_description{
+        margin-right: 10px;
+        /* width: 154px; */
+        width: auto;
+        max-width: 100%;
+    }
+    .dig_defence_card,.dig_defence_card_description h3{
+        font-size: 12px;padding-left: 10px;
+    }
+    /* tips and tricks */
+    #dig_tip{
+        margin-top:40px;
+        /* background: #EAF9FE; */
+        background-position: bottom -60px right -500px;
+    }
+    .dig_tip_content{
+        min-height:auto;
+    }
+    .dig_tip_content h2, p{
+        padding: 0 15px;
+    }
+
+    .dig_defence_card .dig_card_body p{
+        padding : 0;
+    }
+    .dig_tip_content p{
+        padding: 0 15px 30px;
+    }
+    .dig_tip_container{
+        width: 100%;
+    }
+    .dig_tip_row{
+        display: flex;
+        flex-direction: column;
+        width:100%;
+        max-width: 100%;
+        overflow: hidden
+    }
+    /* sustainable */
+
+    .dig_sustainable .dig_row{
+        width: 270%;
+    }
+    .dig_sustainable .dig_row .dig_col{
+        width: 90%;
+    }
+    .dig_sustainable .dig_card{
+        width:auto;
+        max-width: 100%;
+        margin: 0 10px;
+        text-align: left;
+        padding-bottom: 10px;
+    }
+    .dig_sustainable .dig_card .dig_card_img{
+        width:auto;
+        max-width: 100%;
+    }
+    .dig_card_img img {
+        width: 100%;
+    }
+    .dig_sustainable .dig_cta{
+        margin-top:0;
+    }
+    .dig_sustainable .dig_cta a{
+        margin-top:30px;
+        padding:0;
+        text-transform: capitalize;
+        font-family: "PetcoCircularTT-Bold", arial !important;
+    }
+}

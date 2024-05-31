@@ -1,0 +1,455 @@
+<!-- This landing page was developed by SEBPO creative development department citrusAd team member, Imran Ahmed. Date- 12/21/2022 -->
+<style>
+    /* common styling */
+    .citrusStella_desktop__hide {
+        display: none;
+    }
+
+    .citrusStella_mobile__hide {
+        display: block;
+    }
+
+    .citrusStella__wrapper {
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+
+    .citrusStella__wrapper a {
+        text-decoration: none;
+    }
+
+    .citrusStella__sectionTitle {
+        margin: 0;
+        font-family: "PetcoCircularTT-Bold", arial !important;
+        font-weight: 700;
+        font-size: 25px;
+        text-align: center;
+        color: #000000;
+    }
+
+    .citrusStella__wrapper img {
+        max-width: 100%;
+    }
+
+    /* POV style */
+    #citrusStella__hero {
+        background-image: url(https://assets.petco.com/petco/image/upload/f_auto,q_auto/stella-chews-POV-Desktop.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        min-height: 300px;
+        border: 1px solid rgba(102, 51, 153, 0);
+        display: grid;
+        align-items: center;
+    }
+
+    .citrusStella__heroRow {
+        width: 90%;
+        max-width: 1440px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: auto;
+    }
+
+    .citrusStella__heroTitle h1 {
+        margin: 0 0 18px 0;
+        font-family: "PetcoCircularTT-Bold", arial !important;
+        font-size: 44px;
+        font-weight: 900;
+        line-height: 41px;
+        text-transform: uppercase;
+        color: #c01823;
+    }
+
+    .citrusStella__heroTitle button,
+    #citrusStella__RawFood button {
+        font-family: "PetcoCircularTT-Bold", arial !important;
+        font-size: 16px;
+        color: #fff;
+        text-transform: uppercase;
+        background-color: #001952;
+        border: none;
+        border-radius: 5px;
+        padding: 22px 60px 18px;
+        cursor: pointer;
+    }
+
+    /* raw food */
+    #citrusStella__RawFood {
+        margin-top: 50px;
+        text-align: center;
+    }
+
+    .citrusStella__RawFoodContainer {
+        width: 1384px;
+        max-width: 100%;
+        margin: auto;
+        padding-top: 40px;
+        overflow: auto;
+        text-align: center;
+    }
+
+    .citrusStella__category {
+        width: 1384px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        column-gap: 20px;
+        text-align: center;
+    }
+
+    .citrusStella__card {
+        width: 204px;
+        text-align: center;
+    }
+
+    .citrusStella__card-title h3 {
+        margin: 20px 0;
+        font-family: "PetcoCircularTT-Bold", arial !important;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 22px;
+        color: #000000;
+    }
+
+    /* Embed video area */
+    .citrusStella__embedVideo {
+        margin-top: 100px;
+        margin-bottom: 30px;
+    }
+
+    .citrusStella__embedContainer {
+        width: 1100px;
+        max-width: 95%;
+        margin: auto;
+        padding-top: 40px;
+    }
+
+    .citrusStella__embedRow {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 20px;
+    }
+
+    .citrusStella__embedCard {
+        background-color: rgba(192, 24, 35, 0.15);
+        text-align: center;
+        padding-bottom: 30px;
+        display: grid;
+        flex-direction: column;
+    }
+
+    .citrusStella__embedCard .iframe iframe {
+        width: 100%;
+        height: 315px;
+    }
+
+    .citrusStella__cardBody h3 {
+        font-family: "PetcoCircularTT-Bold", arial !important;
+        font-weight: bold;
+        font-size: 20px;
+        color: #000000;
+        margin: 40px 0 20px;
+    }
+
+    .citrusStella__cardBody p {
+        font-family: "PetcoCircularTT-regular", arial !important;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 22px;
+        color: #000000;
+        width: 80%;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    /*----------------------------------- responsive styling------------------------------------- */
+
+    @media all and (min-width: 1441px) {
+        .citrusStella__RawFoodContainer {
+            width: 1384px;
+            max-width: 100%;
+            margin: auto;
+        }
+    }
+
+    @media all and (min-width: 1201px) and (max-width: 1350px) {
+        #citrusStella__hero .logo {
+            width: 270px;
+        }
+    }
+
+    @media all and (min-width: 769px) and (max-width: 1200px) {
+        .citrusStella_desktop__hide {
+            display: block;
+        }
+
+        .citrusStella__heroTitle h1 {
+            margin: 0 0 10px 0;
+            font-size: 32px;
+            line-height: 30px;
+        }
+
+        #citrusStella__hero .logo {
+            width: 180px;
+        }
+
+        .citrusStella__sectionTitle.citrusStella_desktop__hide {
+            display: none;
+        }
+    }
+
+    @media all and (max-width: 768px) {
+        .citrusStella_desktop__hide {
+            display: block;
+        }
+
+        .citrusStella_mobile__hide {
+            display: none;
+        }
+
+        /* pov style */
+        #citrusStella__hero {
+            background-image: url(https://assets.petco.com/petco/image/upload/f_auto,q_auto/stella-chews-POV-Mobile.png);
+            min-height: 280px;
+        }
+
+        .citrusStella__heroRow {
+            align-items: flex-start;
+            justify-content: flex-start;
+            flex-direction: column-reverse;
+        }
+
+        #citrusStella__hero .logo {
+            width: 200px;
+            position: relative;
+            top: -25px;
+        }
+
+        .citrusStella__heroTitle button,
+        #citrusStella__RawFood button {
+            font-size: 16px;
+            color: #001952;
+            text-transform: capitalize;
+            background: none;
+            padding: 0;
+            text-decoration: underline;
+        }
+
+        /* video section */
+        .citrusStella__embedContainer {
+            max-width: 100%;
+        }
+
+        .citrusStella__embedContainer {
+            padding-top: 0;
+            width: 700px;
+            overflow: auto;
+        }
+
+        .citrusStella__embedRow {
+            width: 624px;
+            margin: 0 20px;
+        }
+
+        .citrusStella__embedCard {
+            padding-bottom: 0;
+        }
+
+        .citrusStella__embedCard .iframe iframe {
+            height: 217px;
+        }
+
+        .citrusStella__cardBody p {
+            width: 90%;
+            padding-bottom: 30px;
+        }
+
+        /* video and text position swap */
+        .citrusStella__embedCard .iframe.order1 {
+            display: grid;
+            order: 2;
+        }
+
+        .citrusStella__embedCard .citrusStella__cardBody.order2 {
+            display: grid;
+            order: 1;
+        }
+
+        /* video section title */
+        .citrusStella__embedVideo>.citrusStella__sectionTitle {
+            display: none;
+        }
+
+        .citrusStella__sectionTitle.citrusStella_desktop__hide {
+            background-color: rgba(192, 24, 35, 0.63);
+            color: #fff;
+            font-size: 20px;
+            padding: 24px;
+        }
+    }
+
+    @media all and (min-width: 600px) and (max-width: 768px) {}
+
+    @media all and (max-width: 575px) {
+        .citrusStella__heroTitle h1 {
+            margin: 0 0 10px 0;
+            font-size: 28px;
+            line-height: 26px;
+        }
+
+        #citrusStella__hero .logo {
+            width: 160px;
+            position: relative;
+            top: -15px;
+        }
+    }
+
+    @media all and (max-width: 450px) {
+        #citrusStella__hero {
+            min-height: 192px;
+        }
+    }
+
+    @media all and (max-width: 375px) {
+        .citrusStella__heroTitle h1 {
+            font-size: 24px;
+            line-height: 23px;
+        }
+
+        #citrusStella__hero .logo {
+            width: 145px;
+            position: relative;
+            top: -10px;
+        }
+    }
+</style>
+<main class="citrusStella__wrapper">
+    <!-- Hero banner start -->
+    <section id="citrusStella__hero" class="citrusStella__hero">
+        <div class="citrusStella__heroContainer" title="A dog and a cat under a blanket with their heads popped out.">
+            <div class="citrusStella__heroRow">
+                <div class="citrusStella__heroTitle">
+                    <h1>PETS ARE <br class="citrusStella_desktop__hide">RAW & RAW <br>IS ALL THEY NEED</h1>
+                    <a href="https://www.petco.com/shop/en/petcostore/brand/stella-chewys"
+                        manual_cm_sp="sponsoredbrandpage:stellachewy:herobanner:1:petsareraw:shopnow"
+                        onclick="clickTrackLink(this);"><button>shop now</button></a>
+                </div>
+                <div class="logo">
+                    <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/stella-chews-logo"
+                        alt="Stella and Chewy’s logo. Raw and natural pet food.">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END hero banner -->
+
+    <!-- Stella & Chew's raw food start -->
+    <section id="citrusStella__RawFood">
+        <h2 class="citrusStella__sectionTitle">Why feed your pet raw food</h2>
+        <div class="citrusStella__RawFoodContainer">
+            <a href="https://www.petco.com/shop/en/petcostore/brand/stella-chewys"
+                manual_cm_sp="sponsoredbrandpage:stellachewy:icons:1:stellachewybenefits:sectionlink"
+                onclick="clickTrackLink(this);">
+                <div class="citrusStella__category">
+                    <!-- food 01 -->
+                    <div class="citrusStella__card">
+                        <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/stella-chews-row-food-1"
+                            alt="A cat on their hind legs with one paw reaching for three floating hearts.">
+                        <div class="citrusStella__card-title">
+                            <h3>Helps improve your dog or cat’s energy</h3>
+                        </div>
+                    </div>
+                    <!-- food 02 -->
+                    <div class="citrusStella__card">
+                        <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/stella-chews-row-food-2"
+                            alt="A dog rolling on their back with three floating stars above them.">
+                        <div class="citrusStella__card-title">
+                            <h3>Incredible taste to satisfy picky eaters</h3>
+                        </div>
+                    </div>
+                    <!-- food 03 -->
+                    <div class="citrusStella__card">
+                        <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/stella-chews-row-food-3"
+                            alt="A dog with a red collar sitting with one paw raised in the air.">
+                        <div class="citrusStella__card-title">
+                            <h3>Supports muscle, bone and joint health</h3>
+                        </div>
+                    </div>
+                    <!-- food 04 -->
+                    <div class="citrusStella__card">
+                        <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/stella-chews-row-food-4"
+                            alt="A happy dog sitting down.">
+                        <div class="citrusStella__card-title">
+                            <h3>Promotes a shiny coat and cleaner teeth</h3>
+                        </div>
+                    </div>
+                    <!-- food 05 -->
+                    <div class="citrusStella__card">
+                        <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/stella-chews-row-food-5"
+                            alt="A cat playing with a ball.">
+                        <div class="citrusStella__card-title">
+                            <h3>Great for allergies—no hidden ingredients</h3>
+                        </div>
+                    </div>
+                    <!-- food 06 -->
+                    <div class="citrusStella__card">
+                        <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/stella-chews-row-food-6"
+                            alt="A dog with a red bandana standing with a floating heart to the left of them.">
+                        <div class="citrusStella__card-title">
+                            <h3>Helps them keep a healthy weight</h3>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <a href="https://www.petco.com/shop/en/petcostore/brand/stella-chewys"
+            manual_cm_sp="sponsoredbrandpage:stellachewy:icons:1:stellachewybenefits:shopnow"
+            onclick="clickTrackLink(this);"><button>shop now</button></a>
+    </section>
+    <!-- End Stella & Chew's raw food -->
+
+    <!-- embed video section -->
+    <section class="citrusStella__embedVideo">
+        <h2 class="citrusStella__sectionTitle">Delicious, less processed and easy-to-digest food</h2>
+        <div class="citrusStella__embedContainer">
+            <div class="citrusStella__embedRow">
+                <div class="">
+                    <div class="citrusStella__embedCard">
+                        <div class="iframe order1">
+                            <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/qDur-A_DvTg"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                        <div class="citrusStella__cardBody order2">
+                            <h2 class="citrusStella__sectionTitle citrusStella_desktop__hide">Delicious, less
+                                processed and easy-to-digest food</h2>
+                            <h3>Pet food safety</h3>
+                            <p>Stella & Chewy’s takes food safety seriously with their process of killing harmful
+                                bacteria.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="">
+                    <div class="citrusStella__embedCard">
+                        <div class="iframe order1">
+                            <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/P1ysaf5k_R0"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                        <div class="citrusStella__cardBody order2">
+                            <h2 class="citrusStella__sectionTitle citrusStella_desktop__hide">Delicious, less
+                                processed and easy-to-digest food</h2>
+                            <h3>What’s freeze-dried raw food?</h3>
+                            <p>The freeze-dried process removes all the water while maintaining raw nutrients and
+                                flavors.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>

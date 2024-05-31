@@ -1,0 +1,191 @@
+@import "common";
+@import "variables";
+
+/* POV sections */
+.citrus_tidyCat_carousel{
+    overflow-x: hidden;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    .citrus_tidyCat_carousel-inner{
+        display: flex;
+        transition: all ease .5s;
+        width: 100%;
+        overflow: hidden;
+        justify-content: space-between;
+        align-items: flex-start !important;
+        .citrus_tidyCat_carousel-item{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 100%;
+            .citrus_tidyCat_carousel-item__col:nth-child(2){
+                padding: 25px 5%;
+            }
+            .citrus_tidyCat__pov--text{
+                width: 100%;
+                text-align: center;
+                h2{
+                    font-size: 35px;
+                    color: #000000;
+                    line-height: 34px;
+                    max-width: 336px;
+                    margin: 0 auto;
+                    span{
+                        color: $red;
+                    }
+                }
+                p{
+                    font-size: 16px;
+                    color: #000000;
+                    padding: 15px 0;
+                }
+            }
+            .custom-container{
+                justify-content: flex-start;
+                min-height: 230px;
+                margin: 0 0 0 5%;
+                width: 100%;
+            }
+        }
+        .pov1{
+            .citrus_tidyCat__pov--logo{
+                width: 161px;
+            }
+        }
+        .pov3{
+            .citrus_tidyCat_carousel-item__col:nth-child(2){
+                padding: 25px 2%;
+            }
+            .citrus_tidyCat__pov--text{
+                p{
+                    max-width: 270px;
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+}
+
+.citrus_tidyCat__pov--cta {
+    display: flex !important;
+    align-items: center;
+    justify-content: center !important;
+}
+
+.citrus_tidyCat__pov--cta a{
+    background: $petco_blue !important;
+    color: $white !important;
+    border: 1px solid $petco_blue !important;
+    max-width: 150px;
+    margin: 0 15px;
+}
+
+.citrus_tidyCat__pov--cta a:hover{
+    background: $white !important;
+    color: $petco_blue !important;
+    border: 1px solid $petco_blue !important;
+}
+
+.citrus_tidyCat__pov--logo{
+    max-width: 250px;
+    margin: 0 auto !important;
+}
+
+.citrus_tidyCat__pov--shots{
+    max-width: 500px;
+}
+
+.citrus_tidyCat_carousel-inner{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    .pov1{
+        background-image: url("img/citrus_petco_tidyCat_POV1_bg_dsk.png");
+    }
+    .pov2{
+        background-image: url("img/citrus_petco_tidyCat_POV2_bg_dsk.png");
+        .custom-container{
+            min-width: 100%;
+        }
+    }
+    .pov3{
+        position: relative;
+        background-image: url("img/citrus_petco_tidyCat_POV3_bg_dsk.png");
+        .custom-container{
+            min-width: 100%;
+        }
+        .disclaimer{
+            position: absolute;
+            left: 15px;
+            bottom: 20px;
+            max-width: 320px;
+            font-size: 11px;
+            font-family: "PetcoCircularTT-Regular", arial !important;
+            font-weight: normal;
+            line-height: 13px !important;
+        }
+    }
+}
+
+.citrus_tidyCat_carousel-controls .prev{
+    display: inline-block;
+    height: 32px;
+    width: 32px;
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-image: url('prev.svg');
+    background-position: center;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    opacity: .5;
+}
+
+.citrus_tidyCat_carousel-controls .next{
+    display: inline-block;
+    height: 32px;
+    width: 32px;
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-image: url('next.svg');
+    background-position: center;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    opacity: .5;
+}
+
+.prev:hover, .next:hover{
+    opacity: 1;
+}
+
+.citrus_tidyCat_carousel-indicators{
+    position: absolute;
+    bottom: 0;
+    left: calc(100% / 2 - 52px);
+    text-align: center;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 5px 5px 0 0;
+    padding: 10px 10px 5px !important;
+}
+
+.citrus_tidyCat_carousel-indicators span{
+    display: inline-block;
+    border: 1px solid #09205c;
+    padding: 6px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+.citrus_tidyCat_carousel-indicators span.active{
+    background-color: #09205c;
+}

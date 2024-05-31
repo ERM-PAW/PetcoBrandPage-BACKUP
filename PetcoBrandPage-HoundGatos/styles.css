@@ -1,0 +1,1048 @@
+/* All the common classes that have common styles */
+
+.hound_gatos *{
+    margin: 0;
+    padding: 0;
+    line-height: initial !important;
+}
+
+
+/* Show hide class */
+.m-hide{
+    display: block;
+}
+
+.d-hide{
+    display: none;
+}
+
+
+.hound_gatos a{
+    text-decoration: none;
+}
+
+.hound_gatos img{
+    width: 100%;
+}
+
+.hound_gatos h1, h2, h3{
+    font-family: "PetcoCircularTT-Bold", arial !important;
+}
+
+.hound_gatos p {
+    font-family: "PetcoCircularTT-Regular", arial !important;
+}
+
+.hound_gatos .cta-box{
+    padding: 0 0 20px;
+}
+
+.hound_gatos .cta-box a{
+    border-radius: 5px;
+    color: #fff;
+    background: #001952;
+    padding: 15px;
+    display: block;
+    text-align: center;
+    font-family: "PetcoCircularTT-Bold", arial !important;
+    font-size: 16px;
+    text-transform: uppercase;
+    border: 1px solid #001952;
+    width: 180px;
+    margin: 0 auto;
+}
+
+.hound_gatos .cta-box a:hover{
+    background: #fff;
+    color: #001952;
+    border: 1px solid #001952;
+    transition: 0.5s ease-in-out;
+}
+
+.hound_gatos .cta-underline{
+ font-size: 16px;
+ color: #001952;
+ text-decoration: underline;
+ text-transform: capitalize;
+ font-family: "PetcoCircularTT-Bold", arial !important;
+ cursor: pointer;
+}
+
+.hound_gatos .custom-container{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.hound_gatos .container-full{
+    width: 100%;
+}
+
+.hound_gatos .flex-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+
+.hound_gatos__section-title{
+    padding: 25px 15px;
+}
+
+.hound_gatos__section-title sup{
+    font-size: 16px;
+}
+
+.hound_gatos .section-padding30{
+    padding: 30px 0;
+}
+
+.hound_gatos__section-title h2{
+    text-align: center;
+    font-size: 25px;
+    color: #000000;
+    font-family: "PetcoCircularTT-Bold", arial !important;
+}
+
+
+/* Splide styles */
+/* Splide Styles */
+.splide__list {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100%;
+    margin: 0 !important;
+    padding: 0 !important;
+    transform-style: preserve-3d;
+}
+.splide.is-initialized:not(.is-active) .splide__list {
+    display: block;
+}
+.splide__pagination {
+    -ms-flex-align: center;
+    align-items: center;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin: 0;
+    pointer-events: none;
+}
+.splide__pagination li {
+    display: inline-block;
+    line-height: 1;
+    list-style-type: none;
+    margin: 0;
+    pointer-events: auto;
+}
+.splide__progress__bar {
+    width: 0;
+}
+.splide {
+    outline: none;
+    position: relative;
+    visibility: hidden;
+}
+.splide.is-initialized,
+.splide.is-rendered {
+    visibility: visible;
+}
+.splide__slide {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    box-sizing: border-box;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    list-style-type: none !important;
+    margin: 0;
+    outline: none;
+    position: relative;
+}
+.splide__slide img {
+    vertical-align: bottom;
+}
+.splide__slider {
+    position: relative;
+}
+.splide__spinner {
+    animation: splide-loading 1s linear infinite;
+    border: 2px solid #999;
+    border-left-color: transparent;
+    border-radius: 50%;
+    bottom: 0;
+    contain: strict;
+    display: inline-block;
+    height: 20px;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 20px;
+}
+.splide__track {
+    overflow: hidden;
+    position: relative;
+    z-index: 0;
+}
+@keyframes splide-loading {
+    0% {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(1turn);
+    }
+}
+.splide--draggable > .splide__slider > .splide__track,
+.splide--draggable > .splide__track {
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.splide--fade > .splide__slider > .splide__track > .splide__list,
+.splide--fade > .splide__track > .splide__list {
+    display: block;
+}
+.splide--fade > .splide__slider > .splide__track > .splide__list > .splide__slide,
+.splide--fade > .splide__track > .splide__list > .splide__slide {
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    z-index: 0;
+}
+.splide--fade > .splide__slider > .splide__track > .splide__list > .splide__slide.is-active,
+.splide--fade > .splide__track > .splide__list > .splide__slide.is-active {
+    opacity: 1;
+    position: relative;
+    z-index: 1;
+}
+.splide--rtl {
+    direction: rtl;
+}
+.splide--ttb.is-active > .splide__slider > .splide__track > .splide__list,
+.splide--ttb.is-active > .splide__track > .splide__list {
+    display: block;
+}
+.splide__arrow {
+    -ms-flex-align: center;
+    align-items: center;
+    background: #ccc;
+    border: 0;
+    border-radius: 50%;
+    cursor: pointer;
+    display: -ms-flexbox;
+    display: flex;
+    height: 2em;
+    -ms-flex-pack: center;
+    justify-content: center;
+    opacity: 0.7;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2em;
+    z-index: 1;
+}
+.splide__arrow svg {
+    fill: #000;
+    height: 1.2em;
+    width: 1.2em;
+}
+.splide__arrow:hover {
+    opacity: 0.9;
+}
+.splide__arrow:focus {
+    outline: none;
+}
+.splide__arrow--prev {
+    left: 1em;
+}
+.splide__arrow--prev svg {
+    transform: scaleX(-1);
+}
+.splide__arrow--next {
+    right: 1em;
+}
+.splide__pagination {
+    bottom: 0.5em;
+    left: 0;
+    padding: 0 1em;
+    position: absolute;
+    right: 0;
+    z-index: 1;
+}
+.splide__pagination__page {
+    background: #ccc;
+    border: 0;
+    border-radius: 50%;
+    display: inline-block;
+    height: 8px;
+    margin: 3px;
+    opacity: 0.7;
+    padding: 0;
+    transition: transform 0.2s linear;
+    width: 8px;
+}
+.splide__pagination__page.is-active {
+    background: #fff;
+    transform: scale(1.4);
+}
+.splide__pagination__page:hover {
+    cursor: pointer;
+    opacity: 0.9;
+}
+.splide__pagination__page:focus {
+    outline: none;
+}
+.splide__progress__bar {
+    background: #ccc;
+    height: 3px;
+}
+.splide--nav > .splide__slider > .splide__track > .splide__list > .splide__slide,
+.splide--nav > .splide__track > .splide__list > .splide__slide {
+    border: 3px solid transparent;
+    cursor: pointer;
+}
+.splide--nav > .splide__slider > .splide__track > .splide__list > .splide__slide.is-active,
+.splide--nav > .splide__track > .splide__list > .splide__slide.is-active {
+    border: 3px solid #000;
+}
+.splide--nav > .splide__slider > .splide__track > .splide__list > .splide__slide:focus,
+.splide--nav > .splide__track > .splide__list > .splide__slide:focus {
+    outline: none;
+}
+.splide--rtl > .splide__arrows .splide__arrow--prev,
+.splide--rtl > .splide__slider > .splide__track > .splide__arrows .splide__arrow--prev,
+.splide--rtl > .splide__track > .splide__arrows .splide__arrow--prev {
+    left: auto;
+    right: 1em;
+}
+.splide--rtl > .splide__arrows .splide__arrow--prev svg,
+.splide--rtl > .splide__slider > .splide__track > .splide__arrows .splide__arrow--prev svg,
+.splide--rtl > .splide__track > .splide__arrows .splide__arrow--prev svg {
+    transform: scaleX(1);
+}
+.splide--rtl > .splide__arrows .splide__arrow--next,
+.splide--rtl > .splide__slider > .splide__track > .splide__arrows .splide__arrow--next,
+.splide--rtl > .splide__track > .splide__arrows .splide__arrow--next {
+    left: 1em;
+    right: auto;
+}
+.splide--rtl > .splide__arrows .splide__arrow--next svg,
+.splide--rtl > .splide__slider > .splide__track > .splide__arrows .splide__arrow--next svg,
+.splide--rtl > .splide__track > .splide__arrows .splide__arrow--next svg {
+    transform: scaleX(-1);
+}
+.splide--ttb > .splide__arrows .splide__arrow,
+.splide--ttb > .splide__slider > .splide__track > .splide__arrows .splide__arrow,
+.splide--ttb > .splide__track > .splide__arrows .splide__arrow {
+    left: 50%;
+    transform: translate(-50%);
+}
+.splide--ttb > .splide__arrows .splide__arrow--prev,
+.splide--ttb > .splide__slider > .splide__track > .splide__arrows .splide__arrow--prev,
+.splide--ttb > .splide__track > .splide__arrows .splide__arrow--prev {
+    top: 1em;
+}
+.splide--ttb > .splide__arrows .splide__arrow--prev svg,
+.splide--ttb > .splide__slider > .splide__track > .splide__arrows .splide__arrow--prev svg,
+.splide--ttb > .splide__track > .splide__arrows .splide__arrow--prev svg {
+    transform: rotate(-90deg);
+}
+.splide--ttb > .splide__arrows .splide__arrow--next,
+.splide--ttb > .splide__slider > .splide__track > .splide__arrows .splide__arrow--next,
+.splide--ttb > .splide__track > .splide__arrows .splide__arrow--next {
+    bottom: 1em;
+    top: auto;
+}
+.splide--ttb > .splide__arrows .splide__arrow--next svg,
+.splide--ttb > .splide__slider > .splide__track > .splide__arrows .splide__arrow--next svg,
+.splide--ttb > .splide__track > .splide__arrows .splide__arrow--next svg {
+    transform: rotate(90deg);
+}
+.splide--ttb > .splide__pagination,
+.splide--ttb > .splide__slider > .splide__pagination {
+    bottom: 0;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    left: auto;
+    padding: 1em 0;
+    right: 0.5em;
+    top: 0;
+}
+
+.splide__list {
+    height: inherit;
+}
+
+.tab__list_top_img_btn .tab__item.is--active .active{
+    display: block;
+}
+.tab__list_top_img_btn .tab__item.is--active .normal{
+    display: none;
+}
+
+.tab__list_top_img_btn .tab__item .active{
+    display: none;
+}
+.tab__list_top_img_btn .tab__item .normal{
+    display: block;
+}
+
+
+/* POV Section */
+.citrus_hound_gatos_carousel{
+    overflow-x: hidden;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+}
+
+
+.citrus_hound_gatos_carousel-inner{
+    display: flex;
+    transition: all ease .5s;
+    width: 100%;
+    overflow: hidden;
+    justify-content: space-between;
+    align-items: flex-end !important;
+    max-height: 315px;
+}
+
+.citrus_hound_gatos_carousel-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+}
+
+
+
+.citrus_hound_gatos_carousel-item .custom-container{
+    justify-content: space-between;
+}
+
+.citrus_hound_gatos_carousel-inner .pov1{
+    background-image: url("https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrus-hound-gatos-pov1-bg-dsk ");
+}
+.citrus_hound_gatos_carousel-inner .pov2{
+    background-image: url("https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrus-hound-gatos-pov2-bg-dsk ");
+}
+
+.citrus_hound_gatos_carousel-item__col:nth-child(1){
+    width: 30%;
+}
+.citrus_hound_gatos_carousel-item__col:nth-child(2){
+    width: 40%;
+    padding: 0;
+}
+.citrus_hound_gatos_carousel-item__col:nth-child(3){
+    width: 30%;
+}
+
+
+
+.citrus_hound_gatos_carousel-item__col .item-logo-wrapper{
+    align-items: center;
+    justify-content: center;
+}
+
+.citrus_hound_gatos_carousel-item__col .item-logo-wrapper img{
+    max-width: 200px;
+}
+
+.citrus_hound_gatos_carousel-item__col .item-logo-wrapper img:nth-child(2){
+    max-width: 90px;
+}
+
+.citrus_hound_gatos_carousel-item__col .item-text-wrapper{
+    padding: 20px 0;
+    text-align: center;
+}
+
+.citrus_hound_gatos_carousel-item__col .item-text-wrapper h1{
+    color: #fff;
+    font-size: 35px;
+}
+
+.citrus_hound_gatos_carousel-item__col .item-text-wrapper p{
+    color: #fff;
+    font-size: 16px;
+    padding: 20px 0;
+}
+
+.citrus_hound_gatos_carousel-inner .pov2 .item-text-wrapper h1,
+.citrus_hound_gatos_carousel-inner .pov2 .item-text-wrapper p{
+    color: #00205B;
+}
+
+.citrus_hound_gatos_carousel-item__col .item-text-wrapper .cta-box{
+    justify-content: center;
+}
+
+.citrus_hound_gatos_carousel-inner .pov1 .cta-box a{
+    background: #fff;
+    color: #001952;
+}
+
+.citrus_hound_gatos_carousel-controls .prev{
+    display: inline-block;
+    height: 32px;
+    width: 32px;
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    /* background-image: url('prev.svg'); */
+    background-position: center;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    opacity: .5;
+}
+
+.citrus_hound_gatos_carousel-controls .next{
+    display: inline-block;
+    height: 32px;
+    width: 32px;
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    /* background-image: url('next.svg'); */
+    background-position: center;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    opacity: .5;
+}
+
+.prev:hover, .next:hover{
+    opacity: 1;
+}
+
+.citrus_hound_gatos_carousel-indicators{
+    position: absolute;
+    bottom: 0;
+    left: calc(100% / 2 - 38px);
+    text-align: center;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 5px 5px 0 0;
+    padding: 10px 10px 5px;
+}
+
+.citrus_hound_gatos_carousel-indicators span{
+    display: inline-block;
+    border: 2px solid #09205c;
+    padding: 7px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+.citrus_hound_gatos_carousel-indicators span.active{
+    background-color: #09205c;
+}
+
+
+/* Tab section */
+/* Video Popup */
+.citrus-hound_gatos__tab .citrus-hound_gatos__video-content--frame{
+    position: relative;
+    width: 100%;
+}
+
+.citrus-hound_gatos__video-content--frame button{
+    display: flex;
+}
+
+.citrus-hound_gatos__video-content--frame button,
+.citrus-hound_gatos__video-content--frame button:focus-visible{
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 0;
+}
+.citrus-hound_gatos__tab .show-video{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #fff;
+    box-shadow: 2px 2px 10px 0px rgb(166 161 161 / 85%);
+    padding: 10px;
+    border-radius: 10px;
+    width: calc(100%/1 - 20px);
+}
+.citrus-hound_gatos__tab .show-video span{
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    z-index: 99999;
+    color: #333;
+    background: #fff;
+    width: 20px;
+    border-radius: 50%;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #efefef;
+    font-size: 20px;
+    padding: 1px 0 0;
+    cursor: pointer;
+}
+.citrus-hound_gatos__tab .show-video span:hover{
+    color: #fff;
+    background: #e4425c;
+    border: 1px solid #e4425c;
+}
+.citrus-hound_gatos__tab iframe{
+    width: 100%;
+    min-height: 370px;
+    display: flex;
+}
+
+.citrus-hound_gatos__tab .citrus-bg-sky iframe{
+    min-height: 270px;
+}
+
+
+/* Custom Tab */
+.hound_gatos .citrus-hound_gatos__tab{
+
+}
+
+.hound_gatos .citrus-hound_gatos__tab--wrapper{
+    
+}
+
+.hound_gatos .citrus-hound_gatos__video-content{
+    flex-wrap: wrap;
+}
+
+.citrus-hound_gatos__tab--tab-col{
+    width: 50%;
+    padding: 20px;
+}
+
+.hound_gatos .ccitrus-hound_gatos__video-content--frame{
+    
+}
+
+.hound_gatos .ccitrus-hound_gatos__video-content--frame{
+
+    
+}
+
+.citrus-hound_gatos__video-content--text{
+    text-align: center;
+    background: #76D8EF;
+    padding: 50px 20px 0;
+}
+
+.citrus-hound_gatos__video-content--text h3{
+    font-size: 20px;
+    color: #000000;
+}
+
+.citrus-hound_gatos__video-content--text p{
+    font-size: 16px;
+    color: #000000;
+    padding: 20px 0;
+}
+
+.citrus-hound_gatos__video-content--text .cta-underline{
+    padding-bottom: 50px;
+    display: block;
+}
+
+.citrus-hound_gatos__video-content--text .video-content__logo{
+    width: 170px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.citrus-hound_gatos__tab--wrapper:last-child .citrus-hound_gatos__video-content--text .video-content__logo{
+    width: 100%;
+}
+
+.citrus-hound_gatos__tab--wrapper:last-child .citrus-hound_gatos__video-content--text{
+    padding: 50px 0 0;
+    background: #FFEBC5;
+}
+
+
+/* Splide Carousel - Custom styles */
+.citrus-hound_gatos__tab-content .splide__pagination{
+    display: none;
+}
+
+.citrus-hound_gatos__tab-content .splide__arrow--prev{
+    left: -1rem;
+}
+
+.citrus-hound_gatos__tab-content .splide__arrow{
+    background: #fff;
+    border: 1px solid #001952;
+}
+
+.citrus-hound_gatos__tab-content .splide__arrow:hover{
+    background: #001952;
+}
+
+.citrus-hound_gatos__tab-content .splide__arrow:hover svg{
+    fill: #fff;
+}
+
+.citrus-hound_gatos__tab-content .splide__arrow svg {
+    fill: #001952;
+}
+
+.citrus-hound_gatos__tab-content .splide__arrow svg:hover {
+    fill: #fff;
+}
+
+.citrus-hound_gatos__carousel--item{
+    flex-wrap: wrap !important;
+}
+
+.citrus-hound_gatos__carousel--item__wrapper{
+    padding: 20px;
+}
+
+.citrus-hound_gatos__carousel--item__wrapper .item-wrapper--img{
+    max-width: 210px;
+    margin: 0 auto;
+}
+
+.citrus-hound_gatos__carousel--item__wrapper p{
+    padding: 20px 0;
+    color: #333333;
+    font-size: 18px;
+}
+
+
+/* Custom Styles for all */
+
+
+/* Bottom Hero */
+.hound_gatos .bottom-hero{
+    padding: 50px 0 0;
+}
+
+.hound_gatos .bottom-hero__content{
+    background: rgba(223, 30, 54, 0.2);
+}
+
+.hound_gatos .bottom-hero__content--col{
+    width: 50%;
+}
+
+.hound_gatos .bottom-hero__content--text{
+    text-align: center;
+    padding: 20px;
+}
+
+.hound_gatos .bottom-hero__content--text h3{
+    font-family: "PetcoCircularTT-Bold", arial !important;
+    font-size: 25px;
+    color: #000000;
+}
+
+.hound_gatos .bottom-hero__content--text p{
+    font-family: "PetcoCircularTT-Regular", arial !important;
+    font-size: 16px;
+    color: #000000;
+    padding: 20px 0;
+    max-width: 450px;
+    margin: 0 auto;
+}
+
+.hound_gatos .bottom-hero__content--text .cta-box{
+    padding: 0;
+}
+
+
+/* Responsive styles */
+
+/* Medium devices */
+@media only screen and (min-width: 1024px) and (max-width: 1279px) {
+
+    /* POV */
+    .citrus_hound_gatos_carousel-inner{
+        max-height: 280px;
+    }
+
+    .citrus_hound_gatos_carousel-item__col .item-logo-wrapper img {
+        max-width: 160px;
+    }
+
+    .citrus_hound_gatos_carousel-item__col .item-logo-wrapper img:nth-child(2) {
+        max-width: 70px;
+    }
+
+    .citrus_hound_gatos_carousel-item__col .item-text-wrapper h1 {
+        font-size: 28px;
+    }
+
+    /* Product Carousel */
+    .citrus-hound_gatos__carousel--item__wrapper .item-wrapper--img{
+        max-width: 160px;
+    }
+
+    .citrus-hound_gatos__tab iframe {
+        min-height: 285px;
+        width: 100%;
+    }
+    
+}
+
+/* Tab devices */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+
+    /* POV */
+    .citrus_hound_gatos_carousel-inner{
+        max-height: 205px;
+    }
+
+    .citrus_hound_gatos_carousel-item{
+        padding: 0 15px;
+    }
+
+    .citrus_hound_gatos_carousel-item__col .item-logo-wrapper img {
+        max-width: 100px;
+    }
+
+    .citrus_hound_gatos_carousel-item__col .item-logo-wrapper img:nth-child(2) {
+        max-width: 44px;
+    }
+
+    .citrus_hound_gatos_carousel-item__col .item-text-wrapper h1 {
+        font-size: 20px;
+    }
+
+    .citrus_hound_gatos_carousel-item__col .item-text-wrapper {
+        padding: 15px 0;
+    }
+
+    .citrus_hound_gatos_carousel-item__col .item-text-wrapper p {
+        font-size: 12px;
+        padding: 10px 0;
+    }
+
+    .citrus_hound_gatos_carousel-inner .pov1 .cta-box a {
+        margin: 0 10px;
+    }
+
+    /* Product Carousel */
+    .citrus-hound_gatos__carousel--item__wrapper {
+        padding: 15px;
+    }
+
+    .citrus-hound_gatos__carousel--item__wrapper .item-wrapper--img{
+        max-width: 110px;
+    }
+
+    .citrus-hound_gatos__carousel--item__wrapper p {
+        font-size: 16px;
+    }
+
+
+    .citrus-hound_gatos__carousel--item__wrapper{
+        min-height: 280px;
+    }
+
+    .citrus-hound_gatos__tab iframe {
+        min-height: 180px;
+    }
+
+    /* Bottom Hero */
+    .hound_gatos .bottom-hero__content--text{
+        padding: 10px;
+    }
+    
+    .hound_gatos .bottom-hero__content--text h3{
+        font-size: 20px;
+    }
+    
+    .hound_gatos .bottom-hero__content--text p{
+        font-size: 14px;
+        padding: 10px 0;
+    }
+
+    
+}
+
+
+
+/* Mobile devices */
+@media only screen and (max-width: 767px){
+
+    /* Show hide class */
+    .m-hide{
+        display: none;
+    }
+
+    .d-hide{
+        display: block;
+    }
+
+    /* CTA Styles */
+    .hound_gatos .cta-box {
+        width: 100%;
+    }
+
+    .hound_gatos .cta-box a{
+        text-transform: capitalize;
+        text-decoration: underline;
+        color: #001952 !important;
+        background: none !important;
+        border: none !important;
+    }
+
+    .hound_gatos .cta-box a:hover{
+        color: #001952;
+        border: none;
+    }
+
+    /* POV section */
+    .citrus_hound_gatos_carousel-inner{
+        max-height: fit-content;
+    }
+
+    .citrus_hound_gatos_carousel-item .custom-container {
+        flex-wrap: wrap;
+    }
+
+    .citrus_hound_gatos_carousel-item__col .d-hide{
+        padding: 0 20px;
+    }
+
+    .citrus_hound_gatos_carousel-item__col:nth-child(1),
+    .citrus_hound_gatos_carousel-item__col:nth-child(3) {
+        width: 100%;
+        padding: 0;
+    }
+
+    .citrus_hound_gatos_carousel-item__col:nth-child(2) {
+        width: 100%;
+        padding: 0;
+    }
+
+    .citrus_hound_gatos_carousel-inner .pov1 .citrus_hound_gatos_carousel-item__col:nth-child(2){
+        background-image: url("https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrus-hound-gatos-pov1-bg-mob ");
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .citrus_hound_gatos_carousel-inner .pov2 .citrus_hound_gatos_carousel-item__col:nth-child(2){
+        background-image: url("https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrus-hound-gatos-pov2-bg-mob ");
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .citrus_hound_gatos_carousel-inner .pov1 .cta-box a {
+        width: auto;
+        margin: 0 10px;
+        color: #fff !important;
+    }
+
+    .citrus_hound_gatos_carousel-item__col .item-logo-wrapper img {
+        max-width: 120px;
+    }
+
+    .citrus_hound_gatos_carousel-item__col .item-logo-wrapper img:nth-child(2) {
+        max-width: 60px;
+    }
+
+    .citrus_hound_gatos_carousel-item__col .item-logo-wrapper img {
+        max-width: 160px;
+    }
+
+    .citrus_hound_gatos_carousel-item__col .item-text-wrapper {
+        padding: 0 20px 20px;
+    }
+
+    .citrus_hound_gatos_carousel-item__col .item-text-wrapper h1{
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .citrus_hound_gatos_carousel-item__col .item-text-wrapper p {
+        max-width: 280px;
+        min-height: 72px;
+        margin: 0 auto;
+    }
+
+    /* Product Carousel */
+    .hound_gatos .citrus-hound_gatos__tab--wrapper {
+        flex-wrap: wrap;
+    }
+
+    .citrus-hound_gatos__video-content .citrus-hound_gatos__video-content--frame{
+        order: 2;
+    }
+
+    .citrus-hound_gatos__tab--wrapper:last-child .citrus-hound_gatos__tab-content{
+        order: 2;
+    }
+
+    .citrus-hound_gatos__tab--tab-col{
+        width: 100%;
+        padding: 0;
+    }
+
+    .citrus-hound_gatos__tab-content .splide__arrow--prev {
+        left: 0rem;
+    }
+
+    .citrus-hound_gatos__tab-content .splide__arrow--next {
+        right: 0rem;
+    }
+
+    .citrus-hound_gatos__carousel--item__wrapper{
+        min-height: 360px;
+    }
+
+    .citrus-hound_gatos__tab iframe {
+        min-height: 240px;
+    }
+
+
+    /* Bottom Hero */
+    .hound_gatos .bottom-hero__content{
+        flex-wrap: wrap;
+    }
+
+    .hound_gatos .bottom-hero__content--col{
+        width: 100%;
+    }
+
+    .hound_gatos .bottom-hero__content--col:first-child{
+        order: 2;
+    }
+
+
+
+}
+
+
+@media only screen and (min-width: 320px) and (max-width: 374px){
+
+    /* POV section */
+    .citrus_hound_gatos_carousel-item__col .item-text-wrapper h1{
+        font-size: 30px;
+    }
+}

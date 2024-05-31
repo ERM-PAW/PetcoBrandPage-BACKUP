@@ -1,0 +1,891 @@
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-size: 18px;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        * {
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        abbr,
+        address,
+        article,
+        aside,
+        audio,
+        b,
+        blockquote,
+        body,
+        canvas,
+        caption,
+        cite,
+        code,
+        dd,
+        del,
+        details,
+        dfn,
+        div,
+        dl,
+        dt,
+        em,
+        fieldset,
+        figcaption,
+        figure,
+        footer,
+        form,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        header,
+        hgroup,
+        html,
+        i,
+        iframe,
+        img,
+        ins,
+        kbd,
+        label,
+        legend,
+        li,
+        mark,
+        menu,
+        nav,
+        object,
+        ol,
+        p,
+        pre,
+        q,
+        samp,
+        section,
+        small,
+        span,
+        strong,
+        sub,
+        summary,
+        sup,
+        table,
+        tbody,
+        td,
+        tfoot,
+        th,
+        thead,
+        time,
+        tr,
+        ul,
+        var,
+        video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            outline: 0;
+            font-size: 100%;
+            background: 0 0;
+        }
+
+        img {
+            vertical-align: middle;
+        }
+
+        p a {
+            background: 0 0 !important;
+        }
+
+        article,
+        aside,
+        details,
+        figcaption,
+        figure,
+        footer,
+        header,
+        hgroup,
+        menu,
+        nav,
+        section {
+            display: block;
+        }
+
+        textarea {
+            outline: 0 !important;
+        }
+
+        audio,
+        canvas,
+        video {
+            display: inline-block;
+        }
+
+        a {
+            outline: 0 !important;
+        }
+
+        audio:not([controls]) {
+            display: none;
+            height: 0;
+        }
+
+        [hidden] {
+            display: none;
+        }
+
+        code,
+        kbd,
+        pre,
+        samp {
+            font-family: monospace, serif;
+            font-size: 1em;
+        }
+
+        pre {
+            white-space: pre;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+        blockquote:after,
+        blockquote:before,
+        q:after,
+        q:before {
+            content: "";
+            content: none;
+        }
+
+        ins {
+            background-color: #ff9;
+            color: #000;
+            text-decoration: none;
+        }
+
+        mark {
+            background-color: #a7f4f6;
+            color: #555;
+        }
+
+        del {
+            text-decoration: line-through;
+        }
+
+        abbr[title],
+        dfn[title] {
+            border-bottom: 1px dotted;
+            cursor: help;
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+
+        button {
+            outline: 0 !important;
+        }
+
+        input {
+            outline: 0 !important;
+        }
+
+        textarea {
+            outline: 0 !important;
+        }
+
+
+        .citrus-fluid-container {
+            margin: 0;
+            padding: 0;
+            font-size: 16px;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            font-family: PetcoCircularTT-Regular, arial;
+            overflow: hidden;
+        }
+
+        .citrus-container {
+            max-width: 1245px;
+            margin: 0 auto;
+        }
+
+
+        .citrus-images,
+        .citrus-images img {
+            width: 100%;
+            height: auto;
+        }
+
+        .citrus-column {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .citrus-col {
+            flex: auto;
+            padding: 10px;
+        }
+
+        .citrus-col-2 {
+            flex: 0 0 25%;
+            padding: 10px;
+        }
+
+        .citrus-col-3 {
+            flex: 0 0 33%;
+            padding: 10px;
+        }
+
+
+        .citrus-col-6 {
+            flex: 0 0 49%;
+            padding: 10px;
+        }
+
+        .citrus-education .citrus-col-6 {
+            flex: 0 0 49%;
+            margin: 10px;
+            padding: 0;
+        }
+
+        .pd-1 {
+            padding: 10px;
+        }
+
+        .bg-yellow {
+            background-color: #FFFAE7;
+        }
+
+        .bg-gray {
+            background-color: #FFD405;
+        }
+
+        .bg-gray-dark {
+            background-color: #303030;
+
+        }
+
+        .text-white {
+            color: #FFFFFF !important;
+        }
+
+
+        .citrus-fluid-container sup {
+            font-size: 60%;
+        }
+
+        .citrus-banner {
+            background-color: #F8CA62;
+            color: #001952;
+            font-family: PetcoCircularTT-Regular, arial;
+            font-size: 16px;
+            padding: 30px 0;
+            margin-bottom: 100px;
+            display: flex;
+        }
+
+        .citrus-banner-logo {
+            flex: 0 0 25%;
+            /* margin: auto; */
+            padding: 35px 85px;
+            
+        }
+
+        .citrus-banner-logo img {
+            max-width: 300px;
+        }
+
+        .citrus-banner-content {
+            padding: 0;
+            flex: 0 0 40%;
+            max-width: 550px;
+            
+        }
+
+        .citrus-banner-product {
+            margin: auto;
+            padding: 0;
+            position: absolute;
+            width: 30%;
+            max-width: 600px;
+            top: 0;
+            right: 5%;
+        }
+
+
+
+        .citrus-banner h1 {
+            background-color: #F8CA62;
+            color: #001952;
+            font-family: PetcoCircularTT-Bold;
+            font-weight: 900;
+            font-size: 35px;
+            line-height: 1.2;
+            margin: 10px 0;
+        }
+
+        .citrus-banner p {
+            font-size: 25px;
+            line-height: 1;
+            margin: 20px 0;
+            font-family: PetcoCircularTT-Regular, arial;
+        }
+
+        .citrus-banner .citrus-btn {
+            margin: 0 auto;
+            background-color: #001952;
+            color: #fff;
+            padding: 20px 40px;
+            font-size: 16px;
+            border-radius: 10px;
+            text-decoration: none;
+            margin: 20px 0;
+            text-align: center;
+            display: inline-block;
+            text-transform: uppercase;
+            font-family: PetcoCircularTT-Bold;
+            width: 221px;
+        }
+
+
+        .citrus-header-content {
+            font-size: 16px;
+            color: #000;
+            font-family: PetcoCircularTT-Bold, arial !important;
+            padding: 0 20px;
+        }
+
+        .citrus-header-content h1 {
+            color: #000;
+            font-size: 25px;
+            font-family: PetcoCircularTT-Bold, arial !important;
+            font-weight: 700;
+            display: block;
+            padding: 25px 0;
+            line-height: 1;
+        }
+
+        .citrus-header-content p {
+            font-size: 18px;
+            line-height: 1.2;
+            color: #000;
+            font-weight: 400;
+            display: block;
+            padding-bottom: 20px;
+             font-family: PetcoCircularTT-Regular, arial;
+        }
+
+
+        .citrus-education-content {
+            font-size: 16px;
+            color: #000;
+            font-family: PetcoCircularTT-Bold, arial !important;
+            padding: 20px;
+        }
+
+        .citrus-education-content h1 {
+            color: #000;
+            font-size: 25px;
+            font-family: PetcoCircularTT-Bold, arial !important;
+            font-weight: 700;
+            display: block;
+            padding: 10px;
+            line-height: 1.2;
+        }
+
+        .citrus-education-content p {
+            font-size: 20px;
+            line-height: 1.4;
+            color: #000;
+            font-weight: normal;
+            display: block;
+            padding: 10px;
+            font-family: PetcoCircularTT-Regular, arial;
+        }
+
+        .citrus-btn {
+            margin: 0 auto;
+            background-color: #001952;
+            color: #fff;
+            padding: 20px 40px;
+            font-size: 16px;
+            border-radius: 10px;
+            text-decoration: none;
+            margin: 10px 0;
+            text-align: center;
+            display: inline-block;
+            text-transform: uppercase;
+            font-family: PetcoCircularTT-Bold;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .text-right {
+            text-align: right;
+        }
+
+        .text-left {
+            text-align: left;
+        }
+
+
+        .citrus-images-education {
+            margin-top: -15%;
+            margin-bottom: 25px;
+
+        }
+
+        .mt-4 {
+            margin-top: 150px;
+        }
+        
+        .mt-3 {
+            margin-top: 100px;
+        }
+
+
+        .citrus-product-content h1 {
+            color: #000;
+            font-size: 18px;
+            font-family: PetcoCircularTT-Regular, arial;
+            font-weight: normal;
+            display: block;
+            padding-bottom: 30px;
+            line-height: 1.5;
+            text-align: center;
+        }
+
+        .citrus-product-content .citrus-btn {
+            font-size: 18px;
+            font-family: PetcoCircularTT-Bold, arial !important;
+            font-weight: 500;
+            text-decoration: underline;
+            text-transform: capitalize;
+            background-color: transparent !important;
+            color: #001952;
+            border: 0;
+            padding: 5px;
+        }
+
+        .citrus-icon-container {
+            display: flex !important;
+            margin: 0 auto;
+        }
+
+        .icon-item {
+            /* flex: 0 0 20%; */
+            padding: 30px;
+            text-align: center;
+            /* max-width: 250px; */
+            height: 200px;
+            /* border: 1px solid #ccc; */
+
+        }
+
+        .icon-item img {
+            align-items: middle;
+        }
+
+
+        .citrus-citrus-footer-img {
+            margin-bottom: -15px;
+            max-width: 600px;
+            margin-left: 20%;
+        }
+
+
+
+        .citrus-footer {
+            padding: 50px 25px;
+            margin-bottom: 100px;
+        }
+
+        .citrus-footer p {
+            margin: 20px 0;
+            font-size: 18px;
+            line-height: 1.5;
+            color: #c5c5c5;
+             font-family: PetcoCircularTT-Regular, arial;
+        }
+
+         .citrus-footer img {
+                max-width: 250px;
+            }
+
+        @media all and (max-width: 1460px) {
+
+            .citrus-banner h1 {
+                font-size: 24px;
+            }
+
+            .citrus-banner p {
+                font-size: 14px;
+                margin: 0;
+            }
+
+            .citrus-banner .citrus-btn {
+                margin: 20px 0 0 0;
+                padding: 10px 0;
+                width: 135px;
+            }
+        }
+
+
+        @media all and (max-width: 1024px) {
+            .citrus-banner-product {
+                width: 35%;
+                 right: 2%;
+            }
+
+            .citrus-banner h1 {
+                font-size: 18px;
+            }
+
+             .citrus-banner p {
+                font-size: 14px;
+                margin: 0;
+            }
+
+            .citrus-banner-logo {
+                padding: 25px;
+            }
+        }
+
+        @media all and (max-width: 768px) {
+
+            .citrus-banner {
+                padding: 10px 0;
+            }
+
+           
+
+            .citrus-banner-product {
+                width: 35%;
+                 right: 2%;
+            }
+
+            .citrus-banner-logo {
+                padding: 25px;
+            }
+
+
+            .citrus-banner h1 {
+                font-size: 16px;
+                margin: 10px auto;
+            }
+
+            .citrus-banner p {
+                font-size: 12px;
+                margin: 0;
+            }
+
+            
+            
+            .citrus-header-content p {
+                font-size: 14px;
+            }
+
+
+            .citrus-banner .citrus-btn {
+                width: 140px;
+                padding: 10px 20px;
+                font-size: 14px;
+            }
+
+            .citrus-btn {
+                padding: 10px 20px;
+                font-size: 14px;
+            }
+
+            .citrus-product-content h1 {
+                font-size: 14px;
+                padding: 5px;
+            }
+
+            .mt-4 {
+                margin-top: 75px;
+            }
+        }
+
+
+
+        @media all and (max-width: 575px) {
+
+            .citrus-column {
+                display: block;
+            }
+
+            .citrus-banner-content {
+                margin: 0 auto;
+            }
+
+            .citrus-education .citrus-column,
+            .citrus-column.citrus-product-content,
+            .citrus-icon-container {
+                display: flex;
+                overflow-y: auto;
+            }
+
+            .citrus-column>div {
+                flex: 0 0 75%;
+            }
+
+            .citrus-education .citrus-col-6 {
+                flex: 0 0 83%;
+            }
+
+            .citrus-icon-container>div {
+                flex: 0 0 40%;
+                height: auto;
+            }
+
+            .icon-item {
+                padding: 10px;
+            }
+
+            .citrus-icon-container img {
+                width: 220px;
+                max-width: 100%;
+                transform: translate(0, -50%);
+                margin-top: 50%;
+            }
+
+            .citrus-banner {
+                padding-top: 200px;
+                text-align: center;
+            }
+
+            .citrus-banner h1 {
+                font-size: 20px;
+                line-height: 1.2;
+                margin: 10px auto;
+                text-align: center;
+                padding: 5px 10px;
+            }
+
+            .citrus-banner p {
+                font-size: 14px;
+                line-height: 1.2;
+                text-align: center;
+            }
+
+            .citrus-banner {
+                display: block;
+            }
+
+            .citrus-banner-product {
+                width: 75%;
+                margin: auto;
+                max-height: 200px;
+                left: 0;
+                right: 0;
+            }
+
+            .citrus-banner-logo {
+                flex: 0 0 100%;
+                width: 50%;
+                margin: 0 auto;
+            }
+
+            .citrus-banner .citrus-btn {
+                padding: 10px;
+                margin: 10px auto;
+                background-color: transparent;
+                text-decoration: underline;
+                text-transform: capitalize;
+                color: #001952;
+            }
+
+            .citrus-btn {
+                padding: 10px;
+                margin: 10px auto;
+                background-color: transparent;
+                text-decoration: underline;
+                text-transform: capitalize;
+                color: #001952;
+                font-size: 16px;
+            }
+
+            .citrus-citrus-footer-img {
+                margin-left: 0;
+            }
+
+           
+
+        }
+    </style>
+
+    <div class="citrus-fluid-container">
+        <div class="">
+            <div class="citrus-banner ">
+                <div class=" citrus-banner-logo">
+                    <img class="citrus-images " src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrus-clif-logo2" alt="Clif Pet logo.">
+                </div>
+
+                <div class=" citrus-banner-content">
+                    <h1>DELICIOUS, <span style="white-space: nowrap">PLANT-POWERED</span> GOODNESS FOR YOUR DOG</h1>
+                    <p>Plant-based treats made with only 7 ingredients.</p>
+                    <a class="citrus-btn"  manual_cm_sp="sponsoredbrandpage:clifpet:heropov:1:deliciousplantpoweredgoodness:shopnow"
+                            onclick="clickTrackLink(this);" href="https://www.petco.com/shop/en/petcostore/brand/clif-pet">Shop Now</a>
+                </div>
+
+                <div>
+                    <img class="citrus-images citrus-banner-product" src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrus-clif-pov1"
+                        alt="Clif Pet logo. From the makers of Clif Bar. Product shots of Clif Pet jerky-based treats.">
+                </div>
+
+            </div>
+        </div>
+
+        <div class=" bg-yellow mt-4">
+            <div class="citrus-container">
+                <div class="citrus-column citrus-header-content">
+                    <div class="citrus-col-6 ">
+                        <img class="citrus-images citrus-images-education" src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrus-clif-img1"
+                            alt="A woman kneeling on a rock holding her dog.">
+                    </div>
+
+                    <div class="citrus-col-6  text-center">
+                        <div class="pd-1">
+                        <h1>From the makers of CLIF BAR<sup>®</sup></h1>
+                        <p>CLIF PET™ features wholesome, nourishing treats to<br/>fuel every walk, hike and game of fetch.
+                        </p>
+                        <a class="citrus-btn" manual_cm_sp="sponsoredbrandpage:clifpet:fromthemakersofclifbar:1:fromthemakersofclifbar:shopnow"
+                            onclick="clickTrackLink(this);" href="https://www.petco.com/shop/en/petcostore/brand/clif-pet">Shop Now</a>
+                            </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <div class="  mt-3">
+            <div class="citrus-container">
+                <div class="citrus-column citrus-header-content">
+                    <div class="citrus-col text-center">
+                        <h1>Flavors your dog will love</h1>
+                    </div>
+                </div>
+                <div class="citrus-column citrus-product-content">
+                    <div class="citrus-col-3  text-center">
+                        <a class="citrus-btn"
+                            href="https://www.petco.com/shop/en/petcostore/product/clif-pet-plant-based-jerky-sweet-potato-and-blueberry-recipe-dog-treat"
+                            manual_cm_sp="sponsoredbrandpage:clifpet:flavorsyourdogwilllove:1:sweetpotatoeblueberry:product"
+                            onclick="clickTrackLink(this);">
+                        <img class="citrus-images" src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrus-clif-product1" alt="citrus-clif-img1">
+                        </a>
+                        <h1>CLIF PET Plant Based Jerky Sweet Potato and Blueberry Recipe Dog Treat, 5 oz.</h1>
+                        <a class="citrus-btn"
+                            href="https://www.petco.com/shop/en/petcostore/product/clif-pet-plant-based-jerky-sweet-potato-and-blueberry-recipe-dog-treat"
+                            manual_cm_sp="sponsoredbrandpage:clifpet:flavorsyourdogwilllove:1:sweetpotatoeblueberry:shopnow"
+                            onclick="clickTrackLink(this);">Shop Now</a>
+                    </div>
+
+
+                    <div class="citrus-col-3  text-center">
+                        <a class="citrus-btn"
+                            href="https://www.petco.com/shop/en/petcostore/product/clif-pet-plant-based-jerky-butternut-squash-and-cranberry-recipe-dog-treat"
+                            manual_cm_sp="sponsoredbrandpage:clifpet:flavorsyourdogwilllove:2:butternutsquashcranberry:product" onclick="clickTrackLink(this);">
+                        <img class="citrus-images" src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrus-clif-product2" alt="citrus-clif-img1">
+                        </a>
+                        <h1>CLIF PET Plant Based Jerky Butternut Squash and Cranberry Recipe Dog Treat, 5 oz.</h1>
+                        <a class="citrus-btn" href="https://www.petco.com/shop/en/petcostore/product/clif-pet-plant-based-jerky-butternut-squash-and-cranberry-recipe-dog-treat"  manual_cm_sp="sponsoredbrandpage:clifpet:flavorsyourdogwilllove:2:butternutsquashcranberry:shopnow"
+                            onclick="clickTrackLink(this);" >Shop Now</a>
+                    </div>
+
+                    <div class="citrus-col-3  text-center">
+                        <a class="citrus-btn"
+                            href="https://www.petco.com/shop/en/petcostore/product/clif-pet-plant-based-jerky-pumpkin-and-apple-recipe-dog-treat"
+                            manual_cm_sp="sponsoredbrandpage:clifpet:flavorsyourdogwilllove:2:butternutsquashcranberry:shopnow"
+                            onclick="clickTrackLink(this);">
+                        <img class="citrus-images" src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrus-clif-product3" alt="citrus-clif-img1">
+                        </a>
+                        <h1>CLIF PET Plant Based Jerky Pumpkin and Apple Recipe Dog Treat, 5 oz.</h1>
+                        <a class="citrus-btn" href="https://www.petco.com/shop/en/petcostore/product/clif-pet-plant-based-jerky-pumpkin-and-apple-recipe-dog-treat" manual_cm_sp="sponsoredbrandpage:clifpet:flavorsyourdogwilllove:2:butternutsquashcranberry:shopnow"
+                            onclick="clickTrackLink(this);">Shop Now</a>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class=" mt-3">
+            <div class="citrus-container citrus-icon-container">
+                <div class="icon-item">
+                    <img class="citrus-images" src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrus-clif-icon4" alt="Plant with leaves icon. Plant protein">
+                </div>
+                <div class="icon-item">
+                    <img class="citrus-images" src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrus-clif-icon5" alt="List icon. Only 7 ingredients">
+                </div>
+                <div class="icon-item">
+                    <img class="citrus-images" src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrus-clif-icon3" alt="Stomach icon. Easy to digest">
+                </div>
+                <div class="icon-item">
+                    <img class="citrus-images" src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrus-clif-icon2" alt="Flask with a line through it icon. No artificial flavors, colors or preservatives">
+                </div>
+
+                <div class="icon-item">
+                    <img class="citrus-images" src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrus-clif-icon1" alt="American flag icon. Made in the USA">
+                </div>
+            </div>
+
+        </div>
+
+        <div class=" mt-4 citrus-education">
+            <div class="citrus-container">
+                <div class="citrus-column citrus-education-content">
+                    <div class="citrus-col-6 bg-gray text-center">
+                        <img class="citrus-images " src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrus-clif-img3"
+                            alt="Clif plant-based jerky accompanied by various fruits and vegetables.">
+
+                        <div class="pd-1">
+                            <h1>Purposefully crafted</h1>
+                            <p>Including nutrient-dense fruits and vegetables with no fillers or artificial additives.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="citrus-col-6 bg-gray  text-center">
+                        <img class="citrus-images " src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrus-clif-img2"
+                            alt="A dog looking up at a pet owner who is breaking Clif Pet jerky over their head.">
+                        <div class="pd-1">
+                            <h1>Simply delicious treats</h1>
+                            <p>Soft, tender and perfectly sized for training, play or dogs with small mouths.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="citrus-citrus-footer-img mt-4 ">
+            <img class="citrus-images" src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrus-clif-mountains" alt="citrus-clif-img1">
+        </div>
+
+        <div class=" bg-gray-dark">
+            <div class="citrus-container citrus-header-content citrus-footer">
+                <div class="citrus-column ">
+                    <div class="citrus-col-3  text-center ">
+                        <img class="citrus-images" src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/citrus-clif-logo" alt="Clif Pet logo.">
+
+                    </div>
+
+                    <div class="citrus-col text-center ">
+                        <h1 class="text-white">A different kind of company with different values</h1>
+                        <p>CLIF PET™ helps pets and their parents bond with thoughtfully<br />crafted
+                            treats that are better for the planet.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>

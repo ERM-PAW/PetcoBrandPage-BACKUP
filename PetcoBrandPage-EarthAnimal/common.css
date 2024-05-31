@@ -1,0 +1,140 @@
+/* Imported files */
+@import "font.css";
+
+
+/* All the common classes that have common styles */
+
+
+/* Need to remove the body styles during handoff */
+body{
+    margin: 0;
+    padding: 0;
+}
+/* Need to remove the body styles during handoff */
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.earth-animal .custom-container::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .earth-animal .custom-container {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
+.earth-animal *{
+    margin: 0;
+    padding: 0;
+    line-height: initial !important;
+}
+
+
+/* Show hide class */
+.m-hide{
+    display: block;
+}
+
+.d-hide{
+    display: none;
+}
+
+
+.earth-animal a{
+    text-decoration: none;
+}
+
+.earth-animal img{
+    width: 100%;
+}
+
+.earth-animal h1, h2, h3{
+    font-family: "PetcoCircularTT-Bold", arial !important;
+}
+
+.earth-animal p {
+    font-family: "PetcoCircularTT-Regular", arial !important;
+}
+
+.earth-animal .cta-box{
+    width: 210px;
+    margin: 0 auto;
+}
+
+.earth-animal .cta-box a{
+    border-radius: 5px;
+    /* color: #fff;
+    background: #001952; */
+    padding: 15px;
+    display: block;
+    text-align: center;
+    font-family: "PetcoCircularTT-Bold", arial !important;
+    font-size: 16px;
+    text-transform: uppercase;
+    /* border: 1px solid #001952; */
+    font-weight: 700;
+}
+
+.earth-animal .bottom-hero__content--text .cta-box a{
+    color: #fff;
+    background: #001952;
+    border: 1px solid #001952;
+}
+
+.earth-animal .bottom-hero__content--text .cta-box a:hover{
+    color: #001952;
+    background: #fff;
+    border: 1px solid #001952;
+}
+/* 
+.earth-animal .cta-box a:hover{
+    background: #fff;
+    color: #001952;
+    border: 1px solid #001952;
+    transition: 0.5s ease-in-out;
+} */
+
+.earth-animal .cta-underline{
+ font-size: 16px;
+ color: #001952;
+ text-decoration: underline;
+ text-transform: capitalize;
+ font-family: "PetcoCircularTT-Bold", arial !important;
+ cursor: pointer;
+ font-weight: 700;
+}
+
+.earth-animal .custom-container{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.earth-animal .container-full{
+    width: 100%;
+}
+
+.earth-animal .flex-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+
+.earth-animal__section-title{
+    padding: 25px 15px;
+}
+
+.earth-animal__section-title sup{
+    font-size: 16px;
+}
+
+.earth-animal .section-padding30{
+    padding: 30px 0;
+}
+
+.earth-animal__section-title h2{
+    text-align: center;
+    font-size: 25px;
+    color: #000000;
+    font-family: "PetcoCircularTT-Bold", arial !important;
+}

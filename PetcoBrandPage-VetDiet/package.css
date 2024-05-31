@@ -1,0 +1,23 @@
+.citrus_purina__packages .citrus_purina__packages_wrapper .citrus_purina__packages_wrapper--single-package {
+  margin: 24px;
+  background: #F4F7FF;
+}
+
+.citrus_purina__packages .citrus_purina__packages_wrapper .citrus_purina__packages_wrapper--single-package a {
+  display: block;
+  text-align: center;
+}
+
+.citrus_purina__packages .citrus_purina__packages_wrapper .citrus_purina__packages_wrapper--single-package a .single-package__img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.citrus_purina__packages .citrus_purina__packages_wrapper .citrus_purina__packages_wrapper--single-package a .single-package__text h3 {
+  font-size: 20px;
+  color: #000000;
+  font-family: "PetcoCircularTT-Bold", arial !important;
+  padding: 3rem 15px;
+}
+/*# sourceMappingURL=package.css.map */

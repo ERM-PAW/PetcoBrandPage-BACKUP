@@ -1,0 +1,176 @@
+/* Video Popup */
+.citrus-hound_gatos__tab .citrus-hound_gatos__video-content--frame{
+    position: relative;
+    width: 100%;
+}
+
+.citrus-hound_gatos__video-content--frame button{
+    display: flex;
+}
+
+.citrus-hound_gatos__video-content--frame button,
+.citrus-hound_gatos__video-content--frame button:focus-visible{
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 0;
+}
+.citrus-hound_gatos__tab .show-video{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #fff;
+    box-shadow: 2px 2px 10px 0px rgb(166 161 161 / 85%);
+    padding: 10px;
+    border-radius: 10px;
+    width: calc(100%/1 - 20px);
+}
+.citrus-hound_gatos__tab .show-video span{
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    z-index: 99999;
+    color: #333;
+    background: #fff;
+    width: 20px;
+    border-radius: 50%;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #efefef;
+    font-size: 20px;
+    padding: 1px 0 0;
+    cursor: pointer;
+}
+.citrus-hound_gatos__tab .show-video span:hover{
+    color: #fff;
+    background: #e4425c;
+    border: 1px solid #e4425c;
+}
+.citrus-hound_gatos__tab iframe{
+    width: 100%;
+    min-height: 370px;
+    display: flex;
+}
+
+.citrus-hound_gatos__tab .citrus-bg-sky iframe{
+    min-height: 270px;
+}
+
+
+/* Custom Tab */
+.hound_gatos .citrus-hound_gatos__tab{
+
+}
+
+.hound_gatos .citrus-hound_gatos__tab--wrapper{
+    
+}
+
+.hound_gatos .citrus-hound_gatos__video-content{
+    flex-wrap: wrap;
+}
+
+.citrus-hound_gatos__tab--tab-col{
+    width: 50%;
+    padding: 20px;
+}
+
+.hound_gatos .ccitrus-hound_gatos__video-content--frame{
+    
+}
+
+.hound_gatos .ccitrus-hound_gatos__video-content--frame{
+
+    
+}
+
+.citrus-hound_gatos__video-content--text{
+    text-align: center;
+    background: #76D8EF;
+    padding: 50px 20px 0;
+}
+
+.citrus-hound_gatos__video-content--text h3{
+    font-size: 20px;
+    color: #000000;
+}
+
+.citrus-hound_gatos__video-content--text p{
+    font-size: 16px;
+    color: #000000;
+    padding: 20px 0;
+}
+
+.citrus-hound_gatos__video-content--text .cta-underline{
+    padding-bottom: 50px;
+    display: block;
+}
+
+.citrus-hound_gatos__video-content--text .video-content__logo{
+    width: 170px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.citrus-hound_gatos__tab--wrapper:last-child .citrus-hound_gatos__video-content--text .video-content__logo{
+    width: 100%;
+}
+
+.citrus-hound_gatos__tab--wrapper:last-child .citrus-hound_gatos__video-content--text{
+    padding: 50px 0 0;
+    background: #FFEBC5;
+}
+
+
+/* Splide Carousel - Custom styles */
+.citrus-hound_gatos__tab-content .splide__pagination{
+    display: none;
+}
+
+.citrus-hound_gatos__tab-content .splide__arrow--prev{
+    left: -1rem;
+}
+
+.citrus-hound_gatos__tab-content .splide__arrow{
+    background: #fff;
+    border: 1px solid #001952;
+}
+
+.citrus-hound_gatos__tab-content .splide__arrow:hover{
+    background: #001952;
+}
+
+.citrus-hound_gatos__tab-content .splide__arrow:hover svg{
+    fill: #fff;
+}
+
+.citrus-hound_gatos__tab-content .splide__arrow svg {
+    fill: #001952;
+}
+
+.citrus-hound_gatos__tab-content .splide__arrow svg:hover {
+    fill: #fff;
+}
+
+.citrus-hound_gatos__carousel--item{
+    flex-wrap: wrap !important;
+}
+
+.citrus-hound_gatos__carousel--item__wrapper{
+    padding: 20px;
+}
+
+.citrus-hound_gatos__carousel--item__wrapper .item-wrapper--img{
+    max-width: 210px;
+    margin: 0 auto;
+}
+
+.citrus-hound_gatos__carousel--item__wrapper p{
+    padding: 20px 0;
+    color: #333333;
+    font-size: 18px;
+}

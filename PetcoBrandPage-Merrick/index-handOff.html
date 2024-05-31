@@ -1,0 +1,2969 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merick</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        a,
+        button {
+            font-family: "PetcoCircularTT-Bold", arial !important;
+        }
+
+        a {
+            display: block;
+        }
+
+        p {
+            font-family: "PetcoCircularTT-Regular", arial !important;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        .merrickgold-section img {
+            width: 100%;
+        }
+
+        .merrickgold-section {
+            display: block;
+        }
+
+        .MiCS_container-fluid {
+            width: 100%;
+        }
+
+        .merrickgold-section__maincontent {
+            margin: 0px;
+            padding: 0px;
+            width: 100%;
+            max-width: 100%;
+        }
+
+        .MiCS_container {
+            max-width: 1295px;
+            margin: 25px auto;
+        }
+
+        .MiCS_auto_container_fluid {
+            max-width: 1295px;
+            margin: 25px auto;
+        }
+
+        .merrickgold-flex {
+            display: flex;
+            flex-wrap: nowrap;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /****slider styles****/
+        .MiCS_hslider_content {
+            max-width: 600px;
+            margin: 0 auto;
+            padding-top: 60px;
+            color: white;
+            text-align: center;
+        }
+
+        .MiCS_hslider_content img {
+            max-width: 120px;
+        }
+
+        .MiCS_hslider_content h1 {
+            font-family: "PetcoCircularTT-Regular", arial !important;
+            font-size: 48px;
+            color: #ffffff;
+        }
+
+        .MiCS_hslider_content p {
+            max-width: 560px;
+            padding: 45px 0px;
+            font-family: "PetcoCircularTT-Regular", arial !important;
+            font-size: 18px;
+            color: #ffffff;
+        }
+
+        .hslider_btn_area a {
+            margin: 0px 25px;
+            padding: 20px 60px;
+            background-color: #ffffff;
+            border: #707070;
+            border-radius: 5px;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: #001952;
+            font-size: 16px;
+            font-weight: bold;
+            transition: .5s;
+        }
+
+        .hslider_btn_area a:hover {
+            background-color: #051131;
+            color: #FFFFFF;
+        }
+
+        /** Sliders options **/
+        .merrickgold-section__slider--content .slider_first {
+            width: 100%;
+            min-height: 518px;
+            max-height: 518px;
+            background-image: url("https://assets.petco.com/petco/image/upload/f_auto,q_auto/hslider_first_bg@2x");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .merrickgold-section__slider--content .slider_second {
+            width: 100%;
+            min-height: 515px;
+            max-height: 515px;
+            background-image: url("https://assets.petco.com/petco/image/upload/f_auto,q_auto/hslider_second_bg@2x");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .merrickgold-section__slider--content .slider_third {
+            width: 100%;
+            min-height: 515px;
+            max-height: 515px;
+            background-image: url("https://assets.petco.com/petco/image/upload/f_auto,q_auto/hslider_third_bg@2x");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .merrickgold-section__slider--content .modified_container {
+            max-width: 1440px;
+            margin: 0 auto;
+        }
+
+        .merrickgold-section__slider {
+            overflow: hidden;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            width: 100%;
+            position: relative;
+            margin-bottom: 100px;
+        }
+
+        .merrickgold-section__slides {
+            width: 200%;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+        }
+
+        .merrickgold-section__slider input {
+            display: none;
+        }
+
+        .slide {
+            min-width: 100%;
+            transition: 2s;
+            -webkit-transition: 2s;
+        }
+
+        /* Manual navigation */
+        .navigation-manual {
+            position: absolute;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            bottom: 0;
+            padding: 10px 0 10px 25px;
+            width: 100px;
+            left: 45%;
+        }
+
+        .manual-btn {
+            border: 2px solid #09205c;
+            padding: 5px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 1s;
+
+        }
+
+        .manual-btn:not(:last-child) {
+            margin-right: 10px;
+        }
+
+        .manual-btn:hover {
+            background: #09205c;
+        }
+
+        #radio1:checked~.first {
+            margin-left: 0;
+        }
+
+        #radio2:checked~.first {
+            margin-left: -100%;
+        }
+
+        #radio3:checked~.first {
+            margin-left: -200%;
+        }
+
+        .navigation-auto {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 10px 0 10px 0px;
+            width: 100px;
+            left: 45%;
+            border-radius: 5px 5px 0 0;
+        }
+
+        .navigation-auto img {
+            width: 16px;
+            position: absolute;
+            margin: 0 0 0 -96px;
+            bottom: 9px;
+        }
+
+        .navigation-auto div {
+            border: 2px solid #09205c;
+            padding: 5px;
+            border-radius: 10px;
+            transition: 1s;
+        }
+
+        .navigation-auto div:not(:last-child) {
+            margin-right: 10px;
+        }
+
+        #radio1:checked~.navigation-auto .auto-btn1 {
+            background: #09205c;
+        }
+
+        #radio2:checked~.navigation-auto .auto-btn2 {
+            background: #09205c;
+        }
+
+        #radio3:checked~.navigation-auto .auto-btn3 {
+            background: #09205c;
+        }
+
+        /****slider styles****/
+        /**** section head subhead ****/
+        .merrickgold-section_header {
+            background-image: url(https://assets.petco.com/petco/image/upload/f_auto,q_auto/merrickgold-section_header_bg@2x);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+        }
+
+        .merrickgold-section_header h1 {
+            text-transform: uppercase;
+            text-align: center;
+            padding: 44px 20px;
+            color: #FFFFFF;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .merrickgold-section_sub_head {
+            width: 100%;
+        }
+
+        .merrickgold-section_sub_head p {
+            text-align: center;
+            padding: 70px 15px 0;
+            color: #212529;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .merrickgold-section_best_seller_wrapper {
+            -webkit-box-align: start;
+            -ms-flex-align: start;
+            align-items: flex-start;
+        }
+
+        .merrickgold-section_all_food_wrapper {
+            -webkit-box-align: start;
+            -ms-flex-align: start;
+            align-items: flex-start;
+        }
+
+        /**** section head subhead ****/
+        /***** best seller section ****/
+        .MiCS_tab_container {
+            margin-bottom: 75px;
+        }
+
+        .MiCS_tab_nav_area {
+            border-bottom: 1px solid #021B4E;
+            text-align: center;
+            padding: 0px 30px;
+            margin-top: 55px;
+        }
+
+        .best_cat_tabs {
+            align-items: flex-start;
+            justify-content: center;
+            width: 100%;
+            border-bottom: 1px solid #021B4E;
+        }
+
+        .best_dog_tabs {
+            border-bottom: 1px solid #021B4E;
+        }
+
+        /*dog best seller tabs*/
+        .MiCS_tab_item {
+            text-transform: uppercase;
+            padding: 15px 35px;
+            margin: 0px 10px;
+            color: #9B9B9B;
+            font-size: 14px;
+            font-weight: bold;
+            text-decoration: none;
+            background-color: #ffffff;
+            border: none;
+            cursor: pointer;
+        }
+
+        .MiCS_tab_item.MiCS_tab_item_active {
+            color: #001952;
+            border-bottom: 10px solid #001952;
+            margin-top: 12px;
+        }
+
+        .filterBestDogDiv {
+            float: left;
+            display: none;
+        }
+
+        /*dog best seller tabs*/
+        /*cat best seller tabs*/
+        .MiCS_cat_best_tab_item {
+            text-transform: uppercase;
+            padding: 15px 60px;
+            margin: 0px 10px;
+            color: #9B9B9B;
+            font-size: 14px;
+            font-weight: bold;
+            text-decoration: none;
+            background-color: #ffffff;
+            border: none;
+            cursor: pointer;
+        }
+
+        .MiCS_cat_best_tab_item:hover {
+            color: #001952;
+            border-bottom: 10px solid #001952;
+        }
+
+        .MiCS_cat_best_tab_item.MiCS_cat_best_tab_item_active {
+            color: #001952;
+            border-bottom: 10px solid #001952;
+        }
+
+        .filterBestCatDiv {
+            float: left;
+            display: none;
+        }
+
+        /*cat best seller tabs*/
+        /*best seller tab content*/
+        .merrickgold-section__tab-content {
+            -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+        }
+
+        .merrickgold-section__tab_content_item {
+            width: 23%;
+            padding: 0px 1%;
+        }
+
+        .MiCS_best_seller_product_image {
+            padding-bottom: 20px;
+            border-bottom: 1px solid #212529;
+            margin-bottom: 20px;
+        }
+
+        .MiCS_product {
+            text-align: left;
+        }
+
+        .MiCS_product_info {
+            min-height: 65px;
+            white-space: normal;
+            padding: 0 0 10px 0;
+        }
+
+        .MiCS_product_title {
+            font-size: 13px;
+            color: #220C0B;
+            text-decoration: none;
+        }
+
+        .MiCS_product_button {
+            color: #001952;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        /*best seller tab content*/
+        /**** product listing dog food and cat food ****/
+        .merrickgold-section__product-listing-content.merrickgold-flex {
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            -webkit-box-pack: left;
+            -ms-flex-pack: left;
+            justify-content: left;
+        }
+
+        /* 
+         .merrickgold-section__listed_product_item {
+         width: 31%;
+         padding: 2% 1%;
+         } */
+        .MiCS_listing_product {
+            text-align: center;
+        }
+
+        .MiCS_listing_product_info {
+            min-height: 50px;
+            margin-top: 10px;
+        }
+
+        .MiCS_listing_product_title {
+            text-decoration: none;
+            color: #212529;
+            font-size: 18px;
+        }
+
+        .MiCS_listing_product_details {
+            font-size: 13px;
+            height: 50px;
+        }
+
+        .MiCS_listing_product_button {
+            padding: 24px 48px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 5px;
+            color: #001952;
+            -webkit-transition: .5s;
+            transition: .5s;
+        }
+
+        .MiCS_product_listing_category_area {
+            margin: 50px 0px 97px 0px;
+            text-align: center;
+        }
+
+        /*dog food tabs*/
+        .MiCS_dog_food_tab {
+            width: 211px;
+            height: 56px;
+            margin: 0px 25px;
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none;
+            text-transform: uppercase;
+            border: 1px solid #082157;
+            border-radius: 5px;
+            -webkit-transition: .5s;
+            transition: .5s;
+            cursor: pointer;
+            background-color: #082157;
+            color: #ffffff;
+            padding-top: 17px;
+        }
+
+        .MiCS_dog_food_tab:hover {
+            background-color: #F3F0F0;
+            color: #082157;
+        }
+
+        .MiCS_dog_food_tab.MiCS_dog_food_tab_active {
+            background-color: #F3F0F0;
+            color: #082157;
+        }
+
+        .filterDogFoodDiv {
+            float: left;
+            display: none;
+        }
+
+        /*dog food tabs*/
+        /*cat food tabs*/
+        .MiCS_cat_food_tab {
+            width: 211px;
+            height: 56px;
+            margin: 0px 25px;
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none;
+            text-transform: uppercase;
+            border: 1px solid #082157;
+            border-radius: 5px;
+            -webkit-transition: .5s;
+            transition: .5s;
+            cursor: pointer;
+            background-color: #082157;
+            color: #ffffff;
+        }
+
+        .MiCS_cat_food_tab:hover {
+            background-color: #F3F0F0;
+            color: #082157;
+        }
+
+        .MiCS_cat_food_tab.MiCS_cat_food_tab_active {
+            background-color: #F3F0F0;
+            color: #082157;
+        }
+
+        .filterCatFoodDiv {
+            float: left;
+            display: none;
+        }
+
+        /*cat food tabs*/
+        /*****product listing*****/
+        /****banner video and image ****/
+        .MiCS_banner {
+            background-color: #F4F7FF;
+            min-height: 370px;
+            text-align: center;
+        }
+
+        .MiCS_video_banner {
+            margin-top: 105px;
+        }
+
+        .MiCS_banner_image {
+            max-width: 500px;
+            margin: 30px auto;
+        }
+
+        .MiCS_video_thumb {
+            max-width: 500px;
+            margin-top: -23px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .MiCS_video_thumb .feature-video iframe {
+            border: 5px solid #ffffff;
+            box-shadow: 0 5px 10px #ddd;
+        }
+
+        .MiCS_banner_details {
+            max-width: 500px;
+            margin: 30px auto;
+            color: #000000;
+        }
+
+        .MiCS_banner_headline {
+            padding: 20px 0px;
+            font-size: 25px;
+            line-height: 32px;
+            font-weight: bold;
+        }
+
+        .MiCS_banner_description {
+            font-size: 16px;
+            line-height: 22px;
+            max-width: 465px;
+            white-space: normal;
+        }
+
+        /****banner video and image ****/
+        /* @media only screen and (min-width:2560px) {
+            .merrickgold-section__slider--content .slider_first {
+                min-height: 1200px;
+                max-height: 1200px;
+            }
+
+            .merrickgold-section__slider--content .slider_second {
+                min-height: 1200px;
+                max-height: 1200px;
+            }
+
+            .merrickgold-section__slider--content .slider_third {
+                min-height: 1200px;
+                max-height: 1200px;
+            }
+        } */
+        /* 
+        @media only screen and (min-width:1921px) and (max-width:2559px) {
+            .merrickgold-section__slider--content .slider_first {
+                min-height: 1100px;
+                max-height: 1100px;
+            }
+
+            .merrickgold-section__slider--content .slider_second {
+                min-height: 1100px;
+                max-height: 1100px;
+            }
+
+            .merrickgold-section__slider--content .slider_third {
+                min-height: 1100px;
+                max-height: 1100px;
+            }
+        }
+
+        @media only screen and (min-width:1600px) and (max-width:1920px) {
+            .merrickgold-section__slider--content .slider_first {
+                min-height: 800px;
+                max-height: 800px;
+            }
+
+            .merrickgold-section__slider--content .slider_second {
+                min-height: 800px;
+                max-height: 800px;
+            }
+
+            .merrickgold-section__slider--content .slider_third {
+                min-height: 800px;
+                max-height: 800px;
+            }
+        } */
+
+        @media screen and (min-width: 1024px) and (max-width: 1279px) {
+            .MiCS_product_info {
+                min-height: 85px;
+            }
+
+            .MiCS_video_thumb .feature-video iframe {
+                max-width: 90%;
+                height: 300px;
+            }
+
+        }
+
+        @media only screen and (min-width:992px) {
+            .MiCS_container {
+                max-width: 100%;
+                padding: 0px 3.4%;
+                margin: 25px auto;
+            }
+
+            .MiCS_auto_container_fluid {
+                max-width: 100%;
+                padding: 0px 3.4%;
+            }
+
+            .merrickgold-section__listed_product_item {
+                width: 31%;
+                padding: 3% 0%;
+            }
+
+            .merrickgold-section__product-listing-content.merrickgold-flex {
+                justify-content: center;
+            }
+
+            .MiCS_tab_container {
+                padding-top: 50px;
+            }
+        }
+
+        /* laptop, desktop, large devices*/
+        /* table, landscape tablet */
+        @media screen and (min-width: 768px) and (max-width: 991px) {
+            .MiCS_container {
+                max-width: 100%;
+                padding: 0px 5%;
+                margin: 25px auto;
+            }
+
+            .MiCS_auto_container_fluid {
+                max-width: 100%;
+                padding: 0% 0% 0% 5.5%;
+            }
+
+            .MiCS_product_info {
+                min-height: 100px;
+                white-space: normal;
+                padding: 0 0 10px 0;
+            }
+
+            .MiCS_dog_food_tab {
+                width: 190px;
+                margin: 0px 10px;
+                font-size: 14px;
+                padding-top: 15px;
+            }
+
+            .MiCS_cat_food_tab {
+                width: 190px;
+                margin: 0px 10px;
+                font-size: 14px;
+            }
+
+            .MiCS_tab_item {
+                padding: 15px 18px;
+            }
+
+            .MiCS_cat_best_tab_item {
+                padding: 15px 15px;
+            }
+
+            .MiCS_tab_container {
+                padding-top: 50px;
+            }
+
+            /*tab contents*/
+            .merrickgold-section__tab-content.merrickgold-flex {
+                -ms-flex-wrap: nowrap;
+                flex-wrap: nowrap;
+                -webkit-box-pack: left;
+                -ms-flex-pack: left;
+                justify-content: left;
+            }
+
+            .merrickgold-section__tab_content_item {}
+
+            .merrickgold-section__tab-content {
+                width: 100%;
+                padding: 0px;
+                overflow-x: auto;
+                overflow-y: hidden;
+                white-space: nowrap;
+            }
+
+            .merrickgold-section__product-listing-content.merrickgold-flex {
+                flex-wrap: nowrap;
+            }
+
+            .merrickgold-section__listed_product_item {
+                width: 31%;
+                padding: 0% 0%;
+            }
+
+            .merrickgold-section__product-listing-content {
+                width: 450%;
+                padding: 0px;
+                overflow-x: auto;
+                overflow-y: hidden;
+                white-space: nowrap;
+            }
+
+            .merrickgold-section__product-listing-content.cat_listing {
+                width: 100%;
+            }
+
+            /* tab contents */
+            .merrickgold-section_best_seller_wrapper {
+                overflow-y: auto;
+            }
+
+            .merrickgold-section_all_food_wrapper {
+                overflow-y: auto;
+            }
+
+            .merrickgold-section__listed_product_item {
+                /* width: 50%; */
+            }
+
+            /* banner */
+            .MiCS_video_banner {
+                margin-top: 150px;
+            }
+
+            .MiCS_banner>.merrickgold-flex {
+                -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+                flex-flow: column;
+            }
+
+            .MiCS_banner_details {
+                margin-top: 0px;
+            }
+
+            .MiCS_banner_headline {
+                font-size: 14px;
+                margin-top: 0px;
+            }
+
+            .MiCS_banner_description {
+                font-size: 12px;
+            }
+
+            .MiCS_video_thumb {
+                max-width: 80%;
+                margin-top: -70px;
+            }
+
+            .MiCS_banner_image {
+                max-width: 80%;
+            }
+
+            .MiCS_banner_details {
+                max-width: 80%;
+            }
+
+            .MiCS_banner_headline {
+                font-size: 20px;
+            }
+
+            /**banner*/
+
+            .MiCS_video_thumb .feature-video iframe {
+                max-height: 300px;
+            }
+        }
+
+        /* table, landscape tablet */
+        /* mobile and small devices */
+        @media only screen and (max-width: 767px) {
+
+            .MiCS_video_thumb .feature-video iframe {
+                max-width: 100%;
+                height: 300px;
+            }
+
+            .MiCS_container {
+                max-width: 100%;
+                padding: 0px 5%;
+                margin: 25px auto;
+            }
+
+            .merrickgold-section_best_seller_wrapper {
+                overflow-y: auto;
+            }
+
+            .merrickgold-section_all_food_wrapper {
+                overflow-y: auto;
+            }
+
+            .MiCS_tab_nav_area_wrapper {
+                overflow-y: auto;
+            }
+
+            .MiCS_tab_item {
+                width: 72%;
+            }
+
+            .best_cat_tabs {
+                align-items: flex-start;
+                justify-content: flex-start;
+                width: 120%;
+                border-bottom: 1px solid #021B4E;
+            }
+
+            .best_dog_tabs {
+                width: 280%;
+                border-bottom: 1px solid #021B4E;
+            }
+
+            .MiCS_container {
+                max-width: 100%;
+                padding: 0px 5.5%;
+                margin: 25px auto;
+            }
+
+            .MiCS_auto_container_fluid {
+                max-width: 100%;
+                padding: 0% 0% 0% 5.5%;
+            }
+
+            /*slider*/
+            .merrickgold-section__slider {
+                width: 100%;
+                margin-bottom: 50px;
+            }
+
+            .merrickgold-section__slider--content .slider_first {
+                min-height: 560px;
+                background-image: url("https://assets.petco.com/petco/image/upload/f_auto,q_auto/hslider_first_mobile_bg@2x");
+            }
+
+            .merrickgold-section__slider--content .slider_second {
+                min-height: 560px;
+                background-image: url("https://assets.petco.com/petco/image/upload/f_auto,q_auto/hslider_second_mobile_bg@2x");
+            }
+
+            .merrickgold-section__slider--content .slider_third {
+                min-height: 560px;
+                background-image: url("https://assets.petco.com/petco/image/upload/f_auto,q_auto/hslider_third_mobile_bg@2x");
+            }
+
+            .MiCS_hslider_content {
+                max-width: 250px;
+                padding-top: 185px;
+            }
+
+            .MiCS_hslider_content {
+                padding-top: 25px;
+            }
+
+            .MiCS_hslider_content h1 {
+                font-size: 25px;
+            }
+
+            .MiCS_hslider_content p {
+                max-width: 250px;
+                padding: 10px 0px;
+                font-size: 12px;
+            }
+
+            .hslider_btn_area.merrickgold-flex {
+                -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+            }
+
+            .hslider_btn_area a {
+                margin: 7px;
+                padding: 12px 39px;
+                font-size: 10px;
+            }
+
+            .navigation-auto {
+                left: 37%;
+            }
+
+            .navigation-manual {
+                display: none;
+            }
+
+            /*slider end */
+            /*tab contents*/
+            .merrickgold-section__tab-content.merrickgold-flex {
+                -ms-flex-wrap: nowrap;
+                flex-wrap: nowrap;
+                -webkit-box-pack: left;
+                -ms-flex-pack: left;
+                justify-content: left;
+            }
+
+            .merrickgold-section__tab_content_item {
+                width: 65%;
+            }
+
+            .merrickgold-section__tab-content {
+                width: 260%;
+                padding: 0px;
+                overflow-x: auto;
+                overflow-y: hidden;
+                white-space: nowrap;
+            }
+
+            .merrickgold-section__listed_product_item {
+                width: 67%;
+                padding: 1% 0%;
+            }
+
+            .merrickgold-section__product-listing-content {
+                width: 603%;
+                padding: 0px;
+                overflow-x: auto;
+                overflow-y: hidden;
+                white-space: nowrap;
+            }
+
+            .merrickgold-section__product-listing-content.cat_listing {
+                width: 201%;
+            }
+
+            /*section header s*/
+            .merrickgold-section_header h1 {
+                font-size: 20px;
+                padding: 44px 16px;
+            }
+
+            /*section header e*/
+            /*dog best seller tabs*/
+            .MiCS_tab_container {
+                margin-bottom: 0px;
+                padding-top: 50px;
+            }
+
+            .MiCS_product_info {
+                min-height: 90px;
+                white-space: normal;
+                padding: 0 0 10px 0;
+            }
+
+            .MiCS_tab_item {
+                margin: 0px 1%;
+                padding: 15px 0%;
+                font-size: 12px;
+            }
+
+            .MiCS_tab_item:hover {
+                border-bottom: 6px solid #001952;
+            }
+
+            .MiCS_tab_item.MiCS_tab_item_active {
+                border-bottom: 6px solid #001952;
+            }
+
+            /*dog best seller tabs e*/
+            /*catg best seller tabs*/
+            .MiCS_cat_best_tab_item {
+                padding: 15px 25px;
+                font-size: 12px;
+            }
+
+            .MiCS_cat_best_tab_item {
+                padding: 15px 25px;
+                font-size: 12px;
+            }
+
+            .MiCS_cat_best_tab_item:hover {
+                border-bottom: 6px solid #001952;
+            }
+
+            .MiCS_cat_best_tab_item.MiCS_cat_best_tab_item_active {
+                border-bottom: 6px solid #001952;
+            }
+
+            /*cat best seller tabs e*/
+            /*tab contnets*/
+            .MiCS_tab_nav_area {
+                margin-top: 0px;
+            }
+
+            .MiCS_product_button {
+                font-size: 12px;
+            }
+
+            /*tab conent*/
+            /*product listing */
+            .MiCS_product_listing_category_area {
+                margin-bottom: 50px;
+            }
+
+            .MiCS_product_listing_category_area>.merrickgold-flex {
+                flex-wrap: wrap;
+            }
+
+            .pad_me {
+                padding-top: 10px;
+            }
+
+            .MiCS_dog_food_tab,
+            .MiCS_cat_food_tab {
+                width: 90%;
+                height: 43px;
+                margin: 6px;
+                font-size: 16px;
+            }
+
+            .merrickgold-section__product-listing-content.merrickgold-flex {
+                -ms-flex-wrap: nowrap;
+                flex-wrap: nowrap;
+                -webkit-box-pack: left;
+                -ms-flex-pack: left;
+                justify-content: left;
+            }
+
+            .MiCS_listing_product_details {
+                white-space: normal;
+            }
+
+            .MiCS_listing_product_button {
+                padding: 12px 20px;
+                font-size: 14px;
+            }
+
+            /*product listing */
+            /* banner */
+            .MiCS_video_banner {
+                margin-top: 50px;
+            }
+
+            .MiCS_banner>.merrickgold-flex {
+                -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+                flex-flow: column;
+            }
+
+            .MiCS_banner_details {
+                margin-top: 0px;
+            }
+
+            .MiCS_banner_headline {
+                font-size: 14px;
+                margin-top: 0px;
+            }
+
+            .MiCS_banner_description {
+                font-size: 12px;
+            }
+
+            /**banner e*/
+        }
+
+        @media only screen and (max-width : 480px) {
+
+            .MiCS_video_thumb .feature-video iframe {
+                max-width: 100%;
+                max-height: 250px;
+            }
+        }
+
+        /* mobile and small devices e*/
+        .show {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="merrickgold-section">
+        <!-- Full Page -->
+        <div class="merrickgold-section__maincontent">
+
+            <!-- Merrick Gold Brand Page -->
+            <div class="merrickgold-section__slider merrickgold-flex">
+                <div class="merrickgold-section__slides">
+                    <!-- Radio buttons -->
+                    <input type="radio" name="radio-btn" id="radio1">
+                    <input type="radio" name="radio-btn" id="radio2">
+                    <input type="radio" name="radio-btn" id="radio3">
+
+                    <div class="merrickgold-section__slider--content custom-flex slide first">
+                        <div class="slider_first">
+                            <div class="modified_container">
+                                <div class=" MiCS_hslider_content">
+                                    <img
+                                        src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/merrickgold-logo@2x">
+                                    <h1>TRY THE MERRICK DIFFERENCE</h1>
+                                    <p>Making the right choice is easy with Merrick. Choose from a variety of options,
+                                        including Grain Free or with Healthy Grains recipes.</p>
+                                    <div class="hslider_btn_area merrickgold-flex">
+                                        <a class="hslider_btn MiCS_left" href="#pov1_shopdog"
+                                            manual_cm_sp="sponsoredbrandpage:merrick:pov:1:trythemerrickdifference:shopdog"
+                                            onclick="clickTrackLink(this);">Shop Dog</a>
+                                        <a class="hslider_btn MiCS_right" href="#pov1_shopcat"
+                                            manual_cm_sp="sponsoredbrandpage:merrick:pov:1:trythemerrickdifference:shopcat"
+                                            onclick="clickTrackLink(this);">Shop Cat</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="merrickgold-section__slider--content custom-flex slide">
+                        <div class="slider_second">
+                            <div class="modified_container">
+                                <div class=" MiCS_hslider_content">
+                                    <img
+                                        src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/merrickgold-logo@2x">
+                                    <h1>REAL WHOLE FOODS</h1>
+                                    <p>We use premium ingredients from real, whole foods for superior nutrition and
+                                        delicious taste.</p>
+                                    <div class="hslider_btn_area merrickgold-flex">
+                                        <a class="hslider_btn MiCS_left" href="#pov1_shopdog"
+                                            manual_cm_sp="sponsoredbrandpage:merrick:pov:2:realwholefoods:shopdog"
+                                            onclick="clickTrackLink(this);">Shop Dog</a>
+                                        <a class="hslider_btn MiCS_right" href="#pov1_shopcat"
+                                            manual_cm_sp="sponsoredbrandpage:merrick:pov:2:realwholefoods:shopcat"
+                                            onclick="clickTrackLink(this);">Shop Cat</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="merrickgold-section__slider--content custom-flex slide">
+                        <div class="slider_third">
+                            <div class="modified_container">
+                                <div class=" MiCS_hslider_content">
+                                    <img
+                                        src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/merrickgold-logo@2x">
+                                    <h1>FULL SOURCE</h1>
+                                    <p>Full Source goes full nose-to-tail, utilizing more of the animal for a
+                                        sustainable,
+                                        nutrient-rich meal your dog is sure to love.</p>
+                                    <div class="hslider_btn_area merrickgold-flex">
+                                        <a class="hslider_btn MiCS_left" href="#pov1_shopdog"
+                                            manual_cm_sp="sponsoredbrandpage:merrick:pov:3:fullsource:shopdog"
+                                            onclick="clickTrackLink(this);">Shop Dog</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Auto navigation -->
+                    <div class="navigation-auto">
+                        <!-- <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/nav-icon" /> -->
+                        <div class="auto-btn1"></div>
+                        <div class="auto-btn2"></div>
+                        <div class="auto-btn3"></div>
+                    </div>
+                    <!-- <div class="navigation-manual">
+                        <label for="radio1" class="manual-btn"></label>
+                        <label for="radio2" class="manual-btn"></label>
+                        <label for="radio3" class="manual-btn"></label>
+                    </div> -->
+                </div>
+                <!-- Manual navigation -->
+                <div class="navigation-manual" style="display: none;">
+                    <label for="radio1" class="manual-btn"></label>
+                    <label for="radio2" class="manual-btn"></label>
+                    <label for="radio3" class="manual-btn"></label>
+                </div>
+            </div>
+
+            <!-- =====Dog Best Seller===== -->
+            <div class="MiCS_best_seller_container MiCS_container">
+                <div class="merrickgold-section_header">
+                    <h1 id="pov1_shopdog">DOG FOOD BEST SELLERS</h1>
+                </div>
+                <!--      <div class="merrickgold-section_sub_head">
+        <p>Delicious, top picks your dog will love.</p>
+      </div> -->
+                <div class="MiCS_best_seller_content">
+                    <!-- product tab -->
+                    <div class="MiCS_tab_container">
+                        <div class="MiCS_tab_nav_area_wrapper">
+                            <div id="dogBestBtnContainer" class="best_dog_tabs merrickgold-flex">
+                                <!-- <button class="MiCS_tab_item MiCS_tab_item_active" onclick="filterBestDog('all')"> All
+                                    Recipes</button> -->
+                                <button class="MiCS_tab_item MiCS_tab_item_active"
+                                    onclick="filterBestDog('dog_all_recipes')"> All
+                                    Recipes</button>
+                                <button class="MiCS_tab_item" onclick="filterBestDog('dry_grain')"> Dry Grain
+                                    Free</button>
+                                <button class="MiCS_tab_item" onclick="filterBestDog('dry_healthy')"> Dry Healthy
+                                    Grains</button>
+                                <button class="MiCS_tab_item" onclick="filterBestDog('wet')"> Wet</button>
+                                <button class="MiCS_tab_item" onclick="filterBestDog('treats')"> Treats</button>
+                                <button class="MiCS_tab_item" onclick="filterBestDog('puppy')"> Puppy</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="MiCS_auto_container_fluid">
+                <div class="merrickgold-section_best_seller_wrapper">
+                    <!-- tab content -->
+                    <div class="merrickgold-section__tab-content merrickgold-flex">
+
+                        <!-- All Recipes  -->
+                        <!-- tab item -->
+                        <div class="merrickgold-section__tab_content_item filterBestDogDiv dog_all_recipes">
+                            <div class="MiCS_product">
+                                <div class="MiCS_best_seller_product_image">
+                                    <a href="https://www.petco.com/shop/en/petcostore/product/merrick-grain-free-real-texas-beef-and-sweet-potato-recipe-dry-dog-food"
+                                        manual_cm_sp="sponsoredbrandpage:merrick:contentmod1dogallrecipes:1:grainfreedrydogfood:image"
+                                        onclick="clickTrackLink(this);"><img
+                                            src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/dog_food_best1@2x"></a>
+                                </div>
+                                <div class="MiCS_product_info">
+                                    <a href="https://www.petco.com/shop/en/petcostore/product/merrick-grain-free-real-texas-beef-and-sweet-potato-recipe-dry-dog-food"
+                                        manual_cm_sp="sponsoredbrandpage:merrick:contentmod1dogallrecipes:1:grainfreedrydogfood:headline"
+                                        onclick="clickTrackLink(this);" class="MiCS_product_title">Merrick Grain Free
+                                        Real Texas Beef & Sweet
+                                        Potato Recipe Dry Dog Food</a>
+                                </div>
+                                <a href="https://www.petco.com/shop/en/petcostore/product/merrick-grain-free-real-texas-beef-and-sweet-potato-recipe-dry-dog-food"
+                                    manual_cm_sp="sponsoredbrandpage:merrick:contentmod1dogallrecipes:1:grainfreedrydogfood:shopnow"
+                                    onclick="clickTrackLink(this);" class="MiCS_product_button">Shop Now</a>
+                            </div>
+                        </div>
+                        <!-- tab item -->
+                        <!-- tab item -->
+                        <div class="merrickgold-section__tab_content_item filterBestDogDiv dog_all_recipes">
+                            <div class="MiCS_product">
+                                <div class="MiCS_best_seller_product_image">
+                                    <a href="https://www.petco.com/shop/en/petcostore/product/merrick-classic-healthy-grains-real-chicken-and-brown-rice-recipe-with-ancient-grains-dry-dog-food"
+                                        manual_cm_sp="sponsoredbrandpage:merrick:contentmod1dogallrecipes:2:classichealthygrainsdrydogfood:image"
+                                        onclick="clickTrackLink(this);"><img
+                                            src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/dog_food_best2@2x"></a>
+                                </div>
+                                <div class="MiCS_product_info">
+                                    <a href="https://www.petco.com/shop/en/petcostore/product/merrick-classic-healthy-grains-real-chicken-and-brown-rice-recipe-with-ancient-grains-dry-dog-food"
+                                        manual_cm_sp="sponsoredbrandpage:merrick:contentmod1dogallrecipes:2:classichealthygrainsdrydogfood:headline"
+                                        onclick="clickTrackLink(this);" class="MiCS_product_title">Merrick Classic
+                                        Healthy Grains Real Chicken &
+                                        Brown Rice Recipe With Ancient Grains Dry Dog Food</a>
+                                </div>
+                                <a href="https://www.petco.com/shop/en/petcostore/product/merrick-classic-healthy-grains-real-chicken-and-brown-rice-recipe-with-ancient-grains-dry-dog-food"
+                                    manual_cm_sp="sponsoredbrandpage:merrick:contentmod1dogallrecipes:2:classichealthygrainsdrydogfood:shopnow"
+                                    onclick="clickTrackLink(this);" class="MiCS_product_button">Shop Now</a>
+                            </div>
+                        </div>
+                        <!-- tab item -->
+                        <!-- tab item -->
+                        <div class="merrickgold-section__tab_content_item filterBestDogDiv dog_all_recipes">
+                            <div class="MiCS_product">
+                                <div class="MiCS_best_seller_product_image">
+                                    <a href="https://www.petco.com/shop/en/petcostore/product/merrick-grain-free-wingaling-wet-dog-food"
+                                        manual_cm_sp="sponsoredbrandpage:merrick:contentmod1dogallrecipes:3:grainfreewingalingwetdogfood:image"
+                                        onclick="clickTrackLink(this);"><img
+                                            src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/dog_food_best3@2x"></a>
+                                </div>
+                                <div class="MiCS_product_info">
+                                    <a href="https://www.petco.com/shop/en/petcostore/product/merrick-grain-free-wingaling-wet-dog-food"
+                                        manual_cm_sp="sponsoredbrandpage:merrick:contentmod1dogallrecipes:3:grainfreewingalingwetdogfood:Headline"
+                                        onclick="clickTrackLink(this);" class="MiCS_product_title">Merrick Grain Free
+                                        Wingaling Wet Dog Food</a>
+                                </div>
+                                <a href="https://www.petco.com/shop/en/petcostore/product/merrick-grain-free-wingaling-wet-dog-food"
+                                    manual_cm_sp="sponsoredbrandpage:merrick:contentmod1dogallrecipes:3:grainfreewingalingwetdogfood:shopnow"
+                                    onclick="clickTrackLink(this);" class="MiCS_product_button">Shop Now</a>
+                            </div>
+                        </div>
+                        <!-- tab item -->
+                        <!-- tab item -->
+                        <div class="merrickgold-section__tab_content_item filterBestDogDiv dog_all_recipes">
+                            <div class="MiCS_product">
+                                <div class="MiCS_best_seller_product_image">
+                                    <a href="https://www.petco.com/shop/en/petcostore/product/merrick-power-bites-soft-and-chewy-beef-dog-treats"
+                                        manual_cm_sp="sponsoredbrandpage:merrick:contentmod1dogallrecipes:4:powerbitesrealbeefdogtreats:image"
+                                        onclick="clickTrackLink(this);"><img
+                                            src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/dog_food_best4@2x"></a>
+                                </div>
+                                <div class="MiCS_product_info">
+                                    <a href="https://www.petco.com/shop/en/petcostore/product/merrick-power-bites-soft-and-chewy-beef-dog-treats"
+                                        manual_cm_sp="sponsoredbrandpage:merrick:contentmod1dogallrecipes:4:powerbitesrealbeefdogtreats:headline"
+                                        onclick="clickTrackLink(this);" class="MiCS_product_title">Merrick Power Bites
+                                        Real Beef Dog Treats</a>
+                                </div>
+                                <a href="https://www.petco.com/shop/en/petcostore/product/merrick-power-bites-soft-and-chewy-beef-dog-treats"
+                                    manual_cm_sp="sponsoredbrandpage:merrick:contentmod1dogallrecipes:4:powerbitesrealbeefdogtreats:shopnow"
+                                    onclick="clickTrackLink(this);" class="MiCS_product_button">Shop Now</a>
+                            </div>
+                        </div>
+                        <!-- tab item -->
+                        <!-- All Recipes  -->
+
+                        <!-- Dry Grain Free -->
+                        <!-- tab item -->
+                        <div class="merrickgold-section__tab_content_item filterBestDogDiv dry_grain">
+                            <div class="MiCS_product">
+                                <div class="MiCS_best_seller_product_image">
+                                    <a href="https://www.petco.com/shop/en/petcostore/product/merrick-grain-free-chicken-sweet-potato-recipe-dry-dog-food"
+                                        manual_cm_sp="sponsoredbrandpage:merrick:contentmod2drygrainfree:1:grainfreerealchickendrydogfood:image"
+                                        onclick="clickTrackLink(this);"><img
+                                            src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/dog_best_grain_1"></a>
+                                </div>
+                                <div class="MiCS_product_info">
+                                    <a href="https://www.petco.com/shop/en/petcostore/product/merrick-grain-free-chicken-sweet-potato-recipe-dry-dog-food"
+                                        manual_cm_sp="sponsoredbrandpage:merrick:contentmod2drygrainfree:1:grainfreerealchickendrydogfood:headline"
+                                        onclick="clickTrackLink(this);" class="MiCS_product_title">Merrick Grain Free
+                                        Real Chicken & Sweet Potato
+                                        Recipe Dry Dog Food</a>
+                                </div>
+                                <a href="https://www.petco.com/shop/en/petcostore/product/merrick-grain-free-chicken-sweet-potato-recipe-dry-dog-food"
+                                    manual_cm_sp="sponsoredbrandpage:merrick:contentmod2drygrainfree:1:grainfreerealchickendrydogfood:shopnow"
+                                    onclick="clickTrackLink(this);" class="MiCS_product_button">Shop Now</a>
+                            </div>
+                        </div>
+                        <!-- tab item -->
+                        <!-- tab item -->
+                        <div class="merrickgold-section__tab_content_item filterBestDogDiv dry_grain">
+                            <div class="MiCS_product">
+                                <div class="MiCS_best_seller_product_image">
+                                    <a href="https://www.petco.com/shop/en/petcostore/product/merrick-grain-free-real-texas-beef-and-sweet-potato-recipe-dry-dog-food"
+                                        manual_cm_sp="sponsoredbrandpage:merrick:contentmod2drygrainfree:2:grainfreerealtexasbeefdogfood:image"
+                                        onclick="clickTrackLink(this);"><img
+                                            src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/dog_best_grain_2"></a>
+                                </div>
+                                <div class="MiCS_product_info">
+                                    <a href="https://www.petco.com/shop/en/petcostore/product/merrick-grain-free-real-texas-beef-and-sweet-potato-recipe-dry-dog-food"
+                                        manual_cm_sp="sponsoredbrandpage:merrick:contentmod2drygrainfree:2:grainfreerealtexasbeefdogfood:headline"
+                                        onclick="clickTrackLink(this)" class="MiCS_product_title">Merrick Grain Free
+                                        Real Texas Beef & Sweet
+                                        Potato Recipe Dry Dog Food</a>
+                                </div>
+                                <a href="https://www.petco.com/shop/en/petcostore/product/merrick-grain-free-real-texas-beef-and-sweet-potato-recipe-dry-dog-food"
+                                    manual_cm_sp="sponsoredbrandpage:merrick:contentmod2drygrainfree:2:grainfreerealtexasbeefdogfood:shopnow"
+                                    onclick="clickTrackLink(this)" class="MiCS_product_button">Shop Now</a>
+                            </div>
+                        </div>
+                        <!-- tab item -->
+                        <!-- tab item -->
+                        <div class="merrickgold-section__tab_content_item filterBestDogDiv dry_grain">
+                            <div class="MiCS_product">
+                                <div class="MiCS_best_seller_product_image">
+                                    <a href="https://www.petco.com/shop/en/petcostore/product/merrick-backcountry-grain-free-raw-infused-great-plains-red-meat-adult-dog-food"
+                                        manual_cm_sp="sponsoredbrandpage:merrick:contentmod2drygrainfree:3:grainfreerawinfuseddogfood:image"
+                                        onclick="clickTrackLink(this)"><img
+                                            src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/dog_best_grain_3"></a>
+                                </div>
+                                <div class="MiCS_product_info">
+                                    <a href="https://www.petco.com/shop/en/petcostore/product/merrick-backcountry-grain-free-raw-infused-great-plains-red-meat-adult-dog-food"
+                                        manual_cm_sp="sponsoredbrandpage:merrick:contentmod2drygrainfree:3:grainfreerawinfuseddogfood:headline"
+                                        onclick="clickTrackLink(this)" class="MiCS_product_title">Merrick Backcountry
+                                        Grain Free Raw Infused
+                                        Great Plains Red Meat Dry Dog Food</a>
+                                </div>
+                                <a href="https://www.petco.com/shop/en/petcostore/product/merrick-backcountry-grain-free-raw-infused-great-plains-red-meat-adult-dog-food"
+                                    manual_cm_sp="sponsoredbrandpage:merrick:contentmod2drygrainfree:3:grainfreerawinfuseddogfood:shopnow"
+                                    onclick="clickTrackLink(this)" class="MiCS_product_button">Shop Now</a>
+                            </div>
+                        </div>
+                        <!-- tab item -->
+                        <!-- tab item -->
+                        <div class="merrickgold-section__tab_content_item filterBestDogDiv dry_grain">
+                            <div class="MiCS_product">
+                                <div class="MiCS_best_seller_product_image">
+                                    <a href="https://www.petco.com/shop/en/petcostore/product/merrick-grain-free-limited-ingredient-diet-salmon-recipe-dry-dog-food"
+                                        manual_cm_sp="sponsoredbrandpage:merrick:contentmod2drygrainfree:4:grainfreelimitedingredientdietsdrydogfood:image"
+                                        onclick="clickTrackLink(this)"><img
+                                            src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/dog_best_grain_4"></a>
+                                </div>
+                                <div class="MiCS_product_info">
+                                    <a href="https://www.petco.com/shop/en/petcostore/product/merrick-grain-free-limited-ingredient-diet-salmon-recipe-dry-dog-food"
+                                        manual_cm_sp="sponsoredbrandpage:merrick:contentmod2drygrainfree:4:grainfreelimitedingredientdietsdrydogfood:headline"
+                                        onclick="clickTrackLink(this)" class="MiCS_product_title">Merrick Grain Free
+                                        Limited Ingredient Diet
+                                        Salmon & Sweet Potato Recipe Dry Dog Food</a>
+                                </div>
+                                <a href="https://www.petco.com/shop/en/petcostore/product/merrick-grain-free-limited-ingredient-diet-salmon-recipe-dry-dog-food"
+                                    manual_cm_sp="sponsoredbrandpage:merrick:contentmod2drygrainfree:4:grainfreelimitedingredientdietsdrydogfood:shopnow"
+                                    onclick="clickTrackLink(this)" class="MiCS_product_button">Shop Now</a>
+                            </div>
+                        </div>
+                        <!-- tab item -->
+                        <!-- Dry Grain Free -->
+
+                        <!-- Dry Healthy Grains -->
+                        <!-- tab item -->
+                        <div class="merrickgold-section__tab_content_item filterBestDogDiv dry_healthy">
+                            <div class="MiCS_product">
+                                <div class="MiCS_best_seller_product_image">
+                                    <a href="https://www.petco.com/shop/en/petcostore/product/merrick-classic-healthy-grains-real-beef-and-brown-rice-recipe-with-ancient-grains-dry-dog-food"
+                                        manual_cm_sp="sponsoredbrandpage:merrick:contentmod3dryhealhtygrains:1:grainsrealbeefbrownrice:image"
+                                        onclick="clickTrackLink(this)"><img
+                                            src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/dog_best_healthy_grain_1"></a>
+                                </div>
+                                <div class="MiCS_product_info">
+                                    <a href="https://www.petco.com/shop/en/petcostore/product/merrick-classic-healthy-grains-real-beef-and-brown-rice-recipe-with-ancient-grains-dry-dog-food"
+                                        manual_cm_sp="sponsoredbrandpage:merrick:contentmod3dryhealhtygrains:1:grainsrealbeefbrownrice:headline"
+                                        onclick="clickTrackLink(this)" class="MiCS_product_title">Merrick Classic
+                                        Healthy Grains Real Beef &
+                                        Brown Rice Recipe With Ancient Grains Dry Dog Food</a>
+                                </div>
+                                <a href="https://www.petco.com/shop/en/petcostore/product/merrick-classic-healthy-grains-real-beef-and-brown-rice-recipe-with-ancient-grains-dry-dog-food"
+                                    manual_cm_sp="sponsoredbrandpage:merrick:contentmod3dryhealhtygrains:1:grainsrealbeefbrownrice:shopnow"
+                                    onclick="clickTrackLink(this)" class="MiCS_product_button">Shop Now</a>
+                            </div>
+                        </div>
+                        <!-- tab item -->
+                        <!-- tab item -->
+                        <div class="merrickgold-section__tab_content_item filterBestDogDiv dry_healthy">
+                            <div class="MiCS_product">
+                                <div class="MiCS_best_seller_product_image">
+                                    <a href="https://www.petco.com/shop/en/petcostore/product/merrick-classic-healthy-grains-real-beef-and-brown-rice-recipe-with-ancient-grains-dry-dog-food"
+                                        manual_cm_sp="sponsoredbrandpage:merrick:contentmod3dryhealhtygrains:2:realchicken&brownricerecipedogfood:image"
+                                        onclick="clickTrackLink(this)"><img
+                                            src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/dog_best_healthy_grain_2"></a>
+                                </div>
+                                <div class="MiCS_product_info">
+                                    <a href="https://www.petco.com/shop/en/petcostore/product/merrick-classic-healthy-grains-real-beef-and-brown-rice-recipe-with-ancient-grains-dry-dog-food"
+                                        manual_cm_sp="sponsoredbrandpage:merrick:contentmod3dryhealhtygrains:2:realchicken&brownricerecipedogfood:headline"
+                                        onclick="clickTrackLink(this)" class="MiCS_product_title">Merrick Classic
+                                        Healthy Grains Real Chicken &
+                                        Brown Rice Recipe With Ancient Grains Dry Dog Food</a>
+                                </div>
+                                <a href="https://www.petco.com/shop/en/petcostore/product/merrick-classic-healthy-grains-real-chicken-and-brown-rice-recipe-with-ancient-grains-dry-dog-food"
+                                    manual_cm_sp="sponsoredbrandpage:merrick:contentmod3dryhealhtygrains:2:realchicken&brownricerecipedogfood:shopnow"
+                                    onclick="clickTrackLink(this)" class="MiCS_product_button">Shop Now</a>
+                            </div>
+                        </div>
+                        <!-- tab item -->
+                        <!-- tab item -->
+                        <div class="merrickgold-section__tab_content_item filterBestDogDiv dry_healthy">
+                            <div class="MiCS_product">
+                                <div class="MiCS_best_seller_product_image">
+                                    <a href="https://www.petco.com/shop/en/petcostore/product/merrick-backcountry-high-protein-freeze-dried-great-plains-red-recipe-dry-dog-food"
+                                        manual_cm_sp="sponsoredbrandpage:merrick:contentmod3dryhealhtygrains:3:highproteinfreeze-drieddogfood:image"
+                                        onclick="clickTrackLink(this)"><img
+                                            src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/dog_best_healthy_grain_3"></a>
+                                </div>
+                                <div class="MiCS_product_info">
+                                    <a href="https://www.petco.com/shop/en/petcostore/product/merrick-backcountry-high-protein-freeze-dried-great-plains-red-recipe-dry-dog-food"
+                                        manual_cm_sp="sponsoredbrandpage:merrick:contentmod3dryhealhtygrains:3:highproteinfreeze-drieddogfood:headline"
+                                        onclick="clickTrackLink(this)" class="MiCS_product_title">Merrick Backcountry
+                                        High Protein Freeze-Dried
+                                        Great Plains Red Recipe Dry Dog Food</a>
+                                </div>
+                                <a href="https://www.petco.com/shop/en/petcostore/product/merrick-backcountry-high-protein-freeze-dried-great-plains-red-recipe-dry-dog-food"
+                                    manual_cm_sp="sponsoredbrandpage:merrick:contentmod3dryhealhtygrains:3:highproteinfreeze-drieddogfood:shopnow"
+                                    onclick="clickTrackLink(this)" class="MiCS_product_button">Shop Now</a>
+                            </div>
+                        </div>
+                        <!-- tab item -->
+                        <!-- tab item -->
+                        <div class="merrickgold-section__tab_content_item filterBestDogDiv dry_healthy">
+                            <div class="MiCS_product">
+                                <div class="MiCS_best_seller_product_image">
+                                    <a href="https://www.petco.com/shop/en/petcostore/product/merrick-classic-healthy-grains-small-breed-dry-dog-food"
+                                        manual_cm_sp="sponsoredbrandpage:merrick:contentmod3dryhealhtygrains:4:grainssmallbreeddrydogfood:image"
+                                        onclick="clickTrackLink(this)"><img
+                                            src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/dog_best_healthy_grain_4"></a>
+                                </div>
+                                <div class="MiCS_product_info">
+                                    <a href="https://www.petco.com/shop/en/petcostore/product/merrick-classic-healthy-grains-small-breed-dry-dog-food"
+                                        manual_cm_sp="sponsoredbrandpage:merrick:contentmod3dryhealhtygrains:4:grainssmallbreeddrydogfood:headline"
+                                        onclick="clickTrackLink(this)" class="MiCS_product_title">Merrick Classic
+                                        Healthy Grains Small Breed Dry
+                                        Dog Food</a>
+                                </div>
+                                <a href="https://www.petco.com/shop/en/petcostore/product/merrick-classic-healthy-grains-small-breed-dry-dog-food"
+                                    manual_cm_sp="sponsoredbrandpage:merrick:contentmod3dryhealhtygrains:4:grainssmallbreeddrydogfood:shopnow"
+                                    onclick="clickTrackLink(this)" class="MiCS_product_button">Shop Now</a>
+                            </div>
+                        </div>
+                        <!-- tab item -->
+                        <!-- Dry Healthy Grains -->
+
+                        <!-- Wet -->
+                        <!-- tab item -->
+                        <div class="merrickgold-section__tab_content_item filterBestDogDiv wet">
+                            <div class="MiCS_product">
+                                <div class="MiCS_best_seller_product_image">
+                                    <a href="https://www.petco.com/shop/en/petcostore/product/merrick-grain-free-wingaling-wet-dog-food"
+                                        manual_cm_sp="sponsoredbrandpage:merrick:contentmod4dogwet:1:grainfreewingalingwetdogfood:image"
+                                        onclick="clickTrackLink(this)"><img
+                                            src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/dog_best_wet_1"></a>
+                                </div>
+                                <div class="MiCS_product_info">
+                                    <a href="https://www.petco.com/shop/en/petcostore/product/merrick-grain-free-wingaling-wet-dog-food"
+                                        manual_cm_sp="sponsoredbrandpage:merrick:contentmod4dogwet:1:grainfreewingalingwetdogfood:headline"
+                                        onclick="clickTrackLink(this)" class="MiCS_product_title">Merrick Grain Free
+                                        Wingaling Wet Dog Food</a>
+                                </div>
+                                <a href="https://www.petco.com/shop/en/petcostore/product/merrick-grain-free-wingaling-wet-dog-food"
+                                    manual_cm_sp="sponsoredbrandpage:merrick:contentmod4dogwet:1:grainfreewingalingwetdogfood:shopnow"
+                                    onclick="clickTrackLink(this)" class="MiCS_product_button">Shop Now</a>
+                            </div>
+                        </div>
+                        <!-- tab item -->
+                        <!-- tab item -->
+                        <div class="merrickgold-section__tab_content_item filterBestDogDiv wet">
+                            <div class="MiCS_product">
+                                <div class="MiCS_best_seller_product_image">
+                                    <a href="https://www.petco.com/shop/en/petcostore/product/merrick-grain-free-grammys-pot-pie-wet-dog-food"
+                                        manual_cm_sp="sponsoredbrandpage:merrick:contentmod4dogwet:2:grainfreegrammyspotpiewetdogfood:image"
+                                        onclick="clickTrackLink(this)"><img
+                                            src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/dog_best_wet_2"></a>
+                                </div>
+                                <div class="MiCS_product_info">
+                                    <a href="https://www.petco.com/shop/en/petcostore/product/merrick-grain-free-grammys-pot-pie-wet-dog-food"
+                                        manual_cm_sp="sponsoredbrandpage:merrick:contentmod4dogwet:2:grainfreegrammyspotpiewetdogfood:headline"
+                                        onclick="clickTrackLink(this)" class="MiCS_product_title">Merrick Grain Free
+                                        Grammy's Pot Pie Wet Dog
+                                        Food</a>
+                                </div>
+                                <a href="https://www.petco.com/shop/en/petcostore/product/merrick-grain-free-grammys-pot-pie-wet-dog-food"
+                                    manual_cm_sp="sponsoredbrandpage:merrick:contentmod4dogwet:2:grainfreegrammyspotpiewetdogfood:shopnow"
+                                    onclick="clickTrackLink(this)" class="MiCS_product_button">Shop Now</a>
+                            </div>
+                        </div>
+                        <!-- tab item -->
+                        <!-- tab item -->
+                        <div class="merrickgold-section__tab_content_item filterBestDogDiv wet">
+                            <div class="MiCS_product">
+                                <div class="MiCS_best_seller_product_image">
+                                    <a href="https://www.petco.com/shop/en/petcostore/product/merrick-chunky-big-texas-steak-tips-dinner-canned-dog-food"
+                                        manual_cm_sp="sponsoredbrandpage:merrick:contentmod4dogwet:3:grainfreebigtexassteaktipswetdogfood:image"
+                                        onclick="clickTrackLink(this)"><img
+                                            src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/dog_best_wet_3"></a>
+                                </div>
+                                <div class="MiCS_product_info">
+                                    <a href="https://www.petco.com/shop/en/petcostore/product/merrick-chunky-big-texas-steak-tips-dinner-canned-dog-food"
+                                        manual_cm_sp="sponsoredbrandpage:merrick:contentmod4dogwet:3:grainfreebigtexassteaktipswetdogfood:headline"
+                                        onclick="clickTrackLink(this)" class="MiCS_product_title">Merrick Chunky Grain
+                                        Free Big Texas Steak Tips
+                                        Dinner Wet Dog Food</a>
+                                </div>
+                                <a href="https://www.petco.com/shop/en/petcostore/product/merrick-chunky-big-texas-steak-tips-dinner-canned-dog-food"
+                                    manual_cm_sp="sponsoredbrandpage:merrick:contentmod4dogwet:3:grainfreebigtexassteaktipswetdogfood:shopnow"
+                                    onclick="clickTrackLink(this)" class="MiCS_product_button">Shop Now</a>
+                            </div>
+                        </div>
+                        <!-- tab item -->
+                        <!-- tab item -->
+                        <div class="merrickgold-section__tab_content_item filterBestDogDiv wet">
+                            <div class="MiCS_product">
+                                <div class="MiCS_best_seller_product_image">
+                                    <a href="https://www.petco.com/shop/en/petcostore/product/merrick-grain-free-real-beef-lamb-and-buffalo-wet-dog-food"
+                                        manual_cm_sp="sponsoredbrandpage:merrick:contentmod4dogwet:4:grainfreerealbeeflambbisondogfood:image"
+                                        onclick="clickTrackLink(this)"><img
+                                            src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/dog_best_wet_4"></a>
+                                </div>
+                                <div class="MiCS_product_info">
+                                    <a href="https://www.petco.com/shop/en/petcostore/product/merrick-grain-free-real-beef-lamb-and-buffalo-wet-dog-food"
+                                        manual_cm_sp="sponsoredbrandpage:merrick:contentmod4dogwet:4:grainfreerealbeeflambbisondogfood:headline"
+                                        onclick="clickTrackLink(this)" class="MiCS_product_title">Merrick Grain Free
+                                        Real Beef, Lamb + Bison
+                                        Dinner Wet Dog Food</a>
+                                </div>
+                                <a href="https://www.petco.com/shop/en/petcostore/product/merrick-grain-free-real-beef-lamb-and-buffalo-wet-dog-food"
+                                    manual_cm_sp="sponsoredbrandpage:merrick:contentmod4dogwet:4:grainfreerealbeeflambbisondogfood:shopnow"
+                                    onclick="clickTrackLink(this)" class="MiCS_product_button">Shop Now</a>
+                            </div>
+                        </div>
+                        <!-- tab item -->
+                        <!-- Wet -->
+
+                        <!-- Treats -->
+                        <!-- tab item -->
+                        <div class="merrickgold-section__tab_content_item filterBestDogDiv treats">
+                            <div class="MiCS_product">
+                                <div class="MiCS_best_seller_product_image">
+                                    <a href="https://www.petco.com/shop/en/petcostore/product/merrick-grain-free-real-beef-lamb-and-buffalo-wet-dog-food"
+                                        manual_cm_sp="sponsoredbrandpage:merrick:contentmod5dogtreats:1:powerbitesrealbeefdogtreats:image"
+                                        onclick="clickTrackLink(this)"><img
+                                            src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/dog_best_treats_1"></a>
+                                </div>
+                                <div class="MiCS_product_info">
+                                    <a href="https://www.petco.com/shop/en/petcostore/product/merrick-grain-free-real-beef-lamb-and-buffalo-wet-dog-food"
+                                        manual_cm_sp="sponsoredbrandpage:merrick:contentmod5dogtreats:1:powerbitesrealbeefdogtreats:headline"
+                                        onclick="clickTrackLink(this)" class="MiCS_product_title">Merrick Power Bites
+                                        Real Beef Dog Treats</a>
+                                </div>
+                                <a href="https://www.petco.com/shop/en/petcostore/product/merrick-grain-free-real-beef-lamb-and-buffalo-wet-dog-food"
+                                    manual_cm_sp="sponsoredbrandpage:merrick:contentmod5dogtreats:1:powerbitesrealbeefdogtreats:shopnow"
+                                    onclick="clickTrackLink(this)" class="MiCS_product_button">Shop Now</a>
+                            </div>
+                        </div>
+                        <!-- tab item -->
+                        <!-- tab item -->
+                        <div class="merrickgold-section__tab_content_item filterBestDogDiv treats">
+                            <div class="MiCS_product">
+                                <div class="MiCS_best_seller_product_image">
+                                    <a href="https://www.petco.com/shop/en/petcostore/product/fresh-kisses-mint-breath-strips-large-brush"
+                                        manual_cm_sp="sponsoredbrandpage:merrick:contentmod5dogtreats:2:freshkissesmintbreathstrips:image"
+                                        onclick="clickTrackLink(this)"><img
+                                            src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/dog_best_treats_2"></a>
+                                </div>
+                                <div class="MiCS_product_info">
+                                    <a href="https://www.petco.com/shop/en/petcostore/product/fresh-kisses-mint-breath-strips-large-brush"
+                                        manual_cm_sp="sponsoredbrandpage:merrick:contentmod5dogtreats:2:freshkissesmintbreathstrips:headline"
+                                        onclick="clickTrackLink(this)" class="MiCS_product_title">Merrick Fresh Kisses
+                                        Mint Breath Strips Large
+                                        Brush Dental Dog Treats</a>
+                                </div>
+                                <a href="https://www.petco.com/shop/en/petcostore/product/fresh-kisses-mint-breath-strips-large-brush"
+                                    manual_cm_sp="sponsoredbrandpage:merrick:contentmod5dogtreats:2:freshkissesmintbreathstrips:shopnow"
+                                    onclick="clickTrackLink(this)" class="MiCS_product_button">Shop Now</a>
+                            </div>
+                        </div>
+                        <!-- tab item -->
+                        <!-- tab item -->
+                        <div class="merrickgold-section__tab_content_item filterBestDogDiv treats">
+                            <div class="MiCS_product">
+                                <div class="MiCS_best_seller_product_image">
+                                    <a href="https://www.petco.com/shop/en/petcostore/product/merrick-lil-plates-bitty-beef-recipe"
+                                        manual_cm_sp="sponsoredbrandpage:merrick:contentmod5dogtreats:3:lilplatesgrainfreebittybeefsmallbreed:image"
+                                        onclick="clickTrackLink(this)"><img
+                                            src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/dog_best_treats_3"></a>
+                                </div>
+                                <div class="MiCS_product_info">
+                                    <a href="https://www.petco.com/shop/en/petcostore/product/merrick-lil-plates-bitty-beef-recipe"
+                                        manual_cm_sp="sponsoredbrandpage:merrick:contentmod5dogtreats:3:lilplatesgrainfreebittybeefsmallbreed:headline"
+                                        onclick="clickTrackLink(this)" class="MiCS_product_title">Merrick Lil' Plates
+                                        Grain Free Bitty Beef
+                                        Small Breed Dry Dog Treats</a>
+                                </div>
+                                <a href="https://www.petco.com/shop/en/petcostore/product/merrick-lil-plates-bitty-beef-recipe"
+                                    manual_cm_sp="sponsoredbrandpage:merrick:contentmod5dogtreats:3:lilplatesgrainfreebittybeefsmallbreed:shopnow"
+                                    onclick="clickTrackLink(this)" class="MiCS_product_button">Shop Now</a>
+                            </div>
+                        </div>
+                        <!-- tab item -->
+                        <!-- tab item -->
+                        <div class="merrickgold-section__tab_content_item filterBestDogDiv treats">
+                            <div class="MiCS_product">
+                                <div class="MiCS_best_seller_product_image">
+                                    <a href="https://www.petco.com/shop/en/petcostore/product/merrick-natural-pawsome-peanut-butter-with-real-peanut-butter-treats-for-dogs"
+                                        manual_cm_sp="sponsoredbrandpage:merrick:contentmod5dogtreats:4:naturalpawsomepeanutbutter:image"
+                                        onclick="clickTrackLink(this)"><img
+                                            src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/dog_best_treats_4"></a>
+                                </div>
+                                <div class="MiCS_product_info">
+                                    <a href="https://www.petco.com/shop/en/petcostore/product/merrick-natural-pawsome-peanut-butter-with-real-peanut-butter-treats-for-dogs"
+                                        manual_cm_sp="sponsoredbrandpage:merrick:contentmod5dogtreats:4:naturalpawsomepeanutbutter:headline"
+                                        onclick="clickTrackLink(this)" class="MiCS_product_title">Merrick Natural
+                                        Paw'some Peanut Butter With
+                                        Real Peanut Butter Treats for Dogs</a>
+                                </div>
+                                <a href="https://www.petco.com/shop/en/petcostore/product/merrick-natural-pawsome-peanut-butter-with-real-peanut-butter-treats-for-dogs"
+                                    manual_cm_sp="sponsoredbrandpage:merrick:contentmod5dogtreats:4:naturalpawsomepeanutbutter:shopnow"
+                                    onclick="clickTrackLink(this)" class="MiCS_product_button">Shop Now</a>
+                            </div>
+                        </div>
+                        <!-- tab item -->
+                        <!-- Treats -->
+
+                        <!-- Puppy -->
+                        <!-- tab item -->
+                        <div class="merrickgold-section__tab_content_item filterBestDogDiv puppy">
+                            <div class="MiCS_product">
+                                <div class="MiCS_best_seller_product_image">
+                                    <a href="https://www.petco.com/shop/en/petcostore/product/merrick-grain-free-puppy-beef-and-sweet-potato-dry-dog-food"
+                                        manual_cm_sp="sponsoredbrandpage:merrick:contentmod6dogpuppy:1:grainfreerealbeefsweetpotato:image"
+                                        onclick="clickTrackLink(this)"><img
+                                            src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/dog_best_puppy_1"></a>
+                                </div>
+                                <div class="MiCS_product_info">
+                                    <a href="https://www.petco.com/shop/en/petcostore/product/merrick-grain-free-puppy-beef-and-sweet-potato-dry-dog-food"
+                                        manual_cm_sp="sponsoredbrandpage:merrick:contentmod6dogpuppy:1:grainfreerealbeefsweetpotato:headline"
+                                        onclick="clickTrackLink(this)" class="MiCS_product_title">Merrick Grain Free
+                                        Real Beef & Sweet Potato
+                                        Recipe Dry Puppy Food</a>
+                                </div>
+                                <a href="https://www.petco.com/shop/en/petcostore/product/merrick-grain-free-puppy-beef-and-sweet-potato-dry-dog-food"
+                                    manual_cm_sp="sponsoredbrandpage:merrick:contentmod6dogpuppy:1:grainfreerealbeefsweetpotato:shopnow"
+                                    onclick="clickTrackLink(this)" class="MiCS_product_button">Shop Now</a>
+                            </div>
+                        </div>
+                        <!-- tab item -->
+                        <!-- tab item -->
+                        <div class="merrickgold-section__tab_content_item filterBestDogDiv puppy">
+                            <div class="MiCS_product">
+                                <div class="MiCS_best_seller_product_image">
+                                    <a href="https://www.petco.com/shop/en/petcostore/product/merrick-grain-free-real-chicken-puppy-food-5004786--1"
+                                        manual_cm_sp="sponsoredbrandpage:merrick:contentmod6dogpuppy:2:grainfreerealchicken&sweetpotato:image"
+                                        onclick="clickTrackLink(this)"><img
+                                            src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/dog_best_puppy_2"></a>
+                                </div>
+                                <div class="MiCS_product_info">
+                                    <a href="https://www.petco.com/shop/en/petcostore/product/merrick-grain-free-real-chicken-puppy-food-5004786--1"
+                                        manual_cm_sp="sponsoredbrandpage:merrick:contentmod6dogpuppy:2:grainfreerealchicken&sweetpotato:headline"
+                                        onclick="clickTrackLink(this)" class="MiCS_product_title">Merrick Grain Free
+                                        Real Chicken & Sweet Potato
+                                        Recipe Dry Puppy Food</a>
+                                </div>
+                                <a href="https://www.petco.com/shop/en/petcostore/product/merrick-grain-free-real-chicken-puppy-food-5004786--1"
+                                    manual_cm_sp="sponsoredbrandpage:merrick:contentmod6dogpuppy:2:grainfreerealchicken&sweetpotato:shopnow"
+                                    onclick="clickTrackLink(this)" class="MiCS_product_button">Shop Now</a>
+                            </div>
+                        </div>
+                        <!-- tab item -->
+                        <!-- tab item -->
+                        <div class="merrickgold-section__tab_content_item filterBestDogDiv puppy">
+                            <div class="MiCS_product">
+                                <div class="MiCS_best_seller_product_image">
+                                    <a href="https://www.petco.com/shop/en/petcostore/product/merrick-grain-free-puppy-plate-beef-wet-puppy-food"
+                                        manual_cm_sp="sponsoredbrandpage:merrick:contentmod6dogpuppy:3:grainfreepuppyplatebeefwetpuppyfood:image"
+                                        onclick="clickTrackLink(this)"><img
+                                            src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/dog_best_puppy_3"></a>
+                                </div>
+                                <div class="MiCS_product_info">
+                                    <a href="https://www.petco.com/shop/en/petcostore/product/merrick-grain-free-puppy-plate-beef-wet-puppy-food"
+                                        manual_cm_sp="sponsoredbrandpage:merrick:contentmod6dogpuppy:3:grainfreepuppyplatebeefwetpuppyfood:headline"
+                                        onclick="clickTrackLink(this)" class="MiCS_product_title">Merrick Grain Free
+                                        Puppy Plate Beef Wet Puppy
+                                        Food</a>
+                                </div>
+                                <a href="https://www.petco.com/shop/en/petcostore/product/merrick-grain-free-puppy-plate-beef-wet-puppy-food"
+                                    manual_cm_sp="sponsoredbrandpage:merrick:contentmod6dogpuppy:3:grainfreepuppyplatebeefwetpuppyfood:shopnow"
+                                    onclick="clickTrackLink(this)" class="MiCS_product_button">Shop Now</a>
+                            </div>
+                        </div>
+                        <!-- tab item -->
+                        <!-- tab item -->
+                        <div class="merrickgold-section__tab_content_item filterBestDogDiv puppy">
+                            <div class="MiCS_product">
+                                <div class="MiCS_best_seller_product_image">
+                                    <a href="https://www.petco.com/shop/en/petcostore/product/merrick-grain-free-puppy-plate-wet-puppy-food"
+                                        manual_cm_sp="sponsoredbrandpage:merrick:contentmod6dogpuppy:4:grainfreepuppyplatechickenrecipewetpuppyfood:image"
+                                        onclick="clickTrackLink(this)"><img
+                                            src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/dog_best_puppy_4"></a>
+                                </div>
+                                <div class="MiCS_product_info">
+                                    <a href="https://www.petco.com/shop/en/petcostore/product/merrick-grain-free-puppy-plate-wet-puppy-food"
+                                        manual_cm_sp="sponsoredbrandpage:merrick:contentmod6dogpuppy:4:grainfreepuppyplatechickenrecipewetpuppyfood:headline"
+                                        onclick="clickTrackLink(this)" class="MiCS_product_title">Merrick Grain Free
+                                        Puppy Plate Chicken Recipe
+                                        Wet Puppy Food</a>
+                                </div>
+                                <a href="https://www.petco.com/shop/en/petcostore/product/merrick-grain-free-puppy-plate-wet-puppy-food"
+                                    manual_cm_sp="sponsoredbrandpage:merrick:contentmod6dogpuppy:4:grainfreepuppyplatechickenrecipewetpuppyfood:shopnow"
+                                    onclick="clickTrackLink(this)" class="MiCS_product_button">Shop Now</a>
+                            </div>
+                        </div>
+                        <!-- tab item -->
+                        <!-- Puppy -->
+
+                    </div>
+                    <!-- tab content -->
+                </div>
+                <!-- product tab -->
+            </div>
+            <!-- wrapper -->
+            <!-- </div> -->
+            <!-- =====Dog Best Seller===== -->
+            <!-- =====video banner===== -->
+            <div class="MiCS_banner MiCS_video_banner MiCS_container-fluid">
+                <div class="MiCS_container merrickgold-flex">
+                    <!-- banner video -->
+
+                    <div class="MiCS_video_thumb">
+                        <div class="feature-video"
+                            manual_cm_sp="sponsoredbrandpage:merrick:video:1:qualitynutritionyoucansee:videoplay"
+                            onclick="clickTrackLink(this)">
+                            <iframe width="550" height="350" src="https://www.youtube.com/embed/KRGT-3SgAU8"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <!-- =====banner video===== -->
+                    <!-- banner description -->
+                    <div class="MiCS_banner_details">
+                        <h2 class="MiCS_banner_headline">Quality nutrition you can see</h2>
+                        <p class="MiCS_banner_description">Your pet deserves the best. That’s why our recipes start with
+                            real deboned meat, poultry or fish as the #1 ingredient. We also use real whole foods like
+                            carrots, apples and blueberries for great taste and superior nutrition. You can feed your
+                            pet with confidence knowing that our food and treats are made with high quality ingredients!
+                        </p>
+                    </div>
+                    <!-- banner description -->
+                </div>
+
+            </div>
+            <!-- video banner -->
+            <!-- =====Dog Product Listing===== -->
+            <div class="MiCS_product_listing MiCS_container">
+                <!--      <div class="merrickgold-section_header">
+        <h1>All dog food recipes</h1>
+      </div> -->
+                <div class="merrickgold-section_sub_head">
+                    <p>All dog food recipes</p>
+                </div>
+            </div>
+            <!-- listed products -->
+            <div class="MiCS_auto_container_fluid">
+                <div class="merrickgold-section_all_food_wrapper">
+                    <div class="merrickgold-section__product-listing-content merrickgold-flex">
+                        <!-- product item -->
+                        <div
+                            class="merrickgold-section__listed_product_item filterDogFoodDiv shop_dry_food shop_wet_food">
+                            <div class="MiCS_listing_product">
+                                <div class="MiCS_listing_product_image">
+                                    <a href="https://www.petco.com/shop/en/petcostore/brand/merrick/dog#facet:409927646082223322771114971051104570114101101&productBeginIndex:0&orderBy:&pageView:grid&minPrice:&maxPrice:&pageSize:&"
+                                        manual_cm_sp="sponsoredbrandpage:merrick:contentmod7alldogfoodrecipes:1:grainfreemeatfishpoultry:image"
+                                        onclick="clickTrackLink(this)">
+                                        <img
+                                            src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/dog_food1@2x"></a>
+                                </div>
+                                <div class="MiCS_listing_product_info">
+                                    <a href="https://www.petco.com/shop/en/petcostore/brand/merrick/dog#facet:409927646082223322771114971051104570114101101&productBeginIndex:0&orderBy:&pageView:grid&minPrice:&maxPrice:&pageSize:&"
+                                        manual_cm_sp="sponsoredbrandpage:merrick:contentmod7alldogfoodrecipes:1:grainfreemeatfishpoultry:headline"
+                                        onclick="clickTrackLink(this)" class="MiCS_listing_product_title">Grain Free</a>
+                                </div>
+                                <p class="MiCS_listing_product_details">#1 Ingredient Deboned Meat, Fish or Poultry</p>
+                                <a class="MiCS_listing_product_button"
+                                    href="https://www.petco.com/shop/en/petcostore/brand/merrick/dog#facet:409927646082223322771114971051104570114101101&productBeginIndex:0&orderBy:&pageView:grid&minPrice:&maxPrice:&pageSize:&"
+                                    manual_cm_sp="sponsoredbrandpage:merrick:contentmod7alldogfoodrecipes:1:grainfreemeatfishpoultry:shopnow"
+                                    onclick="clickTrackLink(this)">Shop Now</a>
+
+                            </div>
+                        </div>
+                        <!-- product item -->
+                        <!-- product item -->
+                        <div class="merrickgold-section__listed_product_item filterDogFoodDiv shop_wet_food">
+                            <div class="MiCS_listing_product">
+                                <div class="MiCS_listing_product_image">
+                                    <a href="https://www.petco.com/shop/en/petcostore/brand/merrick/dog#facet:409927646082223322787105116104327111497105110&productBeginIndex:0&orderBy:&pageView:grid&minPrice:&maxPrice:&pageSize:&"
+                                        manual_cm_sp="sponsoredbrandpage:merrick:contentmod7alldogfoodrecipes:2:grainswholesomequalitynutrition:image"
+                                        onclick="clickTrackLink(this)"><img
+                                            src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/dog_food2@2x"></a>
+                                </div>
+                                <div class="MiCS_listing_product_info">
+                                    <a href="https://www.petco.com/shop/en/petcostore/brand/merrick/dog#facet:409927646082223322787105116104327111497105110&productBeginIndex:0&orderBy:&pageView:grid&minPrice:&maxPrice:&pageSize:&"
+                                        manual_cm_sp="sponsoredbrandpage:merrick:contentmod7alldogfoodrecipes:2:grainswholesomequalitynutrition:headline"
+                                        onclick="clickTrackLink(this)" class="MiCS_listing_product_title">Healthy
+                                        Grains</a>
+                                </div>
+                                <p class="MiCS_listing_product_details">Wholesome, Quality Nutrition</p>
+                                <a class="MiCS_listing_product_button"
+                                    href="https://www.petco.com/shop/en/petcostore/brand/merrick/dog#facet:409927646082223322787105116104327111497105110&productBeginIndex:0&orderBy:&pageView:grid&minPrice:&maxPrice:&pageSize:&"
+                                    manual_cm_sp="sponsoredbrandpage:merrick:contentmod7alldogfoodrecipes:2:grainswholesomequalitynutrition:shopnow"
+                                    onclick="clickTrackLink(this)">Shop Now</a>
+
+                            </div>
+                        </div>
+                        <!-- product item -->
+                        <!-- product item -->
+                        <div class="merrickgold-section__listed_product_item filterDogFoodDiv shop_dry_food">
+                            <div class="MiCS_listing_product">
+                                <div class="MiCS_listing_product_image">
+                                    <a href="https://www.petco.com/shop/en/petcostore/brand/merrick/dog#facet:307445734561667670777101114114105991073266979910799111117110116114121&productBeginIndex:0&orderBy:&pageView:grid&minPrice:&maxPrice:&pageSize:&"
+                                        manual_cm_sp="sponsoredbrandpage:merrick:contentmod7alldogfoodrecipes:3:proteinrichancestralrecipes:image"
+                                        onclick="clickTrackLink(this)"><img
+                                            src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/dog_food3@2x"></a>
+                                </div>
+                                <div class="MiCS_listing_product_info">
+                                    <a href="https://www.petco.com/shop/en/petcostore/brand/merrick/dog#facet:307445734561667670777101114114105991073266979910799111117110116114121&productBeginIndex:0&orderBy:&pageView:grid&minPrice:&maxPrice:&pageSize:&"
+                                        manual_cm_sp="sponsoredbrandpage:merrick:contentmod7alldogfoodrecipes:3:proteinrichancestralrecipes:headline"
+                                        onclick="clickTrackLink(this)"
+                                        class="MiCS_listing_product_title">Backcountry</a>
+                                </div>
+                                <p class="MiCS_listing_product_details">Protein Rich Ancestral Recipes</p>
+                                <a class="MiCS_listing_product_button"
+                                    href="https://www.petco.com/shop/en/petcostore/brand/merrick/dog#facet:307445734561667670777101114114105991073266979910799111117110116114121&productBeginIndex:0&orderBy:&pageView:grid&minPrice:&maxPrice:&pageSize:&"
+                                    manual_cm_sp="sponsoredbrandpage:merrick:contentmod7alldogfoodrecipes:3:proteinrichancestralrecipes:shopnow"
+                                    onclick="clickTrackLink(this)">Shop Now</a>
+
+                            </div>
+                        </div>
+                        <!-- product item -->
+                        <!-- product item -->
+                        <div class="merrickgold-section__listed_product_item filterDogFoodDiv shop_dry_food">
+                            <div class="MiCS_listing_product">
+                                <div class="MiCS_listing_product_image">
+                                    <a href="https://www.petco.com/shop/en/petcostore/brand/merrick/dog#facet:307445734561667670770117108108328311111711499101&productBeginIndex:0&orderBy:&pageView:grid&minPrice:&maxPrice:&pageSize:&"
+                                        manual_cm_sp="sponsoredbrandpage:merrick:contentmod7alldogfoodrecipes:4:fullsourcenosetotailnutrition:image"
+                                        onclick="clickTrackLink(this)"><img
+                                            src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/dog_food4@2x"></a>
+                                </div>
+                                <div class="MiCS_listing_product_info">
+                                    <a href="https://www.petco.com/shop/en/petcostore/brand/merrick/dog#facet:307445734561667670770117108108328311111711499101&productBeginIndex:0&orderBy:&pageView:grid&minPrice:&maxPrice:&pageSize:&"
+                                        manual_cm_sp="sponsoredbrandpage:merrick:contentmod7alldogfoodrecipes:4:fullsourcenosetotailnutrition:headline"
+                                        onclick="clickTrackLink(this)" class="MiCS_listing_product_title">Full
+                                        Source</a>
+                                </div>
+                                <p class="MiCS_listing_product_details">Nose to Tail Nutrition</p>
+                                <a class="MiCS_listing_product_button"
+                                    href="https://www.petco.com/shop/en/petcostore/brand/merrick/dog#facet:307445734561667670770117108108328311111711499101&productBeginIndex:0&orderBy:&pageView:grid&minPrice:&maxPrice:&pageSize:&"
+                                    manual_cm_sp="sponsoredbrandpage:merrick:contentmod7alldogfoodrecipes:4:fullsourcenosetotailnutrition:shopnow"
+                                    onclick="clickTrackLink(this)">Shop Now</a>
+
+                            </div>
+                        </div>
+                        <!-- product item -->
+                        <!-- product item -->
+                        <div class="merrickgold-section__listed_product_item filterDogFoodDiv shop_treats">
+                            <div class="MiCS_listing_product">
+                                <div class="MiCS_listing_product_image">
+                                    <a href="https://www.petco.com/shop/en/petcostore/brand/merrick/dog#facet:30744573456166767077610510839328010897116101115&productBeginIndex:0&orderBy:&pageView:grid&minPrice:&maxPrice:&pageSize:&"
+                                        manual_cm_sp="sponsoredbrandpage:merrick:contentmod7alldogfoodrecipes:5:lilplatesforthesmallbutmighty:image"
+                                        onclick="clickTrackLink(this)"><img
+                                            src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/dog_food5@2x"></a>
+                                </div>
+                                <div class="MiCS_listing_product_info">
+                                    <a href="https://www.petco.com/shop/en/petcostore/brand/merrick/dog#facet:30744573456166767077610510839328010897116101115&productBeginIndex:0&orderBy:&pageView:grid&minPrice:&maxPrice:&pageSize:&"
+                                        manual_cm_sp="sponsoredbrandpage:merrick:contentmod7alldogfoodrecipes:5:lilplatesforthesmallbutmighty:headline"
+                                        onclick="clickTrackLink(this)" class="MiCS_listing_product_title">Lil'
+                                        Plates</a>
+                                </div>
+                                <p class="MiCS_listing_product_details">For the Small but Mighty</p>
+                                <a class="MiCS_listing_product_button"
+                                    href="https://www.petco.com/shop/en/petcostore/brand/merrick/dog#facet:30744573456166767077610510839328010897116101115&productBeginIndex:0&orderBy:&pageView:grid&minPrice:&maxPrice:&pageSize:&"
+                                    manual_cm_sp="sponsoredbrandpage:merrick:contentmod7alldogfoodrecipes:5:lilplatesforthesmallbutmighty:shopnow"
+                                    onclick="clickTrackLink(this)">Shop Now</a>
+
+                            </div>
+                        </div>
+                        <!-- product item -->
+                        <!-- product item -->
+                        <div class="merrickgold-section__listed_product_item filterDogFoodDiv shop_treats">
+                            <div class="MiCS_listing_product">
+                                <div class="MiCS_listing_product_image">
+                                    <a href="https://www.petco.com/shop/en/petcostore/brand/merrick/dog#facet:40992764608222332277610510910511610110032731101031141011001051011101163268105101116&productBeginIndex:0&orderBy:&pageView:grid&minPrice:&maxPrice:&pageSize:&"
+                                        manual_cm_sp="sponsoredbrandpage:merrick:contentmod7alldogfoodrecipes:6:limitedingredientdiet:image"
+                                        onclick="clickTrackLink(this)"><img
+                                            src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/dog_food6@2x"></a>
+                                </div>
+                                <div class="MiCS_listing_product_info">
+                                    <a href="https://www.petco.com/shop/en/petcostore/brand/merrick/dog#facet:40992764608222332277610510910511610110032731101031141011001051011101163268105101116&productBeginIndex:0&orderBy:&pageView:grid&minPrice:&maxPrice:&pageSize:&"
+                                        manual_cm_sp="sponsoredbrandpage:merrick:contentmod7alldogfoodrecipes:6:limitedingredientdiet:headline"
+                                        onclick="clickTrackLink(this)" class="MiCS_listing_product_title">Limited
+                                        Ingredient Diet</a>
+                                </div>
+                                <p class="MiCS_listing_product_details">Simple Recipes Made With 10 Ingredients
+                                    or Less</p>
+                                <a class="MiCS_listing_product_button"
+                                    href="https://www.petco.com/shop/en/petcostore/brand/merrick/dog#facet:40992764608222332277610510910511610110032731101031141011001051011101163268105101116&productBeginIndex:0&orderBy:&pageView:grid&minPrice:&maxPrice:&pageSize:&"
+                                    manual_cm_sp="sponsoredbrandpage:merrick:contentmod7alldogfoodrecipes:6:limitedingredientdiet:shopnow"
+                                    onclick="clickTrackLink(this)">Shop Now</a>
+
+                            </div>
+                        </div>
+                        <!-- product item -->
+                        <!-- product item -->
+                        <div class="merrickgold-section__listed_product_item filterDogFoodDiv shop_wet_food">
+                            <div class="MiCS_listing_product">
+                                <div class="MiCS_listing_product_image">
+                                    <a href="https://www.petco.com/shop/en/petcostore/brand/merrick/dog#facet:3074457345616676707701141011151043275105115115101115&productBeginIndex:0&orderBy:&pageView:grid&minPrice:&maxPrice:&pageSize:&"
+                                        manual_cm_sp="sponsoredbrandpage:merrick:contentmod7alldogfoodrecipes:7:freshkisses:shopnow"
+                                        onclick="clickTrackLink(this)"><img
+                                            src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/dog_food7@2x"></a>
+                                </div>
+                                <div class="MiCS_listing_product_info">
+                                    <a href="https://www.petco.com/shop/en/petcostore/brand/merrick/dog#facet:3074457345616676707701141011151043275105115115101115&productBeginIndex:0&orderBy:&pageView:grid&minPrice:&maxPrice:&pageSize:&"
+                                        manual_cm_sp="sponsoredbrandpage:merrick:contentmod7alldogfoodrecipes:7:freshkisses:headline"
+                                        onclick="clickTrackLink(this)" class="MiCS_listing_product_title">Fresh
+                                        Kisses</a>
+                                </div>
+                                <p class="MiCS_listing_product_details">Cleans Teeth + Freshens Breath</p>
+                                <a class="MiCS_listing_product_button"
+                                    href="https://www.petco.com/shop/en/petcostore/brand/merrick/dog#facet:3074457345616676707701141011151043275105115115101115&productBeginIndex:0&orderBy:&pageView:grid&minPrice:&maxPrice:&pageSize:&"
+                                    manual_cm_sp="sponsoredbrandpage:merrick:contentmod7alldogfoodrecipes:7:freshkisses:shopnow"
+                                    onclick="clickTrackLink(this)">Shop Now</a>
+
+                            </div>
+                        </div>
+                        <!-- product item -->
+                        <!-- product item -->
+                        <div class="merrickgold-section__listed_product_item filterDogFoodDiv shop_wet_food">
+                            <div class="MiCS_listing_product">
+                                <div class="MiCS_listing_product_image">
+                                    <a href="https://www.petco.com/shop/en/petcostore/brand/merrick/dog#facet:3905887101116&productBeginIndex:0&orderBy:&pageView:grid&minPrice:&maxPrice:&pageSize:&"
+                                        manual_cm_sp="sponsoredbrandpage:merrick:contentmod7alldogfoodrecipes:8:wetdogfoodgrainfree:image"
+                                        onclick="clickTrackLink(this)"><img
+                                            src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/dog_food8@2x"></a>
+                                </div>
+                                <div class="MiCS_listing_product_info">
+                                    <a href="https://www.petco.com/shop/en/petcostore/brand/merrick/dog#facet:3905887101116&productBeginIndex:0&orderBy:&pageView:grid&minPrice:&maxPrice:&pageSize:&"
+                                        manual_cm_sp="sponsoredbrandpage:merrick:contentmod7alldogfoodrecipes:8:wetdogfoodgrainfree:headline"
+                                        onclick="clickTrackLink(this)" class="MiCS_listing_product_title">Wet Dog
+                                        Food</a>
+                                </div>
+                                <p class="MiCS_listing_product_details">Grain Free and With Healthy Grains Options</p>
+                                <a class="MiCS_listing_product_button"
+                                    href="https://www.petco.com/shop/en/petcostore/brand/merrick/dog#facet:3905887101116&productBeginIndex:0&orderBy:&pageView:grid&minPrice:&maxPrice:&pageSize:&"
+                                    manual_cm_sp="sponsoredbrandpage:merrick:contentmod7alldogfoodrecipes:8:wetdogfoodgrainfree:shopnow"
+                                    onclick="clickTrackLink(this)">Shop Now</a>
+
+                            </div>
+                        </div>
+                        <!-- product item -->
+                        <!-- product item -->
+                        <div class="merrickgold-section__listed_product_item filterDogFoodDiv shop_wet_food">
+                            <div class="MiCS_listing_product">
+                                <div class="MiCS_listing_product_image">
+                                    <a href="https://www.petco.com/shop/en/petcostore/brand/merrick/dog#facet:390588411410197116&productBeginIndex:0&orderBy:&pageView:grid&minPrice:&maxPrice:&pageSize:&"
+                                        manual_cm_sp="sponsoredbrandpage:merrick:contentmod7alldogfoodrecipes:9:dogtreatsperfectfortraining:image"
+                                        onclick="clickTrackLink(this)"><img
+                                            src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/dog_food9@2x"></a>
+                                </div>
+                                <div class="MiCS_listing_product_info">
+                                    <a href="https://www.petco.com/shop/en/petcostore/brand/merrick/dog#facet:390588411410197116&productBeginIndex:0&orderBy:&pageView:grid&minPrice:&maxPrice:&pageSize:&"
+                                        manual_cm_sp="sponsoredbrandpage:merrick:contentmod7alldogfoodrecipes:9:dogtreatsperfectfortraining:headline"
+                                        onclick="clickTrackLink(this)" class="MiCS_listing_product_title">Dog Treats</a>
+                                </div>
+                                <p class="MiCS_listing_product_details">Perfect for Training & Rewarding</p>
+                                <a class="MiCS_listing_product_button"
+                                    href="https://www.petco.com/shop/en/petcostore/brand/merrick/dog#facet:390588411410197116&productBeginIndex:0&orderBy:&pageView:grid&minPrice:&maxPrice:&pageSize:&"
+                                    manual_cm_sp="sponsoredbrandpage:merrick:contentmod7alldogfoodrecipes:9:dogtreatsperfectfortraining:shopnow"
+                                    onclick="clickTrackLink(this)">Shop Now</a>
+
+                            </div>
+                        </div>
+                        <!-- product item -->
+                    </div>
+                </div>
+            </div>
+            <div class="MiCS_container">
+                <div class="MiCS_product_listing_category_area">
+                    <div id="dogFoodBtnContainer" class="merrickgold-flex">
+                        <!-- <button class="MiCS_dog_food_tab MiCS_dog_food_tab_active" onclick="filterDogFood('all')"> All </button> -->
+                        <a class="MiCS_dog_food_tab pad_me"
+                            href="https://www.petco.com/shop/en/petcostore/brand/merrick/dog#facet:3905868114121&productBeginIndex:0&orderBy:&pageView:grid&minPrice:&maxPrice:&pageSize:&"
+                            manual_cm_sp="sponsoredbrandpage:merrick:contentmod7alldogfoodrecipes:10:dogdryfood:shopalldryfood"
+                            onclick="clickTrackLink(this)">
+                            SHOP ALL DRY FOOD
+                        </a>
+
+                        <a class="MiCS_dog_food_tab pad_me"
+                            href="https://www.petco.com/shop/en/petcostore/brand/merrick/dog#facet:3905887101116&productBeginIndex:0&orderBy:&pageView:grid&minPrice:&maxPrice:&pageSize:&"
+                            manual_cm_sp="sponsoredbrandpage:merrick:contentmod7alldogfoodrecipes:11:dogwetfood:shopallwetfood"
+                            onclick="clickTrackLink(this)">
+                            SHOP ALL WET FOOD
+                        </a>
+
+                        <a class="MiCS_dog_food_tab pad_me"
+                            href="https://www.petco.com/shop/en/petcostore/brand/merrick/dog/dog-treats-and-chews"
+                            manual_cm_sp="sponsoredbrandpage:merrick:contentmod7alldogfoodrecipes:12:dogtreats:shopalltreats"
+                            onclick="clickTrackLink(this)">
+                            SHOP ALL treats
+                        </a>
+
+                    </div>
+                </div>
+                <!-- listed products -->
+            </div>
+            <!-- =====Dog Product Listing===== -->
+            <!-- =====Cat Best Seller===== -->
+            <div class="MiCS_best_seller_container MiCS_container">
+                <div class="merrickgold-section_header" id="pov1_shopcat">
+                    <h1>cat food best sellers</h1>
+                </div>
+                <!--      <div class="merrickgold-section_sub_head">
+        <p>Tasty, top picks your cat will love.</p>
+      </div> -->
+
+                <div class="MiCS_best_seller_content">
+                    <!-- product tab -->
+                    <div class="MiCS_tab_container">
+                        <div class="MiCS_tab_nav_area_wrapper">
+                            <div id="catBestBtnContainer" class="best_cat_tabs merrickgold-flex">
+                                <!-- <button class="MiCS_cat_best_tab_item MiCS_cat_best_tab_item_active"
+                                    onclick="filterBestCat('all')"> All Recipes</button> -->
+                                <button class="MiCS_cat_best_tab_item MiCS_cat_best_tab_item_active"
+                                    onclick="filterBestCat('cat_all_recipes')"> All Recipes</button>
+                                <button class="MiCS_cat_best_tab_item" onclick="filterBestCat('dry')"> Dry</button>
+                                <button class="MiCS_cat_best_tab_item" onclick="filterBestCat('wet')"> Wet</button>
+                                <button class="MiCS_cat_best_tab_item" onclick="filterBestCat('toppers')">
+                                    Toppers</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- product tab -->
+                </div>
+            </div>
+            <!-- tab content -->
+            <div class="MiCS_auto_container_fluid">
+                <div class="merrickgold-section_best_seller_wrapper">
+                    <div class="merrickgold-section__tab-content merrickgold-flex">
+
+                        <!-- All Recipes -->
+                        <!-- tab item -->
+                        <div class="merrickgold-section__tab_content_item filterBestCatDiv cat_all_recipes">
+                            <div class="MiCS_product">
+                                <div class="MiCS_best_seller_product_image">
+                                    <a href="https://www.petco.com/shop/en/petcostore/product/merrick-purrfect-bistro-grain-free-real-chicken-adult-dry-cat-food"
+                                        manual_cm_sp="sponsoredbrandpage:merrick:contentmod8catalldrecipes:1:purrfectbistrorealchickenadultdrycatfood:image"
+                                        onclick="clickTrackLink(this)"><img
+                                            src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/cat_food_best1@2x"></a>
+                                </div>
+                                <div class="MiCS_product_info">
+                                    <a href="https://www.petco.com/shop/en/petcostore/product/merrick-purrfect-bistro-grain-free-real-chicken-adult-dry-cat-food"
+                                        manual_cm_sp="sponsoredbrandpage:merrick:contentmod8catalldrecipes:1:purrfectbistrorealchickenadultdrycatfood:headline"
+                                        onclick="clickTrackLink(this)" class="MiCS_product_title">Merrick Purrfect
+                                        Bistro Grain Free Real
+                                        Chicken Adult Dry Cat Food</a>
+                                </div>
+                                <a href="https://www.petco.com/shop/en/petcostore/product/merrick-purrfect-bistro-grain-free-real-chicken-adult-dry-cat-food"
+                                    manual_cm_sp="sponsoredbrandpage:merrick:contentmod8catalldrecipes:1:purrfectbistrorealchickenadultdrycatfood:shopnow"
+                                    onclick="clickTrackLink(this)" class="MiCS_product_button">Shop Now</a>
+                            </div>
+                        </div>
+                        <!-- tab item -->
+                        <!-- tab item -->
+                        <div class="merrickgold-section__tab_content_item filterBestCatDiv cat_all_recipes">
+                            <div class="MiCS_product">
+                                <div class="MiCS_best_seller_product_image">
+                                    <a href="https://www.petco.com/shop/en/petcostore/product/merrick-limited-ingredient-diet-grain-free-chicken-cat-food"
+                                        manual_cm_sp="sponsoredbrandpage:merrick:contentmod8catalldrecipes:2:limitedingredientdietchickendrycatfood:image"
+                                        onclick="clickTrackLink(this)"><img
+                                            src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/cat_food_best2@2x"></a>
+                                </div>
+                                <div class="MiCS_product_info">
+                                    <a href="https://www.petco.com/shop/en/petcostore/product/merrick-limited-ingredient-diet-grain-free-chicken-cat-food"
+                                        manual_cm_sp="sponsoredbrandpage:merrick:contentmod8catalldrecipes:2:limitedingredientdietchickendrycatfood:headline"
+                                        onclick="clickTrackLink(this)" class="MiCS_product_title">Merrick Limited
+                                        Ingredient Diet Grain Free
+                                        Chicken Dry Cat Food</a>
+                                </div>
+                                <a href="https://www.petco.com/shop/en/petcostore/product/merrick-limited-ingredient-diet-grain-free-chicken-cat-food"
+                                    manual_cm_sp="sponsoredbrandpage:merrick:contentmod8catalldrecipes:2:limitedingredientdietchickendrycatfood:shopnow"
+                                    class="MiCS_product_button" onclick="clickTrackLink(this)">Shop Now</a>
+
+                            </div>
+                        </div>
+                        <!-- tab item -->
+                        <!-- tab item -->
+                        <div class="merrickgold-section__tab_content_item filterBestCatDiv cat_all_recipes">
+                            <div class="MiCS_product">
+                                <div class="MiCS_best_seller_product_image">
+                                    <a href="https://www.petco.com/shop/en/petcostore/product/merrick-limited-ingredient-diet-grain-free-chicken-canned-cat-food"
+                                        manual_cm_sp="sponsoredbrandpage:merrick:contentmod8catalldrecipes:3:limitedingredientdietchickencannedcatfood:shopnow"
+                                        onclick="clickTrackLink(this)" class="MiCS_product_button"><img
+                                            src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/cat_food_best3@2x"></a>
+                                </div>
+                                <div class="MiCS_product_info">
+                                    <a href="https://www.petco.com/shop/en/petcostore/product/merrick-limited-ingredient-diet-grain-free-chicken-canned-cat-food"
+                                        manual_cm_sp="sponsoredbrandpage:merrick:contentmod8catalldrecipes:3:limitedingredientdietchickencannedcatfood:headline"
+                                        onclick="clickTrackLink(this)" class="MiCS_product_title">Merrick Limited
+                                        Ingredient Diet Grain Free
+                                        Chicken Canned Cat Food</a>
+                                </div>
+                                <a href="https://www.petco.com/shop/en/petcostore/product/merrick-limited-ingredient-diet-grain-free-chicken-canned-cat-food"
+                                    manual_cm_sp="sponsoredbrandpage:merrick:contentmod8catalldrecipes:3:limitedingredientdietchickencannedcatfood:shopnow"
+                                    onclick="clickTrackLink(this)" class="MiCS_product_button">Shop Now</a>
+
+                            </div>
+                        </div>
+                        <!-- tab item -->
+                        <!-- tab item -->
+                        <div class="merrickgold-section__tab_content_item filterBestCatDiv cat_all_recipes">
+                            <div class="MiCS_product">
+                                <div class="MiCS_best_seller_product_image">
+                                    <a href="https://www.petco.com/shop/en/petcostore/product/merrick-purrfect-bistro-grain-free-chicken-pate-wet-cat-food"
+                                        manual_cm_sp="sponsoredbrandpage:merrick:contentmod8catalldrecipes:4:purrfectbistrochickenpatewetcatfood:image"
+                                        onclick="clickTrackLink(this)"><img
+                                            src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/cat_food_best4@2x"></a>
+                                </div>
+                                <div class="MiCS_product_info">
+                                    <a href="https://www.petco.com/shop/en/petcostore/product/merrick-purrfect-bistro-grain-free-chicken-pate-wet-cat-food"
+                                        manual_cm_sp="sponsoredbrandpage:merrick:contentmod8catalldrecipes:4:purrfectbistrochickenpatewetcatfood:headline"
+                                        onclick="clickTrackLink(this)" class="MiCS_product_title">Merrick Purrfect
+                                        Bistro Grain Free Chicken
+                                        Pate Wet Cat Food</a>
+                                </div>
+                                <a href="https://www.petco.com/shop/en/petcostore/product/merrick-purrfect-bistro-grain-free-chicken-pate-wet-cat-food"
+                                    manual_cm_sp="sponsoredbrandpage:merrick:contentmod8catalldrecipes:4:purrfectbistrochickenpatewetcatfood:shopnow"
+                                    onclick="clickTrackLink(this)" class="MiCS_product_button">Shop Now</a>
+
+                            </div>
+                        </div>
+                        <!-- tab item -->
+                        <!-- All Recipes -->
+
+                        <!-- Dry -->
+                        <!-- tab item -->
+                        <div class="merrickgold-section__tab_content_item filterBestCatDiv dry">
+                            <div class="MiCS_product">
+                                <div class="MiCS_best_seller_product_image">
+                                    <a href="https://www.petco.com/shop/en/petcostore/product/merrick-purrfect-bistro-grain-free-real-chicken-adult-dry-cat-food"
+                                        manual_cm_sp="sponsoredbrandpage:merrick:contentmod9drycat:1:purrfectbistrochickenadultdrycatfood:image"
+                                        onclick="clickTrackLink(this)"><img
+                                            src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/cat_best_dry_1"></a>
+                                </div>
+                                <div class="MiCS_product_info">
+                                    <a href="https://www.petco.com/shop/en/petcostore/product/merrick-purrfect-bistro-grain-free-real-chicken-adult-dry-cat-food"
+                                        manual_cm_sp="ssponsoredbrandpage:merrick:contentmod9drycat:1:purrfectbistrochickenadultdrycatfood:headline"
+                                        onclick="clickTrackLink(this)" class="MiCS_product_title">Merrick Purrfect
+                                        Bistro Grain Free Real
+                                        Chicken Adult Dry Cat Food</a>
+                                </div>
+                                <a href="https://www.petco.com/shop/en/petcostore/product/merrick-purrfect-bistro-grain-free-real-chicken-adult-dry-cat-food"
+                                    manual_cm_sp="sponsoredbrandpage:merrick:contentmod9drycat:1:purrfectbistrochickenadultdrycatfood:shopnow"
+                                    onclick="clickTrackLink(this)" class="MiCS_product_button">Shop Now</a>
+                            </div>
+                        </div>
+                        <!-- tab item -->
+                        <!-- tab item -->
+                        <div class="merrickgold-section__tab_content_item filterBestCatDiv dry">
+                            <div class="MiCS_product">
+                                <div class="MiCS_best_seller_product_image">
+                                    <a href="https://www.petco.com/shop/en/petcostore/product/merrick-limited-ingredient-diet-grain-free-chicken-cat-food"
+                                        manual_cm_sp="sponsoredbrandpage:merrick:contentmod9drycat:2:limitedingredientdietchickendrycatfood:image"
+                                        onclick="clickTrackLink(this)"><img
+                                            src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/cat_best_dry_2"></a>
+                                </div>
+                                <div class="MiCS_product_info">
+                                    <a href="https://www.petco.com/shop/en/petcostore/product/merrick-limited-ingredient-diet-grain-free-chicken-cat-food"
+                                        manual_cm_sp="sponsoredbrandpage:merrick:contentmod9drycat:2:limitedingredientdietchickendrycatfood:headline"
+                                        onclick="clickTrackLink(this)" class="MiCS_product_title">Merrick Limited
+                                        Ingredient Diet Grain Free
+                                        Chicken Dry Cat Food</a>
+                                </div>
+                                <a href="https://www.petco.com/shop/en/petcostore/product/merrick-limited-ingredient-diet-grain-free-chicken-cat-food"
+                                    manual_cm_sp="sponsoredbrandpage:merrick:contentmod9drycat:2:limitedingredientdietchickendrycatfood:shopnow"
+                                    onclick="clickTrackLink(this)" class="MiCS_product_button">Shop Now</a>
+
+                            </div>
+                        </div>
+                        <!-- tab item -->
+                        <!-- tab item -->
+                        <div class="merrickgold-section__tab_content_item filterBestCatDiv dry">
+                            <div class="MiCS_product">
+                                <div class="MiCS_best_seller_product_image">
+                                    <a href="https://www.petco.com/shop/en/petcostore/product/merrick-purrfect-bistro-grain-free-real-salmon-adult-dry-cat-food"
+                                        manual_cm_sp="sponsoredbrandpage:merrick:contentmod9drycat:3:purrfectbistrosalmonadultdrycatfood:image"
+                                        onclick="clickTrackLink(this)"><img
+                                            src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/cat_best_dry_3"></a>
+                                </div>
+                                <div class="MiCS_product_info">
+                                    <a href="https://www.petco.com/shop/en/petcostore/product/merrick-purrfect-bistro-grain-free-real-salmon-adult-dry-cat-food"
+                                        manual_cm_sp="sponsoredbrandpage:merrick:contentmod9drycat:3:purrfectbistrosalmonadultdrycatfood:headline"
+                                        onclick="clickTrackLink(this)" class="MiCS_product_title">Merrick Purrfect
+                                        Bistro Grain Free Real Salmon
+                                        Adult Dry Cat Food</a>
+                                </div>
+                                <a href="https://www.petco.com/shop/en/petcostore/product/merrick-purrfect-bistro-grain-free-real-salmon-adult-dry-cat-food"
+                                    manual_cm_sp="sponsoredbrandpage:merrick:contentmod9drycat:3:purrfectbistrosalmonadultdrycatfood:shopnow"
+                                    onclick="clickTrackLink(this)" class="MiCS_product_button">Shop Now</a>
+
+                            </div>
+                        </div>
+                        <!-- tab item -->
+                        <!-- tab item -->
+                        <div class="merrickgold-section__tab_content_item filterBestCatDiv dry">
+                            <div class="MiCS_product">
+                                <div class="MiCS_best_seller_product_image">
+                                    <a href="https://www.petco.com/shop/en/petcostore/product/merrick-purrfect-bistro-grain-free-healthy-weight-adult-dry-cat-food"
+                                        manual_cm_sp="sponsoredbrandpage:merrick:contentmod9drycat:4:purrfectbistrocompletecareweightcontrol:image"
+                                        onclick="clickTrackLink(this)"><img
+                                            src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/cat_best_dry_4"></a>
+                                </div>
+                                <div class="MiCS_product_info">
+                                    <a href="https://www.petco.com/shop/en/petcostore/product/merrick-purrfect-bistro-grain-free-healthy-weight-adult-dry-cat-food"
+                                        manual_cm_sp="sponsoredbrandpage:merrick:contentmod9drycat:4:purrfectbistrocompletecareweightcontrol:headline"
+                                        onclick="clickTrackLink(this)" class="MiCS_product_title">Merrick Purrfect
+                                        Bistro Grain Free Complete
+                                        Care Weight Control Recipe Dry Cat Food</a>
+                                </div>
+                                <a href="https://www.petco.com/shop/en/petcostore/product/merrick-purrfect-bistro-grain-free-healthy-weight-adult-dry-cat-food"
+                                    manual_cm_sp="sponsoredbrandpage:merrick:contentmod9drycat:4:purrfectbistrocompletecareweightcontrol:shopnow"
+                                    onclick="clickTrackLink(this)" class="MiCS_product_button">Shop Now</a>
+
+                            </div>
+                        </div>
+                        <!-- tab item -->
+                        <!-- Dry -->
+
+                        <!-- Wet -->
+                        <!-- tab item -->
+                        <div class="merrickgold-section__tab_content_item filterBestCatDiv wet">
+                            <div class="MiCS_product">
+                                <div class="MiCS_best_seller_product_image">
+                                    <a href="https://www.petco.com/shop/en/petcostore/product/merrick-limited-ingredient-diet-grain-free-chicken-canned-cat-food"
+                                        manual_cm_sp="sponsoredbrandpage:merrick:contentmod10wetcat:1:limitedingredientdietchickencannedcatfood:image"
+                                        onclick="clickTrackLink(this)"><img
+                                            src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/cat_best_wet_1"></a>
+                                </div>
+                                <div class="MiCS_product_info">
+                                    <a href="https://www.petco.com/shop/en/petcostore/product/merrick-limited-ingredient-diet-grain-free-chicken-canned-cat-food"
+                                        manual_cm_sp="sponsoredbrandpage:merrick:contentmod10wetcat:1:limitedingredientdietchickencannedcatfood:headline"
+                                        onclick="clickTrackLink(this)" class="MiCS_product_title">Merrick Limited
+                                        Ingredient Diet Grain Free
+                                        Chicken Canned Cat Food</a>
+                                </div>
+                                <a href="https://www.petco.com/shop/en/petcostore/product/merrick-limited-ingredient-diet-grain-free-chicken-canned-cat-food"
+                                    manual_cm_sp="sponsoredbrandpage:merrick:contentmod10wetcat:1:limitedingredientdietchickencannedcatfood:shopnow"
+                                    onclick="clickTrackLink(this)" class="MiCS_product_button">Shop Now</a>
+                            </div>
+                        </div>
+                        <!-- tab item -->
+                        <!-- tab item -->
+                        <div class="merrickgold-section__tab_content_item filterBestCatDiv wet">
+                            <div class="MiCS_product">
+                                <div class="MiCS_best_seller_product_image">
+                                    <a href="https://www.petco.com/shop/en/petcostore/product/merrick-purrfect-bistro-grain-free-chicken-pate-wet-cat-food"
+                                        manual_cm_sp="sponsoredbrandpage:merrick:contentmod10wetcat:2:purrfectbistrochickenpatewetcatfood:image"
+                                        onclick="clickTrackLink(this)"><img
+                                            src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/cat_best_wet_2"></a>
+                                </div>
+                                <div class="MiCS_product_info">
+                                    <a href="https://www.petco.com/shop/en/petcostore/product/merrick-purrfect-bistro-grain-free-chicken-pate-wet-cat-food"
+                                        manual_cm_sp="sponsoredbrandpage:merrick:contentmod10wetcat:2:purrfectbistrochickenpatewetcatfood:headline"
+                                        onclick="clickTrackLink(this)" class="MiCS_product_title">Merrick Purrfect
+                                        Bistro Grain Free Chicken
+                                        Pate Wet Cat Food</a>
+                                </div>
+                                <a href="https://www.petco.com/shop/en/petcostore/product/merrick-purrfect-bistro-grain-free-chicken-pate-wet-cat-food"
+                                    manual_cm_sp="sponsoredbrandpage:merrick:contentmod10wetcat:2:purrfectbistrochickenpatewetcatfood:shopnow"
+                                    onclick="clickTrackLink(this)" class="MiCS_product_button">Shop Now</a>
+
+                            </div>
+                        </div>
+                        <!-- tab item -->
+                        <!-- tab item -->
+                        <div class="merrickgold-section__tab_content_item filterBestCatDiv wet">
+                            <div class="MiCS_product">
+                                <div class="MiCS_best_seller_product_image">
+                                    <a href="https://www.petco.com/shop/en/petcostore/product/merrick-backcountry-real-rabbit-cuts-recipe-wet-cat-food"
+                                        manual_cm_sp="sponsoredbrandpage:merrick:contentmod10wetcat:3:grainfreerealrabbitrecipecutswetcatfood:image"
+                                        onclick="clickTrackLink(this)"><img
+                                            src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/cat_best_wet_3"></a>
+                                </div>
+                                <div class="MiCS_product_info">
+                                    <a href="https://www.petco.com/shop/en/petcostore/product/merrick-backcountry-real-rabbit-cuts-recipe-wet-cat-food"
+                                        manual_cm_sp="sponsoredbrandpage:merrick:contentmod10wetcat:3:grainfreerealrabbitrecipecutswetcatfood:headline"
+                                        onclick="clickTrackLink(this)" class="MiCS_product_title">Merrick Backcountry
+                                        Grain Free Real Rabbit
+                                        Recipe Cuts Wet Cat Food</a>
+                                </div>
+                                <a href="https://www.petco.com/shop/en/petcostore/product/merrick-backcountry-real-rabbit-cuts-recipe-wet-cat-food"
+                                    manual_cm_sp="sponsoredbrandpage:merrick:contentmod10wetcat:3:grainfreerealrabbitrecipecutswetcatfood:shopnow"
+                                    onclick="clickTrackLink(this)" class="MiCS_product_button">Shop Now</a>
+
+                            </div>
+                        </div>
+                        <!-- tab item -->
+                        <!-- tab item -->
+                        <div class="merrickgold-section__tab_content_item filterBestCatDiv wet">
+                            <div class="MiCS_product">
+                                <div class="MiCS_best_seller_product_image">
+                                    <a href="https://www.petco.com/shop/en/petcostore/product/merrick-purrfect-bistro-grain-free-rabbit-pate-wet-cat-food"
+                                        manual_cm_sp="sponsoredbrandpage:merrick:contentmod10wetcat:4:purrfectbistrorabbitpatewetcatfood:image"
+                                        onclick="clickTrackLink(this)"><img
+                                            src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/cat_best_wet_4"></a>
+                                </div>
+                                <div class="MiCS_product_info">
+                                    <a href="https://www.petco.com/shop/en/petcostore/product/merrick-purrfect-bistro-grain-free-rabbit-pate-wet-cat-food"
+                                        manual_cm_sp="sponsoredbrandpage:merrick:contentmod10wetcat:4:purrfectbistrorabbitpatewetcatfood:headline"
+                                        onclick="clickTrackLink(this)" class="MiCS_product_title">Merrick Purrfect
+                                        Bistro Grain Free Rabbit Pate
+                                        Wet Cat Food</a>
+                                </div>
+                                <a href="https://www.petco.com/shop/en/petcostore/product/merrick-purrfect-bistro-grain-free-rabbit-pate-wet-cat-food"
+                                    manual_cm_sp="sponsoredbrandpage:merrick:contentmod10wetcat:4:purrfectbistrorabbitpatewetcatfood:shopnow"
+                                    onclick="clickTrackLink(this)" class="MiCS_product_button">Shop Now</a>
+
+                            </div>
+                        </div>
+                        <!-- tab item -->
+                        <!-- Wet -->
+
+                        <!-- Toppers -->
+                        <!-- tab item -->
+                        <div class="merrickgold-section__tab_content_item filterBestCatDiv toppers">
+                            <div class="MiCS_product">
+                                <div class="MiCS_best_seller_product_image">
+                                    <a href="https://www.petco.com/shop/en/petcostore/product/merrick-purrfect-bistro-bon-appetits-chicken-morsels-grain-free-wet-cat-food"
+                                        manual_cm_sp="sponsoredbrandpage:merrick:contentmod11cattoppers:1:purrfectbistrobonappetitschicken:image"
+                                        onclick="clickTrackLink(this)"><img
+                                            src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/cat_best_toppers_1"></a>
+                                </div>
+                                <div class="MiCS_product_info">
+                                    <a href="https://www.petco.com/shop/en/petcostore/product/merrick-purrfect-bistro-bon-appetits-chicken-morsels-grain-free-wet-cat-food"
+                                        manual_cm_sp="sponsoredbrandpage:merrick:contentmod11cattoppers:1:purrfectbistrobonappetitschicken:headline"
+                                        onclick="clickTrackLink(this)" class="MiCS_product_title">Merrick Purrfect
+                                        Bistro Bon Appetits Chicken
+                                        Morsels Grain Free Wet Cat Food</a>
+                                </div>
+                                <a href="https://www.petco.com/shop/en/petcostore/product/merrick-purrfect-bistro-bon-appetits-chicken-morsels-grain-free-wet-cat-food"
+                                    manual_cm_sp="sponsoredbrandpage:merrick:contentmod11cattoppers:1:purrfectbistrobonappetitschicken:shopnow"
+                                    onclick="clickTrackLink(this)" class="MiCS_product_button">Shop Now</a>
+                            </div>
+                        </div>
+                        <!-- tab item -->
+                        <!-- tab item -->
+                        <div class="merrickgold-section__tab_content_item filterBestCatDiv toppers">
+                            <div class="MiCS_product">
+                                <div class="MiCS_best_seller_product_image">
+                                    <a href="https://www.petco.com/shop/en/petcostore/product/merrick-purrfect-bistro-bon-appetits-gravies-beef-grain-free-wet-cat-food"
+                                        manual_cm_sp="sponsoredbrandpage:merrick:contentmod11cattoppers:2:purrfectbistrobonappetitsgravieschicken:image"
+                                        onclick="clickTrackLink(this)"><img
+                                            src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/cat_best_toppers_2"></a>
+                                </div>
+                                <div class="MiCS_product_info">
+                                    <a href="https://www.petco.com/shop/en/petcostore/product/merrick-purrfect-bistro-bon-appetits-gravies-beef-grain-free-wet-cat-food"
+                                        manual_cm_sp="sponsoredbrandpage:merrick:contentmod11cattoppers:2:purrfectbistrobonappetitsgravieschicken:headline"
+                                        onclick="clickTrackLink(this)" class="MiCS_product_title">Merrick Purrfect
+                                        Bistro Bon Appetits Gravies
+                                        Chicken Grain Free Wet Cat Food</a>
+                                </div>
+                                <a href="https://www.petco.com/shop/en/petcostore/product/merrick-purrfect-bistro-bon-appetits-gravies-beef-grain-free-wet-cat-food"
+                                    manual_cm_sp="sponsoredbrandpage:merrick:contentmod11cattoppers:2:purrfectbistrobonappetitsgravieschicken:shopnow"
+                                    onclick="clickTrackLink(this)" class="MiCS_product_button">Shop Now</a>
+
+                            </div>
+                        </div>
+                        <!-- tab item -->
+                        <!-- tab item -->
+                        <div class="merrickgold-section__tab_content_item filterBestCatDiv toppers">
+                            <div class="MiCS_product">
+                                <div class="MiCS_best_seller_product_image">
+                                    <a href="https://www.petco.com/shop/en/petcostore/product/merrick-purrfect-bistro-bon-appetits-salmon-morsels-grain-free-wet-cat-food"
+                                        manual_cm_sp="sponsoredbrandpage:merrick:contentmod11cattoppers:3:purrfectbistrobonappetitssalmon:image"
+                                        onclick="clickTrackLink(this)"><img
+                                            src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/cat_best_toppers_3"></a>
+                                </div>
+                                <div class="MiCS_product_info">
+                                    <a href="https://www.petco.com/shop/en/petcostore/product/merrick-purrfect-bistro-bon-appetits-salmon-morsels-grain-free-wet-cat-food"
+                                        manual_cm_sp="sponsoredbrandpage:merrick:contentmod11cattoppers:3:purrfectbistrobonappetitssalmon:headline"
+                                        onclick="clickTrackLink(this)" class="MiCS_product_title">Merrick Purrfect
+                                        Bistro Bon Appetits Salmon
+                                        Morsels Grain Free Wet Cat Food</a>
+                                </div>
+                                <a href="https://www.petco.com/shop/en/petcostore/product/merrick-purrfect-bistro-bon-appetits-salmon-morsels-grain-free-wet-cat-food"
+                                    manual_cm_sp="sponsoredbrandpage:merrick:contentmod11cattoppers:3:purrfectbistrobonappetitssalmon:shopnow"
+                                    onclick="clickTrackLink(this)" class="MiCS_product_button">Shop Now</a>
+
+                            </div>
+                        </div>
+                        <!-- tab item -->
+                        <!-- tab item -->
+                        <div class="merrickgold-section__tab_content_item filterBestCatDiv toppers">
+                            <div class="MiCS_product">
+                                <div class="MiCS_best_seller_product_image">
+                                    <a href="https://www.petco.com/shop/en/petcostore/product/merrick-purrfect-bistro-bon-appetits-gravies-beef-grain-free-wet-cat-food"
+                                        manual_cm_sp="sponsoredbrandpage:merrick:contentmod11cattoppers:4:purrfectbistrobonappetitsgraviesbeef:image"
+                                        onclick="clickTrackLink(this)"><img
+                                            src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/cat_best_toppers_4"></a>
+                                </div>
+                                <div class="MiCS_product_info">
+                                    <a href="https://www.petco.com/shop/en/petcostore/product/merrick-purrfect-bistro-bon-appetits-gravies-beef-grain-free-wet-cat-food"
+                                        manual_cm_sp="sponsoredbrandpage:merrick:contentmod11cattoppers:4:purrfectbistrobonappetitsgraviesbeef:headline"
+                                        onclick="clickTrackLink(this)" class="MiCS_product_title">Merrick Purrfect
+                                        Bistro Bon Appetits Gravies
+                                        Beef Grain Free Wet Cat Food</a>
+                                </div>
+                                <a href="https://www.petco.com/shop/en/petcostore/product/merrick-purrfect-bistro-bon-appetits-gravies-beef-grain-free-wet-cat-food"
+                                    manual_cm_sp="sponsoredbrandpage:merrick:contentmod11cattoppers:4:purrfectbistrobonappetitsgraviesbeef:shopnow"
+                                    onclick="clickTrackLink(this)" class="MiCS_product_button">Shop Now</a>
+
+                            </div>
+                        </div>
+                        <!-- tab item -->
+                        <!-- Toppers -->
+                    </div>
+                </div>
+            </div>
+            <!-- tab content -->
+            <!-- =====Cat Best Seller===== -->
+            <!-- =====Cat Product Listing===== -->
+            <div class="MiCS_product_listing MiCS_container">
+                <!--      <div class="merrickgold-section_header">
+        <h1>cat food</h1>
+      </div> -->
+                <div class="merrickgold-section_sub_head">
+                    <p>All cat food recipes</p>
+                </div>
+            </div>
+            <!-- listed products -->
+            <div class="MiCS_auto_container_fluid">
+                <div class="merrickgold-section_best_seller_wrapper">
+                    <div class="merrickgold-section__product-listing-content cat_listing merrickgold-flex">
+                        <!-- product item -->
+                        <div class="merrickgold-section__listed_product_item filterCatFoodDiv shop_dry_food">
+                            <div class="MiCS_listing_product">
+                                <div class="MiCS_listing_product_image">
+                                    <a href="https://www.petco.com/shop/en/petcostore/brand/merrick#facet:430566797116,307445734561667670777101114114105991073280117114114102101991163266105115116114111&productBeginIndex:0&orderBy:&pageView:grid&minPrice:&maxPrice:&pageSize:&"
+                                        manual_cm_sp="sponsoredbrandpage:merrick:contentmod12allcatfood:1:purrfectbistro:image"
+                                        onclick="clickTrackLink(this)"><img
+                                            src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/cat_food1@2x"></a>
+                                </div>
+                                <div class="MiCS_listing_product_info">
+                                    <a href="https://www.petco.com/shop/en/petcostore/brand/merrick#facet:430566797116,307445734561667670777101114114105991073280117114114102101991163266105115116114111&productBeginIndex:0&orderBy:&pageView:grid&minPrice:&maxPrice:&pageSize:&"
+                                        manual_cm_sp="sponsoredbrandpage:merrick:contentmod12allcatfood:1:purrfectbistro:headline"
+                                        onclick="clickTrackLink(this)" class="MiCS_listing_product_title">Purrfect
+                                        Bistro</a>
+                                </div>
+                                <p class="MiCS_listing_product_details">For Cats Who Demand the Finer Things</p>
+                                <a href="https://www.petco.com/shop/en/petcostore/brand/merrick#facet:430566797116,307445734561667670777101114114105991073280117114114102101991163266105115116114111&productBeginIndex:0&orderBy:&pageView:grid&minPrice:&maxPrice:&pageSize:&"
+                                    manual_cm_sp="sponsoredbrandpage:merrick:contentmod12allcatfood:1:purrfectbistro:shopnow"
+                                    onclick="clickTrackLink(this)" class="MiCS_listing_product_button">Shop Now</a>
+                            </div>
+                        </div>
+                        <!-- product item -->
+                        <!-- product item -->
+                        <div
+                            class="merrickgold-section__listed_product_item filterCatFoodDiv shop_wet_food shop_dry_food">
+                            <div class="MiCS_listing_product">
+                                <div class="MiCS_listing_product_image">
+                                    <a href="https://www.petco.com/shop/en/petcostore/brand/merrick#facet:430566797116,307445734561667670777101114114105991073266979910799111117110116114121&productBeginIndex:0&orderBy:&pageView:grid&minPrice:&maxPrice:&pageSize:&"
+                                        manual_cm_sp="sponsoredbrandpage:merrick:contentmod12allcatfood:2:backcountry:image"
+                                        onclick="clickTrackLink(this)"><img
+                                            src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/cat_food2@2x"></a>
+                                </div>
+                                <div class="MiCS_listing_product_info">
+                                    <a a href="https://www.petco.com/shop/en/petcostore/brand/merrick#facet:430566797116,307445734561667670777101114114105991073266979910799111117110116114121&productBeginIndex:0&orderBy:&pageView:grid&minPrice:&maxPrice:&pageSize:&"
+                                        manual_cm_sp="sponsoredbrandpage:merrick:contentmod12allcatfood:2:backcountry:headline"
+                                        onclick="clickTrackLink(this)"
+                                        class="MiCS_listing_product_title">Backcountry</a>
+                                </div>
+                                <p class="MiCS_listing_product_details">Protein Rich Ancestral Recipes</p>
+                                <a href="https://www.petco.com/shop/en/petcostore/brand/merrick#facet:430566797116,307445734561667670777101114114105991073266979910799111117110116114121&productBeginIndex:0&orderBy:&pageView:grid&minPrice:&maxPrice:&pageSize:&"
+                                    manual_cm_sp="sponsoredbrandpage:merrick:contentmod12allcatfood:2:backcountry:shopnow"
+                                    onclick="clickTrackLink(this)" class="MiCS_listing_product_button">Shop Now</a>
+                            </div>
+                        </div>
+                        <!-- product item -->
+                        <!-- product item -->
+                        <div class="merrickgold-section__listed_product_item filterCatFoodDiv shop_wet_food">
+                            <div class="MiCS_listing_product">
+                                <div class="MiCS_listing_product_image">
+                                    <a href="https://www.petco.com/shop/en/petcostore/brand/merrick#facet:430566797116,30744573456166767077710111411410599107327610510910511610110032731101031141011001051011101163268105101116&productBeginIndex:0&orderBy:&pageView:grid&minPrice:&maxPrice:&pageSize:&"
+                                        manual_cm_sp="sponsoredbrandpage:merrick:contentmod12allcatfood:3:limitedingredientdiet:image"
+                                        onclick="clickTrackLink(this)"><img
+                                            src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/cat_food3@2x"></a>
+                                </div>
+                                <div class="MiCS_listing_product_info">
+                                    <a href="https://www.petco.com/shop/en/petcostore/brand/merrick#facet:430566797116,30744573456166767077710111411410599107327610510910511610110032731101031141011001051011101163268105101116&productBeginIndex:0&orderBy:&pageView:grid&minPrice:&maxPrice:&pageSize:&"
+                                        manual_cm_sp="sponsoredbrandpage:merrick:contentmod12allcatfood:3:limitedingredientdiet:headline"
+                                        onclick="clickTrackLink(this)" class="MiCS_listing_product_title">Limited
+                                        Ingredient Diet</a>
+                                </div>
+                                <p class="MiCS_listing_product_details">Simple Recipes for Food Sensitivities</p>
+                                <a href="https://www.petco.com/shop/en/petcostore/brand/merrick#facet:430566797116,30744573456166767077710111411410599107327610510910511610110032731101031141011001051011101163268105101116&productBeginIndex:0&orderBy:&pageView:grid&minPrice:&maxPrice:&pageSize:&"
+                                    manual_cm_sp="sponsoredbrandpage:merrick:contentmod12allcatfood:3:limitedingredientdiet:shopnow"
+                                    onclick="clickTrackLink(this)" class="MiCS_listing_product_button">Shop Now</a>
+                            </div>
+                        </div>
+                        <!-- product item -->
+                    </div>
+                </div>
+            </div>
+            <div class="MiCS_container">
+                <div class="MiCS_product_listing_category_area">
+                    <div id="catFoodBtnContainer" class="merrickgold-flex">
+                        <!-- <button class="MiCS_cat_food_tab MiCS_cat_food_tab_active" onclick="filterCatFood('all')"> All </button> -->
+                        <a href="https://www.petco.com/shop/en/petcostore/brand/merrick/cat/cat-food/dry-cat-food"
+                            manual_cm_sp="sponsoredbrandpage:merrick:contentmod12allcatfood:4:dryfood:shopalldryfood"
+                            onclick="clickTrackLink(this)">
+                            <button class="MiCS_cat_food_tab"> SHOP ALL DRY FOOD</button>
+                        </a>
+                        <a href="https://www.petco.com/shop/en/petcostore/brand/merrick/cat/cat-food/wet-cat-food"
+                            manual_cm_sp="sponsoredbrandpage:merrick:contentmod12allcatfood:5:wetfood:shopallwetfood"
+                            onclick="clickTrackLink(this)">
+                            <button class="MiCS_cat_food_tab"> SHOP ALL WET FOOD</button>
+                        </a>
+                    </div>
+                </div>
+                <!-- listed products -->
+            </div>
+            <!-- ===== Cat Product Listing===== -->
+            <!-- ===== Banner Satisfaction===== -->
+            <div class="MiCS_banner banner_satisfy MiCS_container-fluid ">
+                <div class="MiCS_container merrickgold-flex">
+                    <div class="MiCS_banner_image">
+                        <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/Satisfaction_Guarantee@2x">
+                    </div>
+                    <div class="MiCS_banner_details">
+                        <h1 class="MiCS_banner_headline">Guaranteed for the best pet ever (yours!)</h1>
+                        <p class="MiCS_banner_description">Merrick is sure your pet will love their food—that’s why they
+                            offer a 100% satisfaction guarantee.</p>
+                    </div>
+                </div>
+
+            </div>
+            <!-- ===== Banner Satisfaction===== -->
+        </div>
+    </div>
+    <!-- Merrick Gold brand page -->
+    <script type="text/javascript">
+        //slider script
+        let counter = 1;
+        setInterval(function () {
+            document.getElementById('radio' + counter).checked = true;
+            counter++;
+            if (counter > 3) {
+                counter = 1;
+            }
+        }, 10000);
+
+
+
+        //for Dog best seller tab switcher
+        filterBestDog("dog_all_recipes")
+
+        function filterBestDog(c) {
+            var x, i;
+            x = document.getElementsByClassName("filterBestDogDiv");
+            if (c == "all") c = "";
+            for (i = 0; i < x.length; i++) {
+                RemoveClassBestDog(x[i], "show");
+                if (x[i].className.indexOf(c) > -1) AddClassDogBest(x[i], "show");
+            }
+        }
+
+        function AddClassDogBest(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                if (arr1.indexOf(arr2[i]) == -1) {
+                    element.className += " " + arr2[i];
+                }
+            }
+        }
+
+        function RemoveClassBestDog(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                while (arr1.indexOf(arr2[i]) > -1) {
+                    arr1.splice(arr1.indexOf(arr2[i]), 1);
+                }
+            }
+            element.className = arr1.join(" ");
+        }
+
+        // Add active class to the current button (highlight it)
+        var dogBtnContainer = document.getElementById("dogBestBtnContainer");
+        var dogBestbtns = dogBtnContainer.getElementsByClassName("MiCS_tab_item");
+        for (var i = 0; i < dogBestbtns.length; i++) {
+            dogBestbtns[i].addEventListener("click", function () {
+                var current = document.getElementsByClassName("MiCS_tab_item_active");
+                current[0].className = current[0].className.replace(" MiCS_tab_item_active", "");
+                this.className += " MiCS_tab_item_active";
+            });
+        }
+        //for Dog best seller tab switcher
+
+
+        //for Cat best seller tab switcher
+        filterBestCat("cat_all_recipes")
+
+        function filterBestCat(c) {
+            var x, i;
+            x = document.getElementsByClassName("filterBestCatDiv");
+            if (c == "all") c = "";
+            for (i = 0; i < x.length; i++) {
+                RemoveClassBestCat(x[i], "show");
+                if (x[i].className.indexOf(c) > -1) AddClassCatBest(x[i], "show");
+            }
+        }
+
+        function AddClassCatBest(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                if (arr1.indexOf(arr2[i]) == -1) {
+                    element.className += " " + arr2[i];
+                }
+            }
+        }
+
+        function RemoveClassBestCat(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                while (arr1.indexOf(arr2[i]) > -1) {
+                    arr1.splice(arr1.indexOf(arr2[i]), 1);
+                }
+            }
+            element.className = arr1.join(" ");
+        }
+
+        // Add active class to the current button (highlight it)
+        var catBtnContainer = document.getElementById("catBestBtnContainer");
+        var catBestBtns = catBtnContainer.getElementsByClassName("MiCS_cat_best_tab_item");
+        for (var i = 0; i < catBestBtns.length; i++) {
+            catBestBtns[i].addEventListener("click", function () {
+                var current = document.getElementsByClassName("MiCS_cat_best_tab_item_active");
+                current[0].className = current[0].className.replace(" MiCS_cat_best_tab_item_active", "");
+                this.className += " MiCS_cat_best_tab_item_active";
+            });
+        }
+        //for Cat best seller tab switcher
+
+        //for Dog food tab switcher
+        filterDogFood("all")
+
+        function filterDogFood(c) {
+            var x, i;
+            x = document.getElementsByClassName("filterDogFoodDiv");
+            if (c == "all") c = "";
+            for (i = 0; i < x.length; i++) {
+                RemoveClassDogFood(x[i], "show");
+                if (x[i].className.indexOf(c) > -1) AddClassDogFood(x[i], "show");
+            }
+        }
+
+        function AddClassDogFood(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                if (arr1.indexOf(arr2[i]) == -1) {
+                    element.className += " " + arr2[i];
+                }
+            }
+        }
+
+        function RemoveClassDogFood(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                while (arr1.indexOf(arr2[i]) > -1) {
+                    arr1.splice(arr1.indexOf(arr2[i]), 1);
+                }
+            }
+            element.className = arr1.join(" ");
+        }
+
+        // Add active class to the current button (highlight it)
+        var dogfoodButtonContainer = document.getElementById("dogFoodBtnContainer");
+        var dogFoodbtns = dogfoodButtonContainer.getElementsByClassName("MiCS_dog_food_tab");
+        for (var i = 0; i < dogFoodbtns.length; i++) {
+            dogFoodbtns[i].addEventListener("click", function () {
+                var current = document.getElementsByClassName("MiCS_dog_food_tab_active");
+                current[0].className = current[0].className.replace(" MiCS_dog_food_tab_active", "");
+                this.className += " MiCS_dog_food_tab_active";
+            });
+        }
+        //for Dog food tab switcher
+
+
+
+        //for Cat food tab switcher
+        filterCatFood("all")
+
+        function filterCatFood(c) {
+            var x, i;
+            x = document.getElementsByClassName("filterCatFoodDiv");
+            if (c == "all") c = "";
+            for (i = 0; i < x.length; i++) {
+                RemoveClassCatFood(x[i], "show");
+                if (x[i].className.indexOf(c) > -1) AddClassCatFood(x[i], "show");
+            }
+        }
+
+        function AddClassCatFood(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                if (arr1.indexOf(arr2[i]) == -1) {
+                    element.className += " " + arr2[i];
+                }
+            }
+        }
+
+        function RemoveClassCatFood(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                while (arr1.indexOf(arr2[i]) > -1) {
+                    arr1.splice(arr1.indexOf(arr2[i]), 1);
+                }
+            }
+            element.className = arr1.join(" ");
+        }
+
+        // Add active class to the current button (highlight it)
+        var catfoodButtonContainer = document.getElementById("catFoodBtnContainer");
+        var catFoodbtns = catfoodButtonContainer.getElementsByClassName("MiCS_cat_food_tab");
+        for (var i = 0; i < catFoodbtns.length; i++) {
+            catFoodbtns[i].addEventListener("click", function () {
+                var current = document.getElementsByClassName("MiCS_cat_food_tab_active");
+                current[0].className = current[0].className.replace(" MiCS_cat_food_tab_active", "");
+                this.className += " MiCS_cat_food_tab_active";
+            });
+        }
+        //for Cat food tab switcher
+    </script>
+    <!-- Code injected by live-server -->
+    <script type="text/javascript">
+        // <![CDATA[  <-- For SVG support
+        if ('WebSocket' in window) {
+            (function () {
+                function refreshCSS() {
+                    var sheets = [].slice.call(document.getElementsByTagName("link"));
+                    var head = document.getElementsByTagName("head")[0];
+                    for (var i = 0; i < sheets.length; ++i) {
+                        var elem = sheets[i];
+                        var parent = elem.parentElement || head;
+                        parent.removeChild(elem);
+                        var rel = elem.rel;
+                        if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() ==
+                            "stylesheet") {
+                            var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+                            elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date()
+                                .valueOf());
+                        }
+                        parent.appendChild(elem);
+                    }
+                }
+                var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+                var address = protocol + window.location.host + window.location.pathname + '/ws';
+                var socket = new WebSocket(address);
+                socket.onmessage = function (msg) {
+                    if (msg.data == 'reload') window.location.reload();
+                    else if (msg.data == 'refreshcss') refreshCSS();
+                };
+                if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+                    console.log('Live reload enabled.');
+                    sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+                }
+            })();
+        } else {
+            console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+        }
+        // ]]>
+    </script><!-- Code injected by live-server -->
+    <script type="text/javascript">
+        // <![CDATA[  <-- For SVG support
+        if ('WebSocket' in window) {
+            (function () {
+                function refreshCSS() {
+                    var sheets = [].slice.call(document.getElementsByTagName("link"));
+                    var head = document.getElementsByTagName("head")[0];
+                    for (var i = 0; i < sheets.length; ++i) {
+                        var elem = sheets[i];
+                        var parent = elem.parentElement || head;
+                        parent.removeChild(elem);
+                        var rel = elem.rel;
+                        if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() ==
+                            "stylesheet") {
+                            var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+                            elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date()
+                                .valueOf());
+                        }
+                        parent.appendChild(elem);
+                    }
+                }
+                var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+                var address = protocol + window.location.host + window.location.pathname + '/ws';
+                var socket = new WebSocket(address);
+                socket.onmessage = function (msg) {
+                    if (msg.data == 'reload') window.location.reload();
+                    else if (msg.data == 'refreshcss') refreshCSS();
+                };
+                if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+                    console.log('Live reload enabled.');
+                    sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+                }
+            })();
+        } else {
+            console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+        }
+        // ]]>
+    </script><!-- Code injected by live-server -->
+    <script type="text/javascript">
+        // <![CDATA[  <-- For SVG support
+        if ('WebSocket' in window) {
+            (function () {
+                function refreshCSS() {
+                    var sheets = [].slice.call(document.getElementsByTagName("link"));
+                    var head = document.getElementsByTagName("head")[0];
+                    for (var i = 0; i < sheets.length; ++i) {
+                        var elem = sheets[i];
+                        var parent = elem.parentElement || head;
+                        parent.removeChild(elem);
+                        var rel = elem.rel;
+                        if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() ==
+                            "stylesheet") {
+                            var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+                            elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date()
+                                .valueOf());
+                        }
+                        parent.appendChild(elem);
+                    }
+                }
+                var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+                var address = protocol + window.location.host + window.location.pathname + '/ws';
+                var socket = new WebSocket(address);
+                socket.onmessage = function (msg) {
+                    if (msg.data == 'reload') window.location.reload();
+                    else if (msg.data == 'refreshcss') refreshCSS();
+                };
+                if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+                    console.log('Live reload enabled.');
+                    sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+                }
+            })();
+        } else {
+            console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+        }
+        // ]]>
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,131 @@
+.citrus_tidyCat_exploere .citrus_tidyCat_exploere__wrapper{
+    width: 100%;
+    overflow: auto;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.citrus_tidyCat_exploere .citrus_tidyCat_exploere__wrapper::-webkit-scrollbar {
+    display: none;
+  }
+  
+
+  .citrus_tidyCat_exploere .citrus_tidyCat_exploere__wrapper {
+    -ms-overflow-style: none; 
+    scrollbar-width: none;
+  }
+
+.citrus_tidyCat_exploere .citrus_tidyCat_exploere__content{
+    align-items: flex-start;
+    margin-bottom: 40px;
+}
+
+.citrus_tidyCat_exploere .citrus_tidyCat_exploere__wrapper:nth-child(2) .citrus_tidyCat_exploere__content .citrus_tidyCat_exploere__content--col:nth-child(1) .citrus_tidyCat_exploere__content--shots{
+    background-image: url("img/citrus_tidyCat_exploere_bg1.png");
+    background-position: right;
+}
+
+.citrus_tidyCat_exploere .citrus_tidyCat_exploere__wrapper:nth-child(2) .citrus_tidyCat_exploere__content .citrus_tidyCat_exploere__content--col:nth-child(2) .citrus_tidyCat_exploere__content--icons{
+    background-image: url("img/citrus_tidyCat_exploere_bg2.png");
+}
+
+.citrus_tidyCat_exploere .citrus_tidyCat_exploere__wrapper:nth-child(3) .citrus_tidyCat_exploere__content .citrus_tidyCat_exploere__content--col:nth-child(1) .citrus_tidyCat_exploere__content--shots{
+    background-image: url("img/citrus_tidyCat_exploere_bg3.png");
+    background-position: right;
+}
+
+.citrus_tidyCat_exploere .citrus_tidyCat_exploere__wrapper:nth-child(3) .citrus_tidyCat_exploere__content .citrus_tidyCat_exploere__content--col:nth-child(2) .citrus_tidyCat_exploere__content--icons{
+    background-image: url("img/citrus_tidyCat_exploere_bg4.png");
+}
+
+
+.citrus_tidyCat_exploere .citrus_tidyCat_exploere__content .citrus_tidyCat_exploere__content--col{
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 50%;
+    flex-wrap: wrap;
+    background-color: $off_white;
+}
+
+.citrus_tidyCat_exploere .citrus_tidyCat_exploere__content .citrus_tidyCat_exploere__content--col:nth-child(odd){
+    border-right: 6px solid $white;
+}
+
+.citrus_tidyCat_exploere .citrus_tidyCat_exploere__content .citrus_tidyCat_exploere__content--col:nth-child(even){
+    border-left: 6px solid $white;
+}
+
+.citrus_tidyCat_exploere .citrus_tidyCat_exploere__content .citrus_tidyCat_exploere__content--shots{
+    height: 328px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.citrus_tidyCat_exploere .citrus_tidyCat_exploere__content .citrus_tidyCat_exploere__content--icons{
+    height: 328px;
+    justify-content: space-around;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.citrus_tidyCat_exploere__content--icons .single-icon {
+    padding: 0 15px;
+    border-right: 5px solid #4C3C90;
+    width: calc(100%/3);
+}
+
+.citrus_tidyCat_exploere__content--icons .single-icon:nth-child(2){
+    border-right: 5px solid #2062a6;
+}
+
+.citrus_tidyCat_exploere__wrapper:nth-child(3) .citrus_tidyCat_exploere__content--icons .single-icon:nth-child(1){
+    border-right: 5px solid #285faa;
+}
+
+.citrus_tidyCat_exploere__wrapper:nth-child(3) .citrus_tidyCat_exploere__content--icons .single-icon:nth-child(2){
+    border-right: 5px solid #2a84ba;
+}
+
+.citrus_tidyCat_exploere__content--icons .single-icon:last-child{
+    border-right: unset;
+}
+
+.citrus_tidyCat_exploere__content--icons .single-icon img{
+    max-width: 130px;
+    margin: 0 auto;
+}
+
+.citrus_tidyCat_exploere__content--icons .single-icon h4{
+    font-family: "PetcoCircularTT-Bold", arial !important;
+    font-size: 20px;
+    font-weight: 700;
+    color: $white;
+    text-align: center;
+    max-width: 200px;
+    margin: 0;
+    padding: 30px 0 0;
+    min-height: 75px;
+}
+
+.citrus_tidyCat_exploere__content--text{
+    width: 100%;
+    text-align: center;
+    padding: 50px 15px;
+}
+
+.citrus_tidyCat_exploere__content--text .cta-underline {
+    text-align: center;
+}
+
+.citrus_tidyCat_exploere__content--text h3{
+    font-size: 25px;
+}
+
+.citrus_tidyCat_exploere__content--text p{
+    padding: 25px 0;
+}
+
+.citrus_tidyCat_exploere__content--text .disclaimer{
+    padding: 0;
+    font-size: 12px;
+}
